@@ -2,70 +2,207 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея скинов</title>
-    <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.0.0/dist/skinview3d.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skinview3d/3.0.0-alpha.1/skinview3d.bundle.js"></script>
     <style>
-        body { margin: 0; background: #141414; color: #fff; font-family: sans-serif; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .card { background: #1f1f1f; padding: 15px; border-radius: 8px; cursor: pointer; text-align: center; border: 1px solid #333; }
-        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; }
-        #viewer-container { width: 100%; height: 100%; }
-        .controls { position: absolute; top: 20px; left: 20px; z-index: 101; }
-        button { padding: 10px; cursor: pointer; background: #00ca72; border: none; border-radius: 4px; color: black; font-weight: bold; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #e1e1e6;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Боковая панель со списком */
+        #sidebar {
+            width: 300px;
+            background-color: #1a1a1e;
+            border-right: 1px solid #29292e;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h2 { margin-top: 0; color: #fff; }
+        .skin-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .skin-item {
+            padding: 12px;
+            background: #202024;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid transparent;
+        }
+        .skin-item:hover {
+            background: #29292e;
+        }
+        .skin-item.active {
+            background: #04d361;
+            color: #000;
+            font-weight: bold;
+        }
+        /* Кнопка копирования */
+        .btn-copy {
+            background-color: #8257e5;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .btn-copy:hover { background-color: #9466ff; }
+        .btn-copy:active { transform: scale(0.98); }
+
+        /* Зона 3D просмотра */
+        #viewer-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle, #29292e 0%, #121214 100%);
+        }
+        canvas {
+            outline: none;
+        }
+        #loading {
+            position: absolute;
+            font-size: 18px;
+            color: #8257e5;
+        }
     </style>
 </head>
 <body>
 
-    <div class="gallery" id="gallery"></div>
+    <div id="sidebar">
+        <h2>Скины</h2>
+        <div class="skin-list" id="skinList">
+            </div>
+        <button class="btn-copy" id="copyBtn">Копировать ссылку для Excel</button>
+    </div>
 
-    <div id="modal">
-        <div class="controls">
-            <button onclick="document.getElementById('modal').style.display='none'">Закрыть</button>
-            <button id="toggle-layer">Переключить 2-й слой</button>
-        </div>
-        <div id="viewer-container"></div>
+    <div id="viewer-container">
+        <div id="loading">Загрузка 3D модели...</div>
+        <canvas id="skin_container"></canvas>
     </div>
 
     <script>
-        // Ждем загрузки библиотеки
-        window.addEventListener('load', () => {
-            if (typeof SkinViewer === 'undefined') {
-                console.error("Библиотека SkinViewer не загрузилась!");
-                return;
-            }
+        let currentSkinUrl = "";
+        let skinViewer = null;
 
-            fetch('skins.json').then(r => r.json()).then(data => {
-                const container = document.getElementById('gallery');
-                data.forEach(s => {
-                    const div = document.createElement('div');
-                    div.className = 'card';
-                    div.innerHTML = `<h3>${s.skinName}</h3><p>${s.customer}</p>`;
-                    div.onclick = () => openSkin('skins/' + s.filename + '.png');
-                    container.appendChild(div);
-                });
+        // Блокируем правый клик мыши на всякий случай (базовая защита)
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Инициализация 3D просмотрщика
+        function initViewer() {
+            const container = document.getElementById('skin_container');
+            skinViewer = new skinview3d.SkinViewer({
+                canvas: container,
+                width: 600,
+                height: 600
             });
-        });
 
-        let viewer;
-        function openSkin(url) {
-            document.getElementById('modal').style.display = 'block';
-            document.getElementById('viewer-container').innerHTML = '';
+            // Настройки управления (вращение и приближение)
+            skinViewer.controls.enableRotate = true;
+            skinViewer.controls.enableZoom = true;
             
-            viewer = new SkinViewer({
-                container: document.getElementById("viewer-container"),
-                width: window.innerWidth,
-                height: window.innerHeight,
-                skin: url
-            });
-            viewer.controls.enableZoom = true;
-            viewer.autoRotate = true;
+            // Включаем автоматическое вращение, чтобы красиво выглядело
+            skinViewer.autoRotate = true;
+            skinViewer.autoRotateSpeed = 0.5;
+
+            // Живая анимация ходьбы
+            skinViewer.animation = new skinview3d.WalkingAnimation();
+            skinViewer.animation.speed = 0.6;
+            
+            document.getElementById('loading').style.display = 'none';
         }
 
-        document.getElementById('toggle-layer').onclick = () => {
-            if (viewer && viewer.playerObject.skin.secondLayer) {
-                viewer.playerObject.skin.secondLayer.visible = !viewer.playerObject.skin.secondLayer.visible;
+        // Загрузка данных из твоего skins.json
+        async function loadSkins() {
+            try {
+                const response = await fetch('skins.json');
+                const skins = await response.json();
+                const listContainer = document.getElementById('skinList');
+
+                skins.forEach((skin, index) => {
+                    const item = document.createElement('div');
+                    item.classList.add('skin-item');
+                    if (index === 0) item.classList.add('active');
+                    
+                    item.textContent = `${skin.skinName} (${skin.customer})`;
+                    
+                    item.onclick = () => {
+                        document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+                        item.classList.add('active');
+                        selectSkin(skin);
+                    };
+
+                    listContainer.appendChild(item);
+                });
+
+                // Загружаем первый скин по умолчанию
+                if (skins.length > 0) {
+                    initViewer();
+                    selectSkin(skins[0]);
+                }
+            } catch (error) {
+                console.error("Ошибка загрузки JSON:", error);
+                document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
+        }
+
+        // Переключение скина в плеере
+        function selectSkin(skin) {
+            // Формируем путь к файлу в папке skins
+            const skinPath = `skins/${skin.filename}.png`;
+            
+            // Меняем текстуру в 3D
+            skinViewer.loadSkin(skinPath, {
+                model: skin.model === "alex" ? "slim" : "default" // поддержка тонких рук Alex
+            });
+
+            // Формируем прямую ссылку на конкретный скин для копирования в Эксел
+            // Пример: https://твой-ник.github.io/репозиторий/?skin=day_apocalypse
+            const baseUrl = window.location.href.split('?')[0];
+            currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
+        }
+
+        // Обработка кнопки копирования
+        document.getElementById('copyBtn').onclick = () => {
+            if (!currentSkinUrl) return;
+            
+            navigator.clipboard.writeText(currentSkinUrl).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.textContent;
+                btn.textContent = "Скопировано!";
+                btn.style.backgroundColor = "#04d361";
+                btn.style.color = "#000";
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = "#8257e5";
+                    btn.style.color = "white";
+                }, 2000);
+            }).catch(err => {
+                alert('Не удалось скопировать ссылку, скопируйте вручную из адресной строки.');
+            });
         };
+
+        // Логика: если заказчик перешел по ссылке из Экселя (например, ?skin=day_apocalypse)
+        // можно будет в будущем дописать авто-выбор этого скина.
+
+        // Запуск
+        window.onload = loadSkins;
     </script>
 </body>
 </html>
