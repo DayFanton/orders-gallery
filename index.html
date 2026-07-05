@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея 3D Скинов</title>
     
-    <script src="https://unpkg.com/skinview3d@2.1.2/dist/skinview3d.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
         :root {
-            --bg-main: #121214;
-            --bg-sidebar: #1a1a1e;
-            --bg-card: #202024;
-            --bg-hover: #29292e;
-            --text-main: #e1e1e6;
-            --text-muted: #8d8d99;
-            --accent: #04d361;
-            --accent-hover: #00b34d;
+            --bg-main: #0b0b0d;
+            --bg-sidebar: #131316;
+            --bg-card: #1c1c21;
+            --bg-hover: #26262b;
+            --text-main: #e4e4e7;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --border: #27272a;
         }
 
         body {
@@ -25,269 +27,451 @@
             display: flex;
             background-color: var(--bg-main);
             color: var(--text-main);
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             height: 100vh;
             overflow: hidden;
         }
 
-        /* Минималистичный сайдбар */
+        /* Левая панель: Галерея и Инфо */
         #sidebar {
             width: 320px;
             background-color: var(--bg-sidebar);
-            border-right: 1px solid var(--bg-hover);
+            border-right: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            z-index: 10;
         }
 
-        .sidebar-header {
-            padding: 24px 20px;
-            border-bottom: 1px solid var(--bg-hover);
-        }
-
-        .sidebar-header h2 {
-            margin: 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+        .section-title {
+            padding: 20px 24px 10px 24px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 700;
         }
 
         .skin-list {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
-            box-sizing: border-box;
+            padding: 0 16px;
         }
 
-        /* Кнопки галереи */
         .skin-item {
             padding: 14px 16px;
             background: var(--bg-card);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
             border: 1px solid transparent;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
         }
 
         .skin-item:hover {
             background: var(--bg-hover);
-            transform: translateY(-1px);
         }
 
         .skin-item.active {
-            background: rgba(4, 211, 97, 0.1);
+            background: rgba(16, 185, 129, 0.08);
             border-color: var(--accent);
-            color: #fff;
         }
 
         .skin-name {
             font-weight: 600;
+            font-size: 0.9rem;
+            display: block;
         }
 
-        /* Информационные плашки под скином */
+        /* Информационный блок */
         .meta-info {
-            padding: 20px;
-            background: var(--bg-card);
-            border-top: 1px solid var(--bg-hover);
+            padding: 20px 24px;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
 
         .meta-row {
-            font-size: 13px;
+            font-size: 0.85rem;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .meta-label { color: var(--text-muted); }
-        .meta-value { font-weight: 500; color: #fff; }
+        .meta-value { font-weight: 500; color: #fff; background: var(--bg-card); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); }
 
-        /* Зона просмотра */
+        /* Центральная зона 3D */
         #viewer_zone {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            background: radial-gradient(circle at center, #1e1e24 0%, var(--bg-main) 100%);
+            background: radial-gradient(circle at center, #18181b 0%, var(--bg-main) 100%);
         }
 
         #skin_container {
-            width: 550px;
-            height: 550px;
+            width: 100%;
+            height: 100%;
             outline: none;
             cursor: grab;
         }
 
-        #skin_container:active {
-            cursor: grabbing;
+        #skin_container:active { cursor: grabbing; }
+
+        /* Правая панель управления (Инструменты) */
+        #controls_panel {
+            width: 300px;
+            background-color: var(--bg-sidebar);
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            box-sizing: border-box;
         }
+
+        .control-group {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .control-group h3 {
+            margin: 0 0 12px 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Элементы управления: кнопки, чекбоксы */
+        .btn {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
+        .btn:active { transform: scale(0.98); }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .checkbox-label input {
+            accent-color: var(--accent);
+            width: 16px;
+            height: 16px;
+        }
+
+        .radio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .radio-btn {
+            position: relative;
+        }
+
+        .radio-btn input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .radio-btn span {
+            display: block;
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .radio-btn input:checked + span {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Слой уведомлений об успешном копировании */
+        #toast {
+            position: absolute;
+            bottom: 24px;
+            background: var(--accent);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.4);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+        }
+
+        #toast.show { transform: translateY(0); opacity: 1; }
 
         #loading {
             position: absolute;
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-muted);
             pointer-events: none;
-            background: rgba(18, 18, 20, 0.8);
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: 1px solid var(--bg-hover);
         }
 
-        /* Стилизация скроллбара */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: var(--bg-hover); border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--bg-hover); }
     </style>
 </head>
 <body>
 
     <div id="sidebar">
-        <div class="sidebar-header">
-            <h2>Коллекция скинов</h2>
-        </div>
+        <div class="section-title">Галерея скинов</div>
+        <div class="skin-list" id="skinList"></div>
         
-        <div class="skin-list" id="skinList">
-            </div>
-
         <div class="meta-info">
             <div class="meta-row">
-                <span class="meta-label">Заказчик:</span>
+                <span class="meta-label">Заказчик</span>
                 <span class="meta-value" id="infoCustomer">—</span>
             </div>
             <div class="meta-row">
-                <span class="meta-label">Художник:</span>
+                <span class="meta-label">Художник</span>
                 <span class="meta-value" id="infoAuthor">—</span>
             </div>
         </div>
     </div>
 
     <div id="viewer_zone">
-        <div id="loading">Инициализация сцены...</div>
+        <div id="loading">Загрузка модулей визуализации...</div>
         <canvas id="skin_container"></canvas>
+        <div id="toast">Ссылка скопирована для Excel!</div>
+    </div>
+
+    <div id="controls_panel">
+        <div class="control-group">
+            <button class="btn" id="reset_all">Сбросить камеру</button>
+        </div>
+
+        <div class="control-group">
+            <h3>Вращение</h3>
+            <label class="checkbox-label">
+                <input type="checkbox" id="auto_rotate" checked>
+                <span>Вращать модель</span>
+            </label>
+        </div>
+
+        <div class="control-group">
+            <h3>Анимация движения</h3>
+            <div class="radio-grid">
+                <label class="radio-btn">
+                    <input type="radio" name="animation" value="none">
+                    <span>Покой</span>
+                </label>
+                <label class="radio-btn">
+                    <input type="radio" name="animation" value="walk" checked>
+                    <span>Ходьба</span>
+                </label>
+                <label class="radio-btn">
+                    <input type="radio" name="animation" value="run">
+                    <span>Бег</span>
+                </label>
+                <label class="radio-btn">
+                    <input type="radio" name="animation" value="fly">
+                    <span>Полет</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <h3>Отображение слоев</h3>
+            <label class="checkbox-label">
+                <input type="checkbox" id="layer_head" checked>
+                <span>Головной убор / Волосы</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="layer_body" checked>
+                <span>Верхняя одежда / Броня</span>
+            </label>
+        </div>
     </div>
 
     <script>
         let skinViewer = null;
-        let globalSkinsData = [];
+        let globalSkins = [];
+        let walkAnimation = null;
+        let runAnimation = null;
+        let flyAnimation = null;
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
         function initViewer() {
-            if (!window.skinview3d) {
-                document.getElementById('loading').textContent = "Ошибка загрузки скриптов 3D.";
-                return;
-            }
-
             try {
+                // Создаем сцену адаптивного размера
+                const container = document.getElementById('viewer_zone');
                 skinViewer = new skinview3d.SkinViewer({
                     canvas: document.getElementById('skin_container'),
-                    width: 550,
-                    height: 550
+                    width: container.clientWidth,
+                    height: container.clientHeight
                 });
 
-                // Настройки мыши (Вращение и Зум)
+                // Базовые настройки мыши и света
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
+                skinViewer.globalLight.intensity = 0.5;
+                skinViewer.cameraLight.intensity = 0.6;
                 
-                // Легкое авто-вращение по умолчанию
+                // Авто-вращение
                 skinViewer.autoRotate = true;
-                skinViewer.autoRotateSpeed = 0.4;
-                
-                // Эффект ходьбы
-                skinViewer.animation = new skinview3d.WalkingAnimation();
-                skinViewer.animation.speed = 0.5;
+                skinViewer.autoRotateSpeed = 0.6;
+
+                // Кешируем пресеты анимаций из библиотеки
+                walkAnimation = new skinview3d.WalkingAnimation();
+                runAnimation = new skinview3d.RunningAnimation();
+                flyAnimation = new skinview3d.FlyingAnimation();
+
+                // По умолчанию включаем ходьбу
+                skinViewer.animation = walkAnimation;
 
                 document.getElementById('loading').style.display = 'none';
+
+                // Слушатель изменения размеров окна
+                window.addEventListener('resize', () => {
+                    skinViewer.width = container.clientWidth;
+                    skinViewer.height = container.clientHeight;
+                });
+
+                initControlListeners();
+
             } catch (e) {
                 console.error(e);
-                document.getElementById('loading').textContent = "Ошибка создания 3D сцены.";
+                document.getElementById('loading').textContent = "Ошибка инициализации 3D компонентов.";
             }
         }
 
-        async function loadGallery() {
+        function initControlListeners() {
+            // Кнопка сброса
+            document.getElementById('reset_all').onclick = () => {
+                skinViewer.controls.reset();
+            };
+
+            // Чекбокс вращения
+            document.getElementById('auto_rotate').onchange = (e) => {
+                skinViewer.autoRotate = e.target.checked;
+            };
+
+            // Радио-кнопки анимаций
+            document.querySelectorAll('input[name="animation"]').forEach(radio => {
+                radio.onchange = (e) => {
+                    if (e.target.value === 'none') skinViewer.animation = null;
+                    if (e.target.value === 'walk') skinViewer.animation = walkAnimation;
+                    if (e.target.value === 'run') skinViewer.animation = runAnimation;
+                    if (e.target.value === 'fly') skinViewer.animation = flyAnimation;
+                };
+            });
+
+            // Управление слоями одежды (Outer Layer)
+            document.getElementById('layer_head').onchange = (e) => {
+                skinViewer.playerObject.skin.head.outerLayer.visible = e.target.checked;
+            };
+            document.getElementById('layer_body').onchange = (e) => {
+                skinViewer.playerObject.skin.body.outerLayer.visible = e.target.checked;
+                skinViewer.playerObject.skin.leftArm.outerLayer.visible = e.target.checked;
+                skinViewer.playerObject.skin.rightArm.outerLayer.visible = e.target.checked;
+                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = e.target.checked;
+                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = e.target.checked;
+            };
+        }
+
+        async function loadSkinsJSON() {
             try {
                 const response = await fetch('skins.json');
-                globalSkinsData = await response.json();
-                const listContainer = document.getElementById('skinList');
+                globalSkins = await response.json();
+                const list = document.getElementById('skinList');
 
-                globalSkinsData.forEach((skin) => {
+                globalSkins.forEach(skin => {
                     const item = document.createElement('div');
                     item.classList.add('skin-item');
-                    item.id = `skin-${skin.filename}`;
-                    
+                    item.id = `item-${skin.filename}`;
                     item.innerHTML = `<span class="skin-name">${skin.skinName}</span>`;
                     
-                    item.onclick = () => {
-                        selectSkin(skin.filename, true);
-                    };
-
-                    listContainer.appendChild(item);
+                    item.onclick = () => selectSkin(skin.filename, true);
+                    list.appendChild(item);
                 });
 
                 initViewer();
-                
-                // Проверяем, есть ли хэш/параметр в ссылке браузера
-                const urlParams = new URLSearchParams(window.location.search);
-                const skinParam = urlParams.get('skin');
 
-                if (skinParam && globalSkinsData.some(s => s.filename === skinParam)) {
-                    selectSkin(skinParam, false);
-                } else if (globalSkinsData.length > 0) {
-                    selectSkin(globalSkinsData[0].filename, false);
+                // Читаем GET параметр из адресной строки для поддержки отдельных ссылок
+                const params = new URLSearchParams(window.location.search);
+                const activeSkin = params.get('skin');
+
+                if (activeSkin && globalSkins.some(s => s.filename === activeSkin)) {
+                    selectSkin(activeSkin, false);
+                } else if (globalSkins.length > 0) {
+                    selectSkin(globalSkins[0].filename, false);
                 }
 
-            } catch (error) {
-                console.error(error);
-                document.getElementById('loading').textContent = "Ошибка чтения skins.json";
+            } catch (err) {
+                document.getElementById('loading').textContent = "Не удалось прочесть список skins.json";
             }
         }
 
-        function selectSkin(filename, shouldCopy = true) {
+        function selectSkin(filename, clickByMouse = true) {
             if (!skinViewer) return;
-
-            const skin = globalSkinsData.find(s => s.filename === filename);
+            const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
 
-            // Смена активного класса у кнопок
+            // Визуальный переключатель активной кнопки
             document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-            const currentItem = document.getElementById(`skin-${filename}`);
+            const currentItem = document.getElementById(`item-${filename}`);
             if (currentItem) currentItem.classList.add('active');
 
-            // Подгрузка файла текстуры png
+            // Натягиваем текстуру на 3D модель
             const skinPath = `skins/${skin.filename}.png`;
-            const isSlim = (skin.model === "alex");
-            
-            try {
-                skinViewer.loadSkin(skinPath, isSlim ? "slim" : "default");
-            } catch(e) {
-                console.error(e);
-            }
+            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default');
 
-            // Обновляем плашки с информацией
+            // Обновляем информацию об авторах
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoAuthor').textContent = skin.author || 'Не указан';
 
-            // Меняем адресную строку без перезагрузки всей страницы
-            const baseUrl = window.location.href.split('?')[0];
-            const newUrl = `${baseUrl}?skin=${filename}`;
-            window.history.pushState({ path: newUrl }, '', newUrl);
+            // Генерация и обновление ссылки в адресной строке без перезагрузки
+            const baseUrl = window.location.origin + window.location.pathname;
+            const generatedUrl = `${baseUrl}?skin=${filename}`;
+            window.history.pushState({ path: generatedUrl }, '', generatedUrl);
 
-            // Автоматическое тихое копирование для таблицы Excel
-            if (shouldCopy) {
-                navigator.clipboard.writeText(newUrl).catch(() => {});
+            // Если кликнули мышкой — копируем ссылку в буфер обмена и показываем красивое уведомление
+            if (clickByMouse) {
+                navigator.clipboard.writeText(generatedUrl).then(() => {
+                    const toast = document.getElementById('toast');
+                    toast.classList.add('show');
+                    setTimeout(() => toast.classList.remove('show'), 2500);
+                }).catch(() => {});
             }
         }
 
-        window.onload = loadGallery;
+        window.onload = loadSkinsJSON;
     </script>
 </body>
 </html>
