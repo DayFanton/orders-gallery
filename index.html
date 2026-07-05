@@ -27,23 +27,29 @@
     </div>
 
     <script>
-        let viewer;
+        // Ждем загрузки библиотеки
+        window.addEventListener('load', () => {
+            if (typeof SkinViewer === 'undefined') {
+                console.error("Библиотека SkinViewer не загрузилась!");
+                return;
+            }
 
-        // Загрузка JSON
-        fetch('skins.json').then(r => r.json()).then(data => {
-            const container = document.getElementById('gallery');
-            data.forEach(s => {
-                const div = document.createElement('div');
-                div.className = 'card';
-                div.innerHTML = `<h3>${s.skinName}</h3><p>${s.customer}</p>`;
-                div.onclick = () => openSkin('skins/' + s.filename + '.png');
-                container.appendChild(div);
+            fetch('skins.json').then(r => r.json()).then(data => {
+                const container = document.getElementById('gallery');
+                data.forEach(s => {
+                    const div = document.createElement('div');
+                    div.className = 'card';
+                    div.innerHTML = `<h3>${s.skinName}</h3><p>${s.customer}</p>`;
+                    div.onclick = () => openSkin('skins/' + s.filename + '.png');
+                    container.appendChild(div);
+                });
             });
         });
 
+        let viewer;
         function openSkin(url) {
             document.getElementById('modal').style.display = 'block';
-            document.getElementById('viewer-container').innerHTML = ''; // Очищаем прошлый
+            document.getElementById('viewer-container').innerHTML = '';
             
             viewer = new SkinViewer({
                 container: document.getElementById("viewer-container"),
@@ -56,7 +62,7 @@
         }
 
         document.getElementById('toggle-layer').onclick = () => {
-            if (viewer) {
+            if (viewer && viewer.playerObject.skin.secondLayer) {
                 viewer.playerObject.skin.secondLayer.visible = !viewer.playerObject.skin.secondLayer.visible;
             }
         };
