@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея скинов</title>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/skinview3d@2.1.1/dist/skinview3d.bundle.js"></script>
+    <script src="https://bs-community.github.io/skinview3d/node_modules/skinview3d/dist/skinview3d.bundle.js"></script>
 
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 !important;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
             background-color: #121214;
             color: #e1e1e6;
-            margin: 0;
-            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;
             overflow: hidden;
         }
+
+        /* Боковое меню со списком скинов */
         #sidebar {
             width: 300px;
             background-color: #1a1a1e;
@@ -28,11 +30,20 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        h2 { margin-top: 0; color: #fff; margin-bottom: 15px; }
+
+        #sidebar h2 {
+            margin-top: 0;
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
         .skin-list {
             flex: 1;
             overflow-y: auto;
+            padding-right: 5px;
         }
+
         .skin-item {
             padding: 12px;
             background: #202024;
@@ -43,15 +54,19 @@
             border: 1px solid transparent;
             font-size: 14px;
         }
+
         .skin-item:hover {
             background: #29292e;
         }
+
         .skin-item.active {
             background: #04d361;
             color: #000;
             font-weight: bold;
         }
-        #viewer-container {
+
+        /* Контейнер для 3D просмотра */
+        #viewer_container_zone {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -59,17 +74,24 @@
             position: relative;
             background: radial-gradient(circle, #29292e 0%, #121214 100%);
         }
+
+        #skin_container {
+            width: 100%;
+            height: 100%;
+            max-width: 600px;
+            max-height: 600px;
+            outline: none;
+        }
+
         #loading {
             position: absolute;
             font-size: 18px;
             color: #04d361;
             pointer-events: none;
         }
-        canvas {
-            outline: none;
-        }
     </style>
 </head>
+
 <body>
 
     <div id="sidebar">
@@ -78,7 +100,7 @@
             </div>
     </div>
 
-    <div id="viewer-container">
+    <div id="viewer_container_zone">
         <div id="loading">Загрузка 3D модели...</div>
         <canvas id="skin_container"></canvas>
     </div>
@@ -86,35 +108,36 @@
     <script>
         let skinViewer = null;
 
-        // Отключаем контекстное меню (базовая защита)
+        // Базовая защита картинок от правого клика
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         function initViewer() {
-            // В релизе 2.x объект находится прямо в window.skinview3d
             if (!window.skinview3d) {
-                document.getElementById('loading').textContent = "Ошибка: Библиотека 3D не инициализирована.";
+                document.getElementById('loading').textContent = "Ошибка: библиотека 3D не загрузилась.";
                 return;
             }
 
-            skinViewer = new skinview3d.SkinViewer({
-                canvas: document.getElementById('skin_container'),
-                width: 600,
-                height: 600
-            });
+            try {
+                // Создаем плеер на основе canvas
+                skinViewer = new skinview3d.SkinViewer({
+                    canvas: document.getElementById('skin_container'),
+                    width: 600,
+                    height: 600
+                });
 
-            // Настройка вращения и зума для этой версии
-            skinViewer.controls.enableRotate = true;
-            skinViewer.controls.enableZoom = true;
-            
-            // Запуск автоматического вращения
-            skinViewer.autoRotate = true;
-            skinViewer.autoRotateSpeed = 0.6;
+                // Включаем вращение и зум мышкой
+                skinViewer.controls.enableRotate = true;
+                skinViewer.controls.enableZoom = true;
+                
+                // Добавляем плавное вращение и анимацию ходьбы по правилам новой версии
+                skinViewer.animations.add(skinview3d.AutoRotateAnimation).speed = 0.5;
+                skinViewer.animations.add(skinview3d.WalkingAnimation).speed = 0.6;
 
-            // Анимация ходьбы для версии 2.x
-            skinViewer.animation = new skinview3d.WalkingAnimation();
-            skinViewer.animation.speed = 0.6;
-
-            document.getElementById('loading').style.display = 'none';
+                document.getElementById('loading').style.display = 'none';
+            } catch (e) {
+                console.error(e);
+                document.getElementById('loading').textContent = "Ошибка создания 3D сцены.";
+            }
         }
 
         async function loadSkins() {
@@ -139,13 +162,11 @@
                     listContainer.appendChild(item);
                 });
 
-                // Сначала запускаем вьюер, затем загружаем первый скин
                 initViewer();
                 if (skins.length > 0 && skinViewer) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
-                console.error("Ошибка при старте галереи:", error);
                 document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
         }
@@ -155,12 +176,15 @@
 
             const skinPath = `skins/${skin.filename}.png`;
             
-            // Настройка модели под Стива или Алекс (тонкие руки)
-            skinViewer.loadSkin(skinPath, {
-                model: skin.model === "alex" ? "slim" : "default"
-            });
+            try {
+                skinViewer.loadSkin(skinPath, {
+                    model: skin.model === "alex" ? "slim" : "default"
+                });
+            } catch(e) {
+                console.error("Не удалось подгрузить текстуру файла:", e);
+            }
 
-            // Твой скрытый буфер обмена для Excel
+            // Твой лайфхак: кликаешь по скину в списке — готовая ссылка копируется в буфер
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
             navigator.clipboard.writeText(currentSkinUrl).catch(() => {});
