@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея скинов</title>
-    <script src="https://cdn.jsdelivr.net/npm/skinview3d@2.1.1/bundle/skinview3d.bundle.js"></script>
+    <script src="https://bundle.run/skinview3d@1.6.0"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,11 +25,10 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        h2 { margin-top: 0; color: #fff; }
+        h2 { margin-top: 0; color: #fff; margin-bottom: 15px; }
         .skin-list {
             flex: 1;
             overflow-y: auto;
-            margin-bottom: 20px;
         }
         .skin-item {
             padding: 12px;
@@ -39,6 +38,7 @@
             cursor: pointer;
             transition: 0.2s;
             border: 1px solid transparent;
+            font-size: 14px;
         }
         .skin-item:hover {
             background: #29292e;
@@ -48,20 +48,6 @@
             color: #000;
             font-weight: bold;
         }
-        /* Кнопка копирования */
-        .btn-copy {
-            background-color: #8257e5;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.2s;
-        }
-        .btn-copy:hover { background-color: #9466ff; }
-        .btn-copy:active { transform: scale(0.98); }
 
         /* Зона 3D просмотра */
         #viewer-container {
@@ -78,7 +64,7 @@
         #loading {
             position: absolute;
             font-size: 18px;
-            color: #8257e5;
+            color: #04d361;
         }
     </style>
 </head>
@@ -88,7 +74,6 @@
         <h2>Скины</h2>
         <div class="skin-list" id="skinList">
             </div>
-        <button class="btn-copy" id="copyBtn">Копировать ссылку для Excel</button>
     </div>
 
     <div id="viewer-container">
@@ -97,26 +82,34 @@
     </div>
 
     <script>
-        let currentSkinUrl = "";
         let skinViewer = null;
 
-        // Блокируем правый клик мыши на всякий случай (базовая защита)
+        // Блокируем правый клик мыши для базовой защиты картинок
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         // Инициализация 3D просмотрщика
         function initViewer() {
             const container = document.getElementById('skin_container');
-            skinViewer = new skinview3d.SkinViewer({
+            
+            // В старых стабильных версиях библиотеки объект лежит в skinview3d.SkinViewer
+            const ViewerClass = (typeof skinview3d !== 'undefined' && skinview3d.SkinViewer) || window.SkinViewer;
+            
+            if (!ViewerClass) {
+                document.getElementById('loading').textContent = "Ошибка: 3D библиотека не загрузилась.";
+                return;
+            }
+
+            skinViewer = new ViewerClass({
                 canvas: container,
                 width: 600,
                 height: 600
             });
 
-            // Настройки управления (вращение и приближение)
+            // Настройки управления
             skinViewer.controls.enableRotate = true;
             skinViewer.controls.enableZoom = true;
             
-            // Включаем автоматическое вращение, чтобы красиво выглядело
+            // Авто-вращение
             skinViewer.autoRotate = true;
             skinViewer.autoRotateSpeed = 0.5;
 
@@ -127,7 +120,7 @@
             document.getElementById('loading').style.display = 'none';
         }
 
-        // Загрузка данных из твоего skins.json
+        // Загрузка данных из skins.json
         async function loadSkins() {
             try {
                 const response = await fetch('skins.json');
@@ -150,58 +143,38 @@
                     listContainer.appendChild(item);
                 });
 
-                // Загружаем первый скин по умолчанию
-                if (skins.length > 0) {
-                    initViewer();
+                // Инициализируем плеер и загружаем первый скин
+                initViewer();
+                if (skins.length > 0 && skinViewer) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
-                console.error("Ошибка загрузки JSON:", error);
+                console.error("Ошибка загрузки данных:", error);
                 document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
         }
 
-        // Переключение скина в плеере
+        // Переключение скина и скрытное копирование ссылки
         function selectSkin(skin) {
-            // Формируем путь к файлу в папке skins
+            if (!skinViewer) return;
+
             const skinPath = `skins/${skin.filename}.png`;
             
-            // Меняем текстуру в 3D
+            // Загружаем текстуру
             skinViewer.loadSkin(skinPath, {
-                model: skin.model === "alex" ? "slim" : "default" // поддержка тонких рук Alex
+                model: skin.model === "alex" ? "slim" : "default"
             });
 
-            // Формируем прямую ссылку на конкретный скин для копирования в Эксел
-            // Пример: https://твой-ник.github.io/репозиторий/?skin=day_apocalypse
+            // Скрытая фича ДЛЯ ТЕБЯ: при клике на скин, ссылка на него молча копируется в буфер обмена.
+            // Заказчики об этом не знают, а тебе удобно сразу вставлять в Excel.
             const baseUrl = window.location.href.split('?')[0];
-            currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
+            const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
+            
+            navigator.clipboard.writeText(currentSkinUrl).catch(err => {
+                // Игнорируем ошибки копирования, чтобы пользователь ничего не заметил
+            });
         }
 
-        // Обработка кнопки копирования
-        document.getElementById('copyBtn').onclick = () => {
-            if (!currentSkinUrl) return;
-            
-            navigator.clipboard.writeText(currentSkinUrl).then(() => {
-                const btn = document.getElementById('copyBtn');
-                const originalText = btn.textContent;
-                btn.textContent = "Скопировано!";
-                btn.style.backgroundColor = "#04d361";
-                btn.style.color = "#000";
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.backgroundColor = "#8257e5";
-                    btn.style.color = "white";
-                }, 2000);
-            }).catch(err => {
-                alert('Не удалось скопировать ссылку, скопируйте вручную из адресной строки.');
-            });
-        };
-
-        // Логика: если заказчик перешел по ссылке из Экселя (например, ?skin=day_apocalypse)
-        // можно будет в будущем дописать авто-выбор этого скина.
-
-        // Запуск
         window.onload = loadSkins;
     </script>
 </body>
