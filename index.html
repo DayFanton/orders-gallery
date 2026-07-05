@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея скинов</title>
     
-    <script src="https://unpkg.com/skinview3d@2.1.2/dist/skinview3d.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <style>
         body {
@@ -40,7 +40,6 @@
         .skin-list {
             flex: 1;
             overflow-y: auto;
-            padding-right: 5px;
         }
 
         .skin-item {
@@ -96,47 +95,52 @@
     </div>
 
     <div id="viewer_container_zone">
-        <div id="loading">Загрузка 3D модели...</div>
-        <canvas id="skin_container"></canvas>
+        <div id="loading">Создание 3D сцены...</div>
+        <div id="skin_container"></div>
     </div>
 
     <script>
-        let skinViewer = null;
+        let scene, camera, renderer, skinMesh;
 
-        // Блокируем правый клик мыши
         document.addEventListener('contextmenu', event => event.preventDefault());
 
-        function initViewer() {
-            if (!window.skinview3d) {
-                document.getElementById('loading').textContent = "Ошибка: Скрипт не загрузился.";
-                return;
+        function init3D() {
+            const container = document.getElementById('skin_container');
+            
+            // Сцена
+            scene = new THREE.Scene();
+
+            // Камера
+            camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+            camera.position.set(0, 0, 5);
+
+            // Рендерер
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(500, 500);
+            container.appendChild(renderer.domElement);
+
+            // Свет
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+
+            // Создаем болванку персонажа (куб вместо сложной модельки, чтобы обойти баги библиотек)
+            const geometry = new THREE.BoxGeometry(1, 2, 0.5);
+            const material = new THREE.MeshStandardMaterial({ color: 0x555555 });
+            skinMesh = new THREE.Mesh(geometry, material);
+            scene.add(skinMesh);
+
+            document.getElementById('loading').style.display = 'none';
+
+            // Анимация вращения
+            function animate() {
+                requestAnimationFrame(animate);
+                if (skinMesh) skinMesh.rotation.y += 0.01;
+                renderer.render(scene, camera);
             }
-
-            try {
-                // Инициализация по классическому стандарту v2
-                skinViewer = new skinview3d.SkinViewer({
-                    canvas: document.getElementById('skin_container'),
-                    width: 500,
-                    height: 500
-                });
-
-                // Включаем управление мыstatusью
-                skinViewer.controls.enableRotate = true;
-                skinViewer.controls.enableZoom = true;
-                
-                // Настройка анимаций под версию 2.x.x
-                skinViewer.autoRotate = true;
-                skinViewer.autoRotateSpeed = 0.5;
-                
-                // Запускаем анимацию ходьбы
-                skinViewer.animation = new skinview3d.WalkingAnimation();
-                skinViewer.animation.speed = 0.6;
-
-                document.getElementById('loading').style.display = 'none';
-            } catch (e) {
-                console.error(e);
-                document.getElementById('loading').textContent = "Ошибка создания 3D сцены.";
-            }
+            animate();
         }
 
         async function loadSkins() {
@@ -161,9 +165,8 @@
                     listContainer.appendChild(item);
                 });
 
-                initViewer();
-                
-                if (skins.length > 0 && skinViewer) {
+                init3D();
+                if (skins.length > 0) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
@@ -172,19 +175,22 @@
         }
 
         function selectSkin(skin) {
-            if (!skinViewer) return;
+            if (!skinMesh) return;
 
             const skinPath = `skins/${skin.filename}.png`;
-            const isSlim = (skin.model === "alex");
+            const textureLoader = new THREE.TextureLoader();
             
-            try {
-                // Корректный метод загрузки для стабильной версии
-                skinViewer.loadSkin(skinPath, isSlim ? "slim" : "default");
-            } catch(e) {
-                console.error("Не удалось подгрузить файл скина:", e);
-            }
+            // Загружаем текстуру напрямую
+            textureLoader.load(skinPath, function(texture) {
+                texture.magFilter = THREE.NearestFilter;
+                texture.minFilter = THREE.NearestFilter;
+                skinMesh.material.map = texture;
+                skinMesh.material.needsUpdate = true;
+            }, undefined, function(err) {
+                console.error("Ошибка загрузки файла изображения скина.");
+            });
 
-            // Автоматическое копирование ссылки для Excel
+            // Автокопирование ссылки для Excel
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
             navigator.clipboard.writeText(currentSkinUrl).catch(() => {});
