@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея скинов</title>
-    <script src="https://bundle.run/skinview3d@1.6.0"></script>
+    
+    <script src="skinview3d.js"></script>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +17,6 @@
             height: 100vh;
             overflow: hidden;
         }
-        /* Боковая панель со списком */
         #sidebar {
             width: 300px;
             background-color: #1a1a1e;
@@ -48,8 +49,6 @@
             color: #000;
             font-weight: bold;
         }
-
-        /* Зона 3D просмотра */
         #viewer-container {
             flex: 1;
             display: flex;
@@ -84,18 +83,17 @@
     <script>
         let skinViewer = null;
 
-        // Блокируем правый клик мыши для базовой защиты картинок
+        // Блокируем правый клик мыши для защиты
         document.addEventListener('contextmenu', event => event.preventDefault());
 
-        // Инициализация 3D просмотрщика
         function initViewer() {
             const container = document.getElementById('skin_container');
             
-            // В старых стабильных версиях библиотеки объект лежит в skinview3d.SkinViewer
-            const ViewerClass = (typeof skinview3d !== 'undefined' && skinview3d.SkinViewer) || window.SkinViewer;
+            // Проверяем, где именно лежит класс в этой версии
+            const ViewerClass = window.skinview3d ? window.skinview3d.SkinViewer : window.SkinViewer;
             
             if (!ViewerClass) {
-                document.getElementById('loading').textContent = "Ошибка: 3D библиотека не загрузилась.";
+                document.getElementById('loading').textContent = "Ошибка: библиотека skinview3d не найдена.";
                 return;
             }
 
@@ -105,22 +103,21 @@
                 height: 600
             });
 
-            // Настройки управления
             skinViewer.controls.enableRotate = true;
             skinViewer.controls.enableZoom = true;
-            
-            // Авто-вращение
             skinViewer.autoRotate = true;
             skinViewer.autoRotateSpeed = 0.5;
 
-            // Живая анимация ходьбы
-            skinViewer.animation = new skinview3d.WalkingAnimation();
-            skinViewer.animation.speed = 0.6;
+            // Включаем анимацию ходьбы (зависит от версии)
+            const WalkAnim = window.skinview3d ? window.skinview3d.WalkingAnimation : window.WalkingAnimation;
+            if (WalkAnim) {
+                skinViewer.animation = new WalkAnim();
+                skinViewer.animation.speed = 0.6;
+            }
             
             document.getElementById('loading').style.display = 'none';
         }
 
-        // Загрузка данных из skins.json
         async function loadSkins() {
             try {
                 const response = await fetch('skins.json');
@@ -143,7 +140,6 @@
                     listContainer.appendChild(item);
                 });
 
-                // Инициализируем плеер и загружаем первый скин
                 initViewer();
                 if (skins.length > 0 && skinViewer) {
                     selectSkin(skins[0]);
@@ -154,25 +150,20 @@
             }
         }
 
-        // Переключение скина и скрытное копирование ссылки
         function selectSkin(skin) {
             if (!skinViewer) return;
 
             const skinPath = `skins/${skin.filename}.png`;
             
-            // Загружаем текстуру
             skinViewer.loadSkin(skinPath, {
                 model: skin.model === "alex" ? "slim" : "default"
             });
 
-            // Скрытая фича ДЛЯ ТЕБЯ: при клике на скин, ссылка на него молча копируется в буфер обмена.
-            // Заказчики об этом не знают, а тебе удобно сразу вставлять в Excel.
+            // Автокопирование ссылки для тебя при клике
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
             
-            navigator.clipboard.writeText(currentSkinUrl).catch(err => {
-                // Игнорируем ошибки копирования, чтобы пользователь ничего не заметил
-            });
+            navigator.clipboard.writeText(currentSkinUrl).catch(err => {});
         }
 
         window.onload = loadSkins;
