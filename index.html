@@ -17,7 +17,6 @@
             --text-main: #e4e4e7;
             --text-muted: #a1a1aa;
             --accent: #10b981;
-            --accent-hover: #059669;
             --border: #27272a;
         }
 
@@ -155,7 +154,6 @@
         }
 
         .btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
-        .btn:active { transform: scale(0.98); }
 
         .checkbox-label {
             display: flex;
@@ -209,24 +207,6 @@
             font-weight: 600;
         }
 
-        #toast {
-            position: absolute;
-            bottom: 24px;
-            background: var(--accent);
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.4);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            pointer-events: none;
-        }
-
-        #toast.show { transform: translateY(0); opacity: 1; }
-
         #loading {
             position: absolute;
             font-size: 0.9rem;
@@ -237,7 +217,6 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--bg-hover); }
     </style>
 </head>
 <body>
@@ -261,7 +240,6 @@
     <div id="viewer_zone">
         <div id="loading">Загрузка модулей визуализации...</div>
         <canvas id="skin_container"></canvas>
-        <div id="toast">Ссылка скопирована для Excel!</div>
     </div>
 
     <div id="controls_panel">
@@ -283,10 +261,6 @@
                 <label class="radio-btn">
                     <input type="radio" name="animation" value="none" checked>
                     <span>Покой</span>
-                </label>
-                <label class="radio-btn">
-                    <input type="radio" name="animation" value="crouch">
-                    <span>В приседе</span>
                 </label>
                 <label class="radio-btn">
                     <input type="radio" name="animation" value="walk">
@@ -319,10 +293,7 @@
     <script>
         let skinViewer = null;
         let globalSkins = [];
-        let walkAnimation = null;
-        let runAnimation = null;
-        let flyAnimation = null;
-        let currentAnimationMode = 'none';
+        let currentAnimationType = 'none';
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
@@ -338,21 +309,11 @@
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
                 
-                // Настраиваем яркое освещение как в оригинальном демо
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
 
-                // По умолчанию вращение выключено
                 skinViewer.autoRotate = false;
                 skinViewer.autoRotateSpeed = 0.6;
-
-                // Загружаем стандартные пресеты движений
-                walkAnimation = new skinview3d.WalkingAnimation();
-                runAnimation = new skinview3d.RunningAnimation();
-                flyAnimation = new skinview3d.FlyingAnimation();
-
-                // По умолчанию режим покоя
-                skinViewer.animation = null;
 
                 document.getElementById('loading').style.display = 'none';
 
@@ -369,21 +330,20 @@
             }
         }
 
-        // Функция сброса позы в дефолт
-        function resetBodyPositions() {
+        // Применяет выбранную анимацию без наслоения багов
+        function applyAnimation() {
             if (!skinViewer) return;
-            skinViewer.playerObject.skin.head.rotation.x = 0;
-            skinViewer.playerObject.skin.body.rotation.x = 0;
-            skinViewer.playerObject.skin.body.position.y = 0;
-            skinViewer.playerObject.skin.body.position.z = 0;
-            skinViewer.playerObject.skin.leftArm.rotation.x = 0;
-            skinViewer.playerObject.skin.rightArm.rotation.x = 0;
-            skinViewer.playerObject.skin.leftLeg.rotation.x = 0;
-            skinViewer.playerObject.skin.rightLeg.rotation.x = 0;
-            skinViewer.playerObject.skin.leftLeg.position.z = 0;
-            skinViewer.playerObject.skin.rightLeg.position.z = 0;
-            skinViewer.playerObject.skin.leftLeg.position.y = -12;
-            skinViewer.playerObject.skin.rightLeg.position.y = -12;
+            
+            // Сбрасываем текущую анимацию и очищаем внутреннее время
+            skinViewer.animation = null;
+            
+            if (currentAnimationType === 'walk') {
+                skinViewer.animation = new skinview3d.WalkingAnimation();
+            } else if (currentAnimationType === 'run') {
+                skinViewer.animation = new skinview3d.RunningAnimation();
+            } else if (currentAnimationType === 'fly') {
+                skinViewer.animation = new skinview3d.FlyingAnimation();
+            }
         }
 
         function initControlListeners() {
@@ -397,45 +357,39 @@
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
-                    currentAnimationMode = e.target.value;
+                    currentAnimationType = e.target.value;
                     
-                    // Полностью сбрасываем старые анимации и углы костей
-                    skinViewer.animation = null;
-                    resetBodyPositions();
-
-                    if (currentAnimationMode === 'walk') skinViewer.animation = walkAnimation;
-                    if (currentAnimationMode === 'run') skinViewer.animation = runAnimation;
-                    if (currentAnimationMode === 'fly') skinViewer.animation = flyAnimation;
-                    
-                    // Безопасная реализация приседа (Crouch / Shift) вручную через углы Three.js
-                    if (currentAnimationMode === 'crouch') {
-                        skinViewer.animation = {
-                            update: (playerObject, time) => {
-                                // Наклоняем торс и голову вперед, уводим ноги немного назад
-                                playerObject.skin.body.rotation.x = 0.5;
-                                playerObject.skin.head.rotation.x = -0.2;
-                                playerObject.skin.leftArm.rotation.x = -0.2;
-                                playerObject.skin.rightArm.rotation.x = -0.2;
-                                
-                                // Немного опускаем модель вниз
-                                playerObject.skin.body.position.y = -2;
-                                playerObject.skin.body.position.z = -1;
-                            }
-                        };
+                    // Чтобы скин не разваливался, принудительно перезагружаем текущую текстуру 
+                    // Это полностью сбрасывает все кости модели в исходное целое состояние
+                    const activeItem = document.querySelector('.skin-item.active');
+                    if (activeItem) {
+                        const filename = activeItem.id.replace('item-', '');
+                        selectSkin(filename, false); 
+                    } else {
+                        applyAnimation();
                     }
                 };
             });
 
-            document.getElementById('layer_head').onchange = (e) => {
-                skinViewer.playerObject.skin.head.outerLayer.visible = e.target.checked;
+            // Настройка слоев
+            const updateLayers = () => {
+                if (!skinViewer) return;
+                const headVisible = document.getElementById('layer_head').checked;
+                const bodyVisible = document.getElementById('layer_body').checked;
+                
+                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
+                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
             };
-            document.getElementById('layer_body').onchange = (e) => {
-                skinViewer.playerObject.skin.body.outerLayer.visible = e.target.checked;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = e.target.checked;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = e.target.checked;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = e.target.checked;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = e.target.checked;
-            };
+
+            document.getElementById('layer_head').onchange = updateLayers;
+            document.getElementById('layer_body').onchange = updateLayers;
+            
+            // Прокидываем функцию для повторного вызова при смене скинов
+            window.refreshLayers = updateLayers;
         }
 
         async function loadSkinsJSON() {
@@ -471,7 +425,7 @@
             }
         }
 
-        function selectSkin(filename, clickByMouse = true) {
+        function selectSkin(filename, updateUrl = true) {
             if (!skinViewer) return;
             const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
@@ -483,21 +437,20 @@
             const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
             const skinPath = `skins/${cleanFilename}.png`;
             
-            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default');
+            // Загружаем скин и по окончании накладываем анимации и слои заново
+            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
+                applyAnimation();
+                if (window.refreshLayers) window.refreshLayers();
+            });
 
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoAuthor').textContent = skin.author || 'Не указан';
 
-            const baseUrl = window.location.origin + window.location.pathname;
-            const generatedUrl = `${baseUrl}?skin=${filename}`;
-            window.history.pushState({ path: generatedUrl }, '', generatedUrl);
-
-            if (clickByMouse) {
-                navigator.clipboard.writeText(generatedUrl).then(() => {
-                    const toast = document.getElementById('toast');
-                    toast.classList.add('show');
-                    setTimeout(() => toast.classList.remove('show'), 2500);
-                }).catch(() => {});
+            // Обновляем адресную строку только для переходов, БЕЗ копирования в буфер
+            if (updateUrl) {
+                const baseUrl = window.location.origin + window.location.pathname;
+                const generatedUrl = `${baseUrl}?skin=${filename}`;
+                window.history.pushState({ path: generatedUrl }, '', generatedUrl);
             }
         }
 
