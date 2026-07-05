@@ -1,8 +1,9 @@
 [
   {
     "filename": "day_apocalypse",
-    "customer": "Эппоп",
     "skinName": "Дэй Апокалипсис",
+    "customer": "Эппоп",
+    "author": "Ксения",
     "model": "steve"
   }
 ]
