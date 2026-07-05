@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея скинов</title>
     
-    <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <script src="https://unpkg.com/skinview3d@3.0.0-alpha.2/dist/skinview3d.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skinview3d@2.1.1/dist/skinview3d.bundle.js"></script>
 
     <style>
         body {
@@ -86,27 +86,34 @@
     <script>
         let skinViewer = null;
 
-        // Защита: отключаем правый клик
+        // Отключаем контекстное меню (базовая защита)
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         function initViewer() {
-            // Инициализируем плеер
+            // В релизе 2.x объект находится прямо в window.skinview3d
+            if (!window.skinview3d) {
+                document.getElementById('loading').textContent = "Ошибка: Библиотека 3D не инициализирована.";
+                return;
+            }
+
             skinViewer = new skinview3d.SkinViewer({
                 canvas: document.getElementById('skin_container'),
-                width: 500,
-                height: 500
+                width: 600,
+                height: 600
             });
 
-            // Настройки вращения и зума
+            // Настройка вращения и зума для этой версии
             skinViewer.controls.enableRotate = true;
             skinViewer.controls.enableZoom = true;
+            
+            // Запуск автоматического вращения
             skinViewer.autoRotate = true;
             skinViewer.autoRotateSpeed = 0.6;
 
-            // Включаем анимацию ходьбы
+            // Анимация ходьбы для версии 2.x
             skinViewer.animation = new skinview3d.WalkingAnimation();
             skinViewer.animation.speed = 0.6;
-            
+
             document.getElementById('loading').style.display = 'none';
         }
 
@@ -132,13 +139,13 @@
                     listContainer.appendChild(item);
                 });
 
-                // Запускаем движок
+                // Сначала запускаем вьюер, затем загружаем первый скин
                 initViewer();
-                if (skins.length > 0) {
+                if (skins.length > 0 && skinViewer) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
-                console.error("Ошибка инициализации:", error);
+                console.error("Ошибка при старте галереи:", error);
                 document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
         }
@@ -148,15 +155,14 @@
 
             const skinPath = `skins/${skin.filename}.png`;
             
-            // Загружаем текстуру скина в 3D модель
+            // Настройка модели под Стива или Алекс (тонкие руки)
             skinViewer.loadSkin(skinPath, {
                 model: skin.model === "alex" ? "slim" : "default"
             });
 
-            // Тайная функция для тебя: клик по скину копирует ссылку для Excel
+            // Твой скрытый буфер обмена для Excel
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
-            
             navigator.clipboard.writeText(currentSkinUrl).catch(() => {});
         }
 
