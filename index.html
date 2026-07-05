@@ -32,7 +32,6 @@
             overflow: hidden;
         }
 
-        /* Левая панель: Галерея и Инфо */
         #sidebar {
             width: 320px;
             background-color: var(--bg-sidebar);
@@ -83,7 +82,6 @@
             display: block;
         }
 
-        /* Информационный блок */
         .meta-info {
             padding: 20px 24px;
             background: rgba(0,0,0,0.2);
@@ -103,14 +101,13 @@
         .meta-label { color: var(--text-muted); }
         .meta-value { font-weight: 500; color: #fff; background: var(--bg-card); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); }
 
-        /* Центральная зона 3D */
         #viewer_zone {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            background: radial-gradient(circle at center, #18181b 0%, var(--bg-main) 100%);
+            background: radial-gradient(circle at center, #1c1c24 0%, var(--bg-main) 100%);
         }
 
         #skin_container {
@@ -122,7 +119,6 @@
 
         #skin_container:active { cursor: grabbing; }
 
-        /* Правая панель управления (Инструменты) */
         #controls_panel {
             width: 300px;
             background-color: var(--bg-sidebar);
@@ -145,7 +141,6 @@
             color: #fff;
         }
 
-        /* Элементы управления: кнопки, чекбоксы */
         .btn {
             width: 100%;
             background: var(--bg-card);
@@ -214,7 +209,6 @@
             font-weight: 600;
         }
 
-        /* Слой уведомлений об успешном копировании */
         #toast {
             position: absolute;
             bottom: 24px;
@@ -278,7 +272,7 @@
         <div class="control-group">
             <h3>Вращение</h3>
             <label class="checkbox-label">
-                <input type="checkbox" id="auto_rotate" checked>
+                <input type="checkbox" id="auto_rotate">
                 <span>Вращать модель</span>
             </label>
         </div>
@@ -287,11 +281,15 @@
             <h3>Анимация движения</h3>
             <div class="radio-grid">
                 <label class="radio-btn">
-                    <input type="radio" name="animation" value="none">
+                    <input type="radio" name="animation" value="none" checked>
                     <span>Покой</span>
                 </label>
                 <label class="radio-btn">
-                    <input type="radio" name="animation" value="walk" checked>
+                    <input type="radio" name="animation" value="crouch">
+                    <span>В приседе</span>
+                </label>
+                <label class="radio-btn">
+                    <input type="radio" name="animation" value="walk">
                     <span>Ходьба</span>
                 </label>
                 <label class="radio-btn">
@@ -324,12 +322,12 @@
         let walkAnimation = null;
         let runAnimation = null;
         let flyAnimation = null;
+        let crouchAnimation = null;
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
         function initViewer() {
             try {
-                // Создаем сцену адаптивного размера
                 const container = document.getElementById('viewer_zone');
                 skinViewer = new skinview3d.SkinViewer({
                     canvas: document.getElementById('skin_container'),
@@ -337,27 +335,29 @@
                     height: container.clientHeight
                 });
 
-                // Базовые настройки мыши и света
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
-                skinViewer.globalLight.intensity = 0.5;
-                skinViewer.cameraLight.intensity = 0.6;
                 
-                // Авто-вращение
-                skinViewer.autoRotate = true;
+                // ПРОБЛЕМА 1: Исправляем свет. Делаем его ярким и глобальным как в оригинальном демо
+                skinViewer.globalLight.intensity = 3.0; 
+                skinViewer.cameraLight.intensity = 0.6;
+
+                // ПРОБЛЕМА 2: По умолчанию выключаем вращение персонажа
+                skinViewer.autoRotate = false;
                 skinViewer.autoRotateSpeed = 0.6;
 
-                // Кешируем пресеты анимаций из библиотеки
                 walkAnimation = new skinview3d.WalkingAnimation();
                 runAnimation = new skinview3d.RunningAnimation();
                 flyAnimation = new skinview3d.FlyingAnimation();
+                
+                // ПРОБЛЕМА 4: Добавляем анимацию приседания (Shift)
+                crouchAnimation = new skinview3d.CrouchAnimation();
 
-                // По умолчанию включаем ходьбу
-                skinViewer.animation = walkAnimation;
+                // По умолчанию устанавливаем анимацию в режим покоя
+                skinViewer.animation = null;
 
                 document.getElementById('loading').style.display = 'none';
 
-                // Слушатель изменения размеров окна
                 window.addEventListener('resize', () => {
                     skinViewer.width = container.clientWidth;
                     skinViewer.height = container.clientHeight;
@@ -372,27 +372,24 @@
         }
 
         function initControlListeners() {
-            // Кнопка сброса
             document.getElementById('reset_all').onclick = () => {
                 skinViewer.controls.reset();
             };
 
-            // Чекбокс вращения
             document.getElementById('auto_rotate').onchange = (e) => {
                 skinViewer.autoRotate = e.target.checked;
             };
 
-            // Радио-кнопки анимаций
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     if (e.target.value === 'none') skinViewer.animation = null;
+                    if (e.target.value === 'crouch') skinViewer.animation = crouchAnimation;
                     if (e.target.value === 'walk') skinViewer.animation = walkAnimation;
                     if (e.target.value === 'run') skinViewer.animation = runAnimation;
                     if (e.target.value === 'fly') skinViewer.animation = flyAnimation;
                 };
             });
 
-            // Управление слоями одежды (Outer Layer)
             document.getElementById('layer_head').onchange = (e) => {
                 skinViewer.playerObject.skin.head.outerLayer.visible = e.target.checked;
             };
@@ -407,15 +404,17 @@
 
         async function loadSkinsJSON() {
             try {
-                const response = await fetch('skins.json');
+                // Добавляем случайное число к ссылке (Anti-cache), чтобы новые скины появлялись в галерее СРАЗУ
+                const response = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await response.json();
                 const list = document.getElementById('skinList');
+                list.innerHTML = ''; 
 
                 globalSkins.forEach(skin => {
                     const item = document.createElement('div');
                     item.classList.add('skin-item');
                     item.id = `item-${skin.filename}`;
-                    item.innerHTML = `<span class="skin-name">${skin.skinName}</span>`;
+                    item.innerHTML = `<span class="skin-name">${skin.skinName || 'Скин без названия'}</span>`;
                     
                     item.onclick = () => selectSkin(skin.filename, true);
                     list.appendChild(item);
@@ -423,7 +422,6 @@
 
                 initViewer();
 
-                // Читаем GET параметр из адресной строки для поддержки отдельных ссылок
                 const params = new URLSearchParams(window.location.search);
                 const activeSkin = params.get('skin');
 
@@ -443,25 +441,23 @@
             const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
 
-            // Визуальный переключатель активной кнопки
             document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
             const currentItem = document.getElementById(`item-${filename}`);
             if (currentItem) currentItem.classList.add('active');
 
-            // Натягиваем текстуру на 3D модель
-            const skinPath = `skins/${skin.filename}.png`;
+            // ПРОБЛЕМА 3 (Упрощение): Автоматически очищаем имя файла от лишних расширений, если вы случайно вписали их в JSON
+            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+            const skinPath = `skins/${cleanFilename}.png`;
+            
             skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default');
 
-            // Обновляем информацию об авторах
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoAuthor').textContent = skin.author || 'Не указан';
 
-            // Генерация и обновление ссылки в адресной строке без перезагрузки
             const baseUrl = window.location.origin + window.location.pathname;
             const generatedUrl = `${baseUrl}?skin=${filename}`;
             window.history.pushState({ path: generatedUrl }, '', generatedUrl);
 
-            // Если кликнули мышкой — копируем ссылку в буфер обмена и показываем красивое уведомление
             if (clickByMouse) {
                 navigator.clipboard.writeText(generatedUrl).then(() => {
                     const toast = document.getElementById('toast');
