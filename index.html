@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея скинов</title>
     
-    <script src="skinview3d.js"></script>
+    <script src="https://unpkg.com/skinview3d@3.0.0-alpha.2/dist/skinview3d.bundle.js"></script>
 
     <style>
         body {
@@ -57,13 +57,14 @@
             position: relative;
             background: radial-gradient(circle, #29292e 0%, #121214 100%);
         }
-        canvas {
-            outline: none;
-        }
         #loading {
             position: absolute;
             font-size: 18px;
             color: #04d361;
+            pointer-events: none;
+        }
+        canvas {
+            outline: none;
         }
     </style>
 </head>
@@ -83,38 +84,28 @@
     <script>
         let skinViewer = null;
 
-        // Блокируем правый клик мыши для защиты
+        // Защита: отключаем правый клик мыши
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         function initViewer() {
-            const container = document.getElementById('skin_container');
-            
-            // Проверяем, где именно лежит класс в этой версии
-            const ViewerClass = window.skinview3d ? window.skinview3d.SkinViewer : window.SkinViewer;
-            
-            if (!ViewerClass) {
-                document.getElementById('loading').textContent = "Ошибка: библиотека skinview3d не найдена.";
-                return;
-            }
-
-            skinViewer = new ViewerClass({
-                canvas: container,
+            // Создаем плеер по правилам новой стабильной библиотеки
+            skinViewer = new skinview3d.SkinViewer({
+                canvas: document.getElementById('skin_container'),
                 width: 600,
                 height: 600
             });
 
+            // Настройки камеры и управления
             skinViewer.controls.enableRotate = true;
             skinViewer.controls.enableZoom = true;
             skinViewer.autoRotate = true;
-            skinViewer.autoRotateSpeed = 0.5;
+            skinViewer.autoRotateSpeed = 0.6;
 
-            // Включаем анимацию ходьбы (зависит от версии)
-            const WalkAnim = window.skinview3d ? window.skinview3d.WalkingAnimation : window.WalkingAnimation;
-            if (WalkAnim) {
-                skinViewer.animation = new WalkAnim();
-                skinViewer.animation.speed = 0.6;
-            }
+            // Включаем ходьбу
+            skinViewer.animation = new skinview3d.WalkingAnimation();
+            skinViewer.animation.speed = 0.6;
             
+            // Скрываем надпись загрузки
             document.getElementById('loading').style.display = 'none';
         }
 
@@ -140,12 +131,13 @@
                     listContainer.appendChild(item);
                 });
 
+                // Сначала запускаем движок, потом кидаем скин
                 initViewer();
-                if (skins.length > 0 && skinViewer) {
+                if (skins.length > 0) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
-                console.error("Ошибка загрузки данных:", error);
+                console.error("Ошибка:", error);
                 document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
         }
@@ -155,15 +147,16 @@
 
             const skinPath = `skins/${skin.filename}.png`;
             
+            // Загружаем текстуру модели
             skinViewer.loadSkin(skinPath, {
                 model: skin.model === "alex" ? "slim" : "default"
             });
 
-            // Автокопирование ссылки для тебя при клике
+            // Твой секретный буфер: кликнул — ссылка скопировалась
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
             
-            navigator.clipboard.writeText(currentSkinUrl).catch(err => {});
+            navigator.clipboard.writeText(currentSkinUrl).catch(() => {});
         }
 
         window.onload = loadSkins;
