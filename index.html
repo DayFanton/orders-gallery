@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея Заказов Скинов</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
             --bg-color: #141414;
@@ -20,7 +21,6 @@
             font-family: 'Segoe UI', Roboto, sans-serif;
             user-select: none;
             -webkit-user-select: none;
-            overflow-x: hidden;
         }
         h1 { text-align: center; font-weight: 600; margin-bottom: 30px; }
         .gallery {
@@ -36,7 +36,7 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.2s;
             cursor: pointer;
             border: 1px solid #2a2a2a;
         }
@@ -51,21 +51,18 @@
             top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(10, 10, 10, 0.95);
             z-index: 1000;
-            justify-content: center;
-            align-items: center;
         }
-        #canvas-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
-        canvas { display: block; max-width: 100%; max-height: 100%; object-fit: contain; image-rendering: pixelated; cursor: grab; }
-        canvas:active { cursor: grabbing; }
+        #canvas-container {
+            width: 100%;
+            height: 100%;
+        }
         .close-btn {
             position: absolute;
             top: 20px; right: 30px;
             font-size: 35px; color: white; cursor: pointer;
             background: none; border: none; z-index: 1001;
-            transition: color 0.2s;
         }
         .close-btn:hover { color: var(--accent); }
-        #loading { position: absolute; color: white; font-size: 20px; pointer-events: none; display: none; }
     </style>
 </head>
 <body>
@@ -75,12 +72,15 @@
 
     <div id="viewer-modal">
         <button class="close-btn" onclick="closeViewer()">&times;</button>
-        <div id="loading">Загрузка скина...</div>
         <div id="canvas-container"></div>
     </div>
 
     <script>
-        // Загрузка галереи из JSON
+        let scene, camera, renderer, playerGroup;
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        // Загружаем список из JSON
         fetch('skins.json')
             .then(response => response.json())
             .then(data => {
@@ -97,104 +97,104 @@
                     gallery.appendChild(card);
                 });
 
-                // Чтение параметров URL для интеграции с таблицей (?skin=имя)
                 const urlParams = new URLSearchParams(window.location.search);
                 const directSkin = urlParams.get('skin');
                 if (directSkin) openViewer(directSkin);
-            }).catch(err => console.error("Ошибка JSON:", err));
-
-        let animationFrameId;
-        let rotationY = 0;
-        let rotationX = 0;
+            });
 
         function openViewer(filename) {
-            document.getElementById('viewer-modal').style.display = 'flex';
-            document.getElementById('loading').style.display = 'block';
-            
+            document.getElementById('viewer-modal').style.display = 'block';
             const container = document.getElementById('canvas-container');
             container.innerHTML = '';
 
-            const img = new Image();
-            img.src = `skins/${filename}.png`;
-            
-            img.onload = function() {
-                document.getElementById('loading').style.display = 'none';
-                
-                // Создаем холст для рендера развертки лица/тела в 2D-превью (или псевдо-3D)
-                const canvas = document.createElement('canvas');
-                canvas.width = 300;
-                canvas.height = 300;
-                const ctx = canvas.getContext('2d');
-                ctx.imageSmoothingEnabled = false;
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 4, 30); // Центрируем камеру на уровне груди игрока
 
-                let isDragging = false;
-                let previousMouseX = 0;
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
 
-                function draw() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.save();
-                    ctx.translate(canvas.width / 2, canvas.height / 2);
+            // Освещение (Исправлено имя конструктора!)
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+            scene.add(ambientLight);
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            dirLight.position.set(10, 20, 15);
+            scene.add(dirLight);
+
+            playerGroup = new THREE.Group();
+
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.load(`skins/${filename}.png`, function(texture) {
+                texture.magFilter = THREE.NearestFilter;
+                texture.minFilter = THREE.NearestFilter;
+
+                const mat = new THREE.MeshStandardMaterial({ map: texture, transparent: true, side: THREE.DoubleSide });
+
+                // Функция для создания UV-развертки под кубы Майнкрафта
+                function createPart(w, h, d, u, v, x, y, z) {
+                    const geo = new THREE.BoxGeometry(w, h, d);
+                    const mesh = new THREE.Mesh(geo, mat);
+                    mesh.position.set(x, y, z);
                     
-                    // Эмуляция вращения текстуры скина (передний план лица + тела)
-                    let scaleX = Math.cos(rotationY);
-                    ctx.scale(scaleX, 1);
-
-                    // Если лицо повернуто к нам фронтом — рисуем переднюю часть
-                    if (scaleX > 0) {
-                        // Голова (Скин развёртка: x=8, y=8, w=8, h=8)
-                        ctx.drawImage(img, 8, 8, 8, 8, -32, -80, 64, 64);
-                        // Тело (Скин развёртка: x=20, y=20, w=8, h=12)
-                        ctx.drawImage(img, 20, 20, 8, 12, -32, -16, 64, 96);
-                    } else {
-                        // Затылок (Скин развёртка: x=24, y=8, w=8, h=8)
-                        ctx.drawImage(img, 24, 8, 8, 8, -32, -80, 64, 64);
-                        // Спина (Скин развёртка: x=32, y=20, w=8, h=12)
-                        ctx.drawImage(img, 32, 20, 8, 12, -32, -16, 64, 96);
+                    // Настройка точных текстурных координат (простой маппинг)
+                    const uvs = geo.attributes.uv;
+                    for (let i = 0; i < uvs.count; i++) {
+                        uvs.setXY(i, uvs.getX(i) * (w/64) + (u/64), uvs.getY(i) * (h/64) + (1 - (v+h)/64));
                     }
-                    
-                    ctx.restore();
-                    
-                    if (!isDragging) {
-                        rotationY += 0.02; // Скорость авто-вращения
-                    }
-                    animationFrameId = requestAnimationFrame(draw);
+                    return mesh;
                 }
 
-                // Управление мышкой
-                canvas.addEventListener('mousedown', e => {
-                    isDragging = true;
-                    previousMouseX = e.clientX;
-                });
+                // Собираем полноценного 3D Стива по координатам классической развертки 64x64
+                const head = createPart(8, 8, 8, 8, 8, 0, 10, 0);       // Голова
+                const body = createPart(8, 12, 4, 20, 20, 0, 0, 0);     // Тело
+                const leftArm = createPart(4, 12, 4, 44, 20, -6, 0, 0);  // Левая рука
+                const rightArm = createPart(4, 12, 4, 40, 20, 6, 0, 0);  // Правая рука
+                const leftLeg = createPart(4, 12, 4, 4, 20, -2, -12, 0); // Левая нога
+                const rightLeg = createPart(4, 12, 4, 0, 20, 2, -12, 0); // Правая нога
 
-                window.addEventListener('mousemove', e => {
-                    if (isDragging) {
-                        const deltaX = e.clientX - previousMouseX;
-                        rotationY += deltaX * 0.01;
-                        previousMouseX = e.clientX;
-                    }
-                });
+                playerGroup.add(head, body, leftArm, rightArm, leftLeg, rightLeg);
+                scene.add(playerGroup);
+                animate();
+            });
 
-                window.addEventListener('mouseup', () => { isDragging = false; });
+            // Вращение мышкой
+            const dom = renderer.domElement;
+            dom.addEventListener('mousedown', e => { isDragging = true; });
+            dom.addEventListener('mousemove', e => {
+                const deltaMove = { x: e.offsetX - previousMousePosition.x, y: e.offsetY - previousMousePosition.y };
+                if (isDragging && playerGroup) {
+                    playerGroup.rotation.y += deltaMove.x * 0.01;
+                }
+                previousMousePosition = { x: e.offsetX, y: e.offsetY };
+            });
+            window.addEventListener('mouseup', () => { isDragging = false; });
+        }
 
-                container.appendChild(canvas);
-                draw();
-            };
-
-            img.onerror = function() {
-                document.getElementById('loading').innerText = 'Ошибка: Файл скина не найден в папке skins/';
-            };
+        function animate() {
+            if (!playerGroup) return;
+            requestAnimationFrame(animate);
+            if (!isDragging) {
+                playerGroup.rotation.y += 0.01; // Плавный автооборот
+            }
+            renderer.render(scene, camera);
         }
 
         function closeViewer() {
             document.getElementById('viewer-modal').style.display = 'none';
             window.history.replaceState({}, document.title, window.location.pathname);
-            if (animationFrameId) {
-                cancelAnimationFrame(animationFrameId);
-            }
-            rotationY = 0;
+            playerGroup = null;
         }
 
-        // ================= ЗАЩИТА ОТ СКАЧИВАНИЯ =================
+        window.addEventListener('resize', () => {
+            if (camera && renderer) {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        });
+
+        // Защита от воровства скинов
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('dragstart', e => e.preventDefault());
         document.addEventListener('selectstart', e => e.preventDefault());
