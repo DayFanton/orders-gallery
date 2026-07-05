@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Галерея скинов</title>
-    <script src="https://unpkg.com/skinview3d@3.0.0/dist/skinview3d.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.0.0/dist/skinview3d.bundle.js"></script>
     <style>
         body { margin: 0; background: #141414; color: #fff; font-family: sans-serif; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
         .card { background: #1f1f1f; padding: 15px; border-radius: 8px; cursor: pointer; text-align: center; border: 1px solid #333; }
         #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; }
-        #viewer { width: 100%; height: 100%; }
+        #viewer-container { width: 100%; height: 100%; }
         .controls { position: absolute; top: 20px; left: 20px; z-index: 101; }
-        button { padding: 10px; cursor: pointer; background: #00ca72; border: none; border-radius: 4px; }
+        button { padding: 10px; cursor: pointer; background: #00ca72; border: none; border-radius: 4px; color: black; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -21,15 +21,15 @@
     <div id="modal">
         <div class="controls">
             <button onclick="document.getElementById('modal').style.display='none'">Закрыть</button>
-            <button id="layer-btn">Переключить слой</button>
+            <button id="toggle-layer">Переключить 2-й слой</button>
         </div>
-        <div id="viewer"></div>
+        <div id="viewer-container"></div>
     </div>
 
     <script>
         let viewer;
 
-        // Загрузка галереи
+        // Загрузка JSON
         fetch('skins.json').then(r => r.json()).then(data => {
             const container = document.getElementById('gallery');
             data.forEach(s => {
@@ -43,10 +43,10 @@
 
         function openSkin(url) {
             document.getElementById('modal').style.display = 'block';
-            document.getElementById('viewer').innerHTML = ''; // Очистка старого
+            document.getElementById('viewer-container').innerHTML = ''; // Очищаем прошлый
             
             viewer = new SkinViewer({
-                container: document.getElementById("viewer"),
+                container: document.getElementById("viewer-container"),
                 width: window.innerWidth,
                 height: window.innerHeight,
                 skin: url
@@ -55,11 +55,9 @@
             viewer.autoRotate = true;
         }
 
-        document.getElementById('layer-btn').onclick = () => {
-            if (viewer.playerObject.skin.secondLayer.visible) {
-                viewer.playerObject.skin.secondLayer.visible = false;
-            } else {
-                viewer.playerObject.skin.secondLayer.visible = true;
+        document.getElementById('toggle-layer').onclick = () => {
+            if (viewer) {
+                viewer.playerObject.skin.secondLayer.visible = !viewer.playerObject.skin.secondLayer.visible;
             }
         };
     </script>
