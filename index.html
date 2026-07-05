@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея скинов</title>
     
-    <script src="https://unpkg.com/skinview3d@3.4.2/dist/skinview3d.bundle.js"></script>
+    <script src="https://unpkg.com/skinview3d@2.1.2/dist/skinview3d.bundle.js"></script>
 
     <style>
         body {
@@ -74,8 +74,8 @@
         }
 
         #skin_container {
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 500px;
             outline: none;
         }
 
@@ -103,32 +103,39 @@
     <script>
         let skinViewer = null;
 
+        // Блокируем правый клик мыши
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         function initViewer() {
             if (!window.skinview3d) {
-                document.getElementById('loading').textContent = "Ошибка: Скрипт заблокирован вашим провайдером или браузером.";
+                document.getElementById('loading').textContent = "Ошибка: Скрипт не загрузился.";
                 return;
             }
 
             try {
+                // Инициализация по классическому стандарту v2
                 skinViewer = new skinview3d.SkinViewer({
                     canvas: document.getElementById('skin_container'),
-                    width: 600,
-                    height: 600
+                    width: 500,
+                    height: 500
                 });
 
+                // Включаем управление мыstatusью
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
                 
-                // Добавляем дефолтное вращение и анимацию ходьбы
-                skinViewer.animations.add(skinview3d.AutoRotateAnimation).speed = 0.5;
-                skinViewer.animations.add(skinview3d.WalkingAnimation).speed = 0.6;
+                // Настройка анимаций под версию 2.x.x
+                skinViewer.autoRotate = true;
+                skinViewer.autoRotateSpeed = 0.5;
+                
+                // Запускаем анимацию ходьбы
+                skinViewer.animation = new skinview3d.WalkingAnimation();
+                skinViewer.animation.speed = 0.6;
 
                 document.getElementById('loading').style.display = 'none';
             } catch (e) {
                 console.error(e);
-                document.getElementById('loading').textContent = "Ошибка инициализации 3D сцены.";
+                document.getElementById('loading').textContent = "Ошибка создания 3D сцены.";
             }
         }
 
@@ -155,11 +162,12 @@
                 });
 
                 initViewer();
+                
                 if (skins.length > 0 && skinViewer) {
                     selectSkin(skins[0]);
                 }
             } catch (error) {
-                document.getElementById('loading').textContent = "Ошибка парсинга skins.json.";
+                document.getElementById('loading').textContent = "Ошибка загрузки списка скинов.";
             }
         }
 
@@ -167,16 +175,16 @@
             if (!skinViewer) return;
 
             const skinPath = `skins/${skin.filename}.png`;
+            const isSlim = (skin.model === "alex");
             
             try {
-                skinViewer.loadSkin(skinPath, {
-                    model: skin.model === "alex" ? "slim" : "default"
-                });
+                // Корректный метод загрузки для стабильной версии
+                skinViewer.loadSkin(skinPath, isSlim ? "slim" : "default");
             } catch(e) {
                 console.error("Не удалось подгрузить файл скина:", e);
             }
 
-            // Копирование ссылки в буфер обмена для Excel
+            // Автоматическое копирование ссылки для Excel
             const baseUrl = window.location.href.split('?')[0];
             const currentSkinUrl = `${baseUrl}?skin=${skin.filename}`;
             navigator.clipboard.writeText(currentSkinUrl).catch(() => {});
