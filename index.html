@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея Заказов Скинов</title>
-    <script src="https://bsptnhs.github.io/skinview3d/bundles/skinview3d.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skinview3d@2.1.2/bundles/skinview3d.bundle.js"></script>
     <style>
         :root {
             --bg-color: #141414;
@@ -22,8 +22,6 @@
             user-select: none;
         }
         h1 { text-align: center; font-weight: 600; margin-bottom: 30px; }
-        
-        /* Сетка галереи */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -46,7 +44,6 @@
         .card .skin-name { font-size: 18px; margin: 8px 0; font-weight: bold; }
         .card .model-type { font-size: 12px; color: var(--text-muted); }
         
-        /* Модальное окно 3D просмотра */
         #viewer-modal {
             display: none;
             position: fixed;
@@ -81,7 +78,7 @@
     <script>
         let skinViewer = null;
 
-        // Загружаем список скинов из нашего JSON файла
+        // Загружаем список из JSON
         fetch('skins.json')
             .then(response => response.json())
             .then(data => {
@@ -97,6 +94,14 @@
                     card.onclick = () => openViewer(skin.filename, skin.model);
                     gallery.appendChild(card);
                 });
+
+                // Проверяем прямую ссылку вида: ?skin=имя&model=steve
+                const urlParams = new URLSearchParams(window.location.search);
+                const directSkin = urlParams.get('skin');
+                const directModel = urlParams.get('model') || 'steve';
+                if (directSkin) {
+                    openViewer(directSkin, directModel);
+                }
             });
 
         function openViewer(filename, modelType) {
@@ -104,13 +109,15 @@
             document.getElementById('loading').style.display = 'block';
 
             const container = document.getElementById('skin-container');
-            container.innerHTML = ''; // Очищаем старый холст если был
+            container.innerHTML = ''; 
 
+            // Инициализация для версии библиотеки 2.x
             skinViewer = new skinview3d.SkinViewer({
                 canvas: document.createElement("canvas"),
                 width: window.innerWidth,
                 height: window.innerHeight,
-                model: modelType
+                skin: `skins/${filename}.png`,
+                model: modelType === 'slim' ? 'slim' : 'default' // Стив в v2 называется 'default'
             });
 
             container.appendChild(skinViewer.canvas);
@@ -123,11 +130,16 @@
 
             skinViewer.autoRotate = true;
             skinViewer.autoRotateSpeed = 0.6;
-            skinview3d.createOrbitControls(skinViewer);
+            
+            // Включаем вращение мышкой для версии 2.x
+            const controls = new skinview3d.createOrbitControls(skinViewer);
+            controls.enableZoom = true;
         }
 
         function closeViewer() {
             document.getElementById('viewer-modal').style.display = 'none';
+            // Очищаем адресную строку от параметров при закрытии модалки
+            window.history.replaceState({}, document.title, window.location.pathname);
             if (skinViewer) {
                 skinViewer.dispose();
                 skinViewer = null;
@@ -136,8 +148,7 @@
 
         window.addEventListener('resize', () => {
             if (skinViewer) {
-                skinViewer.width = window.innerWidth;
-                skinViewer.height = window.innerHeight;
+                skinViewer.setSize(window.innerWidth, window.innerHeight);
             }
         });
 
