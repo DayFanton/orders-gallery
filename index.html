@@ -68,7 +68,6 @@
             gap: 6px;
         }
 
-        /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО СПИСКА СОРТИРОВКИ */
         .dropdown-sort {
             position: relative;
         }
@@ -136,7 +135,6 @@
             color: #fff;
         }
 
-        /* Круглый чекбокс/радио кнопка как на скриншоте */
         .radio-circle {
             width: 14px;
             height: 14px;
@@ -167,7 +165,6 @@
             margin: 4px 0;
         }
 
-        /* Заголовки разделения авторов */
         .author-group-header {
             width: 100%;
             font-size: 0.7rem;
@@ -182,7 +179,7 @@
         }
 
         .skin-list.view-grid .author-group-header {
-            grid-column: 1 / -1; /* Растягивание на всю ширину сетки плиток */
+            grid-column: 1 / -1;
             margin-top: 8px;
         }
 
@@ -231,11 +228,11 @@
         }
         .skin-list.view-list .skin-item {
             display: flex !important;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
-            padding: 14px 16px;
+            padding: 8px 12px;
             background: var(--bg-card);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -244,9 +241,17 @@
             height: auto !important;
             box-sizing: border-box;
         }
-        .skin-list.view-list .canvas-avatar { display: none !important; }
-        .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: 8px; flex-shrink: 0; }
-        .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; }
+        .skin-list.view-list .canvas-avatar { 
+            display: block !important;
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 4px;
+            background: #27272a;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; font-size: 0.85rem; }
+        .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: auto; flex-shrink: 0; }
 
         /* РЕЖИМ ПЛИТКИ */
         .skin-list.view-grid {
@@ -272,9 +277,7 @@
             transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        .skin-list.view-grid .grid-spacer {
-            display: none !important;
-        }
+        .skin-list.view-grid .grid-spacer { display: none !important; }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
             width: 42px !important;
@@ -295,9 +298,7 @@
             width: 100% !important;
             display: block !important;
         }
-        .skin-list.view-grid .skin-date {
-            display: none !important; 
-        }
+        .skin-list.view-grid .skin-date { display: none !important; }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
         .skin-list .skin-item.active { background: rgba(184, 134, 11, 0.08); border-color: var(--accent); }
@@ -424,10 +425,7 @@
             font-weight: 600;
         }
 
-        /* Стили контейнеров для ползунков скорости */
-        .slider-container {
-            margin-top: 12px;
-        }
+        .slider-container { margin-top: 12px; }
         .slider-header {
             display: flex;
             justify-content: space-between;
@@ -445,12 +443,21 @@
             cursor: pointer;
         }
 
-        /* --- СТИЛИ ДЛЯ ПЛАЩЕЙ И ЭЛИТР --- */
+        /* --- СТИЛИ ДЛЯ СКРОЛЛА С ПЛАЩАМИ --- */
+        .cape-container-scroll {
+            max-height: 160px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px;
+            background: var(--bg-main);
+            box-sizing: border-box;
+        }
+
         .cape-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 8px;
+            gap: 8px;
         }
 
         .cape-item {
@@ -468,34 +475,22 @@
             box-sizing: border-box;
         }
 
-        .cape-item:hover {
-            border-color: var(--text-muted);
-            background: var(--bg-hover);
-        }
+        .cape-item:hover { border-color: var(--text-muted); background: var(--bg-hover); }
+        .cape-item.active { border-color: var(--accent); background: rgba(184, 134, 11, 0.1); }
 
-        .cape-item.active {
-            border-color: var(--accent);
-            background: rgba(184, 134, 11, 0.1);
-        }
-
-        /* Кроппинг задника плаща (текстура 64x32) с помощью адаптивных процентов */
+        /* Идеальное позиционирование задника плаща (X=12, Y=1 на текстуре 64x32) */
         .cape-icon-wrapper img {
             position: absolute;
-            width: 640%;   /* (64 пикселя всего / 10 пикселей задника) * 100% */
-            height: 200%;  /* (32 пикселя всего / 16 пикселей задника) * 100% */
-            left: -10%;    /* Сдвиг к координате X=1 */
-            top: -6.25%;   /* Сдвиг к координате Y=1 */
+            width: 640%;    
+            height: 200%;   
+            left: -120%;    
+            top: -6.25%;    
             image-rendering: pixelated;
-            display: none; /* Проявится программно после расшифровки */
+            display: none; 
         }
 
-        .cape-item#cape-none {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-        }
-        .cape-item#cape-none:hover {
-            color: #ef4444;
-        }
+        .cape-item#cape-none { font-size: 1.1rem; color: var(--text-muted); }
+        .cape-item#cape-none:hover { color: #ef4444; }
 
         .bg-selector-group {
             padding: 20px 24px;
@@ -510,14 +505,7 @@
             margin-top: 10px;
         }
 
-        .bg-dot {
-            height: 32px;
-            border-radius: 6px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: 0.2s;
-        }
-
+        .bg-dot { height: 32px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: 0.2s; }
         .bg-dot:hover { transform: scale(1.05); }
         .bg-dot.active { border-color: #fff; }
 
@@ -538,23 +526,9 @@
             mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
             -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
         }
-        .bg-dot.custom-color-btn input[type="color"] {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-        }
+        .bg-dot.custom-color-btn input[type="color"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
 
-        #loading {
-            position: absolute;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            pointer-events: none;
-        }
-
+        #loading { position: absolute; font-size: 0.9rem; color: var(--text-muted); pointer-events: none; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
@@ -566,7 +540,6 @@
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
             <div class="header-controls">
-                
                 <div class="dropdown-sort">
                     <button class="sort-trigger-btn" id="sortTrigger">
                         <span>Сортировка</span>
@@ -680,6 +653,7 @@
                 </label>
             </div>
 
+            <!-- ДИНАМИЧЕСКИЙ РАЗДЕЛ ПЛАЩЕЙ -->
             <div class="control-group">
                 <h3>Плащ и Элитры</h3>
                 <label class="checkbox-label">
@@ -689,15 +663,10 @@
                 
                 <div style="margin-top: 14px;">
                     <h4 style="margin: 0 0 8px 0; font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">Выбор плаща</h4>
-                    <div class="cape-grid">
-                        <div class="cape-item active" id="cape-none" title="Снять плащ">❌</div>
-                        
-                        <div class="cape-item cape-icon-wrapper" id="cape-migrator" data-cape="migrator" title="Плащ Мигратора">
-                            <img id="img-preview-migrator" alt="Migrator">
-                        </div>
-                        
-                        <div class="cape-item cape-icon-wrapper" id="cape-pancake" data-cape="pancake" title="Плащ Панкейка">
-                            <img id="img-preview-pancake" alt="Pancake">
+                    <div class="cape-container-scroll">
+                        <div class="cape-grid" id="capeList">
+                            <div class="cape-item active" id="cape-none" title="Снять плащ">❌</div>
+                            <!-- Плащи загрузятся из capes.json сюда -->
                         </div>
                     </div>
                 </div>
@@ -713,22 +682,19 @@
     <script>
         let skinViewer = null;
         let globalSkins = [];
+        let globalCapes = []; // Массив для плащей из capes.json
         let currentAnimationType = 'none';
         
-        // Переменные для сохранения выбранной пользователем скорости
         let currentRotationSpeed = 1.0;
         let currentAnimationSpeed = 1.0;
         
-        // Текущие параметры сортировки (по умолчанию как на скриншоте)
         let currentSortField = 'name'; 
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
 
-        // Переменные состояния спины
         let currentCapeFilename = null;
         let elytraEnabled = false;
 
-        // Текстура дефолтных элитр из официальных примеров skinview3d
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
 
         const bgPresets = [
@@ -759,7 +725,7 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
-                skinViewer.autoRotateSpeed = currentRotationSpeed; // Применяем базовую скорость
+                skinViewer.autoRotateSpeed = currentRotationSpeed;
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -770,7 +736,6 @@
 
                 initControlListeners();
                 buildBackgroundSelector();
-                initCapePreviews(); // Запуск расшифровки превьюшек плащей
 
             } catch (e) {
                 console.error(e);
@@ -785,134 +750,153 @@
             skinViewer.height = container.clientHeight;
         }
         
-const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
+        const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
 
-async function getDecryptedBlobUrl(filename) {
-    const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-    const response = await fetch(`skins_enc/${cleanFilename}.png.txt`);
-    if (!response.ok) throw new Error("Файл не найден");
-    
-    const base64Data = await response.text();
-    
-    const binaryString = atob(base64Data);
-    const bytes = new Uint8Array(binaryString.length);
-    const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
-    
-    for (let i = 0; i < binaryString.length; i++) {
-        bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
-    }
-    
-    return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
-}
-
-// Умная функция обновления экипировки на спине персонажа
-async function updateBackEquipment() {
-    if (!skinViewer) return;
-
-    // Сценарий 1: Всё выключено
-    if (!currentCapeFilename && !elytraEnabled) {
-        skinViewer.loadCape(null);
-        return;
-    }
-
-    // Сценарий 2: Только элитры (без плаща) -> загружаем серые дефолтные крылья
-    if (elytraEnabled && !currentCapeFilename) {
-        try {
-            await skinViewer.loadCape(DEFAULT_ELYTRA_URL, { backEquipment: 'elytra' });
-        } catch (e) {
-            console.error("Не удалось загрузить стандартные элитры:", e);
-        }
-        return;
-    }
-
-    // Сценарий 3: Выбран плащ (с элитрами или без)
-    if (currentCapeFilename) {
-        try {
-            const capeBlobUrl = await getDecryptedBlobUrl(currentCapeFilename);
+        // Умная функция дешифрования, распределяющая запросы по папкам
+        async function getDecryptedBlobUrl(type, filename) {
+            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+            // Если тип 'capes' -> идём в capes_enc, если 'skins' -> в skins_enc
+            const folder = type === 'capes' ? 'capes_enc' : 'skins_enc'; 
+            const response = await fetch(`${folder}/${cleanFilename}.png.txt`);
+            if (!response.ok) throw new Error("Файл не найден");
             
-            if (elytraEnabled) {
-                // Если включен плащ + элитры, skinview3d автоматически натянет текстуру плаща на крылья элитр!
-                await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'elytra' });
-            } else {
-                // Иначе просто отображаем классический плащ
-                await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'cape' });
+            const base64Data = await response.text();
+            const binaryString = atob(base64Data);
+            const bytes = new Uint8Array(binaryString.length);
+            const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
+            
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
+            }
+            
+            return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
+        }
+
+        async function updateBackEquipment() {
+            if (!skinViewer) return;
+
+            if (!currentCapeFilename && !elytraEnabled) {
+                skinViewer.loadCape(null);
+                return;
             }
 
-            // Очищаем Blob URL через секунду, чтобы разгрузить память браузера
-            setTimeout(() => {
-                if (capeBlobUrl.startsWith('blob:')) URL.revokeObjectURL(capeBlobUrl);
-            }, 1000);
-
-        } catch (err) {
-            console.error("Ошибка при обновлении спины персонажа:", err);
-        }
-    }
-}
-
-// Загрузка и генерация иконок для плащей прямо из зашифрованных файлов
-async function initCapePreviews() {
-    const capesToLoad = ['migrator', 'pancake'];
-    for (const cape of capesToLoad) {
-        try {
-            const blobUrl = await getDecryptedBlobUrl(cape);
-            const img = document.getElementById(`img-preview-${cape}`);
-            if (img) {
-                img.src = blobUrl;
-                img.style.display = 'block';
-            }
-        } catch (e) {
-            console.warn(`Не удалось подготовить иконку для плаща: ${cape}`);
-        }
-    }
-}
-
-async function selectSkin(filename, updateUrl = true) {
-    if (!skinViewer) return;
-    const skin = globalSkins.find(s => s.filename === filename);
-    if (!skin) return;
-
-    currentActiveSkinFilename = filename;
-    document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-    const currentItem = document.getElementById(`item-${filename}`);
-    if (currentItem) currentItem.classList.add('active');
-
-    try {
-        // Загрузка и расшифровка скина
-        const blobUrl = await getDecryptedBlobUrl(filename);
-        await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
-        
-        // Очистка памяти
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-
-        applyAnimation();
-        if (window.refreshLayers) window.refreshLayers();
-
-        // Обновление информации
-        document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
-        document.getElementById('infoDate').textContent = skin.date || 'Не указана';
-
-        // БЛОК АВТОРА:
-        const authorContainer = document.getElementById('infoAuthor');
-        if (authorContainer) {
-            if (skin.author) {
-                if (skin.authorUrl) {
-                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: underline; font-weight: 600; cursor: pointer;">${skin.author}</a>`;
-                } else {
-                    authorContainer.textContent = skin.author;
+            if (elytraEnabled && !currentCapeFilename) {
+                try {
+                    await skinViewer.loadCape(DEFAULT_ELYTRA_URL, { backEquipment: 'elytra' });
+                } catch (e) {
+                    console.error("Не удалось загрузить стандартные элитры:", e);
                 }
-            } else {
-                authorContainer.textContent = 'Не указан';
+                return;
+            }
+
+            if (currentCapeFilename) {
+                try {
+                    const capeBlobUrl = await getDecryptedBlobUrl('capes', currentCapeFilename);
+                    
+                    if (elytraEnabled) {
+                        await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'elytra' });
+                    } else {
+                        await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'cape' });
+                    }
+
+                    setTimeout(() => {
+                        if (capeBlobUrl.startsWith('blob:')) URL.revokeObjectURL(capeBlobUrl);
+                    }, 1000);
+
+                } catch (err) {
+                    console.error("Ошибка при обновлении спины персонажа:", err);
+                }
             }
         }
 
-        if (updateUrl) {
-            const baseUrl = window.location.origin + window.location.pathname;
-            window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
+        // Динамическая генерация списка и превью плащей из capes.json
+        async function renderCapeList() {
+            const grid = document.getElementById('capeList');
+            if (!grid) return;
+
+            // Очищаем, оставляя только кнопку "Снять плащ"
+            grid.innerHTML = '<div class="cape-item active" id="cape-none" title="Снять плащ">❌</div>';
+
+            // Навешиваем клик на кнопку сброса плаща
+            document.getElementById('cape-none').onclick = async () => {
+                currentCapeFilename = null;
+                document.querySelectorAll('.cape-item').forEach(el => el.classList.remove('active'));
+                document.getElementById('cape-none').classList.add('active');
+                await updateBackEquipment();
+            };
+
+            for (const cape of globalCapes) {
+                const capeItem = document.createElement('div');
+                capeItem.classList.add('cape-item', 'cape-icon-wrapper');
+                capeItem.id = `cape-${cape.filename}`;
+                capeItem.title = cape.capeName || cape.name || cape.filename;
+
+                const img = document.createElement('img');
+                img.id = `img-preview-${cape.filename}`;
+                capeItem.appendChild(img);
+                grid.appendChild(capeItem);
+
+                capeItem.onclick = async () => {
+                    currentCapeFilename = cape.filename;
+                    document.querySelectorAll('.cape-item').forEach(el => el.classList.remove('active'));
+                    capeItem.classList.add('active');
+                    await updateBackEquipment();
+                };
+
+                // Фоновое декодирование превью блинчика
+                try {
+                    const blobUrl = await getDecryptedBlobUrl('capes', cape.filename);
+                    img.src = blobUrl;
+                    img.style.display = 'block';
+                } catch (e) {
+                    console.warn(`Не удалось подготовить иконку для плаща: ${cape.filename}`);
+                }
+            }
         }
-    } catch (err) {
-        console.error("Ошибка расшифровки скина:", err);
-    }
-}
+
+        async function selectSkin(filename, updateUrl = true) {
+            if (!skinViewer) return;
+            const skin = globalSkins.find(s => s.filename === filename);
+            if (!skin) return;
+
+            currentActiveSkinFilename = filename;
+            document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+            const currentItem = document.getElementById(`item-${filename}`);
+            if (currentItem) currentItem.classList.add('active');
+
+            try {
+                const blobUrl = await getDecryptedBlobUrl('skins', filename);
+                await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
+                
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+
+                applyAnimation();
+                if (window.refreshLayers) window.refreshLayers();
+
+                document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
+                document.getElementById('infoDate').textContent = skin.date || 'Не указана';
+
+                const authorContainer = document.getElementById('infoAuthor');
+                if (authorContainer) {
+                    if (skin.author) {
+                        if (skin.authorUrl) {
+                            authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: underline; font-weight: 600; cursor: pointer;">${skin.author}</a>`;
+                        } else {
+                            authorContainer.textContent = skin.author;
+                        }
+                    } else {
+                        authorContainer.textContent = 'Не указан';
+                    }
+                }
+
+                if (updateUrl) {
+                    const baseUrl = window.location.origin + window.location.pathname;
+                    window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
+                }
+            } catch (err) {
+                console.error("Ошибка расшифровки скина:", err);
+            }
+        }
 
         function buildBackgroundSelector() {
             const grid = document.getElementById('bgGrid');
@@ -955,22 +939,21 @@ async function selectSkin(filename, updateUrl = true) {
         }
 
         async function drawSkinAvatar(filename, canvasElement) {
-    try {
-        const blobUrl = await getDecryptedBlobUrl(filename);
-        const img = new Image();
-        img.src = blobUrl;
-        img.onload = () => {
-            const ctx = canvasElement.getContext('2d');
-            ctx.imageSmoothingEnabled = false; 
-            // Рисуем лицо (оба слоя)
-            ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-            ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-            URL.revokeObjectURL(blobUrl);
-        };
-    } catch (e) {
-        console.log("Не удалось загрузить миниатюру");
-    }
-}
+            try {
+                const blobUrl = await getDecryptedBlobUrl('skins', filename);
+                const img = new Image();
+                img.src = blobUrl;
+                img.onload = () => {
+                    const ctx = canvasElement.getContext('2d');
+                    ctx.imageSmoothingEnabled = false; 
+                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
+                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
+                    URL.revokeObjectURL(blobUrl);
+                };
+            } catch (e) {
+                console.log("Не удалось загрузить миниатюру");
+            }
+        }
 
         function applyAnimation() {
             if (!skinViewer) return;
@@ -979,14 +962,12 @@ async function selectSkin(filename, updateUrl = true) {
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
             
-            // Накатываем текущую сохраненную скорость на вновь созданную анимацию
             if (skinViewer.animation) {
                 skinViewer.animation.speed = currentAnimationSpeed;
                 skinViewer.animation.paused = document.getElementById('pause_animation').checked;
             }
         }
 
-        /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
         function parseDate(dateStr) {
             if (!dateStr) return new Date(0);
             const parts = dateStr.split('.');
@@ -1001,7 +982,6 @@ async function selectSkin(filename, updateUrl = true) {
             return new Date(0); 
         }
 
-        /* ФУНКЦИЯ СОРТИРОВКИ И ОТРИСОВКИ СПИСКА */
         function renderSkinList() {
             const list = document.getElementById('skinList');
             if (!list) return;
@@ -1009,7 +989,6 @@ async function selectSkin(filename, updateUrl = true) {
 
             let sortedSkins = [...globalSkins];
 
-            // 1. Сортировка базового массива
             sortedSkins.sort((a, b) => {
                 let valA, valB;
 
@@ -1034,18 +1013,15 @@ async function selectSkin(filename, updateUrl = true) {
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                // Дополнительная сортировка по имени, если критерии равны
                 if (currentSortField !== 'name') {
                     return (a.skinName || '').localeCompare(b.skinName || '');
                 }
                 return 0;
             });
 
-            // 2. Генерация элементов с поддержкой разделителей авторов
             let lastAuthor = null;
 
             sortedSkins.forEach(skin => {
-                // Если выбрана сортировка по автору, создаем черточки-разделения групп
                 if (currentSortField === 'author' && skin.author !== lastAuthor) {
                     lastAuthor = skin.author;
                     const header = document.createElement('div');
@@ -1053,9 +1029,6 @@ async function selectSkin(filename, updateUrl = true) {
                     header.textContent = lastAuthor || 'Не указан';
                     list.appendChild(header);
                 }
-
-                const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
-                const skinPath = `skins/${cleanFilename}.png`;
 
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
@@ -1073,14 +1046,12 @@ async function selectSkin(filename, updateUrl = true) {
                 
                 list.appendChild(item);
                 
-        
-const canvas = item.querySelector('.canvas-avatar');
-drawSkinAvatar(skin.filename, canvas);
+                const canvas = item.querySelector('.canvas-avatar');
+                drawSkinAvatar(skin.filename, canvas);
 
                 item.onclick = () => selectSkin(skin.filename, true);
             });
 
-            // Технические распорки для красивой сетки плитки
             for(let i = 0; i < 4; i++) {
                 const spacer = document.createElement('div');
                 spacer.classList.add('grid-spacer');
@@ -1088,27 +1059,23 @@ drawSkinAvatar(skin.filename, canvas);
             }
         }
 
-        /* ИНИЦИАЛИЗАЦИЯ ИНТЕРФЕЙСА СОРТИРОВКИ */
         function initSortListeners() {
             const trigger = document.getElementById('sortTrigger');
             const menu = document.getElementById('sortMenu');
 
             if (!trigger || !menu) return;
 
-            // Показ / скрытие менюшки по клику
             trigger.onclick = (e) => {
                 e.stopPropagation();
                 menu.classList.toggle('show');
                 trigger.classList.toggle('active');
             };
 
-            // Скрытие при клике по экрану
             document.addEventListener('click', () => {
                 menu.classList.remove('show');
                 trigger.classList.remove('active');
             });
 
-            // Обновление чекбоксов-точек при кликах на пункты
             const updateMenuSelectionVisuals = () => {
                 menu.querySelectorAll('.dropdown-item').forEach(item => {
                     const field = item.getAttribute('data-field');
@@ -1133,7 +1100,7 @@ drawSkinAvatar(skin.filename, canvas);
                     if (order) currentSortOrder = order;
 
                     updateMenuSelectionVisuals();
-                    renderSkinList(); // Моментальный перерендер с новой сортировкой
+                    renderSkinList();
                 };
             });
 
@@ -1146,11 +1113,8 @@ drawSkinAvatar(skin.filename, canvas);
                 
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
-                
-                // Сброс паузы анимации
                 document.getElementById('pause_animation').checked = false;
                 
-                // Сброс значений и ползунков к дефолтным (1.0)
                 currentRotationSpeed = 1.0;
                 skinViewer.autoRotateSpeed = currentRotationSpeed;
                 document.getElementById('rotate_speed').value = 1.0;
@@ -1170,7 +1134,6 @@ drawSkinAvatar(skin.filename, canvas);
                     skinViewer.playerObject.rotation.z = 0;
                 }
 
-                // Сброс плаща и элитр
                 currentCapeFilename = null;
                 elytraEnabled = false;
                 document.getElementById('elytra_toggle').checked = false;
@@ -1187,14 +1150,12 @@ drawSkinAvatar(skin.filename, canvas);
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
-            // Обработчик чекбокса паузы анимации
             document.getElementById('pause_animation').onchange = (e) => {
                 if (skinViewer && skinViewer.animation) {
                     skinViewer.animation.paused = e.target.checked;
                 }
             };
 
-            // Обработчик изменения скорости вращения
             const rotateSpeedInput = document.getElementById('rotate_speed');
             const rotateSpeedVal = document.getElementById('rotate_speed_val');
             rotateSpeedInput.oninput = (e) => {
@@ -1214,7 +1175,6 @@ drawSkinAvatar(skin.filename, canvas);
                 };
             });
 
-            // Обработчик изменения скорости анимации
             const animSpeedInput = document.getElementById('anim_speed');
             const animSpeedVal = document.getElementById('anim_speed_val');
             animSpeedInput.oninput = (e) => {
@@ -1241,30 +1201,10 @@ drawSkinAvatar(skin.filename, canvas);
             document.getElementById('layer_body').onchange = updateLayers;
             window.refreshLayers = updateLayers;
 
-            // --- ОБРАБОТЧИКИ НАЖАТИЙ НА ПЛАЩИ И ЭЛИТРЫ ---
             document.getElementById('elytra_toggle').onchange = async (e) => {
                 elytraEnabled = e.target.checked;
                 await updateBackEquipment();
             };
-
-            document.getElementById('cape-none').onclick = async () => {
-                currentCapeFilename = null;
-                document.querySelectorAll('.cape-item').forEach(el => el.classList.remove('active'));
-                document.getElementById('cape-none').classList.add('active');
-                await updateBackEquipment();
-            };
-
-            document.querySelectorAll('.cape-icon-wrapper').forEach(item => {
-                item.onclick = async () => {
-                    const capeName = item.getAttribute('data-cape');
-                    currentCapeFilename = capeName;
-                    
-                    document.querySelectorAll('.cape-item').forEach(el => el.classList.remove('active'));
-                    item.classList.add('active');
-                    
-                    await updateBackEquipment();
-                };
-            });
 
             document.getElementById('btnListView').onclick = () => {
                 document.getElementById('btnListView').classList.add('active');
@@ -1278,10 +1218,21 @@ drawSkinAvatar(skin.filename, canvas);
             };
         }
 
-        async function loadSkinsJSON() {
+        // Одновременная загрузка скинов и плащей
+        async function loadAllJSONData() {
             try {
-                const response = await fetch('skins.json?v=' + Math.random());
-                globalSkins = await response.json();
+                // Загружаем конфиг скинов
+                const responseSkins = await fetch('skins.json?v=' + Math.random());
+                globalSkins = await responseSkins.json();
+
+                // Загружаем конфиг плащей
+                try {
+                    const responseCapes = await fetch('capes.json?v=' + Math.random());
+                    globalCapes = await responseCapes.json();
+                } catch(e) {
+                    console.warn("Не удалось прочесть capes.json, используем пустой список.");
+                    globalCapes = [];
+                }
 
                 const params = new URLSearchParams(window.location.search);
                 let activeSkin = params.get('skin');
@@ -1295,17 +1246,18 @@ drawSkinAvatar(skin.filename, canvas);
                 initViewer();
                 initSortListeners();
                 renderSkinList();
+                renderCapeList(); // Отрисовываем галерею плащей
 
                 if (currentActiveSkinFilename) {
                     selectSkin(currentActiveSkinFilename, false);
                 }
 
             } catch (err) {
-                document.getElementById('loading').textContent = "Не удалось прочесть список skins.json";
+                document.getElementById('loading').textContent = "Не удалось прочесть конфигурационные файлы JSON.";
             }
         }
 
-        window.onload = loadSkinsJSON;
+        window.onload = loadAllJSONData;
     </script>
 </body>
 </html>
