@@ -690,10 +690,10 @@
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
 
-        // ПРАВИЛЬНЫЙ РЕСУРС: Официальная эталонная текстура плаща (64x32) из репозитория плагина
-        const CANONICAL_CAPE_URL = "https://bs-community.github.io/skinview3d/img/cape.png";
+        // ИСПРАВЛЕНО: Текстура теперь строго локальная, чтобы не ломаться из-за CORS
+        const LOCAL_CAPE_URL = "cape.png";
 
-        // ВОЗВРАЩЕНО И ЗАЩИЩЕНО: Обращение к костям через .skin с проверкой на существование
+        // ИСПРАВЛЕНО: Только вращение конечностей через rotation. Position больше никогда не трогаем!
         class CustomWalkAnimation {
             update(player, time) {
                 if (!player || !player.skin) return;
@@ -816,13 +816,11 @@
                     document.getElementById('crouch_progress_num').textContent = '';
                 }
 
+                // ИСПРАВЛЕНО: Убрано смещение по Y и Z, наклоняем только кости! Персонаж больше не ломается.
                 player.skin.head.rotation.set(-0.2 * intensity, 0, 0);
-                player.skin.body.rotation.set(0.4 * intensity, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
-
-                player.skin.body.position.y = -0.1 * intensity;
-                player.skin.head.position.z = 0.1 * intensity;
+                player.skin.body.rotation.set(0.3 * intensity, 0, 0);
+                player.skin.leftLeg.rotation.set(-0.3 * intensity, 0, 0);
+                player.skin.rightLeg.rotation.set(0.3 * intensity, 0, 0);
 
                 if (!addHit) {
                     player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
@@ -988,7 +986,6 @@
             };
         }
 
-        // НАДЁЖНЫЙ СБРОС: Сбрасываем кости перед включением новой анимации, чтобы позы не смешивались
         function applyAnimation() {
             if (!skinViewer) return;
             
@@ -1000,12 +997,7 @@
                 s.rightArm.rotation.set(0, 0, 0);
                 s.leftLeg.rotation.set(0, 0, 0);
                 s.rightLeg.rotation.set(0, 0, 0);
-                
-                s.head.position.set(0, 0, 0);
-                s.body.position.set(0, 0, 0);
-                s.leftArm.position.set(0, 0, 0);
-                s.rightArm.position.set(0, 0, 0);
-                
+                // ИСПРАВЛЕНО: Никаких сбросов position.set(0,0,0) здесь нет, геометрия стабильна.
                 skinViewer.playerObject.rotation.set(0, 0, 0);
             }
             
@@ -1028,7 +1020,6 @@
             }
         }
 
-        // ИСПРАВЛЕНО: Загрузка идеального шаблона текстуры и установка правильного режима спины
         function applyBackEquipment() {
             if (!skinViewer || !skinViewer.playerObject) return;
             const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
@@ -1037,7 +1028,8 @@
                 skinViewer.loadCape(null);
             } else {
                 skinViewer.playerObject.backEquipment = equipType;
-                skinViewer.loadCape(CANONICAL_CAPE_URL);
+                // Загружаем локальный файл cape.png без CORS ошибок
+                skinViewer.loadCape(LOCAL_CAPE_URL);
             }
         }
 
@@ -1205,8 +1197,7 @@
                     s.rightArm.rotation.set(0,0,0);
                     s.leftLeg.rotation.set(0,0,0);
                     s.rightLeg.rotation.set(0,0,0);
-                    s.head.position.set(0,0,0);
-                    s.body.position.set(0,0,0);
+                    // ИСПРАВЛЕНО: Убрано обнуление position.set(0,0,0), ломавшее структуру костей
                 }
                 
                 skinViewer.controls.reset();
