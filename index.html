@@ -589,6 +589,104 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+        /* Скрытая по умолчанию мобильная навигация */
+        #mobile_nav {
+            display: none;
+        }
+
+        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ (АДАПТИВНОСТЬ) --- */
+        @media (max-width: 900px) {
+            body {
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* 3D-Вьювер растягивается на задний план */
+            #viewer_zone {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            /* Панели превращаются в Bottom Sheets (выезжают снизу) */
+            #sidebar, #controls_panel {
+                position: fixed;
+                top: 40vh; /* Оставляет верхние 40% экрана видимыми под превью */
+                left: 0;
+                width: 100% !important;
+                height: calc(60vh - 65px) !important; /* Высота с запасом под таб-бар */
+                z-index: 100;
+                transform: translateY(110%); /* Изначально спрятаны в самый низ */
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                background-color: rgba(19, 19, 22, 0.96);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: none;
+                box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.8);
+            }
+
+            #sidebar.mobile-open, #controls_panel.mobile-open {
+                transform: translateY(0); /* Показываем выбранную панель */
+            }
+
+            /* Нижний мобильный таб-бар навигации */
+            #mobile_nav {
+                display: flex !important;
+                position: fixed;
+                bottom: 12px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(28, 28, 33, 0.9);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid var(--border);
+                border-radius: 40px;
+                padding: 5px;
+                gap: 6px;
+                z-index: 1000;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+                width: calc(100% - 32px);
+                max-width: 420px;
+                box-sizing: border-box;
+                justify-content: space-around;
+            }
+
+            .mobile-nav-btn {
+                flex: 1;
+                background: transparent;
+                border: none;
+                color: var(--text-muted);
+                padding: 10px 14px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                white-space: nowrap;
+            }
+
+            .mobile-nav-btn.active {
+                background: var(--bg-hover);
+                color: var(--accent);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            }
+
+            .skin-list {
+                padding-bottom: 20px;
+            }
+            
+            .meta-info {
+                background: rgba(11, 11, 13, 0.95);
+            }
+        }
     </style>
 </head>
 <body>
@@ -735,6 +833,11 @@
             <span class="section-title" style="padding:0;">Цвет фона</span>
             <div class="bg-grid" id="bgGrid"></div>
         </div>
+    </div>
+
+    <div id="mobile_nav">
+        <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
+        <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
     </div>
 
     <script>
@@ -1388,6 +1491,45 @@
                 document.getElementById('btnListView').classList.remove('active');
                 document.getElementById('skinList').className = 'skin-list view-grid';
             };
+
+            // === Логика переключений для мобильного таб-бара ===
+            const btnSidebar = document.getElementById('mobileBtnSidebar');
+            const btnControls = document.getElementById('mobileBtnControls');
+            const sidebar = document.getElementById('sidebar');
+            const controls = document.getElementById('controls_panel');
+
+            function closeAllMobilePanels() {
+                if (sidebar) sidebar.classList.remove('mobile-open');
+                if (controls) controls.classList.remove('mobile-open');
+                if (btnSidebar) btnSidebar.classList.remove('active');
+                if (btnControls) btnControls.classList.remove('active');
+            }
+
+            if (btnSidebar && btnControls) {
+                btnSidebar.onclick = (e) => {
+                    e.stopPropagation();
+                    if (sidebar.classList.contains('mobile-open')) {
+                        closeAllMobilePanels();
+                    } else {
+                        closeAllMobilePanels();
+                        sidebar.classList.add('mobile-open');
+                        btnSidebar.classList.add('active');
+                    }
+                    updateViewerSize();
+                };
+
+                btnControls.onclick = (e) => {
+                    e.stopPropagation();
+                    if (controls.classList.contains('mobile-open')) {
+                        closeAllMobilePanels();
+                    } else {
+                        closeAllMobilePanels();
+                        controls.classList.add('mobile-open');
+                        btnControls.classList.add('active');
+                    }
+                    updateViewerSize();
+                };
+            }
         }
 
         async function loadAllJSONData() {
