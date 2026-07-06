@@ -35,7 +35,7 @@
         #sidebar {
             width: 320px; /* Дефолтная ширина */
             min-width: 260px;
-            max-width: 460px;
+            max-width: 50vw; /* ТЕПЕРЬ МОЖНО РАСШИРЯТЬ НА ПОЛ-ЭКРАНА */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -498,11 +498,11 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // ИСПРАВЛЕННЫЙ РЕСАЙЗ (Без застреваний и блокировок от 3D)
+        // РЕСАЙЗ С РАСШИРЕНИЕМ ДО ПОЛОВИНЫ ЭКРАНА
         function initResizeSidebar() {
             const sidebar = document.getElementById('sidebar');
             const handle = document.getElementById('resize_handle');
-            const viewerZone = document.getElementById('viewer_zone'); // Нужен для отключения pointer-events
+            const viewerZone = document.getElementById('viewer_zone'); 
             let isResizing = false;
 
             handle.addEventListener('mousedown', (e) => {
@@ -510,25 +510,24 @@
                 handle.classList.add('resizing');
                 document.body.style.cursor = 'col-resize';
                 document.body.style.userSelect = 'none'; 
-                
-                // КРИТИЧЕСКИЙ ФИКС: отключаем реакцию 3D-окна на мышь, пока мы тащим край
                 viewerZone.style.pointerEvents = 'none';
                 e.preventDefault();
             });
 
-            // Слушаем события на уровне всего window (работает плавно в обе стороны)
             window.addEventListener('mousemove', (e) => {
                 if (!isResizing) return;
                 
                 let newWidth = e.clientX;
                 
-                // Ограничения расширения
+                // Высчитываем ровно половину от текущего разрешения экрана пользователя
+                const halfScreenWidth = window.innerWidth / 2;
+                
+                // Ставим новые умные лимиты
                 if (newWidth < 260) newWidth = 260;
-                if (newWidth > 460) newWidth = 460;
+                if (newWidth > halfScreenWidth) newWidth = halfScreenWidth;
                 
                 sidebar.style.width = `${newWidth}px`; 
                 
-                // Моментально пересчитываем размеры 3D окна
                 updateViewerSize();
             });
 
@@ -538,8 +537,6 @@
                     handle.classList.remove('resizing');
                     document.body.style.cursor = 'default';
                     document.body.style.userSelect = 'auto'; 
-                    
-                    // Возвращаем управление 3D камере обратно
                     viewerZone.style.pointerEvents = 'auto';
                 }
             });
