@@ -33,9 +33,7 @@
         }
 
         #sidebar {
-            width: 320px;
-            min-width: 260px;
-            max-width: 50vw; /* Строго половина экрана */
+            width: 360px; /* Увеличили дефолтную ширину, чтобы всё влезало */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -43,32 +41,6 @@
             box-sizing: border-box;
             z-index: 10;
             position: relative;
-            
-            /* ФУЛЛ ПЕРЕДЕЛКА: Нативный ресайз силами браузера */
-            overflow: hidden;
-            resize: horizontal;
-        }
-
-        /* Делаем ползунок ресайза в самом низу правого края сайдбара более заметным (опционально) */
-        #sidebar::-webkit-resizer {
-            background-color: var(--accent);
-            border-radius: 4px;
-        }
-
-        /* Интерактивный ползунок изменения ширины панели */
-        #resize_handle {
-            position: absolute;
-            top: 0;
-            right: -4px;
-            width: 8px;
-            height: 100%;
-            cursor: col-resize;
-            z-index: 20;
-            background: transparent;
-            transition: background 0.2s;
-        }
-        #resize_handle:hover, #resize_handle.resizing {
-            background: rgba(16, 185, 129, 0.4);
         }
 
         .sidebar-header {
@@ -364,7 +336,6 @@
 <body>
 
     <div id="sidebar">
-        <div id="resize_handle"></div>
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
             <div class="view-toggle">
@@ -492,7 +463,6 @@
                 });
 
                 initControlListeners();
-                initResizeSidebar();
                 buildBackgroundSelector();
 
             } catch (e) {
@@ -508,21 +478,7 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // НОВАЯ ИДЕАЛЬНАЯ ЛОГИКА РЕСАЙЗА БЕЗ БАГОВ МЫШИ
-        function initResizeSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            
-            // Нам больше не нужно ловить mousedown/mousemove!
-            // Браузер сам меняет ширину sidebar, а специальный наблюдатель (ResizeObserver)
-            // просто мгновенно подстраивает 3D холст под эти изменения.
-            const resizeObserver = new ResizeObserver(() => {
-                updateViewerSize();
-            });
-            
-            resizeObserver.observe(sidebar);
-        }
-
-        // ОБНОВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА С ГИПЕРССЫЛКОЙ
+        // ИСПРАВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА С РАБОЧЕЙ ССЫЛКОЙ
         function selectSkin(filename, updateUrl = true) {
             if (!skinViewer) return;
             const skin = globalSkins.find(s => s.filename === filename);
@@ -544,16 +500,17 @@
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-            // ЛОГИКА ССЫЛКИ НА ХУДОЖНИКА ИЗ JSON
+            // ЖЕСТКИЙ ФИКС ССЫЛКИ НА АВТОРА
             const authorContainer = document.getElementById('infoAuthor');
+            
             if (skin.author) {
                 if (skin.authorUrl) {
-                    // Если ссылка есть в json — создаем красивый тег <a>
-                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600;">${skin.author}</a>`;
+                    // Генерируем ссылку и сбрасываем всплытие клика, чтобы Three.js его не воровал
+                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600; cursor: pointer;">${skin.author}</a>`;
                 } else {
-                    // Если ссылки нет — выводим просто текст как раньше
                     authorContainer.textContent = skin.author;
                     authorContainer.style.color = '#fff';
+                    authorContainer.innerHTML = skin.author; // Очищаем старые теги <a>, если они были
                 }
             } else {
                 authorContainer.textContent = 'Не указан';
