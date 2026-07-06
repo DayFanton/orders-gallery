@@ -33,8 +33,9 @@
         }
 
         #sidebar {
-            width: 320px; /* Дефолтная ширина */
-            min-width: 260px; /* Оставляем только минимальную, чтобы не сжимать в ноль */
+            width: 320px;
+            min-width: 260px;
+            max-width: 50vw; /* Строго половина экрана */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -42,6 +43,16 @@
             box-sizing: border-box;
             z-index: 10;
             position: relative;
+            
+            /* ФУЛЛ ПЕРЕДЕЛКА: Нативный ресайз силами браузера */
+            overflow: hidden;
+            resize: horizontal;
+        }
+
+        /* Делаем ползунок ресайза в самом низу правого края сайдбара более заметным (опционально) */
+        #sidebar::-webkit-resizer {
+            background-color: var(--accent);
+            border-radius: 4px;
         }
 
         /* Интерактивный ползунок изменения ширины панели */
@@ -497,75 +508,63 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // АБСОЛЮТНЫЙ ФИКС РЕСАЙЗА (Снятие выделения и браузерного Drag-and-Drop)
+        // НОВАЯ ИДЕАЛЬНАЯ ЛОГИКА РЕСАЙЗА БЕЗ БАГОВ МЫШИ
         function initResizeSidebar() {
             const sidebar = document.getElementById('sidebar');
-            const handle = document.getElementById('resize_handle');
-            const canvas = document.getElementById('skin_container');
-            const viewerZone = document.getElementById('viewer_zone');
-            let isResizing = false;
-
-            // Функция, блокирующая стандартное поведение браузера при перетаскивании
-            function preventDefaults(e) {
-                if (isResizing) {
-                    e.preventDefault();
-                }
-            }
-
-            handle.addEventListener('mousedown', (e) => {
-                isResizing = true;
-                handle.classList.add('resizing');
-                
-                // Ставим принудительный стиль курсора для всего экрана
-                document.body.style.cursor = 'col-resize';
-                document.body.style.userSelect = 'none'; 
-                document.body.style.webkitUserSelect = 'none';
-                
-                // Полностью отключаем реакцию 3D-зоны на клики/мышь
-                viewerZone.style.pointerEvents = 'none';
-                if(canvas) canvas.style.pointerEvents = 'none';
-                
-                // Блокируем браузерное выделение и перетаскивание картинок/текста
-                window.addEventListener('selectstart', preventDefaults);
-                window.addEventListener('dragstart', preventDefaults);
-                
-                e.preventDefault();
-            });
-
-            window.addEventListener('mousemove', (e) => {
-                if (!isResizing) return;
-                
-                let newWidth = e.clientX;
-                const maxAllowedWidth = window.innerWidth / 2;
-                
-                if (newWidth < 260) newWidth = 260;
-                if (newWidth > maxAllowedWidth) newWidth = maxAllowedWidth;
-                
-                sidebar.style.width = `${newWidth}px`; 
-                
+            
+            // Нам больше не нужно ловить mousedown/mousemove!
+            // Браузер сам меняет ширину sidebar, а специальный наблюдатель (ResizeObserver)
+            // просто мгновенно подстраивает 3D холст под эти изменения.
+            const resizeObserver = new ResizeObserver(() => {
                 updateViewerSize();
             });
-
-            window.addEventListener('mouseup', () => {
-                if (isResizing) {
-                    isResizing = false;
-                    handle.classList.remove('resizing');
-                    
-                    // Возвращаем стандартные настройки браузера
-                    document.body.style.cursor = 'default';
-                    document.body.style.userSelect = 'auto'; 
-                    document.body.style.webkitUserSelect = 'auto';
-                    
-                    viewerZone.style.pointerEvents = 'auto';
-                    if(canvas) canvas.style.pointerEvents = 'auto';
-                    
-                    // Снимаем блокировки выделения
-                    window.removeEventListener('selectstart', preventDefaults);
-                    window.removeEventListener('dragstart', preventDefaults);
-                }
-            });
+            
+            resizeObserver.observe(sidebar);
         }
 
+        // ОБНОВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА С ГИПЕРССЫЛКОЙ
+        function selectSkin(filename, updateUrl = true) {
+            if (!skinViewer) return;
+            const skin = globalSkins.find(s => s.filename === filename);
+            if (!skin) return;
+
+            document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+            const currentItem = document.getElementById(`item-${filename}`);
+            if (currentItem) currentItem.classList.add('active');
+
+            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+            const skinPath = `skins/${cleanFilename}.png`;
+            
+            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
+                applyAnimation();
+                if (window.refreshLayers) window.refreshLayers();
+            });
+
+            // Мета-информация
+            document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
+            document.getElementById('infoDate').textContent = skin.date || 'Не указана';
+
+            // ЛОГИКА ССЫЛКИ НА ХУДОЖНИКА ИЗ JSON
+            const authorContainer = document.getElementById('infoAuthor');
+            if (skin.author) {
+                if (skin.authorUrl) {
+                    // Если ссылка есть в json — создаем красивый тег <a>
+                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600;">${skin.author}</a>`;
+                } else {
+                    // Если ссылки нет — выводим просто текст как раньше
+                    authorContainer.textContent = skin.author;
+                    authorContainer.style.color = '#fff';
+                }
+            } else {
+                authorContainer.textContent = 'Не указан';
+                authorContainer.style.color = '#fff';
+            }
+
+            if (updateUrl) {
+                const baseUrl = window.location.origin + window.location.pathname;
+                window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
+            }
+        }
         function buildBackgroundSelector() {
             const grid = document.getElementById('bgGrid');
             bgPresets.forEach((bg, idx) => {
