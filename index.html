@@ -226,7 +226,6 @@
             display: flex;
             padding: 0 16px 12px 16px;
             gap: 8px;
-            border-bottom: 1px solid var(--border);
             flex-shrink: 0;
         }
         .tab-btn {
@@ -249,6 +248,29 @@
             background: var(--bg-hover);
             color: var(--accent);
             border-color: var(--accent);
+        }
+
+        /* --- Контейнер поиска --- */
+        .search-container {
+            padding: 0 16px 12px 16px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        #searchInput {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        #searchInput:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
         }
 
         /* РЕЖИМ СПИСОК */
@@ -384,6 +406,19 @@
 
         .meta-label { color: var(--text-muted); }
         .meta-value { font-weight: 500; color: #fff; background: var(--bg-card); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); max-width: 60%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+        
+        /* Кликабельное поле мета-информации */
+        .meta-value.clickable {
+            color: var(--accent);
+            border-color: var(--accent);
+            cursor: pointer;
+            text-decoration: underline;
+            transition: 0.2s;
+        }
+        .meta-value.clickable:hover {
+            background: var(--bg-hover);
+            color: #fff;
+        }
 
         .site-version {
             font-size: 0.7rem;
@@ -589,6 +624,10 @@
             <button class="tab-btn" id="tabCapes">Плащи</button>
         </div>
 
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Поиск по названию, заказчику, автору...">
+        </div>
+
         <div class="skin-list view-list" id="skinList"></div>
         
         <div class="meta-info">
@@ -714,6 +753,9 @@
 
         let currentCapeFilename = null;
         let elytraEnabled = false;
+        
+        // Переменная для хранения строки поиска
+        let searchQuery = '';
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
 
@@ -759,7 +801,7 @@
 
             } catch (e) {
                 console.error(e);
-                document.getElementById('loading').textContent = "Ошибка инициализации 3D компонентов.";
+                document.getElementById('loading').textContent = "Ошибка initialization 3D компонентов.";
             }
         }
 
@@ -832,25 +874,38 @@
             if (!list) return;
             list.innerHTML = '';
 
-            const noneItem = document.createElement('div');
-            noneItem.classList.add('skin-item');
-            if (currentCapeFilename === null) noneItem.classList.add('active');
-            
-            noneItem.innerHTML = `
-                <div class="cape-preview-box" style="display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:var(--text-muted); background:transparent; border-style:dashed;">❌</div>
-                <span class="skin-name" style="font-weight:600;">Снять плащ</span>
-                <span class="skin-date"></span>
-            `;
-            noneItem.onclick = async () => {
-                currentCapeFilename = null;
-                document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-                noneItem.classList.add('active');
-                await updateBackEquipment();
-            };
-            list.appendChild(noneItem);
+            // Кнопка "Снять плащ" отображается всегда, если поиск пуст
+            if (!searchQuery) {
+                const noneItem = document.createElement('div');
+                noneItem.classList.add('skin-item');
+                if (currentCapeFilename === null) noneItem.classList.add('active');
+                
+                noneItem.innerHTML = `
+                    <div class="cape-preview-box" style="display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:var(--text-muted); background:transparent; border-style:dashed;">❌</div>
+                    <span class="skin-name" style="font-weight:600;">Снять плащ</span>
+                    <span class="skin-date"></span>
+                `;
+                noneItem.onclick = async () => {
+                    currentCapeFilename = null;
+                    document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+                    noneItem.classList.add('active');
+                    await updateBackEquipment();
+                };
+                list.appendChild(noneItem);
+            }
 
-            let sortedCapes = [...globalCapes];
-            sortedCapes.sort((a, b) => {
+            // Фильтрация плащей по поисковому запросу
+            let filteredCapes = globalCapes.filter(cape => {
+                const query = searchQuery.toLowerCase().trim();
+                if (!query) return true;
+                return (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
+                       (cape.customer || '').toLowerCase().includes(query) ||
+                       (cape.author || '').toLowerCase().includes(query) ||
+                       (cape.date || '').toLowerCase().includes(query) ||
+                       (cape.filename || '').toLowerCase().includes(query);
+            });
+
+            filteredCapes.sort((a, b) => {
                 let valA = a.capeName || a.name || a.filename || '';
                 let valB = b.capeName || b.name || b.filename || '';
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
@@ -858,7 +913,7 @@
                 return 0;
             });
 
-            sortedCapes.forEach(cape => {
+            filteredCapes.forEach(cape => {
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
@@ -929,7 +984,18 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
-                document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
+                // Обновление и настройка кликабельности блока заказчика
+                const customerEl = document.getElementById('infoCustomer');
+                if (skin.customer && skin.customer !== '-' && skin.customer !== 'Не указан') {
+                    customerEl.textContent = skin.customer;
+                    customerEl.classList.add('clickable');
+                    customerEl.title = `Показать все заказы от ${skin.customer}`;
+                } else {
+                    customerEl.textContent = skin.customer || 'Не указан';
+                    customerEl.classList.remove('clickable');
+                    customerEl.removeAttribute('title');
+                }
+
                 document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
                 const authorContainer = document.getElementById('infoAuthor');
@@ -1043,9 +1109,18 @@
             if (!list) return;
             list.innerHTML = '';
 
-            let sortedSkins = [...globalSkins];
+            // Фильтрация скинов по поисковому запросу
+            let filteredSkins = globalSkins.filter(skin => {
+                const query = searchQuery.toLowerCase().trim();
+                if (!query) return true;
+                return (skin.skinName || '').toLowerCase().includes(query) ||
+                       (skin.customer || '').toLowerCase().includes(query) ||
+                       (skin.author || '').toLowerCase().includes(query) ||
+                       (skin.date || '').toLowerCase().includes(query) ||
+                       (skin.filename || '').toLowerCase().includes(query);
+            });
 
-            sortedSkins.sort((a, b) => {
+            filteredSkins.sort((a, b) => {
                 let valA, valB;
 
                 if (currentSortField === 'name') {
@@ -1077,7 +1152,7 @@
 
             let lastAuthor = null;
 
-            sortedSkins.forEach(skin => {
+            filteredSkins.forEach(skin => {
                 if (currentSortField === 'author' && skin.author !== lastAuthor) {
                     lastAuthor = skin.author;
                     const header = document.createElement('div');
@@ -1164,6 +1239,29 @@
         }
 
         function initControlListeners() {
+            // Слушатель ввода для живого поиска
+            const searchInput = document.getElementById('searchInput');
+            searchInput.oninput = (e) => {
+                searchQuery = e.target.value;
+                renderCurrentList();
+            };
+
+            // Логика нажатия на имя заказчика для авто-поиска
+            document.getElementById('infoCustomer').onclick = function() {
+                if (!this.classList.contains('clickable')) return;
+                
+                const customerName = this.textContent.trim();
+                searchInput.value = customerName;
+                searchQuery = customerName;
+
+                // Принудительно возвращаем вкладку Скины (так как это заказчики)
+                currentTab = 'skins';
+                document.getElementById('tabSkins').classList.add('active');
+                document.getElementById('tabCapes').classList.remove('active');
+
+                renderCurrentList();
+            };
+
             document.getElementById('tabSkins').onclick = () => {
                 currentTab = 'skins';
                 document.getElementById('tabSkins').classList.add('active');
@@ -1213,6 +1311,11 @@
                 elytraEnabled = false;
                 document.getElementById('elytra_toggle').checked = false;
                 skinViewer.loadCape(null);
+                
+                // Сброс поиска при общем сбросе
+                searchQuery = '';
+                document.getElementById('searchInput').value = '';
+                
                 renderCurrentList();
                 
                 skinViewer.controls.reset();
