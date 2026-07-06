@@ -33,8 +33,6 @@
             height: 100vh;
             overflow: hidden;
             user-select: none;
-            position: relative;
-            overscroll-behavior-y: none; /* Запрет обновления страницы */
         }
 
         #sidebar {
@@ -46,13 +44,6 @@
             box-sizing: border-box;
             z-index: 10;
             position: relative;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            flex-shrink: 0;
-        }
-
-        /* Класс скрытия левой панели для ПК */
-        #sidebar.hidden-desktop {
-            margin-left: -360px;
         }
 
         .sidebar-header {
@@ -280,7 +271,6 @@
             box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
         }
 
-        /* РЕЖИМ СПИСОК */
         .skin-list.view-list {
             display: flex !important;
             flex-direction: column !important;
@@ -313,7 +303,6 @@
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; font-size: 0.85rem; }
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: auto; flex-shrink: 0; }
 
-        /* РЕЖИМ ПЛИТКИ */
         .skin-list.view-grid {
             display: grid !important;
             grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
@@ -394,20 +383,14 @@
         .skin-list .skin-item.active { background: rgba(184, 134, 11, 0.08); border-color: var(--accent); }
 
         .meta-info {
-    padding: 20px 24px;
-    background: rgba(0,0,0,0.2);
-    border-top: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-shrink: 0;
-    pointer-events: none; /* Игнорирует касания, блок становится "прозрачным" для них */
-}
-
-/* Возвращаем кликабельность для интерактивных элементов */
-.meta-value.clickable, .meta-row a {
-    pointer-events: auto;
-}
+            padding: 20px 24px;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-shrink: 0;
+        }
 
         .meta-row {
             font-size: 0.85rem;
@@ -450,12 +433,11 @@
         }
 
         #skin_container {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    cursor: grab;
-    touch-action: none; /* Отключает скролл/зум браузера при взаимодействии с canvas */
-}
+            width: 100%;
+            height: 100%;
+            outline: none;
+            cursor: grab;
+        }
 
         #skin_container:active { cursor: grabbing; }
 
@@ -467,14 +449,6 @@
             flex-direction: column;
             box-sizing: border-box;
             flex-shrink: 0;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Класс скрытия правой панели для ПК */
-        #controls_panel.hidden-desktop {
-            margin-right: -300px;
         }
 
         .controls-scroll {
@@ -614,69 +588,30 @@
             display: none;
         }
 
-        /* --- СТРЕЛКИ ДЛЯ СКРЫТИЯ ПАНЕЛЕЙ НА ПК --- */
-        .desktop-toggle-arrow {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--bg-sidebar);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            width: 24px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 50;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        .desktop-toggle-arrow:hover {
-            color: #fff;
-            background: var(--bg-hover);
-            border-color: var(--text-muted);
-        }
-        #toggleLeftArrow {
-            left: 360px;
-            border-left: none;
-            border-radius: 0 8px 8px 0;
-        }
-        #toggleLeftArrow.panel-collapsed {
-            left: 0;
-        }
-        #toggleRightArrow {
-            right: 300px;
-            border-right: none;
-            border-radius: 8px 0 0 8px;
-        }
-        #toggleRightArrow.panel-collapsed {
-            right: 0;
-        }
-
-        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ --- */
+        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ (АДАПТИВНОСТЬ) --- */
         @media (max-width: 900px) {
             body {
                 position: relative;
                 overflow: hidden;
             }
 
-            /* Скрываем ПК-стрелочки на телефонах */
-            .desktop-toggle-arrow {
-                display: none !important;
-            }
-
+            /* 3D-Вьювер плавно уменьшается по высоте, чтобы скин не перекрывался открытой снизу панелью */
             #viewer_zone {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 100%;
+                height: 100vh;
                 z-index: 1;
+                transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
-            /* На телефонах панели изначально полностью спрятаны внизу (translateY(110%)) */
+            /* Когда панель открыта, вьювер занимает только верхние 40% экрана, скин центрируется там */
+            #viewer_zone.mobile-shrunk {
+                height: 40vh;
+            }
+
+            /* Панели превращаются в Bottom Sheets (выезжают снизу) */
             #sidebar, #controls_panel {
                 position: fixed;
                 top: 40vh; 
@@ -684,9 +619,7 @@
                 width: 100% !important;
                 height: calc(60vh - 65px) !important; 
                 z-index: 100;
-                transform: translateY(110%); 
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+                transform: translateY(150%); /* Гарантированный запас, чтобы панель полностью пряталась */
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 background-color: rgba(19, 19, 22, 0.96);
                 backdrop-filter: blur(12px);
@@ -756,9 +689,6 @@
 </head>
 <body>
 
-    <div id="toggleLeftArrow" class="desktop-toggle-arrow" title="Скрыть/Показать галерею">&lt;</div>
-    <div id="toggleRightArrow" class="desktop-toggle-arrow" title="Скрыть/Показать настройки">&gt;</div>
-
     <div id="sidebar">
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
@@ -811,7 +741,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.2.10</div>
+        <div class="site-version">v1.0.0</div>
     </div>
 
     <div id="viewer_zone">
@@ -968,7 +898,6 @@
 
                 initControlListeners();
                 buildBackgroundSelector();
-                initDesktopTogglePanels(); // Запуск логики скрытия для ПК
 
             } catch (e) {
                 console.error(e);
@@ -1405,36 +1334,6 @@
             updateMenuSelectionVisuals();
         }
 
-        // Логика кнопок-стрелочек скрытия панелей для ПК версии
-        function initDesktopTogglePanels() {
-            const leftArrow = document.getElementById('toggleLeftArrow');
-            const sidebar = document.getElementById('sidebar');
-            const rightArrow = document.getElementById('toggleRightArrow');
-            const controls = document.getElementById('controls_panel');
-
-            leftArrow.onclick = () => {
-                sidebar.classList.toggle('hidden-desktop');
-                leftArrow.classList.toggle('panel-collapsed');
-                if(sidebar.classList.contains('hidden-desktop')) {
-                    leftArrow.textContent = '>';
-                } else {
-                    leftArrow.textContent = '<';
-                }
-                setTimeout(updateViewerSize, 305);
-            };
-
-            rightArrow.onclick = () => {
-                controls.classList.toggle('hidden-desktop');
-                rightArrow.classList.toggle('panel-collapsed');
-                if(controls.classList.contains('hidden-desktop')) {
-                    rightArrow.textContent = '<';
-                } else {
-                    rightArrow.textContent = '>';
-                }
-                setTimeout(updateViewerSize, 305);
-            };
-        }
-
         function initControlListeners() {
             const searchInput = document.getElementById('searchInput');
             searchInput.oninput = (e) => {
@@ -1582,17 +1481,36 @@
                 document.getElementById('skinList').className = 'skin-list view-grid';
             };
 
-            // Логика таб-бара на смартфонах (Скрытие и открытие панелей)
+            // === Логика переключений для мобильного таб-бара ===
             const btnSidebar = document.getElementById('mobileBtnSidebar');
             const btnControls = document.getElementById('mobileBtnControls');
             const sidebar = document.getElementById('sidebar');
             const controls = document.getElementById('controls_panel');
+            const viewerZone = document.getElementById('viewer_zone');
+
+            // Анимационный цикл плавной подгонки 3D-холста под изменяющиеся размеры контейнера
+            function animateViewerResize() {
+                let start = null;
+                const duration = 300; // Соответствует CSS transition панелей
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    updateViewerSize();
+                    if (timestamp - start < duration) {
+                        requestAnimationFrame(step);
+                    } else {
+                        updateViewerSize();
+                    }
+                }
+                requestAnimationFrame(step);
+            }
 
             function closeAllMobilePanels() {
                 if (sidebar) sidebar.classList.remove('mobile-open');
                 if (controls) controls.classList.remove('mobile-open');
                 if (btnSidebar) btnSidebar.classList.remove('active');
                 if (btnControls) btnControls.classList.remove('active');
+                if (viewerZone) viewerZone.classList.remove('mobile-shrunk');
+                animateViewerResize();
             }
 
             if (btnSidebar && btnControls) {
@@ -1604,8 +1522,9 @@
                         closeAllMobilePanels();
                         sidebar.classList.add('mobile-open');
                         btnSidebar.classList.add('active');
+                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
+                        animateViewerResize();
                     }
-                    setTimeout(updateViewerSize, 305);
                 };
 
                 btnControls.onclick = (e) => {
@@ -1616,10 +1535,26 @@
                         closeAllMobilePanels();
                         controls.classList.add('mobile-open');
                         btnControls.classList.add('active');
+                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
+                        animateViewerResize();
                     }
-                    setTimeout(updateViewerSize, 305);
                 };
             }
+
+            // Закрытие панелей при клике по пустой 3D зоне (на мобилках)
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    if (sidebar && !sidebar.contains(e.target) && 
+                        controls && !controls.contains(e.target) && 
+                        btnSidebar && !btnSidebar.contains(e.target) && 
+                        btnControls && !btnControls.contains(e.target) &&
+                        !document.getElementById('sortMenu').contains(e.target)) {
+                        if (sidebar.classList.contains('mobile-open') || controls.classList.contains('mobile-open')) {
+                            closeAllMobilePanels();
+                        }
+                    }
+                }
+            });
         }
 
         async function loadAllJSONData() {
