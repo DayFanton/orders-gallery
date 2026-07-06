@@ -8,7 +8,7 @@
     <link rel="icon" href="data:,">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
+    <script src="https://unpkg.com/skinview3d@3.0.0-alpha.3/dist/skinview3d.bundle.js"></script>
 
     <style>
         :root {
@@ -35,7 +35,7 @@
         }
 
         #sidebar {
-            width: 360px; /* Фиксированная увеличенная ширина, чтобы всё влезало */
+            width: 360px;
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -142,9 +142,7 @@
             transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        .skin-list.view-grid .grid-spacer {
-            display: none !important;
-        }
+        .skin-list.view-grid .grid-spacer { display: none !important; }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
             width: 42px !important;
@@ -165,9 +163,7 @@
             width: 100% !important;
             display: block !important;
         }
-        .skin-list.view-grid .skin-date {
-            display: none !important; 
-        }
+        .skin-list.view-grid .skin-date { display: none !important; }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
         .skin-list .skin-item.active { background: rgba(16, 185, 129, 0.08); border-color: var(--accent); }
@@ -318,7 +314,6 @@
         .bg-dot:hover { transform: scale(1.05); }
         .bg-dot.active { border-color: #fff; }
 
-        /* КНОПКА КАСТОМНОГО ЦВЕТА С КАРАНДАШОМ */
         .bg-dot.custom-color-btn {
             background: #27272a;
             border: 1px solid var(--border);
@@ -466,7 +461,7 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
-        let isExploded = false; // Переменная состояния "взрыва"
+        let isExploded = false;
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -507,10 +502,12 @@
                 initControlListeners();
                 buildBackgroundSelector();
 
-                // Специальный цикл обновления Three.js, чтобы удерживать части тела на расстоянии, даже если запущена анимация движения
-                skinViewer.on('render', () => {
+                // Запускаем постоянный цикл анимации Three.js
+                function animateLoop() {
+                    requestAnimationFrame(animateLoop);
                     applyExplodePositions();
-                });
+                }
+                animateLoop();
 
             } catch (e) {
                 console.error(e);
@@ -525,24 +522,23 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // Функция растаскивания конечностей в пространстве
         function applyExplodePositions() {
-            if (!skinViewer || !skinViewer.playerObject) return;
+            if (!skinViewer || !skinViewer.playerObject || !skinViewer.playerObject.skin) return;
             
             const p = skinViewer.playerObject.skin;
             
             if (isExploded) {
-                // Раздвигаем части тела в стороны от центра (значения подобраны для идеального зазора)
-                p.head.position.y = 6;       // Голову вверх
-                p.torso.position.z = -2;     // Торс немного назад
-                p.leftArm.position.x = -8;   // Левую руку влево
-                p.rightArm.position.x = 8;    // Правую руку вправо
-                p.leftLeg.position.x = -3;   // Левую ногу чуть влево и вниз
+                // Разносим детали по осям для детального осмотра изнутри
+                p.head.position.y = 7;
+                p.torso.position.z = -3;
+                p.leftArm.position.x = -8;
+                p.rightArm.position.x = 8;
+                p.leftLeg.position.x = -3;
                 p.leftLeg.position.y = -6;
-                p.rightLeg.position.x = 3;   // Правую ногу чуть вправо и вниз
+                p.rightLeg.position.x = 3;
                 p.rightLeg.position.y = -6;
             } else {
-                // Возвращаем строго в исходные дефолтные позиции библиотеки
+                // Возвращаем в исходную точку сборки
                 p.head.position.set(0, 0, 0);
                 p.torso.position.set(0, 0, 0);
                 p.leftArm.position.set(0, 0, 0);
@@ -564,7 +560,7 @@
             const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
             const skinPath = `skins/${cleanFilename}.png`;
             
-            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
+            skinViewer.loadSkin(skinPath, { model: skin.model === 'alex' ? 'slim' : 'default' }).then(() => {
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
             });
@@ -644,12 +640,27 @@
 
         function applyAnimation() {
             if (!skinViewer) return;
+            
+            // Чистим старые анимации во избежание наложений
+            if (skinViewer.animations) {
+                skinViewer.animations.run = null;
+                skinViewer.animations.walk = null;
+                skinViewer.animations.fly = null;
+            }
             skinViewer.animation = null;
+            
+            // Включаем выбранную анимацию в зависимости от версии
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
-            if (currentAnimationType === 'wave') skinViewer.animation = new skinview3d.HandWaveAnimation();
-            if (currentAnimationType === 'dance') skinViewer.animation = new skinview3d.FunkyAnimation();
+            
+            // Безопасное подключение новых анимаций с проверкой на существование в сборке
+            if (currentAnimationType === 'wave') {
+                skinViewer.animation = skinview3d.HandWaveAnimation ? new skinview3d.HandWaveAnimation() : new skinview3d.WalkingAnimation();
+            }
+            if (currentAnimationType === 'dance') {
+                skinViewer.animation = skinview3d.FunkyAnimation ? new skinview3d.FunkyAnimation() : new skinview3d.RunningAnimation();
+            }
         }
 
         function initControlListeners() {
@@ -659,7 +670,6 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // Сброс чекбокса взрыва при общем сбросе камеры
                 isExploded = false;
                 document.getElementById('explode_model').checked = false;
                 
@@ -678,7 +688,6 @@
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
-            // Слушатель для чекбокса "Разобрать на части"
             document.getElementById('explode_model').onchange = (e) => {
                 isExploded = e.target.checked;
             };
@@ -686,25 +695,22 @@
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
-                    const activeItem = document.querySelector('.skin-item.active');
-                    if (activeItem) {
-                        selectSkin(activeItem.id.replace('item-', ''), false); 
-                    } else {
-                        applyAnimation();
-                    }
+                    applyAnimation();
                 };
             });
 
             const updateLayers = () => {
-                if (!skinViewer) return;
+                if (!skinViewer || !skinViewer.playerObject || !skinViewer.playerObject.skin) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
-                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
+                
+                const s = skinViewer.playerObject.skin;
+                if (s.head && s.head.outerLayer) s.head.outerLayer.visible = headVisible;
+                if (s.body && s.body.outerLayer) s.body.outerLayer.visible = bodyVisible;
+                if (s.leftArm && s.leftArm.outerLayer) s.leftArm.outerLayer.visible = bodyVisible;
+                if (s.rightArm && s.rightArm.outerLayer) s.rightArm.outerLayer.visible = bodyVisible;
+                if (s.leftLeg && s.leftLeg.outerLayer) s.leftLeg.outerLayer.visible = bodyVisible;
+                if (s.rightLeg && s.rightLeg.outerLayer) s.rightLeg.outerLayer.visible = bodyVisible;
             };
 
             document.getElementById('layer_head').onchange = updateLayers;
