@@ -492,10 +492,11 @@ function initViewer() {
 
         // Вместо .on('render') используем requestAnimationFrame
         function animateLoop() {
-            requestAnimationFrame(animateLoop);
-            if (isExploded) applyExplodePositions(); 
-        }
-        animateLoop();
+    requestAnimationFrame(animateLoop);
+    // Вместо skinViewer.on('render') вызывай функции тут:
+    applyExplodePositions(); 
+}
+animateLoop();
 
     } catch (e) {
         console.error("Ошибка при инициализации:", e);
@@ -641,44 +642,28 @@ function initViewer() {
         function applyAnimation() {
     if (!skinViewer) return;
 
-    // 1. Сначала полностью сбрасываем текущую анимацию
+    // Сбрасываем старую анимацию
     skinViewer.animation = null;
 
-    // 2. Включаем выбранную анимацию, если она существует в библиотеке
+    // Безопасная установка анимации
     switch (currentAnimationType) {
         case 'walk':
-            if (typeof skinview3d.WalkingAnimation === 'function') {
-                skinViewer.animation = new skinview3d.WalkingAnimation();
-            }
+            if (skinview3d.WalkingAnimation) skinViewer.animation = new skinview3d.WalkingAnimation();
             break;
         case 'run':
-            if (typeof skinview3d.RunningAnimation === 'function') {
-                skinViewer.animation = new skinview3d.RunningAnimation();
-            }
+            if (skinview3d.RunningAnimation) skinViewer.animation = new skinview3d.RunningAnimation();
             break;
         case 'fly':
-            if (typeof skinview3d.FlyingAnimation === 'function') {
-                skinViewer.animation = new skinview3d.FlyingAnimation();
-            }
+            if (skinview3d.FlyingAnimation) skinViewer.animation = new skinview3d.FlyingAnimation();
             break;
         case 'wave':
-            // Проверяем наличие HandWaveAnimation
-            if (typeof skinview3d.HandWaveAnimation === 'function') {
-                skinViewer.animation = new skinview3d.HandWaveAnimation();
-            } else {
-                console.warn("HandWaveAnimation недоступна в этой версии");
-            }
+            // Внимание: если в консоли всё равно ошибка, значит в этой версии библиотеки 
+            // анимации называются иначе или лежат в другом месте.
+            if (skinview3d.HandWaveAnimation) skinViewer.animation = new skinview3d.HandWaveAnimation();
             break;
         case 'dance':
-            // Проверяем наличие FunkyAnimation
-            if (typeof skinview3d.FunkyAnimation === 'function') {
-                skinViewer.animation = new skinview3d.FunkyAnimation();
-            } else {
-                console.warn("FunkyAnimation недоступна в этой версии");
-            }
+            if (skinview3d.FunkyAnimation) skinViewer.animation = new skinview3d.FunkyAnimation();
             break;
-        default:
-            skinViewer.animation = null;
     }
 }
 
