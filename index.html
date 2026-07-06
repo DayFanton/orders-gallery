@@ -268,9 +268,7 @@
             transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        .skin-list.view-grid .grid-spacer {
-            display: none !important;
-        }
+        .skin-list.view-grid .grid-spacer { display: none !important; }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
             width: 42px !important;
@@ -291,9 +289,7 @@
             width: 100% !important;
             display: block !important;
         }
-        .skin-list.view-grid .skin-date {
-            display: none !important; 
-        }
+        .skin-list.view-grid .skin-date { display: none !important; }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
         .skin-list .skin-item.active { background: rgba(16, 185, 129, 0.08); border-color: var(--accent); }
@@ -694,26 +690,13 @@
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
 
-        // Генерация безупречного локального PNG-плаща (темно-серый с золотой каемкой)
-        function createDefaultCape() {
-            const canvas = document.createElement('canvas');
-            canvas.width = 64;
-            canvas.height = 32;
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = '#222225';
-            ctx.fillRect(0, 0, 64, 32);
-            ctx.fillStyle = '#10b981'; // Зеленая каемка в цвет темы галереи
-            ctx.fillRect(0, 0, 64, 1);
-            ctx.fillRect(0, 31, 64, 1);
-            ctx.fillRect(0, 0, 1, 32);
-            ctx.fillRect(63, 0, 1, 32);
-            return canvas.toDataURL();
-        }
-        const EMBEDDED_CAPE_BASE64 = createDefaultCape();
+        // ПРАВИЛЬНЫЙ РЕСУРС: Официальная эталонная текстура плаща (64x32) из репозитория плагина
+        const CANONICAL_CAPE_URL = "https://bs-community.github.io/skinview3d/img/cape.png";
 
-        // ВОЗВРАЩЕНО: Правильные обращения через .skin к частям тела
+        // ВОЗВРАЩЕНО И ЗАЩИЩЕНО: Обращение к костям через .skin с проверкой на существование
         class CustomWalkAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 4.5;
                 player.skin.head.rotation.set(Math.sin(t * 0.1) * 0.05, 0, 0);
@@ -727,6 +710,7 @@
 
         class CustomRunAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 7.5;
                 player.skin.head.rotation.set(0.1, 0, 0);
@@ -740,6 +724,7 @@
 
         class CustomFlyAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 3.0;
                 player.skin.head.rotation.set(-0.15, 0, 0);
@@ -753,6 +738,7 @@
 
         class CustomSwimAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 6.0;
                 player.rotation.x = -Math.PI / 2.3; 
@@ -767,6 +753,7 @@
 
         class CustomWaveAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 9.0;
                 player.skin.head.rotation.set(0, 0, 0);
@@ -782,6 +769,7 @@
 
         class CustomHitAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 12.0;
                 player.skin.head.rotation.set(0, 0, 0);
@@ -804,6 +792,7 @@
 
         class CustomSneakAnimation {
             update(player, time) {
+                if (!player || !player.skin) return;
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let runOnce = document.getElementById('crouch_run_once').checked;
                 let showProgress = document.getElementById('crouch_show_progress').checked;
@@ -999,16 +988,25 @@
             };
         }
 
-        // ВОЗВРАЩЕНО: Безопасное обращение к .skin.body и .skin.head
+        // НАДЁЖНЫЙ СБРОС: Сбрасываем кости перед включением новой анимации, чтобы позы не смешивались
         function applyAnimation() {
             if (!skinViewer) return;
             
-            if (skinViewer.playerObject) {
+            if (skinViewer.playerObject && skinViewer.playerObject.skin) {
+                const s = skinViewer.playerObject.skin;
+                s.head.rotation.set(0, 0, 0);
+                s.body.rotation.set(0, 0, 0);
+                s.leftArm.rotation.set(0, 0, 0);
+                s.rightArm.rotation.set(0, 0, 0);
+                s.leftLeg.rotation.set(0, 0, 0);
+                s.rightLeg.rotation.set(0, 0, 0);
+                
+                s.head.position.set(0, 0, 0);
+                s.body.position.set(0, 0, 0);
+                s.leftArm.position.set(0, 0, 0);
+                s.rightArm.position.set(0, 0, 0);
+                
                 skinViewer.playerObject.rotation.set(0, 0, 0);
-                if (skinViewer.playerObject.skin) {
-                    skinViewer.playerObject.skin.body.position.set(0, 0, 0);
-                    skinViewer.playerObject.skin.head.position.set(0, 0, 0);
-                }
             }
             
             skinViewer.animation = null;
@@ -1030,7 +1028,7 @@
             }
         }
 
-        // ИСПРАВЛЕНО: Безопасная инициализация типа аксессуаров через опции метода loadCape
+        // ИСПРАВЛЕНО: Загрузка идеального шаблона текстуры и установка правильного режима спины
         function applyBackEquipment() {
             if (!skinViewer || !skinViewer.playerObject) return;
             const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
@@ -1039,9 +1037,7 @@
                 skinViewer.loadCape(null);
             } else {
                 skinViewer.playerObject.backEquipment = equipType;
-                skinViewer.loadCape(EMBEDDED_CAPE_BASE64, { backEquipment: equipType }).catch(err => {
-                    console.error("Ошибка инициализации аксессуара:", err);
-                });
+                skinViewer.loadCape(CANONICAL_CAPE_URL);
             }
         }
 
@@ -1188,7 +1184,6 @@
         }
 
         function initControlListeners() {
-            // ВОЗВРАЩЕНО: Правильный сброс позиции частей тела через .skin
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
                 
@@ -1202,12 +1197,16 @@
                 document.getElementById('anim_speed').value = "1.0";
                 document.getElementById('anim_speed_val').textContent = "1.0";
                 
-                if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.set(0,0,0);
-                    if (skinViewer.playerObject.skin) {
-                        skinViewer.playerObject.skin.body.position.set(0,0,0);
-                        skinViewer.playerObject.skin.head.position.set(0,0,0);
-                    }
+                if (skinViewer.playerObject && skinViewer.playerObject.skin) {
+                    const s = skinViewer.playerObject.skin;
+                    s.head.rotation.set(0,0,0);
+                    s.body.rotation.set(0,0,0);
+                    s.leftArm.rotation.set(0,0,0);
+                    s.rightArm.rotation.set(0,0,0);
+                    s.leftLeg.rotation.set(0,0,0);
+                    s.rightLeg.rotation.set(0,0,0);
+                    s.head.position.set(0,0,0);
+                    s.body.position.set(0,0,0);
                 }
                 
                 skinViewer.controls.reset();
@@ -1259,17 +1258,18 @@
                 };
             });
 
-            // ВОЗВРАЩЕНО: Правильный переключатель внешних слоев через .skin
             const updateLayers = () => {
                 if (!skinViewer || !skinViewer.playerObject || !skinViewer.playerObject.skin) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
-                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
+                
+                const s = skinViewer.playerObject.skin;
+                s.head.outerLayer.visible = headVisible;
+                s.body.outerLayer.visible = bodyVisible;
+                s.leftArm.outerLayer.visible = bodyVisible;
+                s.rightArm.outerLayer.visible = bodyVisible;
+                s.leftLeg.outerLayer.visible = bodyVisible;
+                s.rightLeg.outerLayer.visible = bodyVisible;
             };
 
             document.getElementById('layer_head').onchange = updateLayers;
