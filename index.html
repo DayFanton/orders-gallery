@@ -700,68 +700,78 @@
             skinViewer.width = container.clientWidth;
             skinViewer.height = container.clientHeight;
         }
-const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva"; 
+const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
 
 async function loadEncryptedSkin(path) {
     const response = await fetch(path);
-    const base64Data = await response.text();
+    if (!response.ok) throw new Error("Не удалось загрузить файл скина");
     
+    const base64Data = await response.text();
+
     const binaryString = atob(base64Data);
     const bytes = new Uint8Array(binaryString.length);
     for (let i = 0; i < binaryString.length; i++) {
         bytes[i] = binaryString.charCodeAt(i);
     }
-    
-    // Обратный XOR
+
     const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
     for (let i = 0; i < bytes.length; i++) {
         bytes[i] = bytes[i] ^ keyBytes[i % keyBytes.length];
     }
-    
-    // Создаем ссылку
+
     const blob = new Blob([bytes], { type: 'image/png' });
     return URL.createObjectURL(blob);
 }
-        function selectSkin(filename, updateUrl = true) {
-            if (!skinViewer) return;
-            const skin = globalSkins.find(s => s.filename === filename);
-            if (!skin) return;
 
-            currentActiveSkinFilename = filename;
+async function selectSkin(filename, updateUrl = true) {
+    if (!skinViewer) return;
+    const skin = globalSkins.find(s => s.filename === filename);
+    if (!skin) return;
 
-            document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-            const currentItem = document.getElementById(`item-${filename}`);
-            if (currentItem) currentItem.classList.add('active');
+    currentActiveSkinFilename = filename;
 
-            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-            const skinPath = `skins/${cleanFilename}.png`;
-            
-            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
-                applyAnimation();
-                if (window.refreshLayers) window.refreshLayers();
-            });
+    document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+    const currentItem = document.getElementById(`item-${filename}`);
+    if (currentItem) currentItem.classList.add('active');
 
-            document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
-            document.getElementById('infoDate').textContent = skin.date || 'Не указана';
+    const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+    
+    const skinPath = `skins_enc/${cleanFilename}.png.txt`;
 
-            const authorContainer = document.getElementById('infoAuthor');
-            if (skin.author) {
-                if (skin.authorUrl) {
-                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600; cursor: pointer;">${skin.author}</a>`;
-                } else {
-                    authorContainer.textContent = skin.author;
-                    authorContainer.style.color = '#fff';
-                }
+    try {
+        const blobUrl = await loadEncryptedSkin(skinPath);
+        
+        await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
+        
+        URL.revokeObjectURL(blobUrl);
+
+        applyAnimation();
+        if (window.refreshLayers) window.refreshLayers();
+
+        document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
+        document.getElementById('infoDate').textContent = skin.date || 'Не указана';
+
+        const authorContainer = document.getElementById('infoAuthor');
+        if (skin.author) {
+            if (skin.authorUrl) {
+                authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600; cursor: pointer;">${skin.author}</a>`;
             } else {
-                authorContainer.textContent = 'Не указан';
+                authorContainer.textContent = skin.author;
                 authorContainer.style.color = '#fff';
             }
-
-            if (updateUrl) {
-                const baseUrl = window.location.origin + window.location.pathname;
-                window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
-            }
+        } else {
+            authorContainer.textContent = 'Не указан';
+            authorContainer.style.color = '#fff';
         }
+
+        if (updateUrl) {
+            const baseUrl = window.location.origin + window.location.pathname;
+            window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
+        }
+    } catch (err) {
+        console.error("Ошибка при загрузке скина:", err);
+    }
+}
 
         function buildBackgroundSelector() {
             const grid = document.getElementById('bgGrid');
