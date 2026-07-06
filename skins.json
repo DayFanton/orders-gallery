@@ -54,5 +54,13 @@
     "author": "Эппоп",
     "date": "Рэп",
     "model": "steve"
+  },
+  {
+    "filename": "abc",
+    "skinName": "abc",
+    "customer": "Эппоп",
+    "author": "Эппоп",
+    "date": "кто прочитал тот здохнет",
+    "model": "steve"
   }
 ]
