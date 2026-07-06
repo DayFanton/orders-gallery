@@ -562,8 +562,19 @@
         function initControlListeners() {
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
+                
+                // Выключаем авто-вращение и сбрасываем чекбокс
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
+                
+                // СБРОС ПОВОРОТА САМОЙ МОДЕЛИ (Разворачиваем лицом к экрану)
+                if (skinViewer.playerObject) {
+                    skinViewer.playerObject.rotation.x = 0;
+                    skinViewer.playerObject.rotation.y = 0; // Вот этот ноль вернет его в анфас
+                    skinViewer.playerObject.rotation.z = 0;
+                }
+                
+                // Сбрасываем положение камеры вокруг модели
                 skinViewer.controls.reset();
                 skinViewer.controls.alpha = 0; 
                 skinViewer.controls.beta = 0;
