@@ -153,6 +153,15 @@
     "model": "steve"
   },
   {
+    "filename": "viacore_ny24",
+    "skinName": "Виакор новогодний 2024",
+    "customer": "Виакор",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "20.11.2024",
+    "model": "steve"
+  },
+  {
     "filename": "day_ny23",
     "skinName": "Дэй новогодний 2023",
     "customer": "Эппоп",
@@ -160,5 +169,5 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "01.01.2023",
     "model": "steve"
-  }
+  },
 ]
