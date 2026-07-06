@@ -576,7 +576,7 @@
                         <span>Скорость вращения</span>
                         <span id="rotate_speed_val">1.0</span>
                     </div>
-                    <input type="range" id="rotate_speed" class="control-slider" min="0.1" max="4.0" step="0.1" value="1.0">
+                    <input type="range" id="rotate_speed" class="control-slider" min="0.1" max="10" step="0.1" value="1.0">
                 </div>
             </div>
 
@@ -606,7 +606,7 @@
                         <span>Скорость анимации</span>
                         <span id="anim_speed_val">1.0</span>
                     </div>
-                    <input type="range" id="anim_speed" class="control-slider" min="0.1" max="2.5" step="0.1" value="1.0">
+                    <input type="range" id="anim_speed" class="control-slider" min="0" max="10" step="0.1" value="1.0">
                 </div>
             </div>
 
@@ -634,11 +634,9 @@
         let globalSkins = [];
         let currentAnimationType = 'none';
         
-        // Переменные для сохранения выбранной пользователем скорости
         let currentRotationSpeed = 1.0;
         let currentAnimationSpeed = 1.0;
         
-        // Текущие параметры сортировки (по умолчанию как на скриншоте)
         let currentSortField = 'name'; 
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
@@ -671,7 +669,7 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
-                skinViewer.autoRotateSpeed = currentRotationSpeed; // Применяем базовую скорость
+                skinViewer.autoRotateSpeed = currentRotationSpeed;
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -685,7 +683,7 @@
 
             } catch (e) {
                 console.error(e);
-                document.getElementById('loading').textContent = "Ошибка инициализации 3D компонентов.";
+                document.getElementById('loading').textContent = "Ошибка initialization 3D компонентов.";
             }
         }
 
@@ -795,13 +793,11 @@
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
             
-            // Накатываем текущую сохраненную скорость на вновь созданную анимацию
             if (skinViewer.animation) {
                 skinViewer.animation.speed = currentAnimationSpeed;
             }
         }
 
-        /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
         function parseDate(dateStr) {
             if (!dateStr) return new Date(0);
             const parts = dateStr.split('.');
@@ -816,7 +812,6 @@
             return new Date(0); 
         }
 
-        /* ФУНКЦИЯ СОРТИРОВКИ И ОТРИСОВКИ СПИСКА */
         function renderSkinList() {
             const list = document.getElementById('skinList');
             if (!list) return;
@@ -824,7 +819,6 @@
 
             let sortedSkins = [...globalSkins];
 
-            // 1. Сортировка базового массива
             sortedSkins.sort((a, b) => {
                 let valA, valB;
 
@@ -849,18 +843,15 @@
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                // Дополнительная сортировка по имени, если критерии равны
                 if (currentSortField !== 'name') {
                     return (a.skinName || '').localeCompare(b.skinName || '');
                 }
                 return 0;
             });
 
-            // 2. Генерация элементов с поддержкой разделителей авторов
             let lastAuthor = null;
 
             sortedSkins.forEach(skin => {
-                // Если выбрана сортировка по автору, создаем черточки-разделения групп
                 if (currentSortField === 'author' && skin.author !== lastAuthor) {
                     lastAuthor = skin.author;
                     const header = document.createElement('div');
@@ -894,7 +885,6 @@
                 item.onclick = () => selectSkin(skin.filename, true);
             });
 
-            // Технические распорки для красивой сетки плитки
             for(let i = 0; i < 4; i++) {
                 const spacer = document.createElement('div');
                 spacer.classList.add('grid-spacer');
@@ -902,27 +892,23 @@
             }
         }
 
-        /* ИНИЦИАЛИЗАЦИЯ ИНТЕРФЕЙСА СОРТИРОВКИ */
         function initSortListeners() {
             const trigger = document.getElementById('sortTrigger');
             const menu = document.getElementById('sortMenu');
 
             if (!trigger || !menu) return;
 
-            // Показ / скрытие менюшки по клику
             trigger.onclick = (e) => {
                 e.stopPropagation();
                 menu.classList.toggle('show');
                 trigger.classList.toggle('active');
             };
 
-            // Скрытие при клике по экрану
             document.addEventListener('click', () => {
                 menu.classList.remove('show');
                 trigger.classList.remove('active');
             });
 
-            // Обновление чекбоксов-точек при кликах на пункты
             const updateMenuSelectionVisuals = () => {
                 menu.querySelectorAll('.dropdown-item').forEach(item => {
                     const field = item.getAttribute('data-field');
@@ -947,7 +933,7 @@
                     if (order) currentSortOrder = order;
 
                     updateMenuSelectionVisuals();
-                    renderSkinList(); // Моментальный перерендер с новой сортировкой
+                    renderSkinList();
                 };
             });
 
@@ -961,7 +947,7 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // Сброс значений и ползунков к дефолтным (1.0)
+                // Возвращаем значения к базовым 1.0
                 currentRotationSpeed = 1.0;
                 skinViewer.autoRotateSpeed = currentRotationSpeed;
                 document.getElementById('rotate_speed').value = 1.0;
@@ -972,22 +958,33 @@
                 document.getElementById('anim_speed').value = 1.0;
                 document.getElementById('anim_speed_val').textContent = '1.0';
                 
+                // РЕШЕНИЕ БАГА: Сбрасываем углы вращения самого персонажа
                 if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0;
-                    skinViewer.playerObject.rotation.z = 0;
+                    skinViewer.playerObject.rotation.set(0, 0, 0);
                 }
                 
-                skinViewer.controls.reset();
-                skinViewer.controls.alpha = 0; 
-                skinViewer.controls.beta = 0;
-                skinViewer.controls.target.set(0, -2, 0); 
+                // Полностью сбрасываем состояние контроллеров камеры (для любых версий библиотеки)
+                if (skinViewer.controls) {
+                    if (typeof skinViewer.controls.reset === 'function') skinViewer.controls.reset();
+                    skinViewer.controls.alpha = 0; 
+                    skinViewer.controls.beta = 0;
+                    if (skinViewer.controls.target && typeof skinViewer.controls.target.set === 'function') {
+                        skinViewer.controls.target.set(0, -2, 0); 
+                    }
+                }
+                
+                // Ставим камеру прямо по центру
                 skinViewer.camera.position.set(0, 0, 60);
+                skinViewer.camera.rotation.set(0, 0, 0);
+                
+                // Синхронизируем внутренний кэш OrbitControls, чтобы он не откатывал камеру назад при клике по экрану
+                if (skinViewer.controls && typeof skinViewer.controls.update === 'function') {
+                    skinViewer.controls.update();
+                }
             };
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
-            // Обработчик изменения скорости вращения
             const rotateSpeedInput = document.getElementById('rotate_speed');
             const rotateSpeedVal = document.getElementById('rotate_speed_val');
             rotateSpeedInput.oninput = (e) => {
@@ -1007,7 +1004,6 @@
                 };
             });
 
-            // Обработчик изменения скорости анимации
             const animSpeedInput = document.getElementById('anim_speed');
             const animSpeedVal = document.getElementById('anim_speed_val');
             animSpeedInput.oninput = (e) => {
