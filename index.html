@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея 3D Скинов</title>
     
+    <link rel="icon" href="data:,">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
@@ -33,7 +35,7 @@
         }
 
         #sidebar {
-            width: 360px; /* Увеличили дефолтную ширину, чтобы всё влезало */
+            width: 360px; /* Фиксированная увеличенная ширина, чтобы всё влезало */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -116,10 +118,9 @@
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: 8px; flex-shrink: 0; }
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; }
 
-        /* РЕЖИМ ПЛИТКИ (Умная адаптивная сетка без зазоров) */
+        /* РЕЖИМ ПЛИТКИ */
         .skin-list.view-grid {
             display: grid !important;
-            /* Квадраты автоматически растут от 80px до упора, пока не влезет новый столбец */
             grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
             gap: 8px !important;
             padding-bottom: 16px;
@@ -129,11 +130,8 @@
             background: var(--bg-card) !important;
             border: 1px solid transparent;
             border-radius: 8px;
-            
-            /* Убираем жесткую ширину, оставляя только пропорцию 1:1 (квадрат) */
             width: 100% !important;          
             aspect-ratio: 1 / 1 !important;
-            
             display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
@@ -144,7 +142,6 @@
             transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        /* Старые распорки-пустышки больше не нужны, CSS Grid всё делает сам */
         .skin-list.view-grid .grid-spacer {
             display: none !important;
         }
@@ -321,6 +318,34 @@
         .bg-dot:hover { transform: scale(1.05); }
         .bg-dot.active { border-color: #fff; }
 
+        /* КНОПКА КАСТОМНОГО ЦВЕТА С КАРАНДАШОМ */
+        .bg-dot.custom-color-btn {
+            background: #27272a;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .bg-dot.custom-color-btn::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+        }
+        .bg-dot.custom-color-btn input[type="color"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
         #loading {
             position: absolute;
             font-size: 0.9rem;
@@ -478,7 +503,6 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // ИСПРАВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА С РАБОЧЕЙ ССЫЛКОЙ
         function selectSkin(filename, updateUrl = true) {
             if (!skinViewer) return;
             const skin = globalSkins.find(s => s.filename === filename);
@@ -496,21 +520,16 @@
                 if (window.refreshLayers) window.refreshLayers();
             });
 
-            // Мета-информация
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-            // ЖЕСТКИЙ ФИКС ССЫЛКИ НА АВТОРА
             const authorContainer = document.getElementById('infoAuthor');
-            
             if (skin.author) {
                 if (skin.authorUrl) {
-                    // Генерируем ссылку и сбрасываем всплытие клика, чтобы Three.js его не воровал
                     authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600; cursor: pointer;">${skin.author}</a>`;
                 } else {
                     authorContainer.textContent = skin.author;
                     authorContainer.style.color = '#fff';
-                    authorContainer.innerHTML = skin.author; // Очищаем старые теги <a>, если они были
                 }
             } else {
                 authorContainer.textContent = 'Не указан';
@@ -522,8 +541,11 @@
                 window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
             }
         }
+
         function buildBackgroundSelector() {
             const grid = document.getElementById('bgGrid');
+            grid.innerHTML = ''; 
+            
             bgPresets.forEach((bg, idx) => {
                 const dot = document.createElement('div');
                 dot.classList.add('bg-dot');
@@ -538,6 +560,27 @@
                 };
                 grid.appendChild(dot);
             });
+
+            // КНОПКА-КАРАНДАШ ДЛЯ ВЫБОРА СВОЕГО ЦВЕТА
+            const customDot = document.createElement('div');
+            customDot.classList.add('bg-dot', 'custom-color-btn');
+            customDot.title = 'Свой цвет';
+
+            const colorInput = document.createElement('input');
+            colorInput.type = 'color';
+            colorInput.value = '#1c1c24'; 
+
+            colorInput.addEventListener('input', (e) => {
+                document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
+                customDot.classList.add('active');
+                
+                const chosenColor = e.target.value;
+                document.getElementById('viewer_zone').style.background = chosenColor;
+                customDot.style.backgroundColor = chosenColor;
+            });
+
+            customDot.appendChild(colorInput);
+            grid.appendChild(customDot);
         }
 
         function drawSkinAvatar(imgUrl, canvasElement) {
@@ -563,18 +606,16 @@
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
                 
-                // Выключаем авто-вращение и сбрасываем чекбокс
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // СБРОС ПОВОРОТА САМОЙ МОДЕЛИ (Разворачиваем лицом к экрану)
+                // ПОЛНЫЙ СБРОС ПОВОРОТА САМОЙ МОДЕЛИ (Разворот лицом)
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0; // Вот этот ноль вернет его в анфас
+                    skinViewer.playerObject.rotation.y = 0;
                     skinViewer.playerObject.rotation.z = 0;
                 }
                 
-                // Сбрасываем положение камеры вокруг модели
                 skinViewer.controls.reset();
                 skinViewer.controls.alpha = 0; 
                 skinViewer.controls.beta = 0;
@@ -653,7 +694,6 @@
                     item.onclick = () => selectSkin(skin.filename, true);
                 });
 
-                // Добавляем невидимые распорки-пустышки для красивой симметрии флексбокса
                 for(let i = 0; i < 4; i++) {
                     const spacer = document.createElement('div');
                     spacer.classList.add('grid-spacer');
@@ -673,33 +713,6 @@
 
             } catch (err) {
                 document.getElementById('loading').textContent = "Не удалось прочесть список skins.json";
-            }
-        }
-
-        function selectSkin(filename, updateUrl = true) {
-            if (!skinViewer) return;
-            const skin = globalSkins.find(s => s.filename === filename);
-            if (!skin) return;
-
-            document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-            const currentItem = document.getElementById(`item-${filename}`);
-            if (currentItem) currentItem.classList.add('active');
-
-            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-            const skinPath = `skins/${cleanFilename}.png`;
-            
-            skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
-                applyAnimation();
-                if (window.refreshLayers) window.refreshLayers();
-            });
-
-            document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
-            document.getElementById('infoAuthor').textContent = skin.author || 'Не указан';
-            document.getElementById('infoDate').textContent = skin.date || 'Не указана';
-
-            if (updateUrl) {
-                const baseUrl = window.location.origin + window.location.pathname;
-                window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
             }
         }
 
