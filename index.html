@@ -400,7 +400,6 @@
             gap: 8px;
         }
 
-        /* Трёхколоночная сетка для аксессуаров */
         .radio-grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -427,6 +426,22 @@
             background: rgba(16, 185, 129, 0.15);
             border-color: var(--accent);
             color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Контейнер продвинутых настроек приседания */
+        .sub-settings-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px dashed var(--border);
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-top: 10px;
+            display: none;
+        }
+        .sub-settings-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
@@ -565,6 +580,7 @@
                 </div>
             </div>
 
+            <!-- ОБНОВЛЕННЫЙ БЛОК АНИМАЦИЙ С ПОЛЗУНКОМ СКОРОСТИ -->
             <div class="control-group">
                 <h3>Анимация движения</h3>
                 <div class="radio-grid">
@@ -597,12 +613,42 @@
                         <span>Махать</span>
                     </label>
                     <label class="radio-btn">
-                        <input type="radio" name="animation" value="hit_right">
-                        <span>Удар (П)</span>
+                        <input type="radio" name="animation" value="hit">
+                        <span>Удар</span>
                     </label>
-                    <label class="radio-btn">
-                        <input type="radio" name="animation" value="hit_left">
-                        <span>Удар (Л)</span>
+                </div>
+
+                <!-- Глобальный выбор руки для анимаций ударов -->
+                <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+                    <label class="checkbox-label" style="margin: 0;">
+                        <input type="checkbox" id="anim_left_hand">
+                        <span>Использовать левую руку</span>
+                    </label>
+                </div>
+
+                <!-- Ползунок скорости анимации -->
+                <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+                        <span>Скорость анимации</span>
+                        <span id="anim_speed_val">1.0</span>
+                    </div>
+                    <input type="range" id="anim_speed" min="0.1" max="4.0" step="0.1" value="1.0" style="width:100%; accent-color: var(--accent); background: var(--bg-card); border: 1px solid var(--border); height: 6px; border-radius: 3px; cursor: pointer; margin: 0; padding: 0;">
+                </div>
+
+                <!-- Дополнительные настройки для приседания -->
+                <div class="sub-settings-box" id="crouch_settings">
+                    <div class="sub-settings-title">Crouch settings:</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="crouch_run_once">
+                        <span>Run once</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="crouch_show_progress">
+                        <span>Show progress <span id="crouch_progress_num" style="color: var(--accent); font-weight: bold; margin-left:4px;"></span></span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="crouch_add_hit">
+                        <span>Add hitting animation</span>
                     </label>
                 </div>
             </div>
@@ -653,34 +699,153 @@
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
 
-        // Кастомный класс анимации взмаха руки
-        class CustomWavingAnimation {
-            update(playerObject, time) {
-                playerObject.skin.leftArm.rotation.set(0, 0, 0);
-                playerObject.skin.leftLeg.rotation.set(0, 0, 0);
-                playerObject.skin.rightLeg.rotation.set(0, 0, 0);
-                playerObject.skin.body.rotation.set(0, 0, 0);
-                
-                playerObject.skin.rightArm.rotation.x = -Math.PI / 2 - 0.2;
-                playerObject.skin.rightArm.rotation.z = Math.sin(time * 5) * 0.4;
+        // Вшитая Base64 текстура стандартного классического плаща (Никаких 404!)
+        const EMBEDDED_CAPE_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACm9T9IAAAAAXNSR0IArs4c6QAAAGFJREFUeF7t0gENwDAMwLDMn+6fMqpQu0b1Dkiu8hBgnpknZ87pxzN7AwDDBwERYASYABEgAnwCRIAI8AkQASLAJ0AE+F4PePLnyVvm/43ewHMfEBFf13snmZ6nGgAAAABJRU5ErkJggg==";
+
+        // ПОЛНОСТЬЮ КАСТОМНЫЕ СТАБИЛЬНЫЕ КЛАССЫ АНИМАЦИЙ С УЧЕТОМ СКОРОСТИ И ПОЛОЖЕНИЙ РУК
+        class CustomWalkAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 4.5;
+                player.skin.head.rotation.set(Math.sin(t * 0.1) * 0.05, 0, 0);
+                player.skin.body.rotation.set(0, 0, 0);
+                player.skin.leftArm.rotation.set(Math.sin(t) * 0.45, 0, 0);
+                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.45, 0, 0);
+                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.45, 0, 0);
+                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.45, 0, 0);
             }
         }
 
-        // Кастомный класс анимации цикличных ударов
-        class CustomHittingAnimation {
-            constructor(hand = 'right') { this.hand = hand; }
-            update(playerObject, time) {
-                playerObject.skin.leftArm.rotation.set(0, 0, 0);
-                playerObject.skin.rightArm.rotation.set(0, 0, 0);
-                playerObject.skin.leftLeg.rotation.set(0, 0, 0);
-                playerObject.skin.rightLeg.rotation.set(0, 0, 0);
-                playerObject.skin.body.rotation.set(0, 0, 0);
+        class CustomRunAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 7.5;
+                player.skin.head.rotation.set(0.1, 0, 0);
+                player.skin.body.rotation.set(0.2, 0, 0);
+                player.skin.leftArm.rotation.set(Math.sin(t) * 0.8, 0, 0.1);
+                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.8, 0, -0.1);
+                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.7, 0, 0);
+                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.7, 0, 0);
+            }
+        }
+
+        class CustomFlyAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 3.0;
+                player.skin.head.rotation.set(-0.15, 0, 0);
+                player.skin.body.rotation.set(0.4, 0, 0);
+                player.skin.leftArm.rotation.set(0.2, 0, -0.25 + Math.sin(t) * 0.08);
+                player.skin.rightArm.rotation.set(0.2, 0, 0.25 - Math.sin(t) * 0.08);
+                player.skin.leftLeg.rotation.set(0.25 + Math.sin(t) * 0.05, 0, -0.04);
+                player.skin.rightLeg.rotation.set(0.25 - Math.sin(t) * 0.05, 0, 0.04);
+            }
+        }
+
+        class CustomSwimAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 6.0;
+                player.rotation.x = -Math.PI / 2.3; // Разворачиваем тело горизонтально
+                player.skin.head.rotation.set(0.3, 0, 0);
+                player.skin.body.rotation.set(0, 0, 0);
+                player.skin.leftArm.rotation.set(Math.sin(t) * 1.1, 0, -0.15);
+                player.skin.rightArm.rotation.set(Math.cos(t) * 1.1, 0, 0.15);
+                player.skin.leftLeg.rotation.set(Math.sin(t * 1.2) * 0.25, 0, 0);
+                player.skin.rightLeg.rotation.set(-Math.sin(t * 1.2) * 0.25, 0, 0);
+            }
+        }
+
+        class CustomWaveAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 9.0;
+                player.skin.head.rotation.set(0, 0, 0);
+                player.skin.body.rotation.set(0, 0, 0);
+                player.skin.leftArm.rotation.set(0, 0, 0);
+                player.skin.leftLeg.rotation.set(0, 0, 0);
+                player.skin.rightLeg.rotation.set(0, 0, 0);
                 
-                let angle = Math.sin(time * 8) * 0.6 - 0.6;
-                if (this.hand === 'right') {
-                    playerObject.skin.rightArm.rotation.x = angle;
+                // Поднимаем руку вверх и циклично машем по оси Z
+                player.skin.rightArm.rotation.x = -Math.PI + 0.4;
+                player.skin.rightArm.rotation.z = Math.sin(t) * 0.35 - 0.25;
+            }
+        }
+
+        class CustomHitAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let t = time * speed * 12.0;
+                player.skin.head.rotation.set(0, 0, 0);
+                player.skin.body.rotation.set(0, 0, 0);
+                player.skin.leftArm.rotation.set(0, 0, 0);
+                player.skin.rightArm.rotation.set(0, 0, 0);
+                player.skin.leftLeg.rotation.set(0, 0, 0);
+                player.skin.rightLeg.rotation.set(0, 0, 0);
+                
+                let leftHandActive = document.getElementById('anim_left_hand').checked;
+                let swipe = (Math.sin(t) * 0.55) - 0.55; 
+                
+                if (leftHandActive) {
+                    player.skin.leftArm.rotation.x = swipe;
                 } else {
-                    playerObject.skin.leftArm.rotation.x = angle;
+                    player.skin.rightArm.rotation.x = swipe;
+                }
+            }
+        }
+
+        class CustomSneakAnimation {
+            update(player, time) {
+                let speed = parseFloat(document.getElementById('anim_speed').value);
+                let runOnce = document.getElementById('crouch_run_once').checked;
+                let showProgress = document.getElementById('crouch_show_progress').checked;
+                let addHit = document.getElementById('crouch_add_hit').checked;
+                let leftHandActive = document.getElementById('anim_left_hand').checked;
+
+                let t = time * speed;
+                
+                // Обработка Run Once и Расчет Прогресса
+                let cycle = (t * 3.5) % (Math.PI * 2);
+                let intensity = 1.0;
+                let progressPercent = Math.round((cycle / (Math.PI * 2)) * 100);
+
+                if (runOnce) {
+                    let stopTime = Math.min(t * 4.0, Math.PI / 2);
+                    intensity = Math.sin(stopTime);
+                    progressPercent = Math.round((stopTime / (Math.PI / 2)) * 100);
+                }
+
+                if (showProgress) {
+                    document.getElementById('crouch_progress_num').textContent = `(${progressPercent}%)`;
+                } else {
+                    document.getElementById('crouch_progress_num').textContent = '';
+                }
+
+                // Стойка приседания Майнкрафта
+                player.skin.head.rotation.set(-0.2 * intensity, 0, 0);
+                player.skin.body.rotation.set(0.4 * intensity, 0, 0);
+                player.skin.leftLeg.rotation.set(0, 0, 0);
+                player.skin.rightLeg.rotation.set(0, 0, 0);
+
+                // Корректировка высоты таза модели при приседе
+                player.skin.body.position.y = -0.1 * intensity;
+                player.skin.head.position.z = 0.1 * intensity;
+
+                if (!addHit) {
+                    player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
+                    player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
+                } else {
+                    // Накладываем динамический удар прямо во время приседа
+                    let hitTime = time * speed * 12.0;
+                    let swipe = (Math.sin(hitTime) * 0.55) - 0.55;
+                    
+                    if (leftHandActive) {
+                        player.skin.leftArm.rotation.x = swipe;
+                        player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
+                    } else {
+                        player.skin.rightArm.rotation.x = swipe;
+                        player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
+                    }
                 }
             }
         }
@@ -754,7 +919,7 @@
             
             skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
                 applyAnimation();
-                applyBackEquipment(); // Автоматически перенавешиваем плащ/элитры при смене скина
+                applyBackEquipment(); 
                 if (window.refreshLayers) window.refreshLayers();
             });
 
@@ -833,19 +998,35 @@
 
         function applyAnimation() {
             if (!skinViewer) return;
+            
+            // Полный сброс вращений осей игрока (особенно важно после режима плавания)
+            if (skinViewer.playerObject) {
+                skinViewer.playerObject.rotation.set(0, 0, 0);
+                skinViewer.playerObject.skin.body.position.set(0, 0, 0);
+                skinViewer.playerObject.skin.head.position.set(0, 0, 0);
+            }
+            
             skinViewer.animation = null;
             
-            if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
-            else if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
-            else if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
-            else if (currentAnimationType === 'sneak') skinViewer.animation = new skinview3d.SneakingAnimation();
-            else if (currentAnimationType === 'swim') skinViewer.animation = new skinview3d.SwimmingAnimation();
-            else if (currentAnimationType === 'wave') skinViewer.animation = new CustomWavingAnimation();
-            else if (currentAnimationType === 'hit_right') skinViewer.animation = new CustomHittingAnimation('right');
-            else if (currentAnimationType === 'hit_left') skinViewer.animation = new CustomHittingAnimation('left');
+            // Включение кастомных доработанных классов
+            if (currentAnimationType === 'walk') skinViewer.animation = new CustomWalkAnimation();
+            else if (currentAnimationType === 'run') skinViewer.animation = new CustomRunAnimation();
+            else if (currentAnimationType === 'fly') skinViewer.animation = new CustomFlyAnimation();
+            else if (currentAnimationType === 'swim') skinViewer.animation = new CustomSwimAnimation();
+            else if (currentAnimationType === 'wave') skinViewer.animation = new CustomWaveAnimation();
+            else if (currentAnimationType === 'hit') skinViewer.animation = new CustomHitAnimation();
+            else if (currentAnimationType === 'sneak') skinViewer.animation = new CustomSneakAnimation();
+
+            // Переключаем отображение плашки Crouch settings
+            const crouchBox = document.getElementById('crouch_settings');
+            if (currentAnimationType === 'sneak') {
+                crouchBox.style.display = 'block';
+            } else {
+                crouchBox.style.display = 'none';
+                document.getElementById('crouch_progress_num').textContent = '';
+            }
         }
 
-        // ФУНКЦИЯ ДЛЯ УПРАВЛЕНИЯ ПЛАЩОМ И ЭЛИТРАМИ
         function applyBackEquipment() {
             if (!skinViewer) return;
             const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
@@ -853,11 +1034,8 @@
             if (equipType === 'none') {
                 skinViewer.loadCape(null);
             } else {
-                // Официальный спрайт плаща из репозитория skinview3d (можно заменить на путь к своему файлу, например 'textures/my_cape.png')
-                const capeUrl = 'https://bs-community.github.io/skinview3d/textures/cape.png';
-                
-                // Передаем оба параметра для совместимости со всеми версиями движка
-                skinViewer.loadCape(capeUrl, { backEquipment: equipType, elytra: equipType === 'elytra' });
+                // Загружаем вшитую base64 строку вместо ломающихся серверных картинок
+                skinViewer.loadCape(EMBEDDED_CAPE_BASE64, { backEquipment: equipType, elytra: equipType === 'elytra' });
             }
         }
 
@@ -1010,15 +1188,17 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // Возвращаем дефолтную скорость ползунка
                 document.getElementById('rotate_speed').value = "2.0";
                 document.getElementById('rotate_speed_val').textContent = "2.0";
                 skinViewer.autoRotateSpeed = 2.0;
+
+                document.getElementById('anim_speed').value = "1.0";
+                document.getElementById('anim_speed_val').textContent = "1.0";
                 
                 if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0;
-                    skinViewer.playerObject.rotation.z = 0;
+                    skinViewer.playerObject.rotation.set(0,0,0);
+                    skinViewer.playerObject.skin.body.position.set(0,0,0);
+                    skinViewer.playerObject.skin.head.position.set(0,0,0);
                 }
                 
                 skinViewer.controls.reset();
@@ -1028,7 +1208,7 @@
                 skinViewer.camera.position.set(0, 0, 60);
             };
 
-            // Слушатели вращения
+            // Ползунок авто-вращения
             const rotateCheckbox = document.getElementById('auto_rotate');
             const speedSlider = document.getElementById('rotate_speed');
             const speedVal = document.getElementById('rotate_speed_val');
@@ -1046,15 +1226,25 @@
                 }
             };
 
+            // Ползунок скорости анимаций
+            const animSpeedSlider = document.getElementById('anim_speed');
+            const animSpeedVal = document.getElementById('anim_speed_val');
+            animSpeedSlider.oninput = (e) => {
+                animSpeedVal.textContent = e.target.value;
+            };
+
+            // Галочка левой руки обновляет анимацию в реальном времени
+            document.getElementById('anim_left_hand').onchange = () => {
+                if (currentActiveSkinFilename && (currentAnimationType === 'hit' || currentAnimationType === 'sneak')) {
+                    applyAnimation();
+                }
+            };
+
             // Переключение радио-кнопок анимаций
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
-                    if (currentActiveSkinFilename) {
-                        selectSkin(currentActiveSkinFilename, false); 
-                    } else {
-                        applyAnimation();
-                    }
+                    applyAnimation();
                 };
             });
 
