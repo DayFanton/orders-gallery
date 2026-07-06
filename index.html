@@ -700,29 +700,36 @@
             skinViewer.width = container.clientWidth;
             skinViewer.height = container.clientHeight;
         }
+// КЛЮЧ ДОЛЖЕН БЫТЬ ТОЧНО ТАКИМ ЖЕ, КАК В PYTHON
 const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
 
+// Функция-помощник: скачивает, расшифровывает и возвращает "чистую" ссылку на скин
 async function loadEncryptedSkin(path) {
     const response = await fetch(path);
     if (!response.ok) throw new Error("Не удалось загрузить файл скина");
     
+    // Получаем зашифрованный текст
     const base64Data = await response.text();
 
+    // Декодируем из Base64
     const binaryString = atob(base64Data);
     const bytes = new Uint8Array(binaryString.length);
     for (let i = 0; i < binaryString.length; i++) {
         bytes[i] = binaryString.charCodeAt(i);
     }
 
+    // Обратный XOR
     const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
     for (let i = 0; i < bytes.length; i++) {
         bytes[i] = bytes[i] ^ keyBytes[i % keyBytes.length];
     }
 
+    // Создаем "виртуальную" ссылку, которую понимает браузер
     const blob = new Blob([bytes], { type: 'image/png' });
     return URL.createObjectURL(blob);
 }
 
+// ОБНОВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА
 async function selectSkin(filename, updateUrl = true) {
     if (!skinViewer) return;
     const skin = globalSkins.find(s => s.filename === filename);
@@ -736,15 +743,20 @@ async function selectSkin(filename, updateUrl = true) {
 
     const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
     
+    // ТЕПЕРЬ МЫ УКАЗЫВАЕМ ПУТЬ К skins_enc И .txt
     const skinPath = `skins_enc/${cleanFilename}.png.txt`;
 
     try {
+        // Загружаем и расшифровываем
         const blobUrl = await loadEncryptedSkin(skinPath);
         
+        // Передаем расшифрованную ссылку в просмотрщик
         await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
         
+        // Очищаем память от старой ссылки
         URL.revokeObjectURL(blobUrl);
 
+        // Остальной код (анимация, информация)
         applyAnimation();
         if (window.refreshLayers) window.refreshLayers();
 
@@ -769,7 +781,8 @@ async function selectSkin(filename, updateUrl = true) {
             window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
         }
     } catch (err) {
-        console.error("Ошибка при загрузке скина:", err);
+        console.error("Ошибка при расшифровке:", err);
+        document.getElementById('infoCustomer').textContent = "Ошибка загрузки";
     }
 }
 
