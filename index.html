@@ -407,7 +407,7 @@
 
             <div class="control-group">
                 <h3>Анимация движения</h3>
-                <div class="radio-grid">
+                <div class="radio-grid" style="grid-template-columns: repeat(2, 1fr); gap: 8px;">
                     <label class="radio-btn">
                         <input type="radio" name="animation" value="none" checked>
                         <span>Покой</span>
@@ -424,6 +424,14 @@
                         <input type="radio" name="animation" value="fly">
                         <span>Полет</span>
                     </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="wave">
+                        <span>Приветствие</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="dance">
+                        <span>Танец</span>
+                    </label>
                 </div>
             </div>
 
@@ -438,6 +446,14 @@
                     <span>Верхняя одежда / Броня</span>
                 </label>
             </div>
+
+            <div class="control-group">
+                <h3>Режим разложения</h3>
+                <label class="checkbox-label" style="color: #60a5fa; font-weight: 600;">
+                    <input type="checkbox" id="explode_model">
+                    <span>Разобрать на части</span>
+                </label>
+            </div>
         </div>
 
         <div class="bg-selector-group">
@@ -450,6 +466,7 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
+        let isExploded = false; // Переменная состояния "взрыва"
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -490,6 +507,11 @@
                 initControlListeners();
                 buildBackgroundSelector();
 
+                // Специальный цикл обновления Three.js, чтобы удерживать части тела на расстоянии, даже если запущена анимация движения
+                skinViewer.on('render', () => {
+                    applyExplodePositions();
+                });
+
             } catch (e) {
                 console.error(e);
                 document.getElementById('loading').textContent = "Ошибка инициализации 3D компонентов.";
@@ -501,6 +523,33 @@
             const container = document.getElementById('viewer_zone');
             skinViewer.width = container.clientWidth;
             skinViewer.height = container.clientHeight;
+        }
+
+        // Функция растаскивания конечностей в пространстве
+        function applyExplodePositions() {
+            if (!skinViewer || !skinViewer.playerObject) return;
+            
+            const p = skinViewer.playerObject.skin;
+            
+            if (isExploded) {
+                // Раздвигаем части тела в стороны от центра (значения подобраны для идеального зазора)
+                p.head.position.y = 6;       // Голову вверх
+                p.torso.position.z = -2;     // Торс немного назад
+                p.leftArm.position.x = -8;   // Левую руку влево
+                p.rightArm.position.x = 8;    // Правую руку вправо
+                p.leftLeg.position.x = -3;   // Левую ногу чуть влево и вниз
+                p.leftLeg.position.y = -6;
+                p.rightLeg.position.x = 3;   // Правую ногу чуть вправо и вниз
+                p.rightLeg.position.y = -6;
+            } else {
+                // Возвращаем строго в исходные дефолтные позиции библиотеки
+                p.head.position.set(0, 0, 0);
+                p.torso.position.set(0, 0, 0);
+                p.leftArm.position.set(0, 0, 0);
+                p.rightArm.position.set(0, 0, 0);
+                p.leftLeg.position.set(0, 0, 0);
+                p.rightLeg.position.set(0, 0, 0);
+            }
         }
 
         function selectSkin(filename, updateUrl = true) {
@@ -561,7 +610,6 @@
                 grid.appendChild(dot);
             });
 
-            // КНОПКА-КАРАНДАШ ДЛЯ ВЫБОРА СВОЕГО ЦВЕТА
             const customDot = document.createElement('div');
             customDot.classList.add('bg-dot', 'custom-color-btn');
             customDot.title = 'Свой цвет';
@@ -600,6 +648,8 @@
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
+            if (currentAnimationType === 'wave') skinViewer.animation = new skinview3d.HandWaveAnimation();
+            if (currentAnimationType === 'dance') skinViewer.animation = new skinview3d.FunkyAnimation();
         }
 
         function initControlListeners() {
@@ -609,7 +659,10 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // ПОЛНЫЙ СБРОС ПОВОРОТА САМОЙ МОДЕЛИ (Разворот лицом)
+                // Сброс чекбокса взрыва при общем сбросе камеры
+                isExploded = false;
+                document.getElementById('explode_model').checked = false;
+                
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.x = 0;
                     skinViewer.playerObject.rotation.y = 0;
@@ -624,6 +677,11 @@
             };
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
+
+            // Слушатель для чекбокса "Разобрать на части"
+            document.getElementById('explode_model').onchange = (e) => {
+                isExploded = e.target.checked;
+            };
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
