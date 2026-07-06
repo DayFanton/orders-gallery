@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея Цыпляша</title>
-    <link class="cite-backlink" icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     
     <link rel="icon" href="data:,">
     
@@ -346,13 +346,12 @@
         .skin-list.view-list .cape-preview-box { margin-right: 0; }
         .skin-list.view-grid .cape-preview-box { margin-bottom: 4px; }
         
-        /* Исправленный блок отображения текстуры лицевой части плаща */
         .cape-preview-box img {
             position: absolute;
             width: 640%;    
             height: 200%;   
             left: -10%;    
-            top: -6.25%;    
+            top: -6.25%;   
             image-rendering: pixelated;
             display: none; 
         }
@@ -360,6 +359,7 @@
         .skin-list.view-grid .cape-preview-box {
             width: 32px;
             height: 48px;
+            box-sizing: border-box;
         }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
@@ -384,6 +384,15 @@
 
         .meta-label { color: var(--text-muted); }
         .meta-value { font-weight: 500; color: #fff; background: var(--bg-card); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); max-width: 60%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+        .site-version {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            opacity: 0.4;
+            padding: 0 24px 16px 24px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: -2px;
+        }
 
         #viewer_zone {
             flex: 1;
@@ -545,14 +554,6 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-        .site-version {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    opacity: 0.4; /* Делает её полупрозрачной */
-    padding: 0 24px 16px 24px; /* Отступы, чтобы подровнять по левому краю */
-    background: rgba(0, 0, 0, 0.2); /* Фоновый цвет как у блока инфы */
-    margin-top: -2px; /* Схлопываем щель между блоками */
-}
     </style>
 </head>
 <body>
@@ -604,9 +605,8 @@
                 <span class="meta-value" id="infoDate">—</span>
             </div>
         </div>
-
-        <div class="site-version">v1.0.0</div> 
-    </div> <div id="viewer_zone">
+        
+        <div class="site-version">v1.0.0</div>
     </div>
 
     <div id="viewer_zone">
@@ -702,7 +702,7 @@
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
-        let currentTab = 'skins'; // Текущая активная вкладка ('skins' или 'capes')
+        let currentTab = 'skins';
         let currentAnimationType = 'none';
         
         let currentRotationSpeed = 1.0;
