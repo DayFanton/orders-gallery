@@ -35,7 +35,7 @@
         }
 
         #sidebar {
-            width: 360px;
+            width: 360px; /* Фиксированная увеличенная ширина, чтобы всё влезало */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -46,7 +46,7 @@
         }
 
         .sidebar-header {
-            padding: 20px 16px 10px 16px;
+            padding: 20px 24px 10px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -61,127 +61,6 @@
             font-weight: 700;
         }
 
-        .header-controls {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .dropdown-sort {
-            position: relative;
-        }
-
-        .sort-trigger-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 4px 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            transition: 0.2s;
-            height: 24px;
-            box-sizing: border-box;
-        }
-
-        .sort-trigger-btn:hover, .sort-trigger-btn.active {
-            color: #fff;
-            border-color: var(--text-muted);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 6px);
-            right: 0;
-            background: var(--bg-sidebar);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 6px;
-            display: none;
-            flex-direction: column;
-            gap: 2px;
-            min-width: 160px;
-            z-index: 100;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-
-        .dropdown-menu.show {
-            display: flex;
-        }
-
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 6px 10px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.15s;
-        }
-
-        .dropdown-item:hover {
-            background: var(--bg-hover);
-            color: #fff;
-        }
-
-        .dropdown-item.active {
-            color: #fff;
-        }
-
-        .radio-circle {
-            width: 14px;
-            height: 14px;
-            border: 1px solid var(--text-muted);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-            flex-shrink: 0;
-        }
-
-        .dropdown-item.active .radio-circle {
-            border-color: #ff9800;
-        }
-
-        .dropdown-item.active .radio-circle::after {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: #ff9800;
-            border-radius: 50%;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background: var(--border);
-            margin: 4px 0;
-        }
-
-        .author-group-header {
-            width: 100%;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            font-weight: 700;
-            padding: 16px 4px 6px 4px;
-            margin-bottom: 4px;
-            box-sizing: border-box;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .skin-list.view-grid .author-group-header {
-            grid-column: 1 / -1;
-            margin-top: 8px;
-        }
-
         .view-toggle {
             display: flex;
             gap: 4px;
@@ -189,23 +68,18 @@
             padding: 2px;
             border-radius: 6px;
             border: 1px solid var(--border);
-            height: 24px;
-            box-sizing: border-box;
-            align-items: center;
         }
 
         .toggle-btn {
             background: transparent;
             border: none;
             color: var(--text-muted);
-            padding: 2px 8px;
+            padding: 4px 8px;
             font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
             border-radius: 4px;
             transition: 0.2s;
-            height: 18px;
-            line-height: 14px;
         }
 
         .toggle-btn.active {
@@ -268,7 +142,9 @@
             transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        .skin-list.view-grid .grid-spacer { display: none !important; }
+        .skin-list.view-grid .grid-spacer {
+            display: none !important;
+        }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
             width: 42px !important;
@@ -289,7 +165,9 @@
             width: 100% !important;
             display: block !important;
         }
-        .skin-list.view-grid .skin-date { display: none !important; }
+        .skin-list.view-grid .skin-date {
+            display: none !important; 
+        }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
         .skin-list .skin-item.active { background: rgba(16, 185, 129, 0.08); border-color: var(--accent); }
@@ -396,12 +274,6 @@
             gap: 8px;
         }
 
-        .radio-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
         .radio-btn input { position: absolute; opacity: 0; width: 0; height: 0; }
         .radio-btn span {
             display: block;
@@ -413,30 +285,12 @@
             font-size: 0.8rem;
             cursor: pointer;
             transition: 0.2s;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
         }
 
         .radio-btn input:checked + span {
             background: rgba(16, 185, 129, 0.15);
             border-color: var(--accent);
             color: var(--accent);
-            font-weight: 600;
-        }
-
-        .sub-settings-box {
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px dashed var(--border);
-            border-radius: 6px;
-            padding: 10px 12px;
-            margin-top: 10px;
-            display: none;
-        }
-        .sub-settings-title {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
             font-weight: 600;
         }
 
@@ -464,6 +318,7 @@
         .bg-dot:hover { transform: scale(1.05); }
         .bg-dot.active { border-color: #fff; }
 
+        /* КНОПКА КАСТОМНОГО ЦВЕТА С КАРАНДАШОМ */
         .bg-dot.custom-color-btn {
             background: #27272a;
             border: 1px solid var(--border);
@@ -508,27 +363,9 @@
     <div id="sidebar">
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
-            <div class="header-controls">
-                
-                <div class="dropdown-sort">
-                    <button class="sort-trigger-btn" id="sortTrigger">
-                        <span>Сортировка</span>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="dropdown-menu" id="sortMenu">
-                        <div class="dropdown-item" data-field="author"><span class="radio-circle"></span>По автору</div>
-                        <div class="dropdown-item" data-field="name"><span class="radio-circle"></span>По названию</div>
-                        <div class="dropdown-item" data-field="date"><span class="radio-circle"></span>По дате</div>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-item" data-order="desc"><span class="radio-circle"></span>По убыванию</div>
-                        <div class="dropdown-item" data-order="asc"><span class="radio-circle"></span>По возрастанию</div>
-                    </div>
-                </div>
-
-                <div class="view-toggle">
-                    <button class="toggle-btn active" id="btnListView">Список</button>
-                    <button class="toggle-btn" id="btnGridView">Плитка</button>
-                </div>
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="btnListView">Список</button>
+                <button class="toggle-btn" id="btnGridView">Плитка</button>
             </div>
         </div>
         <div class="skin-list view-list" id="skinList"></div>
@@ -566,13 +403,6 @@
                     <input type="checkbox" id="auto_rotate">
                     <span>Вращать модель</span>
                 </label>
-                <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 6px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
-                        <span>Скорость вращения</span>
-                        <span id="rotate_speed_val">2.0</span>
-                    </div>
-                    <input type="range" id="rotate_speed" min="0.1" max="10.0" step="0.1" value="2.0" style="width:100%; accent-color: var(--accent); background: var(--bg-card); border: 1px solid var(--border); height: 6px; border-radius: 3px; cursor: pointer; margin: 0; padding: 0;">
-                </div>
             </div>
 
             <div class="control-group">
@@ -595,69 +425,20 @@
                         <span>Полет</span>
                     </label>
                     <label class="radio-btn">
-                        <input type="radio" name="animation" value="sneak">
-                        <span>Приседать</span>
-                    </label>
-                    <label class="radio-btn">
-                        <input type="radio" name="animation" value="swim">
-                        <span>Плыть</span>
-                    </label>
-                    <label class="radio-btn">
                         <input type="radio" name="animation" value="wave">
-                        <span>Махать</span>
+                        <span>Привет</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="crouch">
+                        <span>Присед</span>
                     </label>
                     <label class="radio-btn">
                         <input type="radio" name="animation" value="hit">
                         <span>Удар</span>
                     </label>
-                </div>
-
-                <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
-                    <label class="checkbox-label" style="margin: 0;">
-                        <input type="checkbox" id="anim_left_hand">
-                        <span>Использовать левую руку</span>
-                    </label>
-                </div>
-
-                <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
-                        <span>Скорость анимации</span>
-                        <span id="anim_speed_val">1.0</span>
-                    </div>
-                    <input type="range" id="anim_speed" min="0.1" max="4.0" step="0.1" value="1.0" style="width:100%; accent-color: var(--accent); background: var(--bg-card); border: 1px solid var(--border); height: 6px; border-radius: 3px; cursor: pointer; margin: 0; padding: 0;">
-                </div>
-
-                <div class="sub-settings-box" id="crouch_settings">
-                    <div class="sub-settings-title">Crouch settings:</div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="crouch_run_once">
-                        <span>Run once</span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="crouch_show_progress">
-                        <span>Show progress <span id="crouch_progress_num" style="color: var(--accent); font-weight: bold; margin-left:4px;"></span></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="crouch_add_hit">
-                        <span>Add hitting animation</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <h3>Аксессуар на спину</h3>
-                <div class="radio-grid-3">
                     <label class="radio-btn">
-                        <input type="radio" name="back_equipment" value="none" checked>
-                        <span>Нет</span>
-                    </label>
-                    <label class="radio-btn">
-                        <input type="radio" name="back_equipment" value="cape">
-                        <span>Плащ</span>
-                    </label>
-                    <label class="radio-btn">
-                        <input type="radio" name="back_equipment" value="elytra">
-                        <span>Элитры</span>
+                        <input type="radio" name="animation" value="swim">
+                        <span>Плавание</span>
                     </label>
                 </div>
             </div>
@@ -685,160 +466,6 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
-        
-        let currentSortField = 'name'; 
-        let currentSortOrder = 'desc';
-        let currentActiveSkinFilename = null;
-
-        // ИСПРАВЛЕНО: Текстура теперь строго локальная, чтобы не ломаться из-за CORS
-        const LOCAL_CAPE_URL = "cape.png";
-
-        // ИСПРАВЛЕНО: Только вращение конечностей через rotation. Position больше никогда не трогаем!
-        class CustomWalkAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 4.5;
-                player.skin.head.rotation.set(Math.sin(t * 0.1) * 0.05, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 0.45, 0, 0);
-                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.45, 0, 0);
-                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.45, 0, 0);
-                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.45, 0, 0);
-            }
-        }
-
-        class CustomRunAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 7.5;
-                player.skin.head.rotation.set(0.1, 0, 0);
-                player.skin.body.rotation.set(0.2, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 0.8, 0, 0.1);
-                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.8, 0, -0.1);
-                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.7, 0, 0);
-                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.7, 0, 0);
-            }
-        }
-
-        class CustomFlyAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 3.0;
-                player.skin.head.rotation.set(-0.15, 0, 0);
-                player.skin.body.rotation.set(0.4, 0, 0);
-                player.skin.leftArm.rotation.set(0.2, 0, -0.25 + Math.sin(t) * 0.08);
-                player.skin.rightArm.rotation.set(0.2, 0, 0.25 - Math.sin(t) * 0.08);
-                player.skin.leftLeg.rotation.set(0.25 + Math.sin(t) * 0.05, 0, -0.04);
-                player.skin.rightLeg.rotation.set(0.25 - Math.sin(t) * 0.05, 0, 0.04);
-            }
-        }
-
-        class CustomSwimAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 6.0;
-                player.rotation.x = -Math.PI / 2.3; 
-                player.skin.head.rotation.set(0.3, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 1.1, 0, -0.15);
-                player.skin.rightArm.rotation.set(Math.cos(t) * 1.1, 0, 0.15);
-                player.skin.leftLeg.rotation.set(Math.sin(t * 1.2) * 0.25, 0, 0);
-                player.skin.rightLeg.rotation.set(-Math.sin(t * 1.2) * 0.25, 0, 0);
-            }
-        }
-
-        class CustomWaveAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 9.0;
-                player.skin.head.rotation.set(0, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(0, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
-                
-                player.skin.rightArm.rotation.x = -Math.PI + 0.4;
-                player.skin.rightArm.rotation.z = Math.sin(t) * 0.35 - 0.25;
-            }
-        }
-
-        class CustomHitAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let t = time * speed * 12.0;
-                player.skin.head.rotation.set(0, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(0, 0, 0);
-                player.skin.rightArm.rotation.set(0, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
-                
-                let leftHandActive = document.getElementById('anim_left_hand').checked;
-                let swipe = (Math.sin(t) * 0.55) - 0.55; 
-                
-                if (leftHandActive) {
-                    player.skin.leftArm.rotation.x = swipe;
-                } else {
-                    player.skin.rightArm.rotation.x = swipe;
-                }
-            }
-        }
-
-        class CustomSneakAnimation {
-            update(player, time) {
-                if (!player || !player.skin) return;
-                let speed = parseFloat(document.getElementById('anim_speed').value);
-                let runOnce = document.getElementById('crouch_run_once').checked;
-                let showProgress = document.getElementById('crouch_show_progress').checked;
-                let addHit = document.getElementById('crouch_add_hit').checked;
-                let leftHandActive = document.getElementById('anim_left_hand').checked;
-
-                let t = time * speed;
-                let cycle = (t * 3.5) % (Math.PI * 2);
-                let intensity = 1.0;
-                let progressPercent = Math.round((cycle / (Math.PI * 2)) * 100);
-
-                if (runOnce) {
-                    let stopTime = Math.min(t * 4.0, Math.PI / 2);
-                    intensity = Math.sin(stopTime);
-                    progressPercent = Math.round((stopTime / (Math.PI / 2)) * 100);
-                }
-
-                if (showProgress) {
-                    document.getElementById('crouch_progress_num').textContent = `(${progressPercent}%)`;
-                } else {
-                    document.getElementById('crouch_progress_num').textContent = '';
-                }
-
-                // ИСПРАВЛЕНО: Убрано смещение по Y и Z, наклоняем только кости! Персонаж больше не ломается.
-                player.skin.head.rotation.set(-0.2 * intensity, 0, 0);
-                player.skin.body.rotation.set(0.3 * intensity, 0, 0);
-                player.skin.leftLeg.rotation.set(-0.3 * intensity, 0, 0);
-                player.skin.rightLeg.rotation.set(0.3 * intensity, 0, 0);
-
-                if (!addHit) {
-                    player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
-                    player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
-                } else {
-                    let hitTime = time * speed * 12.0;
-                    let swipe = (Math.sin(hitTime) * 0.55) - 0.55;
-                    
-                    if (leftHandActive) {
-                        player.skin.leftArm.rotation.x = swipe;
-                        player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
-                    } else {
-                        player.skin.rightArm.rotation.x = swipe;
-                        player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
-                    }
-                }
-            }
-        }
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -851,6 +478,187 @@
         ];
 
         document.addEventListener('contextmenu', e => e.preventDefault());
+
+        /* Вспомогательные функции и классы продвинутой кастомной анимации */
+        function clamp(o, e, t) {
+            return o <= e ? e : o >= t ? t : o;
+        }
+
+        class CustomAnimation {
+            constructor() {
+                this.speed = 1;
+                this.paused = false;
+                this.progress = 0;
+                this.lastTime = performance.now();
+            }
+            update(playerObject) {
+                const now = performance.now();
+                let delta = (now - this.lastTime) / 1000;
+                this.lastTime = now;
+                if (this.paused) return;
+                if (delta > 0.1) delta = 0.016; // Стабилизация при переключении вкладок
+                const n = delta * this.speed;
+                this.animate(playerObject, n);
+                this.progress += n;
+            }
+            animate(playerObject, delta) {}
+        }
+
+        class IdleAnimation extends CustomAnimation {
+            animate(e) {
+                const t = this.progress * 2, n = Math.PI * .02;
+                e.skin.leftArm.rotation.z = Math.cos(t) * .03 + n;
+                e.skin.rightArm.rotation.z = Math.cos(t + Math.PI) * .03 - n;
+                const a = Math.PI * .06;
+                e.cape.rotation.x = Math.sin(t) * .01 + a;
+            }
+        }
+
+        class WalkAnimation extends CustomAnimation {
+            constructor() {
+                super();
+                this.headBobbing = true;
+            }
+            animate(t) {
+                const n = this.progress * 8;
+                t.skin.leftLeg.rotation.x = Math.sin(n) * .5;
+                t.skin.rightLeg.rotation.x = Math.sin(n + Math.PI) * .5;
+                t.skin.leftArm.rotation.x = Math.sin(n + Math.PI) * .5;
+                t.skin.rightArm.rotation.x = Math.sin(n) * .5;
+                const a = Math.PI * .02;
+                t.skin.leftArm.rotation.z = Math.cos(n) * .03 + a;
+                t.skin.rightArm.rotation.z = Math.cos(n + Math.PI) * .03 - a;
+                if (this.headBobbing) {
+                    t.skin.head.rotation.y = Math.sin(n / 4) * .2;
+                    t.skin.head.rotation.x = Math.sin(n / 5) * .1;
+                } else {
+                    t.skin.head.rotation.y = 0;
+                    t.skin.head.rotation.x = 0;
+                }
+                const d = Math.PI * .06;
+                t.cape.rotation.x = Math.sin(n / 1.5) * .06 + d;
+            }
+        }
+
+        class RunAnimation extends CustomAnimation {
+            animate(e) {
+                const t = this.progress * 15 + Math.PI * .5;
+                e.skin.leftLeg.rotation.x = Math.cos(t + Math.PI) * 1.3;
+                e.skin.rightLeg.rotation.x = Math.cos(t) * 1.3;
+                e.skin.leftArm.rotation.x = Math.cos(t) * 1.5;
+                e.skin.rightArm.rotation.x = Math.cos(t + Math.PI) * 1.5;
+                const n = Math.PI * .1;
+                e.skin.leftArm.rotation.z = Math.cos(t) * .1 + n;
+                e.skin.rightArm.rotation.z = Math.cos(t + Math.PI) * .1 - n;
+                e.position.y = Math.cos(t * 2);
+                e.position.x = Math.cos(t) * .15;
+                e.rotation.z = Math.cos(t + Math.PI) * .01;
+                const a = Math.PI * .3;
+                e.cape.rotation.x = Math.sin(t * 2) * .1 + a;
+            }
+        }
+
+        class FlyAnimation extends CustomAnimation {
+            animate(e) {
+                const t = this.progress > 0 ? this.progress * 20 : 0;
+                const n = clamp(t * t / 100, 0, 1);
+                e.rotation.x = n * Math.PI / 2;
+                e.skin.head.rotation.x = n > .5 ? Math.PI / 4 - e.rotation.x : 0;
+                const a = Math.PI * .25 * n;
+                e.skin.leftArm.rotation.z = a;
+                e.skin.rightArm.rotation.z = -a;
+                const d = .34906584, c = Math.PI / 2, l = Math.pow(.9, t);
+                e.elytra.leftWing.rotation.x = d + l * (.2617994 - d);
+                e.elytra.leftWing.rotation.z = c + l * (.2617994 - c);
+                e.elytra.updateRightWing();
+            }
+        }
+
+        class WaveAnimation extends CustomAnimation {
+            animate(t) {
+                const n = this.progress * 2 * Math.PI * .5;
+                const a = t.skin.rightArm;
+                a.rotation.x = 3.14; // Рука поднята вверх
+                a.rotation.z = Math.sin(n) * .5; // Покачивание в стороны
+            }
+        }
+
+        class CrouchAnimation extends CustomAnimation {
+            animate(t) {
+                let n = this.progress * 8;
+                n = Math.floor(n);
+                t.skin.body.rotation.x = .4537860552 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.body.position.z = 1.3256181 * Math.abs(Math.sin(n * Math.PI / 2)) - 3.4500310377 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.body.position.y = -6 - 2.103677462 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.cape.position.y = 8 - 1.851236166577372 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.cape.rotation.x = 10.8 * Math.PI / 180 + .294220265771 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.head.position.y = -3.618325234674 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.leftArm.position.z = 3.618325234674 * Math.abs(Math.sin(n * Math.PI / 2)) - 3.4500310377 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.rightArm.position.z = t.skin.leftArm.position.z;
+                t.skin.leftArm.rotation.x = .410367746202 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.rightArm.rotation.x = t.skin.leftArm.rotation.x;
+                t.skin.leftArm.rotation.z = .1;
+                t.skin.rightArm.rotation.z = -t.skin.leftArm.rotation.z;
+                t.skin.leftArm.position.y = -2 - 2.53943318 * Math.abs(Math.sin(n * Math.PI / 2));
+                t.skin.rightArm.position.y = t.skin.leftArm.position.y;
+            }
+        }
+
+        class HitAnimation extends CustomAnimation {
+            animate(e) {
+                const t = this.progress * 18;
+                e.skin.rightArm.rotation.x = -.4537860552 * 2 + 2 * Math.sin(t + Math.PI) * .3;
+                const n = .01 * Math.PI + .06;
+                e.skin.rightArm.rotation.z = -Math.cos(t) * .403 + n;
+                e.skin.body.rotation.y = -Math.cos(t) * .06;
+                e.skin.leftArm.rotation.x = Math.sin(t + Math.PI) * .077;
+                e.skin.leftArm.rotation.z = -Math.cos(t) * .015 + .13 - .05;
+            }
+        }
+
+        class SwimAnimation extends CustomAnimation {
+            animate(t) {
+                const n = 1.3;
+                const d = (this.progress % n) / n;
+                const c = [0, .7 / n, 1.1 / n, 1];
+                const l = [{z:180,y:180,x:0},{z:287.2,y:180,x:0},{z:180,y:180,x:90},{z:180,y:180,x:0}];
+                const M = [{z:-180,y:180,x:0},{z:-287.2,y:180,x:0},{z:-180,y:180,x:90},{z:-180,y:180,x:0}];
+                const u = Math.PI / 180;
+                
+                function v(h, b, w) {
+                    const q = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1), h);
+                    const C = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0), b);
+                    return new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0), w).multiply(C).multiply(q);
+                }
+                
+                const p = l.map(h => v(h.z * u, h.y * u, h.x * u));
+                const I = M.map(h => v(h.z * u, h.y * u, h.x * u));
+                
+                function f(h) {
+                    for (let b = 0; b < c.length - 1; b++) {
+                        if (h >= c[b] && h <= c[b+1]) return { i: b, t0: c[b], t1: c[b+1] };
+                    }
+                    return { i: c.length - 2, t0: c[c.length - 2], t1: c[c.length - 1] };
+                }
+                
+                const y = f(d);
+                const g = (d - y.t0) / (y.t1 - y.t0);
+                const E = y.i;
+                
+                t.position.y = -5 * g * n;
+                t.rotation.x = 1.3 * g * Math.PI / 2;
+                
+                const x = new THREE.Quaternion().copy(p[E]).slerp(p[E+1], g);
+                const T = new THREE.Quaternion().copy(I[E]).slerp(I[E+1], g);
+                t.skin.leftArm.quaternion.copy(x);
+                t.skin.rightArm.quaternion.copy(T);
+                
+                const B = 390 * u;
+                const V = 17.2 * u;
+                t.skin.leftLeg.rotation.x = V * Math.cos(this.progress * B + Math.PI);
+                t.skin.rightLeg.rotation.x = V * Math.cos(this.progress * B);
+            }
+        }
 
         function initViewer() {
             try {
@@ -868,7 +676,6 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
-                skinViewer.autoRotateSpeed = 2.0;
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -898,8 +705,6 @@
             const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
 
-            currentActiveSkinFilename = filename;
-
             document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
             const currentItem = document.getElementById(`item-${filename}`);
             if (currentItem) currentItem.classList.add('active');
@@ -909,7 +714,6 @@
             
             skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
                 applyAnimation();
-                applyBackEquipment(); 
                 if (window.refreshLayers) window.refreshLayers();
             });
 
@@ -987,192 +791,40 @@
         }
 
         function applyAnimation() {
-            if (!skinViewer) return;
-            
-            if (skinViewer.playerObject && skinViewer.playerObject.skin) {
-                const s = skinViewer.playerObject.skin;
-                s.head.rotation.set(0, 0, 0);
-                s.body.rotation.set(0, 0, 0);
-                s.leftArm.rotation.set(0, 0, 0);
-                s.rightArm.rotation.set(0, 0, 0);
-                s.leftLeg.rotation.set(0, 0, 0);
-                s.rightLeg.rotation.set(0, 0, 0);
-                // ИСПРАВЛЕНО: Никаких сбросов position.set(0,0,0) здесь нет, геометрия стабильна.
-                skinViewer.playerObject.rotation.set(0, 0, 0);
-            }
-            
-            skinViewer.animation = null;
-            
-            if (currentAnimationType === 'walk') skinViewer.animation = new CustomWalkAnimation();
-            else if (currentAnimationType === 'run') skinViewer.animation = new CustomRunAnimation();
-            else if (currentAnimationType === 'fly') skinViewer.animation = new CustomFlyAnimation();
-            else if (currentAnimationType === 'swim') skinViewer.animation = new CustomSwimAnimation();
-            else if (currentAnimationType === 'wave') skinViewer.animation = new CustomWaveAnimation();
-            else if (currentAnimationType === 'hit') skinViewer.animation = new CustomHitAnimation();
-            else if (currentAnimationType === 'sneak') skinViewer.animation = new CustomSneakAnimation();
-
-            const crouchBox = document.getElementById('crouch_settings');
-            if (currentAnimationType === 'sneak') {
-                crouchBox.style.display = 'block';
-            } else {
-                crouchBox.style.display = 'none';
-                document.getElementById('crouch_progress_num').textContent = '';
-            }
-        }
-
-        function applyBackEquipment() {
             if (!skinViewer || !skinViewer.playerObject) return;
-            const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
-            
-            if (equipType === 'none') {
-                skinViewer.loadCape(null);
-            } else {
-                skinViewer.playerObject.backEquipment = equipType;
-                // Загружаем локальный файл cape.png без CORS ошибок
-                skinViewer.loadCape(LOCAL_CAPE_URL);
+
+            // Полный сброс костей и деформаций перед установкой новой анимации
+            const po = skinViewer.playerObject;
+            po.rotation.set(0, 0, 0);
+            po.position.set(0, 0, 0);
+            if (po.skin) {
+                po.skin.head.rotation.set(0, 0, 0);
+                po.skin.head.position.set(0, 0, 0);
+                po.skin.body.rotation.set(0, 0, 0);
+                po.skin.body.position.set(0, 0, 0);
+                po.skin.leftArm.rotation.set(0, 0, 0);
+                po.skin.leftArm.position.set(0, 0, 0);
+                po.skin.rightArm.rotation.set(0, 0, 0);
+                po.skin.rightArm.position.set(0, 0, 0);
+                po.skin.leftLeg.rotation.set(0, 0, 0);
+                po.skin.leftLeg.position.set(0, 0, 0);
+                po.skin.rightLeg.rotation.set(0, 0, 0);
+                po.skin.rightLeg.position.set(0, 0, 0);
             }
-        }
+            if (po.cape) { po.cape.rotation.set(0, 0, 0); po.cape.position.set(0, 0, 0); }
+            if (po.elytra) { po.elytra.rotation.set(0, 0, 0); po.elytra.position.set(0, 0, 0); }
 
-        function parseDate(dateStr) {
-            if (!dateStr) return new Date(0);
-            const parts = dateStr.split('.');
-            if (parts.length === 3) {
-                const day = parseInt(parts[0], 10);
-                const month = parseInt(parts[1], 10) - 1;
-                const year = parseInt(parts[2], 10);
-                if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
-                    return new Date(year, month, day);
-                }
-            }
-            return new Date(0); 
-        }
+            skinViewer.animation = null;
 
-        function renderSkinList() {
-            const list = document.getElementById('skinList');
-            if (!list) return;
-            list.innerHTML = '';
-
-            let sortedSkins = [...globalSkins];
-
-            sortedSkins.sort((a, b) => {
-                let valA, valB;
-
-                if (currentSortField === 'name') {
-                    valA = a.skinName || '';
-                    valB = b.skinName || '';
-                } else if (currentSortField === 'author') {
-                    valA = a.author || '';
-                    valB = b.author || '';
-                } else if (currentSortField === 'date') {
-                    const dA = parseDate(a.date);
-                    const dB = parseDate(b.date);
-                    if (dA.getTime() === dB.getTime()) {
-                        valA = a.date || '';
-                        valB = b.date || '';
-                    } else {
-                        valA = dA.getTime();
-                        valB = dB.getTime();
-                    }
-                }
-
-                if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
-                if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
-
-                if (currentSortField !== 'name') {
-                    return (a.skinName || '').localeCompare(b.skinName || '');
-                }
-                return 0;
-            });
-
-            let lastAuthor = null;
-
-            sortedSkins.forEach(skin => {
-                if (currentSortField === 'author' && skin.author !== lastAuthor) {
-                    lastAuthor = skin.author;
-                    const header = document.createElement('div');
-                    header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || 'Не указан';
-                    list.appendChild(header);
-                }
-
-                const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
-                const skinPath = `skins/${cleanFilename}.png`;
-
-                const item = document.createElement('div');
-                item.classList.add('skin-item');
-                item.id = `item-${skin.filename}`;
-                
-                if (skin.filename === currentActiveSkinFilename) {
-                    item.classList.add('active');
-                }
-                
-                item.innerHTML = `
-                    <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                    <span class="skin-name">${skin.skinName || 'Без названия'}</span>
-                    <span class="skin-date">${skin.date || ''}</span>
-                `;
-                
-                list.appendChild(item);
-                
-                const canvas = item.querySelector('.canvas-avatar');
-                drawSkinAvatar(skinPath, canvas);
-
-                item.onclick = () => selectSkin(skin.filename, true);
-            });
-
-            for(let i = 0; i < 4; i++) {
-                const spacer = document.createElement('div');
-                spacer.classList.add('grid-spacer');
-                list.appendChild(spacer);
-            }
-        }
-
-        function initSortListeners() {
-            const trigger = document.getElementById('sortTrigger');
-            const menu = document.getElementById('sortMenu');
-
-            if (!trigger || !menu) return;
-
-            trigger.onclick = (e) => {
-                e.stopPropagation();
-                menu.classList.toggle('show');
-                trigger.classList.toggle('active');
-            };
-
-            document.addEventListener('click', () => {
-                menu.classList.remove('show');
-                trigger.classList.remove('active');
-            });
-
-            const updateMenuSelectionVisuals = () => {
-                menu.querySelectorAll('.dropdown-item').forEach(item => {
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-                    
-                    if ((field && field === currentSortField) || (order && order === currentSortOrder)) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            };
-
-            menu.querySelectorAll('.dropdown-item').forEach(item => {
-                item.onclick = (e) => {
-                    e.stopPropagation();
-                    
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-
-                    if (field) currentSortField = field;
-                    if (order) currentSortOrder = order;
-
-                    updateMenuSelectionVisuals();
-                    renderSkinList();
-                };
-            });
-
-            updateMenuSelectionVisuals();
+            // Инициализация кастомных классов анимации
+            if (currentAnimationType === 'none') skinViewer.animation = new IdleAnimation();
+            if (currentAnimationType === 'walk') skinViewer.animation = new WalkAnimation();
+            if (currentAnimationType === 'run') skinViewer.animation = new RunAnimation();
+            if (currentAnimationType === 'fly') skinViewer.animation = new FlyAnimation();
+            if (currentAnimationType === 'wave') skinViewer.animation = new WaveAnimation();
+            if (currentAnimationType === 'crouch') skinViewer.animation = new CrouchAnimation();
+            if (currentAnimationType === 'hit') skinViewer.animation = new HitAnimation();
+            if (currentAnimationType === 'swim') skinViewer.animation = new SwimAnimation();
         }
 
         function initControlListeners() {
@@ -1182,22 +834,9 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                document.getElementById('rotate_speed').value = "2.0";
-                document.getElementById('rotate_speed_val').textContent = "2.0";
-                skinViewer.autoRotateSpeed = 2.0;
-
-                document.getElementById('anim_speed').value = "1.0";
-                document.getElementById('anim_speed_val').textContent = "1.0";
-                
-                if (skinViewer.playerObject && skinViewer.playerObject.skin) {
-                    const s = skinViewer.playerObject.skin;
-                    s.head.rotation.set(0,0,0);
-                    s.body.rotation.set(0,0,0);
-                    s.leftArm.rotation.set(0,0,0);
-                    s.rightArm.rotation.set(0,0,0);
-                    s.leftLeg.rotation.set(0,0,0);
-                    s.rightLeg.rotation.set(0,0,0);
-                    // ИСПРАВЛЕНО: Убрано обнуление position.set(0,0,0), ломавшее структуру костей
+                if (skinViewer.playerObject) {
+                    skinViewer.playerObject.rotation.set(0, 0, 0);
+                    skinViewer.playerObject.position.set(0, 0, 0);
                 }
                 
                 skinViewer.controls.reset();
@@ -1205,36 +844,10 @@
                 skinViewer.controls.beta = 0;
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
+                applyAnimation();
             };
 
-            const rotateCheckbox = document.getElementById('auto_rotate');
-            const speedSlider = document.getElementById('rotate_speed');
-            const speedVal = document.getElementById('rotate_speed_val');
-
-            rotateCheckbox.onchange = (e) => {
-                skinViewer.autoRotate = e.target.checked;
-                skinViewer.autoRotateSpeed = parseFloat(speedSlider.value);
-            };
-
-            speedSlider.oninput = (e) => {
-                const val = e.target.value;
-                speedVal.textContent = val;
-                if (skinViewer) {
-                    skinViewer.autoRotateSpeed = parseFloat(val);
-                }
-            };
-
-            const animSpeedSlider = document.getElementById('anim_speed');
-            const animSpeedVal = document.getElementById('anim_speed_val');
-            animSpeedSlider.oninput = (e) => {
-                animSpeedVal.textContent = e.target.value;
-            };
-
-            document.getElementById('anim_left_hand').onchange = () => {
-                if (currentActiveSkinFilename && (currentAnimationType === 'hit' || currentAnimationType === 'sneak')) {
-                    applyAnimation();
-                }
-            };
+            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
@@ -1243,24 +856,16 @@
                 };
             });
 
-            document.querySelectorAll('input[name="back_equipment"]').forEach(radio => {
-                radio.onchange = () => {
-                    applyBackEquipment();
-                };
-            });
-
             const updateLayers = () => {
-                if (!skinViewer || !skinViewer.playerObject || !skinViewer.playerObject.skin) return;
+                if (!skinViewer) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                
-                const s = skinViewer.playerObject.skin;
-                s.head.outerLayer.visible = headVisible;
-                s.body.outerLayer.visible = bodyVisible;
-                s.leftArm.outerLayer.visible = bodyVisible;
-                s.rightArm.outerLayer.visible = bodyVisible;
-                s.leftLeg.outerLayer.visible = bodyVisible;
-                s.rightLeg.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
+                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
             };
 
             document.getElementById('layer_head').onchange = updateLayers;
@@ -1283,22 +888,46 @@
             try {
                 const response = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await response.json();
+                const list = document.getElementById('skinList');
+                list.innerHTML = ''; 
 
-                const params = new URLSearchParams(window.location.search);
-                let activeSkin = params.get('skin');
+                globalSkins.forEach(skin => {
+                    const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
+                    const skinPath = `skins/${cleanFilename}.png`;
 
-                if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
-                    activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
+                    const item = document.createElement('div');
+                    item.classList.add('skin-item');
+                    item.id = `item-${skin.filename}`;
+                    
+                    item.innerHTML = `
+                        <canvas class="canvas-avatar" width="64" height="64"></canvas>
+                        <span class="skin-name">${skin.skinName || 'Без названия'}</span>
+                        <span class="skin-date">${skin.date || ''}</span>
+                    `;
+                    
+                    list.appendChild(item);
+                    
+                    const canvas = item.querySelector('.canvas-avatar');
+                    drawSkinAvatar(skinPath, canvas);
+
+                    item.onclick = () => selectSkin(skin.filename, true);
+                });
+
+                for(let i = 0; i < 4; i++) {
+                    const spacer = document.createElement('div');
+                    spacer.classList.add('grid-spacer');
+                    list.appendChild(spacer);
                 }
-                
-                currentActiveSkinFilename = activeSkin;
 
                 initViewer();
-                initSortListeners();
-                renderSkinList();
 
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
+                const params = new URLSearchParams(window.location.search);
+                const activeSkin = params.get('skin');
+
+                if (activeSkin && globalSkins.some(s => s.filename === activeSkin)) {
+                    selectSkin(activeSkin, false);
+                } else if (globalSkins.length > 0) {
+                    selectSkin(globalSkins[0].filename, false);
                 }
 
             } catch (err) {
