@@ -97,5 +97,68 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "17.11.2025",
     "model": "steve"
+  },
+  {
+    "filename": "day_ny24",
+    "skinName": "Дэй новогодний 2024",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "22.11.2024",
+    "model": "steve"
+  },
+  {
+    "filename": "sgushenka_ny24",
+    "skinName": "Сгущёнка новогодний 2024",
+    "customer": "Сгущёнка",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "20.11.2024",
+    "model": "steve"
+  },
+  {
+    "filename": "arina_ny24",
+    "skinName": "Арина новогодняя 2024",
+    "customer": "Арина",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "20.11.2024",
+    "model": "alex"
+  },
+  {
+    "filename": "nika_ny24",
+    "skinName": "Ника новогодняя 2024",
+    "customer": "Ника",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "24.11.2024",
+    "model": "steve"
+  },
+  {
+    "filename": "nadya_ny24",
+    "skinName": "Надя новогодняя 2024",
+    "customer": "Надя",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "28.11.2024",
+    "model": "alex"
+  },
+  {
+    "filename": "dream_ny24",
+    "skinName": "Дрим новогодний 2024",
+    "customer": "Дрим",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "22.11.2024",
+    "model": "steve"
+  },
+  {
+    "filename": "day_ny23",
+    "skinName": "Дэй новогодний 2023",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "01.01.2023",
+    "model": "steve"
   }
 ]
