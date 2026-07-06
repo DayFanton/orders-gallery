@@ -90,7 +90,7 @@
         }
 
         .sort-trigger-btn:hover, .sort-trigger-btn.active {
-            color: fff;
+            color: #fff;
             border-color: var(--text-muted);
         }
 
@@ -128,11 +128,11 @@
 
         .dropdown-item:hover {
             background: var(--bg-hover);
-            color: fff;
+            color: #fff;
         }
 
         .dropdown-item.active {
-            color: fff;
+            color: #fff;
         }
 
         /* Круглый чекбокс/радио кнопка как на скриншоте */
@@ -423,6 +423,27 @@
             font-weight: 600;
         }
 
+        /* Стили контейнеров для ползунков скорости */
+        .slider-container {
+            margin-top: 12px;
+        }
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .control-slider {
+            width: 100%;
+            accent-color: var(--accent);
+            background: var(--bg-main);
+            height: 5px;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
         .bg-selector-group {
             padding: 20px 24px;
             background: rgba(0, 0, 0, 0.15);
@@ -549,6 +570,14 @@
                     <input type="checkbox" id="auto_rotate">
                     <span>Вращать модель</span>
                 </label>
+                
+                <div class="slider-container">
+                    <div class="slider-header">
+                        <span>Скорость вращения</span>
+                        <span id="rotate_speed_val">1.0</span>
+                    </div>
+                    <input type="range" id="rotate_speed" class="control-slider" min="0.1" max="4.0" step="0.1" value="1.0">
+                </div>
             </div>
 
             <div class="control-group">
@@ -570,6 +599,14 @@
                         <input type="radio" name="animation" value="fly">
                         <span>Полет</span>
                     </label>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-header">
+                        <span>Скорость анимации</span>
+                        <span id="anim_speed_val">1.0</span>
+                    </div>
+                    <input type="range" id="anim_speed" class="control-slider" min="0.1" max="2.5" step="0.1" value="1.0">
                 </div>
             </div>
 
@@ -596,6 +633,10 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
+        
+        // Переменные для сохранения выбранной пользователем скорости
+        let currentRotationSpeed = 1.0;
+        let currentAnimationSpeed = 1.0;
         
         // Текущие параметры сортировки (по умолчанию как на скриншоте)
         let currentSortField = 'name'; 
@@ -630,6 +671,7 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
+                skinViewer.autoRotateSpeed = currentRotationSpeed; // Применяем базовую скорость
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -752,6 +794,11 @@
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
+            
+            // Накатываем текущую сохраненную скорость на вновь созданную анимацию
+            if (skinViewer.animation) {
+                skinViewer.animation.speed = currentAnimationSpeed;
+            }
         }
 
         /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
@@ -914,6 +961,17 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
+                // Сброс значений и ползунков к дефолтным (1.0)
+                currentRotationSpeed = 1.0;
+                skinViewer.autoRotateSpeed = currentRotationSpeed;
+                document.getElementById('rotate_speed').value = 1.0;
+                document.getElementById('rotate_speed_val').textContent = '1.0';
+                
+                currentAnimationSpeed = 1.0;
+                if (skinViewer.animation) skinViewer.animation.speed = currentAnimationSpeed;
+                document.getElementById('anim_speed').value = 1.0;
+                document.getElementById('anim_speed_val').textContent = '1.0';
+                
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.x = 0;
                     skinViewer.playerObject.rotation.y = 0;
@@ -929,6 +987,15 @@
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
+            // Обработчик изменения скорости вращения
+            const rotateSpeedInput = document.getElementById('rotate_speed');
+            const rotateSpeedVal = document.getElementById('rotate_speed_val');
+            rotateSpeedInput.oninput = (e) => {
+                currentRotationSpeed = parseFloat(e.target.value);
+                rotateSpeedVal.textContent = currentRotationSpeed.toFixed(1);
+                if (skinViewer) skinViewer.autoRotateSpeed = currentRotationSpeed;
+            };
+
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
@@ -939,6 +1006,17 @@
                     }
                 };
             });
+
+            // Обработчик изменения скорости анимации
+            const animSpeedInput = document.getElementById('anim_speed');
+            const animSpeedVal = document.getElementById('anim_speed_val');
+            animSpeedInput.oninput = (e) => {
+                currentAnimationSpeed = parseFloat(e.target.value);
+                animSpeedVal.textContent = currentAnimationSpeed.toFixed(1);
+                if (skinViewer && skinViewer.animation) {
+                    skinViewer.animation.speed = currentAnimationSpeed;
+                }
+            };
 
             const updateLayers = () => {
                 if (!skinViewer) return;
