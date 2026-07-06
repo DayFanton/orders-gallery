@@ -109,20 +109,18 @@
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); }
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 
-/* РЕЖИМ КОМПАКТНАЯ КВАДРАТНАЯ ПЛИТКА (3 в ряд, фиксированный размер) */
+        /* РЕЖИМ КОМПАКТНАЯ КВАДРАТНАЯ ПЛИТКА (3 в ряд) */
         .skin-list.view-grid {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            gap: 8px !important;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
             padding-bottom: 10px;
-            justify-content: flex-start;
         }
         .skin-list.view-grid .skin-item {
             background: var(--bg-card);
             border: 1px solid transparent;
             border-radius: 8px;
-            width: 84px;          
-            height: 84px;         
+            aspect-ratio: 1 / 1; /* Делаем карточку строго квадратной */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -131,27 +129,29 @@
             padding: 6px;
             box-sizing: border-box;
             transition: all 0.2s ease;
+            position: relative;
         }
         .skin-list.view-grid .canvas-avatar {
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
             border-radius: 4px;
             background: #27272a;
             box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-            margin-bottom: 4px;
-            flex-shrink: 0;
+            margin-bottom: 6px;
         }
         .skin-list.view-grid .skin-name {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 500;
             text-align: center;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
             width: 100%;
+            padding: 0 2px;
+            box-sizing: border-box;
         }
         .skin-list.view-grid .skin-date {
-            display: none; 
+            display: none; /* Скрываем в плитке, чтобы не забивать дизайн (дата есть снизу в инфо) */
         }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
@@ -491,14 +491,9 @@
         }
 
         function initControlListeners() {
-            // ИСПРАВЛЕНИЕ ПОЗИЦИИ КАМЕРЫ ПРИ СБРОСЕ (Лицом к игроку)
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
                 skinViewer.controls.reset();
-                // Обнуляем угол вращения, чтобы моделька не вставала боком
-                skinViewer.controls.alpha = 0; 
-                skinViewer.controls.beta = 0;
-                // Четко центрируем фокус на теле персонажа
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
             };
