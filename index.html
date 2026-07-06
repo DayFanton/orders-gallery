@@ -700,80 +700,63 @@
             skinViewer.width = container.clientWidth;
             skinViewer.height = container.clientHeight;
         }
-// КЛЮЧ ДОЛЖЕН БЫТЬ ТОЧНО ТАКИМ ЖЕ, КАК В PYTHON
+        
 const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
 
-// Функция-помощник: скачивает, расшифровывает и возвращает "чистую" ссылку на скин
-async function loadEncryptedSkin(path) {
-    const response = await fetch(path);
-    if (!response.ok) throw new Error("Не удалось загрузить файл скина");
+async function getDecryptedBlobUrl(filename) {
+    const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+    const response = await fetch(`skins_enc/${cleanFilename}.png.txt`);
+    if (!response.ok) throw new Error("Файл не найден");
     
-    // Получаем зашифрованный текст
     const base64Data = await response.text();
-
-    // Декодируем из Base64
+    
     const binaryString = atob(base64Data);
     const bytes = new Uint8Array(binaryString.length);
-    for (let i = 0; i < binaryString.length; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-    }
-
-    // Обратный XOR
     const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
-    for (let i = 0; i < bytes.length; i++) {
-        bytes[i] = bytes[i] ^ keyBytes[i % keyBytes.length];
+    
+    for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
     }
-
-    // Создаем "виртуальную" ссылку, которую понимает браузер
-    const blob = new Blob([bytes], { type: 'image/png' });
-    return URL.createObjectURL(blob);
+    
+    return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
 }
-
-// ОБНОВЛЕННАЯ ФУНКЦИЯ ВЫБОРА СКИНА
 async function selectSkin(filename, updateUrl = true) {
     if (!skinViewer) return;
     const skin = globalSkins.find(s => s.filename === filename);
     if (!skin) return;
 
     currentActiveSkinFilename = filename;
-
     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
     const currentItem = document.getElementById(`item-${filename}`);
     if (currentItem) currentItem.classList.add('active');
 
-    const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-    
-    // ТЕПЕРЬ МЫ УКАЗЫВАЕМ ПУТЬ К skins_enc И .txt
-    const skinPath = `skins_enc/${cleanFilename}.png.txt`;
-
     try {
-        // Загружаем и расшифровываем
-        const blobUrl = await loadEncryptedSkin(skinPath);
-        
-        // Передаем расшифрованную ссылку в просмотрщик
+        // Загрузка и расшифровка
+        const blobUrl = await getDecryptedBlobUrl(filename);
         await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
         
-        // Очищаем память от старой ссылки
-        URL.revokeObjectURL(blobUrl);
+        // Очистка памяти
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
 
-        // Остальной код (анимация, информация)
         applyAnimation();
         if (window.refreshLayers) window.refreshLayers();
 
+        // Обновление информации
         document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
         document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
+        // ВОТ ЭТОТ БЛОК ОТВЕЧАЕТ ЗА АВТОРА:
         const authorContainer = document.getElementById('infoAuthor');
-        if (skin.author) {
-            if (skin.authorUrl) {
-                authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); font-weight: 600; cursor: pointer;">${skin.author}</a>`;
+        if (authorContainer) {
+            if (skin.author) {
+                if (skin.authorUrl) {
+                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" style="color: var(--accent); text-decoration: none;">${skin.author}</a>`;
+                } else {
+                    authorContainer.textContent = skin.author;
+                }
             } else {
-                authorContainer.textContent = skin.author;
-                authorContainer.style.color = '#fff';
+                authorContainer.textContent = 'Не указан';
             }
-        } else {
-            authorContainer.textContent = 'Не указан';
-            authorContainer.style.color = '#fff';
         }
 
         if (updateUrl) {
@@ -781,8 +764,7 @@ async function selectSkin(filename, updateUrl = true) {
             window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
         }
     } catch (err) {
-        console.error("Ошибка при расшифровке:", err);
-        document.getElementById('infoCustomer').textContent = "Ошибка загрузки";
+        console.error("Ошибка расшифровки:", err);
     }
 }
 
@@ -826,16 +808,23 @@ async function selectSkin(filename, updateUrl = true) {
             grid.appendChild(customDot);
         }
 
-        function drawSkinAvatar(imgUrl, canvasElement) {
-            const img = new Image();
-            img.src = imgUrl;
-            img.onload = () => {
-                const ctx = canvasElement.getContext('2d');
-                ctx.imageSmoothingEnabled = false; 
-                ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-                ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-            };
-        }
+        async function drawSkinAvatar(filename, canvasElement) {
+    try {
+        const blobUrl = await getDecryptedBlobUrl(filename);
+        const img = new Image();
+        img.src = blobUrl;
+        img.onload = () => {
+            const ctx = canvasElement.getContext('2d');
+            ctx.imageSmoothingEnabled = false; 
+            // Рисуем лицо (оба слоя)
+            ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
+            ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
+            URL.revokeObjectURL(blobUrl);
+        };
+    } catch (e) {
+        console.log("Не удалось загрузить миниатюру");
+    }
+}
 
         function applyAnimation() {
             if (!skinViewer) return;
@@ -938,8 +927,9 @@ async function selectSkin(filename, updateUrl = true) {
                 
                 list.appendChild(item);
                 
-                const canvas = item.querySelector('.canvas-avatar');
-                drawSkinAvatar(skinPath, canvas);
+        
+const canvas = item.querySelector('.canvas-avatar');
+drawSkinAvatar(skin.filename, canvas);
 
                 item.onclick = () => selectSkin(skin.filename, true);
             });
