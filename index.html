@@ -33,6 +33,7 @@
             height: 100vh;
             overflow: hidden;
             user-select: none;
+            position: relative;
         }
 
         #sidebar {
@@ -44,6 +45,13 @@
             box-sizing: border-box;
             z-index: 10;
             position: relative;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink: 0;
+        }
+
+        /* Класс скрытия левой панели для ПК */
+        #sidebar.hidden-desktop {
+            margin-left: -360px;
         }
 
         .sidebar-header {
@@ -221,7 +229,6 @@
             box-sizing: border-box;
         }
 
-        /* --- Кнопки переключения Скины / Плащи --- */
         .sidebar-tabs {
             display: flex;
             padding: 0 16px 12px 16px;
@@ -250,7 +257,6 @@
             border-color: var(--accent);
         }
 
-        /* --- Контейнер поиска --- */
         .search-container {
             padding: 0 16px 12px 16px;
             border-bottom: 1px solid var(--border);
@@ -353,7 +359,6 @@
         }
         .skin-list.view-grid .skin-date { display: none !important; }
 
-        /* --- Мини-превью плаща в галерее левой панели --- */
         .cape-preview-box {
             width: 28px;
             height: 44px;
@@ -407,7 +412,6 @@
         .meta-label { color: var(--text-muted); }
         .meta-value { font-weight: 500; color: #fff; background: var(--bg-card); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); max-width: 60%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
         
-        /* Кликабельное поле мета-информации */
         .meta-value.clickable {
             color: var(--accent);
             border-color: var(--accent);
@@ -455,6 +459,14 @@
             flex-direction: column;
             box-sizing: border-box;
             flex-shrink: 0;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Класс скрытия правой панели для ПК */
+        #controls_panel.hidden-desktop {
+            margin-right: -300px;
         }
 
         .controls-scroll {
@@ -590,19 +602,63 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 
-        /* Скрытая по умолчанию мобильная навигация */
         #mobile_nav {
             display: none;
         }
 
-        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ (АДАПТИВНОСТЬ) --- */
+        /* --- СТРЕЛКИ ДЛЯ СКРЫТИЯ ПАНЕЛЕЙ НА ПК --- */
+        .desktop-toggle-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-sidebar);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            width: 24px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 50;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .desktop-toggle-arrow:hover {
+            color: #fff;
+            background: var(--bg-hover);
+            border-color: var(--text-muted);
+        }
+        #toggleLeftArrow {
+            left: 360px;
+            border-left: none;
+            border-radius: 0 8px 8px 0;
+        }
+        #toggleLeftArrow.panel-collapsed {
+            left: 0;
+        }
+        #toggleRightArrow {
+            right: 300px;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+        }
+        #toggleRightArrow.panel-collapsed {
+            right: 0;
+        }
+
+        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ --- */
         @media (max-width: 900px) {
             body {
                 position: relative;
                 overflow: hidden;
             }
 
-            /* 3D-Вьювер растягивается на задний план */
+            /* Скрываем ПК-стрелочки на телефонах */
+            .desktop-toggle-arrow {
+                display: none !important;
+            }
+
             #viewer_zone {
                 position: absolute;
                 top: 0;
@@ -612,15 +668,17 @@
                 z-index: 1;
             }
 
-            /* Панели превращаются в Bottom Sheets (выезжают снизу) */
+            /* На телефонах панели изначально полностью спрятаны внизу (translateY(110%)) */
             #sidebar, #controls_panel {
                 position: fixed;
-                top: 40vh; /* Оставляет верхние 40% экрана видимыми под превью */
+                top: 40vh; 
                 left: 0;
                 width: 100% !important;
-                height: calc(60vh - 65px) !important; /* Высота с запасом под таб-бар */
+                height: calc(60vh - 65px) !important; 
                 z-index: 100;
-                transform: translateY(110%); /* Изначально спрятаны в самый низ */
+                transform: translateY(110%); 
+                margin-left: 0 !important;
+                margin-right: 0 !important;
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 background-color: rgba(19, 19, 22, 0.96);
                 backdrop-filter: blur(12px);
@@ -630,10 +688,9 @@
             }
 
             #sidebar.mobile-open, #controls_panel.mobile-open {
-                transform: translateY(0); /* Показываем выбранную панель */
+                transform: translateY(0); 
             }
 
-            /* Нижний мобильный таб-бар навигации */
             #mobile_nav {
                 display: flex !important;
                 position: fixed;
@@ -691,6 +748,9 @@
 </head>
 <body>
 
+    <div id="toggleLeftArrow" class="desktop-toggle-arrow" title="Скрыть/Показать галерею">&lt;</div>
+    <div id="toggleRightArrow" class="desktop-toggle-arrow" title="Скрыть/Показать настройки">&gt;</div>
+
     <div id="sidebar">
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
@@ -743,7 +803,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.0.0</div>
+        <div class="site-version">v1.2.9</div>
     </div>
 
     <div id="viewer_zone">
@@ -857,7 +917,6 @@
         let currentCapeFilename = null;
         let elytraEnabled = false;
         
-        // Переменная для хранения строки поиска
         let searchQuery = '';
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
@@ -901,6 +960,7 @@
 
                 initControlListeners();
                 buildBackgroundSelector();
+                initDesktopTogglePanels(); // Запуск логики скрытия для ПК
 
             } catch (e) {
                 console.error(e);
@@ -977,7 +1037,6 @@
             if (!list) return;
             list.innerHTML = '';
 
-            // Кнопка "Снять плащ" отображается всегда, если поиск пуст
             if (!searchQuery) {
                 const noneItem = document.createElement('div');
                 noneItem.classList.add('skin-item');
@@ -997,7 +1056,6 @@
                 list.appendChild(noneItem);
             }
 
-            // Фильтрация плащей по поисковому запросу
             let filteredCapes = globalCapes.filter(cape => {
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
@@ -1087,7 +1145,6 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
-                // Обновление и настройка кликабельности блока заказчика
                 const customerEl = document.getElementById('infoCustomer');
                 if (skin.customer && skin.customer !== '-' && skin.customer !== 'Не указан') {
                     customerEl.textContent = skin.customer;
@@ -1212,7 +1269,6 @@
             if (!list) return;
             list.innerHTML = '';
 
-            // Фильтрация скинов по поисковому запросу
             let filteredSkins = globalSkins.filter(skin => {
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
@@ -1341,15 +1397,43 @@
             updateMenuSelectionVisuals();
         }
 
+        // Логика кнопок-стрелочек скрытия панелей для ПК версии
+        function initDesktopTogglePanels() {
+            const leftArrow = document.getElementById('toggleLeftArrow');
+            const sidebar = document.getElementById('sidebar');
+            const rightArrow = document.getElementById('toggleRightArrow');
+            const controls = document.getElementById('controls_panel');
+
+            leftArrow.onclick = () => {
+                sidebar.classList.toggle('hidden-desktop');
+                leftArrow.classList.toggle('panel-collapsed');
+                if(sidebar.classList.contains('hidden-desktop')) {
+                    leftArrow.textContent = '>';
+                } else {
+                    leftArrow.textContent = '<';
+                }
+                setTimeout(updateViewerSize, 305);
+            };
+
+            rightArrow.onclick = () => {
+                controls.classList.toggle('hidden-desktop');
+                rightArrow.classList.toggle('panel-collapsed');
+                if(controls.classList.contains('hidden-desktop')) {
+                    rightArrow.textContent = '<';
+                } else {
+                    rightArrow.textContent = '>';
+                }
+                setTimeout(updateViewerSize, 305);
+            };
+        }
+
         function initControlListeners() {
-            // Слушатель ввода для живого поиска
             const searchInput = document.getElementById('searchInput');
             searchInput.oninput = (e) => {
                 searchQuery = e.target.value;
                 renderCurrentList();
             };
 
-            // Логика нажатия на имя заказчика для авто-поиска
             document.getElementById('infoCustomer').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
                 
@@ -1357,7 +1441,6 @@
                 searchInput.value = customerName;
                 searchQuery = customerName;
 
-                // Принудительно возвращаем вкладку Скины (так как это заказчики)
                 currentTab = 'skins';
                 document.getElementById('tabSkins').classList.add('active');
                 document.getElementById('tabCapes').classList.remove('active');
@@ -1415,7 +1498,6 @@
                 document.getElementById('elytra_toggle').checked = false;
                 skinViewer.loadCape(null);
                 
-                // Сброс поиска при общем сбросе
                 searchQuery = '';
                 document.getElementById('searchInput').value = '';
                 
@@ -1492,7 +1574,7 @@
                 document.getElementById('skinList').className = 'skin-list view-grid';
             };
 
-            // === Логика переключений для мобильного таб-бара ===
+            // Логика таб-бара на смартфонах (Скрытие и открытие панелей)
             const btnSidebar = document.getElementById('mobileBtnSidebar');
             const btnControls = document.getElementById('mobileBtnControls');
             const sidebar = document.getElementById('sidebar');
@@ -1515,7 +1597,7 @@
                         sidebar.classList.add('mobile-open');
                         btnSidebar.classList.add('active');
                     }
-                    updateViewerSize();
+                    setTimeout(updateViewerSize, 305);
                 };
 
                 btnControls.onclick = (e) => {
@@ -1527,7 +1609,7 @@
                         controls.classList.add('mobile-open');
                         btnControls.classList.add('active');
                     }
-                    updateViewerSize();
+                    setTimeout(updateViewerSize, 305);
                 };
             }
         }
