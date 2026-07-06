@@ -506,6 +506,7 @@
         }
 
         // ЛОГИКА ДИНАМИЧЕСКОГО РАСШИРЕНИЯ МЫШКОЙ
+        // ИСПРАВЛЕННАЯ ЛОГИКА ИЗМЕНЕНИЯ ШИРИНЫ ПАНЕЛИ
         function initResizeSidebar() {
             const sidebar = document.getElementById('sidebar');
             const handle = document.getElementById('resize_handle');
@@ -515,21 +516,24 @@
                 isResizing = true;
                 handle.classList.add('resizing');
                 document.body.style.cursor = 'col-resize';
+                // Отключаем выделение текста на всей странице во время ресайза
+                document.body.style.userSelect = 'none'; 
+                e.preventDefault();
             });
 
             document.addEventListener('mousemove', (e) => {
                 if (!isResizing) return;
                 
-                // Рассчитываем новую ширину панели на основе координаты мыши
                 let newWidth = e.clientX;
                 
-                // Устанавливаем железные лимиты: от 260px до 460px
+                // Жесткие лимиты
                 if (newWidth < 260) newWidth = 260;
                 if (newWidth > 460) newWidth = 460;
                 
-                sidebar.style.width = `${newWidthpx}`;
+                // Исправлено: теперь корректно подставляются пиксели px
+                sidebar.style.width = `${newWidth}px`; 
                 
-                // Принудительно обновляем 3D сцену под новые размеры экрана
+                // Обновляем 3D сцену под новые размеры
                 updateViewerSize();
             });
 
@@ -538,6 +542,8 @@
                     isResizing = false;
                     handle.classList.remove('resizing');
                     document.body.style.cursor = 'default';
+                    // Возвращаем выделение текста обратно
+                    document.body.style.userSelect = 'auto'; 
                 }
             });
         }
