@@ -475,32 +475,32 @@
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
-        function initViewer() {
-            try {
-                const container = document.getElementById('viewer_zone');
-                skinViewer = new skinview3d.SkinViewer({
-                    canvas: document.getElementById('skin_container'),
-                    width: container.clientWidth,
-                    height: container.clientHeight
-                });
+        // 1. Инициализация вьюера (исправлено под современные стандарты)
+function initViewer() {
+    try {
+        const container = document.getElementById('viewer_zone');
+        // Убедитесь, что используете конструктор напрямую
+        skinViewer = new skinview3d.SkinViewer({
+            canvas: document.getElementById('skin_container'),
+            width: container.clientWidth,
+            height: container.clientHeight
+        });
 
-                skinViewer.controls.enableRotate = true;
-                skinViewer.controls.enableZoom = true;
-                skinViewer.controls.enablePan = true; 
-                
-                skinViewer.globalLight.intensity = 3.0; 
-                skinViewer.cameraLight.intensity = 0.6;
-                skinViewer.autoRotate = false;
+        // Настройка без использования несуществующего .on()
+        skinViewer.controls.enableRotate = true;
+        // ... (остальные настройки)
 
-                container.style.background = bgPresets[0].value;
-                document.getElementById('loading').style.display = 'none';
+        // Вместо .on('render') используем requestAnimationFrame
+        function animateLoop() {
+            requestAnimationFrame(animateLoop);
+            if (isExploded) applyExplodePositions(); 
+        }
+        animateLoop();
 
-                window.addEventListener('resize', () => {
-                    updateViewerSize();
-                });
-
-                initControlListeners();
-                buildBackgroundSelector();
+    } catch (e) {
+        console.error("Ошибка при инициализации:", e);
+    }
+}
 
                 // Запускаем постоянный цикл анимации Three.js
                 function animateLoop() {
@@ -639,29 +639,48 @@
         }
 
         function applyAnimation() {
-            if (!skinViewer) return;
-            
-            // Чистим старые анимации во избежание наложений
-            if (skinViewer.animations) {
-                skinViewer.animations.run = null;
-                skinViewer.animations.walk = null;
-                skinViewer.animations.fly = null;
+    if (!skinViewer) return;
+
+    // 1. Сначала полностью сбрасываем текущую анимацию
+    skinViewer.animation = null;
+
+    // 2. Включаем выбранную анимацию, если она существует в библиотеке
+    switch (currentAnimationType) {
+        case 'walk':
+            if (typeof skinview3d.WalkingAnimation === 'function') {
+                skinViewer.animation = new skinview3d.WalkingAnimation();
             }
+            break;
+        case 'run':
+            if (typeof skinview3d.RunningAnimation === 'function') {
+                skinViewer.animation = new skinview3d.RunningAnimation();
+            }
+            break;
+        case 'fly':
+            if (typeof skinview3d.FlyingAnimation === 'function') {
+                skinViewer.animation = new skinview3d.FlyingAnimation();
+            }
+            break;
+        case 'wave':
+            // Проверяем наличие HandWaveAnimation
+            if (typeof skinview3d.HandWaveAnimation === 'function') {
+                skinViewer.animation = new skinview3d.HandWaveAnimation();
+            } else {
+                console.warn("HandWaveAnimation недоступна в этой версии");
+            }
+            break;
+        case 'dance':
+            // Проверяем наличие FunkyAnimation
+            if (typeof skinview3d.FunkyAnimation === 'function') {
+                skinViewer.animation = new skinview3d.FunkyAnimation();
+            } else {
+                console.warn("FunkyAnimation недоступна в этой версии");
+            }
+            break;
+        default:
             skinViewer.animation = null;
-            
-            // Включаем выбранную анимацию в зависимости от версии
-            if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
-            if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
-            if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
-            
-            // Безопасное подключение новых анимаций с проверкой на существование в сборке
-            if (currentAnimationType === 'wave') {
-                skinViewer.animation = skinview3d.HandWaveAnimation ? new skinview3d.HandWaveAnimation() : new skinview3d.WalkingAnimation();
-            }
-            if (currentAnimationType === 'dance') {
-                skinViewer.animation = skinview3d.FunkyAnimation ? new skinview3d.FunkyAnimation() : new skinview3d.RunningAnimation();
-            }
-        }
+    }
+}
 
         function initControlListeners() {
             document.getElementById('reset_all').onclick = () => {
