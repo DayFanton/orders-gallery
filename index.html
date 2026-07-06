@@ -41,8 +41,14 @@
             z-index: 10;
         }
 
-        .section-title {
+        .sidebar-header {
             padding: 20px 24px 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -50,13 +56,46 @@
             font-weight: 700;
         }
 
+        /* Переключатель режимов галереи */
+        .view-toggle {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-card);
+            padding: 2px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .toggle-btn.active {
+            background: var(--bg-hover);
+            color: #fff;
+        }
+
+        /* Стили списка и плитки */
         .skin-list {
             flex: 1;
             overflow-y: auto;
             padding: 0 16px;
         }
 
-        .skin-item {
+        /* Режим СПИСОК (по умолчанию) */
+        .skin-list.view-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .skin-list.view-list .skin-item {
             padding: 14px 16px;
             background: var(--bg-card);
             margin-bottom: 8px;
@@ -64,23 +103,52 @@
             cursor: pointer;
             transition: all 0.2s ease;
             border: 1px solid transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skin-list.view-list .skin-avatar { display: none; }
+        .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); }
+
+        /* Режим ПЛИТКА (2 в ряд) */
+        .skin-list.view-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        .skin-list.view-grid .skin-item {
+            background: var(--bg-card);
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .skin-list.view-grid .skin-avatar {
+            width: 48px;
+            height: 48px;
+            background-size: 800% 800%;
+            image-rendering: pixelated;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .skin-list.view-grid .skin-date {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 2px;
         }
 
-        .skin-item:hover {
-            background: var(--bg-hover);
-        }
+        .skin-list .skin-item:hover { background: var(--bg-hover); }
+        .skin-list .skin-item.active { background: rgba(16, 185, 129, 0.08); border-color: var(--accent); }
+        .skin-name { font-weight: 600; font-size: 0.85rem; }
 
-        .skin-item.active {
-            background: rgba(16, 185, 129, 0.08);
-            border-color: var(--accent);
-        }
-
-        .skin-name {
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: block;
-        }
-
+        /* Карточка инфо */
         .meta-info {
             padding: 20px 24px;
             background: rgba(0,0,0,0.2);
@@ -106,7 +174,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            background: radial-gradient(circle at center, #1c1c24 0%, var(--bg-main) 100%);
+            transition: background 0.4s ease;
         }
 
         #skin_container {
@@ -118,14 +186,19 @@
 
         #skin_container:active { cursor: grabbing; }
 
+        /* Правая панель управления */
         #controls_panel {
             width: 300px;
             background-color: var(--bg-sidebar);
             border-left: 1px solid var(--border);
             display: flex;
             flex-direction: column;
-            overflow-y: auto;
             box-sizing: border-box;
+        }
+
+        .controls-scroll {
+            flex: 1;
+            overflow-y: auto;
         }
 
         .control-group {
@@ -177,17 +250,7 @@
             gap: 8px;
         }
 
-        .radio-btn {
-            position: relative;
-        }
-
-        .radio-btn input {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
+        .radio-btn input { position: absolute; opacity: 0; width: 0; height: 0; }
         .radio-btn span {
             display: block;
             text-align: center;
@@ -207,6 +270,31 @@
             font-weight: 600;
         }
 
+        /* Выбор фона справа снизу */
+        .bg-selector-group {
+            padding: 20px 24px;
+            background: rgba(0, 0, 0, 0.15);
+            border-top: 1px solid var(--border);
+        }
+
+        .bg-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .bg-dot {
+            height: 32px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.2s;
+        }
+
+        .bg-dot:hover { transform: scale(1.05); }
+        .bg-dot.active { border-color: #fff; }
+
         #loading {
             position: absolute;
             font-size: 0.9rem;
@@ -222,8 +310,14 @@
 <body>
 
     <div id="sidebar">
-        <div class="section-title">Галерея скинов</div>
-        <div class="skin-list" id="skinList"></div>
+        <div class="sidebar-header">
+            <span class="section-title">Галерея</span>
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="btnListView">Список</button>
+                <button class="toggle-btn" id="btnGridView">Плитка</button>
+            </div>
+        </div>
+        <div class="skin-list view-list" id="skinList"></div>
         
         <div class="meta-info">
             <div class="meta-row">
@@ -234,6 +328,10 @@
                 <span class="meta-label">Художник</span>
                 <span class="meta-value" id="infoAuthor">—</span>
             </div>
+            <div class="meta-row">
+                <span class="meta-label">Дата создания</span>
+                <span class="meta-value" id="infoDate">—</span>
+            </div>
         </div>
     </div>
 
@@ -243,50 +341,57 @@
     </div>
 
     <div id="controls_panel">
-        <div class="control-group">
-            <button class="btn" id="reset_all">Сбросить камеру</button>
-        </div>
+        <div class="controls-scroll">
+            <div class="control-group">
+                <button class="btn" id="reset_all">Сбросить камеру</button>
+            </div>
 
-        <div class="control-group">
-            <h3>Вращение</h3>
-            <label class="checkbox-label">
-                <input type="checkbox" id="auto_rotate">
-                <span>Вращать модель</span>
-            </label>
-        </div>
+            <div class="control-group">
+                <h3>Вращение</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="auto_rotate">
+                    <span>Вращать модель</span>
+                </label>
+            </div>
 
-        <div class="control-group">
-            <h3>Анимация движения</h3>
-            <div class="radio-grid">
-                <label class="radio-btn">
-                    <input type="radio" name="animation" value="none" checked>
-                    <span>Покой</span>
+            <div class="control-group">
+                <h3>Анимация движения</h3>
+                <div class="radio-grid">
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="none" checked>
+                        <span>Покой</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="walk">
+                        <span>Ходьба</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="run">
+                        <span>Бег</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="fly">
+                        <span>Полет</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Отображение слоев</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="layer_head" checked>
+                    <span>Головной убор / Волосы</span>
                 </label>
-                <label class="radio-btn">
-                    <input type="radio" name="animation" value="walk">
-                    <span>Ходьба</span>
-                </label>
-                <label class="radio-btn">
-                    <input type="radio" name="animation" value="run">
-                    <span>Бег</span>
-                </label>
-                <label class="radio-btn">
-                    <input type="radio" name="animation" value="fly">
-                    <span>Полет</span>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="layer_body" checked>
+                    <span>Верхняя одежда / Броня</span>
                 </label>
             </div>
         </div>
 
-        <div class="control-group">
-            <h3>Отображение слоев</h3>
-            <label class="checkbox-label">
-                <input type="checkbox" id="layer_head" checked>
-                <span>Головной убор / Волосы</span>
-            </label>
-            <label class="checkbox-label">
-                <input type="checkbox" id="layer_body" checked>
-                <span>Верхняя одежда / Броня</span>
-            </label>
+        <div class="bg-selector-group">
+            <span class="section-title" style="padding:0;">Цвет фона</span>
+            <div class="bg-grid" id="bgGrid"></div>
         </div>
     </div>
 
@@ -294,6 +399,17 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
+
+        // Пресеты цветов для бэкграунда
+        const bgPresets = [
+            { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
+            { name: 'Светлый', value: 'radial-gradient(circle at center, #f4f4f5 0%, #e4e4e7 100%)', color: '#e4e4e7' },
+            { name: 'Тёмно-фиолетовый', value: 'radial-gradient(circle at center, #2e1065 0%, #0f052d 100%)', color: '#2e1065' },
+            { name: 'Тёмно-красный', value: 'radial-gradient(circle at center, #4c0519 0%, #18000a 100%)', color: '#4c0519' },
+            { name: 'Тёмно-розовый', value: 'radial-gradient(circle at center, #500732 0%, #1c0010 100%)', color: '#500732' },
+            { name: 'Тёмно-жёлтый', value: 'radial-gradient(circle at center, #422006 0%, #150a00 100%)', color: '#422006' },
+            { name: 'Тёмно-синий', value: 'radial-gradient(circle at center, #172554 0%, #050b24 100%)', color: '#172554' }
+        ];
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
@@ -306,14 +422,17 @@
                     height: container.clientHeight
                 });
 
+                // ТРЕБОВАНИЕ 1: Включаем панорамирование (перетаскивание пространства на ПКМ)
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
+                skinViewer.controls.enablePan = true; 
                 
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
-
                 skinViewer.autoRotate = false;
-                skinViewer.autoRotateSpeed = 0.6;
+
+                // Устанавливаем дефолтный фон
+                container.style.background = bgPresets[0].value;
 
                 document.getElementById('loading').style.display = 'none';
 
@@ -323,6 +442,7 @@
                 });
 
                 initControlListeners();
+                buildBackgroundSelector();
 
             } catch (e) {
                 console.error(e);
@@ -330,53 +450,52 @@
             }
         }
 
-        // Применяет выбранную анимацию без наслоения багов
+        function buildBackgroundSelector() {
+            const grid = document.getElementById('bgGrid');
+            bgPresets.forEach((bg, idx) => {
+                const dot = document.createElement('div');
+                dot.classList.add('bg-dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.style.backgroundColor = bg.color;
+                dot.title = bg.name;
+                
+                dot.onclick = () => {
+                    document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    document.getElementById('viewer_zone').style.background = bg.value;
+                };
+                grid.appendChild(dot);
+            });
+        }
+
         function applyAnimation() {
             if (!skinViewer) return;
-            
-            // Сбрасываем текущую анимацию и очищаем внутреннее время
             skinViewer.animation = null;
-            
-            if (currentAnimationType === 'walk') {
-                skinViewer.animation = new skinview3d.WalkingAnimation();
-            } else if (currentAnimationType === 'run') {
-                skinViewer.animation = new skinview3d.RunningAnimation();
-            } else if (currentAnimationType === 'fly') {
-                skinViewer.animation = new skinview3d.FlyingAnimation();
-            }
+            if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
+            if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
+            if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
         }
 
         function initControlListeners() {
-            document.getElementById('reset_all').onclick = () => {
-                skinViewer.controls.reset();
-            };
-
-            document.getElementById('auto_rotate').onchange = (e) => {
-                skinViewer.autoRotate = e.target.checked;
-            };
+            document.getElementById('reset_all').onclick = () => skinViewer.controls.reset();
+            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
-                    
-                    // Чтобы скин не разваливался, принудительно перезагружаем текущую текстуру 
-                    // Это полностью сбрасывает все кости модели в исходное целое состояние
                     const activeItem = document.querySelector('.skin-item.active');
                     if (activeItem) {
-                        const filename = activeItem.id.replace('item-', '');
-                        selectSkin(filename, false); 
+                        selectSkin(activeItem.id.replace('item-', ''), false); 
                     } else {
                         applyAnimation();
                     }
                 };
             });
 
-            // Настройка слоев
             const updateLayers = () => {
                 if (!skinViewer) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                
                 skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
                 skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
                 skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
@@ -387,9 +506,19 @@
 
             document.getElementById('layer_head').onchange = updateLayers;
             document.getElementById('layer_body').onchange = updateLayers;
-            
-            // Прокидываем функцию для повторного вызова при смене скинов
             window.refreshLayers = updateLayers;
+
+            // Переключатели режимов Списка и Плитки
+            document.getElementById('btnListView').onclick = () => {
+                document.getElementById('btnListView').classList.add('active');
+                document.getElementById('btnGridView').classList.remove('active');
+                document.getElementById('skinList').className = 'skin-list view-list';
+            };
+            document.getElementById('btnGridView').onclick = () => {
+                document.getElementById('btnGridView').classList.add('active');
+                document.getElementById('btnListView').classList.remove('active');
+                document.getElementById('skinList').className = 'skin-list view-grid';
+            };
         }
 
         async function loadSkinsJSON() {
@@ -400,10 +529,17 @@
                 list.innerHTML = ''; 
 
                 globalSkins.forEach(skin => {
+                    const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
                     const item = document.createElement('div');
                     item.classList.add('skin-item');
                     item.id = `item-${skin.filename}`;
-                    item.innerHTML = `<span class="skin-name">${skin.skinName || 'Скин без названия'}</span>`;
+                    
+                    // Генерируем структуру с поддержкой аватарок для плитки и дат создания
+                    item.innerHTML = `
+                        <div class="skin-avatar" style="background-image: url('skins/${cleanFilename}.png'); background-position: calc(8% * 8) calc(8% * 8);"></div>
+                        <span class="skin-name">${skin.skinName || 'Без названия'}</span>
+                        <span class="skin-date">${skin.date || ''}</span>
+                    `;
                     
                     item.onclick = () => selectSkin(skin.filename, true);
                     list.appendChild(item);
@@ -437,7 +573,6 @@
             const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
             const skinPath = `skins/${cleanFilename}.png`;
             
-            // Загружаем скин и по окончании накладываем анимации и слои заново
             skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
@@ -445,12 +580,11 @@
 
             document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
             document.getElementById('infoAuthor').textContent = skin.author || 'Не указан';
+            document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-            // Обновляем адресную строку только для переходов, БЕЗ копирования в буфер
             if (updateUrl) {
                 const baseUrl = window.location.origin + window.location.pathname;
-                const generatedUrl = `${baseUrl}?skin=${filename}`;
-                window.history.pushState({ path: generatedUrl }, '', generatedUrl);
+                window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
             }
         }
 
