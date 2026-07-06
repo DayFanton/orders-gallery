@@ -34,8 +34,7 @@
 
         #sidebar {
             width: 320px; /* Дефолтная ширина */
-            min-width: 260px;
-            max-width: 50vw; /* ТЕПЕРЬ МОЖНО РАСШИРЯТЬ НА ПОЛ-ЭКРАНА */
+            min-width: 260px; /* Оставляем только минимальную, чтобы не сжимать в ноль */
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -498,11 +497,11 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // ТОТАЛЬНЫЙ ФИКС РЕСАЙЗА (Блокируем вообще всё воровство кликов)
+        // ФИНАЛЬНЫЙ РЕСАЙЗ: Убраны конфликты с CSS лимитами
         function initResizeSidebar() {
             const sidebar = document.getElementById('sidebar');
             const handle = document.getElementById('resize_handle');
-            const canvas = document.getElementById('skin_container'); // Цепляем сам холст напрямую
+            const canvas = document.getElementById('skin_container');
             const viewerZone = document.getElementById('viewer_zone');
             let isResizing = false;
 
@@ -512,7 +511,6 @@
                 document.body.style.cursor = 'col-resize';
                 document.body.style.userSelect = 'none'; 
                 
-                // ЖЕСТКИЙ ФИКС: Вырубаем клики и у зоны, и у самого 3D холста
                 viewerZone.style.pointerEvents = 'none';
                 if(canvas) canvas.style.pointerEvents = 'none';
                 
@@ -523,10 +521,12 @@
                 if (!isResizing) return;
                 
                 let newWidth = e.clientX;
-                const halfScreenWidth = window.innerWidth / 2;
+                // Высчитываем половину экрана динамически в JS
+                const maxAllowedWidth = window.innerWidth / 2;
                 
+                // Проверяем границы строго в скрипте
                 if (newWidth < 260) newWidth = 260;
-                if (newWidth > halfScreenWidth) newWidth = halfScreenWidth;
+                if (newWidth > maxAllowedWidth) newWidth = maxAllowedWidth;
                 
                 sidebar.style.width = `${newWidth}px`; 
                 
@@ -540,7 +540,6 @@
                     document.body.style.cursor = 'default';
                     document.body.style.userSelect = 'auto'; 
                     
-                    // Возвращаем всё назад, когда отпустили мышку
                     viewerZone.style.pointerEvents = 'auto';
                     if(canvas) canvas.style.pointerEvents = 'auto';
                 }
