@@ -54,6 +54,43 @@
             flex-shrink: 0;
         }
 
+        /* КНОПКИ ПЕРЕКЛЮЧЕНИЯ РЕЖИМОВ СКИНОВ И ПЛАЩЕЙ */
+        .gallery-tabs {
+            display: flex;
+            gap: 6px;
+            padding: 0 16px 12px 16px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.2s;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tab-btn:hover {
+            color: #fff;
+            border-color: var(--text-muted);
+        }
+
+        .tab-btn.active {
+            background: var(--bg-hover);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
         .section-title {
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -68,7 +105,6 @@
             gap: 6px;
         }
 
-        /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО СПИСКА СОРТИРОВКИ */
         .dropdown-sort {
             position: relative;
         }
@@ -136,7 +172,6 @@
             color: #fff;
         }
 
-        /* Круглый чекбокс/радио кнопка как на скриншоте */
         .radio-circle {
             width: 14px;
             height: 14px;
@@ -167,7 +202,6 @@
             margin: 4px 0;
         }
 
-        /* Заголовки разделения авторов */
         .author-group-header {
             width: 100%;
             font-size: 0.7rem;
@@ -182,7 +216,7 @@
         }
 
         .skin-list.view-grid .author-group-header {
-            grid-column: 1 / -1; /* Растягивание на всю ширину сетки плиток */
+            grid-column: 1 / -1;
             margin-top: 8px;
         }
 
@@ -224,7 +258,6 @@
             box-sizing: border-box;
         }
 
-        /* РЕЖИМ СПИСОК */
         .skin-list.view-list {
             display: flex !important;
             flex-direction: column !important;
@@ -244,11 +277,10 @@
             height: auto !important;
             box-sizing: border-box;
         }
-        .skin-list.view-list .canvas-avatar { display: none !important; }
+        .skin-list.view-list .canvas-avatar { display: block !important; width: 32px !important; height: 32px !important; border-radius: 4px; background: #27272a; margin-right: 12px; flex-shrink: 0; }
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: 8px; flex-shrink: 0; }
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; }
 
-        /* РЕЖИМ ПЛИТКИ */
         .skin-list.view-grid {
             display: grid !important;
             grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
@@ -424,7 +456,6 @@
             font-weight: 600;
         }
 
-        /* Стили контейнеров для ползунков скорости */
         .slider-container {
             margin-top: 12px;
         }
@@ -536,6 +567,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- ТАБЫ ПЕРЕКЛЮЧЕНИЯ РЕЖИМОВ -->
+        <div class="gallery-tabs">
+            <button class="tab-btn active" id="btnSkinsTab">Скины</button>
+            <button class="tab-btn" id="btnCapesTab">Плащи</button>
+        </div>
+
         <div class="skin-list view-list" id="skinList"></div>
         
         <div class="meta-info">
@@ -638,16 +676,17 @@
     <script>
         let skinViewer = null;
         let globalSkins = [];
+        let globalCapes = [];
+        let currentTab = 'skins'; // 'skins' или 'capes'
         let currentAnimationType = 'none';
         
-        // Переменные для сохранения выбранной пользователем скорости
         let currentRotationSpeed = 1.0;
         let currentAnimationSpeed = 1.0;
         
-        // Текущие параметры сортировки (по умолчанию как на скриншоте)
         let currentSortField = 'name'; 
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
+        let currentActiveCapeFilename = null;
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -677,7 +716,7 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
-                skinViewer.autoRotateSpeed = currentRotationSpeed; // Применяем базовую скорость
+                skinViewer.autoRotateSpeed = currentRotationSpeed;
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -702,72 +741,125 @@
             skinViewer.height = container.clientHeight;
         }
         
-const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
+        const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
 
-async function getDecryptedBlobUrl(filename) {
-    const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-    const response = await fetch(`skins_enc/${cleanFilename}.png.txt`);
-    if (!response.ok) throw new Error("Файл не найден");
-    
-    const base64Data = await response.text();
-    
-    const binaryString = atob(base64Data);
-    const bytes = new Uint8Array(binaryString.length);
-    const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
-    
-    for (let i = 0; i < binaryString.length; i++) {
-        bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
-    }
-    
-    return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
-}
-async function selectSkin(filename, updateUrl = true) {
-    if (!skinViewer) return;
-    const skin = globalSkins.find(s => s.filename === filename);
-    if (!skin) return;
+        async function getDecryptedBlobUrl(filename, type = 'skin') {
+            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
+            const folder = type === 'skin' ? 'skins_enc' : 'capes_enc';
+            const response = await fetch(`${folder}/${cleanFilename}.png.txt`);
+            if (!response.ok) throw new Error("Файл не найден");
+            
+            const base64Data = await response.text();
+            const binaryString = atob(base64Data);
+            const bytes = new Uint8Array(binaryString.length);
+            const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
+            
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
+            }
+            
+            return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
+        }
 
-    currentActiveSkinFilename = filename;
-    document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-    const currentItem = document.getElementById(`item-${filename}`);
-    if (currentItem) currentItem.classList.add('active');
+        async function selectSkin(filename, updateUrl = true) {
+            if (!skinViewer) return;
+            const skin = globalSkins.find(s => s.filename === filename);
+            if (!skin) return;
 
-    try {
-        // Загрузка и расшифровка
-        const blobUrl = await getDecryptedBlobUrl(filename);
-        await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
-        
-        // Очистка памяти
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+            currentActiveSkinFilename = filename;
+            if (currentTab === 'skins') {
+                document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+                const currentItem = document.getElementById(`item-${filename}`);
+                if (currentItem) currentItem.classList.add('active');
+            }
 
-        applyAnimation();
-        if (window.refreshLayers) window.refreshLayers();
+            try {
+                const blobUrl = await getDecryptedBlobUrl(filename, 'skin');
+                await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
 
-        // Обновление информации
-        document.getElementById('infoCustomer').textContent = skin.customer || 'Не указан';
-        document.getElementById('infoDate').textContent = skin.date || 'Не указана';
+                applyAnimation();
+                if (window.refreshLayers) window.refreshLayers();
 
-        // ВОТ ЭТОТ БЛОК ОТВЕЧАЕТ ЗА АВТОРА:
-        const authorContainer = document.getElementById('infoAuthor');
-        if (authorContainer) {
-            if (skin.author) {
-                if (skin.authorUrl) {
-                    authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: underline; font-weight: 600; cursor: pointer;">${skin.author}</a>`;
-                } else {
-                    authorContainer.textContent = skin.author;
+                // Авто-накатывание выбранного плаща поверх нового скина, т.к. loadSkin пересоздает меш
+                if (currentActiveCapeFilename) {
+                    try {
+                        const capeBlobUrl = await getDecryptedBlobUrl(currentActiveCapeFilename, 'cape');
+                        await skinViewer.loadCape(capeBlobUrl);
+                        setTimeout(() => URL.revokeObjectURL(capeBlobUrl), 1000);
+                    } catch (capeErr) {
+                        console.error("Не удалось восстановить плащ при смене скина", capeErr);
+                    }
                 }
-            } else {
-                authorContainer.textContent = 'Не указан';
+
+                if (currentTab === 'skins') {
+                    updateMetaInfo(skin);
+                }
+
+                if (updateUrl) {
+                    updateBrowserUrl();
+                }
+            } catch (err) {
+                console.error("Ошибка расшифровки скина:", err);
             }
         }
 
-        if (updateUrl) {
-            const baseUrl = window.location.origin + window.location.pathname;
-            window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
+        async function selectCape(filename, updateUrl = true) {
+            if (!skinViewer) return;
+            const cape = globalCapes.find(c => c.filename === filename);
+            if (!cape) return;
+
+            currentActiveCapeFilename = filename;
+            if (currentTab === 'capes') {
+                document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
+                const currentItem = document.getElementById(`item-${filename}`);
+                if (currentItem) currentItem.classList.add('active');
+            }
+
+            try {
+                const blobUrl = await getDecryptedBlobUrl(filename, 'cape');
+                await skinViewer.loadCape(blobUrl);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+
+                if (currentTab === 'capes') {
+                    updateMetaInfo(cape);
+                }
+
+                if (updateUrl) {
+                    updateBrowserUrl();
+                }
+            } catch (err) {
+                console.error("Ошибка расшифровки плаща:", err);
+            }
         }
-    } catch (err) {
-        console.error("Ошибка расшифровки:", err);
-    }
-}
+
+        function updateMetaInfo(item) {
+            document.getElementById('infoCustomer').textContent = item.customer || 'Не указан';
+            document.getElementById('infoDate').textContent = item.date || 'Не указана';
+
+            const authorContainer = document.getElementById('infoAuthor');
+            if (authorContainer) {
+                if (item.author) {
+                    if (item.authorUrl) {
+                        authorContainer.innerHTML = `<a href="${item.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: underline; font-weight: 600; cursor: pointer;">${item.author}</a>`;
+                    } else {
+                        authorContainer.textContent = item.author;
+                    }
+                } else {
+                    authorContainer.textContent = 'Не указан';
+                }
+            }
+        }
+
+        function updateBrowserUrl() {
+            const baseUrl = window.location.origin + window.location.pathname;
+            const params = new URLSearchParams();
+            if (currentActiveSkinFilename) params.set('skin', currentActiveSkinFilename);
+            if (currentActiveCapeFilename) params.set('cape', currentActiveCapeFilename);
+            
+            const strParams = params.toString();
+            window.history.pushState({}, '', strParams ? `${baseUrl}?${strParams}` : baseUrl);
+        }
 
         function buildBackgroundSelector() {
             const grid = document.getElementById('bgGrid');
@@ -810,22 +902,47 @@ async function selectSkin(filename, updateUrl = true) {
         }
 
         async function drawSkinAvatar(filename, canvasElement) {
-    try {
-        const blobUrl = await getDecryptedBlobUrl(filename);
-        const img = new Image();
-        img.src = blobUrl;
-        img.onload = () => {
-            const ctx = canvasElement.getContext('2d');
-            ctx.imageSmoothingEnabled = false; 
-            // Рисуем лицо (оба слоя)
-            ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-            ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-            URL.revokeObjectURL(blobUrl);
-        };
-    } catch (e) {
-        console.log("Не удалось загрузить миниатюру");
-    }
-}
+            try {
+                const blobUrl = await getDecryptedBlobUrl(filename, 'skin');
+                const img = new Image();
+                img.src = blobUrl;
+                img.onload = () => {
+                    const ctx = canvasElement.getContext('2d');
+                    ctx.imageSmoothingEnabled = false; 
+                    ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, canvasElement.width, canvasElement.height);
+                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, canvasElement.width, canvasElement.height);
+                    URL.revokeObjectURL(blobUrl);
+                };
+            } catch (e) {
+                console.log("Не удалось загрузить миниатюру скина");
+            }
+        }
+
+        async function drawCapeAvatar(filename, canvasElement) {
+            try {
+                const blobUrl = await getDecryptedBlobUrl(filename, 'cape');
+                const img = new Image();
+                img.src = blobUrl;
+                img.onload = () => {
+                    const ctx = canvasElement.getContext('2d');
+                    ctx.imageSmoothingEnabled = false; 
+                    ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+                    
+                    // Умная отрисовка задней части плаща под размер миниатюры
+                    if (img.width === 64 && img.height === 32) {
+                        ctx.drawImage(img, 12, 1, 10, 16, 0, 0, canvasElement.width, canvasElement.height);
+                    } else if (img.width === 22 && img.height === 17) {
+                        ctx.drawImage(img, 1, 1, 10, 16, 0, 0, canvasElement.width, canvasElement.height);
+                    } else {
+                        ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvasElement.width, canvasElement.height);
+                    }
+                    URL.revokeObjectURL(blobUrl);
+                };
+            } catch (e) {
+                console.log("Не удалось загрузить миниатюру плаща");
+            }
+        }
 
         function applyAnimation() {
             if (!skinViewer) return;
@@ -834,14 +951,12 @@ async function selectSkin(filename, updateUrl = true) {
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
             
-            // Накатываем текущую сохраненную скорость на вновь созданную анимацию
             if (skinViewer.animation) {
                 skinViewer.animation.speed = currentAnimationSpeed;
                 skinViewer.animation.paused = document.getElementById('pause_animation').checked;
             }
         }
 
-        /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
         function parseDate(dateStr) {
             if (!dateStr) return new Date(0);
             const parts = dateStr.split('.');
@@ -856,21 +971,23 @@ async function selectSkin(filename, updateUrl = true) {
             return new Date(0); 
         }
 
-        /* ФУНКЦИЯ СОРТИРОВКИ И ОТРИСОВКИ СПИСКА */
-        function renderSkinList() {
+        /* ОБЩАЯ ФУНКЦИЯ ДЛЯ ОТРИСОВКИ ТЕКУЩЕГО СПИСКА (СКИНОК ИЛИ ПЛАЩЕЙ) */
+        function renderList() {
             const list = document.getElementById('skinList');
             if (!list) return;
             list.innerHTML = '';
 
-            let sortedSkins = [...globalSkins];
+            let targetArray = currentTab === 'skins' ? globalSkins : globalCapes;
+            let sortedItems = [...targetArray];
 
-            // 1. Сортировка базового массива
-            sortedSkins.sort((a, b) => {
+            sortedItems.sort((a, b) => {
                 let valA, valB;
+                const nameA = a.skinName || a.capeName || '';
+                const nameB = b.skinName || b.capeName || '';
 
                 if (currentSortField === 'name') {
-                    valA = a.skinName || '';
-                    valB = b.skinName || '';
+                    valA = nameA;
+                    valB = nameB;
                 } else if (currentSortField === 'author') {
                     valA = a.author || '';
                     valB = b.author || '';
@@ -889,53 +1006,53 @@ async function selectSkin(filename, updateUrl = true) {
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                // Дополнительная сортировка по имени, если критерии равны
                 if (currentSortField !== 'name') {
-                    return (a.skinName || '').localeCompare(b.skinName || '');
+                    return nameA.localeCompare(nameB);
                 }
                 return 0;
             });
 
-            // 2. Генерация элементов с поддержкой разделителей авторов
             let lastAuthor = null;
 
-            sortedSkins.forEach(skin => {
-                // Если выбрана сортировка по автору, создаем черточки-разделения групп
-                if (currentSortField === 'author' && skin.author !== lastAuthor) {
-                    lastAuthor = skin.author;
+            sortedItems.forEach(itemData => {
+                if (currentSortField === 'author' && itemData.author !== lastAuthor) {
+                    lastAuthor = itemData.author;
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
                     header.textContent = lastAuthor || 'Не указан';
                     list.appendChild(header);
                 }
 
-                const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
-                const skinPath = `skins/${cleanFilename}.png`;
+                const filename = itemData.filename;
+                const isActive = currentTab === 'skins' ? (filename === currentActiveSkinFilename) : (filename === currentActiveCapeFilename);
 
-                const item = document.createElement('div');
-                item.classList.add('skin-item');
-                item.id = `item-${skin.filename}`;
+                const itemEl = document.createElement('div');
+                itemEl.classList.add('skin-item');
+                itemEl.id = `item-${filename}`;
                 
-                if (skin.filename === currentActiveSkinFilename) {
-                    item.classList.add('active');
+                if (isActive) {
+                    itemEl.classList.add('active');
                 }
                 
-                item.innerHTML = `
+                const displayName = itemData.skinName || itemData.capeName || 'Без названия';
+                itemEl.innerHTML = `
                     <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                    <span class="skin-name">${skin.skinName || 'Без названия'}</span>
-                    <span class="skin-date">${skin.date || ''}</span>
+                    <span class="skin-name">${displayName}</span>
+                    <span class="skin-date">${itemData.date || ''}</span>
                 `;
                 
-                list.appendChild(item);
+                list.appendChild(itemEl);
                 
-        
-const canvas = item.querySelector('.canvas-avatar');
-drawSkinAvatar(skin.filename, canvas);
-
-                item.onclick = () => selectSkin(skin.filename, true);
+                const canvas = itemEl.querySelector('.canvas-avatar');
+                if (currentTab === 'skins') {
+                    drawSkinAvatar(filename, canvas);
+                    itemEl.onclick = () => selectSkin(filename, true);
+                } else {
+                    drawCapeAvatar(filename, canvas);
+                    itemEl.onclick = () => selectCape(filename, true);
+                }
             });
 
-            // Технические распорки для красивой сетки плитки
             for(let i = 0; i < 4; i++) {
                 const spacer = document.createElement('div');
                 spacer.classList.add('grid-spacer');
@@ -943,27 +1060,23 @@ drawSkinAvatar(skin.filename, canvas);
             }
         }
 
-        /* ИНИЦИАЛИЗАЦИЯ ИНТЕРФЕЙСА СОРТИРОВКИ */
         function initSortListeners() {
             const trigger = document.getElementById('sortTrigger');
             const menu = document.getElementById('sortMenu');
 
             if (!trigger || !menu) return;
 
-            // Показ / скрытие менюшки по клику
             trigger.onclick = (e) => {
                 e.stopPropagation();
                 menu.classList.toggle('show');
                 trigger.classList.toggle('active');
             };
 
-            // Скрытие при клике по экрану
             document.addEventListener('click', () => {
                 menu.classList.remove('show');
                 trigger.classList.remove('active');
             });
 
-            // Обновление чекбоксов-точек при кликах на пункты
             const updateMenuSelectionVisuals = () => {
                 menu.querySelectorAll('.dropdown-item').forEach(item => {
                     const field = item.getAttribute('data-field');
@@ -988,11 +1101,49 @@ drawSkinAvatar(skin.filename, canvas);
                     if (order) currentSortOrder = order;
 
                     updateMenuSelectionVisuals();
-                    renderSkinList(); // Моментальный перерендер с новой сортировкой
+                    renderList();
                 };
             });
 
             updateMenuSelectionVisuals();
+        }
+
+        /* ИНИЦИАЛИЗАЦИЯ ВКЛАДОК ПЕРЕКЛЮЧЕНИЯ РЕЖИМА */
+        function initTabListeners() {
+            const btnSkins = document.getElementById('btnSkinsTab');
+            const btnCapes = document.getElementById('btnCapesTab');
+
+            btnSkins.onclick = () => {
+                if (currentTab === 'skins') return;
+                currentTab = 'skins';
+                btnSkins.classList.add('active');
+                btnCapes.classList.remove('active');
+                renderList();
+                
+                // Если есть активный скин, показываем его мету
+                if (currentActiveSkinFilename) {
+                    const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
+                    if (skin) updateMetaInfo(skin);
+                }
+            };
+
+            btnCapes.onclick = () => {
+                if (currentTab === 'capes') return;
+                currentTab = 'capes';
+                btnCapes.classList.add('active');
+                btnSkins.classList.remove('active');
+                renderList();
+                
+                // Если есть активный плащ, показываем его мету, иначе затираем прочерками
+                if (currentActiveCapeFilename) {
+                    const cape = globalCapes.find(c => c.filename === currentActiveCapeFilename);
+                    if (cape) updateMetaInfo(cape);
+                } else {
+                    document.getElementById('infoCustomer').textContent = '—';
+                    document.getElementById('infoDate').textContent = '—';
+                    document.getElementById('infoAuthor').textContent = '—';
+                }
+            };
         }
 
         function initControlListeners() {
@@ -1001,11 +1152,8 @@ drawSkinAvatar(skin.filename, canvas);
                 
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
-                
-                // Сброс паузы анимации
                 document.getElementById('pause_animation').checked = false;
                 
-                // Сброс значений и ползунков к дефолтным (1.0)
                 currentRotationSpeed = 1.0;
                 skinViewer.autoRotateSpeed = currentRotationSpeed;
                 document.getElementById('rotate_speed').value = 1.0;
@@ -1034,14 +1182,12 @@ drawSkinAvatar(skin.filename, canvas);
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
-            // Обработчик чекбокса паузы анимации
             document.getElementById('pause_animation').onchange = (e) => {
                 if (skinViewer && skinViewer.animation) {
                     skinViewer.animation.paused = e.target.checked;
                 }
             };
 
-            // Обработчик изменения скорости вращения
             const rotateSpeedInput = document.getElementById('rotate_speed');
             const rotateSpeedVal = document.getElementById('rotate_speed_val');
             rotateSpeedInput.oninput = (e) => {
@@ -1061,7 +1207,6 @@ drawSkinAvatar(skin.filename, canvas);
                 };
             });
 
-            // Обработчик изменения скорости анимации
             const animSpeedInput = document.getElementById('anim_speed');
             const animSpeedVal = document.getElementById('anim_speed_val');
             animSpeedInput.oninput = (e) => {
@@ -1100,34 +1245,56 @@ drawSkinAvatar(skin.filename, canvas);
             };
         }
 
-        async function loadSkinsJSON() {
+        async function loadAllData() {
             try {
-                const response = await fetch('skins.json?v=' + Math.random());
-                globalSkins = await response.json();
+                // 1. Загружаем скины
+                const responseSkins = await fetch('skins.json?v=' + Math.random());
+                globalSkins = await responseSkins.json();
 
+                // 2. Загружаем плащи (если файла нет или он пустой — обработаем ошибку спокойно)
+                try {
+                    const responseCapes = await fetch('capes.json?v=' + Math.random());
+                    globalCapes = await responseCapes.json();
+                } catch (capeErr) {
+                    console.warn("Файл capes.json не найден или пуст. Галерея плащей пуста.");
+                    globalCapes = [];
+                }
+
+                // 3. Смотрим параметры URL на предмет выбранных скинов/плащей
                 const params = new URLSearchParams(window.location.search);
                 let activeSkin = params.get('skin');
+                let activeCape = params.get('cape');
 
                 if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
                     activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
                 }
-                
                 currentActiveSkinFilename = activeSkin;
+
+                if (activeCape && globalCapes.some(c => c.filename === activeCape)) {
+                    currentActiveCapeFilename = activeCape;
+                }
 
                 initViewer();
                 initSortListeners();
-                renderSkinList();
+                initTabListeners();
+                renderList();
 
+                // Накатываем дефолтный или выбранный скин
                 if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
+                    await selectSkin(currentActiveSkinFilename, false);
+                }
+                // Накатываем сохраненный плащ (если переходили по прямой ссылке)
+                if (currentActiveCapeFilename) {
+                    await selectCape(currentActiveCapeFilename, false);
                 }
 
             } catch (err) {
-                document.getElementById('loading').textContent = "Не удалось прочесть список skins.json";
+                document.getElementById('loading').textContent = "Не удалось прочесть списки данных JSON";
+                console.error(err);
             }
         }
 
-        window.onload = loadSkinsJSON;
+        window.onload = loadAllData;
     </script>
 </body>
 </html>
