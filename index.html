@@ -35,7 +35,7 @@
         }
 
         #sidebar {
-            width: 360px; /* Фиксированная увеличенная ширина, чтобы всё влезало */
+            width: 360px;
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             display: flex;
@@ -46,7 +46,7 @@
         }
 
         .sidebar-header {
-            padding: 20px 24px 10px 24px;
+            padding: 20px 16px 10px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -61,6 +61,130 @@
             font-weight: 700;
         }
 
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО СПИСКА СОРТИРОВКИ */
+        .dropdown-sort {
+            position: relative;
+        }
+
+        .sort-trigger-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: 0.2s;
+            height: 24px;
+            box-sizing: border-box;
+        }
+
+        .sort-trigger-btn:hover, .sort-trigger-btn.active {
+            color: #fff;
+            border-color: var(--text-muted);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            background: var(--bg-sidebar);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px;
+            display: none;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 160px;
+            z-index: 100;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.15s;
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg-hover);
+            color: #fff;
+        }
+
+        .dropdown-item.active {
+            color: #fff;
+        }
+
+        /* Круглый чекбокс/радио кнопка как на скриншоте */
+        .radio-circle {
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--text-muted);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .dropdown-item.active .radio-circle {
+            border-color: #ff9800; /* Фирменный оранжевый цвет */
+        }
+
+        .dropdown-item.active .radio-circle::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #ff9800;
+            border-radius: 50%;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 4px 0;
+        }
+
+        /* Заголовки разделения авторов */
+        .author-group-header {
+            width: 100%;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 700;
+            padding: 16px 4px 6px 4px;
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skin-list.view-grid .author-group-header {
+            grid-column: 1 / -1; /* Растягивание на всю ширину сетки плиток */
+            margin-top: 8px;
+        }
+
         .view-toggle {
             display: flex;
             gap: 4px;
@@ -68,18 +192,23 @@
             padding: 2px;
             border-radius: 6px;
             border: 1px solid var(--border);
+            height: 24px;
+            box-sizing: border-box;
+            align-items: center;
         }
 
         .toggle-btn {
             background: transparent;
             border: none;
             color: var(--text-muted);
-            padding: 4px 8px;
+            padding: 2px 8px;
             font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
             border-radius: 4px;
             transition: 0.2s;
+            height: 18px;
+            line-height: 14px;
         }
 
         .toggle-btn.active {
@@ -318,7 +447,6 @@
         .bg-dot:hover { transform: scale(1.05); }
         .bg-dot.active { border-color: #fff; }
 
-        /* КНОПКА КАСТОМНОГО ЦВЕТА С КАРАНДАШОМ */
         .bg-dot.custom-color-btn {
             background: #27272a;
             border: 1px solid var(--border);
@@ -363,9 +491,27 @@
     <div id="sidebar">
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
-            <div class="view-toggle">
-                <button class="toggle-btn active" id="btnListView">Список</button>
-                <button class="toggle-btn" id="btnGridView">Плитка</button>
+            <div class="header-controls">
+                
+                <div class="dropdown-sort">
+                    <button class="sort-trigger-btn" id="sortTrigger">
+                        <span>Сортировка</span>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="dropdown-menu" id="sortMenu">
+                        <div class="dropdown-item" data-field="author"><span class="radio-circle"></span>По автору</div>
+                        <div class="dropdown-item" data-field="name"><span class="radio-circle"></span>По названию</div>
+                        <div class="dropdown-item" data-field="date"><span class="radio-circle"></span>По дате</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item" data-order="desc"><span class="radio-circle"></span>По убыванию</div>
+                        <div class="dropdown-item" data-order="asc"><span class="radio-circle"></span>По возрастанию</div>
+                    </div>
+                </div>
+
+                <div class="view-toggle">
+                    <button class="toggle-btn active" id="btnListView">Список</button>
+                    <button class="toggle-btn" id="btnGridView">Плитка</button>
+                </div>
             </div>
         </div>
         <div class="skin-list view-list" id="skinList"></div>
@@ -450,6 +596,11 @@
         let skinViewer = null;
         let globalSkins = [];
         let currentAnimationType = 'none';
+        
+        // Текущие параметры сортировки (по умолчанию как на скриншоте)
+        let currentSortField = 'name'; 
+        let currentSortOrder = 'desc';
+        let currentActiveSkinFilename = null;
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -508,6 +659,8 @@
             const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
 
+            currentActiveSkinFilename = filename;
+
             document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
             const currentItem = document.getElementById(`item-${filename}`);
             if (currentItem) currentItem.classList.add('active');
@@ -561,7 +714,6 @@
                 grid.appendChild(dot);
             });
 
-            // КНОПКА-КАРАНДАШ ДЛЯ ВЫБОРА СВОЕГО ЦВЕТА
             const customDot = document.createElement('div');
             customDot.classList.add('bg-dot', 'custom-color-btn');
             customDot.title = 'Свой цвет';
@@ -602,6 +754,159 @@
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
         }
 
+        /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
+        function parseDate(dateStr) {
+            if (!dateStr) return new Date(0);
+            const parts = dateStr.split('.');
+            if (parts.length === 3) {
+                const day = parseInt(parts[0], 10);
+                const month = parseInt(parts[1], 10) - 1;
+                const year = parseInt(parts[2], 10);
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                    return new Date(year, month, day);
+                }
+            }
+            return new Date(0); 
+        }
+
+        /* ФУНКЦИЯ СОРТИРОВКИ И ОТРИСОВКИ СПИСКА */
+        function renderSkinList() {
+            const list = document.getElementById('skinList');
+            if (!list) return;
+            list.innerHTML = '';
+
+            let sortedSkins = [...globalSkins];
+
+            // 1. Сортировка базового массива
+            sortedSkins.sort((a, b) => {
+                let valA, valB;
+
+                if (currentSortField === 'name') {
+                    valA = a.skinName || '';
+                    valB = b.skinName || '';
+                } else if (currentSortField === 'author') {
+                    valA = a.author || '';
+                    valB = b.author || '';
+                } else if (currentSortField === 'date') {
+                    const dA = parseDate(a.date);
+                    const dB = parseDate(b.date);
+                    if (dA.getTime() === dB.getTime()) {
+                        valA = a.date || '';
+                        valB = b.date || '';
+                    } else {
+                        valA = dA.getTime();
+                        valB = dB.getTime();
+                    }
+                }
+
+                if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
+                if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
+
+                // Дополнительная сортировка по имени, если критерии равны
+                if (currentSortField !== 'name') {
+                    return (a.skinName || '').localeCompare(b.skinName || '');
+                }
+                return 0;
+            });
+
+            // 2. Генерация элементов с поддержкой разделителей авторов
+            let lastAuthor = null;
+
+            sortedSkins.forEach(skin => {
+                // Если выбрана сортировка по автору, создаем черточки-разделения групп
+                if (currentSortField === 'author' && skin.author !== lastAuthor) {
+                    lastAuthor = skin.author;
+                    const header = document.createElement('div');
+                    header.classList.add('author-group-header');
+                    header.textContent = lastAuthor || 'Не указан';
+                    list.appendChild(header);
+                }
+
+                const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
+                const skinPath = `skins/${cleanFilename}.png`;
+
+                const item = document.createElement('div');
+                item.classList.add('skin-item');
+                item.id = `item-${skin.filename}`;
+                
+                if (skin.filename === currentActiveSkinFilename) {
+                    item.classList.add('active');
+                }
+                
+                item.innerHTML = `
+                    <canvas class="canvas-avatar" width="64" height="64"></canvas>
+                    <span class="skin-name">${skin.skinName || 'Без названия'}</span>
+                    <span class="skin-date">${skin.date || ''}</span>
+                `;
+                
+                list.appendChild(item);
+                
+                const canvas = item.querySelector('.canvas-avatar');
+                drawSkinAvatar(skinPath, canvas);
+
+                item.onclick = () => selectSkin(skin.filename, true);
+            });
+
+            // Технические распорки для красивой сетки плитки
+            for(let i = 0; i < 4; i++) {
+                const spacer = document.createElement('div');
+                spacer.classList.add('grid-spacer');
+                list.appendChild(spacer);
+            }
+        }
+
+        /* ИНИЦИАЛИЗАЦИЯ ИНТЕРФЕЙСА СОРТИРОВКИ */
+        function initSortListeners() {
+            const trigger = document.getElementById('sortTrigger');
+            const menu = document.getElementById('sortMenu');
+
+            if (!trigger || !menu) return;
+
+            // Показ / скрытие менюшки по клику
+            trigger.onclick = (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
+                trigger.classList.toggle('active');
+            };
+
+            // Скрытие при клике по экрану
+            document.addEventListener('click', () => {
+                menu.classList.remove('show');
+                trigger.classList.remove('active');
+            });
+
+            // Обновление чекбоксов-точек при кликах на пункты
+            const updateMenuSelectionVisuals = () => {
+                menu.querySelectorAll('.dropdown-item').forEach(item => {
+                    const field = item.getAttribute('data-field');
+                    const order = item.getAttribute('data-order');
+                    
+                    if ((field && field === currentSortField) || (order && order === currentSortOrder)) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            };
+
+            menu.querySelectorAll('.dropdown-item').forEach(item => {
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    
+                    const field = item.getAttribute('data-field');
+                    const order = item.getAttribute('data-order');
+
+                    if (field) currentSortField = field;
+                    if (order) currentSortOrder = order;
+
+                    updateMenuSelectionVisuals();
+                    renderSkinList(); // Моментальный перерендер с новой сортировкой
+                };
+            });
+
+            updateMenuSelectionVisuals();
+        }
+
         function initControlListeners() {
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
@@ -609,7 +914,6 @@
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
                 
-                // ПОЛНЫЙ СБРОС ПОВОРОТА САМОЙ МОДЕЛИ (Разворот лицом)
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.x = 0;
                     skinViewer.playerObject.rotation.y = 0;
@@ -628,9 +932,8 @@
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
-                    const activeItem = document.querySelector('.skin-item.active');
-                    if (activeItem) {
-                        selectSkin(activeItem.id.replace('item-', ''), false); 
+                    if (currentActiveSkinFilename) {
+                        selectSkin(currentActiveSkinFilename, false); 
                     } else {
                         applyAnimation();
                     }
@@ -669,46 +972,22 @@
             try {
                 const response = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await response.json();
-                const list = document.getElementById('skinList');
-                list.innerHTML = ''; 
-
-                globalSkins.forEach(skin => {
-                    const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
-                    const skinPath = `skins/${cleanFilename}.png`;
-
-                    const item = document.createElement('div');
-                    item.classList.add('skin-item');
-                    item.id = `item-${skin.filename}`;
-                    
-                    item.innerHTML = `
-                        <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                        <span class="skin-name">${skin.skinName || 'Без названия'}</span>
-                        <span class="skin-date">${skin.date || ''}</span>
-                    `;
-                    
-                    list.appendChild(item);
-                    
-                    const canvas = item.querySelector('.canvas-avatar');
-                    drawSkinAvatar(skinPath, canvas);
-
-                    item.onclick = () => selectSkin(skin.filename, true);
-                });
-
-                for(let i = 0; i < 4; i++) {
-                    const spacer = document.createElement('div');
-                    spacer.classList.add('grid-spacer');
-                    list.appendChild(spacer);
-                }
-
-                initViewer();
 
                 const params = new URLSearchParams(window.location.search);
-                const activeSkin = params.get('skin');
+                let activeSkin = params.get('skin');
 
-                if (activeSkin && globalSkins.some(s => s.filename === activeSkin)) {
-                    selectSkin(activeSkin, false);
-                } else if (globalSkins.length > 0) {
-                    selectSkin(globalSkins[0].filename, false);
+                if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
+                    activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
+                }
+                
+                currentActiveSkinFilename = activeSkin;
+
+                initViewer();
+                initSortListeners();
+                renderSkinList();
+
+                if (currentActiveSkinFilename) {
+                    selectSkin(currentActiveSkinFilename, false);
                 }
 
             } catch (err) {
