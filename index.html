@@ -67,7 +67,6 @@
             gap: 6px;
         }
 
-        /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО СПИСКА СОРТИРОВКИ */
         .dropdown-sort {
             position: relative;
         }
@@ -135,7 +134,6 @@
             color: #fff;
         }
 
-        /* Круглый чекбокс/радио кнопка как на скриншоте */
         .radio-circle {
             width: 14px;
             height: 14px;
@@ -149,7 +147,7 @@
         }
 
         .dropdown-item.active .radio-circle {
-            border-color: #ff9800; /* Фирменный оранжевый цвет */
+            border-color: #ff9800;
         }
 
         .dropdown-item.active .radio-circle::after {
@@ -166,7 +164,6 @@
             margin: 4px 0;
         }
 
-        /* Заголовки разделения авторов */
         .author-group-header {
             width: 100%;
             font-size: 0.7rem;
@@ -181,7 +178,7 @@
         }
 
         .skin-list.view-grid .author-group-header {
-            grid-column: 1 / -1; /* Растягивание на всю ширину сетки плиток */
+            grid-column: 1 / -1;
             margin-top: 8px;
         }
 
@@ -403,6 +400,13 @@
             gap: 8px;
         }
 
+        /* Трёхколоночная сетка для аксессуаров */
+        .radio-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
         .radio-btn input { position: absolute; opacity: 0; width: 0; height: 0; }
         .radio-btn span {
             display: block;
@@ -414,6 +418,9 @@
             font-size: 0.8rem;
             cursor: pointer;
             transition: 0.2s;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         .radio-btn input:checked + span {
@@ -549,6 +556,13 @@
                     <input type="checkbox" id="auto_rotate">
                     <span>Вращать модель</span>
                 </label>
+                <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+                        <span>Скорость вращения</span>
+                        <span id="rotate_speed_val">2.0</span>
+                    </div>
+                    <input type="range" id="rotate_speed" min="0.1" max="10.0" step="0.1" value="2.0" style="width:100%; accent-color: var(--accent); background: var(--bg-card); border: 1px solid var(--border); height: 6px; border-radius: 3px; cursor: pointer; margin: 0; padding: 0;">
+                </div>
             </div>
 
             <div class="control-group">
@@ -569,6 +583,44 @@
                     <label class="radio-btn">
                         <input type="radio" name="animation" value="fly">
                         <span>Полет</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="sneak">
+                        <span>Приседать</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="swim">
+                        <span>Плыть</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="wave">
+                        <span>Махать</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="hit_right">
+                        <span>Удар (П)</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="animation" value="hit_left">
+                        <span>Удар (Л)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Аксессуар на спину</h3>
+                <div class="radio-grid-3">
+                    <label class="radio-btn">
+                        <input type="radio" name="back_equipment" value="none" checked>
+                        <span>Нет</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="back_equipment" value="cape">
+                        <span>Плащ</span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="back_equipment" value="elytra">
+                        <span>Элитры</span>
                     </label>
                 </div>
             </div>
@@ -597,10 +649,41 @@
         let globalSkins = [];
         let currentAnimationType = 'none';
         
-        // Текущие параметры сортировки (по умолчанию как на скриншоте)
         let currentSortField = 'name'; 
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
+
+        // Кастомный класс анимации взмаха руки
+        class CustomWavingAnimation {
+            update(playerObject, time) {
+                playerObject.skin.leftArm.rotation.set(0, 0, 0);
+                playerObject.skin.leftLeg.rotation.set(0, 0, 0);
+                playerObject.skin.rightLeg.rotation.set(0, 0, 0);
+                playerObject.skin.body.rotation.set(0, 0, 0);
+                
+                playerObject.skin.rightArm.rotation.x = -Math.PI / 2 - 0.2;
+                playerObject.skin.rightArm.rotation.z = Math.sin(time * 5) * 0.4;
+            }
+        }
+
+        // Кастомный класс анимации цикличных ударов
+        class CustomHittingAnimation {
+            constructor(hand = 'right') { this.hand = hand; }
+            update(playerObject, time) {
+                playerObject.skin.leftArm.rotation.set(0, 0, 0);
+                playerObject.skin.rightArm.rotation.set(0, 0, 0);
+                playerObject.skin.leftLeg.rotation.set(0, 0, 0);
+                playerObject.skin.rightLeg.rotation.set(0, 0, 0);
+                playerObject.skin.body.rotation.set(0, 0, 0);
+                
+                let angle = Math.sin(time * 8) * 0.6 - 0.6;
+                if (this.hand === 'right') {
+                    playerObject.skin.rightArm.rotation.x = angle;
+                } else {
+                    playerObject.skin.leftArm.rotation.x = angle;
+                }
+            }
+        }
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -630,6 +713,7 @@
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
+                skinViewer.autoRotateSpeed = 2.0;
 
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
@@ -670,6 +754,7 @@
             
             skinViewer.loadSkin(skinPath, skin.model === 'alex' ? 'slim' : 'default').then(() => {
                 applyAnimation();
+                applyBackEquipment(); // Автоматически перенавешиваем плащ/элитры при смене скина
                 if (window.refreshLayers) window.refreshLayers();
             });
 
@@ -749,12 +834,33 @@
         function applyAnimation() {
             if (!skinViewer) return;
             skinViewer.animation = null;
+            
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
-            if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
-            if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
+            else if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
+            else if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
+            else if (currentAnimationType === 'sneak') skinViewer.animation = new skinview3d.SneakingAnimation();
+            else if (currentAnimationType === 'swim') skinViewer.animation = new skinview3d.SwimmingAnimation();
+            else if (currentAnimationType === 'wave') skinViewer.animation = new CustomWavingAnimation();
+            else if (currentAnimationType === 'hit_right') skinViewer.animation = new CustomHittingAnimation('right');
+            else if (currentAnimationType === 'hit_left') skinViewer.animation = new CustomHittingAnimation('left');
         }
 
-        /* БЕЗОПАСНЫЙ ПАРСИНГ ДАТЫ (ДЛЯ ОБРАБОТКИ ПРИКОЛОВ В JSON) */
+        // ФУНКЦИЯ ДЛЯ УПРАВЛЕНИЯ ПЛАЩОМ И ЭЛИТРАМИ
+        function applyBackEquipment() {
+            if (!skinViewer) return;
+            const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
+            
+            if (equipType === 'none') {
+                skinViewer.loadCape(null);
+            } else {
+                // Официальный спрайт плаща из репозитория skinview3d (можно заменить на путь к своему файлу, например 'textures/my_cape.png')
+                const capeUrl = 'https://bs-community.github.io/skinview3d/textures/cape.png';
+                
+                // Передаем оба параметра для совместимости со всеми версиями движка
+                skinViewer.loadCape(capeUrl, { backEquipment: equipType, elytra: equipType === 'elytra' });
+            }
+        }
+
         function parseDate(dateStr) {
             if (!dateStr) return new Date(0);
             const parts = dateStr.split('.');
@@ -769,7 +875,6 @@
             return new Date(0); 
         }
 
-        /* ФУНКЦИЯ СОРТИРОВКИ И ОТРИСОВКИ СПИСКА */
         function renderSkinList() {
             const list = document.getElementById('skinList');
             if (!list) return;
@@ -777,7 +882,6 @@
 
             let sortedSkins = [...globalSkins];
 
-            // 1. Сортировка базового массива
             sortedSkins.sort((a, b) => {
                 let valA, valB;
 
@@ -802,18 +906,15 @@
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                // Дополнительная сортировка по имени, если критерии равны
                 if (currentSortField !== 'name') {
                     return (a.skinName || '').localeCompare(b.skinName || '');
                 }
                 return 0;
             });
 
-            // 2. Генерация элементов с поддержкой разделителей авторов
             let lastAuthor = null;
 
             sortedSkins.forEach(skin => {
-                // Если выбрана сортировка по автору, создаем черточки-разделения групп
                 if (currentSortField === 'author' && skin.author !== lastAuthor) {
                     lastAuthor = skin.author;
                     const header = document.createElement('div');
@@ -847,7 +948,6 @@
                 item.onclick = () => selectSkin(skin.filename, true);
             });
 
-            // Технические распорки для красивой сетки плитки
             for(let i = 0; i < 4; i++) {
                 const spacer = document.createElement('div');
                 spacer.classList.add('grid-spacer');
@@ -855,27 +955,23 @@
             }
         }
 
-        /* ИНИЦИАЛИЗАЦИЯ ИНТЕРФЕЙСА СОРТИРОВКИ */
         function initSortListeners() {
             const trigger = document.getElementById('sortTrigger');
             const menu = document.getElementById('sortMenu');
 
             if (!trigger || !menu) return;
 
-            // Показ / скрытие менюшки по клику
             trigger.onclick = (e) => {
                 e.stopPropagation();
                 menu.classList.toggle('show');
                 trigger.classList.toggle('active');
             };
 
-            // Скрытие при клике по экрану
             document.addEventListener('click', () => {
                 menu.classList.remove('show');
                 trigger.classList.remove('active');
             });
 
-            // Обновление чекбоксов-точек при кликах на пункты
             const updateMenuSelectionVisuals = () => {
                 menu.querySelectorAll('.dropdown-item').forEach(item => {
                     const field = item.getAttribute('data-field');
@@ -900,7 +996,7 @@
                     if (order) currentSortOrder = order;
 
                     updateMenuSelectionVisuals();
-                    renderSkinList(); // Моментальный перерендер с новой сортировкой
+                    renderSkinList();
                 };
             });
 
@@ -913,6 +1009,11 @@
                 
                 skinViewer.autoRotate = false;
                 document.getElementById('auto_rotate').checked = false;
+                
+                // Возвращаем дефолтную скорость ползунка
+                document.getElementById('rotate_speed').value = "2.0";
+                document.getElementById('rotate_speed_val').textContent = "2.0";
+                skinViewer.autoRotateSpeed = 2.0;
                 
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.x = 0;
@@ -927,8 +1028,25 @@
                 skinViewer.camera.position.set(0, 0, 60);
             };
 
-            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
+            // Слушатели вращения
+            const rotateCheckbox = document.getElementById('auto_rotate');
+            const speedSlider = document.getElementById('rotate_speed');
+            const speedVal = document.getElementById('rotate_speed_val');
 
+            rotateCheckbox.onchange = (e) => {
+                skinViewer.autoRotate = e.target.checked;
+                skinViewer.autoRotateSpeed = parseFloat(speedSlider.value);
+            };
+
+            speedSlider.oninput = (e) => {
+                const val = e.target.value;
+                speedVal.textContent = val;
+                if (skinViewer) {
+                    skinViewer.autoRotateSpeed = parseFloat(val);
+                }
+            };
+
+            // Переключение радио-кнопок анимаций
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
@@ -937,6 +1055,13 @@
                     } else {
                         applyAnimation();
                     }
+                };
+            });
+
+            // Переключение радио-кнопок аксессуаров
+            document.querySelectorAll('input[name="back_equipment"]').forEach(radio => {
+                radio.onchange = () => {
+                    applyBackEquipment();
                 };
             });
 
