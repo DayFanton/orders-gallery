@@ -30,5 +30,13 @@
     "author": "Ксения",
     "date": "32.05.3232",
     "model": "steve"
+  },
+  {
+    "filename": "ktoeto",
+    "skinName": "Бля кто?",
+    "customer": "Эппоп",
+    "author": "Не Ксения явно",
+    "date": "64.05.3232",
+    "model": "alex"
   }
 ]
