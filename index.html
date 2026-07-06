@@ -34,6 +34,7 @@
             overflow: hidden;
             user-select: none;
             position: relative;
+            overscroll-behavior-y: none; /* Запрет обновления страницы */
         }
 
         #sidebar {
@@ -393,14 +394,20 @@
         .skin-list .skin-item.active { background: rgba(184, 134, 11, 0.08); border-color: var(--accent); }
 
         .meta-info {
-            padding: 20px 24px;
-            background: rgba(0,0,0,0.2);
-            border-top: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            flex-shrink: 0;
-        }
+    padding: 20px 24px;
+    background: rgba(0,0,0,0.2);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    pointer-events: none; /* Игнорирует касания, блок становится "прозрачным" для них */
+}
+
+/* Возвращаем кликабельность для интерактивных элементов */
+.meta-value.clickable, .meta-row a {
+    pointer-events: auto;
+}
 
         .meta-row {
             font-size: 0.85rem;
@@ -443,11 +450,12 @@
         }
 
         #skin_container {
-            width: 100%;
-            height: 100%;
-            outline: none;
-            cursor: grab;
-        }
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: grab;
+    touch-action: none; /* Отключает скролл/зум браузера при взаимодействии с canvas */
+}
 
         #skin_container:active { cursor: grabbing; }
 
