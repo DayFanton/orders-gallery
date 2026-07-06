@@ -134,26 +134,23 @@
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: 8px; flex-shrink: 0; }
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; }
 
-        /* СИММЕТРИЧНЫЙ РЕЖИМ ПЛИТКИ */
+        /* РЕЖИМ ПЛИТКИ (Умная адаптивная сетка без зазоров) */
         .skin-list.view-grid {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: wrap !important;
+            display: grid !important;
+            /* Квадраты автоматически растут от 80px до упора, пока не влезет новый столбец */
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
             gap: 8px !important;
             padding-bottom: 16px;
-            /* Равномерное распределение с одинаковыми отступами по бокам */
-            justify-content: space-between !important; 
-            align-content: flex-start !important;
+            align-content: flex-start;
         }
         .skin-list.view-grid .skin-item {
             background: var(--bg-card) !important;
             border: 1px solid transparent;
             border-radius: 8px;
             
-            width: 82px !important;          
-            height: 82px !important;
-            max-width: 82px !important;
-            max-height: 82px !important;
+            /* Убираем жесткую ширину, оставляя только пропорцию 1:1 (квадрат) */
+            width: 100% !important;          
+            aspect-ratio: 1 / 1 !important;
             
             display: flex !important;
             flex-direction: column !important;
@@ -162,16 +159,12 @@
             cursor: pointer;
             padding: 6px !important;
             box-sizing: border-box !important;
-            transition: all 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease;
             margin-bottom: 0 !important;
         }
-        /* Невидимые карточки-распорки для сохранения идеальной симметрии в последнем ряду */
+        /* Старые распорки-пустышки больше не нужны, CSS Grid всё делает сам */
         .skin-list.view-grid .grid-spacer {
-            width: 82px !important;
-            height: 0 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            display: block !important;
+            display: none !important;
         }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
@@ -505,45 +498,49 @@
             skinViewer.height = container.clientHeight;
         }
 
-        // ЛОГИКА ДИНАМИЧЕСКОГО РАСШИРЕНИЯ МЫШКОЙ
-        // ИСПРАВЛЕННАЯ ЛОГИКА ИЗМЕНЕНИЯ ШИРИНЫ ПАНЕЛИ
+        // ИСПРАВЛЕННЫЙ РЕСАЙЗ (Без застреваний и блокировок от 3D)
         function initResizeSidebar() {
             const sidebar = document.getElementById('sidebar');
             const handle = document.getElementById('resize_handle');
+            const viewerZone = document.getElementById('viewer_zone'); // Нужен для отключения pointer-events
             let isResizing = false;
 
             handle.addEventListener('mousedown', (e) => {
                 isResizing = true;
                 handle.classList.add('resizing');
                 document.body.style.cursor = 'col-resize';
-                // Отключаем выделение текста на всей странице во время ресайза
                 document.body.style.userSelect = 'none'; 
+                
+                // КРИТИЧЕСКИЙ ФИКС: отключаем реакцию 3D-окна на мышь, пока мы тащим край
+                viewerZone.style.pointerEvents = 'none';
                 e.preventDefault();
             });
 
-            document.addEventListener('mousemove', (e) => {
+            // Слушаем события на уровне всего window (работает плавно в обе стороны)
+            window.addEventListener('mousemove', (e) => {
                 if (!isResizing) return;
                 
                 let newWidth = e.clientX;
                 
-                // Жесткие лимиты
+                // Ограничения расширения
                 if (newWidth < 260) newWidth = 260;
                 if (newWidth > 460) newWidth = 460;
                 
-                // Исправлено: теперь корректно подставляются пиксели px
                 sidebar.style.width = `${newWidth}px`; 
                 
-                // Обновляем 3D сцену под новые размеры
+                // Моментально пересчитываем размеры 3D окна
                 updateViewerSize();
             });
 
-            document.addEventListener('mouseup', () => {
+            window.addEventListener('mouseup', () => {
                 if (isResizing) {
                     isResizing = false;
                     handle.classList.remove('resizing');
                     document.body.style.cursor = 'default';
-                    // Возвращаем выделение текста обратно
                     document.body.style.userSelect = 'auto'; 
+                    
+                    // Возвращаем управление 3D камере обратно
+                    viewerZone.style.pointerEvents = 'auto';
                 }
             });
         }
