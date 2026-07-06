@@ -486,12 +486,48 @@
     "model": "steve"
   },
   {
-    "filename": "?",
-    "skinName": "?",
-    "customer": "?",
+    "filename": "day_deadpool",
+    "skinName": "Дэй Дэдпул",
+    "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
-    "date": "?",
-    "model": "?"
+    "date": "05.10.2020",
+    "model": "steve"
+  },
+  {
+    "filename": "demon_x",
+    "skinName": "Демон Иксовии",
+    "customer": "Виакор",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "28.07.2023",
+    "model": "steve"
+  },
+  {
+    "filename": "uniform_of_archer",
+    "skinName": "Форма стрельца",
+    "customer": "Виакор",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "28.07.2023",
+    "model": "steve"
+  },
+  {
+    "filename": "sevenz",
+    "skinName": "Севенз",
+    "customer": "Севенз",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "05.02.2023",
+    "model": "steve"
+  },
+  {
+    "filename": "stars",
+    "skinName": "Старс",
+    "customer": "Севенз",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "02.06.2023",
+    "model": "model"
   }
 ]
