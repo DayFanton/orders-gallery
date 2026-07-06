@@ -429,7 +429,6 @@
             font-weight: 600;
         }
 
-        /* Контейнер продвинутых настроек приседания */
         .sub-settings-box {
             background: rgba(0, 0, 0, 0.2);
             border: 1px dashed var(--border);
@@ -580,7 +579,6 @@
                 </div>
             </div>
 
-            <!-- ОБНОВЛЕННЫЙ БЛОК АНИМАЦИЙ С ПОЛЗУНКОМ СКОРОСТИ -->
             <div class="control-group">
                 <h3>Анимация движения</h3>
                 <div class="radio-grid">
@@ -618,7 +616,6 @@
                     </label>
                 </div>
 
-                <!-- Глобальный выбор руки для анимаций ударов -->
                 <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
                     <label class="checkbox-label" style="margin: 0;">
                         <input type="checkbox" id="anim_left_hand">
@@ -626,7 +623,6 @@
                     </label>
                 </div>
 
-                <!-- Ползунок скорости анимации -->
                 <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px;">
                     <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
                         <span>Скорость анимации</span>
@@ -635,7 +631,6 @@
                     <input type="range" id="anim_speed" min="0.1" max="4.0" step="0.1" value="1.0" style="width:100%; accent-color: var(--accent); background: var(--bg-card); border: 1px solid var(--border); height: 6px; border-radius: 3px; cursor: pointer; margin: 0; padding: 0;">
                 </div>
 
-                <!-- Дополнительные настройки для приседания -->
                 <div class="sub-settings-box" id="crouch_settings">
                     <div class="sub-settings-title">Crouch settings:</div>
                     <label class="checkbox-label">
@@ -699,20 +694,20 @@
         let currentSortOrder = 'desc';
         let currentActiveSkinFilename = null;
 
-        // Вшитая Base64 текстура стандартного классического плаща (Никаких 404!)
-        const EMBEDDED_CAPE_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACm9T9IAAAAAXNSR0IArs4c6QAAAGFJREFUeF7t0gENwDAMwLDMn+6fMqpQu0b1Dkiu8hBgnpknZ87pxzN7AwDDBwERYASYABEgAnwCRIAI8AkQASLAJ0AE+F4PePLnyVvm/43ewHMfEBFf13snmZ6nGgAAAABJRU5ErkJggg==";
+        // Валидная компактная 64x32 Base64 текстура стандартного темно-серого плаща
+        const EMBEDDED_CAPE_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACm9T9IAAAAEXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVFhH7cExAQAAAMKg9U9tCyutgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsDEwAAEB6989gAAAAABJRU5ErkJggg==";
 
-        // ПОЛНОСТЬЮ КАСТОМНЫЕ СТАБИЛЬНЫЕ КЛАССЫ АНИМАЦИЙ С УЧЕТОМ СКОРОСТИ И ПОЛОЖЕНИЙ РУК
+        // ИСПРАВЛЕНО: Прямые обращения к элементам модели (без .skin)
         class CustomWalkAnimation {
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 4.5;
-                player.skin.head.rotation.set(Math.sin(t * 0.1) * 0.05, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 0.45, 0, 0);
-                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.45, 0, 0);
-                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.45, 0, 0);
-                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.45, 0, 0);
+                player.head.rotation.set(Math.sin(t * 0.1) * 0.05, 0, 0);
+                player.body.rotation.set(0, 0, 0);
+                player.leftArm.rotation.set(Math.sin(t) * 0.45, 0, 0);
+                player.rightArm.rotation.set(-Math.sin(t) * 0.45, 0, 0);
+                player.leftLeg.rotation.set(-Math.sin(t) * 0.45, 0, 0);
+                player.rightLeg.rotation.set(Math.sin(t) * 0.45, 0, 0);
             }
         }
 
@@ -720,12 +715,12 @@
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 7.5;
-                player.skin.head.rotation.set(0.1, 0, 0);
-                player.skin.body.rotation.set(0.2, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 0.8, 0, 0.1);
-                player.skin.rightArm.rotation.set(-Math.sin(t) * 0.8, 0, -0.1);
-                player.skin.leftLeg.rotation.set(-Math.sin(t) * 0.7, 0, 0);
-                player.skin.rightLeg.rotation.set(Math.sin(t) * 0.7, 0, 0);
+                player.head.rotation.set(0.1, 0, 0);
+                player.body.rotation.set(0.2, 0, 0);
+                player.leftArm.rotation.set(Math.sin(t) * 0.8, 0, 0.1);
+                player.rightArm.rotation.set(-Math.sin(t) * 0.8, 0, -0.1);
+                player.leftLeg.rotation.set(-Math.sin(t) * 0.7, 0, 0);
+                player.rightLeg.rotation.set(Math.sin(t) * 0.7, 0, 0);
             }
         }
 
@@ -733,12 +728,12 @@
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 3.0;
-                player.skin.head.rotation.set(-0.15, 0, 0);
-                player.skin.body.rotation.set(0.4, 0, 0);
-                player.skin.leftArm.rotation.set(0.2, 0, -0.25 + Math.sin(t) * 0.08);
-                player.skin.rightArm.rotation.set(0.2, 0, 0.25 - Math.sin(t) * 0.08);
-                player.skin.leftLeg.rotation.set(0.25 + Math.sin(t) * 0.05, 0, -0.04);
-                player.skin.rightLeg.rotation.set(0.25 - Math.sin(t) * 0.05, 0, 0.04);
+                player.head.rotation.set(-0.15, 0, 0);
+                player.body.rotation.set(0.4, 0, 0);
+                player.leftArm.rotation.set(0.2, 0, -0.25 + Math.sin(t) * 0.08);
+                player.rightArm.rotation.set(0.2, 0, 0.25 - Math.sin(t) * 0.08);
+                player.leftLeg.rotation.set(0.25 + Math.sin(t) * 0.05, 0, -0.04);
+                player.rightLeg.rotation.set(0.25 - Math.sin(t) * 0.05, 0, 0.04);
             }
         }
 
@@ -746,13 +741,13 @@
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 6.0;
-                player.rotation.x = -Math.PI / 2.3; // Разворачиваем тело горизонтально
-                player.skin.head.rotation.set(0.3, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(Math.sin(t) * 1.1, 0, -0.15);
-                player.skin.rightArm.rotation.set(Math.cos(t) * 1.1, 0, 0.15);
-                player.skin.leftLeg.rotation.set(Math.sin(t * 1.2) * 0.25, 0, 0);
-                player.skin.rightLeg.rotation.set(-Math.sin(t * 1.2) * 0.25, 0, 0);
+                player.rotation.x = -Math.PI / 2.3; 
+                player.head.rotation.set(0.3, 0, 0);
+                player.body.rotation.set(0, 0, 0);
+                player.leftArm.rotation.set(Math.sin(t) * 1.1, 0, -0.15);
+                player.rightArm.rotation.set(Math.cos(t) * 1.1, 0, 0.15);
+                player.leftLeg.rotation.set(Math.sin(t * 1.2) * 0.25, 0, 0);
+                player.rightLeg.rotation.set(-Math.sin(t * 1.2) * 0.25, 0, 0);
             }
         }
 
@@ -760,15 +755,14 @@
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 9.0;
-                player.skin.head.rotation.set(0, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(0, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
+                player.head.rotation.set(0, 0, 0);
+                player.body.rotation.set(0, 0, 0);
+                player.leftArm.rotation.set(0, 0, 0);
+                player.leftLeg.rotation.set(0, 0, 0);
+                player.rightLeg.rotation.set(0, 0, 0);
                 
-                // Поднимаем руку вверх и циклично машем по оси Z
-                player.skin.rightArm.rotation.x = -Math.PI + 0.4;
-                player.skin.rightArm.rotation.z = Math.sin(t) * 0.35 - 0.25;
+                player.rightArm.rotation.x = -Math.PI + 0.4;
+                player.rightArm.rotation.z = Math.sin(t) * 0.35 - 0.25;
             }
         }
 
@@ -776,20 +770,20 @@
             update(player, time) {
                 let speed = parseFloat(document.getElementById('anim_speed').value);
                 let t = time * speed * 12.0;
-                player.skin.head.rotation.set(0, 0, 0);
-                player.skin.body.rotation.set(0, 0, 0);
-                player.skin.leftArm.rotation.set(0, 0, 0);
-                player.skin.rightArm.rotation.set(0, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
+                player.head.rotation.set(0, 0, 0);
+                player.body.rotation.set(0, 0, 0);
+                player.leftArm.rotation.set(0, 0, 0);
+                player.rightArm.rotation.set(0, 0, 0);
+                player.leftLeg.rotation.set(0, 0, 0);
+                player.rightLeg.rotation.set(0, 0, 0);
                 
                 let leftHandActive = document.getElementById('anim_left_hand').checked;
                 let swipe = (Math.sin(t) * 0.55) - 0.55; 
                 
                 if (leftHandActive) {
-                    player.skin.leftArm.rotation.x = swipe;
+                    player.leftArm.rotation.x = swipe;
                 } else {
-                    player.skin.rightArm.rotation.x = swipe;
+                    player.rightArm.rotation.x = swipe;
                 }
             }
         }
@@ -803,8 +797,6 @@
                 let leftHandActive = document.getElementById('anim_left_hand').checked;
 
                 let t = time * speed;
-                
-                // Обработка Run Once и Расчет Прогресса
                 let cycle = (t * 3.5) % (Math.PI * 2);
                 let intensity = 1.0;
                 let progressPercent = Math.round((cycle / (Math.PI * 2)) * 100);
@@ -821,30 +813,27 @@
                     document.getElementById('crouch_progress_num').textContent = '';
                 }
 
-                // Стойка приседания Майнкрафта
-                player.skin.head.rotation.set(-0.2 * intensity, 0, 0);
-                player.skin.body.rotation.set(0.4 * intensity, 0, 0);
-                player.skin.leftLeg.rotation.set(0, 0, 0);
-                player.skin.rightLeg.rotation.set(0, 0, 0);
+                player.head.rotation.set(-0.2 * intensity, 0, 0);
+                player.body.rotation.set(0.4 * intensity, 0, 0);
+                player.leftLeg.rotation.set(0, 0, 0);
+                player.rightLeg.rotation.set(0, 0, 0);
 
-                // Корректировка высоты таза модели при приседе
-                player.skin.body.position.y = -0.1 * intensity;
-                player.skin.head.position.z = 0.1 * intensity;
+                player.body.position.y = -0.1 * intensity;
+                player.head.position.z = 0.1 * intensity;
 
                 if (!addHit) {
-                    player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
-                    player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
+                    player.leftArm.rotation.set(0.25 * intensity, 0, 0);
+                    player.rightArm.rotation.set(0.25 * intensity, 0, 0);
                 } else {
-                    // Накладываем динамический удар прямо во время приседа
                     let hitTime = time * speed * 12.0;
                     let swipe = (Math.sin(hitTime) * 0.55) - 0.55;
                     
                     if (leftHandActive) {
-                        player.skin.leftArm.rotation.x = swipe;
-                        player.skin.rightArm.rotation.set(0.25 * intensity, 0, 0);
+                        player.leftArm.rotation.x = swipe;
+                        player.rightArm.rotation.set(0.25 * intensity, 0, 0);
                     } else {
-                        player.skin.rightArm.rotation.x = swipe;
-                        player.skin.leftArm.rotation.set(0.25 * intensity, 0, 0);
+                        player.rightArm.rotation.x = swipe;
+                        player.leftArm.rotation.set(0.25 * intensity, 0, 0);
                     }
                 }
             }
@@ -999,16 +988,14 @@
         function applyAnimation() {
             if (!skinViewer) return;
             
-            // Полный сброс вращений осей игрока (особенно важно после режима плавания)
             if (skinViewer.playerObject) {
                 skinViewer.playerObject.rotation.set(0, 0, 0);
-                skinViewer.playerObject.skin.body.position.set(0, 0, 0);
-                skinViewer.playerObject.skin.head.position.set(0, 0, 0);
+                skinViewer.playerObject.body.position.set(0, 0, 0);
+                skinViewer.playerObject.head.position.set(0, 0, 0);
             }
             
             skinViewer.animation = null;
             
-            // Включение кастомных доработанных классов
             if (currentAnimationType === 'walk') skinViewer.animation = new CustomWalkAnimation();
             else if (currentAnimationType === 'run') skinViewer.animation = new CustomRunAnimation();
             else if (currentAnimationType === 'fly') skinViewer.animation = new CustomFlyAnimation();
@@ -1017,7 +1004,6 @@
             else if (currentAnimationType === 'hit') skinViewer.animation = new CustomHitAnimation();
             else if (currentAnimationType === 'sneak') skinViewer.animation = new CustomSneakAnimation();
 
-            // Переключаем отображение плашки Crouch settings
             const crouchBox = document.getElementById('crouch_settings');
             if (currentAnimationType === 'sneak') {
                 crouchBox.style.display = 'block';
@@ -1027,15 +1013,16 @@
             }
         }
 
+        // ИСПРАВЛЕНО: Правильная синхронизация типа аксессуара и загрузка плаща
         function applyBackEquipment() {
-            if (!skinViewer) return;
+            if (!skinViewer || !skinViewer.playerObject) return;
             const equipType = document.querySelector('input[name="back_equipment"]:checked').value;
             
             if (equipType === 'none') {
                 skinViewer.loadCape(null);
             } else {
-                // Загружаем вшитую base64 строку вместо ломающихся серверных картинок
-                skinViewer.loadCape(EMBEDDED_CAPE_BASE64, { backEquipment: equipType, elytra: equipType === 'elytra' });
+                skinViewer.playerObject.backEquipment = equipType;
+                skinViewer.loadCape(EMBEDDED_CAPE_BASE64);
             }
         }
 
@@ -1197,8 +1184,8 @@
                 
                 if (skinViewer.playerObject) {
                     skinViewer.playerObject.rotation.set(0,0,0);
-                    skinViewer.playerObject.skin.body.position.set(0,0,0);
-                    skinViewer.playerObject.skin.head.position.set(0,0,0);
+                    skinViewer.playerObject.body.position.set(0,0,0);
+                    skinViewer.playerObject.head.position.set(0,0,0);
                 }
                 
                 skinViewer.controls.reset();
@@ -1208,7 +1195,6 @@
                 skinViewer.camera.position.set(0, 0, 60);
             };
 
-            // Ползунок авто-вращения
             const rotateCheckbox = document.getElementById('auto_rotate');
             const speedSlider = document.getElementById('rotate_speed');
             const speedVal = document.getElementById('rotate_speed_val');
@@ -1226,21 +1212,18 @@
                 }
             };
 
-            // Ползунок скорости анимаций
             const animSpeedSlider = document.getElementById('anim_speed');
             const animSpeedVal = document.getElementById('anim_speed_val');
             animSpeedSlider.oninput = (e) => {
                 animSpeedVal.textContent = e.target.value;
             };
 
-            // Галочка левой руки обновляет анимацию в реальном времени
             document.getElementById('anim_left_hand').onchange = () => {
                 if (currentActiveSkinFilename && (currentAnimationType === 'hit' || currentAnimationType === 'sneak')) {
                     applyAnimation();
                 }
             };
 
-            // Переключение радио-кнопок анимаций
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
@@ -1248,23 +1231,23 @@
                 };
             });
 
-            // Переключение радио-кнопок аксессуаров
             document.querySelectorAll('input[name="back_equipment"]').forEach(radio => {
                 radio.onchange = () => {
                     applyBackEquipment();
                 };
             });
 
+            // ИСПРАВЛЕНО: Убрана лишняя вложенность .skin из переключателя слоев
             const updateLayers = () => {
-                if (!skinViewer) return;
+                if (!skinViewer || !skinViewer.playerObject) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
-                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.head.outerLayer.visible = headVisible;
+                skinViewer.playerObject.body.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.leftArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.rightArm.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.leftLeg.outerLayer.visible = bodyVisible;
+                skinViewer.playerObject.rightLeg.outerLayer.visible = bodyVisible;
             };
 
             document.getElementById('layer_head').onchange = updateLayers;
