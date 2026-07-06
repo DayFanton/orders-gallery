@@ -111,9 +111,9 @@
 
 /* РЕЖИМ КОМПАКТНАЯ КВАДРАТНАЯ ПЛИТКА (3 в ряд, фиксированный размер) */
         .skin-list.view-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 8px !important;
             padding-bottom: 10px;
             justify-content: flex-start;
         }
@@ -121,8 +121,8 @@
             background: var(--bg-card);
             border: 1px solid transparent;
             border-radius: 8px;
-            width: 82px;          /* Строгая фиксированная ширина */
-            height: 82px;         /* Строгая фиксированная высота */
+            width: 84px;          
+            height: 84px;         
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -151,7 +151,7 @@
             width: 100%;
         }
         .skin-list.view-grid .skin-date {
-            display: none; /* Скрываем дату в плитке, чтобы не ломать квадрат */
+            display: none; 
         }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
@@ -491,9 +491,14 @@
         }
 
         function initControlListeners() {
+            // ИСПРАВЛЕНИЕ ПОЗИЦИИ КАМЕРЫ ПРИ СБРОСЕ (Лицом к игроку)
             document.getElementById('reset_all').onclick = () => {
                 if (!skinViewer) return;
                 skinViewer.controls.reset();
+                // Обнуляем угол вращения, чтобы моделька не вставала боком
+                skinViewer.controls.alpha = 0; 
+                skinViewer.controls.beta = 0;
+                // Четко центрируем фокус на теле персонажа
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
             };
