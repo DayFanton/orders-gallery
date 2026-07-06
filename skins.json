@@ -128,7 +128,7 @@
   {
     "filename": "nika_ny24",
     "skinName": "Ника новогодняя 2024",
-    "customer": "Ника",
+    "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "24.11.2024",
@@ -137,7 +137,7 @@
   {
     "filename": "nadya_ny24",
     "skinName": "Надя новогодняя 2024",
-    "customer": "Надя",
+    "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "28.11.2024",
@@ -146,7 +146,7 @@
   {
     "filename": "dream_ny24",
     "skinName": "Дрим новогодний 2024",
-    "customer": "Дрим",
+    "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "22.11.2024",
@@ -315,13 +315,13 @@
     "model": "steve"
   },
   {
-    "filename": "?",
-    "skinName": "?",
-    "customer": "?",
+    "filename": "sgushenka_halloween23",
+    "skinName": "Сгущёнка хэллоуинский 2023",
+    "customer": "Сгущёнка",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
-    "date": "?",
-    "model": "?"
+    "date": "28.10.2023",
+    "model": "steve"
   },
   {
     "filename": "?",
