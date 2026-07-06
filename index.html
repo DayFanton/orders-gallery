@@ -56,7 +56,6 @@
             font-weight: 700;
         }
 
-        /* Переключатель режимов галереи */
         .view-toggle {
             display: flex;
             gap: 4px;
@@ -83,14 +82,13 @@
             color: #fff;
         }
 
-        /* Стили списка и плитки */
         .skin-list {
             flex: 1;
             overflow-y: auto;
             padding: 0 16px;
         }
 
-        /* Режим СПИСОК (по умолчанию) */
+        /* Режим СПИСОК */
         .skin-list.view-list {
             display: flex;
             flex-direction: column;
@@ -107,10 +105,10 @@
             justify-content: space-between;
             align-items: center;
         }
-        .skin-list.view-list .skin-avatar { display: none; }
+        .skin-list.view-list .canvas-avatar { display: none; }
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); }
 
-        /* Режим ПЛИТКА (2 в ряд) */
+        /* Режим ПЛИТКА */
         .skin-list.view-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -129,14 +127,13 @@
             text-align: center;
             transition: all 0.2s ease;
         }
-        .skin-list.view-grid .skin-avatar {
-            width: 48px;
-            height: 48px;
-            background-size: 800% 800%;
-            image-rendering: pixelated;
-            border-radius: 4px;
+        .skin-list.view-grid .canvas-avatar {
+            width: 54px;
+            height: 54px;
+            border-radius: 6px;
             margin-bottom: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            background: #27272a;
         }
         .skin-list.view-grid .skin-date {
             font-size: 0.7rem;
@@ -146,9 +143,8 @@
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
         .skin-list .skin-item.active { background: rgba(16, 185, 129, 0.08); border-color: var(--accent); }
-        .skin-name { font-weight: 600; font-size: 0.85rem; }
+        .skin-name { font-weight: 600; font-size: 0.85rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; }
 
-        /* Карточка инфо */
         .meta-info {
             padding: 20px 24px;
             background: rgba(0,0,0,0.2);
@@ -186,7 +182,6 @@
 
         #skin_container:active { cursor: grabbing; }
 
-        /* Правая панель управления */
         #controls_panel {
             width: 300px;
             background-color: var(--bg-sidebar);
@@ -270,7 +265,6 @@
             font-weight: 600;
         }
 
-        /* Выбор фона справа снизу */
         .bg-selector-group {
             padding: 20px 24px;
             background: rgba(0, 0, 0, 0.15);
@@ -400,7 +394,6 @@
         let globalSkins = [];
         let currentAnimationType = 'none';
 
-        // Пресеты цветов для бэкграунда
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
             { name: 'Светлый', value: 'radial-gradient(circle at center, #f4f4f5 0%, #e4e4e7 100%)', color: '#e4e4e7' },
@@ -422,7 +415,6 @@
                     height: container.clientHeight
                 });
 
-                // ТРЕБОВАНИЕ 1: Включаем панорамирование (перетаскивание пространства на ПКМ)
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
                 skinViewer.controls.enablePan = true; 
@@ -431,9 +423,7 @@
                 skinViewer.cameraLight.intensity = 0.6;
                 skinViewer.autoRotate = false;
 
-                // Устанавливаем дефолтный фон
                 container.style.background = bgPresets[0].value;
-
                 document.getElementById('loading').style.display = 'none';
 
                 window.addEventListener('resize', () => {
@@ -468,6 +458,22 @@
             });
         }
 
+        // РЕНДЕР АВАТАРКИ: Жестко вырезаем пиксели по развертке Minecraft и склеиваем слои головы
+        function drawSkinAvatar(imgUrl, canvasElement) {
+            const img = new Image();
+            img.src = imgUrl;
+            img.onload = () => {
+                const ctx = canvasElement.getContext('2d');
+                ctx.imageSmoothingEnabled = false; // Сохраняем пиксельность Майнкрафта
+                
+                // Слой 1: Лицо (базовый) — координаты на скине: X=8, Y=8, ширина=8, высота=8
+                ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
+                
+                // Слой 2: Головной убор / Волосы (оверлей) — координаты на скине: X=40, Y=8, ширина=8, высота=8
+                ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
+            };
+        }
+
         function applyAnimation() {
             if (!skinViewer) return;
             skinViewer.animation = null;
@@ -477,7 +483,15 @@
         }
 
         function initControlListeners() {
-            document.getElementById('reset_all').onclick = () => skinViewer.controls.reset();
+            // ИСПРАВЛЕНИЕ ПОЗИЦИИ КАМЕРЫ ПРИ СБРОСЕ
+            document.getElementById('reset_all').onclick = () => {
+                if (!skinViewer) return;
+                skinViewer.controls.reset();
+                // Принудительно возвращаем фокус камеры ровно в центр тела персонажа, отменяя сдвиг ПКМ
+                skinViewer.controls.target.set(0, -2, 0); 
+                skinViewer.camera.position.set(0, 0, 60);
+            };
+
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
@@ -508,7 +522,6 @@
             document.getElementById('layer_body').onchange = updateLayers;
             window.refreshLayers = updateLayers;
 
-            // Переключатели режимов Списка и Плитки
             document.getElementById('btnListView').onclick = () => {
                 document.getElementById('btnListView').classList.add('active');
                 document.getElementById('btnGridView').classList.remove('active');
@@ -530,19 +543,26 @@
 
                 globalSkins.forEach(skin => {
                     const cleanFilename = skin.filename.replace(/\.(png|PNG)$/, "");
+                    const skinPath = `skins/${cleanFilename}.png`;
+
                     const item = document.createElement('div');
                     item.classList.add('skin-item');
                     item.id = `item-${skin.filename}`;
                     
-                    // Генерируем структуру с поддержкой аватарок для плитки и дат создания
+                    // Создаем пустой холст canvas под генерацию правильной аватарки головы
                     item.innerHTML = `
-                        <div class="skin-avatar" style="background-image: url('skins/${cleanFilename}.png'); background-position: calc(8% * 8) calc(8% * 8);"></div>
+                        <canvas class="canvas-avatar" width="64" height="64"></canvas>
                         <span class="skin-name">${skin.skinName || 'Без названия'}</span>
                         <span class="skin-date">${skin.date || ''}</span>
                     `;
                     
-                    item.onclick = () => selectSkin(skin.filename, true);
                     list.appendChild(item);
+                    
+                    // Запускаем склейку слоев лица
+                    const canvas = item.querySelector('.canvas-avatar');
+                    drawSkinAvatar(skinPath, canvas);
+
+                    item.onclick = () => selectSkin(skin.filename, true);
                 });
 
                 initViewer();
