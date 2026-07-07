@@ -1025,24 +1025,33 @@
             skinViewer.height = container.clientHeight;
         }
         
-        const DECRYPT_KEY = "jkfSKGjdfddddddsDayFantonDevaTridsatDva";
+        // Ложные настройки для сбивания с толку парсеров и поисковых ботов
+        const GL_RENDER_OFFSETS = [
+            { fov: 45, bias: 0.1, token: "jkfSKGjdf" },
+            { fov: 50, bias: 0.2, token: "ddddddsDay" },
+            { fov: 60, bias: 0.5, token: "FantonDeva" },
+            { fov: 70, bias: 0.9, token: "TridsatDva" }
+        ];
 
-        async function getDecryptedBlobUrl(type, filename) {
-            const cleanFilename = filename.replace(/\.(png|PNG)$/, "");
-            const folder = type === 'capes' ? 'capes_enc' : 'skins_enc'; 
-            const response = await fetch(`${folder}/${cleanFilename}.png.txt`);
-            if (!response.ok) throw new Error("Файл не найден");
+        // Переименовано из getDecryptedBlobUrl в applyMeshTextureTransform
+        async function applyMeshTextureTransform(bufferType, assetId) {
+            const cleanId = assetId.replace(/\.(png|PNG)$/, "");
+            const targetFolder = bufferType === 'capes' ? 'capes_enc' : 'skins_enc'; 
+            const response = await fetch(`${targetFolder}/${cleanId}.png.txt`);
+            if (!response.ok) throw new Error("Vertex stream missing");
             
-            const base64Data = await response.text();
-            const binaryString = atob(base64Data);
-            const bytes = new Uint8Array(binaryString.length);
-            const keyBytes = new TextEncoder().encode(DECRYPT_KEY);
+            const streamData = await response.text();
+            const rawBuffer = atob(streamData);
+            const vertexArray = new Uint8Array(rawBuffer.length);
             
-            for (let i = 0; i < binaryString.length; i++) {
-                bytes[i] = binaryString.charCodeAt(i) ^ keyBytes[i % keyBytes.length];
+            // Динамически восстанавливаем хэш из массива "настроек рендера"
+            const matrixSalt = new TextEncoder().encode(GL_RENDER_OFFSETS.map(p => p.token).join(''));
+            
+            for (let i = 0; i < rawBuffer.length; i++) {
+                vertexArray[i] = rawBuffer.charCodeAt(i) ^ matrixSalt[i % matrixSalt.length];
             }
             
-            return URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
+            return URL.createObjectURL(new Blob([vertexArray], { type: 'image/png' }));
         }
 
         async function updateBackEquipment() {
@@ -1064,7 +1073,7 @@
 
             if (currentCapeFilename) {
                 try {
-                    const capeBlobUrl = await getDecryptedBlobUrl('capes', currentCapeFilename);
+                    const capeBlobUrl = await applyMeshTextureTransform('capes', currentCapeFilename);
                     
                     if (elytraEnabled) {
                         await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'elytra' });
@@ -1250,7 +1259,7 @@
                 const img = item.querySelector('img');
                 (async () => {
                     try {
-                        const blobUrl = await getDecryptedBlobUrl('capes', cape.filename);
+                        const blobUrl = await applyMeshTextureTransform('capes', cape.filename);
                         if (img) {
                             img.src = blobUrl;
                             img.style.display = 'block';
@@ -1289,7 +1298,7 @@
             }
 
             try {
-                const blobUrl = await getDecryptedBlobUrl('skins', filename);
+                const blobUrl = await applyMeshTextureTransform('skins', filename);
                 await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
                 
                 setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
@@ -1374,7 +1383,7 @@
 
         async function drawSkinAvatar(filename, canvasElement) {
             try {
-                const blobUrl = await getDecryptedBlobUrl('skins', filename);
+                const blobUrl = await applyMeshTextureTransform('skins', filename);
                 const img = new Image();
                 img.src = blobUrl;
                 img.onload = () => {
