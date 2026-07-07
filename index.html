@@ -718,14 +718,16 @@
             }
 
             .sidebar-scroll-container {
-                overflow-y: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                overflow: hidden !important;
                 flex: 1;
-                -webkit-overflow-scrolling: touch;
             }
 
             .skin-list {
-                flex: none !important;
-                overflow-y: visible !important;
+                flex: 1 !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
                 padding-bottom: 10px !important;
             }
 
@@ -850,7 +852,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.12</div>
+            <div class="site-version">v1.3.13</div>
         </div>
     </div>
 
@@ -1837,7 +1839,7 @@
             });
 
             // --- АДАПТИВНОЕ СКРЫТИЕ КНОПОК ПРИ СКРОЛЛЕ ВНИЗ ---
-            const scrollContainers = [document.querySelector('.controls-scroll'), document.querySelector('.sidebar-scroll-container')];
+            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
             
             scrollContainers.forEach(container => {
                 if (!container) return;
