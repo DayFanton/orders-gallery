@@ -426,7 +426,6 @@
             box-shadow: 0 0 6px currentColor;
         }
 
-        /* Метка для новых скинов/плащей */
         .new-badge {
             position: absolute;
             top: 6px;
@@ -531,63 +530,49 @@
             transition: background 0.4s ease;
         }
 
-        /* Стили для кнопок вариаций скинов (Обновленный строгий/угловатый дизайн) */
+        /* Обновленные аккуратные и заметные кнопки вариаций (Смещены вправо, дизайн восстановлен) */
         #variations_container {
             position: absolute;
             top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 20px; /* Смещение вправо, чтобы не перекрывать скин по центру */
+            left: auto;
+            transform: none;
             display: flex;
             gap: 8px;
             z-index: 5;
-            background: rgba(11, 11, 13, 0.92);
+            background: rgba(19, 19, 22, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 6px;
-            border-radius: 0px; /* Полностью угловатые края */
-            border: 2px solid var(--border);
+            border-radius: 8px;
+            border: 1px solid var(--border);
             max-width: 90%;
             overflow-x: auto;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(255, 240, 1, 0.03);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
         }
         .variation-btn {
             background: var(--bg-card);
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 6px 14px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase; /* Игровой стиль */
-            letter-spacing: 0.05em;
+            padding: 8px 16px; /* Чуть побольше размер для удобства */
+            font-size: 0.85rem; /* Сделаны более выразительными */
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 0px; /* Полностью угловатые края */
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 6px;
+            transition: all 0.2s ease;
             white-space: nowrap;
         }
         .variation-btn:hover {
             color: #fff;
             background: var(--bg-hover);
             border-color: var(--text-muted);
-            transform: translateY(-2px); /* Плавный подъем при наведении */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-        .variation-btn:active {
-            transform: translateY(0px);
         }
         .variation-btn.active {
-            background: var(--accent);
-            color: #0b0b0d; /* Контрастный темный цвет текста на желтом фоне */
+            background: var(--bg-hover);
+            color: var(--accent);
             border-color: var(--accent);
-            font-weight: 800;
-            transform: none;
-            box-shadow: 0 0 14px rgba(255, 240, 1, 0.45);
-        }
-        .variation-btn.active:hover {
-            color: #0b0b0d;
-            background: var(--accent);
-            transform: none;
-            box-shadow: 0 0 14px rgba(255, 240, 1, 0.45);
+            font-weight: 600;
         }
 
         #skin_container {
@@ -754,7 +739,6 @@
             pointer-events: none;
         }
 
-        /* Новые стили для модального окна защиты авторских прав */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -1005,7 +989,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.19</div>
+            <div class="site-version">v1.3.20</div>
         </div>
     </div>
 
@@ -1196,7 +1180,6 @@
             skinViewer.height = container.clientHeight;
         }
         
-        // Default perspective matrix and view alignment configurations
         const GL_RENDER_OFFSETS = [
             { fov: 45, bias: 0.1, token: "jkfSKGjdf" },
             { fov: 50, bias: 0.2, token: "ddddddsDay" },
@@ -1475,8 +1458,8 @@
             }
 
             try {
-                // Если variationFilename не передан, берем самую первую вариацию из списка (оригинал), либо дефолтный filename
-                const targetTextureFile = variationFilename || (skin.variations && skin.variations.length > 0 ? skin.variations[0].filename : filename);
+                // Если variationFilename не передан явно, по умолчанию грузим главный оригинал (filename)
+                const targetTextureFile = variationFilename || filename;
                 currentLoadedTextureFilename = targetTextureFile;
 
                 const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
@@ -1511,17 +1494,30 @@
                     authorEl.removeAttribute('data-url');
                 }
 
-                // Отрисовка кнопок вариаций (если они прописаны в JSON)
+                // Отрисовка контейнера вариаций
                 const varContainer = document.getElementById('variations_container');
                 if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
                     varContainer.innerHTML = '';
                     varContainer.style.display = 'flex';
                     
+                    // 1. Создаем обязательную первую кнопку "Оригинал"
+                    const origBtn = document.createElement('button');
+                    origBtn.classList.add('variation-btn');
+                    origBtn.textContent = 'Оригинал';
+                    if (targetTextureFile === filename) {
+                        origBtn.classList.add('active');
+                    }
+                    origBtn.onclick = () => {
+                        selectSkin(filename, false, filename);
+                    };
+                    varContainer.appendChild(origBtn);
+
+                    // 2. Отрисовываем остальные добавленные ветки вариаций
                     skin.variations.forEach(v => {
                         const btn = document.createElement('button');
                         btn.classList.add('variation-btn');
                         btn.textContent = v.name;
-                        if (v.filename === targetTextureFile) {
+                        if (targetTextureFile === v.filename) {
                             btn.classList.add('active');
                         }
                         btn.onclick = () => {
@@ -1908,9 +1904,6 @@
                 currentSortOrder = 'desc';
                 initSortListeners();
                 
-                document.getElementById('variations_container').style.display = 'none';
-                document.getElementById('variations_container').innerHTML = '';
-                
                 renderCurrentList();
                 
                 skinViewer.controls.reset();
@@ -1918,6 +1911,10 @@
                 skinViewer.controls.beta = 0;
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
+
+                if (currentActiveSkinFilename) {
+                    selectSkin(currentActiveSkinFilename, false);
+                }
             };
 
             document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
