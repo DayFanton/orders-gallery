@@ -223,7 +223,8 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex"
+    "model": "alex",
+    "new": true
   },
   {
     "filename": "viacore_ny25_fem",
@@ -232,7 +233,8 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex"
+    "model": "alex",
+    "new": true
   },
   {
     "filename": "day_magician",
