@@ -752,6 +752,7 @@
                     </button>
                     <div class="dropdown-menu" id="sortMenu">
                         <div class="dropdown-item" data-field="default"><span class="radio-circle"></span>По умолчанию</div>
+                        <div class="dropdown-item" data-field="author"><span class="radio-circle"></span>По автору</div>
                         <div class="dropdown-item" data-field="name"><span class="radio-circle"></span>По названию</div>
                         <div class="dropdown-item" data-field="date"><span class="radio-circle"></span>По дате</div>
                         <div class="dropdown-divider"></div>
@@ -796,7 +797,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.5</div>
+        <div class="site-version">v1.3.6</div>
     </div>
 
     <div id="viewer_zone">
@@ -1120,40 +1121,47 @@
             });
 
             filteredCapes.sort((a, b) => {
-                let valA, valB;
-            
                 if (currentSortField === 'default') {
-                valA = a.originalIndex;
-                valB = b.originalIndex;
-                } else if (currentSortField === 'name') {
-                    valA = a.capeName || a.name || '';
-                    valB = b.capeName || b.name || '';
-                } else if (currentSortField === 'author') {
-                    valA = a.author || '';
-                    valB = b.author || '';
-                } else if (currentSortField === 'date') {
-                    valA = a.date || '';
-                    valB = b.date || '';
+                    return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
                 }
 
-                if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
-                if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
-            
-                // Вторичная сортировка по имени, если основные поля равны
-                if (currentSortField !== 'name' && currentSortField !== 'default') {
+                if (currentSortField === 'author') {
+                    const authA = a.author || 'Не указан';
+                    const authB = b.author || 'Не указан';
+                    if (authA !== authB) {
+                        return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
+                    }
+                    const dA = parseDate(a.date).getTime();
+                    const dB = parseDate(b.date).getTime();
+                    return dB - dA; // От новых к старым
+                }
+
+                if (currentSortField === 'name') {
+                    const nameA = a.capeName || a.name || '';
+                    const nameB = b.capeName || b.name || '';
+                    return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+                }
+
+                if (currentSortField === 'date') {
+                    const dA = parseDate(a.date).getTime();
+                    const dB = parseDate(b.date).getTime();
+                    if (dA !== dB) {
+                        return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
+                    }
                     return (a.capeName || a.name || '').localeCompare(b.capeName || b.name || '');
                 }
                 return 0;
             });
+
             let lastAuthor = null;
             filteredCapes.forEach(cape => {
                 if (currentSortField === 'author' && cape.author !== lastAuthor) {
-                lastAuthor = cape.author;
-                const header = document.createElement('div');
-                header.classList.add('author-group-header');
-                header.textContent = lastAuthor || 'Не указан';
-                list.appendChild(header);
-            }
+                    lastAuthor = cape.author;
+                    const header = document.createElement('div');
+                    header.classList.add('author-group-header');
+                    header.textContent = lastAuthor || 'Не указан';
+                    list.appendChild(header);
+                }
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
@@ -1369,36 +1377,47 @@
 
             filteredSkins.sort((a, b) => {
                 if (currentSortField === 'default') {
-                    // Инвертированная логика: desc (По убыванию) -> верх файла (0, 1, 2...) первый. asc (По возрастанию) -> низ файла первый.
                     return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
                 }
 
-                let valA, valB;
-                if (currentSortField === 'name') {
-                    valA = a.skinName || '';
-                    valB = b.skinName || '';
-                } else if (currentSortField === 'date') {
-                    const dA = parseDate(a.date);
-                    const dB = parseDate(b.date);
-                    if (dA.getTime() === dB.getTime()) {
-                        valA = a.date || '';
-                        valB = b.date || '';
-                    } else {
-                        valA = dA.getTime();
-                        valB = dB.getTime();
+                if (currentSortField === 'author') {
+                    const authA = a.author || 'Не указан';
+                    const authB = b.author || 'Не указан';
+                    if (authA !== authB) {
+                        return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
                     }
+                    const dA = parseDate(a.date).getTime();
+                    const dB = parseDate(b.date).getTime();
+                    return dB - dA; // От новых к старым внутри автора
                 }
 
-                if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
-                if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
+                if (currentSortField === 'name') {
+                    const nameA = a.skinName || '';
+                    const nameB = b.skinName || '';
+                    return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+                }
 
-                if (currentSortField !== 'name') {
+                if (currentSortField === 'date') {
+                    const dA = parseDate(a.date).getTime();
+                    const dB = parseDate(b.date).getTime();
+                    if (dA !== dB) {
+                        return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
+                    }
                     return (a.skinName || '').localeCompare(b.skinName || '');
                 }
                 return 0;
             });
 
+            let lastAuthor = null;
             filteredSkins.forEach(skin => {
+                if (currentSortField === 'author' && skin.author !== lastAuthor) {
+                    lastAuthor = skin.author;
+                    const header = document.createElement('div');
+                    header.classList.add('author-group-header');
+                    header.textContent = lastAuthor || 'Не указан';
+                    list.appendChild(header);
+                }
+
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
