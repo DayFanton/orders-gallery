@@ -60,7 +60,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.12.2025",
-    "model": "alex"
+    "model": "alex",
+            "variations": [
+    { "name": "Волосы", "filename": "viacore_apocalypse_fem_hairs" }
+  ]
   },
   {
     "filename": "viacore_apocalypse_human_fem",
@@ -69,7 +72,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.12.2025",
-    "model": "alex"
+    "model": "alex",
+            "variations": [
+    { "name": "Волосы", "filename": "viacore_apocalypse_human_fem_hairs" }
+  ]
   },
   {
     "filename": "viacore_apocalypse_human",
@@ -196,7 +202,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "24.01.2026",
-    "model": "alex"
+    "model": "alex",
+    "variations": [
+    { "name": "Без ушек", "filename": "sgushenka_in_bodysuit_no_ears" }
+  ]
   },
   {
     "filename": "sgushenka_cow",
@@ -342,7 +351,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex"
+    "model": "alex",
+            "variations": [
+    { "name": "Чёрная", "filename": "viacore_queen_fem_black" }
+  ]
   },
   {
     "filename": "viacore_halloween25_fem",
@@ -369,7 +381,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex"
+    "model": "alex",
+            "variations": [
+    { "name": "Чёрная", "filename": "viacore_nun_fem_black" }
+  ]
   },
   {
     "filename": "viacore_housemaid_fem",
@@ -441,7 +456,10 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "02.02.2023",
-    "model": "steve"
+    "model": "steve",
+        "variations": [
+    { "name": "Без рубашки", "filename": "sgushenka_shirtless" }
+  ]
   },
   {
     "filename": "yana",
