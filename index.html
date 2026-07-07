@@ -531,6 +531,46 @@
             transition: background 0.4s ease;
         }
 
+        /* Стили для кнопок вариаций скинов */
+        #variations_container {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 5;
+            background: rgba(19, 19, 22, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 4px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            max-width: 90%;
+            overflow-x: auto;
+        }
+        .variation-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .variation-btn:hover {
+            color: #fff;
+            background: var(--bg-hover);
+        }
+        .variation-btn.active {
+            background: var(--bg-hover);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
         #skin_container {
             width: 100%;
             height: 100%;
@@ -946,12 +986,13 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.17</div>
+            <div class="site-version">v1.3.18</div>
         </div>
     </div>
 
     <div id="viewer_zone">
         <div id="loading">Загрузка модулей визуализации...</div>
+        <div id="variations_container" style="display: none;"></div>
         <canvas id="skin_container"></canvas>
     </div>
 
@@ -1073,6 +1114,7 @@
         let currentSortField = 'default'; 
         let currentSortOrder = 'desc'; 
         let currentActiveSkinFilename = null;
+        let currentLoadedTextureFilename = null;
 
         let currentCapeFilename = null;
         let elytraEnabled = false;
@@ -1403,7 +1445,7 @@
             }
         }
 
-        async function selectSkin(filename, updateUrl = true) {
+        async function selectSkin(filename, updateUrl = true, variationFilename = null) {
             if (!skinViewer) return;
             const skin = globalSkins.find(s => s.filename === filename);
             if (!skin) return;
@@ -1416,7 +1458,11 @@
             }
 
             try {
-                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
+                // Если передана конкретная вариация — берем её текстуру, иначе базовую
+                const targetTextureFile = variationFilename || filename;
+                currentLoadedTextureFilename = targetTextureFile;
+
+                const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
                 await skinViewer.loadSkin(textureDataUrl, skin.model === 'alex' ? 'slim' : 'default');
 
                 applyAnimation();
@@ -1446,6 +1492,29 @@
                     authorEl.classList.remove('clickable');
                     authorEl.removeAttribute('title');
                     authorEl.removeAttribute('data-url');
+                }
+
+                // Отрисовка кнопок вариаций (если они прописаны в JSON)
+                const varContainer = document.getElementById('variations_container');
+                if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
+                    varContainer.innerHTML = '';
+                    varContainer.style.display = 'flex';
+                    
+                    skin.variations.forEach(v => {
+                        const btn = document.createElement('button');
+                        btn.classList.add('variation-btn');
+                        btn.textContent = v.name;
+                        if (v.filename === targetTextureFile) {
+                            btn.classList.add('active');
+                        }
+                        btn.onclick = () => {
+                            selectSkin(filename, false, v.filename);
+                        };
+                        varContainer.appendChild(btn);
+                    });
+                } else {
+                    varContainer.style.display = 'none';
+                    varContainer.innerHTML = '';
                 }
 
                 if (updateUrl) {
@@ -1824,6 +1893,10 @@
                 currentSortOrder = 'desc';
                 initSortListeners();
                 
+                // Сброс блока вариаций
+                document.getElementById('variations_container').style.display = 'none';
+                document.getElementById('variations_container').innerHTML = '';
+                
                 renderCurrentList();
                 
                 skinViewer.controls.reset();
@@ -1853,7 +1926,8 @@
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
                     if (currentActiveSkinFilename) {
-                        selectSkin(currentActiveSkinFilename, false); 
+                        // Передаем точное название файла текущей вариации, чтобы она не сбросилась
+                        selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
                     } else {
                         applyAnimation();
                     }
@@ -2002,8 +2076,7 @@
             const acceptedTime = localStorage.getItem('agreementAccepted');
             const now = Date.now();
             
-            // Запоминаем выбор пользователя на 7 дней (в миллисекундах)
-            // Если захочешь сделать, к примеру, 30 дней — просто замени 7 на 30.
+            // Запоминаем выбор пользователя на 7 дней
             const expiryPeriod = 7 * 24 * 60 * 60 * 1000; 
 
             // Если соглашение уже принималось и срок не вышел — удаляем окно и ничего не выводим
