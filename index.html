@@ -426,6 +426,24 @@
             box-shadow: 0 0 6px currentColor;
         }
 
+        /* Метка для новых скинов/плащей */
+        .new-badge {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background-color: #ef4444;
+            color: #ffffff;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 2px 4px;
+            border-radius: 4px;
+            z-index: 6;
+            line-height: 1;
+            pointer-events: none;
+            letter-spacing: 0.05em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
         .cape-preview-box {
             width: 28px;
             height: 44px;
@@ -928,7 +946,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.15</div>
+            <div class="site-version">v1.3.16</div>
         </div>
     </div>
 
@@ -1254,6 +1272,8 @@
                 `;
                 noneItem.onclick = async () => {
                     currentCapeFilename = null;
+                    elytraEnabled = false;
+                    document.getElementById('elytra_toggle').checked = false;
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     noneItem.classList.add('active');
                     await updateBackEquipment();
@@ -1329,7 +1349,11 @@
                 item.setAttribute('title', fullName);
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
+                // Проверка на метку NEW
+                const newBadgeHtml = cape.new ? `<div class="new-badge">NEW</div>` : '';
+
                 item.innerHTML = `
+                    ${newBadgeHtml}
                     <div class="cape-preview-box">
                         <img alt="cape">
                     </div>
@@ -1593,7 +1617,11 @@
                 const badgeColor = isAlex ? '#94C892' : '#00AFAF';
                 const modelType = isAlex ? 'alex' : 'steve';
 
+                // Проверка на метку NEW
+                const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
+
                 item.innerHTML = `
+                    ${newBadgeHtml}
                     <canvas class="canvas-avatar" width="64" height="64"></canvas>
                     <span class="skin-name">${fullName}</span>
                     <span class="skin-date">${skin.date || ''}</span>
