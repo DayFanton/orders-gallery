@@ -690,7 +690,7 @@
                 top: 40vh; 
                 left: 0;
                 width: 100% !important;
-                height: calc(60vh - 65px) !important; 
+                height: 60vh !important; 
                 z-index: 100;
                 transform: translateY(150%); 
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -717,8 +717,9 @@
                 border: 1px solid var(--border);
                 border-radius: 40px;
                 padding: 5px;
+                padding-bottom: calc(5px + env(safe-area-inset-bottom));
                 gap: 6px;
-                z-index: 1000;
+                z-index: 1100;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
                 width: calc(100% - 32px);
                 max-width: 420px;
@@ -756,6 +757,10 @@
             
             .meta-info {
                 background: rgba(11, 11, 13, 0.95);
+            }
+
+            .bg-selector-group {
+                padding-bottom: 80px;
             }
         }
     </style>
@@ -818,7 +823,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.8</div>
+        <div class="site-version">v1.3.9</div>
     </div>
 
     <div id="viewer_zone">
@@ -902,11 +907,11 @@
                     <span>Отображать элитры (Работает с плащом)</span>
                 </label>
             </div>
-        </div>
 
-        <div class="bg-selector-group">
-            <span class="section-title" style="padding:0;">Цвет фона</span>
-            <div class="bg-grid" id="bgGrid"></div>
+            <div class="bg-selector-group">
+                <span class="section-title" style="padding:0;">Цвет фона</span>
+                <div class="bg-grid" id="bgGrid"></div>
+            </div>
         </div>
     </div>
 
@@ -1113,6 +1118,7 @@
             if (searchTags.length === 0 && !searchQuery) {
                 const noneItem = document.createElement('div');
                 noneItem.classList.add('skin-item');
+                noneItem.setAttribute('title', 'Снять плащ');
                 if (currentCapeFilename === null) noneItem.classList.add('active');
                 
                 noneItem.innerHTML = `
@@ -1193,13 +1199,15 @@
                 }
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
+                const fullName = cape.capeName || cape.name || cape.filename;
+                item.setAttribute('title', fullName);
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
                 item.innerHTML = `
                     <div class="cape-preview-box">
                         <img alt="cape">
                     </div>
-                    <span class="skin-name">${cape.capeName || cape.name || cape.filename}</span>
+                    <span class="skin-name">${fullName}</span>
                     <span class="skin-date"></span>
                 `;
                 list.appendChild(item);
@@ -1453,6 +1461,8 @@
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
+                const fullName = skin.skinName || 'Без названия';
+                item.setAttribute('title', fullName);
                 
                 if (skin.filename === currentActiveSkinFilename) {
                     item.classList.add('active');
@@ -1464,7 +1474,7 @@
 
                 item.innerHTML = `
                     <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                    <span class="skin-name">${skin.skinName || 'Без названия'}</span>
+                    <span class="skin-name">${fullName}</span>
                     <span class="skin-date">${skin.date || ''}</span>
                     <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="Тип: ${modelType}"></div>
                 `;
