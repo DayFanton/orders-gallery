@@ -214,6 +214,13 @@
             color: #fff;
         }
 
+        .sidebar-scroll-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+        }
+
         .skin-list {
             flex: 1;
             overflow-y: auto;
@@ -710,6 +717,18 @@
                 transform: translateY(0); 
             }
 
+            .sidebar-scroll-container {
+                overflow-y: auto !important;
+                flex: 1;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .skin-list {
+                flex: none !important;
+                overflow-y: visible !important;
+                padding-bottom: 10px !important;
+            }
+
             #mobile_nav {
                 display: flex !important;
                 position: fixed;
@@ -755,17 +774,17 @@
                 color: var(--accent);
                 box-shadow: 0 4px 12px rgba(0,0,0,0.5);
             }
-
-            .skin-list {
-                padding-bottom: 20px;
-            }
             
             .meta-info {
                 background: rgba(11, 11, 13, 0.95);
             }
 
+            .site-version {
+                padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+            }
+
             .bg-selector-group {
-                padding: 14px 20px calc(14px + env(safe-area-inset-bottom)) 20px;
+                padding: 14px 20px calc(80px + env(safe-area-inset-bottom)) 20px !important;
                 background: rgba(11, 11, 13, 0.98);
                 border-top: 1px solid var(--border);
             }
@@ -813,24 +832,26 @@
             </div>
         </div>
 
-        <div class="skin-list view-list" id="skinList"></div>
-        
-        <div class="meta-info">
-            <div class="meta-row">
-                <span class="meta-label">Заказчик</span>
-                <span class="meta-value" id="infoCustomer">—</span>
+        <div class="sidebar-scroll-container">
+            <div class="skin-list view-list" id="skinList"></div>
+            
+            <div class="meta-info">
+                <div class="meta-row">
+                    <span class="meta-label">Заказчик</span>
+                    <span class="meta-value" id="infoCustomer">—</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Художник</span>
+                    <span class="meta-value" id="infoAuthor">—</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Дата заказа</span>
+                    <span class="meta-value" id="infoDate">—</span>
+                </div>
             </div>
-            <div class="meta-row">
-                <span class="meta-label">Художник</span>
-                <span class="meta-value" id="infoAuthor">—</span>
-            </div>
-            <div class="meta-row">
-                <span class="meta-label">Дата заказа</span>
-                <span class="meta-value" id="infoDate">—</span>
-            </div>
+            
+            <div class="site-version">v1.3.11</div>
         </div>
-        
-        <div class="site-version">v1.3.10</div>
     </div>
 
     <div id="viewer_zone">
@@ -914,11 +935,11 @@
                     <span>Отображать элитры (Работает с плащом)</span>
                 </label>
             </div>
-        </div>
 
-        <div class="bg-selector-group">
-            <span class="section-title" style="padding:0;">Цвет фона</span>
-            <div class="bg-grid" id="bgGrid"></div>
+            <div class="bg-selector-group">
+                <span class="section-title" style="padding:0;">Цвет фона</span>
+                <div class="bg-grid" id="bgGrid"></div>
+            </div>
         </div>
     </div>
 
@@ -1816,20 +1837,20 @@
             });
 
             // --- АДАПТИВНОЕ СКРЫТИЕ КНОПОК ПРИ СКРОЛЛЕ ВНИЗ ---
-            let lastScrollTop = 0;
-            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
+            const scrollContainers = [document.querySelector('.controls-scroll'), document.querySelector('.sidebar-scroll-container')];
             
             scrollContainers.forEach(container => {
                 if (!container) return;
+                container.lastScrollTop = 0;
                 container.addEventListener('scroll', (e) => {
                     if (window.innerWidth <= 900) {
                         const st = e.target.scrollTop;
-                        if (st > lastScrollTop && st > 15) {
+                        if (st > container.lastScrollTop && st > 15) {
                             mobileNav.classList.add('hidden');
-                        } else if (st < lastScrollTop) {
+                        } else if (st < container.lastScrollTop) {
                             mobileNav.classList.remove('hidden');
                         }
-                        lastScrollTop = st <= 0 ? 0 : st;
+                        container.lastScrollTop = st <= 0 ? 0 : st;
                     }
                 }, { passive: true });
             });
