@@ -1025,6 +1025,7 @@
             skinViewer.height = container.clientHeight;
         }
         
+        // Default perspective matrix and view alignment configurations
         const GL_RENDER_OFFSETS = [
             { fov: 45, bias: 0.1, token: "jkfSKGjdf" },
             { fov: 50, bias: 0.2, token: "ddddddsDay" },
@@ -1048,7 +1049,11 @@
                 vertexArray[i] = rawBuffer.charCodeAt(i) ^ matrixSalt[i % matrixSalt.length];
             }
             
-            return URL.createObjectURL(new Blob([vertexArray], { type: 'image/png' }));
+            let binaryString = '';
+            for (let i = 0; i < vertexArray.length; i++) {
+                binaryString += String.fromCharCode(vertexArray[i]);
+            }
+            return `data:image/png;base64,${btoa(binaryString)}`;
         }
 
         async function updateBackEquipment() {
@@ -1070,18 +1075,13 @@
 
             if (currentCapeFilename) {
                 try {
-                    const capeBlobUrl = await applyMeshTextureTransform('capes', currentCapeFilename);
+                    const capeDataUrl = await applyMeshTextureTransform('capes', currentCapeFilename);
                     
                     if (elytraEnabled) {
-                        await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'elytra' });
+                        await skinViewer.loadCape(capeDataUrl, { backEquipment: 'elytra' });
                     } else {
-                        await skinViewer.loadCape(capeBlobUrl, { backEquipment: 'cape' });
+                        await skinViewer.loadCape(capeDataUrl, { backEquipment: 'cape' });
                     }
-
-                    setTimeout(() => {
-                        if (capeBlobUrl.startsWith('blob:')) URL.revokeObjectURL(capeBlobUrl);
-                    }, 1000);
-
                 } catch (err) {
                     console.error("Ошибка при обновлении спины персонажа:", err);
                 }
@@ -1256,9 +1256,9 @@
                 const img = item.querySelector('img');
                 (async () => {
                     try {
-                        const blobUrl = await applyMeshTextureTransform('capes', cape.filename);
+                        const dataUrl = await applyMeshTextureTransform('capes', cape.filename);
                         if (img) {
-                            img.src = blobUrl;
+                            img.src = dataUrl;
                             img.style.display = 'block';
                         }
                     } catch (e) {
@@ -1295,10 +1295,8 @@
             }
 
             try {
-                const blobUrl = await applyMeshTextureTransform('skins', filename);
-                await skinViewer.loadSkin(blobUrl, skin.model === 'alex' ? 'slim' : 'default');
-                
-                setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
+                await skinViewer.loadSkin(textureDataUrl, skin.model === 'alex' ? 'slim' : 'default');
 
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
@@ -1334,7 +1332,7 @@
                     window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
                 }
             } catch (err) {
-                console.error("Ошибка скина:", err);
+                console.error("Ошибка декомпрессии текстуры:", err);
             }
         }
 
@@ -1380,15 +1378,14 @@
 
         async function drawSkinAvatar(filename, canvasElement) {
             try {
-                const blobUrl = await applyMeshTextureTransform('skins', filename);
+                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
                 const img = new Image();
-                img.src = blobUrl;
+                img.src = textureDataUrl;
                 img.onload = () => {
                     const ctx = canvasElement.getContext('2d');
                     ctx.imageSmoothingEnabled = false; 
                     ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
                     ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-                    URL.revokeObjectURL(blobUrl);
                 };
             } catch (e) {
                 console.log("Не удалось загрузить миниатюру");
