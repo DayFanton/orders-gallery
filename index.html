@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея Цыпляша</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link class="js-favicon" rel="icon" type="image/png" href="favicon.png">
     
     <link rel="icon" href="data:,">
     
@@ -254,21 +254,72 @@
             border-bottom: 1px solid var(--border);
             flex-shrink: 0;
         }
-        #searchInput {
-            width: 100%;
+
+        /* --- СТИЛИ ДЛЯ DISCORD-LIKE ПОИСКА --- */
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-radius: 6px;
+            min-height: 35px;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            cursor: text;
+        }
+        .search-wrapper:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
+        }
+        #searchTags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .search-tag {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 240, 1, 0.08);
+            border: 1px solid rgba(255, 240, 1, 0.25);
+            color: var(--accent);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            gap: 4px;
+            user-select: none;
+        }
+        .search-tag .tag-prefix {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .search-tag .tag-close {
+            cursor: pointer;
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            line-height: 1;
+            transition: color 0.15s;
+            margin-left: 1px;
+        }
+        .search-tag .tag-close:hover {
+            color: #ef4444;
+        }
+        #searchInput {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            padding: 0;
             font-size: 0.85rem;
             outline: none;
             box-sizing: border-box;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        #searchInput:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
+            min-width: 60px;
         }
 
         .skin-list.view-list {
@@ -277,7 +328,7 @@
         }
         .skin-list.view-list .skin-item {
             display: flex !important;
-            justify-flex-start !important;
+            justify-content: flex-start !important;
             gap: 12px;
             align-items: center;
             padding: 8px 12px;
@@ -723,7 +774,10 @@
         </div>
 
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Поиск по названию, заказчику, автору...">
+            <div id="searchWrapper" class="search-wrapper">
+                <div id="searchTags"></div>
+                <input type="text" id="searchInput" placeholder="Поиск по названию, заказчику, автору...">
+            </div>
         </div>
 
         <div class="skin-list view-list" id="skinList"></div>
@@ -743,7 +797,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.2</div>
+        <div class="site-version">v1.3.3</div>
     </div>
 
     <div id="viewer_zone">
@@ -857,7 +911,9 @@
         let currentCapeFilename = null;
         let elytraEnabled = false;
         
-        let searchQuery = '';
+        // --- СОСТОЯНИЕ DISCORD-ПОИСКА ---
+        let searchTag = null; // Объект вида { type: 'customer'|'author', value: 'имя' }
+        let searchQuery = ''; // Обычный текстовый запрос
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
 
@@ -971,12 +1027,64 @@
             }
         }
 
+        // --- УПРАВЛЕНИЕ DISCORD-ТЕГАМИ В КБ ПОИСКА ---
+        function setAndRenderTag(type, value) {
+            searchTag = { type: type, value: value };
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
+            renderTagsDOM();
+            
+            currentTab = 'skins';
+            document.getElementById('tabSkins').classList.add('active');
+            document.getElementById('tabCapes').classList.remove('active');
+            
+            renderCurrentList();
+        }
+
+        function renderTagsDOM() {
+            const container = document.getElementById('searchTags');
+            const input = document.getElementById('searchInput');
+            container.innerHTML = '';
+            
+            if (searchTag) {
+                const tagEl = document.createElement('div');
+                tagEl.classList.add('search-tag');
+                
+                const prefixSpan = document.createElement('span');
+                prefixSpan.classList.add('tag-prefix');
+                prefixSpan.textContent = searchTag.type === 'customer' ? 'customer:' : 'author:';
+                
+                const valueSpan = document.createElement('span');
+                valueSpan.textContent = searchTag.value;
+                
+                const closeBtn = document.createElement('span');
+                closeBtn.classList.add('tag-close');
+                closeBtn.textContent = '×';
+                closeBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    searchTag = null;
+                    renderTagsDOM();
+                    renderCurrentList();
+                    input.focus();
+                };
+                
+                tagEl.appendChild(prefixSpan);
+                tagEl.appendChild(valueSpan);
+                tagEl.appendChild(closeBtn);
+                container.appendChild(tagEl);
+                
+                input.placeholder = '';
+            } else {
+                input.placeholder = 'Поиск по названию, заказчику, автору...';
+            }
+        }
+
         function renderCapeList() {
             const list = document.getElementById('skinList');
             if (!list) return;
             list.innerHTML = '';
 
-            if (!searchQuery) {
+            if (!searchTag && !searchQuery) {
                 const noneItem = document.createElement('div');
                 noneItem.classList.add('skin-item');
                 if (currentCapeFilename === null) noneItem.classList.add('active');
@@ -996,14 +1104,18 @@
             }
 
             let filteredCapes = globalCapes.filter(cape => {
+                if (searchTag) {
+                    const target = searchTag.value.toLowerCase();
+                    if (searchTag.type === 'customer') {
+                        if (!(cape.customer || '').toLowerCase().includes(target)) return false;
+                    } else if (searchTag.type === 'author') {
+                        if (!(cape.author || '').toLowerCase().includes(target)) return false;
+                    }
+                }
+
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
                 
-                if (query.startsWith('customer:')) {
-                    const targetCustomer = query.substring(9).trim();
-                    return (cape.customer || '').toLowerCase().includes(targetCustomer);
-                }
-
                 return (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
                        (cape.author || '').toLowerCase().includes(query) ||
                        (cape.date || '').toLowerCase().includes(query) ||
@@ -1095,6 +1207,7 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
+                // Обновление блока заказчика
                 const customerEl = document.getElementById('infoCustomer');
                 if (skin.customer && skin.customer !== '-' && skin.customer !== 'Не указан') {
                     customerEl.textContent = skin.customer;
@@ -1108,17 +1221,16 @@
 
                 document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-                const authorContainer = document.getElementById('infoAuthor');
-                if (authorContainer) {
-                    if (skin.author) {
-                        if (skin.authorUrl) {
-                            authorContainer.innerHTML = `<a href="${skin.authorUrl}" target="_blank" onclick="event.stopPropagation();" style="color: var(--accent); text-decoration: underline; font-weight: 600; cursor: pointer;">${skin.author}</a>`;
-                        } else {
-                            authorContainer.textContent = skin.author;
-                        }
-                    } else {
-                        authorContainer.textContent = 'Не указан';
-                    }
+                // Обновление блока художника (схоже с логикой заказчика)
+                const authorEl = document.getElementById('infoAuthor');
+                if (skin.author && skin.author !== '-' && skin.author !== 'Не указан') {
+                    authorEl.textContent = skin.author;
+                    authorEl.classList.add('clickable');
+                    authorEl.title = `Показать все работы от ${skin.author}`;
+                } else {
+                    authorEl.textContent = skin.author || 'Не указан';
+                    authorEl.classList.remove('clickable');
+                    authorEl.removeAttribute('title');
                 }
 
                 if (updateUrl) {
@@ -1220,13 +1332,17 @@
             list.innerHTML = '';
 
             let filteredSkins = globalSkins.filter(skin => {
+                if (searchTag) {
+                    const target = searchTag.value.toLowerCase();
+                    if (searchTag.type === 'customer') {
+                        if (!(skin.customer || '').toLowerCase().includes(target)) return false;
+                    } else if (searchTag.type === 'author') {
+                        if (!(skin.author || '').toLowerCase().includes(target)) return false;
+                    }
+                }
+
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
-                
-                if (query.startsWith('customer:')) {
-                    const targetCustomer = query.substring(9).trim();
-                    return (skin.customer || '').toLowerCase().includes(targetCustomer);
-                }
 
                 return (skin.skinName || '').toLowerCase().includes(query) ||
                        (skin.author || '').toLowerCase().includes(query) ||
@@ -1357,24 +1473,59 @@
 
         function initControlListeners() {
             const searchInput = document.getElementById('searchInput');
+            const searchWrapper = document.getElementById('searchWrapper');
+
+            // Фокус ввода при клике на сам контейнер поиска
+            searchWrapper.onclick = (e) => {
+                if (e.target === searchWrapper || e.target === document.getElementById('searchTags')) {
+                    searchInput.focus();
+                }
+            };
+
+            // Ввод обычного текста
             searchInput.oninput = (e) => {
                 searchQuery = e.target.value;
                 renderCurrentList();
             };
 
+            // Парсинг тегов при ручном вводе через Space или Enter + удаление через Backspace
+            searchInput.addEventListener('keydown', (e) => {
+                let val = searchInput.value.trim();
+                
+                if ((e.key === 'Enter' || e.key === ' ') && !searchTag) {
+                    if (val.toLowerCase().startsWith('customer:')) {
+                        const name = val.substring(9).trim();
+                        if (name) {
+                            setAndRenderTag('customer', name);
+                            e.preventDefault();
+                        }
+                    } else if (val.toLowerCase().startsWith('author:')) {
+                        const name = val.substring(7).trim();
+                        if (name) {
+                            setAndRenderTag('author', name);
+                            e.preventDefault();
+                        }
+                    }
+                }
+                
+                if (e.key === 'Backspace' && searchInput.value === '' && searchTag) {
+                    searchTag = null;
+                    renderTagsDOM();
+                    renderCurrentList();
+                    e.preventDefault();
+                }
+            });
+
+            // Клик по Заказчику
             document.getElementById('infoCustomer').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
-                
-                const customerName = this.textContent.trim();
-                const searchTag = `customer:${customerName}`;
-                searchInput.value = searchTag;
-                searchQuery = searchTag;
+                setAndRenderTag('customer', this.textContent.trim());
+            };
 
-                currentTab = 'skins';
-                document.getElementById('tabSkins').classList.add('active');
-                document.getElementById('tabCapes').classList.remove('active');
-
-                renderCurrentList();
+            // Клик по Художнику
+            document.getElementById('infoAuthor').onclick = function() {
+                if (!this.classList.contains('clickable')) return;
+                setAndRenderTag('author', this.textContent.trim());
             };
 
             document.getElementById('tabSkins').onclick = () => {
@@ -1427,8 +1578,10 @@
                 document.getElementById('elytra_toggle').checked = false;
                 skinViewer.loadCape(null);
                 
+                searchTag = null;
                 searchQuery = '';
-                document.getElementById('searchInput').value = '';
+                searchInput.value = '';
+                renderTagsDOM();
                 
                 renderCurrentList();
                 
@@ -1503,7 +1656,6 @@
                 document.getElementById('skinList').className = 'skin-list view-grid';
             };
 
-            // === Логика переключений для мобильного таб-бара ===
             const btnSidebar = document.getElementById('mobileBtnSidebar');
             const btnControls = document.getElementById('mobileBtnControls');
             const sidebar = document.getElementById('sidebar');
@@ -1603,6 +1755,7 @@
 
                 initViewer();
                 initSortListeners();
+                renderTagsDOM();
                 renderCurrentList();
 
                 if (currentActiveSkinFilename) {
