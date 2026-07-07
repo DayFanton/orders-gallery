@@ -87,7 +87,8 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.05.2026",
-    "model": "steve"
+    "model": "steve",
+    "new": true
   },
   {
     "filename": "vova",
