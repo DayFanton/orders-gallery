@@ -677,6 +677,82 @@
             pointer-events: none;
         }
 
+        /* Новые стили для модального окна защиты авторских прав */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(11, 11, 13, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: var(--bg-sidebar);
+            border: 1px solid var(--border);
+            padding: 32px;
+            border-radius: 12px;
+            max-width: 550px;
+            width: 90%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .modal-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 20px 0 28px 0;
+            text-align: justify;
+        }
+
+        .modal-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .modal-footer .checkbox-label {
+            margin-bottom: 0;
+        }
+
+        .modal-footer .btn:disabled {
+            background: var(--bg-main);
+            color: var(--text-muted);
+            border-color: var(--border);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        
+        .modal-footer .btn:disabled:hover {
+            background: var(--bg-main);
+            border-color: var(--border);
+        }
+
         @media (max-width: 900px) {
             body {
                 position: relative;
@@ -948,6 +1024,22 @@
     <div id="mobile_nav">
         <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
         <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
+    </div>
+
+    <div id="agreementModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Уведомление</h3>
+            <p>
+                Уважаемые гости! Каждый скин в этой галерее — результат многих часов работы. Пожалуйста, уважайте чужой труд. Все изображения защищены авторским правом. Просмотр разрешён, но скачивание, копирование и коммерческое использование доступны только по предварительной договоренности. Спасибо за понимание и честность!
+            </p>
+            <div class="modal-footer">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreementCheckbox">
+                    <span>Я всё прочел и согласен</span>
+                </label>
+                <button id="agreementBtn" class="btn" disabled>Продолжить</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1861,6 +1953,45 @@
             });
         }
 
+        // Логика инициализации модального окна
+        function initAgreementModal() {
+            const modal = document.getElementById('agreementModal');
+            const checkbox = document.getElementById('agreementCheckbox');
+            const btn = document.getElementById('agreementBtn');
+            
+            if (!modal || !checkbox || !btn) return;
+
+            const acceptedTime = localStorage.getItem('agreementAccepted');
+            const now = Date.now();
+            
+            // Запоминаем выбор пользователя на 7 дней (в миллисекундах)
+            // Если захочешь сделать, к примеру, 30 дней — просто замени 7 на 30.
+            const expiryPeriod = 7 * 24 * 60 * 60 * 1000; 
+
+            // Если соглашение уже принималось и срок не вышел — удаляем окно и ничего не выводим
+            if (acceptedTime && (now - parseInt(acceptedTime, 10) < expiryPeriod)) {
+                modal.remove(); 
+                return;
+            }
+
+            // Иначе плавно отображаем окно
+            modal.classList.add('show');
+
+            // Управляем активностью кнопки в зависимости от галочки
+            checkbox.addEventListener('change', () => {
+                btn.disabled = !checkbox.checked;
+            });
+
+            // При клике записываем время в localStorage и убираем окно
+            btn.addEventListener('click', () => {
+                if (checkbox.checked) {
+                    localStorage.setItem('agreementAccepted', Date.now());
+                    modal.classList.remove('show');
+                    setTimeout(() => modal.remove(), 300); // Окончательно удаляем из DOM после завершения CSS-анимации
+                }
+            });
+        }
+
         async function loadAllJSONData() {
             try {
                 const responseSkins = await fetch('skins.json?v=' + Math.random());
@@ -1886,6 +2017,7 @@
                 currentActiveSkinFilename = activeSkin;
 
                 initViewer();
+                initAgreementModal(); // Запускаем проверку модального окна сразу после инициализации вьювера
                 initSortListeners();
                 renderTagsDOM();
                 renderCurrentList();
