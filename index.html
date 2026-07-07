@@ -796,7 +796,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.4</div>
+        <div class="site-version">v1.3.5</div>
     </div>
 
     <div id="viewer_zone">
@@ -1120,18 +1120,40 @@
             });
 
             filteredCapes.sort((a, b) => {
+                let valA, valB;
+            
                 if (currentSortField === 'default') {
-                    // Инвертированная логика: desc (По убыванию) -> верх файла (0, 1, 2...) первый. asc (По возрастанию) -> низ файла первый.
-                    return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
+                valA = a.originalIndex;
+                valB = b.originalIndex;
+                } else if (currentSortField === 'name') {
+                    valA = a.capeName || a.name || '';
+                    valB = b.capeName || b.name || '';
+                } else if (currentSortField === 'author') {
+                    valA = a.author || '';
+                    valB = b.author || '';
+                } else if (currentSortField === 'date') {
+                    valA = a.date || '';
+                    valB = b.date || '';
                 }
-                let valA = a.capeName || a.name || a.filename || '';
-                let valB = b.capeName || b.name || b.filename || '';
+
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
+            
+                // Вторичная сортировка по имени, если основные поля равны
+                if (currentSortField !== 'name' && currentSortField !== 'default') {
+                    return (a.capeName || a.name || '').localeCompare(b.capeName || b.name || '');
+                }
                 return 0;
             });
-
+            let lastAuthor = null;
             filteredCapes.forEach(cape => {
+                if (currentSortField === 'author' && cape.author !== lastAuthor) {
+                lastAuthor = cape.author;
+                const header = document.createElement('div');
+                header.classList.add('author-group-header');
+                header.textContent = lastAuthor || 'Не указан';
+                list.appendChild(header);
+            }
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
