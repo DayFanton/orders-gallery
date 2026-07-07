@@ -752,7 +752,6 @@
                     </button>
                     <div class="dropdown-menu" id="sortMenu">
                         <div class="dropdown-item" data-field="default"><span class="radio-circle"></span>По умолчанию</div>
-                        <div class="dropdown-item" data-field="author"><span class="radio-circle"></span>По автору</div>
                         <div class="dropdown-item" data-field="name"><span class="radio-circle"></span>По названию</div>
                         <div class="dropdown-item" data-field="date"><span class="radio-circle"></span>По дате</div>
                         <div class="dropdown-divider"></div>
@@ -797,7 +796,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.3</div>
+        <div class="site-version">v1.3.4</div>
     </div>
 
     <div id="viewer_zone">
@@ -905,14 +904,14 @@
         let currentAnimationSpeed = 1.0;
         
         let currentSortField = 'default'; 
-        let currentSortOrder = 'asc';
+        let currentSortOrder = 'desc'; // По умолчанию выбрано "По убыванию"
         let currentActiveSkinFilename = null;
 
         let currentCapeFilename = null;
         let elytraEnabled = false;
         
         // --- СОСТОЯНИЕ DISCORD-ПОИСКА ---
-        let searchTag = null; // Объект вида { type: 'customer'|'author', value: 'имя' }
+        let searchTag = null; // Объект вида { type: 'customer', value: 'имя' }
         let searchQuery = ''; // Обычный текстовый запрос
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
@@ -1052,7 +1051,7 @@
                 
                 const prefixSpan = document.createElement('span');
                 prefixSpan.classList.add('tag-prefix');
-                prefixSpan.textContent = searchTag.type === 'customer' ? 'customer:' : 'author:';
+                prefixSpan.textContent = 'customer:';
                 
                 const valueSpan = document.createElement('span');
                 valueSpan.textContent = searchTag.value;
@@ -1108,8 +1107,6 @@
                     const target = searchTag.value.toLowerCase();
                     if (searchTag.type === 'customer') {
                         if (!(cape.customer || '').toLowerCase().includes(target)) return false;
-                    } else if (searchTag.type === 'author') {
-                        if (!(cape.author || '').toLowerCase().includes(target)) return false;
                     }
                 }
 
@@ -1123,14 +1120,12 @@
             });
 
             filteredCapes.sort((a, b) => {
-                let valA, valB;
                 if (currentSortField === 'default') {
-                    valA = a.originalIndex;
-                    valB = b.originalIndex;
-                } else {
-                    valA = a.capeName || a.name || a.filename || '';
-                    valB = b.capeName || b.name || b.filename || '';
+                    // Инвертированная логика: desc (По убыванию) -> верх файла (0, 1, 2...) первый. asc (По возрастанию) -> низ файла первый.
+                    return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
                 }
+                let valA = a.capeName || a.name || a.filename || '';
+                let valB = b.capeName || b.name || b.filename || '';
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
                 return 0;
@@ -1221,16 +1216,18 @@
 
                 document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-                // Обновление блока художника (схоже с логикой заказчика)
+                // Обновление блока художника (открывает гиперссылку, вид сохранен)
                 const authorEl = document.getElementById('infoAuthor');
                 if (skin.author && skin.author !== '-' && skin.author !== 'Не указан') {
                     authorEl.textContent = skin.author;
                     authorEl.classList.add('clickable');
-                    authorEl.title = `Показать все работы от ${skin.author}`;
+                    authorEl.title = `Открыть страницу автора (${skin.author})`;
+                    authorEl.setAttribute('data-url', skin.authorUrl || '#');
                 } else {
                     authorEl.textContent = skin.author || 'Не указан';
                     authorEl.classList.remove('clickable');
                     authorEl.removeAttribute('title');
+                    authorEl.removeAttribute('data-url');
                 }
 
                 if (updateUrl) {
@@ -1336,8 +1333,6 @@
                     const target = searchTag.value.toLowerCase();
                     if (searchTag.type === 'customer') {
                         if (!(skin.customer || '').toLowerCase().includes(target)) return false;
-                    } else if (searchTag.type === 'author') {
-                        if (!(skin.author || '').toLowerCase().includes(target)) return false;
                     }
                 }
 
@@ -1351,17 +1346,15 @@
             });
 
             filteredSkins.sort((a, b) => {
-                let valA, valB;
-
                 if (currentSortField === 'default') {
-                    valA = a.originalIndex;
-                    valB = b.originalIndex;
-                } else if (currentSortField === 'name') {
+                    // Инвертированная логика: desc (По убыванию) -> верх файла (0, 1, 2...) первый. asc (По возрастанию) -> низ файла первый.
+                    return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
+                }
+
+                let valA, valB;
+                if (currentSortField === 'name') {
                     valA = a.skinName || '';
                     valB = b.skinName || '';
-                } else if (currentSortField === 'author') {
-                    valA = a.author || '';
-                    valB = b.author || '';
                 } else if (currentSortField === 'date') {
                     const dA = parseDate(a.date);
                     const dB = parseDate(b.date);
@@ -1377,23 +1370,13 @@
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                if (currentSortField !== 'name' && currentSortField !== 'default') {
+                if (currentSortField !== 'name') {
                     return (a.skinName || '').localeCompare(b.skinName || '');
                 }
                 return 0;
             });
 
-            let lastAuthor = null;
-
             filteredSkins.forEach(skin => {
-                if (currentSortField === 'author' && skin.author !== lastAuthor) {
-                    lastAuthor = skin.author;
-                    const header = document.createElement('div');
-                    header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || 'Не указан';
-                    list.appendChild(header);
-                }
-
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
@@ -1499,12 +1482,6 @@
                             setAndRenderTag('customer', name);
                             e.preventDefault();
                         }
-                    } else if (val.toLowerCase().startsWith('author:')) {
-                        const name = val.substring(7).trim();
-                        if (name) {
-                            setAndRenderTag('author', name);
-                            e.preventDefault();
-                        }
                     }
                 }
                 
@@ -1516,16 +1493,19 @@
                 }
             });
 
-            // Клик по Заказчику
+            // Клик по Заказчику (создает Discord-тег)
             document.getElementById('infoCustomer').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
                 setAndRenderTag('customer', this.textContent.trim());
             };
 
-            // Клик по Художнику
+            // Клик по Художнику (перенаправляет по ссылке, тег не создается)
             document.getElementById('infoAuthor').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
-                setAndRenderTag('author', this.textContent.trim());
+                const url = this.getAttribute('data-url');
+                if (url && url !== '#') {
+                    window.open(url, '_blank');
+                }
             };
 
             document.getElementById('tabSkins').onclick = () => {
@@ -1582,6 +1562,10 @@
                 searchQuery = '';
                 searchInput.value = '';
                 renderTagsDOM();
+                
+                currentSortField = 'default';
+                currentSortOrder = 'desc';
+                initSortListeners();
                 
                 renderCurrentList();
                 
