@@ -255,7 +255,6 @@
             flex-shrink: 0;
         }
 
-        /* --- СТИЛИ ДЛЯ DISCORD-LIKE ПОИСКА --- */
         .search-wrapper {
             display: flex;
             align-items: center;
@@ -404,7 +403,6 @@
         }
         .skin-list.view-grid .skin-date { display: none !important; }
 
-        /* --- СТИЛИ ДЛЯ КВАДРАТИКА ТИПА МОДЕЛИ --- */
         .model-badge {
             position: absolute;
             bottom: 6px;
@@ -623,6 +621,7 @@
             padding: 20px 24px;
             background: rgba(0, 0, 0, 0.15);
             border-top: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
         .bg-grid {
@@ -662,9 +661,15 @@
 
         #mobile_nav {
             display: none;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+        
+        #mobile_nav.hidden {
+            transform: translateX(-50%) translateY(150%) !important;
+            opacity: 0;
+            pointer-events: none;
         }
 
-        /* --- МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ (АДАПТИВНОСТЬ) --- */
         @media (max-width: 900px) {
             body {
                 position: relative;
@@ -760,7 +765,9 @@
             }
 
             .bg-selector-group {
-                padding-bottom: 80px;
+                padding: 14px 20px calc(14px + env(safe-area-inset-bottom)) 20px;
+                background: rgba(11, 11, 13, 0.98);
+                border-top: 1px solid var(--border);
             }
         }
     </style>
@@ -823,7 +830,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.9</div>
+        <div class="site-version">v1.3.10</div>
     </div>
 
     <div id="viewer_zone">
@@ -907,11 +914,11 @@
                     <span>Отображать элитры (Работает с плащом)</span>
                 </label>
             </div>
+        </div>
 
-            <div class="bg-selector-group">
-                <span class="section-title" style="padding:0;">Цвет фона</span>
-                <div class="bg-grid" id="bgGrid"></div>
-            </div>
+        <div class="bg-selector-group">
+            <span class="section-title" style="padding:0;">Цвет фона</span>
+            <div class="bg-grid" id="bgGrid"></div>
         </div>
     </div>
 
@@ -931,15 +938,14 @@
         let currentAnimationSpeed = 1.0;
         
         let currentSortField = 'default'; 
-        let currentSortOrder = 'desc'; // По умолчанию выбрано "По убыванию"
+        let currentSortOrder = 'desc'; 
         let currentActiveSkinFilename = null;
 
         let currentCapeFilename = null;
         let elytraEnabled = false;
         
-        // --- СОСТОЯНИЕ DISCORD-ПОИСКА ---
-        let searchTags = []; // Массив объектов вида { type: 'customer'|'type', value: 'имя'|'alex'|'steve' }
-        let searchQuery = ''; // Обычный текстовый запрос
+        let searchTags = []; 
+        let searchQuery = ''; 
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
 
@@ -1053,7 +1059,6 @@
             }
         }
 
-        // --- УПРАВЛЕНИЕ DISCORD-ТЕГАМИ В КБ ПОИСКА ---
         function setAndRenderTag(type, value) {
             const exists = searchTags.some(t => t.type === type && t.value.toLowerCase() === value.toLowerCase());
             if (!exists) {
@@ -1168,7 +1173,7 @@
                     }
                     const dA = parseDate(a.date).getTime();
                     const dB = parseDate(b.date).getTime();
-                    return dB - dA; // От новых к старым
+                    return dB - dA; 
                 }
 
                 if (currentSortField === 'name') {
@@ -1269,7 +1274,6 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
-                // Обновление блока заказчика
                 const customerEl = document.getElementById('infoCustomer');
                 if (skin.customer && skin.customer !== '-' && skin.customer !== 'Не указан') {
                     customerEl.textContent = skin.customer;
@@ -1283,7 +1287,6 @@
 
                 document.getElementById('infoDate').textContent = skin.date || 'Не указана';
 
-                // Обновление блока художника (открывает гиперссылку, вид сохранен)
                 const authorEl = document.getElementById('infoAuthor');
                 if (skin.author && skin.author !== '-' && skin.author !== 'Не указан') {
                     authorEl.textContent = skin.author;
@@ -1428,7 +1431,7 @@
                     }
                     const dA = parseDate(a.date).getTime();
                     const dB = parseDate(b.date).getTime();
-                    return dB - dA; // От новых к старым внутри автора
+                    return dB - dA; 
                 }
 
                 if (currentSortField === 'name') {
@@ -1484,14 +1487,11 @@
                 const canvas = item.querySelector('.canvas-avatar');
                 drawSkinAvatar(skin.filename, canvas);
 
-                // Обычный клик по элементу выбирает скин
                 item.onclick = (e) => {
-                    // Если кликнули по квадратику, выбор скина не срабатывает
                     if (e.target.classList.contains('model-badge')) return;
                     selectSkin(skin.filename, true);
                 };
 
-                // Нажатие на квадратик активирует фильтр
                 const badge = item.querySelector('.model-badge');
                 badge.onclick = (e) => {
                     e.stopPropagation();
@@ -1558,20 +1558,17 @@
             const searchInput = document.getElementById('searchInput');
             const searchWrapper = document.getElementById('searchWrapper');
 
-            // Фокус ввода при клике на сам контейнер поиска
             searchWrapper.onclick = (e) => {
                 if (e.target === searchWrapper || e.target === document.getElementById('searchTags')) {
                     searchInput.focus();
                 }
             };
 
-            // Ввод обычного текста
             searchInput.oninput = (e) => {
                 searchQuery = e.target.value;
                 renderCurrentList();
             };
 
-            // Парсинг тегов при ручном вводе через Space или Enter + удаление через Backspace
             searchInput.addEventListener('keydown', (e) => {
                 let val = searchInput.value.trim();
                 
@@ -1599,13 +1596,11 @@
                 }
             });
 
-            // Клик по Заказчику (создает Discord-тег)
             document.getElementById('infoCustomer').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
                 setAndRenderTag('customer', this.textContent.trim());
             };
 
-            // Клик по Художнику (перенаправляет по ссылке, тег не создается)
             document.getElementById('infoAuthor').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
                 const url = this.getAttribute('data-url');
@@ -1751,6 +1746,7 @@
             const sidebar = document.getElementById('sidebar');
             const controls = document.getElementById('controls_panel');
             const viewerZone = document.getElementById('viewer_zone');
+            const mobileNav = document.getElementById('mobile_nav');
 
             function animateViewerResize() {
                 let start = null;
@@ -1773,6 +1769,7 @@
                 if (btnSidebar) btnSidebar.classList.remove('active');
                 if (btnControls) btnControls.classList.remove('active');
                 if (viewerZone) viewerZone.classList.remove('mobile-shrunk');
+                if (mobileNav) mobileNav.classList.remove('hidden'); 
                 animateViewerResize();
             }
 
@@ -1816,6 +1813,25 @@
                         }
                     }
                 }
+            });
+
+            // --- АДАПТИВНОЕ СКРЫТИЕ КНОПОК ПРИ СКРОЛЛЕ ВНИЗ ---
+            let lastScrollTop = 0;
+            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
+            
+            scrollContainers.forEach(container => {
+                if (!container) return;
+                container.addEventListener('scroll', (e) => {
+                    if (window.innerWidth <= 900) {
+                        const st = e.target.scrollTop;
+                        if (st > lastScrollTop && st > 15) {
+                            mobileNav.classList.add('hidden');
+                        } else if (st < lastScrollTop) {
+                            mobileNav.classList.remove('hidden');
+                        }
+                        lastScrollTop = st <= 0 ? 0 : st;
+                    }
+                }, { passive: true });
             });
         }
 
