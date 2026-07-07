@@ -342,13 +342,13 @@
     "model": "alex"
   },
   {
-    "filename": "viacore_witch_fem",
-    "skinName": "Виакор ведьма жен.",
+    "filename": "viacore_halloween25_fem",
+    "skinName": "Виакор хэллоуинский 2025 жен.",
     "customer": "Виакор",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
-    "date": "?",
-    "model": "?"
+    "date": "26.03.2025",
+    "model": "alex"
   },
   {
     "filename": "viacore_priest",
