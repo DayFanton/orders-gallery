@@ -1025,7 +1025,6 @@
             skinViewer.height = container.clientHeight;
         }
         
-        // Ложные настройки для сбивания с толку парсеров и поисковых ботов
         const GL_RENDER_OFFSETS = [
             { fov: 45, bias: 0.1, token: "jkfSKGjdf" },
             { fov: 50, bias: 0.2, token: "ddddddsDay" },
@@ -1033,7 +1032,6 @@
             { fov: 70, bias: 0.9, token: "TridsatDva" }
         ];
 
-        // Переименовано из getDecryptedBlobUrl в applyMeshTextureTransform
         async function applyMeshTextureTransform(bufferType, assetId) {
             const cleanId = assetId.replace(/\.(png|PNG)$/, "");
             const targetFolder = bufferType === 'capes' ? 'capes_enc' : 'skins_enc'; 
@@ -1044,7 +1042,6 @@
             const rawBuffer = atob(streamData);
             const vertexArray = new Uint8Array(rawBuffer.length);
             
-            // Динамически восстанавливаем хэш из массива "настроек рендера"
             const matrixSalt = new TextEncoder().encode(GL_RENDER_OFFSETS.map(p => p.token).join(''));
             
             for (let i = 0; i < rawBuffer.length; i++) {
