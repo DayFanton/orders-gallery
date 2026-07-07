@@ -1302,6 +1302,11 @@
             });
 
             filteredCapes.sort((a, b) => {
+                // ПРИОРИТЕТ ДЛЯ "NEW" ВО ВСЕХ РЕЖИМАХ СОРТИРОВКИ
+                if (!!a.new !== !!b.new) {
+                    return a.new ? -1 : 1;
+                }
+
                 if (currentSortField === 'default') {
                     return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
                 }
@@ -1561,6 +1566,11 @@
             });
 
             filteredSkins.sort((a, b) => {
+                // ПРИОРИТЕТ ДЛЯ "NEW" ВО ВСЕХ РЕЖИМАХ СОРТИРОВКИ
+                if (!!a.new !== !!b.new) {
+                    return a.new ? -1 : 1;
+                }
+
                 if (currentSortField === 'default') {
                     return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
                 }
