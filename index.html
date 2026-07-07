@@ -277,7 +277,7 @@
         }
         .skin-list.view-list .skin-item {
             display: flex !important;
-            justify-content: flex-start !important;
+            justify-flex-start !important;
             gap: 12px;
             align-items: center;
             padding: 8px 12px;
@@ -404,7 +404,9 @@
         
         .meta-value.clickable {
             color: var(--accent);
-            border-color: var(--accent);
+            border: 1px solid transparent;
+            background: transparent;
+            padding: 4px 0;
             cursor: pointer;
             text-decoration: underline;
             transition: 0.2s;
@@ -412,6 +414,8 @@
         .meta-value.clickable:hover {
             background: var(--bg-hover);
             color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
         }
 
         .site-version {
@@ -595,7 +599,6 @@
                 overflow: hidden;
             }
 
-            /* 3D-Вьювер плавно уменьшается по высоте, чтобы скин не перекрывался открытой снизу панелью */
             #viewer_zone {
                 position: absolute;
                 top: 0;
@@ -606,12 +609,10 @@
                 transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
-            /* Когда панель открыта, вьювер занимает только верхние 40% экрана, скин центрируется там */
             #viewer_zone.mobile-shrunk {
                 height: 40vh;
             }
 
-            /* Панели превращаются в Bottom Sheets (выезжают снизу) */
             #sidebar, #controls_panel {
                 position: fixed;
                 top: 40vh; 
@@ -619,7 +620,7 @@
                 width: 100% !important;
                 height: calc(60vh - 65px) !important; 
                 z-index: 100;
-                transform: translateY(150%); /* Гарантированный запас, чтобы панель полностью пряталась */
+                transform: translateY(150%); 
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 background-color: rgba(19, 19, 22, 0.96);
                 backdrop-filter: blur(12px);
@@ -742,7 +743,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.1</div>
+        <div class="site-version">v1.3.2</div>
     </div>
 
     <div id="viewer_zone">
@@ -997,8 +998,13 @@
             let filteredCapes = globalCapes.filter(cape => {
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
+                
+                if (query.startsWith('customer:')) {
+                    const targetCustomer = query.substring(9).trim();
+                    return (cape.customer || '').toLowerCase().includes(targetCustomer);
+                }
+
                 return (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
-                       (cape.customer || '').toLowerCase().includes(query) ||
                        (cape.author || '').toLowerCase().includes(query) ||
                        (cape.date || '').toLowerCase().includes(query) ||
                        (cape.filename || '').toLowerCase().includes(query);
@@ -1216,8 +1222,13 @@
             let filteredSkins = globalSkins.filter(skin => {
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
+                
+                if (query.startsWith('customer:')) {
+                    const targetCustomer = query.substring(9).trim();
+                    return (skin.customer || '').toLowerCase().includes(targetCustomer);
+                }
+
                 return (skin.skinName || '').toLowerCase().includes(query) ||
-                       (skin.customer || '').toLowerCase().includes(query) ||
                        (skin.author || '').toLowerCase().includes(query) ||
                        (skin.date || '').toLowerCase().includes(query) ||
                        (skin.filename || '').toLowerCase().includes(query);
@@ -1251,9 +1262,9 @@
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
                 if (currentSortField !== 'name' && currentSortField !== 'default') {
-                return (a.skinName || '').localeCompare(b.skinName || '');
-            }
-            return 0;
+                    return (a.skinName || '').localeCompare(b.skinName || '');
+                }
+                return 0;
             });
 
             let lastAuthor = null;
@@ -1355,8 +1366,9 @@
                 if (!this.classList.contains('clickable')) return;
                 
                 const customerName = this.textContent.trim();
-                searchInput.value = customerName;
-                searchQuery = customerName;
+                const searchTag = `customer:${customerName}`;
+                searchInput.value = searchTag;
+                searchQuery = searchTag;
 
                 currentTab = 'skins';
                 document.getElementById('tabSkins').classList.add('active');
@@ -1498,10 +1510,9 @@
             const controls = document.getElementById('controls_panel');
             const viewerZone = document.getElementById('viewer_zone');
 
-            // Анимационный цикл плавной подгонки 3D-холста под изменяющиеся размеры контейнера
             function animateViewerResize() {
                 let start = null;
-                const duration = 300; // Соответствует CSS transition панелей
+                const duration = 300; 
                 function step(timestamp) {
                     if (!start) start = timestamp;
                     updateViewerSize();
@@ -1551,7 +1562,6 @@
                 };
             }
 
-            // Закрытие панелей при клике по пустой 3D зоне (на мобилках)
             document.addEventListener('click', (e) => {
                 if (window.innerWidth <= 900) {
                     if (sidebar && !sidebar.contains(e.target) && 
@@ -1571,13 +1581,11 @@
             try {
                 const responseSkins = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await responseSkins.json();
-                // Запоминаем изначальный порядок для скинов
                 globalSkins.forEach((skin, idx) => skin.originalIndex = idx);
 
                 try {
                     const responseCapes = await fetch('capes.json?v=' + Math.random());
                     globalCapes = await responseCapes.json();
-                    // Запоминаем изначальный порядок для плащей
                     globalCapes.forEach((cape, idx) => cape.originalIndex = idx);
                 } catch(e) {
                     console.warn("Не удалось прочесть capes.json.");
