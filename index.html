@@ -699,6 +699,7 @@
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="dropdown-menu" id="sortMenu">
+                        <div class="dropdown-item" data-field="default"><span class="radio-circle"></span>По умолчанию</div>
                         <div class="dropdown-item" data-field="author"><span class="radio-circle"></span>По автору</div>
                         <div class="dropdown-item" data-field="name"><span class="radio-circle"></span>По названию</div>
                         <div class="dropdown-item" data-field="date"><span class="radio-circle"></span>По дате</div>
@@ -848,8 +849,8 @@
         let currentRotationSpeed = 1.0;
         let currentAnimationSpeed = 1.0;
         
-        let currentSortField = 'name'; 
-        let currentSortOrder = 'desc';
+        let currentSortField = 'default'; 
+        let currentSortOrder = 'asc';
         let currentActiveSkinFilename = null;
 
         let currentCapeFilename = null;
@@ -1004,8 +1005,14 @@
             });
 
             filteredCapes.sort((a, b) => {
-                let valA = a.capeName || a.name || a.filename || '';
-                let valB = b.capeName || b.name || b.filename || '';
+                let valA, valB;
+                if (currentSortField === 'default') {
+                    valA = a.originalIndex;
+                    valB = b.originalIndex;
+                } else {
+                    valA = a.capeName || a.name || a.filename || '';
+                    valB = b.capeName || b.name || b.filename || '';
+                }
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
                 return 0;
@@ -1219,7 +1226,10 @@
             filteredSkins.sort((a, b) => {
                 let valA, valB;
 
-                if (currentSortField === 'name') {
+                if (currentSortField === 'default') {
+                    valA = a.originalIndex;
+                    valB = b.originalIndex;
+                } else if (currentSortField === 'name') {
                     valA = a.skinName || '';
                     valB = b.skinName || '';
                 } else if (currentSortField === 'author') {
@@ -1240,10 +1250,10 @@
                 if (valA < valB) return currentSortOrder === 'asc' ? -1 : 1;
                 if (valA > valB) return currentSortOrder === 'asc' ? 1 : -1;
 
-                if (currentSortField !== 'name') {
-                    return (a.skinName || '').localeCompare(b.skinName || '');
-                }
-                return 0;
+                if (currentSortField !== 'name' && currentSortField !== 'default') {
+                return (a.skinName || '').localeCompare(b.skinName || '');
+            }
+            return 0;
             });
 
             let lastAuthor = null;
@@ -1561,10 +1571,14 @@
             try {
                 const responseSkins = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await responseSkins.json();
+                // Запоминаем изначальный порядок для скинов
+                globalSkins.forEach((skin, idx) => skin.originalIndex = idx);
 
                 try {
                     const responseCapes = await fetch('capes.json?v=' + Math.random());
                     globalCapes = await responseCapes.json();
+                    // Запоминаем изначальный порядок для плащей
+                    globalCapes.forEach((cape, idx) => cape.originalIndex = idx);
                 } catch(e) {
                     console.warn("Не удалось прочесть capes.json.");
                     globalCapes = [];
