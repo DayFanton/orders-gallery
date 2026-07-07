@@ -409,9 +409,9 @@
             position: absolute;
             bottom: 6px;
             right: 6px;
-            width: 8px;
-            height: 8px;
-            border-radius: 2px;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
             cursor: pointer;
             transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s ease;
             z-index: 5;
@@ -818,7 +818,7 @@
             </div>
         </div>
         
-        <div class="site-version">v1.3.7</div>
+        <div class="site-version">v1.3.8</div>
     </div>
 
     <div id="viewer_zone">
@@ -933,7 +933,7 @@
         let elytraEnabled = false;
         
         // --- СОСТОЯНИЕ DISCORD-ПОИСКА ---
-        let searchTag = null; // Объект вида { type: 'customer'|'type', value: 'имя'|'alex'|'steve' }
+        let searchTags = []; // Массив объектов вида { type: 'customer'|'type', value: 'имя'|'alex'|'steve' }
         let searchQuery = ''; // Обычный текстовый запрос
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
@@ -1050,7 +1050,10 @@
 
         // --- УПРАВЛЕНИЕ DISCORD-ТЕГАМИ В КБ ПОИСКА ---
         function setAndRenderTag(type, value) {
-            searchTag = { type: type, value: value };
+            const exists = searchTags.some(t => t.type === type && t.value.toLowerCase() === value.toLowerCase());
+            if (!exists) {
+                searchTags.push({ type: type, value: value });
+            }
             searchQuery = '';
             document.getElementById('searchInput').value = '';
             renderTagsDOM();
@@ -1067,32 +1070,34 @@
             const input = document.getElementById('searchInput');
             container.innerHTML = '';
             
-            if (searchTag) {
-                const tagEl = document.createElement('div');
-                tagEl.classList.add('search-tag');
-                
-                const prefixSpan = document.createElement('span');
-                prefixSpan.classList.add('tag-prefix');
-                prefixSpan.textContent = searchTag.type === 'type' ? 'type:' : 'customer:';
-                
-                const valueSpan = document.createElement('span');
-                valueSpan.textContent = searchTag.value;
-                
-                const closeBtn = document.createElement('span');
-                closeBtn.classList.add('tag-close');
-                closeBtn.textContent = '×';
-                closeBtn.onclick = (e) => {
-                    e.stopPropagation();
-                    searchTag = null;
-                    renderTagsDOM();
-                    renderCurrentList();
-                    input.focus();
-                };
-                
-                tagEl.appendChild(prefixSpan);
-                tagEl.appendChild(valueSpan);
-                tagEl.appendChild(closeBtn);
-                container.appendChild(tagEl);
+            if (searchTags.length > 0) {
+                searchTags.forEach((tag, index) => {
+                    const tagEl = document.createElement('div');
+                    tagEl.classList.add('search-tag');
+                    
+                    const prefixSpan = document.createElement('span');
+                    prefixSpan.classList.add('tag-prefix');
+                    prefixSpan.textContent = tag.type === 'type' ? 'type:' : 'customer:';
+                    
+                    const valueSpan = document.createElement('span');
+                    valueSpan.textContent = tag.value;
+                    
+                    const closeBtn = document.createElement('span');
+                    closeBtn.classList.add('tag-close');
+                    closeBtn.textContent = '×';
+                    closeBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        searchTags.splice(index, 1);
+                        renderTagsDOM();
+                        renderCurrentList();
+                        input.focus();
+                    };
+                    
+                    tagEl.appendChild(prefixSpan);
+                    tagEl.appendChild(valueSpan);
+                    tagEl.appendChild(closeBtn);
+                    container.appendChild(tagEl);
+                });
                 
                 input.placeholder = '';
             } else {
@@ -1105,7 +1110,7 @@
             if (!list) return;
             list.innerHTML = '';
 
-            if (!searchTag && !searchQuery) {
+            if (searchTags.length === 0 && !searchQuery) {
                 const noneItem = document.createElement('div');
                 noneItem.classList.add('skin-item');
                 if (currentCapeFilename === null) noneItem.classList.add('active');
@@ -1125,11 +1130,11 @@
             }
 
             let filteredCapes = globalCapes.filter(cape => {
-                if (searchTag) {
-                    const target = searchTag.value.toLowerCase();
-                    if (searchTag.type === 'customer') {
+                for (let tag of searchTags) {
+                    const target = tag.value.toLowerCase();
+                    if (tag.type === 'customer') {
                         if (!(cape.customer || '').toLowerCase().includes(target)) return false;
-                    } else if (searchTag.type === 'type') {
+                    } else if (tag.type === 'type') {
                         const capeModel = (cape.model && cape.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (capeModel !== target) return false;
                     }
@@ -1383,11 +1388,11 @@
             list.innerHTML = '';
 
             let filteredSkins = globalSkins.filter(skin => {
-                if (searchTag) {
-                    const target = searchTag.value.toLowerCase();
-                    if (searchTag.type === 'customer') {
+                for (let tag of searchTags) {
+                    const target = tag.value.toLowerCase();
+                    if (tag.type === 'customer') {
                         if (!(skin.customer || '').toLowerCase().includes(target)) return false;
-                    } else if (searchTag.type === 'type') {
+                    } else if (tag.type === 'type') {
                         const skinModel = (skin.model && skin.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (skinModel !== target) return false;
                     }
@@ -1560,7 +1565,7 @@
             searchInput.addEventListener('keydown', (e) => {
                 let val = searchInput.value.trim();
                 
-                if ((e.key === 'Enter' || e.key === ' ') && !searchTag) {
+                if (e.key === 'Enter' || e.key === ' ') {
                     if (val.toLowerCase().startsWith('customer:')) {
                         const name = val.substring(9).trim();
                         if (name) {
@@ -1576,8 +1581,8 @@
                     }
                 }
                 
-                if (e.key === 'Backspace' && searchInput.value === '' && searchTag) {
-                    searchTag = null;
+                if (e.key === 'Backspace' && searchInput.value === '' && searchTags.length > 0) {
+                    searchTags.pop();
                     renderTagsDOM();
                     renderCurrentList();
                     e.preventDefault();
@@ -1649,7 +1654,7 @@
                 document.getElementById('elytra_toggle').checked = false;
                 skinViewer.loadCape(null);
                 
-                searchTag = null;
+                searchTags = [];
                 searchQuery = '';
                 searchInput.value = '';
                 renderTagsDOM();
