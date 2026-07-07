@@ -531,44 +531,63 @@
             transition: background 0.4s ease;
         }
 
-        /* Стили для кнопок вариаций скинов */
+        /* Стили для кнопок вариаций скинов (Обновленный строгий/угловатый дизайн) */
         #variations_container {
             position: absolute;
-            top: 16px;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 6px;
+            gap: 8px;
             z-index: 5;
-            background: rgba(19, 19, 22, 0.75);
+            background: rgba(11, 11, 13, 0.92);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            padding: 4px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
+            padding: 6px;
+            border-radius: 0px; /* Полностью угловатые края */
+            border: 2px solid var(--border);
             max-width: 90%;
             overflow-x: auto;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(255, 240, 1, 0.03);
+            transition: all 0.3s ease;
         }
         .variation-btn {
             background: var(--bg-card);
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 5px 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase; /* Игровой стиль */
+            letter-spacing: 0.05em;
             cursor: pointer;
-            border-radius: 6px;
-            transition: 0.2s;
+            border-radius: 0px; /* Полностью угловатые края */
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             white-space: nowrap;
         }
         .variation-btn:hover {
             color: #fff;
             background: var(--bg-hover);
+            border-color: var(--text-muted);
+            transform: translateY(-2px); /* Плавный подъем при наведении */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        .variation-btn:active {
+            transform: translateY(0px);
         }
         .variation-btn.active {
-            background: var(--bg-hover);
-            color: var(--accent);
+            background: var(--accent);
+            color: #0b0b0d; /* Контрастный темный цвет текста на желтом фоне */
             border-color: var(--accent);
+            font-weight: 800;
+            transform: none;
+            box-shadow: 0 0 14px rgba(255, 240, 1, 0.45);
+        }
+        .variation-btn.active:hover {
+            color: #0b0b0d;
+            background: var(--accent);
+            transform: none;
+            box-shadow: 0 0 14px rgba(255, 240, 1, 0.45);
         }
 
         #skin_container {
@@ -986,7 +1005,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.18</div>
+            <div class="site-version">v1.3.19</div>
         </div>
     </div>
 
@@ -1344,7 +1363,6 @@
             });
 
             filteredCapes.sort((a, b) => {
-                // ПРИОРИТЕТ ДЛЯ "NEW" ВО ВСЕХ РЕЖИМАХ СОРТИРОВКИ
                 if (!!a.new !== !!b.new) {
                     return a.new ? -1 : 1;
                 }
@@ -1396,7 +1414,6 @@
                 item.setAttribute('title', fullName);
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
-                // Проверка на метку NEW
                 const newBadgeHtml = cape.new ? `<div class="new-badge">NEW</div>` : '';
 
                 item.innerHTML = `
@@ -1458,8 +1475,8 @@
             }
 
             try {
-                // Если передана конкретная вариация — берем её текстуру, иначе базовую
-                const targetTextureFile = variationFilename || filename;
+                // Если variationFilename не передан, берем самую первую вариацию из списка (оригинал), либо дефолтный filename
+                const targetTextureFile = variationFilename || (skin.variations && skin.variations.length > 0 ? skin.variations[0].filename : filename);
                 currentLoadedTextureFilename = targetTextureFile;
 
                 const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
@@ -1635,7 +1652,6 @@
             });
 
             filteredSkins.sort((a, b) => {
-                // ПРИОРИТЕТ ДЛЯ "NEW" ВО ВСЕХ РЕЖИМАХ СОРТИРОВКИ
                 if (!!a.new !== !!b.new) {
                     return a.new ? -1 : 1;
                 }
@@ -1696,7 +1712,6 @@
                 const badgeColor = isAlex ? '#94C892' : '#00AFAF';
                 const modelType = isAlex ? 'alex' : 'steve';
 
-                // Проверка на метку NEW
                 const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
 
                 item.innerHTML = `
@@ -1893,7 +1908,6 @@
                 currentSortOrder = 'desc';
                 initSortListeners();
                 
-                // Сброс блока вариаций
                 document.getElementById('variations_container').style.display = 'none';
                 document.getElementById('variations_container').innerHTML = '';
                 
@@ -1926,7 +1940,6 @@
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
                     if (currentActiveSkinFilename) {
-                        // Передаем точное название файла текущей вариации, чтобы она не сбросилась
                         selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
                     } else {
                         applyAnimation();
@@ -2045,7 +2058,6 @@
                 }
             });
 
-            // --- АДАПТИВНОЕ СКРЫТИЕ КНОПОК ПРИ СКРОЛЛЕ ВНИЗ ---
             const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
             
             scrollContainers.forEach(container => {
@@ -2065,7 +2077,6 @@
             });
         }
 
-        // Логика инициализации модального окна
         function initAgreementModal() {
             const modal = document.getElementById('agreementModal');
             const checkbox = document.getElementById('agreementCheckbox');
@@ -2076,29 +2087,24 @@
             const acceptedTime = localStorage.getItem('agreementAccepted');
             const now = Date.now();
             
-            // Запоминаем выбор пользователя на 7 дней
             const expiryPeriod = 7 * 24 * 60 * 60 * 1000; 
 
-            // Если соглашение уже принималось и срок не вышел — удаляем окно и ничего не выводим
             if (acceptedTime && (now - parseInt(acceptedTime, 10) < expiryPeriod)) {
                 modal.remove(); 
                 return;
             }
 
-            // Иначе плавно отображаем окно
             modal.classList.add('show');
 
-            // Управляем активностью кнопки в зависимости от галочки
             checkbox.addEventListener('change', () => {
                 btn.disabled = !checkbox.checked;
             });
 
-            // При клике записываем время в localStorage и убираем окно
             btn.addEventListener('click', () => {
                 if (checkbox.checked) {
                     localStorage.setItem('agreementAccepted', Date.now());
                     modal.classList.remove('show');
-                    setTimeout(() => modal.remove(), 300); // Окончательно удаляем из DOM после завершения CSS-анимации
+                    setTimeout(() => modal.remove(), 300); 
                 }
             });
         }
@@ -2128,7 +2134,7 @@
                 currentActiveSkinFilename = activeSkin;
 
                 initViewer();
-                initAgreementModal(); // Запускаем проверку модального окна сразу после инициализации вьювера
+                initAgreementModal(); 
                 initSortListeners();
                 renderTagsDOM();
                 renderCurrentList();
