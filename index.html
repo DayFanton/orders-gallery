@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.3</div>
+            <div class="site-version">v1.5.2</div>
         </div>
     </div>
 
@@ -1202,6 +1202,7 @@
                 return this.degrees ? val * deg2rad : val;
             }
 
+            // ИСПРАВЛЕНИЕ: Изменено название функции на update и добавлена поддержка deltaTime
             update(player, deltaTime) {
                 // Если не на паузе — добавляем прошедшее время в прогресс с учетом скорости
                 if (!this.paused) {
@@ -1224,26 +1225,7 @@
                         }
                     }
                 } else if (this.endTick > 0 && currentTick > this.endTick) {
-                    // ИСПРАВЛЕНИЕ ЗАВИСАНИЯ: Анимация закончилась. Сбрасываем на стандартную.
-                    // Вызываем через setTimeout, чтобы не нарушать текущий цикл рендера skinview3d
-                    setTimeout(() => {
-                        if (typeof window.applyAnimation === 'function') {
-                            window.applyAnimation();
-                        }
-                        
-                        // Если была выбрана анимация покоя (none), кости могут остаться повернутыми. 
-                        // Принудительно сбрасываем их в 0.
-                        if (window.currentAnimationType === 'none' && window.skinViewer && window.skinViewer.playerObject) {
-                            const skin = window.skinViewer.playerObject.skin;
-                            skin.head.rotation.set(0,0,0);
-                            skin.body.rotation.set(0,0,0);
-                            skin.leftArm.rotation.set(0,0,0);
-                            skin.rightArm.rotation.set(0,0,0);
-                            skin.leftLeg.rotation.set(0,0,0);
-                            skin.rightLeg.rotation.set(0,0,0);
-                        }
-                    }, 0);
-                    return;
+                    currentTick = this.endTick;
                 }
 
                 for (let part in this.tracks) {
@@ -1365,9 +1347,6 @@
 
                 initControlListeners();
                 buildBackgroundSelector();
-
-                // Пасхалочка
-                console.log("%c[System] В тенях скрывается нечто большее... 🐔🩸", "color: #b91c1c; font-weight: bold; background: #0b0b0d; padding: 4px 8px; border: 1px solid #7f1d1d; border-radius: 4px;");
 
             } catch (e) {
                 console.error(e);
@@ -1815,9 +1794,6 @@
             }
         }
 
-        // Экспорт глобальной функции для возможности ее вызова из класса
-        window.applyAnimation = applyAnimation;
-
         function parseDate(dateStr) {
             if (!dateStr) return new Date(0);
             const parts = dateStr.split('.');
@@ -2123,7 +2099,7 @@
                 document.getElementById('server_emotes_select').value = "";
                 document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
                 document.querySelector('input[name="animation"][value="none"]').checked = true;
-                window.currentAnimationType = 'none';
+                currentAnimationType = 'none';
                 applyAnimation();
 
                 currentCapeFilename = null;
@@ -2171,7 +2147,7 @@
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
-                    window.currentAnimationType = e.target.value;
+                    currentAnimationType = e.target.value;
                     if (currentActiveSkinFilename) {
                         selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
                     } else {
