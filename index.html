@@ -334,7 +334,7 @@
         }
         .skin-list.view-list .skin-item {
             display: flex !important;
-            justify-flex-start !important;
+            justify-content: flex-start !important;
             gap: 12px;
             align-items: center;
             padding: 8px 12px;
@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.0</div>
+            <div class="site-version">v1.5.1</div>
         </div>
     </div>
 
@@ -1121,9 +1121,11 @@
 
     <script>
         // --- Парсер Эмоций Emotecraft ---
-        class EmotecraftAnimation extends skinview3d.Animation {
+        class EmotecraftAnimation {
             constructor(emoteData) {
-                super();
+                this.progress = 0;
+                this.paused = false;
+                this.speed = 1.0;
                 this.emote = emoteData.emote || emoteData;
                 this.isLoop = String(this.emote.isLoop) === "true";
                 this.endTick = this.emote.endTick || 0;
@@ -2003,7 +2005,7 @@
                     searchTags.pop();
                     renderTagsDOM();
                     renderCurrentList();
-                    input.focus();
+                    searchInput.focus();
                 }
             });
 
