@@ -1,11 +1,11 @@
 [
   {
     "filename": "migrator",
-    "capeName": "Плащ Мигратора",
+    "capeName": "Мигратор",
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "30.06.2021"
+    "date": "09.07.2021"
   },
   {
     "filename": "pan",
@@ -21,7 +21,7 @@
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "18.05.2024",
+    "date": "17.05.2024",
   },
   {
     "filename": "common",
@@ -197,7 +197,7 @@
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "28.11.2011",
+    "date": "18.11.2011",
   },
   {
     "filename": "realms_mapmaker",
@@ -221,7 +221,7 @@
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "15.07.2021",
+    "date": "25.07.2021",
   },
   {
     "filename": "translator",
@@ -269,7 +269,7 @@
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "20.05.2018",
+    "date": "20.11.2018",
   },
   {
     "filename": "translator_chinese",
@@ -289,7 +289,7 @@
   },
   {
     "filename": "valentine",
-    "capeName": "Валентиновский",
+    "capeName": "Валентин",
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
