@@ -334,7 +334,7 @@
         }
         .skin-list.view-list .skin-item {
             display: flex !important;
-            justify-content: flex-start !important;
+            justify-flex-start !important;
             gap: 12px;
             align-items: center;
             padding: 8px 12px;
@@ -530,11 +530,10 @@
             transition: background 0.4s ease;
         }
 
-        /* Обновленные аккуратные и заметные кнопки вариаций (Смещены вправо, дизайн восстановлен) */
         #variations_container {
             position: absolute;
             top: 20px;
-            right: 20px; /* Смещение вправо, чтобы не перекрывать скин по центру */
+            right: 20px; 
             left: auto;
             transform: none;
             display: flex;
@@ -555,8 +554,8 @@
             background: var(--bg-card);
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 8px 16px; /* Чуть побольше размер для удобства */
-            font-size: 0.85rem; /* Сделаны более выразительными */
+            padding: 8px 16px; 
+            font-size: 0.85rem; 
             font-weight: 600;
             cursor: pointer;
             border-radius: 6px;
@@ -989,7 +988,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.3.20</div>
+            <div class="site-version">v1.4.0</div>
         </div>
     </div>
 
@@ -1139,6 +1138,49 @@
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
+        function updateMetaInfoDisplay(item) {
+            const customerEl = document.getElementById('infoCustomer');
+            if (item && item.customer && item.customer !== '-' && item.customer !== 'Не указан') {
+                customerEl.textContent = item.customer;
+                customerEl.classList.add('clickable');
+                customerEl.title = `Показать все заказы от ${item.customer}`;
+            } else {
+                customerEl.textContent = (item && item.customer) || 'Не указан';
+                customerEl.classList.remove('clickable');
+                customerEl.removeAttribute('title');
+            }
+
+            document.getElementById('infoDate').textContent = (item && item.date) || 'Не указана';
+
+            const authorEl = document.getElementById('infoAuthor');
+            if (item && item.author && item.author !== '-' && item.author !== 'Не указан') {
+                authorEl.textContent = item.author;
+                authorEl.classList.add('clickable');
+                authorEl.title = `Открыть страницу автора (${item.author})`;
+                authorEl.setAttribute('data-url', item.authorUrl || '#');
+            } else {
+                authorEl.textContent = (item && item.author) || 'Не указан';
+                authorEl.classList.remove('clickable');
+                authorEl.removeAttribute('title');
+                authorEl.removeAttribute('data-url');
+            }
+        }
+
+        function clearMetaInfoDisplay() {
+            const customerEl = document.getElementById('infoCustomer');
+            customerEl.textContent = '—';
+            customerEl.classList.remove('clickable');
+            customerEl.removeAttribute('title');
+            
+            document.getElementById('infoDate').textContent = '—';
+            
+            const authorEl = document.getElementById('infoAuthor');
+            authorEl.textContent = '—';
+            authorEl.classList.remove('clickable');
+            authorEl.removeAttribute('title');
+            authorEl.removeAttribute('data-url');
+        }
+
         function initViewer() {
             try {
                 const container = document.getElementById('viewer_zone');
@@ -1255,6 +1297,11 @@
             document.getElementById('tabSkins').classList.add('active');
             document.getElementById('tabCapes').classList.remove('active');
             
+            if (currentActiveSkinFilename) {
+                const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
+                if (skin) updateMetaInfoDisplay(skin);
+            }
+            
             renderCurrentList();
         }
 
@@ -1321,6 +1368,7 @@
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     noneItem.classList.add('active');
                     await updateBackEquipment();
+                    clearMetaInfoDisplay();
                 };
                 list.appendChild(noneItem);
             }
@@ -1414,6 +1462,7 @@
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     item.classList.add('active');
                     await updateBackEquipment();
+                    updateMetaInfoDisplay(cape);
                 };
 
                 const img = item.querySelector('img');
@@ -1458,7 +1507,6 @@
             }
 
             try {
-                // Если variationFilename не передан явно, по умолчанию грузим главный оригинал (filename)
                 const targetTextureFile = variationFilename || filename;
                 currentLoadedTextureFilename = targetTextureFile;
 
@@ -1468,39 +1516,13 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
-                const customerEl = document.getElementById('infoCustomer');
-                if (skin.customer && skin.customer !== '-' && skin.customer !== 'Не указан') {
-                    customerEl.textContent = skin.customer;
-                    customerEl.classList.add('clickable');
-                    customerEl.title = `Показать все заказы от ${skin.customer}`;
-                } else {
-                    customerEl.textContent = skin.customer || 'Не указан';
-                    customerEl.classList.remove('clickable');
-                    customerEl.removeAttribute('title');
-                }
+                updateMetaInfoDisplay(skin);
 
-                document.getElementById('infoDate').textContent = skin.date || 'Не указана';
-
-                const authorEl = document.getElementById('infoAuthor');
-                if (skin.author && skin.author !== '-' && skin.author !== 'Не указан') {
-                    authorEl.textContent = skin.author;
-                    authorEl.classList.add('clickable');
-                    authorEl.title = `Открыть страницу автора (${skin.author})`;
-                    authorEl.setAttribute('data-url', skin.authorUrl || '#');
-                } else {
-                    authorEl.textContent = skin.author || 'Не указан';
-                    authorEl.classList.remove('clickable');
-                    authorEl.removeAttribute('title');
-                    authorEl.removeAttribute('data-url');
-                }
-
-                // Отрисовка контейнера вариаций
                 const varContainer = document.getElementById('variations_container');
                 if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
                     varContainer.innerHTML = '';
                     varContainer.style.display = 'flex';
                     
-                    // 1. Создаем обязательную первую кнопку "Оригинал"
                     const origBtn = document.createElement('button');
                     origBtn.classList.add('variation-btn');
                     origBtn.textContent = 'Оригинал';
@@ -1512,7 +1534,6 @@
                     };
                     varContainer.appendChild(origBtn);
 
-                    // 2. Отрисовываем остальные добавленные ветки вариаций
                     skin.variations.forEach(v => {
                         const btn = document.createElement('button');
                         btn.classList.add('variation-btn');
@@ -1828,7 +1849,7 @@
                     searchTags.pop();
                     renderTagsDOM();
                     renderCurrentList();
-                    e.preventDefault();
+                    input.focus();
                 }
             });
 
@@ -1849,6 +1870,12 @@
                 currentTab = 'skins';
                 document.getElementById('tabSkins').classList.add('active');
                 document.getElementById('tabCapes').classList.remove('active');
+                if (currentActiveSkinFilename) {
+                    const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
+                    if (skin) updateMetaInfoDisplay(skin);
+                } else {
+                    clearMetaInfoDisplay();
+                }
                 renderCurrentList();
             };
 
@@ -1856,6 +1883,12 @@
                 currentTab = 'capes';
                 document.getElementById('tabCapes').classList.add('active');
                 document.getElementById('tabSkins').classList.remove('active');
+                if (currentCapeFilename) {
+                    const cape = globalCapes.find(c => c.filename === currentCapeFilename);
+                    if (cape) updateMetaInfoDisplay(cape);
+                } else {
+                    clearMetaInfoDisplay();
+                }
                 renderCurrentList();
             };
 
