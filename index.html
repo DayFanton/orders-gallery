@@ -622,6 +622,11 @@
             font-size: 0.85rem;
             transition: 0.2s;
         }
+        
+        select.btn:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
 
         .btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
 
@@ -988,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.4.1</div>
+            <div class="site-version">v1.5.0</div>
         </div>
     </div>
 
@@ -1001,7 +1006,7 @@
     <div id="controls_panel">
         <div class="controls-scroll">
             <div class="control-group">
-                <button class="btn" id="reset_all">Сброс</button>
+                <button class="btn" id="reset_all">Сброс настроек</button>
             </div>
 
             <div class="control-group">
@@ -1018,6 +1023,17 @@
                     </div>
                     <input type="range" id="rotate_speed" class="control-slider" min="0.1" max="10.0" step="0.1" value="1.0">
                 </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Эмоции (Emotecraft)</h3>
+                <select id="server_emotes_select" class="btn" style="text-align: left; margin-bottom: 8px;">
+                    <option value="">-- Выбрать эмоцию сервера --</option>
+                </select>
+                <label class="btn" style="display: block; text-align: center; cursor: pointer; margin-bottom: 0;">
+                    Загрузить свою (.json)
+                    <input type="file" id="local_emote_input" accept=".json" style="display: none;">
+                </label>
             </div>
 
             <div class="control-group">
@@ -1104,9 +1120,121 @@
     </div>
 
     <script>
+        // --- Парсер Эмоций Emotecraft ---
+        class EmotecraftAnimation extends skinview3d.Animation {
+            constructor(emoteData) {
+                super();
+                this.emote = emoteData.emote || emoteData;
+                this.isLoop = String(this.emote.isLoop) === "true";
+                this.endTick = this.emote.endTick || 0;
+                this.returnTick = this.emote.returnTick || 0;
+                this.degrees = String(this.emote.degrees) === "true";
+                
+                this.tracks = {};
+                const partsMap = {
+                    'head': 'head',
+                    'torso': 'body',
+                    'rightArm': 'rightArm',
+                    'leftArm': 'leftArm',
+                    'rightLeg': 'rightLeg',
+                    'leftLeg': 'leftLeg'
+                };
+                
+                if (this.emote.moves) {
+                    this.emote.moves.forEach(move => {
+                        const tick = move.tick;
+                        const easing = move.easing;
+                        for (let emPart in partsMap) {
+                            if (move[emPart]) {
+                                const svPart = partsMap[emPart];
+                                if (!this.tracks[svPart]) this.tracks[svPart] = {};
+                                
+                                for (let prop in move[emPart]) {
+                                    if (!this.tracks[svPart][prop]) this.tracks[svPart][prop] = [];
+                                    this.tracks[svPart][prop].push({
+                                        tick: tick,
+                                        value: move[emPart][prop],
+                                        easing: easing
+                                    });
+                                }
+                            }
+                        }
+                    });
+                    
+                    for (let part in this.tracks) {
+                        for (let prop in this.tracks[part]) {
+                            this.tracks[part][prop].sort((a, b) => a.tick - b.tick);
+                        }
+                    }
+                }
+            }
+
+            getEasingFunc(easing) {
+                if (easing === "EASEINOUTQUAD") {
+                    return t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+                }
+                return t => t; // Фолбэк на линейную интерполяцию
+            }
+
+            interpolate(track, currentTick) {
+                if (!track || track.length === 0) return 0;
+                const deg2rad = Math.PI / 180;
+                
+                let val = 0;
+                if (currentTick <= track[0].tick) {
+                    val = track[0].value;
+                } else if (currentTick >= track[track.length - 1].tick) {
+                    val = track[track.length - 1].value;
+                } else {
+                    for (let i = 0; i < track.length - 1; i++) {
+                        if (currentTick >= track[i].tick && currentTick <= track[i+1].tick) {
+                            const k1 = track[i];
+                            const k2 = track[i+1];
+                            let t = (currentTick - k1.tick) / (k2.tick - k1.tick);
+                            t = this.getEasingFunc(k1.easing)(t);
+                            val = k1.value + (k2.value - k1.value) * t;
+                            break;
+                        }
+                    }
+                }
+                return this.degrees ? val * deg2rad : val;
+            }
+
+            animate(player) {
+                if (!this.emote) return;
+                let currentTick = this.progress * 20;
+                
+                if (this.isLoop && this.endTick > 0) {
+                    if (currentTick > this.endTick) {
+                        const loopLen = this.endTick - this.returnTick;
+                        if (loopLen > 0) {
+                            currentTick = this.returnTick + ((currentTick - this.endTick) % loopLen);
+                        } else {
+                            currentTick = this.endTick;
+                        }
+                    }
+                } else if (this.endTick > 0 && currentTick > this.endTick) {
+                    currentTick = this.endTick;
+                }
+
+                for (let part in this.tracks) {
+                    const playerPart = player.skin[part];
+                    if (!playerPart) continue;
+                    
+                    const pTracks = this.tracks[part];
+                    
+                    if (pTracks.pitch) playerPart.rotation.x = this.interpolate(pTracks.pitch, currentTick);
+                    if (pTracks.yaw) playerPart.rotation.y = this.interpolate(pTracks.yaw, currentTick);
+                    if (pTracks.roll) playerPart.rotation.z = this.interpolate(pTracks.roll, currentTick);
+                }
+            }
+        }
+        // --- Конец парсера ---
+
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
+        let globalEmotes = []; // Загружается из emotes.json
         let currentTab = 'skins';
         let currentAnimationType = 'none';
         
@@ -1292,8 +1420,6 @@
             searchQuery = '';
             document.getElementById('searchInput').value = '';
             renderTagsDOM();
-            
-            // Исправлено: Больше не переключаем принудительно на вкладку 'skins', сохраняя текущую выбранную вкладку пользователя.
             
             if (currentTab === 'skins' && currentActiveSkinFilename) {
                 const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
@@ -1617,9 +1743,36 @@
             }
         }
 
+        function playEmote(emoteData) {
+            if (!skinViewer) return;
+            // Сбрасываем стандартную анимацию
+            document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
+            document.querySelector('input[name="animation"][value="none"]').checked = true;
+            currentAnimationType = 'none';
+
+            // Возвращаем кости в нулевое положение, чтобы не было конфликтов
+            if (skinViewer.playerObject) {
+                const skin = skinViewer.playerObject.skin;
+                skin.head.rotation.set(0,0,0);
+                skin.body.rotation.set(0,0,0);
+                skin.leftArm.rotation.set(0,0,0);
+                skin.rightArm.rotation.set(0,0,0);
+                skin.leftLeg.rotation.set(0,0,0);
+                skin.rightLeg.rotation.set(0,0,0);
+            }
+            
+            skinViewer.animation = new EmotecraftAnimation(emoteData);
+            if (skinViewer.animation) {
+                skinViewer.animation.speed = currentAnimationSpeed;
+                skinViewer.animation.paused = document.getElementById('pause_animation').checked;
+            }
+        }
+
         function applyAnimation() {
             if (!skinViewer) return;
             skinViewer.animation = null;
+            document.getElementById('server_emotes_select').value = ""; // Сбрасываем выбранную эмоцию
+            
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
@@ -1922,7 +2075,21 @@
                     skinViewer.playerObject.rotation.x = 0;
                     skinViewer.playerObject.rotation.y = 0;
                     skinViewer.playerObject.rotation.z = 0;
+                    
+                    const skin = skinViewer.playerObject.skin;
+                    skin.head.rotation.set(0,0,0);
+                    skin.body.rotation.set(0,0,0);
+                    skin.leftArm.rotation.set(0,0,0);
+                    skin.rightArm.rotation.set(0,0,0);
+                    skin.leftLeg.rotation.set(0,0,0);
+                    skin.rightLeg.rotation.set(0,0,0);
                 }
+
+                document.getElementById('server_emotes_select').value = "";
+                document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
+                document.querySelector('input[name="animation"][value="none"]').checked = true;
+                currentAnimationType = 'none';
+                applyAnimation();
 
                 currentCapeFilename = null;
                 elytraEnabled = false;
@@ -1987,6 +2154,42 @@
                     skinViewer.animation.speed = currentAnimationSpeed;
                 }
             };
+            
+            // Обработчик загрузки локальной эмоции
+            document.getElementById('local_emote_input').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    try {
+                        const emoteData = JSON.parse(evt.target.result);
+                        playEmote(emoteData);
+                    } catch (err) {
+                        alert('Ошибка при чтении файла эмоции: ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+                document.getElementById('server_emotes_select').value = ""; // Сбрасываем селект
+                this.value = ''; // Сбрасываем input, чтобы можно было загрузить тот же файл еще раз
+            });
+
+            // Обработчик серверных эмоций
+            document.getElementById('server_emotes_select').addEventListener('change', async function(e) {
+                const filename = e.target.value;
+                if (!filename) {
+                    applyAnimation();
+                    return;
+                }
+                try {
+                    const res = await fetch(`emotes/${filename}`);
+                    if (!res.ok) throw new Error('Не удалось загрузить эмоцию с сервера');
+                    const emoteData = await res.json();
+                    playEmote(emoteData);
+                } catch (err) {
+                    alert('Ошибка при загрузке эмоции: ' + err.message);
+                    this.value = "";
+                }
+            });
 
             const updateLayers = () => {
                 if (!skinViewer) return;
@@ -2153,6 +2356,21 @@
                 } catch(e) {
                     console.warn("Не удалось прочесть capes.json.");
                     globalCapes = [];
+                }
+
+                // Загружаем эмоции (если файл есть на сервере)
+                try {
+                    const responseEmotes = await fetch('emotes.json?v=' + Math.random());
+                    globalEmotes = await responseEmotes.json();
+                    const select = document.getElementById('server_emotes_select');
+                    globalEmotes.forEach(emote => {
+                        const opt = document.createElement('option');
+                        opt.value = emote.filename;
+                        opt.textContent = emote.name || emote.filename;
+                        select.appendChild(opt);
+                    });
+                } catch(e) {
+                    console.warn("Не удалось прочесть emotes.json. Список серверных эмоций будет пуст, но пользователь сможет загружать свои.");
                 }
 
                 const params = new URLSearchParams(window.location.search);
