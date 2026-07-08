@@ -1120,7 +1120,7 @@
     </div>
 
     <script>
-        // --- Парсер Эмоций Emotecraft ---
+        // --- Парсер Эмоций Emotecraft (ПОЛНОСТЬЮ ПЕРЕПИСАН) ---
         class EmotecraftAnimation {
             constructor(emoteData) {
                 this.progress = 0;
@@ -1131,6 +1131,9 @@
                 this.endTick = this.emote.endTick || 0;
                 this.returnTick = this.emote.returnTick || 0;
                 this.degrees = String(this.emote.degrees) === "true";
+                
+                // Переменные для правильного учета времени в skinview3d
+                this.lastTime = undefined;
                 
                 this.tracks = {};
                 const partsMap = {
@@ -1175,7 +1178,7 @@
                 if (easing === "EASEINOUTQUAD") {
                     return t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
                 }
-                return t => t; // Фолбэк на линейную интерполяцию
+                return t => t; 
             }
 
             interpolate(track, currentTick) {
@@ -1202,17 +1205,23 @@
                 return this.degrees ? val * deg2rad : val;
             }
 
-            // ИСПРАВЛЕНИЕ: Изменено название функции на update и добавлена поддержка deltaTime
-            update(player, deltaTime) {
-                // Если не на паузе — добавляем прошедшее время в прогресс с учетом скорости
+            update(player, time) {
+                // Инициализация стартового времени
+                if (this.lastTime === undefined) {
+                    this.lastTime = time;
+                }
+
+                // В skinview3d переменная 'time' — это абсолютное время. Вычисляем дельту сами:
+                const dt = time - this.lastTime;
+                this.lastTime = time;
+
                 if (!this.paused) {
-                    // deltaTime обычно передается в секундах, поэтому если оно отсутствует, подставляем дефолтное значение 1/60s
-                    const dt = typeof deltaTime === 'number' ? deltaTime : 0.016;
                     this.progress += dt * this.speed;
                 }
 
                 if (!this.emote) return;
                 
+                // Emotecraft использует 20 тиков в секунду
                 let currentTick = this.progress * 20;
                 
                 if (this.isLoop && this.endTick > 0) {
@@ -1220,6 +1229,8 @@
                         const loopLen = this.endTick - this.returnTick;
                         if (loopLen > 0) {
                             currentTick = this.returnTick + ((currentTick - this.endTick) % loopLen);
+                            // Важно: сбрасываем progress, чтобы он не рос бесконечно и не ломал цикл
+                            this.progress = currentTick / 20;
                         } else {
                             currentTick = this.endTick;
                         }
@@ -1234,9 +1245,14 @@
                     
                     const pTracks = this.tracks[part];
                     
-                    if (pTracks.pitch) playerPart.rotation.x = this.interpolate(pTracks.pitch, currentTick);
-                    if (pTracks.yaw) playerPart.rotation.y = this.interpolate(pTracks.yaw, currentTick);
-                    if (pTracks.roll) playerPart.rotation.z = this.interpolate(pTracks.roll, currentTick);
+                    // Блок проверки: Emotecraft может отдавать оси как pitch/yaw/roll или x/y/z
+                    const trackX = pTracks.pitch || pTracks.x;
+                    const trackY = pTracks.yaw || pTracks.y;
+                    const trackZ = pTracks.roll || pTracks.z;
+
+                    if (trackX) playerPart.rotation.x = this.interpolate(trackX, currentTick);
+                    if (trackY) playerPart.rotation.y = this.interpolate(trackY, currentTick);
+                    if (trackZ) playerPart.rotation.z = this.interpolate(trackZ, currentTick);
                 }
             }
         }
@@ -1245,7 +1261,7 @@
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
-        let globalEmotes = []; // Загружается из emotes.json
+        let globalEmotes = []; 
         let currentTab = 'skins';
         let currentAnimationType = 'none';
         
@@ -2166,7 +2182,6 @@
                 }
             };
             
-            // Обработчик загрузки локальной эмоции
             document.getElementById('local_emote_input').addEventListener('change', function(e) {
                 const file = e.target.files[0];
                 if (!file) return;
@@ -2180,11 +2195,10 @@
                     }
                 };
                 reader.readAsText(file);
-                document.getElementById('server_emotes_select').value = ""; // Сбрасываем селект
-                this.value = ''; // Сбрасываем input, чтобы можно было загрузить тот же файл еще раз
+                document.getElementById('server_emotes_select').value = ""; 
+                this.value = ''; 
             });
 
-            // Обработчик серверных эмоций
             document.getElementById('server_emotes_select').addEventListener('change', async function(e) {
                 const filename = e.target.value;
                 if (!filename) {
@@ -2369,7 +2383,6 @@
                     globalCapes = [];
                 }
 
-                // Загружаем эмоции (если файл есть на сервере)
                 try {
                     const responseEmotes = await fetch('emotes.json?v=' + Math.random());
                     globalEmotes = await responseEmotes.json();
