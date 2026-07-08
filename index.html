@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.1</div>
+            <div class="site-version">v1.5.2</div>
         </div>
     </div>
 
@@ -1202,8 +1202,17 @@
                 return this.degrees ? val * deg2rad : val;
             }
 
-            animate(player) {
+            // ИСПРАВЛЕНИЕ: Изменено название функции на update и добавлена поддержка deltaTime
+            update(player, deltaTime) {
+                // Если не на паузе — добавляем прошедшее время в прогресс с учетом скорости
+                if (!this.paused) {
+                    // deltaTime обычно передается в секундах, поэтому если оно отсутствует, подставляем дефолтное значение 1/60s
+                    const dt = typeof deltaTime === 'number' ? deltaTime : 0.016;
+                    this.progress += dt * this.speed;
+                }
+
                 if (!this.emote) return;
+                
                 let currentTick = this.progress * 20;
                 
                 if (this.isLoop && this.endTick > 0) {
