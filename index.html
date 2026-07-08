@@ -13,14 +13,14 @@
 
     <style>
         :root {
-            --bg-main: #0b0b0d;
-            --bg-sidebar: #131316;
-            --bg-card: #1c1c21;
-            --bg-hover: #26262b;
+            --bg-main: #09090a;
+            --bg-sidebar: #0f0b0c;
+            --bg-card: #181213;
+            --bg-hover: #261618;
             --text-main: #e4e4e7;
             --text-muted: #a1a1aa;
-            --accent: #fff001;
-            --border: #27272a;
+            --accent: #dc2626;
+            --border: #2d1b1d;
         }
 
         body {
@@ -148,14 +148,14 @@
         }
 
         .dropdown-item.active .radio-circle {
-            border-color: #fff001;
+            border-color: var(--accent);
         }
 
         .dropdown-item.active .radio-circle::after {
             content: '';
             width: 6px;
             height: 6px;
-            background: #fff001;
+            background: var(--accent);
             border-radius: 50%;
         }
 
@@ -278,7 +278,7 @@
         }
         .search-wrapper:focus-within {
             border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
+            box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
         }
         #searchTags {
             display: flex;
@@ -288,8 +288,8 @@
         .search-tag {
             display: inline-flex;
             align-items: center;
-            background: rgba(255, 240, 1, 0.08);
-            border: 1px solid rgba(255, 240, 1, 0.25);
+            background: rgba(220, 38, 38, 0.08);
+            border: 1px solid rgba(220, 38, 38, 0.25);
             color: var(--accent);
             padding: 2px 6px;
             border-radius: 4px;
@@ -430,7 +430,7 @@
             position: absolute;
             top: 6px;
             left: 6px;
-            background-color: #ef4444;
+            background-color: var(--accent);
             color: #ffffff;
             font-size: 0.6rem;
             font-weight: 800;
@@ -474,7 +474,7 @@
         }
 
         .skin-list .skin-item:hover { background: var(--bg-hover); }
-        .skin-list .skin-item.active { background: rgba(184, 134, 11, 0.08); border-color: var(--accent); }
+        .skin-list .skin-item.active { background: rgba(220, 38, 38, 0.08); border-color: var(--accent); }
 
         .meta-info {
             padding: 20px 24px;
@@ -539,7 +539,7 @@
             display: flex;
             gap: 8px;
             z-index: 5;
-            background: rgba(19, 19, 22, 0.85);
+            background: rgba(15, 11, 12, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 6px;
@@ -666,7 +666,7 @@
         }
 
         .radio-btn input:checked + span {
-            background: rgba(184, 134, 11, 0.15);
+            background: rgba(220, 38, 38, 0.15);
             border-color: var(--accent);
             color: var(--accent);
             font-weight: 600;
@@ -847,7 +847,7 @@
                 z-index: 100;
                 transform: translateY(150%); 
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                background-color: rgba(19, 19, 22, 0.96);
+                background-color: rgba(15, 11, 12, 0.96);
                 backdrop-filter: blur(12px);
                 -webkit-backdrop-filter: blur(12px);
                 border: none;
@@ -878,7 +878,7 @@
                 bottom: 12px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(28, 28, 33, 0.9);
+                background: rgba(28, 20, 22, 0.9);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
                 border: 1px solid var(--border);
@@ -919,7 +919,7 @@
             }
             
             .meta-info {
-                background: rgba(11, 11, 13, 0.95);
+                background: rgba(15, 11, 12, 0.95);
             }
 
             .site-version {
@@ -928,7 +928,7 @@
 
             .bg-selector-group {
                 padding: 14px 20px calc(80px + env(safe-area-inset-bottom)) 20px !important;
-                background: rgba(11, 11, 13, 0.98);
+                background: rgba(15, 11, 12, 0.98);
                 border-top: 1px solid var(--border);
             }
         }
@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.3</div>
+            <div class="site-version">v2.0</div>
         </div>
     </div>
 
@@ -1045,11 +1045,11 @@
                 
                 <div class="radio-grid">
                     <label class="radio-btn">
-                        <input type="radio" name="animation" value="none" checked>
+                        <input type="radio" name="animation" value="none">
                         <span>Покой</span>
                     </label>
                     <label class="radio-btn">
-                        <input type="radio" name="animation" value="walk">
+                        <input type="radio" name="animation" value="walk" checked>
                         <span>Ходьба</span>
                     </label>
                     <label class="radio-btn">
@@ -1175,7 +1175,7 @@
                 if (easing === "EASEINOUTQUAD") {
                     return t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
                 }
-                return t => t; // Фолбэк на линейную интерполяцию
+                return t => t; 
             }
 
             interpolate(track, currentTick) {
@@ -1203,9 +1203,7 @@
             }
 
             update(player, deltaTime) {
-                // Если не на паузе — добавляем прошедшее время в прогресс с учетом скорости
                 if (!this.paused) {
-                    // deltaTime обычно передается в секундах, поэтому если оно отсутствует, подставляем дефолтное значение 1/60s
                     const dt = typeof deltaTime === 'number' ? deltaTime : 0.016;
                     this.progress += dt * this.speed;
                 }
@@ -1224,15 +1222,10 @@
                         }
                     }
                 } else if (this.endTick > 0 && currentTick > this.endTick) {
-                    // ИСПРАВЛЕНИЕ ЗАВИСАНИЯ: Анимация закончилась. Сбрасываем на стандартную.
-                    // Вызываем через setTimeout, чтобы не нарушать текущий цикл рендера skinview3d
                     setTimeout(() => {
                         if (typeof window.applyAnimation === 'function') {
                             window.applyAnimation();
                         }
-                        
-                        // Если была выбрана анимация покоя (none), кости могут остаться повернутыми. 
-                        // Принудительно сбрасываем их в 0.
                         if (window.currentAnimationType === 'none' && window.skinViewer && window.skinViewer.playerObject) {
                             const skin = window.skinViewer.playerObject.skin;
                             skin.head.rotation.set(0,0,0);
@@ -1263,9 +1256,9 @@
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
-        let globalEmotes = []; // Загружается из emotes.json
+        let globalEmotes = [];
         let currentTab = 'skins';
-        let currentAnimationType = 'none';
+        let currentAnimationType = 'walk'; 
         
         let currentRotationSpeed = 1.0;
         let currentAnimationSpeed = 1.0;
@@ -1366,7 +1359,6 @@
                 initControlListeners();
                 buildBackgroundSelector();
 
-                // Пасхалочка
                 console.log("%c[System] В тенях скрывается нечто большее... 🐔🩸", "color: #b91c1c; font-weight: bold; background: #0b0b0d; padding: 4px 8px; border: 1px solid #7f1d1d; border-radius: 4px;");
 
             } catch (e) {
@@ -1777,12 +1769,10 @@
 
         function playEmote(emoteData) {
             if (!skinViewer) return;
-            // Сбрасываем стандартную анимацию
             document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
             document.querySelector('input[name="animation"][value="none"]').checked = true;
             currentAnimationType = 'none';
 
-            // Возвращаем кости в нулевое положение, чтобы не было конфликтов
             if (skinViewer.playerObject) {
                 const skin = skinViewer.playerObject.skin;
                 skin.head.rotation.set(0,0,0);
@@ -1803,7 +1793,7 @@
         function applyAnimation() {
             if (!skinViewer) return;
             skinViewer.animation = null;
-            document.getElementById('server_emotes_select').value = ""; // Сбрасываем выбранную эмоцию
+            document.getElementById('server_emotes_select').value = ""; 
             
             if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
@@ -1815,7 +1805,6 @@
             }
         }
 
-        // Экспорт глобальной функции для возможности ее вызова из класса
         window.applyAnimation = applyAnimation;
 
         function parseDate(dateStr) {
@@ -2122,8 +2111,8 @@
 
                 document.getElementById('server_emotes_select').value = "";
                 document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
-                document.querySelector('input[name="animation"][value="none"]').checked = true;
-                window.currentAnimationType = 'none';
+                document.querySelector('input[name="animation"][value="walk"]').checked = true;
+                window.currentAnimationType = 'walk';
                 applyAnimation();
 
                 currentCapeFilename = null;
@@ -2190,7 +2179,6 @@
                 }
             };
             
-            // Обработчик загрузки локальной эмоции
             document.getElementById('local_emote_input').addEventListener('change', function(e) {
                 const file = e.target.files[0];
                 if (!file) return;
@@ -2204,11 +2192,10 @@
                     }
                 };
                 reader.readAsText(file);
-                document.getElementById('server_emotes_select').value = ""; // Сбрасываем селект
-                this.value = ''; // Сбрасываем input, чтобы можно было загрузить тот же файл еще раз
+                document.getElementById('server_emotes_select').value = ""; 
+                this.value = ''; 
             });
 
-            // Обработчик серверных эмоций
             document.getElementById('server_emotes_select').addEventListener('change', async function(e) {
                 const filename = e.target.value;
                 if (!filename) {
@@ -2393,7 +2380,6 @@
                     globalCapes = [];
                 }
 
-                // Загружаем эмоции (если файл есть на сервере)
                 try {
                     const responseEmotes = await fetch('emotes.json?v=' + Math.random());
                     globalEmotes = await responseEmotes.json();
@@ -2405,7 +2391,7 @@
                         select.appendChild(opt);
                     });
                 } catch(e) {
-                    console.warn("Не удалось прочесть emotes.json. Список серверных эмоций будет пуст, но пользователь сможет загружать свои.");
+                    console.warn("Не удалось прочесть emotes.json.");
                 }
 
                 const params = new URLSearchParams(window.location.search);
