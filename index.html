@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.10</div>
+            <div class="site-version">v1.5.11</div>
         </div>
     </div>
 
@@ -1127,8 +1127,6 @@
             const setupMaterial = (mesh, direction) => {
                 if (!mesh || !mesh.material) return;
                 
-                // Фикс: предотвращаем повторное дублирование материала, 
-                // если мы уже применили фрагментный шейдер
                 if (mesh.material.userData && mesh.material.userData.isRiggedMaterial) return;
                 
                 const mat = mesh.material.clone();
@@ -1138,10 +1136,11 @@
                     isRiggedMaterial: true
                 };
                 
-                // Фикс 1: Уникальный ключ кэша для Three.js
-                // Без mesh.uuid движок переиспользует старый скомпилированный код 
-                // для новых мешей и пропускает onBeforeCompile, теряя юниформы.
-                mat.customProgramCacheKey = () => 'split_' + direction + '_' + mesh.uuid;
+                // ВАЖНЫЙ ФИКС: Для Three.js r128 (так как он не поддерживает customProgramCacheKey)
+                // Мы используем уникальный ключ через define. Это заставляет движок компилировать 
+                // индивидуальный шейдер для каждой половинки конечности, избегая Z-fighting и поломок текстур.
+                mat.defines = mat.defines || {};
+                mat.defines['BEND_ID_' + mesh.uuid.replace(/-/g, '')] = direction > 0 ? '1' : '0';
                 
                 mat.onBeforeCompile = (shader) => {
                     shader.uniforms.uPivotY = mat.userData.uPivotY;
@@ -1193,8 +1192,6 @@
                 part.lowerGroup = lowerGroup;
             }
 
-            // Фикс 2: skinview3d полностью удаляет и пересоздает материалы каждый раз,
-            // когда вызывается loadSkin(). Нам нужно гарантированно применять шейдер заново!
             setupMaterial(part.innerLayer, 1.0);
             setupMaterial(part.outerLayer, 1.0);
             setupMaterial(part.lowerInner, -1.0);
@@ -1249,8 +1246,6 @@
             parts.forEach(part => {
                 if (!part) return;
 
-                // Фикс 3: Синхронизируем эталон геометрии между основной деталью и ее нижним клоном.
-                // Решает проблему поломанной UV-развертки при переключении с широких рук (Steve) на тонкие (Slim/Alex).
                 if (part.innerLayer && part.lowerInner) {
                     part.lowerInner.geometry = part.innerLayer.geometry;
                 }
