@@ -988,7 +988,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.4.0</div>
+            <div class="site-version">v1.4.1</div>
         </div>
     </div>
 
@@ -1293,13 +1293,14 @@
             document.getElementById('searchInput').value = '';
             renderTagsDOM();
             
-            currentTab = 'skins';
-            document.getElementById('tabSkins').classList.add('active');
-            document.getElementById('tabCapes').classList.remove('active');
+            // Исправлено: Больше не переключаем принудительно на вкладку 'skins', сохраняя текущую выбранную вкладку пользователя.
             
-            if (currentActiveSkinFilename) {
+            if (currentTab === 'skins' && currentActiveSkinFilename) {
                 const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
                 if (skin) updateMetaInfoDisplay(skin);
+            } else if (currentTab === 'capes' && currentCapeFilename) {
+                const cape = globalCapes.find(c => c.filename === currentCapeFilename);
+                if (cape) updateMetaInfoDisplay(cape);
             }
             
             renderCurrentList();
