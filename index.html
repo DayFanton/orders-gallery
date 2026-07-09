@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.3 (Rigged Edition)</div>
+            <div class="site-version">v1.5.4 (Rigged Edition)</div>
         </div>
     </div>
 
@@ -1127,6 +1127,7 @@
             
             // Клонируем материал, чтобы сгибать части независимо друг от друга
             mesh.material = mesh.material.clone();
+            mesh.material.needsUpdate = true; // ОБЯЗАТЕЛЬНО для клонированных материалов с onBeforeCompile
             
             mesh.userData.shaderUniforms = {
                 uBendAngle: { value: 0.0 },
@@ -1145,13 +1146,32 @@
                     uniform float uPivotZ;
                 ` + shader.vertexShader;
                 
-                const condition = bendBelow ? 'transformed.y < uPivotY' : 'transformed.y > uPivotY';
+                const condition = bendBelow ? 'position.y < uPivotY' : 'position.y > uPivotY';
                 
+                // Внедряем правильный поворот нормалей (для корректного освещения при сгибании)
+                shader.vertexShader = shader.vertexShader.replace(
+                    '#include <beginnormal_vertex>',
+                    `
+                    #include <beginnormal_vertex>
+                    if (${condition}) {
+                        float c = cos(uBendAngle);
+                        float s = sin(uBendAngle);
+                        float ny = objectNormal.y * c - objectNormal.z * s;
+                        float nz = objectNormal.y * s + objectNormal.z * c;
+                        objectNormal.y = ny;
+                        objectNormal.z = nz;
+                    }
+                    `
+                );
+
+                const posCondition = bendBelow ? 'transformed.y < uPivotY' : 'transformed.y > uPivotY';
+                
+                // Внедряем поворот вершин
                 shader.vertexShader = shader.vertexShader.replace(
                     '#include <begin_vertex>',
                     `
                     vec3 transformed = vec3(position);
-                    if (${condition}) {
+                    if (${posCondition}) {
                         float py = transformed.y - uPivotY;
                         float pz = transformed.z - uPivotZ;
                         
@@ -1237,9 +1257,9 @@
             if (!player || !player.skin) return;
             // Руки сгибаются в локтях при движении вперед
             const rx = player.skin.rightArm.rotation.x;
-            setPartBend(player.skin.rightArm, rx < 0 ? rx * 0.8 : 0);
+            setPartBend(player.skin.rightArm, rx < 0 ? -rx * 0.8 : 0);
             const lx = player.skin.leftArm.rotation.x;
-            setPartBend(player.skin.leftArm, lx < 0 ? lx * 0.8 : 0);
+            setPartBend(player.skin.leftArm, lx < 0 ? -lx * 0.8 : 0);
             
             // Ноги сгибаются в коленях при движении назад
             const rlx = player.skin.rightLeg.rotation.x;
@@ -1280,7 +1300,7 @@
         // --- КОНЕЦ СИСТЕМЫ РИГГИНГА ---
 
 
-        // --- Парсер Эмоций Emotecraft ---
+        // --- Обновленный Парсер Эмоций Emotecraft ---
         class EmotecraftAnimation {
             constructor(emoteData) {
                 this.progress = 0;
@@ -1288,34 +1308,48 @@
                 this.speed = 1.0;
                 this.emote = emoteData.emote || emoteData;
                 this.isLoop = String(this.emote.isLoop) === "true";
-                this.endTick = this.emote.endTick || 0;
+                this.endTick = this.emote.endTick || this.emote.stopTick || 0;
                 this.returnTick = this.emote.returnTick || 0;
                 this.degrees = String(this.emote.degrees) === "true";
                 
                 this.lastTime = undefined;
-                
                 this.tracks = {};
+                
+                // Emotecraft использует ForeArm и LowerLeg для сгибаний, мы маппим их в трек bend!
                 const partsMap = {
-                    'head': 'head',
-                    'torso': 'body',
-                    'rightArm': 'rightArm',
-                    'leftArm': 'leftArm',
-                    'rightLeg': 'rightLeg',
-                    'leftLeg': 'leftLeg'
+                    'head': { svPart: 'head', isBend: false },
+                    'torso': { svPart: 'body', isBend: false },
+                    'lowerTorso': { svPart: 'body', isBend: false },
+                    'rightArm': { svPart: 'rightArm', isBend: false },
+                    'leftArm': { svPart: 'leftArm', isBend: false },
+                    'rightLeg': { svPart: 'rightLeg', isBend: false },
+                    'leftLeg': { svPart: 'leftLeg', isBend: false },
+                    'rightForeArm': { svPart: 'rightArm', isBend: true },
+                    'leftForeArm': { svPart: 'leftArm', isBend: true },
+                    'rightLowerLeg': { svPart: 'rightLeg', isBend: true },
+                    'leftLowerLeg': { svPart: 'leftLeg', isBend: true }
                 };
                 
+                // Формат A: массив moves (старый/альтернативный вариант)
                 if (this.emote.moves) {
                     this.emote.moves.forEach(move => {
                         const tick = move.tick;
                         const easing = move.easing;
                         for (let emPart in partsMap) {
                             if (move[emPart]) {
-                                const svPart = partsMap[emPart];
+                                const mapping = partsMap[emPart];
+                                const svPart = mapping.svPart;
                                 if (!this.tracks[svPart]) this.tracks[svPart] = {};
                                 
                                 for (let prop in move[emPart]) {
-                                    if (!this.tracks[svPart][prop]) this.tracks[svPart][prop] = [];
-                                    this.tracks[svPart][prop].push({
+                                    let mappedProp = prop;
+                                    // Конвертируем pitch сгибаемой части в наш шейдерный bend
+                                    if (mapping.isBend && (prop === 'pitch' || prop === 'x')) {
+                                        mappedProp = 'bend';
+                                    }
+                                    
+                                    if (!this.tracks[svPart][mappedProp]) this.tracks[svPart][mappedProp] = [];
+                                    this.tracks[svPart][mappedProp].push({
                                         tick: tick,
                                         value: move[emPart][prop],
                                         easing: easing
@@ -1324,10 +1358,46 @@
                             }
                         }
                     });
-                    
-                    for (let part in this.tracks) {
-                        for (let prop in this.tracks[part]) {
-                            this.tracks[part][prop].sort((a, b) => a.tick - b.tick);
+                } 
+                // Формат B: прямые треки по частям тела (современный Emotecraft)
+                else {
+                    for (let emPart in partsMap) {
+                        if (this.emote[emPart]) {
+                            const mapping = partsMap[emPart];
+                            const svPart = mapping.svPart;
+                            if (!this.tracks[svPart]) this.tracks[svPart] = {};
+                            
+                            for (let prop in this.emote[emPart]) {
+                                let mappedProp = prop;
+                                if (mapping.isBend && (prop === 'pitch' || prop === 'x')) {
+                                    mappedProp = 'bend';
+                                }
+                                
+                                if (!this.tracks[svPart][mappedProp]) this.tracks[svPart][mappedProp] = [];
+                                let propData = this.emote[emPart][prop];
+                                
+                                if (Array.isArray(propData)) {
+                                    propData.forEach(kf => {
+                                        this.tracks[svPart][mappedProp].push({
+                                            tick: kf.tick !== undefined ? kf.tick : (kf.t || 0),
+                                            value: kf.value !== undefined ? kf.value : (kf.v || 0),
+                                            easing: kf.easing || kf.e
+                                        });
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // Сортировка по кадрам
+                for (let part in this.tracks) {
+                    for (let prop in this.tracks[part]) {
+                        this.tracks[part][prop].sort((a, b) => a.tick - b.tick);
+                        // Авторасчет endTick если он не был указан
+                        if (this.endTick === 0 && this.tracks[part][prop].length > 0) {
+                            const lastTick = this.tracks[part][prop][this.tracks[part][prop].length - 1].tick;
+                            if (lastTick > this.endTick) this.endTick = lastTick;
                         }
                     }
                 }
@@ -1399,6 +1469,7 @@
                     if (!playerPart) continue;
                     
                     const pTracks = this.tracks[part];
+                    if (!pTracks) continue; // Защита от краша при неполных JSON
                     
                     const trackX = pTracks.pitch || pTracks.x;
                     const trackY = pTracks.yaw || pTracks.y;
@@ -1408,7 +1479,7 @@
                     if (trackY) playerPart.rotation.y = this.interpolate(trackY, currentTick);
                     if (trackZ) playerPart.rotation.z = this.interpolate(trackZ, currentTick);
                     
-                    // Интеграция с системой сгибания! Подхватываем трек bend из JSON
+                    // Интеграция с системой сгибания! Подхватываем трек bend, который мы смаппили из ForeArm/LowerLeg
                     if (pTracks.bend) {
                         setPartBend(playerPart, this.interpolate(pTracks.bend, currentTick));
                     }
