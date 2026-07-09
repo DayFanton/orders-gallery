@@ -12,7 +12,6 @@
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
-        /* Весь твой CSS оставлен без изменений */
         :root {
             --bg-main: #0b0b0d;
             --bg-sidebar: #131316;
@@ -994,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.9</div>
+            <div class="site-version">v1.5.10</div>
         </div>
     </div>
 
@@ -1122,22 +1121,28 @@
 
     <script>
         // --- СИСТЕМА ФРАГМЕНТНОГО РИГГИНГА (BENDY-LIB РЕПЛИКА) ---
-        // Идея: мы не гнем один меш (что ломает текстуры), а создаем два клона меша.
-        // Верхний клон отсекается снизу, нижний - сверху с помощью fragment shader 'discard'.
-        // Нижняя часть помещается в шарнир (Group) и вращается, обеспечивая идеальный излом, как в игре.
-
         function makeBendable(part, pivotY) {
-            if (!part || part.userData.isRigged) return;
-            part.userData.isRigged = true;
+            if (!part) return;
             
             const setupMaterial = (mesh, direction) => {
-                if (!mesh) return;
+                if (!mesh || !mesh.material) return;
+                
+                // Фикс: предотвращаем повторное дублирование материала, 
+                // если мы уже применили фрагментный шейдер
+                if (mesh.material.userData && mesh.material.userData.isRiggedMaterial) return;
+                
                 const mat = mesh.material.clone();
-                mat.customProgramCacheKey = () => 'split_' + direction;
                 mat.userData = {
                     uPivotY: { value: pivotY },
-                    uDirection: { value: direction }
+                    uDirection: { value: direction },
+                    isRiggedMaterial: true
                 };
+                
+                // Фикс 1: Уникальный ключ кэша для Three.js! 
+                // Без mesh.uuid движок переиспользует старый скомпилированный код 
+                // для новых мешей и пропускает onBeforeCompile, теряя юниформы.
+                mat.customProgramCacheKey = () => 'split_' + direction + '_' + mesh.uuid;
+                
                 mat.onBeforeCompile = (shader) => {
                     shader.uniforms.uPivotY = mat.userData.uPivotY;
                     shader.uniforms.uDirection = mat.userData.uDirection;
@@ -1165,32 +1170,35 @@
                 mesh.material = mat;
             };
 
-            // 1. Делаем оригинальные меши "верхними" (отсекаем всё, что ниже шарнира)
+            if (!part.userData.isRigged) {
+                part.userData.isRigged = true;
+                
+                const lowerGroup = new THREE.Group();
+                lowerGroup.position.y = pivotY;
+                
+                if (part.innerLayer) {
+                    const lowerInner = part.innerLayer.clone();
+                    lowerInner.position.y = -pivotY;
+                    lowerGroup.add(lowerInner);
+                    part.lowerInner = lowerInner; 
+                }
+                if (part.outerLayer) {
+                    const lowerOuter = part.outerLayer.clone();
+                    lowerOuter.position.y = -pivotY;
+                    lowerGroup.add(lowerOuter);
+                    part.lowerOuter = lowerOuter;
+                }
+                
+                part.add(lowerGroup);
+                part.lowerGroup = lowerGroup;
+            }
+
+            // Фикс 2: skinview3d полностью удаляет и пересоздает материалы каждый раз,
+            // когда вызывается loadSkin(). Нам нужно гарантированно применять шейдер заново!
             setupMaterial(part.innerLayer, 1.0);
             setupMaterial(part.outerLayer, 1.0);
-            
-            // 2. Создаем группу для "нижних" мешей. Группа - это наш сустав.
-            const lowerGroup = new THREE.Group();
-            lowerGroup.position.y = pivotY; // Смещаем сустав на нужную высоту
-            
-            // 3. Копируем меши, делаем их "нижними" и кладем в шарнир
-            if (part.innerLayer) {
-                const lowerInner = part.innerLayer.clone();
-                setupMaterial(lowerInner, -1.0);
-                lowerInner.position.y = -pivotY; // Компенсируем сдвиг группы, чтобы меш визуально остался на месте
-                lowerGroup.add(lowerInner);
-                part.lowerInner = lowerInner; 
-            }
-            if (part.outerLayer) {
-                const lowerOuter = part.outerLayer.clone();
-                setupMaterial(lowerOuter, -1.0);
-                lowerOuter.position.y = -pivotY;
-                lowerGroup.add(lowerOuter);
-                part.lowerOuter = lowerOuter;
-            }
-            
-            part.add(lowerGroup);
-            part.lowerGroup = lowerGroup;
+            setupMaterial(part.lowerInner, -1.0);
+            setupMaterial(part.lowerOuter, -1.0);
         }
 
         function getMidY(mesh) {
@@ -1202,10 +1210,9 @@
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
             
-            // Ищем динамически середину конечности, чтобы сгиб был идеально по центру
             const armMid = getMidY(player.skin.rightArm.innerLayer);
             const legMid = getMidY(player.skin.rightLeg.innerLayer);
-            const bodyMid = getMidY(player.skin.body.innerLayer) - 1.5; // Торс гнется чуть ниже середины (поясница)
+            const bodyMid = getMidY(player.skin.body.innerLayer) - 1.5;
             
             makeBendable(player.skin.rightArm, armMid);
             makeBendable(player.skin.leftArm, armMid);
@@ -1241,6 +1248,16 @@
             
             parts.forEach(part => {
                 if (!part) return;
+
+                // Фикс 3: Синхронизируем эталон геометрии между основной деталью и ее нижним клоном.
+                // Решает проблему поломанной UV-развертки при переключении с широких рук (Steve) на тонкие (Slim/Alex).
+                if (part.innerLayer && part.lowerInner) {
+                    part.lowerInner.geometry = part.innerLayer.geometry;
+                }
+                if (part.outerLayer && part.lowerOuter) {
+                    part.lowerOuter.geometry = part.outerLayer.geometry;
+                }
+
                 const updateMesh = (mesh) => {
                     if (mesh && mesh.material && mesh.material.map !== mainMap) {
                         mesh.material.map = mainMap;
@@ -1500,7 +1517,6 @@
             }
         }
         // --- Конец парсера ---
-
 
         let skinViewer = null;
         let globalSkins = [];
@@ -2476,7 +2492,7 @@
                 
                 const setBodyVis = (part) => {
                     if(part.outerLayer) part.outerLayer.visible = bodyVisible;
-                    if(part.lowerOuter) part.lowerOuter.visible = bodyVisible; // Включаем/отключаем нашу отпиленную половинку
+                    if(part.lowerOuter) part.lowerOuter.visible = bodyVisible; 
                 };
 
                 setBodyVis(s.body);
