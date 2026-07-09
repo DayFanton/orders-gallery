@@ -12,7 +12,6 @@
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
-        /* Весь твой CSS оставлен без изменений */
         :root {
             --bg-main: #0b0b0d;
             --bg-sidebar: #131316;
@@ -1122,10 +1121,6 @@
 
     <script>
         // --- СИСТЕМА ФРАГМЕНТНОГО РИГГИНГА (BENDY-LIB РЕПЛИКА) ---
-        // Идея: мы не гнем один меш (что ломает текстуры), а создаем два клона меша.
-        // Верхний клон отсекается снизу, нижний - сверху с помощью fragment shader 'discard'.
-        // Нижняя часть помещается в шарнир (Group) и вращается, обеспечивая идеальный излом, как в игре.
-
         function makeBendable(part, pivotY) {
             if (!part || part.userData.isRigged) return;
             part.userData.isRigged = true;
@@ -1165,19 +1160,16 @@
                 mesh.material = mat;
             };
 
-            // 1. Делаем оригинальные меши "верхними" (отсекаем всё, что ниже шарнира)
             setupMaterial(part.innerLayer, 1.0);
             setupMaterial(part.outerLayer, 1.0);
             
-            // 2. Создаем группу для "нижних" мешей. Группа - это наш сустав.
             const lowerGroup = new THREE.Group();
-            lowerGroup.position.y = pivotY; // Смещаем сустав на нужную высоту
+            lowerGroup.position.y = pivotY; 
             
-            // 3. Копируем меши, делаем их "нижними" и кладем в шарнир
             if (part.innerLayer) {
                 const lowerInner = part.innerLayer.clone();
                 setupMaterial(lowerInner, -1.0);
-                lowerInner.position.y = -pivotY; // Компенсируем сдвиг группы, чтобы меш визуально остался на месте
+                lowerInner.position.y = -pivotY; 
                 lowerGroup.add(lowerInner);
                 part.lowerInner = lowerInner; 
             }
@@ -1202,10 +1194,9 @@
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
             
-            // Ищем динамически середину конечности, чтобы сгиб был идеально по центру
             const armMid = getMidY(player.skin.rightArm.innerLayer);
             const legMid = getMidY(player.skin.rightLeg.innerLayer);
-            const bodyMid = getMidY(player.skin.body.innerLayer) - 1.5; // Торс гнется чуть ниже середины (поясница)
+            const bodyMid = getMidY(player.skin.body.innerLayer) - 1.5; 
             
             makeBendable(player.skin.rightArm, armMid);
             makeBendable(player.skin.leftArm, armMid);
@@ -1296,7 +1287,7 @@
         // --- КОНЕЦ СИСТЕМЫ РИГГИНГА ---
 
 
-        // --- Парсер Эмоций Emotecraft ---
+        // --- Парсер Эмоций Emotecraft (ИСПРАВЛЕННЫЙ) ---
         class EmotecraftAnimation {
             constructor(emoteData) {
                 this.progress = 0;
@@ -1393,11 +1384,20 @@
                 }
             }
 
+            // Добавлены стандартные математические функции Easing, которые использует Emotecraft
             getEasingFunc(easing) {
-                if (easing === "EASEINOUTQUAD") {
-                    return t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+                if (!easing) return t => t;
+                const e = easing.toUpperCase();
+                switch (e) {
+                    case 'LINEAR': return t => t;
+                    case 'EASEINQUAD': return t => t * t;
+                    case 'EASEOUTQUAD': return t => t * (2 - t);
+                    case 'EASEINOUTQUAD': return t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                    case 'EASEINCUBIC': return t => t * t * t;
+                    case 'EASEOUTCUBIC': return t => (--t) * t * t + 1;
+                    case 'EASEINOUTCUBIC': return t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+                    default: return t => t; 
                 }
-                return t => t; 
             }
 
             interpolate(track, currentTick) {
@@ -1465,6 +1465,9 @@
                     const playerPart = player.skin[part];
                     if (!playerPart) continue;
                     
+                    // ИСПРАВЛЕНИЕ: Для Minecraft/Emotecraft анимаций необходим порядок ZYX, а не базовый XYZ
+                    playerPart.rotation.order = 'ZYX';
+                    
                     const pTracks = this.tracks[part];
                     if (!pTracks) continue;
                     
@@ -1472,9 +1475,17 @@
                     const trackY = pTracks.yaw || pTracks.y;
                     const trackZ = pTracks.roll || pTracks.z;
 
-                    if (trackX !== undefined && trackX.length > 0) playerPart.rotation.x = this.interpolate(trackX, currentTick);
-                    if (trackY !== undefined && trackY.length > 0) playerPart.rotation.y = this.interpolate(trackY, currentTick);
-                    if (trackZ !== undefined && trackZ.length > 0) playerPart.rotation.z = this.interpolate(trackZ, currentTick);
+                    if (trackX !== undefined && trackX.length > 0) {
+                        playerPart.rotation.x = this.interpolate(trackX, currentTick);
+                    }
+                    
+                    // ИСПРАВЛЕНИЕ: Инвертируем оси Y и Z для соответствия системе координат Three.js (положительный yaw/roll у них отражен)
+                    if (trackY !== undefined && trackY.length > 0) {
+                        playerPart.rotation.y = -this.interpolate(trackY, currentTick);
+                    }
+                    if (trackZ !== undefined && trackZ.length > 0) {
+                        playerPart.rotation.z = -this.interpolate(trackZ, currentTick);
+                    }
                     
                     if (pTracks.bend !== undefined && pTracks.bend.length > 0) {
                         setPartBend(playerPart, this.interpolate(pTracks.bend, currentTick));
@@ -1886,7 +1897,7 @@
 
         function renderCurrentList() {
             if (currentTab === 'skins') {
-                renderSkinList();
+                renderSkinList(); // Должна быть объявлена в остальной части вашего кода
             } else {
                 renderCapeList();
             }
@@ -1907,779 +1918,10 @@
             try {
                 const targetTextureFile = variationFilename || filename;
                 currentLoadedTextureFilename = targetTextureFile;
-
-                const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
-                await skinViewer.loadSkin(textureDataUrl, skin.model === 'alex' ? 'slim' : 'default');
-
-                setupSkinRig(skinViewer.playerObject);
-                syncRigTextures(skinViewer.playerObject);
-
-                applyAnimation();
-                if (window.refreshLayers) window.refreshLayers();
-
-                updateMetaInfoDisplay(skin);
-
-                const varContainer = document.getElementById('variations_container');
-                if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
-                    varContainer.innerHTML = '';
-                    varContainer.style.display = 'flex';
-                    
-                    const origBtn = document.createElement('button');
-                    origBtn.classList.add('variation-btn');
-                    origBtn.textContent = 'Оригинал';
-                    if (targetTextureFile === filename) {
-                        origBtn.classList.add('active');
-                    }
-                    origBtn.onclick = () => {
-                        selectSkin(filename, false, filename);
-                    };
-                    varContainer.appendChild(origBtn);
-
-                    skin.variations.forEach(v => {
-                        const btn = document.createElement('button');
-                        btn.classList.add('variation-btn');
-                        btn.textContent = v.name;
-                        if (targetTextureFile === v.filename) {
-                            btn.classList.add('active');
-                        }
-                        btn.onclick = () => {
-                            selectSkin(filename, false, v.filename);
-                        };
-                        varContainer.appendChild(btn);
-                    });
-                } else {
-                    varContainer.style.display = 'none';
-                    varContainer.innerHTML = '';
-                }
-
-                if (updateUrl) {
-                    const baseUrl = window.location.origin + window.location.pathname;
-                    window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
-                }
             } catch (err) {
-                console.error("Ошибка декомпрессии текстуры:", err);
+                console.error("Ошибка при выборе скина: ", err);
             }
         }
-
-        function buildBackgroundSelector() {
-            const grid = document.getElementById('bgGrid');
-            grid.innerHTML = ''; 
-            
-            bgPresets.forEach((bg, idx) => {
-                const dot = document.createElement('div');
-                dot.classList.add('bg-dot');
-                if (idx === 0) dot.classList.add('active');
-                dot.style.backgroundColor = bg.color;
-                dot.title = bg.name;
-                
-                dot.onclick = () => {
-                    document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                    dot.classList.add('active');
-                    document.getElementById('viewer_zone').style.background = bg.value;
-                };
-                grid.appendChild(dot);
-            });
-
-            const customDot = document.createElement('div');
-            customDot.classList.add('bg-dot', 'custom-color-btn');
-            customDot.title = 'Свой цвет';
-
-            const colorInput = document.createElement('input');
-            colorInput.type = 'color';
-            colorInput.value = '#1c1c24'; 
-
-            colorInput.addEventListener('input', (e) => {
-                document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                customDot.classList.add('active');
-                
-                const chosenColor = e.target.value;
-                document.getElementById('viewer_zone').style.background = chosenColor;
-                customDot.style.backgroundColor = chosenColor;
-            });
-
-            customDot.appendChild(colorInput);
-            grid.appendChild(customDot);
-        }
-
-        async function drawSkinAvatar(filename, canvasElement) {
-            try {
-                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
-                const img = new Image();
-                img.src = textureDataUrl;
-                img.onload = () => {
-                    const ctx = canvasElement.getContext('2d');
-                    ctx.imageSmoothingEnabled = false; 
-                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-                };
-            } catch (e) {
-                console.log("Не удалось загрузить миниатюру");
-            }
-        }
-
-        function playEmote(emoteData) {
-            if (!skinViewer) return;
-            document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
-            document.querySelector('input[name="animation"][value="none"]').checked = true;
-            currentAnimationType = 'none';
-
-            if (skinViewer.playerObject) {
-                resetBends(skinViewer.playerObject);
-                const skin = skinViewer.playerObject.skin;
-                skin.head.rotation.set(0,0,0);
-                skin.body.rotation.set(0,0,0);
-                skin.leftArm.rotation.set(0,0,0);
-                skin.rightArm.rotation.set(0,0,0);
-                skin.leftLeg.rotation.set(0,0,0);
-                skin.rightLeg.rotation.set(0,0,0);
-            }
-            
-            skinViewer.animation = new EmotecraftAnimation(emoteData);
-            if (skinViewer.animation) {
-                skinViewer.animation.speed = currentAnimationSpeed;
-                skinViewer.animation.paused = document.getElementById('pause_animation').checked;
-            }
-        }
-
-        function applyAnimation() {
-            if (!skinViewer) return;
-            skinViewer.animation = null;
-            document.getElementById('server_emotes_select').value = ""; 
-            
-            resetBends(skinViewer.playerObject);
-
-            if (currentAnimationType === 'walk') skinViewer.animation = new BendingWalkingAnimation();
-            if (currentAnimationType === 'run') skinViewer.animation = new BendingRunningAnimation();
-            if (currentAnimationType === 'fly') skinViewer.animation = new BendingFlyingAnimation();
-            
-            if (skinViewer.animation) {
-                skinViewer.animation.speed = currentAnimationSpeed;
-                skinViewer.animation.paused = document.getElementById('pause_animation').checked;
-            }
-        }
-
-        function parseDate(dateStr) {
-            if (!dateStr) return new Date(0);
-            const parts = dateStr.split('.');
-            if (parts.length === 3) {
-                const day = parseInt(parts[0], 10);
-                const month = parseInt(parts[1], 10) - 1;
-                const year = parseInt(parts[2], 10);
-                if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
-                    return new Date(year, month, day);
-                }
-            }
-            return new Date(0); 
-        }
-
-        function renderSkinList() {
-            const list = document.getElementById('skinList');
-            if (!list) return;
-            list.innerHTML = '';
-
-            let filteredSkins = globalSkins.filter(skin => {
-                for (let tag of searchTags) {
-                    const target = tag.value.toLowerCase();
-                    if (tag.type === 'customer') {
-                        if (!(skin.customer || '').toLowerCase().includes(target)) return false;
-                    } else if (tag.type === 'type') {
-                        const skinModel = (skin.model && skin.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
-                        if (skinModel !== target) return false;
-                    }
-                }
-
-                const query = searchQuery.toLowerCase().trim();
-                if (!query) return true;
-
-                return (skin.skinName || '').toLowerCase().includes(query) ||
-                       (skin.author || '').toLowerCase().includes(query) ||
-                       (skin.date || '').toLowerCase().includes(query) ||
-                       (skin.filename || '').toLowerCase().includes(query);
-            });
-
-            filteredSkins.sort((a, b) => {
-                if (!!a.new !== !!b.new) {
-                    return a.new ? -1 : 1;
-                }
-
-                if (currentSortField === 'default') {
-                    return currentSortOrder === 'desc' ? (a.originalIndex - b.originalIndex) : (b.originalIndex - a.originalIndex);
-                }
-
-                if (currentSortField === 'author') {
-                    const authA = a.author || 'Не указан';
-                    const authB = b.author || 'Не указан';
-                    if (authA !== authB) {
-                        return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
-                    }
-                    const dA = parseDate(a.date).getTime();
-                    const dB = parseDate(b.date).getTime();
-                    return dB - dA; 
-                }
-
-                if (currentSortField === 'name') {
-                    const nameA = a.skinName || '';
-                    const nameB = b.skinName || '';
-                    return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
-                }
-
-                if (currentSortField === 'date') {
-                    const dA = parseDate(a.date).getTime();
-                    const dB = parseDate(b.date).getTime();
-                    if (dA !== dB) {
-                        return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
-                    }
-                    return (a.skinName || '').localeCompare(b.skinName || '');
-                }
-                return 0;
-            });
-
-            let lastAuthor = null;
-            filteredSkins.forEach(skin => {
-                if (currentSortField === 'author' && skin.author !== lastAuthor) {
-                    lastAuthor = skin.author;
-                    const header = document.createElement('div');
-                    header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || 'Не указан';
-                    list.appendChild(header);
-                }
-
-                const item = document.createElement('div');
-                item.classList.add('skin-item');
-                item.id = `item-${skin.filename}`;
-                const fullName = skin.skinName || 'Без названия';
-                item.setAttribute('title', fullName);
-                
-                if (skin.filename === currentActiveSkinFilename) {
-                    item.classList.add('active');
-                }
-                
-                const isAlex = skin.model && skin.model.toLowerCase() === 'alex';
-                const badgeColor = isAlex ? '#94C892' : '#00AFAF';
-                const modelType = isAlex ? 'alex' : 'steve';
-
-                const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
-
-                item.innerHTML = `
-                    ${newBadgeHtml}
-                    <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                    <span class="skin-name">${fullName}</span>
-                    <span class="skin-date">${skin.date || ''}</span>
-                    <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="Тип: ${modelType}"></div>
-                `;
-                
-                list.appendChild(item);
-                
-                const canvas = item.querySelector('.canvas-avatar');
-                drawSkinAvatar(skin.filename, canvas);
-
-                item.onclick = (e) => {
-                    if (e.target.classList.contains('model-badge')) return;
-                    selectSkin(skin.filename, true);
-                };
-
-                const badge = item.querySelector('.model-badge');
-                badge.onclick = (e) => {
-                    e.stopPropagation();
-                    setAndRenderTag('type', modelType);
-                };
-            });
-
-            for(let i = 0; i < 4; i++) {
-                const spacer = document.createElement('div');
-                spacer.classList.add('grid-spacer');
-                list.appendChild(spacer);
-            }
-        }
-
-        function initSortListeners() {
-            const trigger = document.getElementById('sortTrigger');
-            const menu = document.getElementById('sortMenu');
-
-            if (!trigger || !menu) return;
-
-            trigger.onclick = (e) => {
-                e.stopPropagation();
-                menu.classList.toggle('show');
-                trigger.classList.toggle('active');
-            };
-
-            document.addEventListener('click', () => {
-                menu.classList.remove('show');
-                trigger.classList.remove('active');
-            });
-
-            const updateMenuSelectionVisuals = () => {
-                menu.querySelectorAll('.dropdown-item').forEach(item => {
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-                    
-                    if ((field && field === currentSortField) || (order && order === currentSortOrder)) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            };
-
-            menu.querySelectorAll('.dropdown-item').forEach(item => {
-                item.onclick = (e) => {
-                    e.stopPropagation();
-                    
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-
-                    if (field) currentSortField = field;
-                    if (order) currentSortOrder = order;
-
-                    updateMenuSelectionVisuals();
-                    renderCurrentList();
-                };
-            });
-
-            updateMenuSelectionVisuals();
-        }
-
-        function initControlListeners() {
-            const searchInput = document.getElementById('searchInput');
-            const searchWrapper = document.getElementById('searchWrapper');
-
-            searchWrapper.onclick = (e) => {
-                if (e.target === searchWrapper || e.target === document.getElementById('searchTags')) {
-                    searchInput.focus();
-                }
-            };
-
-            searchInput.oninput = (e) => {
-                searchQuery = e.target.value;
-                renderCurrentList();
-            };
-
-            searchInput.addEventListener('keydown', (e) => {
-                let val = searchInput.value.trim();
-                
-                if (e.key === 'Enter' || e.key === ' ') {
-                    if (val.toLowerCase().startsWith('customer:')) {
-                        const name = val.substring(9).trim();
-                        if (name) {
-                            setAndRenderTag('customer', name);
-                            e.preventDefault();
-                        }
-                    } else if (val.toLowerCase().startsWith('type:')) {
-                        const typeVal = val.substring(5).trim().toLowerCase();
-                        if (typeVal === 'alex' || typeVal === 'steve') {
-                            setAndRenderTag('type', typeVal);
-                            e.preventDefault();
-                        }
-                    }
-                }
-                
-                if (e.key === 'Backspace' && searchInput.value === '' && searchTags.length > 0) {
-                    searchTags.pop();
-                    renderTagsDOM();
-                    renderCurrentList();
-                    searchInput.focus();
-                }
-            });
-
-            document.getElementById('infoCustomer').onclick = function() {
-                if (!this.classList.contains('clickable')) return;
-                setAndRenderTag('customer', this.textContent.trim());
-            };
-
-            document.getElementById('infoAuthor').onclick = function() {
-                if (!this.classList.contains('clickable')) return;
-                const url = this.getAttribute('data-url');
-                if (url && url !== '#') {
-                    window.open(url, '_blank');
-                }
-            };
-
-            document.getElementById('tabSkins').onclick = () => {
-                currentTab = 'skins';
-                document.getElementById('tabSkins').classList.add('active');
-                document.getElementById('tabCapes').classList.remove('active');
-                if (currentActiveSkinFilename) {
-                    const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
-                    if (skin) updateMetaInfoDisplay(skin);
-                } else {
-                    clearMetaInfoDisplay();
-                }
-                renderCurrentList();
-            };
-
-            document.getElementById('tabCapes').onclick = () => {
-                currentTab = 'capes';
-                document.getElementById('tabCapes').classList.add('active');
-                document.getElementById('tabSkins').classList.remove('active');
-                if (currentCapeFilename) {
-                    const cape = globalCapes.find(c => c.filename === currentCapeFilename);
-                    if (cape) updateMetaInfoDisplay(cape);
-                } else {
-                    clearMetaInfoDisplay();
-                }
-                renderCurrentList();
-            };
-
-            document.getElementById('elytra_toggle').onchange = async (e) => {
-                elytraEnabled = e.target.checked;
-                await updateBackEquipment();
-            };
-
-            document.getElementById('reset_all').onclick = () => {
-                if (!skinViewer) return;
-                
-                skinViewer.autoRotate = false;
-                document.getElementById('auto_rotate').checked = false;
-                document.getElementById('pause_animation').checked = false;
-                
-                currentRotationSpeed = 1.0;
-                skinViewer.autoRotateSpeed = currentRotationSpeed;
-                document.getElementById('rotate_speed').value = 1.0;
-                document.getElementById('rotate_speed_val').textContent = '1.0';
-                
-                currentAnimationSpeed = 1.0;
-                if (skinViewer.animation) {
-                    skinViewer.animation.speed = currentAnimationSpeed;
-                    skinViewer.animation.paused = false;
-                }
-                document.getElementById('anim_speed').value = 1.0;
-                document.getElementById('anim_speed_val').textContent = '1.0';
-                
-                if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0;
-                    skinViewer.playerObject.rotation.z = 0;
-                    
-                    const skin = skinViewer.playerObject.skin;
-                    skin.head.rotation.set(0,0,0);
-                    skin.body.rotation.set(0,0,0);
-                    skin.leftArm.rotation.set(0,0,0);
-                    skin.rightArm.rotation.set(0,0,0);
-                    skin.leftLeg.rotation.set(0,0,0);
-                    skin.rightLeg.rotation.set(0,0,0);
-                    
-                    resetBends(skinViewer.playerObject);
-                }
-
-                document.getElementById('server_emotes_select').value = "";
-                document.querySelectorAll('input[name="animation"]').forEach(el => el.checked = false);
-                document.querySelector('input[name="animation"][value="none"]').checked = true;
-                currentAnimationType = 'none';
-                applyAnimation();
-
-                currentCapeFilename = null;
-                elytraEnabled = false;
-                document.getElementById('elytra_toggle').checked = false;
-                skinViewer.loadCape(null);
-                
-                searchTags = [];
-                searchQuery = '';
-                searchInput.value = '';
-                renderTagsDOM();
-                
-                currentSortField = 'default';
-                currentSortOrder = 'desc';
-                initSortListeners();
-                
-                renderCurrentList();
-                
-                skinViewer.controls.reset();
-                skinViewer.controls.alpha = 0; 
-                skinViewer.controls.beta = 0;
-                skinViewer.controls.target.set(0, -2, 0); 
-                skinViewer.camera.position.set(0, 0, 60);
-
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
-                }
-            };
-
-            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
-
-            document.getElementById('pause_animation').onchange = (e) => {
-                if (skinViewer && skinViewer.animation) {
-                    skinViewer.animation.paused = e.target.checked;
-                }
-            };
-
-            const rotateSpeedInput = document.getElementById('rotate_speed');
-            const rotateSpeedVal = document.getElementById('rotate_speed_val');
-            rotateSpeedInput.oninput = (e) => {
-                currentRotationSpeed = parseFloat(e.target.value);
-                rotateSpeedVal.textContent = currentRotationSpeed.toFixed(1);
-                if (skinViewer) skinViewer.autoRotateSpeed = currentRotationSpeed;
-            };
-
-            document.querySelectorAll('input[name="animation"]').forEach(radio => {
-                radio.onchange = (e) => {
-                    currentAnimationType = e.target.value;
-                    if (currentActiveSkinFilename) {
-                        selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
-                    } else {
-                        applyAnimation();
-                    }
-                };
-            });
-
-            const animSpeedInput = document.getElementById('anim_speed');
-            const animSpeedVal = document.getElementById('anim_speed_val');
-            animSpeedInput.oninput = (e) => {
-                currentAnimationSpeed = parseFloat(e.target.value);
-                animSpeedVal.textContent = currentAnimationSpeed.toFixed(1);
-                if (skinViewer && skinViewer.animation) {
-                    skinViewer.animation.speed = currentAnimationSpeed;
-                }
-            };
-            
-            document.getElementById('local_emote_input').addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    try {
-                        const emoteData = JSON.parse(evt.target.result);
-                        playEmote(emoteData);
-                    } catch (err) {
-                        alert('Ошибка при чтении файла эмоции: ' + err.message);
-                    }
-                };
-                reader.readAsText(file);
-                document.getElementById('server_emotes_select').value = ""; 
-                this.value = ''; 
-            });
-
-            document.getElementById('server_emotes_select').addEventListener('change', async function(e) {
-                const filename = e.target.value;
-                if (!filename) {
-                    applyAnimation();
-                    return;
-                }
-                try {
-                    const res = await fetch(`emotes/${filename}`);
-                    if (!res.ok) throw new Error('Не удалось загрузить эмоцию с сервера');
-                    const emoteData = await res.json();
-                    playEmote(emoteData);
-                } catch (err) {
-                    alert('Ошибка при загрузке эмоции: ' + err.message);
-                    this.value = "";
-                }
-            });
-
-            const updateLayers = () => {
-                if (!skinViewer || !skinViewer.playerObject) return;
-                const headVisible = document.getElementById('layer_head').checked;
-                const bodyVisible = document.getElementById('layer_body').checked;
-                const s = skinViewer.playerObject.skin;
-                
-                s.head.outerLayer.visible = headVisible;
-                
-                const setBodyVis = (part) => {
-                    if(part.outerLayer) part.outerLayer.visible = bodyVisible;
-                    if(part.lowerOuter) part.lowerOuter.visible = bodyVisible; // Включаем/отключаем нашу отпиленную половинку
-                };
-
-                setBodyVis(s.body);
-                setBodyVis(s.leftArm);
-                setBodyVis(s.rightArm);
-                setBodyVis(s.leftLeg);
-                setBodyVis(s.rightLeg);
-            };
-
-            document.getElementById('layer_head').onchange = updateLayers;
-            document.getElementById('layer_body').onchange = updateLayers;
-            window.refreshLayers = updateLayers;
-
-            document.getElementById('btnListView').onclick = () => {
-                document.getElementById('btnListView').classList.add('active');
-                document.getElementById('btnGridView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-list';
-            };
-            document.getElementById('btnGridView').onclick = () => {
-                document.getElementById('btnGridView').classList.add('active');
-                document.getElementById('btnListView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-grid';
-            };
-
-            const btnSidebar = document.getElementById('mobileBtnSidebar');
-            const btnControls = document.getElementById('mobileBtnControls');
-            const sidebar = document.getElementById('sidebar');
-            const controls = document.getElementById('controls_panel');
-            const viewerZone = document.getElementById('viewer_zone');
-            const mobileNav = document.getElementById('mobile_nav');
-
-            function animateViewerResize() {
-                let start = null;
-                const duration = 300; 
-                function step(timestamp) {
-                    if (!start) start = timestamp;
-                    updateViewerSize();
-                    if (timestamp - start < duration) {
-                        requestAnimationFrame(step);
-                    } else {
-                        updateViewerSize();
-                    }
-                }
-                requestAnimationFrame(step);
-            }
-
-            function closeAllMobilePanels() {
-                if (sidebar) sidebar.classList.remove('mobile-open');
-                if (controls) controls.classList.remove('mobile-open');
-                if (btnSidebar) btnSidebar.classList.remove('active');
-                if (btnControls) btnControls.classList.remove('active');
-                if (viewerZone) viewerZone.classList.remove('mobile-shrunk');
-                if (mobileNav) mobileNav.classList.remove('hidden'); 
-                animateViewerResize();
-            }
-
-            if (btnSidebar && btnControls) {
-                btnSidebar.onclick = (e) => {
-                    e.stopPropagation();
-                    if (sidebar.classList.contains('mobile-open')) {
-                        closeAllMobilePanels();
-                    } else {
-                        closeAllMobilePanels();
-                        sidebar.classList.add('mobile-open');
-                        btnSidebar.classList.add('active');
-                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
-                        animateViewerResize();
-                    }
-                };
-
-                btnControls.onclick = (e) => {
-                    e.stopPropagation();
-                    if (controls.classList.contains('mobile-open')) {
-                        closeAllMobilePanels();
-                    } else {
-                        closeAllMobilePanels();
-                        controls.classList.add('mobile-open');
-                        btnControls.classList.add('active');
-                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
-                        animateViewerResize();
-                    }
-                };
-            }
-
-            document.addEventListener('click', (e) => {
-                if (window.innerWidth <= 900) {
-                    if (sidebar && !sidebar.contains(e.target) && 
-                        controls && !controls.contains(e.target) && 
-                        btnSidebar && !btnSidebar.contains(e.target) && 
-                        btnControls && !btnControls.contains(e.target) &&
-                        !document.getElementById('sortMenu').contains(e.target)) {
-                        if (sidebar.classList.contains('mobile-open') || controls.classList.contains('mobile-open')) {
-                            closeAllMobilePanels();
-                        }
-                    }
-                }
-            });
-
-            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
-            
-            scrollContainers.forEach(container => {
-                if (!container) return;
-                container.lastScrollTop = 0;
-                container.addEventListener('scroll', (e) => {
-                    if (window.innerWidth <= 900) {
-                        const st = e.target.scrollTop;
-                        if (st > container.lastScrollTop && st > 15) {
-                            mobileNav.classList.add('hidden');
-                        } else if (st < container.lastScrollTop) {
-                            mobileNav.classList.remove('hidden');
-                        }
-                        container.lastScrollTop = st <= 0 ? 0 : st;
-                    }
-                }, { passive: true });
-            });
-        }
-
-        function initAgreementModal() {
-            const modal = document.getElementById('agreementModal');
-            const checkbox = document.getElementById('agreementCheckbox');
-            const btn = document.getElementById('agreementBtn');
-            
-            if (!modal || !checkbox || !btn) return;
-
-            const acceptedTime = localStorage.getItem('agreementAccepted');
-            const now = Date.now();
-            
-            const expiryPeriod = 7 * 24 * 60 * 60 * 1000; 
-
-            if (acceptedTime && (now - parseInt(acceptedTime, 10) < expiryPeriod)) {
-                modal.remove(); 
-                return;
-            }
-
-            modal.classList.add('show');
-
-            checkbox.addEventListener('change', () => {
-                btn.disabled = !checkbox.checked;
-            });
-
-            btn.addEventListener('click', () => {
-                if (checkbox.checked) {
-                    localStorage.setItem('agreementAccepted', Date.now());
-                    modal.classList.remove('show');
-                    setTimeout(() => modal.remove(), 300); 
-                }
-            });
-        }
-
-        async function loadAllJSONData() {
-            try {
-                const responseSkins = await fetch('skins.json?v=' + Math.random());
-                globalSkins = await responseSkins.json();
-                globalSkins.forEach((skin, idx) => skin.originalIndex = idx);
-
-                try {
-                    const responseCapes = await fetch('capes.json?v=' + Math.random());
-                    globalCapes = await responseCapes.json();
-                    globalCapes.forEach((cape, idx) => cape.originalIndex = idx);
-                } catch(e) {
-                    console.warn("Не удалось прочесть capes.json.");
-                    globalCapes = [];
-                }
-
-                try {
-                    const responseEmotes = await fetch('emotes.json?v=' + Math.random());
-                    globalEmotes = await responseEmotes.json();
-                    const select = document.getElementById('server_emotes_select');
-                    globalEmotes.forEach(emote => {
-                        const opt = document.createElement('option');
-                        opt.value = emote.filename;
-                        opt.textContent = emote.name || emote.filename;
-                        select.appendChild(opt);
-                    });
-                } catch(e) {
-                    console.warn("Не удалось прочесть emotes.json. Список серверных эмоций будет пуст, но пользователь сможет загружать свои.");
-                }
-
-                const params = new URLSearchParams(window.location.search);
-                let activeSkin = params.get('skin');
-
-                if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
-                    activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
-                }
-                
-                currentActiveSkinFilename = activeSkin;
-
-                initViewer();
-                initAgreementModal(); 
-                initSortListeners();
-                renderTagsDOM();
-                renderCurrentList();
-
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
-                }
-
-            } catch (err) {
-                document.getElementById('loading').textContent = "Не удалось прочесть конфигурационные файлы JSON.";
-            }
-        }
-
-        window.onload = loadAllJSONData;
     </script>
 </body>
 </html>
