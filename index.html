@@ -993,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.4</div>
+            <div class="site-version">v1.5.5</div>
         </div>
     </div>
 
@@ -1121,13 +1121,16 @@
 
     <script>
         // --- СИСТЕМА ШЕЙДЕРНОГО РИГГИНГА (СГИБАНИЕ КОНЕЧНОСТЕЙ И ТЕЛА) ---
+        let bendMaterialId = 0; // Глобальный счетчик для уникального ключа кэша шейдеров
+
         function makeBendable(mesh, pivotY, pivotZ, bendBelow) {
             if (!mesh || mesh.userData.isRigged) return;
             mesh.userData.isRigged = true;
             
-            // Клонируем материал, чтобы сгибать части независимо друг от друга
+            // Клонируем материал и создаем уникальный ключ, чтобы Three.js не сливал шейдеры разных конечностей в один
             mesh.material = mesh.material.clone();
-            mesh.material.needsUpdate = true; // ОБЯЗАТЕЛЬНО для клонированных материалов с onBeforeCompile
+            mesh.material.customProgramCacheKey = () => 'rigged_' + (bendMaterialId++);
+            mesh.material.needsUpdate = true;
             
             mesh.userData.shaderUniforms = {
                 uBendAngle: { value: 0.0 },
@@ -1148,7 +1151,6 @@
                 
                 const condition = bendBelow ? 'position.y < uPivotY' : 'position.y > uPivotY';
                 
-                // Внедряем правильный поворот нормалей (для корректного освещения при сгибании)
                 shader.vertexShader = shader.vertexShader.replace(
                     '#include <beginnormal_vertex>',
                     `
@@ -1166,7 +1168,6 @@
 
                 const posCondition = bendBelow ? 'transformed.y < uPivotY' : 'transformed.y > uPivotY';
                 
-                // Внедряем поворот вершин
                 shader.vertexShader = shader.vertexShader.replace(
                     '#include <begin_vertex>',
                     `
@@ -1197,13 +1198,10 @@
 
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
-            // Руки: локоть на Y = -6, сгибаем всё что ниже
             applyRigToPart(player.skin.rightArm, -6.0, 0.0, true);
             applyRigToPart(player.skin.leftArm, -6.0, 0.0, true);
-            // Ноги: колено на Y = -6, сгибаем всё что ниже
             applyRigToPart(player.skin.rightLeg, -6.0, 0.0, true);
             applyRigToPart(player.skin.leftLeg, -6.0, 0.0, true);
-            // Тело: талия на Y = -12, сгибаем всё что ВЫШЕ талии (наклоняем туловище вперед/назад)
             applyRigToPart(player.skin.body, -12.0, 0.0, false);
         }
 
@@ -1226,7 +1224,6 @@
             setPartBend(player.skin.body, 0);
         }
 
-        // Функция для синхронизации текстуры на клонированных материалах рига
         function syncRigTextures(player) {
             if (!player || !player.skin) return;
             const mainMat = player.skin.head.innerLayer.material;
@@ -1252,28 +1249,25 @@
             });
         }
 
-        // Процедурное сгибание для стандартных анимаций ходьбы/бега
         function applyProceduralBending(player) {
             if (!player || !player.skin) return;
-            // Руки сгибаются в локтях при движении вперед
             const rx = player.skin.rightArm.rotation.x;
             setPartBend(player.skin.rightArm, rx < 0 ? -rx * 0.8 : 0);
             const lx = player.skin.leftArm.rotation.x;
             setPartBend(player.skin.leftArm, lx < 0 ? -lx * 0.8 : 0);
             
-            // Ноги сгибаются в коленях при движении назад
+            // Для ног инвертируем знак, чтобы колени сгибались назад
             const rlx = player.skin.rightLeg.rotation.x;
-            setPartBend(player.skin.rightLeg, rlx > 0 ? rlx * 1.2 : 0);
+            setPartBend(player.skin.rightLeg, rlx > 0 ? -rlx * 1.2 : 0);
             const llx = player.skin.leftLeg.rotation.x;
-            setPartBend(player.skin.leftLeg, llx > 0 ? llx * 1.2 : 0);
+            setPartBend(player.skin.leftLeg, llx > 0 ? -llx * 1.2 : 0);
         }
 
-        // Кастомные классы анимаций со сгибанием
         class BendingWalkingAnimation extends skinview3d.WalkingAnimation {
             update(player, time) {
                 super.update(player, time);
                 applyProceduralBending(player);
-                setPartBend(player.skin.body, 0); // Тело прямое
+                setPartBend(player.skin.body, 0);
             }
         }
 
@@ -1281,7 +1275,6 @@
             update(player, time) {
                 super.update(player, time);
                 applyProceduralBending(player);
-                // При беге туловище немного наклонено вперед
                 setPartBend(player.skin.body, 0.2); 
             }
         }
@@ -1289,11 +1282,10 @@
         class BendingFlyingAnimation extends skinview3d.FlyingAnimation {
             update(player, time) {
                 super.update(player, time);
-                // Эффектная супергеройская поза в полете
                 setPartBend(player.skin.rightArm, -0.2); 
                 setPartBend(player.skin.leftArm, -0.2);
-                setPartBend(player.skin.rightLeg, 0.4);
-                setPartBend(player.skin.leftLeg, 0.4);
+                setPartBend(player.skin.rightLeg, -0.4);
+                setPartBend(player.skin.leftLeg, -0.4);
                 setPartBend(player.skin.body, 0.1);
             }
         }
@@ -1315,11 +1307,10 @@
                 this.lastTime = undefined;
                 this.tracks = {};
                 
-                // Emotecraft использует ForeArm и LowerLeg для сгибаний, мы маппим их в трек bend!
                 const partsMap = {
                     'head': { svPart: 'head', isBend: false },
                     'torso': { svPart: 'body', isBend: false },
-                    'lowerTorso': { svPart: 'body', isBend: false },
+                    'lowerTorso': { svPart: 'body', isBend: true }, // Интеграция сгиба тела
                     'rightArm': { svPart: 'rightArm', isBend: false },
                     'leftArm': { svPart: 'leftArm', isBend: false },
                     'rightLeg': { svPart: 'rightLeg', isBend: false },
@@ -1330,7 +1321,6 @@
                     'leftLowerLeg': { svPart: 'leftLeg', isBend: true }
                 };
                 
-                // Формат A: массив moves (старый/альтернативный вариант)
                 if (this.emote.moves) {
                     this.emote.moves.forEach(move => {
                         const tick = move.tick;
@@ -1343,7 +1333,6 @@
                                 
                                 for (let prop in move[emPart]) {
                                     let mappedProp = prop;
-                                    // Конвертируем pitch сгибаемой части в наш шейдерный bend
                                     if (mapping.isBend && (prop === 'pitch' || prop === 'x')) {
                                         mappedProp = 'bend';
                                     }
@@ -1359,7 +1348,6 @@
                         }
                     });
                 } 
-                // Формат B: прямые треки по частям тела (современный Emotecraft)
                 else {
                     for (let emPart in partsMap) {
                         if (this.emote[emPart]) {
@@ -1390,11 +1378,9 @@
                     }
                 }
                 
-                // Сортировка по кадрам
                 for (let part in this.tracks) {
                     for (let prop in this.tracks[part]) {
                         this.tracks[part][prop].sort((a, b) => a.tick - b.tick);
-                        // Авторасчет endTick если он не был указан
                         if (this.endTick === 0 && this.tracks[part][prop].length > 0) {
                             const lastTick = this.tracks[part][prop][this.tracks[part][prop].length - 1].tick;
                             if (lastTick > this.endTick) this.endTick = lastTick;
@@ -1424,6 +1410,13 @@
                         if (currentTick >= track[i].tick && currentTick <= track[i+1].tick) {
                             const k1 = track[i];
                             const k2 = track[i+1];
+                            
+                            // Защита от деления на ноль, если два кейфрейма стоят на одном тике
+                            if (k2.tick === k1.tick) {
+                                val = k1.value;
+                                break;
+                            }
+                            
                             let t = (currentTick - k1.tick) / (k2.tick - k1.tick);
                             t = this.getEasingFunc(k1.easing)(t);
                             val = k1.value + (k2.value - k1.value) * t;
@@ -1435,12 +1428,14 @@
             }
 
             update(player, time) {
+                // Используем performance.now() для защиты от скачков времени в движке skinview3d
+                const now = performance.now() / 1000;
                 if (this.lastTime === undefined) {
-                    this.lastTime = time;
+                    this.lastTime = now;
                 }
 
-                const dt = time - this.lastTime;
-                this.lastTime = time;
+                const dt = now - this.lastTime;
+                this.lastTime = now;
 
                 if (!this.paused) {
                     this.progress += dt * this.speed;
@@ -1451,7 +1446,7 @@
                 let currentTick = this.progress * 20;
                 
                 if (this.isLoop && this.endTick > 0) {
-                    if (currentTick > this.endTick) {
+                    if (currentTick >= this.endTick) {
                         const loopLen = this.endTick - this.returnTick;
                         if (loopLen > 0) {
                             currentTick = this.returnTick + ((currentTick - this.endTick) % loopLen);
@@ -1469,18 +1464,17 @@
                     if (!playerPart) continue;
                     
                     const pTracks = this.tracks[part];
-                    if (!pTracks) continue; // Защита от краша при неполных JSON
+                    if (!pTracks) continue;
                     
                     const trackX = pTracks.pitch || pTracks.x;
                     const trackY = pTracks.yaw || pTracks.y;
                     const trackZ = pTracks.roll || pTracks.z;
 
-                    if (trackX) playerPart.rotation.x = this.interpolate(trackX, currentTick);
-                    if (trackY) playerPart.rotation.y = this.interpolate(trackY, currentTick);
-                    if (trackZ) playerPart.rotation.z = this.interpolate(trackZ, currentTick);
+                    if (trackX !== undefined && trackX.length > 0) playerPart.rotation.x = this.interpolate(trackX, currentTick);
+                    if (trackY !== undefined && trackY.length > 0) playerPart.rotation.y = this.interpolate(trackY, currentTick);
+                    if (trackZ !== undefined && trackZ.length > 0) playerPart.rotation.z = this.interpolate(trackZ, currentTick);
                     
-                    // Интеграция с системой сгибания! Подхватываем трек bend, который мы смаппили из ForeArm/LowerLeg
-                    if (pTracks.bend) {
+                    if (pTracks.bend !== undefined && pTracks.bend.length > 0) {
                         setPartBend(playerPart, this.interpolate(pTracks.bend, currentTick));
                     }
                 }
@@ -1898,7 +1892,6 @@
                 const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
                 await skinViewer.loadSkin(textureDataUrl, skin.model === 'alex' ? 'slim' : 'default');
 
-                // Инициализируем систему сгибания и синхронизируем текстуры
                 setupSkinRig(skinViewer.playerObject);
                 syncRigTextures(skinViewer.playerObject);
 
@@ -2036,7 +2029,6 @@
             
             resetBends(skinViewer.playerObject);
 
-            // Используем новые классы с поддержкой сгибания
             if (currentAnimationType === 'walk') skinViewer.animation = new BendingWalkingAnimation();
             if (currentAnimationType === 'run') skinViewer.animation = new BendingRunningAnimation();
             if (currentAnimationType === 'fly') skinViewer.animation = new BendingFlyingAnimation();
