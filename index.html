@@ -1126,8 +1126,6 @@
             if (!mesh || mesh.userData.isRigged) return;
             mesh.userData.isRigged = true;
             
-            // Клонируем материал. 
-            // ИСПРАВЛЕНИЕ: Мы должны задать статичный ключ, иначе ThreeJS будет компилировать его КАЖДЫЙ кадр -> 5 FPS
             mesh.material = mesh.material.clone();
             mesh.material.customProgramCacheKey = () => 'rigged_' + (bendBelow ? 'below' : 'above');
             mesh.material.needsUpdate = true;
@@ -1198,14 +1196,10 @@
 
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
-            // ИСПРАВЛЕНИЕ: В Skinview3D локальные центры для кубиков рук и ног находятся на нуле Y(0.0). 
-            // Вершины идут от +6(верх) до -6(низ).
             applyRigToPart(player.skin.rightArm, 0.0, 0.0, true);
             applyRigToPart(player.skin.leftArm, 0.0, 0.0, true);
             applyRigToPart(player.skin.rightLeg, 0.0, 0.0, true);
             applyRigToPart(player.skin.leftLeg, 0.0, 0.0, true);
-            
-            // Для тела сгиб делаем примерно на уровне пояса. Тело так же от +6(шея) до -6(низ).
             applyRigToPart(player.skin.body, -3.0, 0.0, false);
         }
 
@@ -1260,7 +1254,6 @@
             const lx = player.skin.leftArm.rotation.x;
             setPartBend(player.skin.leftArm, lx < 0 ? -lx * 0.8 : 0);
             
-            // Для ног инвертируем знак, чтобы колени сгибались назад
             const rlx = player.skin.rightLeg.rotation.x;
             setPartBend(player.skin.rightLeg, rlx > 0 ? -rlx * 1.2 : 0);
             const llx = player.skin.leftLeg.rotation.x;
@@ -1314,7 +1307,7 @@
                 const partsMap = {
                     'head': { svPart: 'head', isBend: false },
                     'torso': { svPart: 'body', isBend: false },
-                    'lowerTorso': { svPart: 'body', isBend: true }, // Интеграция сгиба тела
+                    'lowerTorso': { svPart: 'body', isBend: true }, 
                     'rightArm': { svPart: 'rightArm', isBend: false },
                     'leftArm': { svPart: 'leftArm', isBend: false },
                     'rightLeg': { svPart: 'rightLeg', isBend: false },
@@ -1415,7 +1408,6 @@
                             const k1 = track[i];
                             const k2 = track[i+1];
                             
-                            // Защита от деления на ноль, если два кейфрейма стоят на одном тике
                             if (k2.tick === k1.tick) {
                                 val = k1.value;
                                 break;
@@ -1432,7 +1424,6 @@
             }
 
             update(player, time) {
-                // Используем performance.now() для защиты от скачков времени в движке skinview3d
                 const now = performance.now() / 1000;
                 if (this.lastTime === undefined) {
                     this.lastTime = now;
@@ -1482,6 +1473,28 @@
                         setPartBend(playerPart, this.interpolate(pTracks.bend, currentTick));
                     }
                 }
+
+                // ПРОЦЕДУРНЫЙ ФОЛЛБЕК: добавляем автоматическое сгибание для рук и ног, 
+                // если автор эмоции не прописал ключи сгибания (например, как в SPE_Drive away insects).
+                ['rightArm', 'leftArm', 'rightLeg', 'leftLeg'].forEach(partName => {
+                    const playerPart = player.skin[partName];
+                    if (!playerPart) return;
+                    
+                    const pTracks = this.tracks[partName];
+                    // Если нет ключей явного изгиба:
+                    const hasExplicitBend = pTracks && pTracks.bend && pTracks.bend.length > 0;
+                    
+                    if (!hasExplicitBend) {
+                        const rx = playerPart.rotation.x;
+                        if (partName === 'rightArm' || partName === 'leftArm') {
+                            // руки гнутся при отрицательном (движение вперед) вращении
+                            setPartBend(playerPart, rx < 0 ? -rx * 0.8 : 0);
+                        } else {
+                            // ноги гнутся при положительном вращении
+                            setPartBend(playerPart, rx > 0 ? -rx * 1.2 : 0);
+                        }
+                    }
+                });
             }
         }
         // --- Конец парсера ---
