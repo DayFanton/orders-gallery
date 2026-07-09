@@ -8,7 +8,7 @@
     
     <link rel="icon" href="data:,">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
@@ -994,7 +994,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.7</div>
+            <div class="site-version">v1.5.6</div>
         </div>
     </div>
 
@@ -1121,96 +1121,102 @@
     </div>
 
     <script>
-        // --- СИСТЕМА ШЕЙДЕРНОГО РИГГИНГА (СГИБАНИЕ КОНЕЧНОСТЕЙ И ТЕЛА) ---
-        function makeBendable(mesh, pivotY, pivotZ, bendBelow) {
-            if (!mesh || mesh.userData.isRigged) return;
-            mesh.userData.isRigged = true;
-            
-            mesh.material = mesh.material.clone();
-            mesh.material.customProgramCacheKey = () => 'rigged_' + (bendBelow ? 'below' : 'above');
-            mesh.material.needsUpdate = true;
-            
-            mesh.userData.shaderUniforms = {
-                uBendAngle: { value: 0.0 },
-                uPivotY: { value: pivotY },
-                uPivotZ: { value: pivotZ }
-            };
-            
-            mesh.material.onBeforeCompile = (shader) => {
-                shader.uniforms.uBendAngle = mesh.userData.shaderUniforms.uBendAngle;
-                shader.uniforms.uPivotY = mesh.userData.shaderUniforms.uPivotY;
-                shader.uniforms.uPivotZ = mesh.userData.shaderUniforms.uPivotZ;
-                
-                shader.vertexShader = `
-                    uniform float uBendAngle;
-                    uniform float uPivotY;
-                    uniform float uPivotZ;
-                ` + shader.vertexShader;
-                
-                const condition = bendBelow ? 'position.y < uPivotY' : 'position.y > uPivotY';
-                
-                shader.vertexShader = shader.vertexShader.replace(
-                    '#include <beginnormal_vertex>',
-                    `
-                    #include <beginnormal_vertex>
-                    if (${condition}) {
-                        float c = cos(uBendAngle);
-                        float s = sin(uBendAngle);
-                        float ny = objectNormal.y * c - objectNormal.z * s;
-                        float nz = objectNormal.y * s + objectNormal.z * c;
-                        objectNormal.y = ny;
-                        objectNormal.z = nz;
-                    }
-                    `
-                );
+        // --- СИСТЕМА ФРАГМЕНТНОГО РИГГИНГА (BENDY-LIB РЕПЛИКА) ---
+        // Идея: мы не гнем один меш (что ломает текстуры), а создаем два клона меша.
+        // Верхний клон отсекается снизу, нижний - сверху с помощью fragment shader 'discard'.
+        // Нижняя часть помещается в шарнир (Group) и вращается, обеспечивая идеальный излом, как в игре.
 
-                const posCondition = bendBelow ? 'transformed.y < uPivotY' : 'transformed.y > uPivotY';
-                
-                shader.vertexShader = shader.vertexShader.replace(
-                    '#include <begin_vertex>',
-                    `
-                    vec3 transformed = vec3(position);
-                    if (${posCondition}) {
-                        float py = transformed.y - uPivotY;
-                        float pz = transformed.z - uPivotZ;
-                        
-                        float c = cos(uBendAngle);
-                        float s = sin(uBendAngle);
-                        
-                        float ny = py * c - pz * s;
-                        float nz = py * s + pz * c;
-                        
-                        transformed.y = ny + uPivotY;
-                        transformed.z = nz + uPivotZ;
-                    }
-                    `
-                );
+        function makeBendable(part, pivotY) {
+            if (!part || part.userData.isRigged) return;
+            part.userData.isRigged = true;
+            
+            const setupMaterial = (mesh, direction) => {
+                if (!mesh) return;
+                const mat = mesh.material.clone();
+                mat.customProgramCacheKey = () => 'split_' + direction;
+                mat.userData = {
+                    uPivotY: { value: pivotY },
+                    uDirection: { value: direction }
+                };
+                mat.onBeforeCompile = (shader) => {
+                    shader.uniforms.uPivotY = mat.userData.uPivotY;
+                    shader.uniforms.uDirection = mat.userData.uDirection;
+                    
+                    shader.vertexShader = `
+                        varying vec3 vLocalPos;
+                    ` + shader.vertexShader.replace(
+                        '#include <begin_vertex>',
+                        `#include <begin_vertex>
+                         vLocalPos = vec3(position);`
+                    );
+                    
+                    shader.fragmentShader = `
+                        varying vec3 vLocalPos;
+                        uniform float uPivotY;
+                        uniform float uDirection;
+                    ` + shader.fragmentShader.replace(
+                        '#include <alphatest_fragment>',
+                        `#include <alphatest_fragment>
+                         if (uDirection > 0.0 && vLocalPos.y < uPivotY) discard;
+                         if (uDirection < 0.0 && vLocalPos.y >= uPivotY) discard;
+                        `
+                    );
+                };
+                mesh.material = mat;
             };
+
+            // 1. Делаем оригинальные меши "верхними" (отсекаем всё, что ниже шарнира)
+            setupMaterial(part.innerLayer, 1.0);
+            setupMaterial(part.outerLayer, 1.0);
+            
+            // 2. Создаем группу для "нижних" мешей. Группа - это наш сустав.
+            const lowerGroup = new THREE.Group();
+            lowerGroup.position.y = pivotY; // Смещаем сустав на нужную высоту
+            
+            // 3. Копируем меши, делаем их "нижними" и кладем в шарнир
+            if (part.innerLayer) {
+                const lowerInner = part.innerLayer.clone();
+                setupMaterial(lowerInner, -1.0);
+                lowerInner.position.y = -pivotY; // Компенсируем сдвиг группы, чтобы меш визуально остался на месте
+                lowerGroup.add(lowerInner);
+                part.lowerInner = lowerInner; 
+            }
+            if (part.outerLayer) {
+                const lowerOuter = part.outerLayer.clone();
+                setupMaterial(lowerOuter, -1.0);
+                lowerOuter.position.y = -pivotY;
+                lowerGroup.add(lowerOuter);
+                part.lowerOuter = lowerOuter;
+            }
+            
+            part.add(lowerGroup);
+            part.lowerGroup = lowerGroup;
         }
 
-        function applyRigToPart(part, pivotY, pivotZ, bendBelow) {
-            if (!part) return;
-            if (part.innerLayer) makeBendable(part.innerLayer, pivotY, pivotZ, bendBelow);
-            if (part.outerLayer) makeBendable(part.outerLayer, pivotY, pivotZ, bendBelow);
+        function getMidY(mesh) {
+            if (!mesh || !mesh.geometry) return 0;
+            if (!mesh.geometry.boundingBox) mesh.geometry.computeBoundingBox();
+            return (mesh.geometry.boundingBox.max.y + mesh.geometry.boundingBox.min.y) / 2;
         }
 
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
-            applyRigToPart(player.skin.rightArm, 0.0, 0.0, true);
-            applyRigToPart(player.skin.leftArm, 0.0, 0.0, true);
-            applyRigToPart(player.skin.rightLeg, 0.0, 0.0, true);
-            applyRigToPart(player.skin.leftLeg, 0.0, 0.0, true);
-            applyRigToPart(player.skin.body, -3.0, 0.0, false);
+            
+            // Ищем динамически середину конечности, чтобы сгиб был идеально по центру
+            const armMid = getMidY(player.skin.rightArm.innerLayer);
+            const legMid = getMidY(player.skin.rightLeg.innerLayer);
+            const bodyMid = getMidY(player.skin.body.innerLayer) - 1.5; // Торс гнется чуть ниже середины (поясница)
+            
+            makeBendable(player.skin.rightArm, armMid);
+            makeBendable(player.skin.leftArm, armMid);
+            makeBendable(player.skin.rightLeg, legMid);
+            makeBendable(player.skin.leftLeg, legMid);
+            makeBendable(player.skin.body, bodyMid);
         }
 
         function setPartBend(part, angle) {
-            if (!part) return;
-            if (part.innerLayer && part.innerLayer.userData.shaderUniforms) {
-                part.innerLayer.userData.shaderUniforms.uBendAngle.value = angle;
-            }
-            if (part.outerLayer && part.outerLayer.userData.shaderUniforms) {
-                part.outerLayer.userData.shaderUniforms.uBendAngle.value = angle;
-            }
+            if (!part || !part.lowerGroup) return;
+            part.lowerGroup.rotation.x = angle;
         }
 
         function resetBends(player) {
@@ -1234,16 +1240,17 @@
             ];
             
             parts.forEach(part => {
-                if (part) {
-                    if (part.innerLayer && part.innerLayer.material !== mainMat) {
-                        part.innerLayer.material.map = mainMap;
-                        part.innerLayer.material.needsUpdate = true;
+                if (!part) return;
+                const updateMesh = (mesh) => {
+                    if (mesh && mesh.material && mesh.material.map !== mainMap) {
+                        mesh.material.map = mainMap;
+                        mesh.material.needsUpdate = true;
                     }
-                    if (part.outerLayer && part.outerLayer.material !== mainMat) {
-                        part.outerLayer.material.map = mainMap;
-                        part.outerLayer.material.needsUpdate = true;
-                    }
-                }
+                };
+                updateMesh(part.innerLayer);
+                updateMesh(part.outerLayer);
+                updateMesh(part.lowerInner); 
+                updateMesh(part.lowerOuter); 
             });
         }
 
@@ -1289,7 +1296,7 @@
         // --- КОНЕЦ СИСТЕМЫ РИГГИНГА ---
 
 
-        // --- Обновленный Парсер Эмоций Emotecraft ---
+        // --- Парсер Эмоций Emotecraft ---
         class EmotecraftAnimation {
             constructor(emoteData) {
                 this.progress = 0;
@@ -1330,7 +1337,7 @@
                                 
                                 for (let prop in move[emPart]) {
                                     let mappedProp = prop;
-                                    if (mapping.isBend && (prop === 'pitch' || prop === 'x')) {
+                                    if (mapping.isBend && (prop === 'pitch' || prop === 'x' || prop === 'bend')) {
                                         mappedProp = 'bend';
                                     }
                                     
@@ -1354,7 +1361,7 @@
                             
                             for (let prop in this.emote[emPart]) {
                                 let mappedProp = prop;
-                                if (mapping.isBend && (prop === 'pitch' || prop === 'x')) {
+                                if (mapping.isBend && (prop === 'pitch' || prop === 'x' || prop === 'bend')) {
                                     mappedProp = 'bend';
                                 }
                                 
@@ -1474,23 +1481,18 @@
                     }
                 }
 
-                // ПРОЦЕДУРНЫЙ ФОЛЛБЕК: добавляем автоматическое сгибание для рук и ног, 
-                // если автор эмоции не прописал ключи сгибания (например, как в SPE_Drive away insects).
                 ['rightArm', 'leftArm', 'rightLeg', 'leftLeg'].forEach(partName => {
                     const playerPart = player.skin[partName];
-                    if (!playerPart) return;
+                    if (!playerPart || !playerPart.lowerGroup) return;
                     
                     const pTracks = this.tracks[partName];
-                    // Если нет ключей явного изгиба:
                     const hasExplicitBend = pTracks && pTracks.bend && pTracks.bend.length > 0;
                     
                     if (!hasExplicitBend) {
                         const rx = playerPart.rotation.x;
                         if (partName === 'rightArm' || partName === 'leftArm') {
-                            // руки гнутся при отрицательном (движение вперед) вращении
                             setPartBend(playerPart, rx < 0 ? -rx * 0.8 : 0);
                         } else {
-                            // ноги гнутся при положительном вращении
                             setPartBend(playerPart, rx > 0 ? -rx * 1.2 : 0);
                         }
                     }
@@ -2465,15 +2467,23 @@
             });
 
             const updateLayers = () => {
-                if (!skinViewer) return;
+                if (!skinViewer || !skinViewer.playerObject) return;
                 const headVisible = document.getElementById('layer_head').checked;
                 const bodyVisible = document.getElementById('layer_body').checked;
-                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
-                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
+                const s = skinViewer.playerObject.skin;
+                
+                s.head.outerLayer.visible = headVisible;
+                
+                const setBodyVis = (part) => {
+                    if(part.outerLayer) part.outerLayer.visible = bodyVisible;
+                    if(part.lowerOuter) part.lowerOuter.visible = bodyVisible; // Включаем/отключаем нашу отпиленную половинку
+                };
+
+                setBodyVis(s.body);
+                setBodyVis(s.leftArm);
+                setBodyVis(s.rightArm);
+                setBodyVis(s.leftLeg);
+                setBodyVis(s.rightLeg);
             };
 
             document.getElementById('layer_head').onchange = updateLayers;
