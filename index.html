@@ -12,6 +12,7 @@
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
+        /* Весь твой CSS оставлен без изменений */
         :root {
             --bg-main: #0b0b0d;
             --bg-sidebar: #131316;
@@ -993,7 +994,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.5</div>
+            <div class="site-version">v1.5.6</div>
         </div>
     </div>
 
@@ -1121,15 +1122,14 @@
 
     <script>
         // --- СИСТЕМА ШЕЙДЕРНОГО РИГГИНГА (СГИБАНИЕ КОНЕЧНОСТЕЙ И ТЕЛА) ---
-        let bendMaterialId = 0; // Глобальный счетчик для уникального ключа кэша шейдеров
-
         function makeBendable(mesh, pivotY, pivotZ, bendBelow) {
             if (!mesh || mesh.userData.isRigged) return;
             mesh.userData.isRigged = true;
             
-            // Клонируем материал и создаем уникальный ключ, чтобы Three.js не сливал шейдеры разных конечностей в один
+            // Клонируем материал. 
+            // ИСПРАВЛЕНИЕ: Мы должны задать статичный ключ, иначе ThreeJS будет компилировать его КАЖДЫЙ кадр -> 5 FPS
             mesh.material = mesh.material.clone();
-            mesh.material.customProgramCacheKey = () => 'rigged_' + (bendMaterialId++);
+            mesh.material.customProgramCacheKey = () => 'rigged_' + (bendBelow ? 'below' : 'above');
             mesh.material.needsUpdate = true;
             
             mesh.userData.shaderUniforms = {
@@ -1198,11 +1198,15 @@
 
         function setupSkinRig(player) {
             if (!player || !player.skin) return;
-            applyRigToPart(player.skin.rightArm, -6.0, 0.0, true);
-            applyRigToPart(player.skin.leftArm, -6.0, 0.0, true);
-            applyRigToPart(player.skin.rightLeg, -6.0, 0.0, true);
-            applyRigToPart(player.skin.leftLeg, -6.0, 0.0, true);
-            applyRigToPart(player.skin.body, -12.0, 0.0, false);
+            // ИСПРАВЛЕНИЕ: В Skinview3D локальные центры для кубиков рук и ног находятся на нуле Y(0.0). 
+            // Вершины идут от +6(верх) до -6(низ).
+            applyRigToPart(player.skin.rightArm, 0.0, 0.0, true);
+            applyRigToPart(player.skin.leftArm, 0.0, 0.0, true);
+            applyRigToPart(player.skin.rightLeg, 0.0, 0.0, true);
+            applyRigToPart(player.skin.leftLeg, 0.0, 0.0, true);
+            
+            // Для тела сгиб делаем примерно на уровне пояса. Тело так же от +6(шея) до -6(низ).
+            applyRigToPart(player.skin.body, -3.0, 0.0, false);
         }
 
         function setPartBend(part, angle) {
