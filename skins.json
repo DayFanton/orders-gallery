@@ -1,5 +1,25 @@
 [
   {
+    "filename": "day_spring21",
+    "skinName": "Дэй весенний 2026",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "16.06.2026",
+    "model": "steve",
+    "new": true
+  },
+  {
+    "filename": "day_autumn26",
+    "skinName": "Дэй осенний 2026",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.08.2026",
+    "model": "steve",
+    "new": true
+  },
+  {
     "filename": "day_apocalypse",
     "skinName": "Дэй апокалипсис",
     "customer": "Эппоп",
@@ -93,8 +113,7 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.05.2026",
-    "model": "steve",
-    "new": true
+    "model": "steve"
   },
   {
     "filename": "vova",
@@ -232,8 +251,7 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex",
-    "new": true
+    "model": "alex"
   },
   {
     "filename": "viacore_ny25_fem",
@@ -242,8 +260,7 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
-    "model": "alex",
-    "new": true
+    "model": "alex"
   },
   {
     "filename": "day_magician",
