@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,14 +5,10 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея Цыпляша</title>
     <link class="js-favicon" rel="icon" type="image/png" href="favicon.png">
-    
     <link rel="icon" href="data:,">
     
-    <!-- Supabase -->
-    <script src="[https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2](https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2)"></script>
-    
-    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
-    <script src="[https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js](https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js)"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
 
     <style>
         :root {
@@ -238,6 +233,7 @@ html
             gap: 8px;
             flex-shrink: 0;
         }
+
         .tab-btn {
             flex: 1;
             background: var(--bg-card);
@@ -250,10 +246,12 @@ html
             font-weight: 600;
             transition: 0.2s;
         }
+
         .tab-btn:hover {
             color: #fff;
             background: var(--bg-hover);
         }
+
         .tab-btn.active {
             background: var(--bg-hover);
             color: var(--accent);
@@ -280,15 +278,18 @@ html
             transition: border-color 0.2s, box-shadow 0.2s;
             cursor: text;
         }
+
         .search-wrapper:focus-within {
             border-color: var(--accent);
             box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
         }
+
         #searchTags {
             display: flex;
             flex-wrap: wrap;
             gap: 4px;
         }
+
         .search-tag {
             display: inline-flex;
             align-items: center;
@@ -302,10 +303,12 @@ html
             gap: 4px;
             user-select: none;
         }
+
         .search-tag .tag-prefix {
             color: var(--text-muted);
             font-weight: 400;
         }
+
         .search-tag .tag-close {
             cursor: pointer;
             color: var(--text-muted);
@@ -317,9 +320,11 @@ html
             transition: color 0.15s;
             margin-left: 1px;
         }
+
         .search-tag .tag-close:hover {
             color: #ef4444;
         }
+
         #searchInput {
             flex: 1;
             background: transparent;
@@ -336,6 +341,7 @@ html
             display: flex !important;
             flex-direction: column !important;
         }
+
         .skin-list.view-list .skin-item {
             display: flex !important;
             justify-flex-start !important;
@@ -353,6 +359,7 @@ html
             box-sizing: border-box;
             position: relative;
         }
+
         .skin-list.view-list .canvas-avatar { 
             display: block !important;
             width: 32px !important;
@@ -362,6 +369,7 @@ html
             margin-right: 12px;
             flex-shrink: 0;
         }
+
         .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; font-size: 0.85rem; padding-right: 20px; }
         .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: auto; margin-right: 16px; flex-shrink: 0; }
 
@@ -372,6 +380,7 @@ html
             padding-bottom: 16px;
             align-content: flex-start;
         }
+
         .skin-list.view-grid .skin-item {
             background: var(--bg-card) !important;
             border: 1px solid transparent;
@@ -389,6 +398,7 @@ html
             margin-bottom: 0 !important;
             position: relative;
         }
+
         .skin-list.view-grid .grid-spacer { display: none !important; }
         .skin-list.view-grid .canvas-avatar {
             display: block !important;
@@ -400,6 +410,7 @@ html
             margin-bottom: 4px !important;
             flex-shrink: 0 !important;
         }
+
         .skin-list.view-grid .skin-name {
             font-size: 0.7rem !important;
             font-weight: 500;
@@ -412,6 +423,7 @@ html
             padding-left: 2px;
             padding-right: 10px;
         }
+
         .skin-list.view-grid .skin-date { display: none !important; }
 
         .model-badge {
@@ -425,6 +437,7 @@ html
             transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s ease;
             z-index: 5;
         }
+
         .model-badge:hover {
             transform: scale(1.4);
             box-shadow: 0 0 6px currentColor;
@@ -458,6 +471,7 @@ html
             flex-shrink: 0;
             box-sizing: border-box;
         }
+
         .skin-list.view-list .cape-preview-box { margin-right: 0; }
         .skin-list.view-grid .cape-preview-box { margin-bottom: 4px; }
         
@@ -509,6 +523,7 @@ html
             text-decoration: underline;
             transition: 0.2s;
         }
+
         .meta-value.clickable:hover {
             background: var(--bg-hover);
             color: #fff;
@@ -554,6 +569,7 @@ html
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
         }
+
         .variation-btn {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -566,11 +582,13 @@ html
             transition: all 0.2s ease;
             white-space: nowrap;
         }
+
         .variation-btn:hover {
             color: #fff;
             background: var(--bg-hover);
             border-color: var(--text-muted);
         }
+
         .variation-btn.active {
             background: var(--bg-hover);
             color: var(--accent);
@@ -628,24 +646,6 @@ html
         }
 
         .btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
-
-        .auth-input {
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 10px 12px;
-            border-radius: 6px;
-            width: 100%;
-            box-sizing: border-box;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            font-family: inherit;
-        }
-        
-        .auth-input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
-        }
 
         .checkbox-label {
             display: flex;
@@ -739,8 +739,8 @@ html
             width: 16px;
             height: 16px;
             background-color: #fff;
-            mask: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
-            -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
         }
         .bg-dot.custom-color-btn input[type="color"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
 
@@ -957,11 +957,9 @@ html
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
             <div class="header-controls">
-                
-                <button class="sort-trigger-btn" id="btnAccount" title="Войти в аккаунт">
+                <button class="sort-trigger-btn" onclick="window.location.href='account.html'" title="Личный кабинет">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 </button>
-
                 <div class="dropdown-sort">
                     <button class="sort-trigger-btn" id="sortTrigger">
                         <span>Сортировка</span>
@@ -1015,7 +1013,7 @@ html
                 </div>
             </div>
             
-            <div class="site-version">v1.5.0</div>
+            <div class="site-version">v1.4.1</div>
         </div>
     </div>
 
@@ -1111,8 +1109,8 @@ html
 
     <div id="mobile_nav">
         <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
-        <button id="mobileBtnAccount" class="mobile-nav-btn">👤 Аккаунт</button>
         <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
+        <button onclick="window.location.href='account.html'" class="mobile-nav-btn">👤 Аккаунт</button>
     </div>
 
     <div id="agreementModal" class="modal-overlay">
@@ -1131,32 +1129,7 @@ html
         </div>
     </div>
 
-    <div id="authModal" class="modal-overlay">
-        <div class="modal-content" style="max-width: 400px; padding: 24px;">
-            <h3 id="authTitle">Вход</h3>
-            <div style="display: flex; flex-direction: column; gap: 12px; margin: 20px 0;">
-                <input type="email" id="authEmail" class="auth-input" placeholder="Email">
-                <input type="password" id="authPassword" class="auth-input" placeholder="Пароль">
-                <div id="authError" style="color: #ef4444; font-size: 0.85rem; display: none;"></div>
-            </div>
-            <div class="modal-footer" style="gap: 12px;">
-                <button id="authActionBtn" class="btn">Войти</button>
-                <button id="authToggleBtn" class="btn" style="background: transparent; border-color: transparent; color: var(--text-muted); font-size: 0.8rem; padding: 4px;">Нет аккаунта? Создать</button>
-                <button id="authCloseBtn" class="btn" style="background: transparent; border-color: var(--border); margin-top: 8px;">Закрыть</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // === ИНИЦИАЛИЗАЦИЯ SUPABASE ===
-        // Вставь сюда свои ключи из панели Supabase
-        const SUPABASE_URL = 'ТВОЙ_SUPABASE_URL';
-        const SUPABASE_ANON_KEY = 'ТВОЙ_SUPABASE_ANON_KEY';
-        
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        let currentUser = null;
-        let authMode = 'login'; // 'login' или 'register'
-
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
@@ -1177,7 +1150,7 @@ html
         let searchTags = []; 
         let searchQuery = ''; 
 
-        const DEFAULT_ELYTRA_URL = "[https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png](https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png)";
+        const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -1554,145 +1527,75 @@ html
             currentActiveSkinFilename = filename;
             if (currentTab === 'skins') {
                 document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
-                const currentItem = document.getElementById(`item-${filename}`);
-                if (currentItem) currentItem.classList.add('active');
+                const activeEl = document.querySelector(`.skin-item[data-filename="${filename}"]`);
+                if (activeEl) activeEl.classList.add('active');
             }
 
+            const model = (skin.model && skin.model.toLowerCase() === 'alex') ? 'slim' : 'default';
+
+            const texFilename = variationFilename || filename;
+            currentLoadedTextureFilename = texFilename;
+            
             try {
-                const targetTextureFile = variationFilename || filename;
-                currentLoadedTextureFilename = targetTextureFile;
-
-                const textureDataUrl = await applyMeshTextureTransform('skins', targetTextureFile);
-                await skinViewer.loadSkin(textureDataUrl, skin.model === 'alex' ? 'slim' : 'default');
-
-                applyAnimation();
-                if (window.refreshLayers) window.refreshLayers();
-
-                updateMetaInfoDisplay(skin);
-
-                const varContainer = document.getElementById('variations_container');
-                if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
-                    varContainer.innerHTML = '';
-                    varContainer.style.display = 'flex';
-                    
-                    const origBtn = document.createElement('button');
-                    origBtn.classList.add('variation-btn');
-                    origBtn.textContent = 'Оригинал';
-                    if (targetTextureFile === filename) {
-                        origBtn.classList.add('active');
-                    }
-                    origBtn.onclick = () => {
-                        selectSkin(filename, false, filename);
-                    };
-                    varContainer.appendChild(origBtn);
-
-                    skin.variations.forEach(v => {
-                        const btn = document.createElement('button');
-                        btn.classList.add('variation-btn');
-                        btn.textContent = v.name;
-                        if (targetTextureFile === v.filename) {
-                            btn.classList.add('active');
-                        }
-                        btn.onclick = () => {
-                            selectSkin(filename, false, v.filename);
-                        };
-                        varContainer.appendChild(btn);
-                    });
-                } else {
-                    varContainer.style.display = 'none';
-                    varContainer.innerHTML = '';
-                }
-
-                if (updateUrl) {
-                    const baseUrl = window.location.origin + window.location.pathname;
-                    window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
-                }
+                const dataUrl = await applyMeshTextureTransform('skins', texFilename);
+                await skinViewer.loadSkin(dataUrl, { model: model });
             } catch (err) {
-                console.error("Ошибка декомпрессии текстуры:", err);
+                console.error("Error loading skin texture:", err);
             }
-        }
-
-        function buildBackgroundSelector() {
-            const grid = document.getElementById('bgGrid');
-            grid.innerHTML = ''; 
             
-            bgPresets.forEach((bg, idx) => {
-                const dot = document.createElement('div');
-                dot.classList.add('bg-dot');
-                if (idx === 0) dot.classList.add('active');
-                dot.style.backgroundColor = bg.color;
-                dot.title = bg.name;
-                
-                dot.onclick = () => {
-                    document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                    dot.classList.add('active');
-                    document.getElementById('viewer_zone').style.background = bg.value;
-                };
-                grid.appendChild(dot);
-            });
-
-            const customDot = document.createElement('div');
-            customDot.classList.add('bg-dot', 'custom-color-btn');
-            customDot.title = 'Свой цвет';
-
-            const colorInput = document.createElement('input');
-            colorInput.type = 'color';
-            colorInput.value = '#1c1c24'; 
-
-            colorInput.addEventListener('input', (e) => {
-                document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                customDot.classList.add('active');
-                
-                const chosenColor = e.target.value;
-                document.getElementById('viewer_zone').style.background = chosenColor;
-                customDot.style.backgroundColor = chosenColor;
-            });
-
-            customDot.appendChild(colorInput);
-            grid.appendChild(customDot);
-        }
-
-        async function drawSkinAvatar(filename, canvasElement) {
-            try {
-                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
-                const img = new Image();
-                img.src = textureDataUrl;
-                img.onload = () => {
-                    const ctx = canvasElement.getContext('2d');
-                    ctx.imageSmoothingEnabled = false; 
-                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-                };
-            } catch (e) {
-                console.log("Не удалось загрузить миниатюру");
+            if (updateUrl) {
+                const url = new URL(window.location);
+                url.searchParams.set('skin', filename);
+                window.history.replaceState({}, '', url);
             }
-        }
-
-        function applyAnimation() {
-            if (!skinViewer) return;
-            skinViewer.animation = null;
-            if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
-            if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
-            if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
             
-            if (skinViewer.animation) {
-                skinViewer.animation.speed = currentAnimationSpeed;
-                skinViewer.animation.paused = document.getElementById('pause_animation').checked;
+            updateMetaInfoDisplay(skin);
+            renderVariationsPanel(skin, variationFilename || filename);
+        }
+
+        function renderVariationsPanel(skin, activeVariationFilename) {
+            const container = document.getElementById('variations_container');
+            container.innerHTML = '';
+            
+            if (!skin.variations || skin.variations.length === 0) {
+                container.style.display = 'none';
+                return;
             }
+            
+            container.style.display = 'flex';
+            
+            const btnMain = document.createElement('button');
+            btnMain.classList.add('variation-btn');
+            btnMain.textContent = 'Оригинал';
+            if (activeVariationFilename === skin.filename) {
+                btnMain.classList.add('active');
+            }
+            btnMain.onclick = () => selectSkin(skin.filename, true, skin.filename);
+            container.appendChild(btnMain);
+            
+            skin.variations.forEach(varObj => {
+                const btnVar = document.createElement('button');
+                btnVar.classList.add('variation-btn');
+                btnVar.textContent = varObj.name;
+                if (activeVariationFilename === varObj.filename) {
+                    btnVar.classList.add('active');
+                }
+                btnVar.onclick = () => selectSkin(skin.filename, true, varObj.filename);
+                container.appendChild(btnVar);
+            });
         }
 
         function parseDate(dateStr) {
-            if (!dateStr) return new Date(0);
+            if (!dateStr || dateStr === 'Не указана' || dateStr === '-') {
+                return new Date(0);
+            }
             const parts = dateStr.split('.');
             if (parts.length === 3) {
-                const day = parseInt(parts[0], 10);
-                const month = parseInt(parts[1], 10) - 1;
-                const year = parseInt(parts[2], 10);
-                if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
-                    return new Date(year, month, day);
-                }
+                return new Date(parts[2], parts[1] - 1, parts[0]);
             }
-            return new Date(0); 
+            const parsed = new Date(dateStr);
+            if (!isNaN(parsed)) return parsed;
+            return new Date(0);
         }
 
         function renderSkinList() {
@@ -1713,11 +1616,12 @@ html
 
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
-
-                return (skin.skinName || '').toLowerCase().includes(query) ||
+                
+                return (skin.skinName || skin.name || '').toLowerCase().includes(query) ||
                        (skin.author || '').toLowerCase().includes(query) ||
                        (skin.date || '').toLowerCase().includes(query) ||
-                       (skin.filename || '').toLowerCase().includes(query);
+                       (skin.filename || '').toLowerCase().includes(query) ||
+                       (skin.customer || '').toLowerCase().includes(query);
             });
 
             filteredSkins.sort((a, b) => {
@@ -1737,12 +1641,12 @@ html
                     }
                     const dA = parseDate(a.date).getTime();
                     const dB = parseDate(b.date).getTime();
-                    return dB - dA; 
+                    return dB - dA;
                 }
 
                 if (currentSortField === 'name') {
-                    const nameA = a.skinName || '';
-                    const nameB = b.skinName || '';
+                    const nameA = a.skinName || a.name || '';
+                    const nameB = b.skinName || b.name || '';
                     return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
                 }
 
@@ -1752,7 +1656,7 @@ html
                     if (dA !== dB) {
                         return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
                     }
-                    return (a.skinName || '').localeCompare(b.skinName || '');
+                    return (a.skinName || a.name || '').localeCompare(b.skinName || b.name || '');
                 }
                 return 0;
             });
@@ -1766,46 +1670,40 @@ html
                     header.textContent = lastAuthor || 'Не указан';
                     list.appendChild(header);
                 }
-
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
-                item.id = `item-${skin.filename}`;
-                const fullName = skin.skinName || 'Без названия';
+                item.setAttribute('data-filename', skin.filename);
+                const fullName = skin.skinName || skin.name || skin.filename;
                 item.setAttribute('title', fullName);
                 
-                if (skin.filename === currentActiveSkinFilename) {
-                    item.classList.add('active');
-                }
-                
-                const isAlex = skin.model && skin.model.toLowerCase() === 'alex';
-                const badgeColor = isAlex ? '#94C892' : '#00AFAF';
-                const modelType = isAlex ? 'alex' : 'steve';
+                if (skin.filename === currentActiveSkinFilename) item.classList.add('active');
 
+                const isAlex = skin.model && skin.model.toLowerCase() === 'alex';
+                const svgIcon = isAlex 
+                    ? `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><circle cx="12" cy="5" r="3"/><path d="M7 22v-8c0-1.5 2-3 5-3s5 1.5 5 3v8"/><path d="M5 9c-1 0-2 1-2 2v4"/><path d="M19 9c1 0 2 1 2 2v4"/></svg>`
+                    : `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+
+                const badgeHtml = `<div class="model-badge" title="Модель: ${isAlex ? 'Alex' : 'Steve'}" onclick="event.stopPropagation(); setAndRenderTag('type', '${isAlex ? 'alex' : 'steve'}');" style="background-color: var(--bg-hover); display: flex; align-items: center; justify-content: center;">${svgIcon}</div>`;
+                
                 const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
 
                 item.innerHTML = `
+                    ${badgeHtml}
                     ${newBadgeHtml}
-                    <canvas class="canvas-avatar" width="64" height="64"></canvas>
+                    <canvas class="canvas-avatar"></canvas>
                     <span class="skin-name">${fullName}</span>
                     <span class="skin-date">${skin.date || ''}</span>
-                    <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="Тип: ${modelType}"></div>
                 `;
-                
                 list.appendChild(item);
-                
-                const canvas = item.querySelector('.canvas-avatar');
-                drawSkinAvatar(skin.filename, canvas);
 
-                item.onclick = (e) => {
-                    if (e.target.classList.contains('model-badge')) return;
-                    selectSkin(skin.filename, true);
+                item.onclick = () => {
+                    if (currentActiveSkinFilename !== skin.filename) {
+                        selectSkin(skin.filename);
+                    }
                 };
 
-                const badge = item.querySelector('.model-badge');
-                badge.onclick = (e) => {
-                    e.stopPropagation();
-                    setAndRenderTag('type', modelType);
-                };
+                const cvs = item.querySelector('.canvas-avatar');
+                renderSkinAvatar(skin.filename, cvs);
             });
 
             for(let i = 0; i < 4; i++) {
@@ -1815,214 +1713,40 @@ html
             }
         }
 
-        function initSortListeners() {
-            const trigger = document.getElementById('sortTrigger');
-            const menu = document.getElementById('sortMenu');
-
-            if (!trigger || !menu) return;
-
-            trigger.onclick = (e) => {
-                e.stopPropagation();
-                menu.classList.toggle('show');
-                trigger.classList.toggle('active');
-            };
-
-            document.addEventListener('click', () => {
-                menu.classList.remove('show');
-                trigger.classList.remove('active');
-            });
-
-            const updateMenuSelectionVisuals = () => {
-                menu.querySelectorAll('.dropdown-item').forEach(item => {
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-                    
-                    if ((field && field === currentSortField) || (order && order === currentSortOrder)) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            };
-
-            menu.querySelectorAll('.dropdown-item').forEach(item => {
-                item.onclick = (e) => {
-                    e.stopPropagation();
-                    
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-
-                    if (field) currentSortField = field;
-                    if (order) currentSortOrder = order;
-
-                    updateMenuSelectionVisuals();
-                    renderCurrentList();
+        async function renderSkinAvatar(filename, canvas) {
+            try {
+                const dataUrl = await applyMeshTextureTransform('skins', filename);
+                const img = new Image();
+                img.onload = () => {
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = 64; canvas.height = 64;
+                    ctx.imageSmoothingEnabled = false;
+                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
+                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
                 };
-            });
-
-            updateMenuSelectionVisuals();
-        }
-
-        function initAuthLogic() {
-            const modal = document.getElementById('authModal');
-            const btnOpen = document.getElementById('btnAccount');
-            const mobileBtnOpen = document.getElementById('mobileBtnAccount');
-            const btnClose = document.getElementById('authCloseBtn');
-            const btnAction = document.getElementById('authActionBtn');
-            const btnToggle = document.getElementById('authToggleBtn');
-            const title = document.getElementById('authTitle');
-            const emailInput = document.getElementById('authEmail');
-            const passwordInput = document.getElementById('authPassword');
-            const errorDiv = document.getElementById('authError');
-
-            const checkSession = async () => {
-                const { data: { session } } = await supabase.auth.getSession();
-                currentUser = session?.user || null;
-                updateAuthUI();
-            };
-            
-            const updateAuthUI = () => {
-                if (currentUser) {
-                    btnOpen.classList.add('active');
-                    btnOpen.setAttribute('title', 'Выйти из аккаунта');
-                    if (mobileBtnOpen) mobileBtnOpen.textContent = '🚪 Выйти';
-                } else {
-                    btnOpen.classList.remove('active');
-                    btnOpen.setAttribute('title', 'Войти в аккаунт');
-                    if (mobileBtnOpen) mobileBtnOpen.textContent = '👤 Аккаунт';
-                }
-            };
-
-            const toggleModal = async () => {
-                if (currentUser) {
-                    const { error } = await supabase.auth.signOut();
-                    if (!error) {
-                        currentUser = null;
-                        updateAuthUI();
-                    }
-                    return;
-                }
-                modal.classList.add('show');
-                errorDiv.style.display = 'none';
-                emailInput.value = '';
-                passwordInput.value = '';
-            };
-
-            btnOpen.addEventListener('click', toggleModal);
-            if (mobileBtnOpen) mobileBtnOpen.addEventListener('click', toggleModal);
-
-            btnClose.addEventListener('click', () => {
-                modal.classList.remove('show');
-            });
-
-            btnToggle.addEventListener('click', () => {
-                authMode = authMode === 'login' ? 'register' : 'login';
-                title.textContent = authMode === 'login' ? 'Вход' : 'Регистрация';
-                btnAction.textContent = authMode === 'login' ? 'Войти' : 'Создать аккаунт';
-                btnToggle.textContent = authMode === 'login' ? 'Нет аккаунта? Создать' : 'Уже есть аккаунт? Войти';
-                errorDiv.style.display = 'none';
-            });
-
-            btnAction.addEventListener('click', async () => {
-                const email = emailInput.value;
-                const password = passwordInput.value;
-                errorDiv.style.display = 'none';
-
-                if (!email || !password) {
-                    errorDiv.textContent = 'Заполните все поля';
-                    errorDiv.style.display = 'block';
-                    return;
-                }
-
-                btnAction.disabled = true;
-                let result;
-
-                if (authMode === 'register') {
-                    result = await supabase.auth.signUp({ email, password });
-                } else {
-                    result = await supabase.auth.signInWithPassword({ email, password });
-                }
-
-                btnAction.disabled = false;
-
-                if (result.error) {
-                    errorDiv.textContent = result.error.message;
-                    errorDiv.style.display = 'block';
-                } else {
-                    currentUser = result.data.user;
-                    updateAuthUI();
-                    modal.classList.remove('show');
-                }
-            });
-
-            checkSession();
+                img.src = dataUrl;
+            } catch (e) {
+                console.warn(`Не удалось загрузить аватар скина ${filename}`);
+            }
         }
 
         function initControlListeners() {
-            const searchInput = document.getElementById('searchInput');
-            const searchWrapper = document.getElementById('searchWrapper');
-
-            searchWrapper.onclick = (e) => {
-                if (e.target === searchWrapper || e.target === document.getElementById('searchTags')) {
-                    searchInput.focus();
-                }
-            };
-
-            searchInput.oninput = (e) => {
-                searchQuery = e.target.value;
-                renderCurrentList();
-            };
-
-            searchInput.addEventListener('keydown', (e) => {
-                let val = searchInput.value.trim();
-                
-                if (e.key === 'Enter' || e.key === ' ') {
-                    if (val.toLowerCase().startsWith('customer:')) {
-                        const name = val.substring(9).trim();
-                        if (name) {
-                            setAndRenderTag('customer', name);
-                            e.preventDefault();
-                        }
-                    } else if (val.toLowerCase().startsWith('type:')) {
-                        const typeVal = val.substring(5).trim().toLowerCase();
-                        if (typeVal === 'alex' || typeVal === 'steve') {
-                            setAndRenderTag('type', typeVal);
-                            e.preventDefault();
-                        }
-                    }
-                }
-                
-                if (e.key === 'Backspace' && searchInput.value === '' && searchTags.length > 0) {
-                    searchTags.pop();
-                    renderTagsDOM();
-                    renderCurrentList();
-                    input.focus();
-                }
-            });
-
-            document.getElementById('infoCustomer').onclick = function() {
-                if (!this.classList.contains('clickable')) return;
-                setAndRenderTag('customer', this.textContent.trim());
-            };
-
-            document.getElementById('infoAuthor').onclick = function() {
-                if (!this.classList.contains('clickable')) return;
-                const url = this.getAttribute('data-url');
-                if (url && url !== '#') {
-                    window.open(url, '_blank');
-                }
-            };
-
             document.getElementById('tabSkins').onclick = () => {
                 currentTab = 'skins';
                 document.getElementById('tabSkins').classList.add('active');
                 document.getElementById('tabCapes').classList.remove('active');
+                
                 if (currentActiveSkinFilename) {
                     const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
-                    if (skin) updateMetaInfoDisplay(skin);
+                    if (skin) {
+                        updateMetaInfoDisplay(skin);
+                        renderVariationsPanel(skin, currentLoadedTextureFilename);
+                    }
                 } else {
                     clearMetaInfoDisplay();
+                    document.getElementById('variations_container').style.display = 'none';
                 }
+                
                 renderCurrentList();
             };
 
@@ -2030,306 +1754,373 @@ html
                 currentTab = 'capes';
                 document.getElementById('tabCapes').classList.add('active');
                 document.getElementById('tabSkins').classList.remove('active');
+                document.getElementById('variations_container').style.display = 'none';
+                
                 if (currentCapeFilename) {
                     const cape = globalCapes.find(c => c.filename === currentCapeFilename);
                     if (cape) updateMetaInfoDisplay(cape);
                 } else {
                     clearMetaInfoDisplay();
                 }
+                
                 renderCurrentList();
             };
 
-            document.getElementById('elytra_toggle').onchange = async (e) => {
-                elytraEnabled = e.target.checked;
-                await updateBackEquipment();
+            const searchInput = document.getElementById('searchInput');
+            const searchWrapper = document.getElementById('searchWrapper');
+            
+            searchWrapper.onclick = () => {
+                searchInput.focus();
             };
+            
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                renderCurrentList();
+            });
+            
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && searchQuery === '' && searchTags.length > 0) {
+                    searchTags.pop();
+                    renderTagsDOM();
+                    renderCurrentList();
+                }
+            });
+
+            document.getElementById('infoCustomer').addEventListener('click', (e) => {
+                if (e.target.classList.contains('clickable')) {
+                    setAndRenderTag('customer', e.target.textContent);
+                }
+            });
+            
+            document.getElementById('infoAuthor').addEventListener('click', (e) => {
+                if (e.target.classList.contains('clickable')) {
+                    const url = e.target.getAttribute('data-url');
+                    if (url && url !== '#') {
+                        window.open(url, '_blank');
+                    }
+                }
+            });
+
+            document.getElementById('btnListView').onclick = () => {
+                document.getElementById('skinList').classList.remove('view-grid');
+                document.getElementById('skinList').classList.add('view-list');
+                document.getElementById('btnListView').classList.add('active');
+                document.getElementById('btnGridView').classList.remove('active');
+            };
+            document.getElementById('btnGridView').onclick = () => {
+                document.getElementById('skinList').classList.remove('view-list');
+                document.getElementById('skinList').classList.add('view-grid');
+                document.getElementById('btnGridView').classList.add('active');
+                document.getElementById('btnListView').classList.remove('active');
+            };
+
+            const sortTrigger = document.getElementById('sortTrigger');
+            const sortMenu = document.getElementById('sortMenu');
+            sortTrigger.onclick = (e) => {
+                e.stopPropagation();
+                sortMenu.classList.toggle('show');
+                sortTrigger.classList.toggle('active');
+            };
+            document.addEventListener('click', () => {
+                sortMenu.classList.remove('show');
+                sortTrigger.classList.remove('active');
+            });
+
+            sortMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    if (item.dataset.field) {
+                        currentSortField = item.dataset.field;
+                        sortMenu.querySelectorAll('[data-field]').forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                    } else if (item.dataset.order) {
+                        currentSortOrder = item.dataset.order;
+                        sortMenu.querySelectorAll('[data-order]').forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                    }
+                    sortMenu.classList.remove('show');
+                    sortTrigger.classList.remove('active');
+                    renderCurrentList();
+                };
+            });
+            
+            document.querySelector(`[data-field="default"]`).classList.add('active');
+            document.querySelector(`[data-order="desc"]`).classList.add('active');
 
             document.getElementById('reset_all').onclick = () => {
-                if (!skinViewer) return;
-                
-                skinViewer.autoRotate = false;
-                document.getElementById('auto_rotate').checked = false;
-                document.getElementById('pause_animation').checked = false;
-                
-                currentRotationSpeed = 1.0;
-                skinViewer.autoRotateSpeed = currentRotationSpeed;
-                document.getElementById('rotate_speed').value = 1.0;
-                document.getElementById('rotate_speed_val').textContent = '1.0';
-                
-                currentAnimationSpeed = 1.0;
-                if (skinViewer.animation) {
-                    skinViewer.animation.speed = currentAnimationSpeed;
-                    skinViewer.animation.paused = false;
-                }
-                document.getElementById('anim_speed').value = 1.0;
-                document.getElementById('anim_speed_val').textContent = '1.0';
-                
-                if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0;
-                    skinViewer.playerObject.rotation.z = 0;
-                }
+                if (skinViewer) {
+                    skinViewer.playerObject.rotation.set(0, 0, 0);
+                    skinViewer.playerObject.position.set(0, 0, 0);
+                    skinViewer.camera.position.set(0, 0, 40);
+                    
+                    document.getElementById('auto_rotate').checked = false;
+                    skinViewer.autoRotate = false;
+                    
+                    document.getElementById('rotate_speed').value = 1.0;
+                    currentRotationSpeed = 1.0;
+                    skinViewer.autoRotateSpeed = 1.0;
+                    document.getElementById('rotate_speed_val').textContent = "1.0";
+                    
+                    document.querySelector('input[name="animation"][value="none"]').checked = true;
+                    setAnimation('none');
+                    document.getElementById('pause_animation').checked = false;
+                    if (skinViewer.animations.length > 0) {
+                        skinViewer.animations[0].paused = false;
+                    }
+                    
+                    document.getElementById('anim_speed').value = 1.0;
+                    currentAnimationSpeed = 1.0;
+                    document.getElementById('anim_speed_val').textContent = "1.0";
+                    if (skinViewer.animations.length > 0) {
+                        skinViewer.animations[0].speed = 1.0;
+                    }
 
-                currentCapeFilename = null;
-                elytraEnabled = false;
-                document.getElementById('elytra_toggle').checked = false;
-                skinViewer.loadCape(null);
-                
-                searchTags = [];
-                searchQuery = '';
-                searchInput.value = '';
-                renderTagsDOM();
-                
-                currentSortField = 'default';
-                currentSortOrder = 'desc';
-                initSortListeners();
-                
-                renderCurrentList();
-                
-                skinViewer.controls.reset();
-                skinViewer.controls.alpha = 0; 
-                skinViewer.controls.beta = 0;
-                skinViewer.controls.target.set(0, -2, 0); 
-                skinViewer.camera.position.set(0, 0, 60);
+                    document.getElementById('layer_head').checked = true;
+                    document.getElementById('layer_body').checked = true;
+                    if (skinViewer.playerObject && skinViewer.playerObject.skin) {
+                        skinViewer.playerObject.skin.head.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.head.outerLayer.visible = true;
+                        skinViewer.playerObject.skin.body.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.body.outerLayer.visible = true;
+                        skinViewer.playerObject.skin.leftArm.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.leftArm.outerLayer.visible = true;
+                        skinViewer.playerObject.skin.rightArm.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.rightArm.outerLayer.visible = true;
+                        skinViewer.playerObject.skin.leftLeg.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.leftLeg.outerLayer.visible = true;
+                        skinViewer.playerObject.skin.rightLeg.innerLayer.visible = true;
+                        skinViewer.playerObject.skin.rightLeg.outerLayer.visible = true;
+                    }
 
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
-                }
-            };
-
-            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
-
-            document.getElementById('pause_animation').onchange = (e) => {
-                if (skinViewer && skinViewer.animation) {
-                    skinViewer.animation.paused = e.target.checked;
+                    document.getElementById('elytra_toggle').checked = false;
+                    elytraEnabled = false;
+                    updateBackEquipment();
+                    
+                    setBgPreset(bgPresets[0], document.querySelector('.bg-dot'));
                 }
             };
 
-            const rotateSpeedInput = document.getElementById('rotate_speed');
-            const rotateSpeedVal = document.getElementById('rotate_speed_val');
-            rotateSpeedInput.oninput = (e) => {
+            const autoRotate = document.getElementById('auto_rotate');
+            autoRotate.onchange = e => { if (skinViewer) skinViewer.autoRotate = e.target.checked; };
+
+            const rotSpeed = document.getElementById('rotate_speed');
+            const rotSpeedVal = document.getElementById('rotate_speed_val');
+            rotSpeed.oninput = e => {
                 currentRotationSpeed = parseFloat(e.target.value);
-                rotateSpeedVal.textContent = currentRotationSpeed.toFixed(1);
+                rotSpeedVal.textContent = currentRotationSpeed.toFixed(1);
                 if (skinViewer) skinViewer.autoRotateSpeed = currentRotationSpeed;
             };
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
-                radio.onchange = (e) => {
-                    currentAnimationType = e.target.value;
-                    if (currentActiveSkinFilename) {
-                        selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
-                    } else {
-                        applyAnimation();
-                    }
+                radio.onchange = e => {
+                    if (e.target.checked) setAnimation(e.target.value);
                 };
             });
 
-            const animSpeedInput = document.getElementById('anim_speed');
+            const animSpeed = document.getElementById('anim_speed');
             const animSpeedVal = document.getElementById('anim_speed_val');
-            animSpeedInput.oninput = (e) => {
+            animSpeed.oninput = e => {
                 currentAnimationSpeed = parseFloat(e.target.value);
                 animSpeedVal.textContent = currentAnimationSpeed.toFixed(1);
-                if (skinViewer && skinViewer.animation) {
-                    skinViewer.animation.speed = currentAnimationSpeed;
+                if (skinViewer && skinViewer.animations.length > 0) {
+                    skinViewer.animations[0].speed = currentAnimationSpeed;
                 }
             };
 
-            const updateLayers = () => {
-                if (!skinViewer) return;
-                const headVisible = document.getElementById('layer_head').checked;
-                const bodyVisible = document.getElementById('layer_body').checked;
-                skinViewer.playerObject.skin.head.outerLayer.visible = headVisible;
-                skinViewer.playerObject.skin.body.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightArm.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.leftLeg.outerLayer.visible = bodyVisible;
-                skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
-            };
-
-            document.getElementById('layer_head').onchange = updateLayers;
-            document.getElementById('layer_body').onchange = updateLayers;
-            window.refreshLayers = updateLayers;
-
-            document.getElementById('btnListView').onclick = () => {
-                document.getElementById('btnListView').classList.add('active');
-                document.getElementById('btnGridView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-list';
-            };
-            document.getElementById('btnGridView').onclick = () => {
-                document.getElementById('btnGridView').classList.add('active');
-                document.getElementById('btnListView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-grid';
-            };
-
-            const btnSidebar = document.getElementById('mobileBtnSidebar');
-            const btnControls = document.getElementById('mobileBtnControls');
-            const btnAccount = document.getElementById('mobileBtnAccount');
-            const sidebar = document.getElementById('sidebar');
-            const controls = document.getElementById('controls_panel');
-            const viewerZone = document.getElementById('viewer_zone');
-            const mobileNav = document.getElementById('mobile_nav');
-
-            function animateViewerResize() {
-                let start = null;
-                const duration = 300; 
-                function step(timestamp) {
-                    if (!start) start = timestamp;
-                    updateViewerSize();
-                    if (timestamp - start < duration) {
-                        requestAnimationFrame(step);
-                    } else {
-                        updateViewerSize();
-                    }
+            const pauseAnim = document.getElementById('pause_animation');
+            pauseAnim.onchange = e => {
+                if (skinViewer && skinViewer.animations.length > 0) {
+                    skinViewer.animations[0].paused = e.target.checked;
                 }
-                requestAnimationFrame(step);
-            }
+            };
 
-            function closeAllMobilePanels() {
-                if (sidebar) sidebar.classList.remove('mobile-open');
-                if (controls) controls.classList.remove('mobile-open');
-                if (btnSidebar) btnSidebar.classList.remove('active');
-                if (btnControls) btnControls.classList.remove('active');
-                if (btnAccount) btnAccount.classList.remove('active');
-                if (viewerZone) viewerZone.classList.remove('mobile-shrunk');
-                if (mobileNav) mobileNav.classList.remove('hidden'); 
-                animateViewerResize();
-            }
+            document.getElementById('layer_head').onchange = e => {
+                if (skinViewer && skinViewer.playerObject && skinViewer.playerObject.skin) {
+                    skinViewer.playerObject.skin.head.outerLayer.visible = e.target.checked;
+                }
+            };
 
-            if (btnSidebar && btnControls) {
-                btnSidebar.onclick = (e) => {
-                    e.stopPropagation();
-                    if (sidebar.classList.contains('mobile-open')) {
-                        closeAllMobilePanels();
-                    } else {
-                        closeAllMobilePanels();
-                        sidebar.classList.add('mobile-open');
-                        btnSidebar.classList.add('active');
-                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
-                        animateViewerResize();
-                    }
-                };
+            document.getElementById('layer_body').onchange = e => {
+                if (skinViewer && skinViewer.playerObject && skinViewer.playerObject.skin) {
+                    skinViewer.playerObject.skin.body.outerLayer.visible = e.target.checked;
+                    skinViewer.playerObject.skin.leftArm.outerLayer.visible = e.target.checked;
+                    skinViewer.playerObject.skin.rightArm.outerLayer.visible = e.target.checked;
+                    skinViewer.playerObject.skin.leftLeg.outerLayer.visible = e.target.checked;
+                    skinViewer.playerObject.skin.rightLeg.outerLayer.visible = e.target.checked;
+                }
+            };
 
-                btnControls.onclick = (e) => {
-                    e.stopPropagation();
-                    if (controls.classList.contains('mobile-open')) {
-                        closeAllMobilePanels();
-                    } else {
-                        closeAllMobilePanels();
-                        controls.classList.add('mobile-open');
-                        btnControls.classList.add('active');
-                        if (viewerZone) viewerZone.classList.add('mobile-shrunk');
-                        animateViewerResize();
-                    }
-                };
-            }
+            document.getElementById('elytra_toggle').onchange = async e => {
+                elytraEnabled = e.target.checked;
+                await updateBackEquipment();
+            };
 
-            document.addEventListener('click', (e) => {
+            document.getElementById('mobileBtnSidebar').onclick = () => {
+                document.getElementById('sidebar').classList.add('mobile-open');
+                document.getElementById('controls_panel').classList.remove('mobile-open');
+                document.getElementById('viewer_zone').classList.add('mobile-shrunk');
+                
+                document.getElementById('mobileBtnSidebar').classList.add('active');
+                document.getElementById('mobileBtnControls').classList.remove('active');
+                
+                setTimeout(() => { updateViewerSize(); }, 300);
+            };
+
+            document.getElementById('mobileBtnControls').onclick = () => {
+                document.getElementById('controls_panel').classList.add('mobile-open');
+                document.getElementById('sidebar').classList.remove('mobile-open');
+                document.getElementById('viewer_zone').classList.add('mobile-shrunk');
+                
+                document.getElementById('mobileBtnControls').classList.add('active');
+                document.getElementById('mobileBtnSidebar').classList.remove('active');
+                
+                setTimeout(() => { updateViewerSize(); }, 300);
+            };
+
+            document.getElementById('viewer_zone').onclick = () => {
                 if (window.innerWidth <= 900) {
-                    if (sidebar && !sidebar.contains(e.target) && 
-                        controls && !controls.contains(e.target) && 
-                        btnSidebar && !btnSidebar.contains(e.target) && 
-                        btnControls && !btnControls.contains(e.target) &&
-                        !document.getElementById('sortMenu').contains(e.target) &&
-                        !document.getElementById('authModal').contains(e.target)) {
-                        if (sidebar.classList.contains('mobile-open') || controls.classList.contains('mobile-open')) {
-                            closeAllMobilePanels();
-                        }
-                    }
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                    document.getElementById('controls_panel').classList.remove('mobile-open');
+                    document.getElementById('viewer_zone').classList.remove('mobile-shrunk');
+                    
+                    document.getElementById('mobileBtnSidebar').classList.remove('active');
+                    document.getElementById('mobileBtnControls').classList.remove('active');
+                    
+                    setTimeout(() => { updateViewerSize(); }, 300);
                 }
+            };
+        }
+
+        function setAnimation(type) {
+            currentAnimationType = type;
+            if (!skinViewer) return;
+            skinViewer.animations.removeAll();
+            document.getElementById('pause_animation').checked = false;
+            
+            let anim = null;
+            if (type === 'walk') anim = skinViewer.animations.add(skinview3d.WalkingAnimation);
+            else if (type === 'run') anim = skinViewer.animations.add(skinview3d.RunningAnimation);
+            else if (type === 'fly') anim = skinViewer.animations.add(skinview3d.FlyingAnimation);
+
+            if (anim) {
+                anim.speed = currentAnimationSpeed;
+            }
+        }
+
+        function setBgPreset(preset, el) {
+            const container = document.getElementById('viewer_zone');
+            container.style.background = preset.value;
+            
+            document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
+            if (el) el.classList.add('active');
+        }
+
+        function buildBackgroundSelector() {
+            const grid = document.getElementById('bgGrid');
+            grid.innerHTML = '';
+            
+            bgPresets.forEach((p, idx) => {
+                const dot = document.createElement('div');
+                dot.classList.add('bg-dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.style.background = p.value;
+                dot.title = p.name;
+                dot.onclick = () => setBgPreset(p, dot);
+                grid.appendChild(dot);
             });
 
-            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
+            const customDot = document.createElement('div');
+            customDot.classList.add('bg-dot', 'custom-color-btn');
+            customDot.title = 'Свой цвет';
             
-            scrollContainers.forEach(container => {
-                if (!container) return;
-                container.lastScrollTop = 0;
-                container.addEventListener('scroll', (e) => {
-                    if (window.innerWidth <= 900) {
-                        const st = e.target.scrollTop;
-                        if (st > container.lastScrollTop && st > 15) {
-                            mobileNav.classList.add('hidden');
-                        } else if (st < container.lastScrollTop) {
-                            mobileNav.classList.remove('hidden');
-                        }
-                        container.lastScrollTop = st <= 0 ? 0 : st;
+            const colorInput = document.createElement('input');
+            colorInput.type = 'color';
+            colorInput.value = '#1c1c24';
+            
+            colorInput.oninput = (e) => {
+                const color = e.target.value;
+                const val = `radial-gradient(circle at center, ${color} 0%, #000000 100%)`;
+                setBgPreset({ value: val }, customDot);
+            };
+            
+            customDot.appendChild(colorInput);
+            grid.appendChild(customDot);
+        }
+
+        async function fetchSkinsData() {
+            try {
+                const r = await fetch('skins.json');
+                const data = await r.json();
+                
+                globalSkins = data.skins || [];
+                globalSkins.forEach((item, index) => {
+                    item.originalIndex = globalSkins.length - index;
+                });
+                
+                globalCapes = data.capes || [];
+                globalCapes.forEach((item, index) => {
+                    item.originalIndex = globalCapes.length - index;
+                });
+                
+                const urlParams = new URLSearchParams(window.location.search);
+                const requestedSkin = urlParams.get('skin');
+                
+                renderCurrentList();
+
+                if (globalSkins.length > 0) {
+                    let skinToLoad = globalSkins[0].filename; 
+                    if (requestedSkin && globalSkins.find(s => s.filename === requestedSkin)) {
+                        skinToLoad = requestedSkin;
                     }
-                }, { passive: true });
-            });
+                    await selectSkin(skinToLoad, !!requestedSkin);
+                } else {
+                    document.getElementById('loading').textContent = "Нет доступных скинов.";
+                }
+            } catch (err) {
+                console.error("Ошибка загрузки skins.json:", err);
+                document.getElementById('loading').textContent = "Не удалось загрузить базу скинов.";
+            }
         }
 
         function initAgreementModal() {
-            const modal = document.getElementById('agreementModal');
-            const checkbox = document.getElementById('agreementCheckbox');
-            const btn = document.getElementById('agreementBtn');
+            const hasAgreed = localStorage.getItem('galleryAgreementV2') === 'true';
             
-            if (!modal || !checkbox || !btn) return;
-
-            const acceptedTime = localStorage.getItem('agreementAccepted');
-            const now = Date.now();
-            
-            const expiryPeriod = 7 * 24 * 60 * 60 * 1000; 
-
-            if (acceptedTime && (now - parseInt(acceptedTime, 10) < expiryPeriod)) {
-                modal.remove(); 
-                return;
-            }
-
-            modal.classList.add('show');
-
-            checkbox.addEventListener('change', () => {
-                btn.disabled = !checkbox.checked;
-            });
-
-            btn.addEventListener('click', () => {
-                if (checkbox.checked) {
-                    localStorage.setItem('agreementAccepted', Date.now());
-                    modal.classList.remove('show');
-                    setTimeout(() => modal.remove(), 300); 
-                }
-            });
-        }
-
-        async function loadAllJSONData() {
-            try {
-                const responseSkins = await fetch('skins.json?v=' + Math.random());
-                globalSkins = await responseSkins.json();
-                globalSkins.forEach((skin, idx) => skin.originalIndex = idx);
-
-                try {
-                    const responseCapes = await fetch('capes.json?v=' + Math.random());
-                    globalCapes = await responseCapes.json();
-                    globalCapes.forEach((cape, idx) => cape.originalIndex = idx);
-                } catch(e) {
-                    console.warn("Не удалось прочесть capes.json.");
-                    globalCapes = [];
-                }
-
-                const params = new URLSearchParams(window.location.search);
-                let activeSkin = params.get('skin');
-
-                if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
-                    activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
-                }
+            if (!hasAgreed) {
+                const modal = document.getElementById('agreementModal');
+                const checkbox = document.getElementById('agreementCheckbox');
+                const btn = document.getElementById('agreementBtn');
+                const mobileNav = document.getElementById('mobile_nav');
                 
-                currentActiveSkinFilename = activeSkin;
+                mobileNav.classList.add('hidden');
+                
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 100);
 
-                initViewer();
-                initAgreementModal();
-                initAuthLogic(); // <- Инициализация логики входа
-                initSortListeners();
-                renderTagsDOM();
-                renderCurrentList();
+                checkbox.addEventListener('change', (e) => {
+                    btn.disabled = !e.target.checked;
+                });
 
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
-                }
-
-            } catch (err) {
-                document.getElementById('loading').textContent = "Не удалось прочесть конфигурационные файлы JSON.";
+                btn.addEventListener('click', () => {
+                    localStorage.setItem('galleryAgreementV2', 'true');
+                    modal.classList.remove('show');
+                    
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        mobileNav.classList.remove('hidden');
+                    }, 300);
+                });
+            } else {
+                document.getElementById('agreementModal').style.display = 'none';
             }
         }
 
-        window.onload = loadAllJSONData;
+        window.onload = () => {
+            initAgreementModal();
+            initViewer();
+            fetchSkinsData();
+        };
+
     </script>
 </body>
 </html>
