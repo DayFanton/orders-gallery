@@ -1,3 +1,4 @@
+html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,8 +9,11 @@
     
     <link rel="icon" href="data:,">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
+    <!-- Supabase -->
+    <script src="[https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2](https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2)"></script>
+    
+    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
+    <script src="[https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js](https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js)"></script>
 
     <style>
         :root {
@@ -625,6 +629,24 @@
 
         .btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
 
+        .auth-input {
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 10px 12px;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+        
+        .auth-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15);
+        }
+
         .checkbox-label {
             display: flex;
             align-items: center;
@@ -717,8 +739,8 @@
             width: 16px;
             height: 16px;
             background-color: #fff;
-            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
-            -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>") no-repeat center;
         }
         .bg-dot.custom-color-btn input[type="color"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
 
@@ -935,6 +957,11 @@
         <div class="sidebar-header">
             <span class="section-title">Галерея</span>
             <div class="header-controls">
+                
+                <button class="sort-trigger-btn" id="btnAccount" title="Войти в аккаунт">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </button>
+
                 <div class="dropdown-sort">
                     <button class="sort-trigger-btn" id="sortTrigger">
                         <span>Сортировка</span>
@@ -988,7 +1015,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.4.1</div>
+            <div class="site-version">v1.5.0</div>
         </div>
     </div>
 
@@ -1084,6 +1111,7 @@
 
     <div id="mobile_nav">
         <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
+        <button id="mobileBtnAccount" class="mobile-nav-btn">👤 Аккаунт</button>
         <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
     </div>
 
@@ -1103,7 +1131,32 @@
         </div>
     </div>
 
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 400px; padding: 24px;">
+            <h3 id="authTitle">Вход</h3>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin: 20px 0;">
+                <input type="email" id="authEmail" class="auth-input" placeholder="Email">
+                <input type="password" id="authPassword" class="auth-input" placeholder="Пароль">
+                <div id="authError" style="color: #ef4444; font-size: 0.85rem; display: none;"></div>
+            </div>
+            <div class="modal-footer" style="gap: 12px;">
+                <button id="authActionBtn" class="btn">Войти</button>
+                <button id="authToggleBtn" class="btn" style="background: transparent; border-color: transparent; color: var(--text-muted); font-size: 0.8rem; padding: 4px;">Нет аккаунта? Создать</button>
+                <button id="authCloseBtn" class="btn" style="background: transparent; border-color: var(--border); margin-top: 8px;">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // === ИНИЦИАЛИЗАЦИЯ SUPABASE ===
+        // Вставь сюда свои ключи из панели Supabase
+        const SUPABASE_URL = 'ТВОЙ_SUPABASE_URL';
+        const SUPABASE_ANON_KEY = 'ТВОЙ_SUPABASE_ANON_KEY';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        let currentUser = null;
+        let authMode = 'login'; // 'login' или 'register'
+
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
@@ -1124,7 +1177,7 @@
         let searchTags = []; 
         let searchQuery = ''; 
 
-        const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
+        const DEFAULT_ELYTRA_URL = "[https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png](https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png)";
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -1292,8 +1345,6 @@
             searchQuery = '';
             document.getElementById('searchInput').value = '';
             renderTagsDOM();
-            
-            // Исправлено: Больше не переключаем принудительно на вкладку 'skins', сохраняя текущую выбранную вкладку пользователя.
             
             if (currentTab === 'skins' && currentActiveSkinFilename) {
                 const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
@@ -1812,6 +1863,101 @@
             updateMenuSelectionVisuals();
         }
 
+        function initAuthLogic() {
+            const modal = document.getElementById('authModal');
+            const btnOpen = document.getElementById('btnAccount');
+            const mobileBtnOpen = document.getElementById('mobileBtnAccount');
+            const btnClose = document.getElementById('authCloseBtn');
+            const btnAction = document.getElementById('authActionBtn');
+            const btnToggle = document.getElementById('authToggleBtn');
+            const title = document.getElementById('authTitle');
+            const emailInput = document.getElementById('authEmail');
+            const passwordInput = document.getElementById('authPassword');
+            const errorDiv = document.getElementById('authError');
+
+            const checkSession = async () => {
+                const { data: { session } } = await supabase.auth.getSession();
+                currentUser = session?.user || null;
+                updateAuthUI();
+            };
+            
+            const updateAuthUI = () => {
+                if (currentUser) {
+                    btnOpen.classList.add('active');
+                    btnOpen.setAttribute('title', 'Выйти из аккаунта');
+                    if (mobileBtnOpen) mobileBtnOpen.textContent = '🚪 Выйти';
+                } else {
+                    btnOpen.classList.remove('active');
+                    btnOpen.setAttribute('title', 'Войти в аккаунт');
+                    if (mobileBtnOpen) mobileBtnOpen.textContent = '👤 Аккаунт';
+                }
+            };
+
+            const toggleModal = async () => {
+                if (currentUser) {
+                    const { error } = await supabase.auth.signOut();
+                    if (!error) {
+                        currentUser = null;
+                        updateAuthUI();
+                    }
+                    return;
+                }
+                modal.classList.add('show');
+                errorDiv.style.display = 'none';
+                emailInput.value = '';
+                passwordInput.value = '';
+            };
+
+            btnOpen.addEventListener('click', toggleModal);
+            if (mobileBtnOpen) mobileBtnOpen.addEventListener('click', toggleModal);
+
+            btnClose.addEventListener('click', () => {
+                modal.classList.remove('show');
+            });
+
+            btnToggle.addEventListener('click', () => {
+                authMode = authMode === 'login' ? 'register' : 'login';
+                title.textContent = authMode === 'login' ? 'Вход' : 'Регистрация';
+                btnAction.textContent = authMode === 'login' ? 'Войти' : 'Создать аккаунт';
+                btnToggle.textContent = authMode === 'login' ? 'Нет аккаунта? Создать' : 'Уже есть аккаунт? Войти';
+                errorDiv.style.display = 'none';
+            });
+
+            btnAction.addEventListener('click', async () => {
+                const email = emailInput.value;
+                const password = passwordInput.value;
+                errorDiv.style.display = 'none';
+
+                if (!email || !password) {
+                    errorDiv.textContent = 'Заполните все поля';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+
+                btnAction.disabled = true;
+                let result;
+
+                if (authMode === 'register') {
+                    result = await supabase.auth.signUp({ email, password });
+                } else {
+                    result = await supabase.auth.signInWithPassword({ email, password });
+                }
+
+                btnAction.disabled = false;
+
+                if (result.error) {
+                    errorDiv.textContent = result.error.message;
+                    errorDiv.style.display = 'block';
+                } else {
+                    currentUser = result.data.user;
+                    updateAuthUI();
+                    modal.classList.remove('show');
+                }
+            });
+
+            checkSession();
+        }
+
         function initControlListeners() {
             const searchInput = document.getElementById('searchInput');
             const searchWrapper = document.getElementById('searchWrapper');
@@ -2017,6 +2163,7 @@
 
             const btnSidebar = document.getElementById('mobileBtnSidebar');
             const btnControls = document.getElementById('mobileBtnControls');
+            const btnAccount = document.getElementById('mobileBtnAccount');
             const sidebar = document.getElementById('sidebar');
             const controls = document.getElementById('controls_panel');
             const viewerZone = document.getElementById('viewer_zone');
@@ -2042,6 +2189,7 @@
                 if (controls) controls.classList.remove('mobile-open');
                 if (btnSidebar) btnSidebar.classList.remove('active');
                 if (btnControls) btnControls.classList.remove('active');
+                if (btnAccount) btnAccount.classList.remove('active');
                 if (viewerZone) viewerZone.classList.remove('mobile-shrunk');
                 if (mobileNav) mobileNav.classList.remove('hidden'); 
                 animateViewerResize();
@@ -2081,7 +2229,8 @@
                         controls && !controls.contains(e.target) && 
                         btnSidebar && !btnSidebar.contains(e.target) && 
                         btnControls && !btnControls.contains(e.target) &&
-                        !document.getElementById('sortMenu').contains(e.target)) {
+                        !document.getElementById('sortMenu').contains(e.target) &&
+                        !document.getElementById('authModal').contains(e.target)) {
                         if (sidebar.classList.contains('mobile-open') || controls.classList.contains('mobile-open')) {
                             closeAllMobilePanels();
                         }
@@ -2165,7 +2314,8 @@
                 currentActiveSkinFilename = activeSkin;
 
                 initViewer();
-                initAgreementModal(); 
+                initAgreementModal();
+                initAuthLogic(); // <- Инициализация логики входа
                 initSortListeners();
                 renderTagsDOM();
                 renderCurrentList();
