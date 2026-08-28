@@ -1,4 +1,17 @@
 [
+   {
+    "filename": "day_usher",
+    "skinName": "Дэй билетёр",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "19.08.2026",
+    "model": "steve",
+    "new": true,
+            "variations": [
+    { "name": "В очках", "filename": "day_usher_with_glasses" }
+  ]
+  },
   {
     "filename": "day_spring26",
     "skinName": "Дэй весенний 2026",
