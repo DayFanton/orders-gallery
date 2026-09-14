@@ -1,5 +1,25 @@
 [
    {
+    "filename": "day_halloween26",
+    "skinName": "Дэй хэллоуинский 2026",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "21.08.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
+    "filename": "sguhenka_autumn26",
+    "skinName": "Сгущёнка осенний 2026",
+    "customer": "Сгущёнка",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "19.08.2026",
+    "model": "alex",
+    "new": true
+   },
+   {
     "filename": "day_usher",
     "skinName": "Дэй билетёр",
     "customer": "Эппоп",
