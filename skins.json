@@ -10,6 +10,26 @@
     "new": true
    },
    {
+    "filename": "day_tester",
+    "skinName": "Дэй испытатель",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.08.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
+    "filename": "sguhenka_icy_raspberry",
+    "skinName": "Сгущёнка ледяная малина",
+    "customer": "Сгущёнка",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.08.2026",
+    "model": "alex",
+    "new": true
+   },
+   {
     "filename": "sguhenka_autumn26",
     "skinName": "Сгущёнка осенний 2026",
     "customer": "Сгущёнка",
