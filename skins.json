@@ -46,8 +46,7 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "19.08.2026",
-    "model": "steve",
-    "new": true,
+    "model": "steve"
             "variations": [
     { "name": "В очках", "filename": "day_usher_with_glasses" }
   ]
@@ -58,8 +57,7 @@
     "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
-    "date": "16.06.2026",
-    "model": "steve",
+    "date": "16.06.2026"
     "new": true
   },
   {
@@ -69,8 +67,7 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.08.2026",
-    "model": "steve",
-    "new": true
+    "model": "steve"
   },
   {
     "filename": "day_apocalypse",
