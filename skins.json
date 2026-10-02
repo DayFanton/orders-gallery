@@ -20,6 +20,16 @@
     "new": true
    },
    {
+    "filename": "ger_halloween26",
+    "skinName": "Гэр хэллоуинская 2026",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "01.10.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
     "filename": "day_wanderer",
     "skinName": "Дэй странник",
     "customer": "Эппоп",
@@ -50,6 +60,16 @@
     "new": true
    },
    {
+    "filename": "ger_explorer",
+    "skinName": "Гэр исследовательница",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "09.09.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
     "filename": "day_usher",
     "skinName": "Дэй билетёр",
     "customer": "Эппоп",
@@ -71,6 +91,18 @@
     "model": "steve"
   },
   {
+    "filename": "ger_bedrock_redesign",
+    "skinName": "Гэр бедроковая",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.09.2026",
+    "model": "steve",
+            "variations": [
+    { "name": "Изначальная", "filename": "ger_bedrock" }
+  ]
+  },
+  {
     "filename": "day_autumn26",
     "skinName": "Дэй осенний 2026",
     "customer": "Эппоп",
@@ -87,6 +119,29 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "19.12.2025",
     "model": "steve"
+  },
+  {
+    "filename": "ger_apocalypse",
+    "skinName": "Гэр апокалипсис",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "13.12.2025",
+    "model": "steve"
+  },
+{
+    "filename": "ger_rabbit_redesign",
+    "skinName": "Гэр кролик",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "22.09.2026",
+    "model": "alex",
+            "variations": [
+    { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
+    { "name": "Изначальная", "filename": "ger_rabbit" },
+    "new": true
+  ]
   },
   {
     "filename": "leah_apocalypse",
@@ -257,6 +312,15 @@
     "model": "steve"
   },
   {
+    "filename": "ger_ny23",
+    "skinName": "Гэр новогодняя 2023",
+    "customer": "Гэр",
+    "author": "Эппоп",
+    "authorUrl": "https://t.me/day_fanton",
+    "date": "02.01.2023",
+    "model": "steve"
+  },
+  {
     "filename": "eppop_in_armor",
     "skinName": "Эппоп в броне",
     "customer": "Эппоп",
@@ -386,6 +450,15 @@
     "model": "steve"
   },
   {
+    "filename": "ger_guard",
+    "skinName": "Гэр охранница",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "05.11.2023",
+    "model": "steve"
+  },
+  {
     "filename": "day_golden",
     "skinName": "Дэй Голден",
     "customer": "Эппоп",
@@ -401,6 +474,15 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "29.10.2021",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_halloween21",
+    "skinName": "Гэр хэллоуинская 2021",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "04.11.2021",
     "model": "steve"
   },
   {
@@ -509,6 +591,15 @@
     "model": "steve"
   },
   {
+    "filename": "ger_spring21",
+    "skinName": "Гэр весенняя 2021",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "08.10.2021",
+    "model": "steve"
+  },
+  {
     "filename": "demon_in_white_suit",
     "skinName": "Демон в белом костюме",
     "customer": "Виакор",
@@ -537,6 +628,24 @@
         "variations": [
     { "name": "Без рубашки", "filename": "sgushenka_shirtless" }
   ]
+  },
+  {
+    "filename": "ger_wedding",
+    "skinName": "Гэр свадебная",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "17.04.2021",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_dictator",
+    "skinName": "Гэр диктатор",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "27.11.2021",
+    "model": "steve"
   },
   {
     "filename": "yana",
@@ -584,12 +693,57 @@
     "model": "steve"
   },
   {
+    "filename": "ger_ny21",
+    "skinName": "Гэр новогодняя 2021",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "08.02.2021",
+    "model": "alex"
+  },
+  {
+    "filename": "ger_herobrine",
+    "skinName": "Гэр Херобрин",
+    "customer": "Гэр",
+    "author": "Эппоп",
+    "authorUrl": "https://t.me/day_fanton",
+    "date": "01.05.2023",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_venom",
+    "skinName": "Гэр Веном",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "23.10.2020",
+    "model": "steve"
+  },
+  {
     "filename": "day_deadpool",
     "skinName": "Дэй Дэдпул",
     "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "05.10.2020",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_epic",
+    "skinName": "Гэр эпичная",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "10.07.2020",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_in_swimsuit",
+    "skinName": "Гэр в купальнике",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "ger_in_swimsuit",
     "model": "steve"
   },
   {
@@ -611,6 +765,15 @@
     "model": "steve"
   },
   {
+    "filename": "ger_prisoner",
+    "skinName": "Гэр заключённая",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "28.10.2023",
+    "model": "steve"
+  },
+  {
     "filename": "sevenz",
     "skinName": "Севенз",
     "customer": "Севенз",
@@ -620,12 +783,60 @@
     "model": "steve"
   },
   {
+    "filename": "ger_demon_skeleton",
+    "skinName": "Гэр демон-скелет",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "29.10.2019",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_epic_skeleton",
+    "skinName": "Гэр эпик-скелет",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "27.07.2019",
+    "model": "steve"
+  },
+  {
+    "filename": "Гэр школьница",
+    "skinName": "ger_schoolgirl",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "20.07.2020",
+    "model": "steve",
+        "variations": [
+    { "name": "В маске", "filename": "ger_schoolgirl_in_mask" }
+  ]
+  },
+  {
+    "filename": "ger_summer",
+    "skinName": "Гэр летняя",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "19.03.2019",
+    "model": "steve"
+  },
+  {
+    "filename": "ger_maid_skeleton",
+    "skinName": "Гэр горничная-скелет",
+    "customer": "Гэр",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.03.2019",
+    "model": "steve"
+  },
+  {
     "filename": "stars",
     "skinName": "Старс",
     "customer": "Севенз",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "02.06.2023",
-    "model": "model"
+    "model": "steve"
   }
 ]
