@@ -10,6 +10,16 @@
     "new": true
    },
    {
+    "filename": "day_pathfinder",
+    "skinName": "Дэй следопыт",
+    "customer": "Эппоп",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "18.08.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
     "filename": "day_tester",
     "skinName": "Дэй испытатель",
     "customer": "Эппоп",
