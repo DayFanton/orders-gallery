@@ -129,7 +129,7 @@
     "date": "13.12.2025",
     "model": "steve"
   },
-{
+ {
     "filename": "ger_rabbit_redesign",
     "skinName": "Гэр кролик",
     "customer": "Гэр",
@@ -137,12 +137,12 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "22.09.2026",
     "model": "alex",
-            "variations": [
-    { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
-    { "name": "Изначальная", "filename": "ger_rabbit" },
+    "variations": [
+       { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
+       { "name": "Изначальная", "filename": "ger_rabbit" }
   ],
-    "new": true
-  },
+  "new": true
+}
   {
     "filename": "leah_apocalypse",
     "skinName": "Лия апокалипсис",
