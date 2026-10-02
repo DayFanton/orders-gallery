@@ -129,7 +129,7 @@
     "date": "13.12.2025",
     "model": "steve"
   },
- {
+  {
     "filename": "ger_rabbit_redesign",
     "skinName": "Гэр кролик",
     "customer": "Гэр",
@@ -140,9 +140,9 @@
     "variations": [
        { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
        { "name": "Изначальная", "filename": "ger_rabbit" }
-  ],
-  "new": true
-}
+    ],
+    "new": true
+  },
   {
     "filename": "leah_apocalypse",
     "skinName": "Лия апокалипсис",
