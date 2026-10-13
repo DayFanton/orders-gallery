@@ -1,5 +1,5 @@
-[     
-   {
+[
+  {
     "filename": "vova_halloween26",
     "skinName": "Вова хэллоуинский 2026",
     "customer": "Вова",
@@ -7,12 +7,12 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "01.10.2026",
     "model": "steve",
-            "variations": [
-    { "name": "В маске", "filename": "vova_in_mask_halloween26" }
-  ],
+    "variations": [
+      { "name": "В маске", "filename": "vova_in_mask_halloween26" }
+    ],
     "new": true
   },
-   {
+  {
     "filename": "day_halloween26",
     "skinName": "Дэй хэллоуинский 2026",
     "customer": "Эппоп",
@@ -21,8 +21,8 @@
     "date": "21.08.2026",
     "model": "steve",
     "new": true
-   },
-   {
+  },
+  {
     "filename": "sgushenka_halloween26",
     "skinName": "Сгущёнка хэллоуинский 2026",
     "customer": "Сгущёнка",
@@ -31,8 +31,8 @@
     "date": "17.09.2026",
     "model": "steve",
     "new": true
-   },
-   {
+  },
+  {
     "filename": "day_pathfinder",
     "skinName": "Дэй следопыт",
     "customer": "Эппоп",
@@ -41,8 +41,8 @@
     "date": "18.08.2026",
     "model": "steve",
     "new": true
-   },
-   {
+  },
+  {
     "filename": "day_tester",
     "skinName": "Дэй испытатель",
     "customer": "Эппоп",
@@ -51,8 +51,8 @@
     "date": "18.08.2026",
     "model": "steve",
     "new": true
-   },
-   {
+  },
+  {
     "filename": "ger_halloween26",
     "skinName": "Гэр хэллоуинская 2026",
     "customer": "Гэр",
@@ -61,44 +61,44 @@
     "date": "01.10.2026",
     "model": "steve",
     "new": true
-   },
-   {
+  },
+  {
     "filename": "day_wanderer",
     "skinName": "Дэй странник",
     "customer": "Эппоп",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.08.2026",
-    "model": "steve",
-   },
-   {
+    "model": "steve"
+  },
+  {
     "filename": "sgushenka_icy_raspberry",
     "skinName": "Сгущёнка ледяная малина",
     "customer": "Сгущёнка",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.08.2026",
-    "model": "alex",
-   },
-   {
+    "model": "alex"
+  },
+  {
     "filename": "sgushenka_autumn26",
     "skinName": "Сгущёнка осенний 2026",
     "customer": "Сгущёнка",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "19.08.2026",
-    "model": "alex",
-   },
-   {
+    "model": "alex"
+  },
+  {
     "filename": "ger_explorer",
     "skinName": "Гэр исследовательница",
     "customer": "Гэр",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "09.09.2026",
-    "model": "steve",
-   },
-   {
+    "model": "steve"
+  },
+  {
     "filename": "clock_redesign",
     "skinName": "Клок",
     "customer": "Блэк",
@@ -106,12 +106,12 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "02.10.2026",
     "model": "steve",
-            "variations": [
-    { "name": "Изначальная", "filename": "clock" }
-  ],
-      "new": true
+    "variations": [
+      { "name": "Изначальная", "filename": "clock" }
+    ],
+    "new": true
   },
-   {
+  {
     "filename": "day_usher",
     "skinName": "Дэй билетёр",
     "customer": "Эппоп",
@@ -119,9 +119,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "19.08.2026",
     "model": "steve",
-            "variations": [
-    { "name": "В очках", "filename": "day_usher_with_glasses" }
-  ]
+    "variations": [
+      { "name": "В очках", "filename": "day_usher_with_glasses" }
+    ]
   },
   {
     "filename": "day_spring26",
@@ -140,9 +140,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.09.2026",
     "model": "steve",
-            "variations": [
-    { "name": "Изначальная", "filename": "ger_bedrock" }
-  ]
+    "variations": [
+      { "name": "Изначальная", "filename": "ger_bedrock" }
+    ]
   },
   {
     "filename": "day_autumn26",
@@ -180,9 +180,9 @@
     "date": "22.09.2026",
     "model": "alex",
     "variations": [
-       { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
-       { "name": "Изначальная", "filename": "ger_rabbit" }
-    ],
+      { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
+      { "name": "Изначальная", "filename": "ger_rabbit" }
+    ]
   },
   {
     "filename": "leah_apocalypse",
@@ -237,9 +237,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.12.2025",
     "model": "alex",
-            "variations": [
-    { "name": "Волосы", "filename": "viacore_apocalypse_fem_hairs" }
-  ]
+    "variations": [
+      { "name": "Волосы", "filename": "viacore_apocalypse_fem_hairs" }
+    ]
   },
   {
     "filename": "viacore_apocalypse_human_fem",
@@ -249,9 +249,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "03.12.2025",
     "model": "alex",
-            "variations": [
-    { "name": "Волосы", "filename": "viacore_apocalypse_human_fem_hairs" }
-  ]
+    "variations": [
+      { "name": "Волосы", "filename": "viacore_apocalypse_human_fem_hairs" }
+    ]
   },
   {
     "filename": "viacore_apocalypse_human",
@@ -388,8 +388,8 @@
     "date": "24.01.2026",
     "model": "alex",
     "variations": [
-    { "name": "Без ушек", "filename": "sgushenka_in_bodysuit_no_ears" }
-  ]
+      { "name": "Без ушек", "filename": "sgushenka_in_bodysuit_no_ears" }
+    ]
   },
   {
     "filename": "sgushenka_cow",
@@ -552,9 +552,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
     "model": "alex",
-            "variations": [
-    { "name": "Чёрная", "filename": "viacore_queen_fem_black" }
-  ]
+    "variations": [
+      { "name": "Чёрная", "filename": "viacore_queen_fem_black" }
+    ]
   },
   {
     "filename": "viacore_halloween25_fem",
@@ -582,9 +582,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "26.03.2025",
     "model": "alex",
-            "variations": [
-    { "name": "Чёрная", "filename": "viacore_nun_fem_black" }
-  ]
+    "variations": [
+      { "name": "Чёрная", "filename": "viacore_nun_fem_black" }
+    ]
   },
   {
     "filename": "viacore_housemaid_fem",
@@ -666,9 +666,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "02.02.2023",
     "model": "steve",
-        "variations": [
-    { "name": "Без рубашки", "filename": "sgushenka_shirtless" }
-  ]
+    "variations": [
+      { "name": "Без рубашки", "filename": "sgushenka_shirtless" }
+    ]
   },
   {
     "filename": "ger_wedding",
@@ -840,9 +840,9 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "20.07.2020",
     "model": "steve",
-        "variations": [
-    { "name": "В маске", "filename": "ger_schoolgirl_in_mask" }
-  ]
+    "variations": [
+      { "name": "В маске", "filename": "ger_schoolgirl_in_mask" }
+    ]
   },
   {
     "filename": "ger_summer",
