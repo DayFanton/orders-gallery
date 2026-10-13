@@ -101,7 +101,7 @@
   {
     "filename": "clock_redesign",
     "skinName": "Клок",
-    "customer": "Блэк",
+    "customer": ["Блэк", "Клок"],
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "02.10.2026",
