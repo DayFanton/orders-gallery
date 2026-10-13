@@ -1,4 +1,17 @@
-[
+[     
+   {
+    "filename": "vova_halloween26",
+    "skinName": "Вова хэллоуинский 2026",
+    "customer": "Вова",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "01.10.2026",
+    "model": "steve",
+            "variations": [
+    { "name": "В маске", "filename": "vova_in_mask_halloween26" }
+  ],
+    "new": true
+  },
    {
     "filename": "day_halloween26",
     "skinName": "Дэй хэллоуинский 2026",
@@ -6,6 +19,16 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "21.08.2026",
+    "model": "steve",
+    "new": true
+   },
+   {
+    "filename": "sgushenka_halloween26",
+    "skinName": "Сгущёнка хэллоуинский 2026",
+    "customer": "Сгущёнка",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "17.09.2026",
     "model": "steve",
     "new": true
    },
@@ -47,27 +70,24 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.08.2026",
     "model": "steve",
-    "new": true
    },
    {
-    "filename": "sguhenka_icy_raspberry",
+    "filename": "sgushenka_icy_raspberry",
     "skinName": "Сгущёнка ледяная малина",
     "customer": "Сгущёнка",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "18.08.2026",
     "model": "alex",
-    "new": true
    },
    {
-    "filename": "sguhenka_autumn26",
+    "filename": "sgushenka_autumn26",
     "skinName": "Сгущёнка осенний 2026",
     "customer": "Сгущёнка",
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "19.08.2026",
     "model": "alex",
-    "new": true
    },
    {
     "filename": "ger_explorer",
@@ -77,8 +97,20 @@
     "authorUrl": "https://vk.com/ceplyash",
     "date": "09.09.2026",
     "model": "steve",
-    "new": true
    },
+   {
+    "filename": "clock_redesign",
+    "skinName": "Клок",
+    "customer": "Блэк",
+    "author": "Цыпляш",
+    "authorUrl": "https://vk.com/ceplyash",
+    "date": "02.10.2026",
+    "model": "steve",
+            "variations": [
+    { "name": "Изначальная", "filename": "clock" }
+  ],
+      "new": true
+  },
    {
     "filename": "day_usher",
     "skinName": "Дэй билетёр",
@@ -151,7 +183,6 @@
        { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
        { "name": "Изначальная", "filename": "ger_rabbit" }
     ],
-    "new": true
   },
   {
     "filename": "leah_apocalypse",
@@ -682,15 +713,6 @@
     "author": "Цыпляш",
     "authorUrl": "https://vk.com/ceplyash",
     "date": "05.07.2023",
-    "model": "steve"
-  },
-  {
-    "filename": "clock",
-    "skinName": "Клок",
-    "customer": "Севенз",
-    "author": "Цыпляш",
-    "authorUrl": "https://vk.com/ceplyash",
-    "date": "05.02.2023",
     "model": "steve"
   },
   {
