@@ -426,6 +426,39 @@
             box-shadow: 0 0 6px currentColor;
         }
 
+        .variation-badge {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            background: rgba(255, 240, 1, 0.12);
+            border: 1px solid rgba(255, 240, 1, 0.45);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s ease;
+        }
+        .variation-badge svg { width: 9px; height: 9px; display: block; pointer-events: none; }
+        .variation-badge:hover { transform: scale(1.4); box-shadow: 0 0 6px rgba(255, 240, 1, 0.5); }
+        .skin-list.view-grid .variation-badge { bottom: 6px; right: 24px; }
+        .skin-list.view-list .variation-badge { bottom: 24px; right: 6px; }
+
+        .meta-customers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2px 0;
+            max-width: 60%;
+            min-width: 0;
+        }
+        .meta-customers .meta-value { max-width: 100%; }
+        .customer-item { display: inline-flex; align-items: center; max-width: 100%; }
+        .customer-sep { color: var(--text-muted); font-size: 0.85rem; margin: 0 6px 0 1px; }
+
         .new-badge {
             position: absolute;
             top: 6px;
@@ -976,7 +1009,7 @@
             <div class="meta-info">
                 <div class="meta-row">
                     <span class="meta-label">Заказчик</span>
-                    <span class="meta-value" id="infoCustomer">—</span>
+                    <div class="meta-customers" id="infoCustomer"><span class="meta-value">—</span></div>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Художник</span>
@@ -988,7 +1021,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.4.1</div>
+            <div class="site-version">v1.4.2</div>
         </div>
     </div>
 
@@ -1071,7 +1104,7 @@
                 <h3>Аксессуары</h3>
                 <label class="checkbox-label">
                     <input type="checkbox" id="elytra_toggle">
-                    <span>Отображать элитры (Работает с плащом)</span>
+                    <span>Отображать элитры</span>
                 </label>
             </div>
         </div>
@@ -1096,7 +1129,7 @@
             <div class="modal-footer">
                 <label class="checkbox-label">
                     <input type="checkbox" id="agreementCheckbox">
-                    <span>Я всё прочёл и согласен</span>
+                    <span>Я всё прочел и согласен</span>
                 </label>
                 <button id="agreementBtn" class="btn" disabled>Продолжить</button>
             </div>
@@ -1125,6 +1158,12 @@
         let searchQuery = ''; 
 
         const DEFAULT_ELYTRA_URL = "https://raw.githubusercontent.com/bs-community/skinview3d/master/examples/img/elytra.png";
+        // Где искать текстуру элитр: свой файл рядом с index.html -> стандартная с GitHub -> встроенная запасная
+        const ELYTRA_TEXTURE_SOURCES = ['elytra.png', DEFAULT_ELYTRA_URL];
+        let elytraTextureDataUrl = null;
+        let backEquipmentRequestId = 0;
+
+        let currentViewMode = 'list';
 
         const bgPresets = [
             { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
@@ -1138,19 +1177,64 @@
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
-        function updateMetaInfoDisplay(item) {
-            const customerEl = document.getElementById('infoCustomer');
-            if (item && item.customer && item.customer !== '-' && item.customer !== 'Не указан') {
-                customerEl.textContent = item.customer;
-                customerEl.classList.add('clickable');
-                customerEl.title = `Показать все заказы от ${item.customer}`;
-            } else {
-                customerEl.textContent = (item && item.customer) || 'Не указан';
-                customerEl.classList.remove('clickable');
-                customerEl.removeAttribute('title');
-            }
+        function getCustomers(item) {
+            if (!item) return [];
+            const raw = item.customer;
+            const arr = Array.isArray(raw) ? raw : [raw];
+            return arr
+                .map(c => (c === null || c === undefined) ? '' : String(c).trim())
+                .filter(c => c && c !== '-' && c !== 'Не указан');
+        }
 
-            document.getElementById('infoDate').textContent = (item && item.date) || 'Не указана';
+        function matchesCustomerTag(item, target) {
+            return getCustomers(item).some(c => c.toLowerCase().includes(target));
+        }
+
+        // Дата выбранной версии скина: если у вариации задана своя "date" - берём её, иначе дату основного скина
+        function getSkinDate(skin, textureFilename) {
+            if (!skin) return null;
+            if (textureFilename && textureFilename !== skin.filename && Array.isArray(skin.variations)) {
+                const v = skin.variations.find(x => x && x.filename === textureFilename);
+                if (v && v.date && String(v.date).trim()) return String(v.date).trim();
+            }
+            return skin.date || null;
+        }
+
+        function renderCustomerInfo(customers, emptyText = 'Не указан') {
+            const el = document.getElementById('infoCustomer');
+            el.innerHTML = '';
+            if (!customers || customers.length === 0) {
+                const empty = document.createElement('span');
+                empty.classList.add('meta-value');
+                empty.textContent = emptyText;
+                el.appendChild(empty);
+                return;
+            }
+            customers.forEach((name, i) => {
+                const wrap = document.createElement('span');
+                wrap.classList.add('customer-item');
+
+                const chip = document.createElement('span');
+                chip.classList.add('meta-value', 'clickable');
+                chip.textContent = name;
+                chip.title = `Показать все заказы от ${name}`;
+                chip.onclick = () => setAndRenderTag('customer', name);
+                wrap.appendChild(chip);
+
+                if (i < customers.length - 1) {
+                    const sep = document.createElement('span');
+                    sep.classList.add('customer-sep');
+                    sep.textContent = ',';
+                    wrap.appendChild(sep);
+                }
+                el.appendChild(wrap);
+            });
+        }
+
+        function updateMetaInfoDisplay(item, dateOverride = null) {
+            renderCustomerInfo(getCustomers(item));
+
+            document.getElementById('infoDate').textContent = dateOverride || (item && item.date) || 'Не указана';
 
             const authorEl = document.getElementById('infoAuthor');
             if (item && item.author && item.author !== '-' && item.author !== 'Не указан') {
@@ -1167,18 +1251,109 @@
         }
 
         function clearMetaInfoDisplay() {
-            const customerEl = document.getElementById('infoCustomer');
-            customerEl.textContent = '—';
-            customerEl.classList.remove('clickable');
-            customerEl.removeAttribute('title');
-            
+            renderCustomerInfo([], '—');
             document.getElementById('infoDate').textContent = '—';
-            
+
             const authorEl = document.getElementById('infoAuthor');
             authorEl.textContent = '—';
             authorEl.classList.remove('clickable');
             authorEl.removeAttribute('title');
             authorEl.removeAttribute('data-url');
+        }
+
+        // Показывает информацию о текущем выбранном элементе в зависимости от раздела (скины / плащи)
+        function refreshMetaInfo() {
+            if (currentTab === 'skins') {
+                const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
+                if (skin) updateMetaInfoDisplay(skin, getSkinDate(skin, currentLoadedTextureFilename));
+                else clearMetaInfoDisplay();
+            } else {
+                const cape = globalCapes.find(c => c.filename === currentCapeFilename);
+                if (cape) updateMetaInfoDisplay(cape);
+                else clearMetaInfoDisplay();
+            }
+        }
+
+        /* ---------- Состояние интерфейса в адресной строке ---------- */
+        const SORT_FIELDS = ['default', 'author', 'name', 'date'];
+
+        function readStateFromUrl() {
+            const p = new URLSearchParams(window.location.search);
+            return {
+                skin: p.get('skin'),
+                tab: p.get('tab') === 'capes' ? 'capes' : 'skins',
+                view: p.get('view') === 'grid' ? 'grid' : 'list',
+                sort: SORT_FIELDS.includes(p.get('sort')) ? p.get('sort') : 'default',
+                order: p.get('order') === 'asc' ? 'asc' : 'desc'
+            };
+        }
+
+        // В ссылку попадает только то, что отличается от значений по умолчанию
+        function buildStateUrl(skinFilename) {
+            const p = new URLSearchParams();
+            if (skinFilename) p.set('skin', skinFilename);
+            if (currentTab !== 'skins') p.set('tab', currentTab);
+            if (currentViewMode !== 'list') p.set('view', currentViewMode);
+            if (currentSortField !== 'default') p.set('sort', currentSortField);
+            if (currentSortOrder !== 'desc') p.set('order', currentSortOrder);
+            const q = p.toString();
+            return window.location.pathname + (q ? '?' + q : '');
+        }
+
+        function syncUrlState() {
+            const url = buildStateUrl(currentActiveSkinFilename);
+            if (url !== window.location.pathname + window.location.search) {
+                window.history.replaceState({}, '', url);
+            }
+        }
+
+        function pushStateUrl(skinFilename) {
+            const url = buildStateUrl(skinFilename);
+            if (url !== window.location.pathname + window.location.search) {
+                window.history.pushState({}, '', url);
+            }
+        }
+
+        function applyViewModeUI() {
+            document.getElementById('btnListView').classList.toggle('active', currentViewMode === 'list');
+            document.getElementById('btnGridView').classList.toggle('active', currentViewMode === 'grid');
+            document.getElementById('skinList').className = 'skin-list view-' + currentViewMode;
+        }
+
+        function setViewMode(mode, sync = true) {
+            currentViewMode = mode === 'grid' ? 'grid' : 'list';
+            applyViewModeUI();
+            if (sync) syncUrlState();
+        }
+
+        function applyTabUI() {
+            document.getElementById('tabSkins').classList.toggle('active', currentTab === 'skins');
+            document.getElementById('tabCapes').classList.toggle('active', currentTab === 'capes');
+        }
+
+        function switchTab(tab, sync = true) {
+            currentTab = tab === 'capes' ? 'capes' : 'skins';
+            applyTabUI();
+            refreshMetaInfo();
+            renderCurrentList();
+            if (sync) syncUrlState();
+        }
+
+        function handlePopState() {
+            const st = readStateFromUrl();
+            currentSortField = st.sort;
+            currentSortOrder = st.order;
+            updateSortMenuVisuals();
+            setViewMode(st.view, false);
+
+            const target = (st.skin && globalSkins.some(s => s.filename === st.skin))
+                ? st.skin
+                : (globalSkins.length > 0 ? globalSkins[0].filename : null);
+
+            switchTab(st.tab, false);
+            if (target && target !== currentActiveSkinFilename) {
+                selectSkin(target, false);
+            }
         }
 
         function initViewer() {
@@ -1252,35 +1427,74 @@
             return `data:image/png;base64,${btoa(binaryString)}`;
         }
 
+        function blobToDataUrl(blob) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        }
+
+        // Запасная текстура: если ни свой файл, ни GitHub недоступны - элитры всё равно появятся
+        function buildFallbackElytraTexture() {
+            const c = document.createElement('canvas');
+            c.width = 64;
+            c.height = 32;
+            const ctx = c.getContext('2d');
+            let seed = 1337;
+            const rnd = () => {
+                seed = (seed * 1664525 + 1013904223) % 4294967296;
+                return seed / 4294967296;
+            };
+            for (let y = 0; y < 32; y++) {
+                for (let x = 0; x < 64; x++) {
+                    const v = Math.floor(95 + rnd() * 45);
+                    ctx.fillStyle = `rgb(${v},${v},${v + 8})`;
+                    ctx.fillRect(x, y, 1, 1);
+                }
+            }
+            return c.toDataURL('image/png');
+        }
+
+        async function getElytraTexture() {
+            if (elytraTextureDataUrl) return elytraTextureDataUrl;
+            for (const src of ELYTRA_TEXTURE_SOURCES) {
+                try {
+                    const resp = await fetch(src);
+                    if (!resp.ok) continue;
+                    const blob = await resp.blob();
+                    if (blob.size === 0 || blob.type.includes('html')) continue;
+                    elytraTextureDataUrl = await blobToDataUrl(blob);
+                    return elytraTextureDataUrl;
+                } catch (e) {
+                    // пробуем следующий источник
+                }
+            }
+            console.warn('Текстура элитр не найдена (elytra.png), использована запасная.');
+            elytraTextureDataUrl = buildFallbackElytraTexture();
+            return elytraTextureDataUrl;
+        }
+
         async function updateBackEquipment() {
             if (!skinViewer) return;
+            const requestId = ++backEquipmentRequestId;
 
-            if (!currentCapeFilename && !elytraEnabled) {
-                skinViewer.loadCape(null);
-                return;
-            }
-
-            if (elytraEnabled && !currentCapeFilename) {
-                try {
-                    await skinViewer.loadCape(DEFAULT_ELYTRA_URL, { backEquipment: 'elytra' });
-                } catch (e) {
-                    console.error("Не удалось загрузить стандартные элитры:", e);
+            try {
+                if (!currentCapeFilename && !elytraEnabled) {
+                    skinViewer.loadCape(null);
+                    return;
                 }
-                return;
-            }
 
-            if (currentCapeFilename) {
-                try {
-                    const capeDataUrl = await applyMeshTextureTransform('capes', currentCapeFilename);
-                    
-                    if (elytraEnabled) {
-                        await skinViewer.loadCape(capeDataUrl, { backEquipment: 'elytra' });
-                    } else {
-                        await skinViewer.loadCape(capeDataUrl, { backEquipment: 'cape' });
-                    }
-                } catch (err) {
-                    console.error("Ошибка при обновлении спины персонажа:", err);
-                }
+                const textureUrl = currentCapeFilename
+                    ? await applyMeshTextureTransform('capes', currentCapeFilename)
+                    : await getElytraTexture();
+
+                if (requestId !== backEquipmentRequestId) return;
+
+                await skinViewer.loadCape(textureUrl, { backEquipment: elytraEnabled ? 'elytra' : 'cape' });
+            } catch (err) {
+                console.error("Ошибка при обновлении спины персонажа:", err);
             }
         }
 
@@ -1292,17 +1506,7 @@
             searchQuery = '';
             document.getElementById('searchInput').value = '';
             renderTagsDOM();
-            
-            // Исправлено: Больше не переключаем принудительно на вкладку 'skins', сохраняя текущую выбранную вкладку пользователя.
-            
-            if (currentTab === 'skins' && currentActiveSkinFilename) {
-                const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
-                if (skin) updateMetaInfoDisplay(skin);
-            } else if (currentTab === 'capes' && currentCapeFilename) {
-                const cape = globalCapes.find(c => c.filename === currentCapeFilename);
-                if (cape) updateMetaInfoDisplay(cape);
-            }
-            
+            refreshMetaInfo();
             renderCurrentList();
         }
 
@@ -1364,8 +1568,6 @@
                 `;
                 noneItem.onclick = async () => {
                     currentCapeFilename = null;
-                    elytraEnabled = false;
-                    document.getElementById('elytra_toggle').checked = false;
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     noneItem.classList.add('active');
                     await updateBackEquipment();
@@ -1378,7 +1580,7 @@
                 for (let tag of searchTags) {
                     const target = tag.value.toLowerCase();
                     if (tag.type === 'customer') {
-                        if (!(cape.customer || '').toLowerCase().includes(target)) return false;
+                        if (!matchesCustomerTag(cape, target)) return false;
                     } else if (tag.type === 'type') {
                         const capeModel = (cape.model && cape.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (capeModel !== target) return false;
@@ -1517,7 +1719,7 @@
                 applyAnimation();
                 if (window.refreshLayers) window.refreshLayers();
 
-                updateMetaInfoDisplay(skin);
+                if (currentTab === 'skins') updateMetaInfoDisplay(skin, getSkinDate(skin, targetTextureFile));
 
                 const varContainer = document.getElementById('variations_container');
                 if (skin.variations && Array.isArray(skin.variations) && skin.variations.length > 0) {
@@ -1552,10 +1754,7 @@
                     varContainer.innerHTML = '';
                 }
 
-                if (updateUrl) {
-                    const baseUrl = window.location.origin + window.location.pathname;
-                    window.history.pushState({}, '', `${baseUrl}?skin=${filename}`);
-                }
+                if (updateUrl) pushStateUrl(filename);
             } catch (err) {
                 console.error("Ошибка декомпрессии текстуры:", err);
             }
@@ -1653,7 +1852,7 @@
                 for (let tag of searchTags) {
                     const target = tag.value.toLowerCase();
                     if (tag.type === 'customer') {
-                        if (!(skin.customer || '').toLowerCase().includes(target)) return false;
+                        if (!matchesCustomerTag(skin, target)) return false;
                     } else if (tag.type === 'type') {
                         const skinModel = (skin.model && skin.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (skinModel !== target) return false;
@@ -1731,12 +1930,17 @@
                 const modelType = isAlex ? 'alex' : 'steve';
 
                 const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
+                const hasVariations = Array.isArray(skin.variations) && skin.variations.length > 0;
+                const variationBadgeHtml = hasVariations
+                    ? `<div class="variation-badge" title="Есть вариации"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>`
+                    : '';
 
                 item.innerHTML = `
                     ${newBadgeHtml}
                     <canvas class="canvas-avatar" width="64" height="64"></canvas>
                     <span class="skin-name">${fullName}</span>
                     <span class="skin-date">${skin.date || ''}</span>
+                    ${variationBadgeHtml}
                     <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="Тип: ${modelType}"></div>
                 `;
                 
@@ -1764,6 +1968,17 @@
             }
         }
 
+        function updateSortMenuVisuals() {
+            const menu = document.getElementById('sortMenu');
+            if (!menu) return;
+            menu.querySelectorAll('.dropdown-item').forEach(item => {
+                const field = item.getAttribute('data-field');
+                const order = item.getAttribute('data-order');
+                const isActive = (field && field === currentSortField) || (order && order === currentSortOrder);
+                item.classList.toggle('active', !!isActive);
+            });
+        }
+
         function initSortListeners() {
             const trigger = document.getElementById('sortTrigger');
             const menu = document.getElementById('sortMenu');
@@ -1781,35 +1996,23 @@
                 trigger.classList.remove('active');
             });
 
-            const updateMenuSelectionVisuals = () => {
-                menu.querySelectorAll('.dropdown-item').forEach(item => {
-                    const field = item.getAttribute('data-field');
-                    const order = item.getAttribute('data-order');
-                    
-                    if ((field && field === currentSortField) || (order && order === currentSortOrder)) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            };
-
             menu.querySelectorAll('.dropdown-item').forEach(item => {
                 item.onclick = (e) => {
                     e.stopPropagation();
-                    
+
                     const field = item.getAttribute('data-field');
                     const order = item.getAttribute('data-order');
 
                     if (field) currentSortField = field;
                     if (order) currentSortOrder = order;
 
-                    updateMenuSelectionVisuals();
+                    updateSortMenuVisuals();
                     renderCurrentList();
+                    syncUrlState();
                 };
             });
 
-            updateMenuSelectionVisuals();
+            updateSortMenuVisuals();
         }
 
         function initControlListeners() {
@@ -1850,14 +2053,9 @@
                     searchTags.pop();
                     renderTagsDOM();
                     renderCurrentList();
-                    input.focus();
+                    searchInput.focus();
                 }
             });
-
-            document.getElementById('infoCustomer').onclick = function() {
-                if (!this.classList.contains('clickable')) return;
-                setAndRenderTag('customer', this.textContent.trim());
-            };
 
             document.getElementById('infoAuthor').onclick = function() {
                 if (!this.classList.contains('clickable')) return;
@@ -1867,31 +2065,8 @@
                 }
             };
 
-            document.getElementById('tabSkins').onclick = () => {
-                currentTab = 'skins';
-                document.getElementById('tabSkins').classList.add('active');
-                document.getElementById('tabCapes').classList.remove('active');
-                if (currentActiveSkinFilename) {
-                    const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
-                    if (skin) updateMetaInfoDisplay(skin);
-                } else {
-                    clearMetaInfoDisplay();
-                }
-                renderCurrentList();
-            };
-
-            document.getElementById('tabCapes').onclick = () => {
-                currentTab = 'capes';
-                document.getElementById('tabCapes').classList.add('active');
-                document.getElementById('tabSkins').classList.remove('active');
-                if (currentCapeFilename) {
-                    const cape = globalCapes.find(c => c.filename === currentCapeFilename);
-                    if (cape) updateMetaInfoDisplay(cape);
-                } else {
-                    clearMetaInfoDisplay();
-                }
-                renderCurrentList();
-            };
+            document.getElementById('tabSkins').onclick = () => switchTab('skins');
+            document.getElementById('tabCapes').onclick = () => switchTab('capes');
 
             document.getElementById('elytra_toggle').onchange = async (e) => {
                 elytraEnabled = e.target.checked;
@@ -1936,9 +2111,9 @@
                 
                 currentSortField = 'default';
                 currentSortOrder = 'desc';
-                initSortListeners();
-                
+                updateSortMenuVisuals();
                 renderCurrentList();
+                syncUrlState();
                 
                 skinViewer.controls.reset();
                 skinViewer.controls.alpha = 0; 
@@ -2004,16 +2179,8 @@
             document.getElementById('layer_body').onchange = updateLayers;
             window.refreshLayers = updateLayers;
 
-            document.getElementById('btnListView').onclick = () => {
-                document.getElementById('btnListView').classList.add('active');
-                document.getElementById('btnGridView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-list';
-            };
-            document.getElementById('btnGridView').onclick = () => {
-                document.getElementById('btnGridView').classList.add('active');
-                document.getElementById('btnListView').classList.remove('active');
-                document.getElementById('skinList').className = 'skin-list view-grid';
-            };
+            document.getElementById('btnListView').onclick = () => setViewMode('list');
+            document.getElementById('btnGridView').onclick = () => setViewMode('grid');
 
             const btnSidebar = document.getElementById('mobileBtnSidebar');
             const btnControls = document.getElementById('mobileBtnControls');
@@ -2155,20 +2322,29 @@
                     globalCapes = [];
                 }
 
-                const params = new URLSearchParams(window.location.search);
-                let activeSkin = params.get('skin');
+                const urlState = readStateFromUrl();
+                let activeSkin = urlState.skin;
 
                 if (!activeSkin || !globalSkins.some(s => s.filename === activeSkin)) {
                     activeSkin = globalSkins.length > 0 ? globalSkins[0].filename : null;
                 }
-                
+
                 currentActiveSkinFilename = activeSkin;
+                currentTab = urlState.tab;
+                currentViewMode = urlState.view;
+                currentSortField = urlState.sort;
+                currentSortOrder = urlState.order;
 
                 initViewer();
                 initAgreementModal(); 
                 initSortListeners();
+                applyViewModeUI();
+                applyTabUI();
                 renderTagsDOM();
                 renderCurrentList();
+                refreshMetaInfo();
+
+                window.addEventListener('popstate', handlePopState);
 
                 if (currentActiveSkinFilename) {
                     selectSkin(currentActiveSkinFilename, false);
