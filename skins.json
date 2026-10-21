@@ -107,7 +107,7 @@
     "date": "02.10.2026",
     "model": "steve",
     "variations": [
-      { "name": "Изначальная", "filename": "clock", "date": "05.02.2023" },
+      { "name": "Изначальная", "filename": "clock", "date": "05.02.2023" }
     ],
     "new": true
   },
@@ -181,7 +181,7 @@
     "model": "alex",
     "variations": [
       { "name": "Цензурная", "filename": "ger_rabbit_redesign_censored" },
-      { "name": "Изначальная", "filename": "ger_rabbit", "date": "31.12.2020" },
+      { "name": "Изначальная", "filename": "ger_rabbit", "date": "31.12.2020" }
     ]
   },
   {
