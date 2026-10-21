@@ -426,6 +426,19 @@
             box-shadow: 0 0 6px currentColor;
         }
 
+        .variation-badge { cursor: pointer; }
+        /* Флаги-эмодзи не отображаются в Windows - подключаем шрифт-замену только для флагов */
+        @font-face {
+            font-family: "Twemoji Country Flags";
+            unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+            src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
+            font-display: swap;
+        }
+        .flag { font-family: "Twemoji Country Flags", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; font-size: 1rem; line-height: 1; }
+        .lang-trigger-btn { padding: 4px 8px; }
+        .sidebar-header .section-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        body.i18n-pending > * { visibility: hidden; }
+
         .variation-badge {
             position: absolute;
             width: 14px;
@@ -962,7 +975,7 @@
         }
     </style>
 </head>
-<body>
+<body class="i18n-pending">
 
     <div id="sidebar">
         <div class="sidebar-header">
@@ -987,6 +1000,13 @@
                 <div class="view-toggle">
                     <button class="toggle-btn active" id="btnListView">Список</button>
                     <button class="toggle-btn" id="btnGridView">Плитка</button>
+                </div>
+
+                <div class="dropdown-sort">
+                    <button class="sort-trigger-btn lang-trigger-btn" id="langTrigger" title="Language">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </button>
+                    <div class="dropdown-menu" id="langMenu"></div>
                 </div>
             </div>
         </div>
@@ -1021,7 +1041,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.4.4</div>
+            <div class="site-version">v1.5.0</div>
         </div>
     </div>
 
@@ -1177,6 +1197,211 @@
 
         document.addEventListener('contextmenu', e => e.preventDefault());
 
+        /* ---------- Локализация (файлы в папке lang/) ---------- */
+        const BG_KEYS = ['bg.dark', 'bg.light', 'bg.purple', 'bg.red', 'bg.pink', 'bg.yellow', 'bg.blue'];
+        let i18nLangs = [];   // [{ code, data, name, flag, codes }]
+        let i18nDict = {};    // выбранный язык
+        let i18nBase = {};    // английский - запасной
+        let currentLang = 'en';
+        setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
+
+        // [селектор, ключ в lang/*.json, атрибут (если не указан - меняется текст)]
+        const I18N_STATIC = [
+            ['#sidebar .sidebar-header > .section-title', 'gallery.title'],
+            ['#sortTrigger > span', 'sort.title'],
+            ['#sortMenu [data-field="default"]', 'sort.default'],
+            ['#sortMenu [data-field="author"]', 'sort.author'],
+            ['#sortMenu [data-field="name"]', 'sort.name'],
+            ['#sortMenu [data-field="date"]', 'sort.date'],
+            ['#sortMenu [data-order="desc"]', 'sort.desc'],
+            ['#sortMenu [data-order="asc"]', 'sort.asc'],
+            ['#btnListView', 'view.list'],
+            ['#btnGridView', 'view.grid'],
+            ['#langTrigger', 'language.title', 'title'],
+            ['#tabSkins', 'tab.skins'],
+            ['#tabCapes', 'tab.capes'],
+            ['#searchInput', 'search.placeholder', 'placeholder'],
+            ['.meta-info .meta-row:nth-child(1) .meta-label', 'meta.customer'],
+            ['.meta-info .meta-row:nth-child(2) .meta-label', 'meta.artist'],
+            ['.meta-info .meta-row:nth-child(3) .meta-label', 'meta.date'],
+            ['#loading', 'loading.text'],
+            ['#reset_all', 'controls.reset'],
+            ['.controls-scroll .control-group:nth-child(2) > h3', 'rotate.title'],
+            ['#auto_rotate + span', 'rotate.enable'],
+            ['.slider-container:has(#rotate_speed) .slider-header > span:first-child', 'rotate.speed'],
+            ['.controls-scroll .control-group:nth-child(3) > h3', 'anim.title'],
+            ['#pause_animation + span', 'anim.pause'],
+            ['input[name="animation"][value="none"] + span', 'anim.none'],
+            ['input[name="animation"][value="walk"] + span', 'anim.walk'],
+            ['input[name="animation"][value="run"] + span', 'anim.run'],
+            ['input[name="animation"][value="fly"] + span', 'anim.fly'],
+            ['.slider-container:has(#anim_speed) .slider-header > span:first-child', 'anim.speed'],
+            ['.controls-scroll .control-group:nth-child(4) > h3', 'layers.title'],
+            ['#layer_head + span', 'layers.head'],
+            ['#layer_body + span', 'layers.body'],
+            ['.controls-scroll .control-group:nth-child(5) > h3', 'acc.title'],
+            ['#elytra_toggle + span', 'acc.elytra'],
+            ['.bg-selector-group > .section-title', 'bg.title'],
+            ['#mobileBtnSidebar', 'mobile.gallery'],
+            ['#mobileBtnControls', 'mobile.settings'],
+            ['#agreementModal h3', 'modal.title'],
+            ['#agreementModal p', 'modal.text'],
+            ['#agreementModal .checkbox-label span', 'modal.agree'],
+            ['#agreementBtn', 'modal.continue']
+        ];
+
+        // t('key') или t('key', a, b): в строке перевода работают %s, %s или %1$s, %2$s (как в Minecraft)
+        function t(key, ...args) {
+            const has = (o) => Object.prototype.hasOwnProperty.call(o, key);
+            const str = has(i18nDict) ? i18nDict[key] : (has(i18nBase) ? i18nBase[key] : key);
+            let i = 0;
+            return String(str).replace(/%(?:(\d+)\$)?s/g, (m, n) => {
+                const v = args[n ? n - 1 : i++];
+                return v === undefined ? m : v;
+            });
+        }
+
+        function setElText(el, text) {
+            for (const n of el.childNodes) {
+                if (n.nodeType === 3 && n.nodeValue.trim()) { n.nodeValue = text; return; }
+            }
+            el.appendChild(document.createTextNode(text));
+        }
+
+        async function fetchJson(url) {
+            try {
+                const r = await fetch(url + '?v=' + Math.random());
+                return r.ok ? await r.json() : null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function detectLanguage() {
+            const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'en'];
+            for (const pref of prefs) {
+                const tag = String(pref).toLowerCase();
+                const base = tag.split('-')[0];
+                const hit = i18nLangs.find(l => l.codes.includes(tag)) || i18nLangs.find(l => l.codes.includes(base));
+                if (hit) return hit;
+            }
+            return null;
+        }
+
+        async function initI18n() {
+            try {
+                let codes = ['en'];
+                const list = await fetchJson('lang/languages.json');
+                if (Array.isArray(list) && list.length) codes = list.map(c => String(c).trim()).filter(Boolean);
+                if (!codes.includes('en')) codes.unshift('en');
+
+                const loaded = await Promise.all(codes.map(async code => ({ code, data: await fetchJson(`lang/${code}.json`) })));
+                i18nLangs = loaded.filter(l => l.data && typeof l.data === 'object').map(l => ({
+                    code: l.code,
+                    data: l.data,
+                    name: l.data['language.name'] || l.code,
+                    flag: l.data['language.flag'] || '🌐',
+                    codes: [l.code, ...String(l.data['language.codes'] || '').split(',')].map(c => c.trim().toLowerCase()).filter(Boolean)
+                }));
+
+                const en = i18nLangs.find(l => l.code === 'en');
+                i18nBase = en ? en.data : {};
+
+                let saved = null;
+                try { saved = localStorage.getItem('lang'); } catch (e) {}
+                const chosen = i18nLangs.find(l => l.code === saved) || detectLanguage() || en || i18nLangs[0];
+                if (chosen) {
+                    currentLang = chosen.code;
+                    i18nDict = chosen.data;
+                }
+                applyI18n(false);
+                initLangMenu();
+            } catch (e) {
+                console.warn('Не удалось загрузить языковые файлы (папка lang/).', e);
+            } finally {
+                document.body.classList.remove('i18n-pending');
+            }
+        }
+
+        function setLanguage(code, save = true) {
+            const lang = i18nLangs.find(l => l.code === code);
+            if (!lang) return;
+            currentLang = code;
+            i18nDict = lang.data;
+            if (save) {
+                try { localStorage.setItem('lang', code); } catch (e) {}
+            }
+            applyI18n(true);
+            document.querySelectorAll('#langMenu .dropdown-item').forEach(el => el.classList.toggle('active', el.dataset.lang === code));
+        }
+
+        function applyI18n(rerender = true) {
+            if (Object.keys(i18nDict).length === 0 && Object.keys(i18nBase).length === 0) return;
+            document.documentElement.lang = currentLang;
+            document.title = t('site.title');
+            I18N_STATIC.forEach(([sel, key, attr]) => {
+                document.querySelectorAll(sel).forEach(el => {
+                    if (attr) el.setAttribute(attr, t(key));
+                    else setElText(el, t(key));
+                });
+            });
+            document.querySelectorAll('#bgGrid .bg-dot').forEach((dot, i) => { dot.title = t(BG_KEYS[i] || 'bg.custom'); });
+            document.querySelectorAll('[data-orig]').forEach(b => { b.textContent = t('variation.original'); });
+            if (rerender) {
+                renderTagsDOM();
+                renderCurrentList();
+                refreshMetaInfo();
+            }
+        }
+
+        function closeLangMenu() {
+            const menu = document.getElementById('langMenu');
+            const trigger = document.getElementById('langTrigger');
+            if (menu) menu.classList.remove('show');
+            if (trigger) trigger.classList.remove('active');
+        }
+
+        function initLangMenu() {
+            const trigger = document.getElementById('langTrigger');
+            const menu = document.getElementById('langMenu');
+            if (!trigger || !menu) return;
+
+            if (i18nLangs.length < 2) {
+                trigger.parentElement.style.display = 'none';
+                return;
+            }
+
+            menu.innerHTML = '';
+            i18nLangs.forEach(l => {
+                const item = document.createElement('div');
+                item.classList.add('dropdown-item');
+                if (l.code === currentLang) item.classList.add('active');
+                item.dataset.lang = l.code;
+                item.innerHTML = '<span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
+                item.querySelector('.flag').textContent = l.flag;
+                item.querySelector('.lang-name').textContent = l.name;
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    closeLangMenu();
+                    setLanguage(l.code);
+                };
+                menu.appendChild(item);
+            });
+
+            trigger.onclick = (e) => {
+                e.stopPropagation();
+                document.getElementById('sortMenu').classList.remove('show');
+                document.getElementById('sortTrigger').classList.remove('active');
+                menu.classList.toggle('show');
+                trigger.classList.toggle('active');
+            };
+            document.addEventListener('click', closeLangMenu);
+        }
+
+        function itemHasVariations(item) {
+            return !!item && Array.isArray(item.variations) && item.variations.length > 0;
+        }
+
         function getCustomers(item) {
             if (!item) return [];
             const raw = item.customer;
@@ -1200,7 +1425,7 @@
             return skin.date || null;
         }
 
-        function renderCustomerInfo(customers, emptyText = 'Не указан') {
+        function renderCustomerInfo(customers, emptyText = t('meta.unset')) {
             const el = document.getElementById('infoCustomer');
             el.innerHTML = '';
             if (!customers || customers.length === 0) {
@@ -1217,7 +1442,7 @@
                 const chip = document.createElement('span');
                 chip.classList.add('meta-value', 'clickable');
                 chip.textContent = name;
-                chip.title = `Показать все заказы от ${name}`;
+                chip.title = t('meta.show_orders', name);
                 chip.onclick = () => setAndRenderTag('customer', name);
                 wrap.appendChild(chip);
 
@@ -1234,16 +1459,16 @@
         function updateMetaInfoDisplay(item, dateOverride = null) {
             renderCustomerInfo(getCustomers(item));
 
-            document.getElementById('infoDate').textContent = dateOverride || (item && item.date) || 'Не указана';
+            document.getElementById('infoDate').textContent = dateOverride || (item && item.date) || t('meta.date_unset');
 
             const authorEl = document.getElementById('infoAuthor');
             if (item && item.author && item.author !== '-' && item.author !== 'Не указан') {
                 authorEl.textContent = item.author;
                 authorEl.classList.add('clickable');
-                authorEl.title = `Открыть страницу автора (${item.author})`;
+                authorEl.title = t('meta.open_author', item.author);
                 authorEl.setAttribute('data-url', item.authorUrl || '#');
             } else {
-                authorEl.textContent = (item && item.author) || 'Не указан';
+                authorEl.textContent = (item && item.author) || t('meta.unset');
                 authorEl.classList.remove('clickable');
                 authorEl.removeAttribute('title');
                 authorEl.removeAttribute('data-url');
@@ -1386,7 +1611,7 @@
 
             } catch (e) {
                 console.error(e);
-                document.getElementById('loading').textContent = "Ошибка initialization 3D компонентов.";
+                document.getElementById('loading').textContent = t('error.viewer');
             }
         }
 
@@ -1522,7 +1747,7 @@
                     
                     const prefixSpan = document.createElement('span');
                     prefixSpan.classList.add('tag-prefix');
-                    prefixSpan.textContent = tag.type === 'type' ? 'type:' : 'customer:';
+                    prefixSpan.textContent = tag.type + ':';
                     
                     const valueSpan = document.createElement('span');
                     valueSpan.textContent = tag.value;
@@ -1546,7 +1771,7 @@
                 
                 input.placeholder = '';
             } else {
-                input.placeholder = 'Поиск по названию, заказчику, автору...';
+                input.placeholder = t('search.placeholder');
             }
         }
 
@@ -1558,12 +1783,12 @@
             if (searchTags.length === 0 && !searchQuery) {
                 const noneItem = document.createElement('div');
                 noneItem.classList.add('skin-item');
-                noneItem.setAttribute('title', 'Снять плащ');
+                noneItem.setAttribute('title', t('cape.remove'));
                 if (currentCapeFilename === null) noneItem.classList.add('active');
                 
                 noneItem.innerHTML = `
                     <div class="cape-preview-box" style="display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:var(--text-muted); background:transparent; border-style:dashed;">❌</div>
-                    <span class="skin-name" style="font-weight:600;">Снять плащ</span>
+                    <span class="skin-name" style="font-weight:600;">${t('cape.remove')}</span>
                     <span class="skin-date"></span>
                 `;
                 noneItem.onclick = async () => {
@@ -1584,7 +1809,7 @@
                     } else if (tag.type === 'type') {
                         const capeModel = (cape.model && cape.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (capeModel !== target) return false;
-                    }
+                    } else if (tag.type === 'has' && target === 'variations' && !itemHasVariations(cape)) return false;
                 }
 
                 const query = searchQuery.toLowerCase().trim();
@@ -1639,7 +1864,7 @@
                     lastAuthor = cape.author;
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || 'Не указан';
+                    header.textContent = lastAuthor || t('meta.unset');
                     list.appendChild(header);
                 }
                 const item = document.createElement('div');
@@ -1728,7 +1953,8 @@
                     
                     const origBtn = document.createElement('button');
                     origBtn.classList.add('variation-btn');
-                    origBtn.textContent = 'Оригинал';
+                    origBtn.textContent = t('variation.original');
+                    origBtn.setAttribute('data-orig', '1');
                     if (targetTextureFile === filename) {
                         origBtn.classList.add('active');
                     }
@@ -1769,7 +1995,7 @@
                 dot.classList.add('bg-dot');
                 if (idx === 0) dot.classList.add('active');
                 dot.style.backgroundColor = bg.color;
-                dot.title = bg.name;
+                dot.title = t(BG_KEYS[idx]);
                 
                 dot.onclick = () => {
                     document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
@@ -1781,7 +2007,7 @@
 
             const customDot = document.createElement('div');
             customDot.classList.add('bg-dot', 'custom-color-btn');
-            customDot.title = 'Свой цвет';
+            customDot.title = t('bg.custom');
 
             const colorInput = document.createElement('input');
             colorInput.type = 'color';
@@ -1816,17 +2042,27 @@
             }
         }
 
+        let appliedAnimationType = 'none';
+
+        // Анимация пересоздаётся только при смене её типа - при смене скина прогресс (и поза на паузе) сохраняется
         function applyAnimation() {
             if (!skinViewer) return;
-            skinViewer.animation = null;
-            if (currentAnimationType === 'walk') skinViewer.animation = new skinview3d.WalkingAnimation();
-            if (currentAnimationType === 'run') skinViewer.animation = new skinview3d.RunningAnimation();
-            if (currentAnimationType === 'fly') skinViewer.animation = new skinview3d.FlyingAnimation();
-            
-            if (skinViewer.animation) {
-                skinViewer.animation.speed = currentAnimationSpeed;
-                skinViewer.animation.paused = document.getElementById('pause_animation').checked;
+            const classes = { walk: skinview3d.WalkingAnimation, run: skinview3d.RunningAnimation, fly: skinview3d.FlyingAnimation };
+            const AnimClass = classes[currentAnimationType];
+
+            if (!AnimClass) {
+                skinViewer.animation = null;
+                if (skinViewer.playerObject && skinViewer.playerObject.resetJoints) skinViewer.playerObject.resetJoints();
+                appliedAnimationType = 'none';
+                return;
             }
+
+            if (!skinViewer.animation || appliedAnimationType !== currentAnimationType) {
+                skinViewer.animation = new AnimClass();
+                appliedAnimationType = currentAnimationType;
+            }
+            skinViewer.animation.speed = currentAnimationSpeed;
+            skinViewer.animation.paused = document.getElementById('pause_animation').checked;
         }
 
         function parseDate(dateStr) {
@@ -1856,7 +2092,7 @@
                     } else if (tag.type === 'type') {
                         const skinModel = (skin.model && skin.model.toLowerCase() === 'alex') ? 'alex' : 'steve';
                         if (skinModel !== target) return false;
-                    }
+                    } else if (tag.type === 'has' && target === 'variations' && !itemHasVariations(skin)) return false;
                 }
 
                 const query = searchQuery.toLowerCase().trim();
@@ -1911,14 +2147,14 @@
                     lastAuthor = skin.author;
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || 'Не указан';
+                    header.textContent = lastAuthor || t('meta.unset');
                     list.appendChild(header);
                 }
 
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
-                const fullName = skin.skinName || 'Без названия';
+                const fullName = skin.skinName || t('skin.untitled');
                 item.setAttribute('title', fullName);
                 
                 if (skin.filename === currentActiveSkinFilename) {
@@ -1930,9 +2166,8 @@
                 const modelType = isAlex ? 'alex' : 'steve';
 
                 const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
-                const hasVariations = Array.isArray(skin.variations) && skin.variations.length > 0;
-                const variationBadgeHtml = hasVariations
-                    ? `<div class="variation-badge" title="Есть вариации"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>`
+                const variationBadgeHtml = itemHasVariations(skin)
+                    ? `<div class="variation-badge" title="${t('skin.has_variations')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>`
                     : '';
 
                 item.innerHTML = `
@@ -1941,7 +2176,7 @@
                     <span class="skin-name">${fullName}</span>
                     <span class="skin-date">${skin.date || ''}</span>
                     ${variationBadgeHtml}
-                    <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="Тип: ${modelType}"></div>
+                    <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="${t('skin.type', modelType)}"></div>
                 `;
                 
                 list.appendChild(item);
@@ -1953,6 +2188,14 @@
                     if (e.target.classList.contains('model-badge')) return;
                     selectSkin(skin.filename, true);
                 };
+
+                const variationBadge = item.querySelector('.variation-badge');
+                if (variationBadge) {
+                    variationBadge.onclick = (e) => {
+                        e.stopPropagation();
+                        setAndRenderTag('has', 'variations');
+                    };
+                }
 
                 const badge = item.querySelector('.model-badge');
                 badge.onclick = (e) => {
@@ -1987,6 +2230,7 @@
 
             trigger.onclick = (e) => {
                 e.stopPropagation();
+                closeLangMenu();
                 menu.classList.toggle('show');
                 trigger.classList.toggle('active');
             };
@@ -2040,6 +2284,12 @@
                             setAndRenderTag('customer', name);
                             e.preventDefault();
                         }
+                    } else if (val.toLowerCase().startsWith('has:')) {
+                        const hasVal = val.substring(4).trim().toLowerCase();
+                        if (hasVal === 'variations' || hasVal === 'variation') {
+                            setAndRenderTag('has', 'variations');
+                            e.preventDefault();
+                        }
                     } else if (val.toLowerCase().startsWith('type:')) {
                         const typeVal = val.substring(5).trim().toLowerCase();
                         if (typeVal === 'alex' || typeVal === 'steve') {
@@ -2089,6 +2339,7 @@
                 if (skinViewer.animation) {
                     skinViewer.animation.speed = currentAnimationSpeed;
                     skinViewer.animation.paused = false;
+                    skinViewer.animation.progress = 0;
                 }
                 document.getElementById('anim_speed').value = 1.0;
                 document.getElementById('anim_speed_val').textContent = '1.0';
@@ -2145,11 +2396,7 @@
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
                 radio.onchange = (e) => {
                     currentAnimationType = e.target.value;
-                    if (currentActiveSkinFilename) {
-                        selectSkin(currentActiveSkinFilename, false, currentLoadedTextureFilename); 
-                    } else {
-                        applyAnimation();
-                    }
+                    applyAnimation();
                 };
             });
 
@@ -2308,6 +2555,7 @@
         }
 
         async function loadAllJSONData() {
+            await initI18n();
             try {
                 const responseSkins = await fetch('skins.json?v=' + Math.random());
                 globalSkins = await responseSkins.json();
@@ -2351,7 +2599,7 @@
                 }
 
             } catch (err) {
-                document.getElementById('loading').textContent = "Не удалось прочесть конфигурационные файлы JSON.";
+                document.getElementById('loading').textContent = t('error.json');
             }
         }
 
