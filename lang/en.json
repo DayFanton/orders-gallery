@@ -71,7 +71,7 @@
   "modal.continue": "Continue",
 
   "error.viewer": "Failed to initialize 3D components.",
-  "error.json": "Failed to read the JSON configuration files."
+  "error.json": "Failed to read the JSON configuration files.",
 
   "skin.name.vova_halloween26": "Halloween Vova 2026",
   "variation.name.vova_in_mask_halloween26": "In Mask",
