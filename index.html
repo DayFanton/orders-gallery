@@ -1088,7 +1088,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.7</div>
+            <div class="site-version">v1.5.5</div>
         </div>
     </div>
 
@@ -1412,8 +1412,18 @@
             }
         }
 
-        // Все языки, которые браузер сообщает сайту, по порядку предпочтения.
-        // Язык самой Windows/Android/iOS сайтам напрямую недоступен - браузер берёт список из системы/своих настроек.
+        // Как выбирается язык при первом заходе (если в ссылке нет ?lang=):
+        //   'system'  - главный сигнал: язык интерфейса системы/браузера (Intl). У Chrome/Edge по умолчанию совпадает с языком
+        //               Windows, на телефонах - с языком системы. Дальше идёт список языков браузера (navigator.languages).
+        //   'browser' - только порядок из списка языков браузера: туда попадают и языки из списка Windows
+        //               ("Предпочитаемые языки"), даже если интерфейс Windows на другом языке.
+        // Язык самой Windows/Android/iOS сайт напрямую прочитать не может - это максимум, что отдают браузеры.
+        const AUTO_LANG_MODE = 'system';
+
+        function getSystemLocale() {
+            try { return Intl.DateTimeFormat().resolvedOptions().locale || ''; } catch (e) { return ''; }
+        }
+
         function getBrowserLanguages() {
             const out = [];
             const add = (v) => {
@@ -1421,13 +1431,19 @@
                 const x = v.trim().replace('_', '-').toLowerCase();
                 if (x && !out.includes(x)) out.push(x);
             };
+            if (AUTO_LANG_MODE === 'system') add(getSystemLocale());
             (navigator.languages || []).forEach(add);
             add(navigator.language);
             add(navigator.userLanguage);
             add(navigator.browserLanguage);
             add(navigator.systemLanguage);
-            try { add(Intl.DateTimeFormat().resolvedOptions().locale); } catch (e) {}
+            add(getSystemLocale());
             return out;
+        }
+
+        // Что именно сообщает браузер - показывается подсказкой на строке "Авто" и в консоли
+        function getLangSignalsText() {
+            return 'Intl: ' + (getSystemLocale() || '-') + ' | navigator.languages: ' + (((navigator.languages || []).join(', ')) || navigator.language || '-');
         }
 
         // ru-RU -> ищем "ru-ru", затем "ru"; коды берутся из имени файла и из "language.codes"
@@ -1484,7 +1500,7 @@
                 langExplicit = r.explicit;
                 currentLang = r.lang.code;
                 i18nDict = r.lang.data;
-                console.info('[i18n] языки браузера:', getBrowserLanguages().join(', '), '=>', currentLang, langExplicit ? '(из ссылки)' : '(авто)');
+                console.info('[i18n] ' + getLangSignalsText() + ' | режим: ' + AUTO_LANG_MODE + ' =>', currentLang, langExplicit ? '(из ссылки)' : '(авто)');
 
                 // раньше выбор языка запоминался в localStorage и мешал автоопределению
                 try { localStorage.removeItem('lang'); } catch (e) {}
@@ -1517,6 +1533,7 @@
             });
             document.querySelectorAll('.lang-auto-label').forEach(el => {
                 el.textContent = t('language.auto') + (detected ? ` (${detected.name})` : '');
+                if (el.parentElement) el.parentElement.title = getLangSignalsText();
             });
         }
 
