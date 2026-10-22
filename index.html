@@ -1021,6 +1021,12 @@
             }
             #langMenuMobile { top: auto; bottom: calc(100% + 10px); left: auto; right: 0; min-width: 190px; }
         }
+
+        .modal-content { position: relative; }
+        #modalLangContainer { position: absolute; top: 14px; right: 14px; text-align: left; }
+        #modalLangContainer .lang-btn { padding: 6px 10px; }
+        #modalLangContainer .dropdown-menu { top: calc(100% + 6px); right: 0; left: auto; min-width: 200px; }
+        .lang-menu { max-height: 60vh; overflow-y: auto; }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1082,7 +1088,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v. 1.5.6</div>
+            <div class="site-version">v1.5.7</div>
         </div>
     </div>
 
@@ -1093,7 +1099,7 @@
                 <span class="flag lang-flag-current">🌐</span>
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="dropdown-menu" id="langMenu"></div>
+            <div class="dropdown-menu lang-menu" id="langMenu"></div>
         </div>
         <div id="variations_container" style="display: none;"></div>
         <canvas id="skin_container"></canvas>
@@ -1187,11 +1193,18 @@
         <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
         <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
         <button id="mobileBtnLang" class="mobile-nav-btn mobile-lang-btn" title="Language"><span class="flag lang-flag-current">🌐</span></button>
-        <div class="dropdown-menu" id="langMenuMobile"></div>
+        <div class="dropdown-menu lang-menu" id="langMenuMobile"></div>
     </div>
 
     <div id="agreementModal" class="modal-overlay">
         <div class="modal-content">
+            <div id="modalLangContainer">
+                <button class="lang-btn" id="modalLangTrigger" title="Language">
+                    <span class="flag lang-flag-current">🌐</span>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="dropdown-menu lang-menu" id="modalLangMenu"></div>
+            </div>
             <h3>Уведомление</h3>
             <p>
                 Уважаемые гости! Каждый скин в этой галерее — результат многих часов работы. Пожалуйста, уважайте чужой труд. Все изображения защищены авторским правом. Просмотр разрешён, но скачивание, копирование и коммерческое использование доступны только по предварительной договоренности. Спасибо за понимание и честность!
@@ -1254,6 +1267,7 @@
         let i18nBase = {};    // английский - запасной
         let currentLang = 'en';
         let i18nFilesMissing = false;
+        let langExplicit = null;   // язык, выбранный вручную (хранится в ссылке ?lang=..); null - определять автоматически
         // Встроенный английский: нужен только как страховка, если папка lang/ не найдена или в файле нет ключа
         const I18N_BUILTIN = {
             "language.name": "English",
@@ -1320,9 +1334,10 @@
             "modal.continue": "Continue",
             "error.viewer": "Failed to initialize 3D components.",
             "error.json": "Failed to read the JSON configuration files.",
-            "language.missing": "Language files not found (folder lang/)"
+            "language.missing": "Language files not found (folder lang/)",
+            "language.auto": "Auto"
         };
-        const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile']];
+        const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
 
         // [селектор, ключ в lang/*.json, атрибут (если не указан - меняется текст)]
@@ -1337,7 +1352,7 @@
             ['#sortMenu [data-order="asc"]', 'sort.asc'],
             ['#btnListView', 'view.list'],
             ['#btnGridView', 'view.grid'],
-            ['#langTrigger, #mobileBtnLang', 'language.title', 'title'],
+            ['#langTrigger, #mobileBtnLang, #modalLangTrigger', 'language.title', 'title'],
             ['#tabSkins', 'tab.skins'],
             ['#tabCapes', 'tab.capes'],
             ['#searchInput', 'search.placeholder', 'placeholder'],
@@ -1397,15 +1412,46 @@
             }
         }
 
+        // Все языки, которые браузер сообщает сайту, по порядку предпочтения.
+        // Язык самой Windows/Android/iOS сайтам напрямую недоступен - браузер берёт список из системы/своих настроек.
+        function getBrowserLanguages() {
+            const out = [];
+            const add = (v) => {
+                if (typeof v !== 'string') return;
+                const x = v.trim().replace('_', '-').toLowerCase();
+                if (x && !out.includes(x)) out.push(x);
+            };
+            (navigator.languages || []).forEach(add);
+            add(navigator.language);
+            add(navigator.userLanguage);
+            add(navigator.browserLanguage);
+            add(navigator.systemLanguage);
+            try { add(Intl.DateTimeFormat().resolvedOptions().locale); } catch (e) {}
+            return out;
+        }
+
+        // ru-RU -> ищем "ru-ru", затем "ru"; коды берутся из имени файла и из "language.codes"
+        function findLang(tag) {
+            const x = String(tag || '').trim().replace('_', '-').toLowerCase();
+            if (!x) return null;
+            const base = x.split('-')[0];
+            return i18nLangs.find(l => l.codes.includes(x)) || i18nLangs.find(l => l.codes.includes(base)) || null;
+        }
+
         function detectLanguage() {
-            const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'en'];
-            for (const pref of prefs) {
-                const tag = String(pref).toLowerCase();
-                const base = tag.split('-')[0];
-                const hit = i18nLangs.find(l => l.codes.includes(tag)) || i18nLangs.find(l => l.codes.includes(base));
+            for (const tag of getBrowserLanguages()) {
+                const hit = findLang(tag);
                 if (hit) return hit;
             }
             return null;
+        }
+
+        // explicitTag - язык из ссылки / выбранный вручную; без него язык определяется автоматически
+        function resolveLanguage(explicitTag) {
+            const en = i18nLangs.find(l => l.code === 'en') || i18nLangs[0];
+            const forced = explicitTag ? findLang(explicitTag) : null;
+            if (forced) return { lang: forced, explicit: forced.code };
+            return { lang: detectLanguage() || en, explicit: null };
         }
 
         async function initI18n() {
@@ -1433,11 +1479,15 @@
                 }
                 i18nBase = en.data;
 
-                let saved = null;
-                try { saved = localStorage.getItem('lang'); } catch (e) {}
-                const chosen = i18nLangs.find(l => l.code === saved) || detectLanguage() || en;
-                currentLang = chosen.code;
-                i18nDict = chosen.data;
+                // Приоритет: ?lang= в ссылке -> автоопределение по языкам браузера -> английский
+                const r = resolveLanguage(new URLSearchParams(window.location.search).get('lang'));
+                langExplicit = r.explicit;
+                currentLang = r.lang.code;
+                i18nDict = r.lang.data;
+                console.info('[i18n] языки браузера:', getBrowserLanguages().join(', '), '=>', currentLang, langExplicit ? '(из ссылки)' : '(авто)');
+
+                // раньше выбор языка запоминался в localStorage и мешал автоопределению
+                try { localStorage.removeItem('lang'); } catch (e) {}
             } catch (e) {
                 console.warn('Не удалось загрузить языковые файлы (папка lang/).', e);
             }
@@ -1447,22 +1497,27 @@
             document.body.classList.remove('i18n-pending');
         }
 
-        function setLanguage(code, save = true) {
-            const lang = i18nLangs.find(l => l.code === code);
-            if (!lang) return;
-            currentLang = code;
-            i18nDict = lang.data;
-            if (save) {
-                try { localStorage.setItem('lang', code); } catch (e) {}
-            }
+        // explicitTag = null - вернуть автоопределение
+        function setLanguage(explicitTag, sync = true) {
+            const r = resolveLanguage(explicitTag);
+            langExplicit = r.explicit;
+            currentLang = r.lang.code;
+            i18nDict = r.lang.data;
             applyI18n(true);
+            if (sync) syncUrlState();
         }
 
         function updateLangButtons() {
             const lang = i18nLangs.find(l => l.code === currentLang);
+            const detected = detectLanguage() || i18nLangs.find(l => l.code === 'en') || i18nLangs[0];
             document.querySelectorAll('.lang-flag-current').forEach(el => { el.textContent = lang ? lang.flag : '🌐'; });
-            document.querySelectorAll('#langMenu .dropdown-item[data-lang], #langMenuMobile .dropdown-item[data-lang]')
-                .forEach(el => el.classList.toggle('active', el.dataset.lang === currentLang));
+            document.querySelectorAll('.lang-menu .dropdown-item[data-lang]').forEach(el => {
+                const active = el.dataset.lang === 'auto' ? langExplicit === null : el.dataset.lang === langExplicit;
+                el.classList.toggle('active', active);
+            });
+            document.querySelectorAll('.lang-auto-label').forEach(el => {
+                el.textContent = t('language.auto') + (detected ? ` (${detected.name})` : '');
+            });
         }
 
         function applyI18n(rerender = true) {
@@ -1505,10 +1560,21 @@
                 if (!trigger || !menu) return;
 
                 menu.innerHTML = '';
+
+                const autoRow = document.createElement('div');
+                autoRow.classList.add('dropdown-item');
+                autoRow.dataset.lang = 'auto';
+                autoRow.innerHTML = '<span class="radio-circle"></span><span class="flag">🌐</span><span class="lang-auto-label"></span>';
+                autoRow.onclick = (e) => {
+                    e.stopPropagation();
+                    closeLangMenu();
+                    setLanguage(null);
+                };
+                menu.appendChild(autoRow);
+
                 i18nLangs.forEach(l => {
                     const item = document.createElement('div');
                     item.classList.add('dropdown-item');
-                    if (l.code === currentLang) item.classList.add('active');
                     item.dataset.lang = l.code;
                     item.innerHTML = '<span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
                     item.querySelector('.flag').textContent = l.flag;
@@ -1702,7 +1768,9 @@
                 tab: p.get('tab') === 'capes' ? 'capes' : 'skins',
                 view: p.get('view') === 'grid' ? 'grid' : 'list',
                 sort: SORT_FIELDS.includes(p.get('sort')) ? p.get('sort') : 'default',
-                order: p.get('order') === 'asc' ? 'asc' : 'desc'
+                order: p.get('order') === 'asc' ? 'asc' : 'desc',
+                lang: p.get('lang'),
+                cape: p.get('cape')
             };
         }
 
@@ -1710,10 +1778,12 @@
         function buildStateUrl(skinFilename) {
             const p = new URLSearchParams();
             if (skinFilename) p.set('skin', skinFilename);
+            if (currentCapeFilename) p.set('cape', currentCapeFilename);
             if (currentTab !== 'skins') p.set('tab', currentTab);
             if (currentViewMode !== 'list') p.set('view', currentViewMode);
             if (currentSortField !== 'default') p.set('sort', currentSortField);
             if (currentSortOrder !== 'desc') p.set('order', currentSortOrder);
+            if (langExplicit) p.set('lang', langExplicit);
             const q = p.toString();
             return window.location.pathname + (q ? '?' + q : '');
         }
@@ -1767,6 +1837,15 @@
             const target = (st.skin && globalSkins.some(s => s.filename === st.skin))
                 ? st.skin
                 : (globalSkins.length > 0 ? globalSkins[0].filename : null);
+
+            const wantedLang = st.lang ? findLang(st.lang) : null;
+            if ((wantedLang ? wantedLang.code : null) !== langExplicit) setLanguage(wantedLang ? wantedLang.code : null, false);
+
+            const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
+            if (wantedCape !== currentCapeFilename) {
+                currentCapeFilename = wantedCape;
+                updateBackEquipment();
+            }
 
             switchTab(st.tab, false);
             if (target && target !== currentActiveSkinFilename) {
@@ -1986,6 +2065,7 @@
                 `;
                 noneItem.onclick = async () => {
                     currentCapeFilename = null;
+                    syncUrlState();
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     noneItem.classList.add('active');
                     await updateBackEquipment();
@@ -2082,6 +2162,7 @@
 
                 item.onclick = async () => {
                     currentCapeFilename = cape.filename;
+                    syncUrlState();
                     document.querySelectorAll('.skin-item').forEach(el => el.classList.remove('active'));
                     item.classList.add('active');
                     await updateBackEquipment();
@@ -2781,8 +2862,10 @@
                 currentViewMode = urlState.view;
                 currentSortField = urlState.sort;
                 currentSortOrder = urlState.order;
+                currentCapeFilename = (urlState.cape && globalCapes.some(c => c.filename === urlState.cape)) ? urlState.cape : null;
 
                 initViewer();
+                if (currentCapeFilename) updateBackEquipment();
                 initAgreementModal(); 
                 initSortListeners();
                 applyViewModeUI();
