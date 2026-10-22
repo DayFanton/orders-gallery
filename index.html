@@ -435,7 +435,6 @@
             font-display: swap;
         }
         .flag { font-family: "Twemoji Country Flags", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; font-size: 1rem; line-height: 1; }
-        .lang-trigger-btn { padding: 4px 8px; }
         .sidebar-header .section-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         body.i18n-pending > * { visibility: hidden; }
 
@@ -973,6 +972,55 @@
                 border-top: 1px solid var(--border);
             }
         }
+
+        /* ---- Кнопка выбора языка ---- */
+        #lang_container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 6;
+            background: rgba(19, 19, 22, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover { color: var(--text-main); border-color: var(--text-muted); }
+        .lang-btn.active { color: var(--accent); border-color: var(--accent); }
+        .lang-btn .flag { font-size: 1.1rem; }
+        #lang_container .dropdown-menu { top: calc(100% + 6px); left: 0; right: auto; min-width: 190px; }
+        .dropdown-item.disabled { opacity: 0.7; cursor: default; pointer-events: none; font-size: 0.72rem; white-space: normal; }
+        @media (min-width: 901px) {
+            #viewer_zone #variations_container { max-width: calc(100% - 120px); }
+        }
+        @media (max-width: 900px) {
+            #lang_container { display: none; }
+            .mobile-nav-btn.mobile-lang-btn {
+                flex: 0 0 40px;
+                width: 40px;
+                height: 40px;
+                padding: 0;
+                font-size: 1.2rem;
+                background: rgba(255, 255, 255, 0.07);
+                border-radius: 50%;
+                align-self: center;
+            }
+            #langMenuMobile { top: auto; bottom: calc(100% + 10px); left: auto; right: 0; min-width: 190px; }
+        }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1000,13 +1048,6 @@
                 <div class="view-toggle">
                     <button class="toggle-btn active" id="btnListView">Список</button>
                     <button class="toggle-btn" id="btnGridView">Плитка</button>
-                </div>
-
-                <div class="dropdown-sort">
-                    <button class="sort-trigger-btn lang-trigger-btn" id="langTrigger" title="Language">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </button>
-                    <div class="dropdown-menu" id="langMenu"></div>
                 </div>
             </div>
         </div>
@@ -1041,12 +1082,19 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.5.0</div>
+            <div class="site-version">v1.5.1</div>
         </div>
     </div>
 
     <div id="viewer_zone">
         <div id="loading">Загрузка модулей визуализации...</div>
+        <div id="lang_container">
+            <button class="lang-btn" id="langTrigger" title="Language">
+                <span class="flag lang-flag-current">🌐</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu" id="langMenu"></div>
+        </div>
         <div id="variations_container" style="display: none;"></div>
         <canvas id="skin_container"></canvas>
     </div>
@@ -1066,7 +1114,7 @@
                 
                 <div class="slider-container">
                     <div class="slider-header">
-                        <span>Скорость вращения</span>
+                        <span id="lbl_rotate_speed">Скорость вращения</span>
                         <span id="rotate_speed_val">1.0</span>
                     </div>
                     <input type="range" id="rotate_speed" class="control-slider" min="0.1" max="10.0" step="0.1" value="1.0">
@@ -1101,7 +1149,7 @@
 
                 <div class="slider-container">
                     <div class="slider-header">
-                        <span>Скорость анимации</span>
+                        <span id="lbl_anim_speed">Скорость анимации</span>
                         <span id="anim_speed_val">1.0</span>
                     </div>
                     <input type="range" id="anim_speed" class="control-slider" min="0.1" max="10.0" step="0.1" value="1.0">
@@ -1138,6 +1186,8 @@
     <div id="mobile_nav">
         <button id="mobileBtnSidebar" class="mobile-nav-btn">📁 Галерея</button>
         <button id="mobileBtnControls" class="mobile-nav-btn">⚙️ Настройки</button>
+        <button id="mobileBtnLang" class="mobile-nav-btn mobile-lang-btn" title="Language"><span class="flag lang-flag-current">🌐</span></button>
+        <div class="dropdown-menu" id="langMenuMobile"></div>
     </div>
 
     <div id="agreementModal" class="modal-overlay">
@@ -1203,6 +1253,76 @@
         let i18nDict = {};    // выбранный язык
         let i18nBase = {};    // английский - запасной
         let currentLang = 'en';
+        let i18nFilesMissing = false;
+        // Встроенный английский: нужен только как страховка, если папка lang/ не найдена или в файле нет ключа
+        const I18N_BUILTIN = {
+            "language.name": "English",
+            "language.flag": "🇬🇧",
+            "language.codes": "en",
+            "language.title": "Language",
+            "site.title": "Tsyplyash's Gallery",
+            "gallery.title": "Gallery",
+            "loading.text": "Loading visualization modules...",
+            "sort.title": "Sort",
+            "sort.default": "Default",
+            "sort.author": "By author",
+            "sort.name": "By name",
+            "sort.date": "By date",
+            "sort.desc": "Descending",
+            "sort.asc": "Ascending",
+            "view.list": "List",
+            "view.grid": "Grid",
+            "tab.skins": "Skins",
+            "tab.capes": "Capes",
+            "search.placeholder": "Search by name, customer, author...",
+            "meta.customer": "Customer",
+            "meta.artist": "Artist",
+            "meta.date": "Order date",
+            "meta.unset": "Not specified",
+            "meta.date_unset": "Not specified",
+            "meta.show_orders": "Show all orders from %s",
+            "meta.open_author": "Open author's page (%s)",
+            "skin.untitled": "Untitled",
+            "skin.type": "Type: %s",
+            "skin.has_variations": "Has variations",
+            "variation.original": "Original",
+            "cape.remove": "Remove cape",
+            "controls.reset": "Reset",
+            "rotate.title": "Rotation",
+            "rotate.enable": "Rotate model",
+            "rotate.speed": "Rotation speed",
+            "anim.title": "Movement animation",
+            "anim.pause": "Pause animation",
+            "anim.none": "Idle",
+            "anim.walk": "Walk",
+            "anim.run": "Run",
+            "anim.fly": "Fly",
+            "anim.speed": "Animation speed",
+            "layers.title": "Layer visibility",
+            "layers.head": "Headwear / Hair",
+            "layers.body": "Outer clothing / Armor",
+            "acc.title": "Accessories",
+            "acc.elytra": "Show elytra",
+            "bg.title": "Background color",
+            "bg.dark": "Dark",
+            "bg.light": "Light",
+            "bg.purple": "Dark purple",
+            "bg.red": "Dark red",
+            "bg.pink": "Dark pink",
+            "bg.yellow": "Dark yellow",
+            "bg.blue": "Dark blue",
+            "bg.custom": "Custom color",
+            "mobile.gallery": "📁 Gallery",
+            "mobile.settings": "⚙️ Settings",
+            "modal.title": "Notice",
+            "modal.text": "Dear visitors! Every skin in this gallery is the result of many hours of work. Please respect other people's work. All images are protected by copyright. Viewing is allowed, but downloading, copying and commercial use are only possible by prior agreement. Thank you for your understanding and honesty!",
+            "modal.agree": "I have read everything and agree",
+            "modal.continue": "Continue",
+            "error.viewer": "Failed to initialize 3D components.",
+            "error.json": "Failed to read the JSON configuration files.",
+            "language.missing": "Language files not found (folder lang/)"
+        };
+        const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile']];
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
 
         // [селектор, ключ в lang/*.json, атрибут (если не указан - меняется текст)]
@@ -1217,7 +1337,7 @@
             ['#sortMenu [data-order="asc"]', 'sort.asc'],
             ['#btnListView', 'view.list'],
             ['#btnGridView', 'view.grid'],
-            ['#langTrigger', 'language.title', 'title'],
+            ['#langTrigger, #mobileBtnLang', 'language.title', 'title'],
             ['#tabSkins', 'tab.skins'],
             ['#tabCapes', 'tab.capes'],
             ['#searchInput', 'search.placeholder', 'placeholder'],
@@ -1228,14 +1348,14 @@
             ['#reset_all', 'controls.reset'],
             ['.controls-scroll .control-group:nth-child(2) > h3', 'rotate.title'],
             ['#auto_rotate + span', 'rotate.enable'],
-            ['.slider-container:has(#rotate_speed) .slider-header > span:first-child', 'rotate.speed'],
+            ['#lbl_rotate_speed', 'rotate.speed'],
             ['.controls-scroll .control-group:nth-child(3) > h3', 'anim.title'],
             ['#pause_animation + span', 'anim.pause'],
             ['input[name="animation"][value="none"] + span', 'anim.none'],
             ['input[name="animation"][value="walk"] + span', 'anim.walk'],
             ['input[name="animation"][value="run"] + span', 'anim.run'],
             ['input[name="animation"][value="fly"] + span', 'anim.fly'],
-            ['.slider-container:has(#anim_speed) .slider-header > span:first-child', 'anim.speed'],
+            ['#lbl_anim_speed', 'anim.speed'],
             ['.controls-scroll .control-group:nth-child(4) > h3', 'layers.title'],
             ['#layer_head + span', 'layers.head'],
             ['#layer_body + span', 'layers.body'],
@@ -1252,8 +1372,8 @@
 
         // t('key') или t('key', a, b): в строке перевода работают %s, %s или %1$s, %2$s (как в Minecraft)
         function t(key, ...args) {
-            const has = (o) => Object.prototype.hasOwnProperty.call(o, key);
-            const str = has(i18nDict) ? i18nDict[key] : (has(i18nBase) ? i18nBase[key] : key);
+            const owner = [i18nDict, i18nBase, I18N_BUILTIN].find(o => Object.prototype.hasOwnProperty.call(o, key));
+            const str = owner ? owner[key] : key;
             let i = 0;
             return String(str).replace(/%(?:(\d+)\$)?s/g, (m, n) => {
                 const v = args[n ? n - 1 : i++];
@@ -1303,24 +1423,28 @@
                     flag: l.data['language.flag'] || '🌐',
                     codes: [l.code, ...String(l.data['language.codes'] || '').split(',')].map(c => c.trim().toLowerCase()).filter(Boolean)
                 }));
+                i18nFilesMissing = i18nLangs.length === 0;
 
-                const en = i18nLangs.find(l => l.code === 'en');
-                i18nBase = en ? en.data : {};
+                let en = i18nLangs.find(l => l.code === 'en');
+                if (!en) {
+                    console.warn('Не найден lang/en.json - используется встроенный английский. Папка lang должна лежать рядом с index.html.');
+                    en = { code: 'en', data: I18N_BUILTIN, name: 'English', flag: '🇬🇧', codes: ['en'] };
+                    i18nLangs.unshift(en);
+                }
+                i18nBase = en.data;
 
                 let saved = null;
                 try { saved = localStorage.getItem('lang'); } catch (e) {}
-                const chosen = i18nLangs.find(l => l.code === saved) || detectLanguage() || en || i18nLangs[0];
-                if (chosen) {
-                    currentLang = chosen.code;
-                    i18nDict = chosen.data;
-                }
-                applyI18n(false);
-                initLangMenu();
+                const chosen = i18nLangs.find(l => l.code === saved) || detectLanguage() || en;
+                currentLang = chosen.code;
+                i18nDict = chosen.data;
             } catch (e) {
                 console.warn('Не удалось загрузить языковые файлы (папка lang/).', e);
-            } finally {
-                document.body.classList.remove('i18n-pending');
             }
+
+            try { applyI18n(false); } catch (e) { console.warn(e); }
+            try { initLangMenu(); } catch (e) { console.warn(e); }
+            document.body.classList.remove('i18n-pending');
         }
 
         function setLanguage(code, save = true) {
@@ -1332,21 +1456,31 @@
                 try { localStorage.setItem('lang', code); } catch (e) {}
             }
             applyI18n(true);
-            document.querySelectorAll('#langMenu .dropdown-item').forEach(el => el.classList.toggle('active', el.dataset.lang === code));
+        }
+
+        function updateLangButtons() {
+            const lang = i18nLangs.find(l => l.code === currentLang);
+            document.querySelectorAll('.lang-flag-current').forEach(el => { el.textContent = lang ? lang.flag : '🌐'; });
+            document.querySelectorAll('#langMenu .dropdown-item[data-lang], #langMenuMobile .dropdown-item[data-lang]')
+                .forEach(el => el.classList.toggle('active', el.dataset.lang === currentLang));
         }
 
         function applyI18n(rerender = true) {
-            if (Object.keys(i18nDict).length === 0 && Object.keys(i18nBase).length === 0) return;
             document.documentElement.lang = currentLang;
             document.title = t('site.title');
             I18N_STATIC.forEach(([sel, key, attr]) => {
-                document.querySelectorAll(sel).forEach(el => {
-                    if (attr) el.setAttribute(attr, t(key));
-                    else setElText(el, t(key));
-                });
+                try {
+                    document.querySelectorAll(sel).forEach(el => {
+                        if (attr) el.setAttribute(attr, t(key));
+                        else setElText(el, t(key));
+                    });
+                } catch (e) {
+                    console.warn('i18n: не удалось применить селектор', sel);
+                }
             });
             document.querySelectorAll('#bgGrid .bg-dot').forEach((dot, i) => { dot.title = t(BG_KEYS[i] || 'bg.custom'); });
             document.querySelectorAll('[data-orig]').forEach(b => { b.textContent = t('variation.original'); });
+            updateLangButtons();
             if (rerender) {
                 renderTagsDOM();
                 renderCurrentList();
@@ -1355,47 +1489,58 @@
         }
 
         function closeLangMenu() {
-            const menu = document.getElementById('langMenu');
-            const trigger = document.getElementById('langTrigger');
-            if (menu) menu.classList.remove('show');
-            if (trigger) trigger.classList.remove('active');
+            LANG_UIS.forEach(([triggerId, menuId]) => {
+                const trigger = document.getElementById(triggerId);
+                const menu = document.getElementById(menuId);
+                if (menu) menu.classList.remove('show');
+                if (trigger) trigger.classList.remove('active');
+            });
         }
 
         function initLangMenu() {
-            const trigger = document.getElementById('langTrigger');
-            const menu = document.getElementById('langMenu');
-            if (!trigger || !menu) return;
+            LANG_UIS.forEach(([triggerId, menuId]) => {
+                const trigger = document.getElementById(triggerId);
+                const menu = document.getElementById(menuId);
+                if (!trigger || !menu) return;
 
-            if (i18nLangs.length < 2) {
-                trigger.parentElement.style.display = 'none';
-                return;
-            }
+                menu.innerHTML = '';
+                i18nLangs.forEach(l => {
+                    const item = document.createElement('div');
+                    item.classList.add('dropdown-item');
+                    if (l.code === currentLang) item.classList.add('active');
+                    item.dataset.lang = l.code;
+                    item.innerHTML = '<span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
+                    item.querySelector('.flag').textContent = l.flag;
+                    item.querySelector('.lang-name').textContent = l.name;
+                    item.onclick = (e) => {
+                        e.stopPropagation();
+                        closeLangMenu();
+                        setLanguage(l.code);
+                    };
+                    menu.appendChild(item);
+                });
 
-            menu.innerHTML = '';
-            i18nLangs.forEach(l => {
-                const item = document.createElement('div');
-                item.classList.add('dropdown-item');
-                if (l.code === currentLang) item.classList.add('active');
-                item.dataset.lang = l.code;
-                item.innerHTML = '<span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
-                item.querySelector('.flag').textContent = l.flag;
-                item.querySelector('.lang-name').textContent = l.name;
-                item.onclick = (e) => {
+                if (i18nFilesMissing) {
+                    const hint = document.createElement('div');
+                    hint.classList.add('dropdown-item', 'disabled');
+                    hint.textContent = '⚠ ' + t('language.missing');
+                    menu.appendChild(hint);
+                }
+
+                trigger.onclick = (e) => {
                     e.stopPropagation();
+                    const wasOpen = menu.classList.contains('show');
                     closeLangMenu();
-                    setLanguage(l.code);
+                    document.getElementById('sortMenu').classList.remove('show');
+                    document.getElementById('sortTrigger').classList.remove('active');
+                    if (!wasOpen) {
+                        menu.classList.add('show');
+                        trigger.classList.add('active');
+                    }
                 };
-                menu.appendChild(item);
             });
-
-            trigger.onclick = (e) => {
-                e.stopPropagation();
-                document.getElementById('sortMenu').classList.remove('show');
-                document.getElementById('sortTrigger').classList.remove('active');
-                menu.classList.toggle('show');
-                trigger.classList.toggle('active');
-            };
             document.addEventListener('click', closeLangMenu);
+            updateLangButtons();
         }
 
         function itemHasVariations(item) {
