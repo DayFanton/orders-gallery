@@ -1480,6 +1480,7 @@
             });
             document.querySelectorAll('#bgGrid .bg-dot').forEach((dot, i) => { dot.title = t(BG_KEYS[i] || 'bg.custom'); });
             document.querySelectorAll('[data-orig]').forEach(b => { b.textContent = t('variation.original'); });
+            document.querySelectorAll('[data-var-file]').forEach(b => { b.textContent = ownText('variation.name.' + b.dataset.varFile, b.dataset.varName); });
             updateLangButtons();
             if (rerender) {
                 renderTagsDOM();
@@ -1547,6 +1548,53 @@
             return !!item && Array.isArray(item.variations) && item.variations.length > 0;
         }
 
+        /* ---------- Перевод данных из skins.json / capes.json ----------
+           Ключи в lang/*.json:
+             skin.name.<filename>      - название скина
+             cape.name.<filename>      - название плаща
+             variation.name.<filename> - название вариации (filename вариации)
+             person.<Имя>              - имя автора / заказчика (как оно написано в JSON)
+           Берётся только из выбранного языка. Нет ключа - показывается оригинал из JSON. */
+        function ownText(key, original) {
+            const v = Object.prototype.hasOwnProperty.call(i18nDict, key) ? i18nDict[key] : null;
+            return (typeof v === 'string' && v.trim()) ? v : original;
+        }
+        function skinTitle(skin) { return ownText(`skin.name.${skin.filename}`, skin.skinName || t('skin.untitled')); }
+        function capeTitle(cape) { return ownText(`cape.name.${cape.filename}`, cape.capeName || cape.name || cape.filename); }
+        function variationTitle(v) { return ownText(`variation.name.${v.filename}`, v.name || ''); }
+        function personName(name) {
+            return (typeof name === 'string' && name.trim()) ? ownText(`person.${name.trim()}`, name) : name;
+        }
+
+        // Собирает шаблон со всеми ключами из загруженных skins.json / capes.json (значения - оригиналы).
+        // Вызов из консоли браузера: exportLangTemplate()  - скачается lang_template.json
+        function exportLangTemplate() {
+            const out = {};
+            const people = new Set();
+            const addPerson = (n) => {
+                if (typeof n === 'string' && n.trim() && n.trim() !== '-' && n.trim() !== 'Не указан') people.add(n.trim());
+            };
+            globalSkins.forEach(sk => {
+                if (sk.skinName) out[`skin.name.${sk.filename}`] = sk.skinName;
+                (sk.variations || []).forEach(v => { if (v && v.filename && v.name) out[`variation.name.${v.filename}`] = v.name; });
+            });
+            globalCapes.forEach(c => {
+                const n = c.capeName || c.name;
+                if (n) out[`cape.name.${c.filename}`] = n;
+                (c.variations || []).forEach(v => { if (v && v.filename && v.name) out[`variation.name.${v.filename}`] = v.name; });
+            });
+            [...globalSkins, ...globalCapes].forEach(it => { addPerson(it.author); getCustomers(it).forEach(addPerson); });
+            [...people].sort((a, b) => a.localeCompare(b)).forEach(n => { out[`person.${n}`] = n; });
+
+            const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'lang_template.json';
+            a.click();
+            setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+            return out;
+        }
+
         function getCustomers(item) {
             if (!item) return [];
             const raw = item.customer;
@@ -1557,7 +1605,7 @@
         }
 
         function matchesCustomerTag(item, target) {
-            return getCustomers(item).some(c => c.toLowerCase().includes(target));
+            return getCustomers(item).some(c => c.toLowerCase().includes(target) || String(personName(c)).toLowerCase().includes(target));
         }
 
         // Дата выбранной версии скина: если у вариации задана своя "date" - берём её, иначе дату основного скина
@@ -1586,8 +1634,8 @@
 
                 const chip = document.createElement('span');
                 chip.classList.add('meta-value', 'clickable');
-                chip.textContent = name;
-                chip.title = t('meta.show_orders', name);
+                chip.textContent = personName(name);
+                chip.title = t('meta.show_orders', personName(name));
                 chip.onclick = () => setAndRenderTag('customer', name);
                 wrap.appendChild(chip);
 
@@ -1608,12 +1656,12 @@
 
             const authorEl = document.getElementById('infoAuthor');
             if (item && item.author && item.author !== '-' && item.author !== 'Не указан') {
-                authorEl.textContent = item.author;
+                authorEl.textContent = personName(item.author);
                 authorEl.classList.add('clickable');
-                authorEl.title = t('meta.open_author', item.author);
+                authorEl.title = t('meta.open_author', personName(item.author));
                 authorEl.setAttribute('data-url', item.authorUrl || '#');
             } else {
-                authorEl.textContent = (item && item.author) || t('meta.unset');
+                authorEl.textContent = (item && item.author && personName(item.author)) || t('meta.unset');
                 authorEl.classList.remove('clickable');
                 authorEl.removeAttribute('title');
                 authorEl.removeAttribute('data-url');
@@ -1895,7 +1943,7 @@
                     prefixSpan.textContent = tag.type + ':';
                     
                     const valueSpan = document.createElement('span');
-                    valueSpan.textContent = tag.value;
+                    valueSpan.textContent = tag.type === 'customer' ? personName(tag.value) : tag.value;
                     
                     const closeBtn = document.createElement('span');
                     closeBtn.classList.add('tag-close');
@@ -1960,7 +2008,9 @@
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
                 
-                return (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
+                return capeTitle(cape).toLowerCase().includes(query) ||
+                       String(personName(cape.author) || '').toLowerCase().includes(query) ||
+                       (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
                        (cape.author || '').toLowerCase().includes(query) ||
                        (cape.date || '').toLowerCase().includes(query) ||
                        (cape.filename || '').toLowerCase().includes(query);
@@ -1976,8 +2026,8 @@
                 }
 
                 if (currentSortField === 'author') {
-                    const authA = a.author || 'Не указан';
-                    const authB = b.author || 'Не указан';
+                    const authA = String(personName(a.author || 'Не указан'));
+                    const authB = String(personName(b.author || 'Не указан'));
                     if (authA !== authB) {
                         return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
                     }
@@ -1987,8 +2037,8 @@
                 }
 
                 if (currentSortField === 'name') {
-                    const nameA = a.capeName || a.name || '';
-                    const nameB = b.capeName || b.name || '';
+                    const nameA = capeTitle(a);
+                    const nameB = capeTitle(b);
                     return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
                 }
 
@@ -1998,15 +2048,15 @@
                     if (dA !== dB) {
                         return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
                     }
-                    return (a.capeName || a.name || '').localeCompare(b.capeName || b.name || '');
+                    return capeTitle(a).localeCompare(capeTitle(b));
                 }
                 return 0;
             });
 
             let lastAuthor = null;
             filteredCapes.forEach(cape => {
-                if (currentSortField === 'author' && cape.author !== lastAuthor) {
-                    lastAuthor = cape.author;
+                if (currentSortField === 'author' && personName(cape.author) !== lastAuthor) {
+                    lastAuthor = personName(cape.author);
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
                     header.textContent = lastAuthor || t('meta.unset');
@@ -2014,7 +2064,7 @@
                 }
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
-                const fullName = cape.capeName || cape.name || cape.filename;
+                const fullName = capeTitle(cape);
                 item.setAttribute('title', fullName);
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
@@ -2111,7 +2161,9 @@
                     skin.variations.forEach(v => {
                         const btn = document.createElement('button');
                         btn.classList.add('variation-btn');
-                        btn.textContent = v.name;
+                        btn.textContent = variationTitle(v);
+                        btn.dataset.varFile = v.filename;
+                        btn.dataset.varName = v.name || '';
                         if (targetTextureFile === v.filename) {
                             btn.classList.add('active');
                         }
@@ -2243,7 +2295,9 @@
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
 
-                return (skin.skinName || '').toLowerCase().includes(query) ||
+                return skinTitle(skin).toLowerCase().includes(query) ||
+                       String(personName(skin.author) || '').toLowerCase().includes(query) ||
+                       (skin.skinName || '').toLowerCase().includes(query) ||
                        (skin.author || '').toLowerCase().includes(query) ||
                        (skin.date || '').toLowerCase().includes(query) ||
                        (skin.filename || '').toLowerCase().includes(query);
@@ -2259,8 +2313,8 @@
                 }
 
                 if (currentSortField === 'author') {
-                    const authA = a.author || 'Не указан';
-                    const authB = b.author || 'Не указан';
+                    const authA = String(personName(a.author || 'Не указан'));
+                    const authB = String(personName(b.author || 'Не указан'));
                     if (authA !== authB) {
                         return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
                     }
@@ -2270,8 +2324,8 @@
                 }
 
                 if (currentSortField === 'name') {
-                    const nameA = a.skinName || '';
-                    const nameB = b.skinName || '';
+                    const nameA = skinTitle(a);
+                    const nameB = skinTitle(b);
                     return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
                 }
 
@@ -2281,15 +2335,15 @@
                     if (dA !== dB) {
                         return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
                     }
-                    return (a.skinName || '').localeCompare(b.skinName || '');
+                    return skinTitle(a).localeCompare(skinTitle(b));
                 }
                 return 0;
             });
 
             let lastAuthor = null;
             filteredSkins.forEach(skin => {
-                if (currentSortField === 'author' && skin.author !== lastAuthor) {
-                    lastAuthor = skin.author;
+                if (currentSortField === 'author' && personName(skin.author) !== lastAuthor) {
+                    lastAuthor = personName(skin.author);
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
                     header.textContent = lastAuthor || t('meta.unset');
@@ -2299,7 +2353,7 @@
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
-                const fullName = skin.skinName || t('skin.untitled');
+                const fullName = skinTitle(skin);
                 item.setAttribute('title', fullName);
                 
                 if (skin.filename === currentActiveSkinFilename) {
