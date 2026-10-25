@@ -53,6 +53,16 @@
   "acc.title": "Accessories",
   "acc.elytra": "Show elytra",
 
+  "emote.button": "Emotes",
+  "emote.title": "Emotes",
+  "emote.hint": "Choose an emote or load your own .json file",
+  "emote.stop": "Stop emote",
+  "emote.test": "Test your own emote",
+  "emote.empty": "No emotes found (folder emotes/)",
+  "emote.error": "Could not read this emote file",
+  "emote.playing": "Playing: %s",
+  "emote.close": "Close",
+
   "bg.title": "Background color",
   "bg.dark": "Dark",
   "bg.light": "Light",
@@ -226,6 +236,10 @@
   "cape.name.millionth_customer": "Millionth Customer",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
+  "emote.name.SPE_Get_scared": "Get scared",
+  "emote.name.SPE_Ankha_Dance": "Ankha Dance (Animal Crossing)",
+  "emote.name.SPE_Evelynn_Stand": "Evelynn Stand (League of Legends)",
 
   "person.Артур": "Arthur",
   "person.Виакор": "Viacore",

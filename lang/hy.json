@@ -53,6 +53,16 @@
   "acc.title": "Աքսեսուարներ",
   "acc.elytra": "Ցույց տալ էլիտրաները",
 
+  "emote.button": "Էմոցիաներ",
+  "emote.title": "Էմոցիաներ",
+  "emote.hint": "Ընտրեք էմոցիա կամ բեռնեք ձեր .json ֆայլը",
+  "emote.stop": "Ընդհատել էմոցիան",
+  "emote.test": "Ստուգել սեփական էմոցիան",
+  "emote.empty": "Էմոցիաներ չեն գտնվել (emotes/ թղթապանակ)",
+  "emote.error": "Չհաջողվեց կարդալ էմոցիայի ֆայլը",
+  "emote.playing": "Նվագարկվում է՝ %s",
+  "emote.close": "Փակել",
+
   "bg.title": "Ֆոնի գույնը",
   "bg.dark": "Մուգ",
   "bg.light": "Բաց",
@@ -226,6 +236,10 @@
   "cape.name.millionth_customer": "Միլիոներորդ հաճախորդ",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Պրիզմարին",
+
+  "emote.name.SPE_Get_scared": "Վախենալ",
+  "emote.name.SPE_Ankha_Dance": "Անկխայի պար (Animal Crossing)",
+  "emote.name.SPE_Evelynn_Stand": "Էվելինի կեցվածք (League of Legends)",
 
   "person.Артур": "Արթուր",
   "person.Виакор": "Վիակոր",

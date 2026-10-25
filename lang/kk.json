@@ -53,6 +53,16 @@
   "acc.title": "Аксессуарлар",
   "acc.elytra": "Элитраны көрсету",
 
+  "emote.button": "Эмоциялар",
+  "emote.title": "Эмоциялар",
+  "emote.hint": "Эмоцияны таңдаңыз немесе өз .json файлыңызды жүктеңіз",
+  "emote.stop": "Эмоцияны тоқтату",
+  "emote.test": "Өз эмоцияңызды тексеру",
+  "emote.empty": "Эмоциялар табылмады (emotes/ қалтасы)",
+  "emote.error": "Эмоция файлын оқу мүмкін болмады",
+  "emote.playing": "Ойнатылуда: %s",
+  "emote.close": "Жабу",
+
   "bg.title": "Фон түсі",
   "bg.dark": "Күңгірт",
   "bg.light": "Ашық",
@@ -226,6 +236,10 @@
   "cape.name.millionth_customer": "Миллионыншы сатып алушы",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
+  "emote.name.SPE_Get_scared": "Қорқу",
+  "emote.name.SPE_Ankha_Dance": "Анкха биі (Animal Crossing)",
+  "emote.name.SPE_Evelynn_Stand": "Эвелинн қалпы (League of Legends)",
 
   "person.Артур": "Артур",
   "person.Виакор": "Виакор",

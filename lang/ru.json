@@ -53,6 +53,16 @@
   "acc.title": "Аксессуары",
   "acc.elytra": "Отображать элитры",
 
+  "emote.button": "Эмоции",
+  "emote.title": "Эмоции",
+  "emote.hint": "Выберите эмоцию или загрузите свой .json файл",
+  "emote.stop": "Прервать эмоцию",
+  "emote.test": "Проверить свою эмоцию",
+  "emote.empty": "Эмоции не найдены (папка emotes/)",
+  "emote.error": "Не удалось прочитать файл эмоции",
+  "emote.playing": "Играет: %s",
+  "emote.close": "Закрыть",
+
   "bg.title": "Цвет фона",
   "bg.dark": "Тёмный",
   "bg.light": "Светлый",
@@ -226,6 +236,10 @@
   "cape.name.millionth_customer": "Миллионный покупатель",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
+  "emote.name.SPE_Get_scared": "Испугаться",
+  "emote.name.SPE_Ankha_Dance": "Танец Анкхи (Animal Crossing)",
+  "emote.name.SPE_Evelynn_Stand": "Стойка Эвелинн (League of Legends)",
 
   "person.Артур": "Артур",
   "person.Виакор": "Виакор",
