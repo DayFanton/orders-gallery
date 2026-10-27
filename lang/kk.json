@@ -88,6 +88,8 @@
   "variation.name.vova_in_mask_halloween26": "Бетпердеде",
   "skin.name.day_halloween26": "Дэй Хэллоуин 2026",
   "skin.name.sgushenka_halloween26": "Сгущёнка Хэллоуин 2026",
+  "skin.name.clock_halloween26": "Клок Хэллоуин 2026",
+  "skin.name.waikatu": "Вайкату",
   "skin.name.day_pathfinder": "Дэй із кесуші",
   "skin.name.day_tester": "Дэй сынақшы",
   "skin.name.ger_halloween26": "Гэр Хэллоуин 2026",
@@ -242,6 +244,7 @@
   "emote.name.SPE_Evelynn_Stand": "Эвелинн қалпы (League of Legends)",
 
   "person.Артур": "Артур",
+  "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
   "person.Вова": "Вова",
   "person.Гэр": "Гэр",
@@ -250,6 +253,7 @@
   "person.Ника": "Ника",
   "person.Сгущёнка": "Сгущёнка",
   "person.Севенз": "Севенз",
+  "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
   "person.Яна": "Яна"
