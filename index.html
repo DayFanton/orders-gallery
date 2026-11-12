@@ -1120,7 +1120,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.6.2</div>
+            <div class="site-version">v1.6.3</div>
         </div>
     </div>
 
@@ -2621,16 +2621,17 @@ const EmoteCore = (() => {
     }
 
     // ---------------------------------------------------------------------------------------------
-    // 2. Эмоции (формат Emotecraft JSON). Правила взяты из PlayerAnimationLibrary (PlayerAnimatorLoader,
-    //    PlayerModelMixin, HumanoidAnimationController, RenderUtil, MatrixUtil).
+    // 2. Эмоции (формат Emotecraft JSON, версии 1-3). Правила взяты из PlayerAnimationLibrary
+    //    (PlayerAnimatorLoader, PlayerModelMixin, LivingEntityRendererMixin, HumanoidAnimationController, MatrixUtil).
     // ---------------------------------------------------------------------------------------------
-    const PART_NAMES = ['head', 'torso', 'rightArm', 'leftArm', 'rightLeg', 'leftLeg'];
+    // root - кость "body" библиотеки: двигает ВСЮ модель целиком (в файлах версий 1-2 это ключ "torso", в версии 3 - "body")
+    const PART_NAMES = ['root', 'head', 'torso', 'rightArm', 'leftArm', 'rightLeg', 'leftLeg'];
     const CHANNELS = ['x', 'y', 'z', 'pitch', 'yaw', 'roll', 'bend'];
     const TICKS_PER_SECOND = 20;
-    // Значения по умолчанию формата (в них записаны позиции в файле эмоции): руки/ноги/голова - в пикселях
-    const FORMAT_DEFAULT = { head: [0, 0, 0], torso: [0, 0, 0], rightArm: [-5, 2, 0], leftArm: [5, 2, 0], rightLeg: [-1.9, 12, 0.1], leftLeg: [1.9, 12, 0.1] };
-    // Стартовые позиции частей модели Minecraft (вьюер подставляет свои)
+    const FORMAT_DEFAULT = { root: [0, 0, 0], head: [0, 0, 0], torso: [0, 0, 0], rightArm: [-5, 2, 0], leftArm: [5, 2, 0], rightLeg: [-1.9, 12, 0.1], leftLeg: [1.9, 12, 0.1] };
+    // Точки отсчёта частей в системе модели Minecraft (начало координат - шея). Вьюер подставляет откалиброванные.
     const MODEL_PIVOT = { head: [0, 0, 0], torso: [0, 0, 0], rightArm: [-5, 2, 0], leftArm: [5, 2, 0], rightLeg: [-1.9, 12, 0], leftLeg: [1.9, 12, 0] };
+    const WAIST_Y = 12;             // центр поворота всей модели ("body" кость) - пояс, 12 px ниже шеи
     const TORSO_BEND_PIVOT_Y = 6;   // изгиб туловища - вокруг точки на 6 px ниже шеи
 
     const bounceOut = (t) => {
@@ -2662,19 +2663,23 @@ const EmoteCore = (() => {
 
     function stripFormatting(s) { return String(s || '').replace(/§[0-9a-fk-or]/gi, '').replace(/\s+/g, ' ').trim(); }
 
-    // Значение ключевого кадра из файла -> смещение/угол кости (как PlayerAnimatorLoader.convertPlayerAnimValue)
-    function convertValue(part, ch, v, degrees, turn) {
-        const body = part === 'torso';
+    // Имена частей в файле (camelCase или snake_case) -> роль
+    const KEY_ROLE = { head: 'head', torso: 'torso', body: 'root', rightarm: 'rightArm', leftarm: 'leftArm', rightleg: 'rightLeg', leftleg: 'leftLeg' };
+    const normKey = (k) => String(k).replace(/[_\s-]/g, '').toLowerCase();
+
+    // Значение ключевого кадра из файла -> смещение/угол кости (PlayerAnimatorLoader.convertPlayerAnimValue)
+    function convertValue(role, ch, v, degrees, turn) {
+        const root = role === 'root';
         const rad = degrees ? v * PI / 180 : v;
-        const fd = FORMAT_DEFAULT[part];
+        const fd = FORMAT_DEFAULT[role];
         switch (ch) {
-            case 'x': return body ? 16 * v : v - fd[0];           // torso: позиция в блоках, сдвиг всей модели (X зеркален)
-            case 'y': return body ? -16 * v : v - fd[1];
-            case 'z': return body ? 16 * v : v - fd[2];
-            case 'pitch': return (body ? -rad : rad) + 2 * PI * turn;   // torso: углы поворота всей модели в системе MC
-            case 'yaw': return (body ? -rad : rad) + 2 * PI * turn;
+            case 'x': return root ? 16 * v : v - fd[0];     // root: позиция в БЛОКАХ, сдвиг всей модели
+            case 'y': return root ? -16 * v : v - fd[1];
+            case 'z': return root ? 16 * v : v - fd[2];
+            case 'pitch': return (root ? -rad : rad) + 2 * PI * turn;
+            case 'yaw': return (root ? -rad : rad) + 2 * PI * turn;
             case 'roll': return rad + 2 * PI * turn;
-            default: return v;                                     // bend - как есть, в радианах
+            default: return v;                              // bend - как есть, в радианах
         }
     }
 
@@ -2682,6 +2687,8 @@ const EmoteCore = (() => {
         const e = json && json.emote;
         if (!e || !Array.isArray(e.moves) || e.moves.length === 0) throw new Error('no moves');
         const toBool = (v) => v === true || String(v).toLowerCase() === 'true';
+        const version = Math.min(Math.max(parseInt(json.version, 10) || 1, 1), 3);
+        const legacy = version < 3;       // версии 1-2: ключ "torso" = кость body (вся модель), изгиб идёт в отдельную кость torso
         const degrees = e.degrees === undefined || e.degrees === null ? true : toBool(e.degrees);   // по умолчанию градусы
         const begin = Number(e.beginTick) || 0;
         const end = Math.max(e.endTick !== undefined ? Number(e.endTick) : 0, begin);
@@ -2690,27 +2697,35 @@ const EmoteCore = (() => {
         const returnTick = loop ? (Number(e.returnTick) || 0) : 0;
         const easeBefore = e.easeBeforeKeyframe !== undefined && toBool(e.easeBeforeKeyframe);
         const tracks = {};
+        const push = (role, ch, t, value, easing) => {
+            const list = ((tracks[role] = tracks[role] || {})[ch] = tracks[role][ch] || []);
+            const key = { t, v: value, e: easing };
+            if (list.length && list[list.length - 1].t === t) list[list.length - 1] = key; else list.push(key);
+        };
         const moves = e.moves.slice().sort((a, b) => (Number(a.tick) || 0) - (Number(b.tick) || 0));
         for (const m of moves) {
             const t = Number(m.tick) || 0;
             if (t > end) continue;                              // кадры после endTick игнорируются
             const easing = m.easing || 'linear';
             const turn = parseInt(m.turn, 10) || 0;
-            for (const part of PART_NAMES) {
-                const d = m[part];
+            for (const rawKey of Object.keys(m)) {
+                const d = m[rawKey];
                 if (!d || typeof d !== 'object') continue;
+                const base = KEY_ROLE[normKey(rawKey)];
+                if (!base) continue;                            // предметы, комментарии и прочее игнорируем
                 for (const ch of CHANNELS) {
                     if (d[ch] === undefined || d[ch] === null) continue;
                     const raw = Number(d[ch]);
                     if (!isFinite(raw)) continue;
-                    const list = ((tracks[part] = tracks[part] || {})[ch] = tracks[part][ch] || []);
-                    const key = { t, v: convertValue(part, ch, raw, degrees, (ch === 'pitch' || ch === 'yaw' || ch === 'roll') ? turn : 0), e: easing };
-                    if (list.length && list[list.length - 1].t === t) list[list.length - 1] = key; else list.push(key);
+                    const isRot = ch === 'pitch' || ch === 'yaw' || ch === 'roll';
+                    let role = base;
+                    if (base === 'torso' && legacy) role = ch === 'bend' ? 'torso' : 'root';
+                    push(role, ch, t, convertValue(role, ch, raw, degrees, isRot ? turn : 0), easing);
                 }
             }
         }
         const length = loop ? end : (stop > end ? stop : end + 3);
-        return { name: json.name, author: json.author || '', loop, beginTick: begin, endTick: end, stopTick: stop, returnTick, length, easeBefore, tracks };
+        return { name: json.name, author: json.author || '', version, loop, beginTick: begin, endTick: end, stopTick: stop, returnTick, length, easeBefore, applyBend: legacy, tracks };
     }
 
     // Значение канала в момент t. Отрезок между кадрами использует easing предыдущего кадра (формат Emotecraft),
@@ -2727,9 +2742,8 @@ const EmoteCore = (() => {
         const next = keys[nextIdx];
         if (next.t <= prevT) return next.v;
         const a = (t - prevT) / (next.t - prevT);
-        let en = (nextIdx === 0) ? null : (easeBefore ? next.e : prevE);
-        if (en === null && nextIdx > 0) en = prevE;
         if (nextIdx === 0) return prevV + (next.v - prevV) * (easeBefore ? easeFn(next.e)(a) : SINE_IN_OUT(a));
+        const en = easeBefore ? next.e : prevE;
         if (easeKey(en) === 'CATMULLROM') {
             const p0 = keys[nextIdx - 2] ? keys[nextIdx - 2].v : prevV, p3 = keys[nextIdx + 1] ? keys[nextIdx + 1].v : next.v, a2 = a * a, a3 = a2 * a;
             return 0.5 * ((2 * prevV) + (-p0 + next.v) * a + (2 * p0 - 5 * prevV + 4 * next.v - p3) * a2 + (-p0 + 3 * prevV - 3 * next.v + p3) * a3);
@@ -2740,6 +2754,15 @@ const EmoteCore = (() => {
     function zeroPose() {
         const pose = {};
         for (const p of PART_NAMES) pose[p] = { x: 0, y: 0, z: 0, pitch: 0, yaw: 0, roll: 0, bend: 0 };
+        return pose;
+    }
+    function sampleAll(em, t, w) {
+        const pose = zeroPose();
+        for (const p of PART_NAMES) {
+            const tr = em.tracks[p];
+            if (!tr) continue;
+            for (const ch of CHANNELS) if (tr[ch]) pose[p][ch] = sampleChannel(tr[ch], t, em.easeBefore) * w;
+        }
         return pose;
     }
 
@@ -2754,12 +2777,12 @@ const EmoteCore = (() => {
             w = 1 - SINE_IN_OUT((elapsed - em.endTick) / (em.length - em.endTick));
             t = em.endTick;
         }
-        const pose = zeroPose();
-        for (const p of PART_NAMES) {
-            const tr = em.tracks[p];
-            if (!tr) continue;
-            for (const ch of CHANNELS) if (tr[ch]) pose[p][ch] = sampleChannel(tr[ch], t, em.easeBefore) * w;
+        if (em.beginTick > 0 && elapsed < em.beginTick) {   // вход: плавно из стартовой позы к позе на beginTick
+            w *= SINE_IN_OUT(Math.max(0, elapsed) / em.beginTick);
+            t = em.beginTick;
         }
+        const pose = sampleAll(em, t, w);
+        pose.applyBend = em.applyBend;
         return { pose, finished };
     }
 
@@ -2782,28 +2805,27 @@ const EmoteCore = (() => {
         return m;
     }
     function rotX(a) { const m = I4(), c = Math.cos(a), s = Math.sin(a); m[5] = c; m[6] = s; m[9] = -s; m[10] = c; return m; }
-    function bendMatrix(bend) { return mul(T4(0, TORSO_BEND_PIVOT_Y, 0), mul(rotX(bend), T4(0, -TORSO_BEND_PIVOT_Y, 0))); }
+    // поворот вокруг оси X через точку (px,py,pz)
+    const aboutPoint = (r, px, py, pz) => mul(T4(px, py, pz), mul(r, T4(-px, -py, -pz)));
     function toThree(m) { // система MC (y вниз, лицо в -Z) -> three.js: C*M*C, C = diag(1,-1,-1,1)
         const c = [1, -1, -1, 1], r = new Array(16);
         for (let col = 0; col < 4; col++) for (let row = 0; row < 4; row++) r[col * 4 + row] = m[col * 4 + row] * c[row] * c[col];
         return r;
     }
 
-    const WAIST_Y = 12;   // центр поворота "torso" - пояс, 12 px ниже шеи (0.75 блока в LivingEntityRendererMixin)
-
-    // Матрицы частей (для three.js).
-    //  - torso из файла (позиция + поворот) двигает ВСЮ модель целиком вокруг пояса (как LivingEntityRendererMixin);
-    //  - изгиб туловища (bend) деформирует меш тела и поворачивает голову и руки вокруг точки изгиба (MatrixUtil);
+    // Матрицы частей (для three.js), всё в системе MC. init - точки отсчёта частей (init.torso - начало координат модели).
+    //  - root (кость "body") двигает ВСЮ модель целиком вокруг пояса (LivingEntityRendererMixin);
+    //  - изгиб туловища деформирует меш тела и (в версиях 1-2) поворачивает голову и руки вокруг точки изгиба;
     //  - остальные части двигаются независимо.
     function rig(pose, init) {
         init = init || MODEL_PIVOT;
-        const t = pose.torso;
-        const W = mul(T4(t.x, t.y, t.z), mul(T4(0, WAIST_Y, 0), mul(rotZYX(t.pitch, t.yaw, t.roll), T4(0, -WAIST_Y, 0))));
+        const o = init.torso, r = pose.root, t = pose.torso;
+        const W = mul(T4(r.x, r.y, r.z), aboutPoint(rotZYX(r.pitch, r.yaw, r.roll), o[0], o[1] + WAIST_Y, o[2]));
         const partM = (p, name) => mul(T4(init[name][0] + p.x, init[name][1] + p.y, init[name][2] + p.z), rotZYX(p.pitch, p.yaw, p.roll));
-        const B = Math.abs(t.bend) > 0.001 ? bendMatrix(t.bend) : I4();
-        const bodyOwn = T4(init.torso[0], init.torso[1], init.torso[2]);
+        const useBend = pose.applyBend !== false && Math.abs(t.bend) > 0.001;
+        const B = useBend ? aboutPoint(rotX(t.bend), o[0], o[1] + TORSO_BEND_PIVOT_Y, o[2]) : I4();
         return {
-            torso: toThree(mul(W, bodyOwn)),
+            torso: toThree(mul(W, partM(t, 'torso'))),
             head: toThree(mul(W, mul(B, partM(pose.head, 'head')))),
             rightArm: toThree(mul(W, mul(B, partM(pose.rightArm, 'rightArm')))),
             leftArm: toThree(mul(W, mul(B, partM(pose.leftArm, 'leftArm')))),
@@ -2885,6 +2907,32 @@ const EmoteCore = (() => {
             if (e.geom.dispose) e.geom.dispose();
         }
     }
+    // Точки отсчёта частей по РЕАЛЬНЫМ оригинальным мешам вьюера: в skinview3d начало координат BodyPart у разных частей
+    // лежит в разных местах (например, у body - в центре туловища), поэтому ставим кубоид так, чтобы в покое он
+    // совпадал с оригиналом. Возвращает точки в системе модели Minecraft (y вниз, начало - шея).
+    function calibratePivots(skin, slim) {
+        const cfgs = EmoteCore.partConfigs(slim), piv = {};
+        const hp = skin.head.position;
+        piv.head = [hp.x, -hp.y, -hp.z];
+        for (const part of BODY_PARTS) {
+            const holder = skin[part];
+            const mesh = firstMesh(holder.innerLayer);
+            const g = mesh.geometry;
+            if (!g.boundingBox) g.computeBoundingBox();
+            const b = g.boundingBox;
+            let c = [(b.min.x + b.max.x) / 2 * mesh.scale.x + mesh.position.x,
+                     (b.min.y + b.max.y) / 2 * mesh.scale.y + mesh.position.y,
+                     (b.min.z + b.max.z) / 2 * mesh.scale.z + mesh.position.z];
+            for (let o = mesh.parent; o && o !== holder; o = o.parent) {      // промежуточные группы (pivot)
+                c = [c[0] * o.scale.x + o.position.x, c[1] * o.scale.y + o.position.y, c[2] * o.scale.z + o.position.z];
+            }
+            const cs = [holder.position.x + c[0], holder.position.y + c[1], holder.position.z + c[2]];   // центр оригинала в системе skin
+            const cf = cfgs[part].inner;
+            const my = [cf.x + cf.sx / 2, -(cf.y + cf.sy / 2), -(cf.z + cf.sz / 2)];                  // центр моего кубоида относительно точки отсчёта (three)
+            piv[BONE[part]] = [cs[0] - my[0], -(cs[1] - my[1]), -(cs[2] - my[2])];
+        }
+        return piv;
+    }
     const layerChecked = (id) => { const el = document.getElementById(id); return el ? el.checked : true; };
 
     function onFrame(dt) {
@@ -2900,6 +2948,7 @@ const EmoteCore = (() => {
                 entries = buildEntries(skin, slim);
                 mountEntries(skin, entries);
                 slimState = slim;
+                try { pivots = calibratePivots(skin, slim); } catch (calErr) { pivots = EmoteCore.MODEL_PIVOT; }
             }
             const rig = EmoteCore.rig(pose, pivots);
             for (const k of ALL_PARTS) {
@@ -2935,12 +2984,13 @@ const EmoteCore = (() => {
             if (!active) {
                 slimState = detectSlim(skin);
                 entries = buildEntries(skin, slimState);
-                saved = {}; pivots = {};
+                saved = {};
                 for (const k of ALL_PARTS) {
                     const p = skin[k];
                     saved[k] = [p.position.x, p.position.y, p.position.z, p.rotation.x, p.rotation.y, p.rotation.z];
-                    pivots[BONE[k]] = [p.position.x, -p.position.y, -p.position.z];   // three.js -> система модели Minecraft
                 }
+                try { pivots = calibratePivots(skin, slimState); }
+                catch (calErr) { console.warn('[emote] калибровка точек не удалась, используются стандартные', calErr); pivots = EmoteCore.MODEL_PIVOT; }
                 mountEntries(skin, entries);
                 active = true;
             }
