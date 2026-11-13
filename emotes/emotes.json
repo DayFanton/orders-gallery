@@ -4,11 +4,6 @@
   "SPE_Bodybuilding_pose1",
   "SPE_Bodybuilding_pose2",
   "SPE_Bodybuilding_pose3",
-  "SPE_Clown_Dance",
-  "SPE_Backflip",
-  "SPE_Get_scared",
-  "SPE_Be_shy",
-  "SPE_Apologize",
   "SPE_Fantastic_pose1",
   "SPE_Fantastic_pose2",
   "SPE_Fantastic_pose3",
@@ -17,5 +12,10 @@
   "SPE_Fantastic_pose6",
   "SPE_Fantastic_pose7",
   "SPE_Fantastic_pose8",
-  "SPE_Fantastic_pose9"
+  "SPE_Fantastic_pose9",
+  "SPE_Backflip",
+  "SPE_Get_scared",
+  "SPE_Be_shy",
+  "SPE_Clown_Dance",
+  "SPE_Apologize"
 ]
