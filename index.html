@@ -2822,9 +2822,16 @@ const EmoteCore = (() => {
         const o = init.torso, r = pose.root, t = pose.torso;
         const W = mul(T4(r.x, r.y, r.z), aboutPoint(rotZYX(r.pitch, r.yaw, r.roll), o[0], o[1] + WAIST_Y, o[2]));
         const partM = (p, name) => mul(T4(init[name][0] + p.x, init[name][1] + p.y, init[name][2] + p.z), rotZYX(p.pitch, p.yaw, p.roll));
-        const useBend = pose.applyBend !== false && Math.abs(t.bend) > 0.001;
-        const B = useBend ? aboutPoint(rotX(t.bend), o[0], o[1] + TORSO_BEND_PIVOT_Y, o[2]) : I4();
+        const hasBend = Math.abs(t.bend) > 0.001;
+        const bendM = hasBend ? aboutPoint(rotX(t.bend), o[0], o[1] + TORSO_BEND_PIVOT_Y, o[2]) : I4();
+        const useBend = pose.applyBend !== false && hasBend;
+        const B = useBend ? bendM : I4();
+        // Плащ и элитры крепятся к спине: двигаются вместе со всей моделью (W), со своим движением туловища
+        // и с изгибом верхней части (меш туловища изгибается во всех версиях формата, поэтому изгиб берём всегда).
+        // Матрица нормирована: в покое это единичная матрица, т.е. это именно СДВИГ относительно позы покоя.
+        const torsoOwn = mul(partM(t, 'torso'), T4(-o[0], -o[1], -o[2]));
         return {
+            back: toThree(mul(W, mul(torsoOwn, bendM))),
             torso: toThree(mul(W, partM(t, 'torso'))),
             head: toThree(mul(W, mul(B, partM(pose.head, 'head')))),
             rightArm: toThree(mul(W, mul(B, partM(pose.rightArm, 'rightArm')))),
@@ -2935,6 +2942,43 @@ const EmoteCore = (() => {
     }
     const layerChecked = (id) => { const el = document.getElementById(id); return el ? el.checked : true; };
 
+    // ---- плащ и элитры ----
+    // В skinview3d cape/elytra лежат рядом со skin (а не внутри тела), поэтому когда эмоция двигает тело матрицами,
+    // они остаются на месте. Каждый кадр переносим их на то же смещение, что и туловище:
+    //   новая_матрица = S * D * S^-1 * локальная_матрица_в_покое, где S - матрица skin, D - смещение туловища.
+    let backTouched = false;
+    const backObjects = () => {
+        const po = (typeof skinViewer !== 'undefined' && skinViewer) ? skinViewer.playerObject : null;
+        return po ? [po.cape, po.elytra].filter(Boolean) : [];
+    };
+    function applyBack(skin, backArr) {
+        const objs = backObjects();
+        if (!objs.length || !backArr) return;
+        skin.updateMatrix();
+        const M4 = skin.matrix.constructor;
+        const S = skin.matrix;
+        const Sinv = new M4().copy(S);
+        if (typeof Sinv.invert === 'function') Sinv.invert(); else Sinv.getInverse(S);
+        const D = new M4().fromArray(backArr);
+        const shift = new M4().multiplyMatrices(new M4().multiplyMatrices(S, D), Sinv);
+        for (const o of objs) {
+            o.matrixAutoUpdate = false;
+            const rest = new M4().compose(o.position, o.quaternion, o.scale);   // обычная локальная поза плаща (position/rotation)
+            o.matrix.multiplyMatrices(shift, rest);
+            o.matrixWorldNeedsUpdate = true;
+        }
+        backTouched = true;
+    }
+    function restoreBack() {
+        if (!backTouched) return;
+        backTouched = false;
+        for (const o of backObjects()) {
+            o.matrixAutoUpdate = true;
+            o.updateMatrix();
+            o.matrixWorldNeedsUpdate = true;
+        }
+    }
+
     function onFrame(dt) {
         if (!active || !emote) return;
         try {
@@ -2957,6 +3001,7 @@ const EmoteCore = (() => {
                 p.matrix.fromArray(rig[BONE[k] === 'torso' ? 'torso' : BONE[k]]);
                 p.matrixWorldNeedsUpdate = true;
             }
+            applyBack(skin, rig.back);
             const bodyOuter = layerChecked('layer_body');
             for (const e of entries) {
                 const bend = pose[BONE[e.part]].bend;
@@ -2982,6 +3027,8 @@ const EmoteCore = (() => {
         if (!skin) throw new Error('viewer is not ready');
         try {
             if (!active) {
+                // плащ/крылья элитр могли застыть в позе ходьбы или полёта - возвращаем их в позу покоя
+                try { if (skinViewer.playerObject.resetJoints) skinViewer.playerObject.resetJoints(); } catch (rjErr) { /* не критично */ }
                 slimState = detectSlim(skin);
                 entries = buildEntries(skin, slimState);
                 saved = {};
@@ -3013,6 +3060,7 @@ const EmoteCore = (() => {
         const wasActive = active;
         active = false;
         emote = null;
+        restoreBack();   // плащ и элитры снова управляются движком skinview3d
         const skin = getSkin();
         if (skin && entries) {
             unmountEntries(skin, entries);
