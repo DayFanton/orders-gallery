@@ -257,7 +257,7 @@
   "emote.name.SPE_Fantastic_pose6": "وضع خيالي (الخيار 6)",
   "emote.name.SPE_Fantastic_pose7": "وضع خيالي (الخيار 7)",
   "emote.name.SPE_Fantastic_pose8": "وضع خيالي (الخيار 8)",
-  "cape.name.SPE_Fantastic_pose9": "وضع خيالي (الخيار 9)",
+  "emote.name.SPE_Fantastic_pose9": "وضعية خيالية (الخيار 9)",
 
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
@@ -272,7 +272,5 @@
   "person.Хуман": "هيومان",
   "person.Цыпляш": "تسيبلياش",
   "person.Эппоп": "إيبوب",
-  "person.Яна": "يانا",
-  "person.Ишак": "إيشاك",
-  "person.Раналда": "رانالدا"
+  "person.Яна": "يانا"
 }
