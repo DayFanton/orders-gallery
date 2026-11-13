@@ -4,9 +4,11 @@
   "language.codes": "pcm",
   "language.title": "Language",
   "language.auto": "Auto",
+
   "site.title": "Tsyplyash Gallery",
   "gallery.title": "Gallery",
   "loading.text": "E dey load di view modules...",
+
   "sort.title": "Arrange am",
   "sort.default": "Normal one",
   "sort.author": "By pesin wey do am",
@@ -19,6 +21,7 @@
   "tab.skins": "Skins",
   "tab.capes": "Capes",
   "search.placeholder": "Find by name, pesin wey order, artist...",
+
   "meta.customer": "Pesin wey order",
   "meta.artist": "Artist",
   "meta.date": "Date wey dem order",
@@ -26,11 +29,13 @@
   "meta.date_unset": "Dem no put date",
   "meta.show_orders": "Show all orders from %s",
   "meta.open_author": "Open di artist page (%s)",
+
   "skin.untitled": "No name",
   "skin.type": "Type: %s",
   "skin.has_variations": "E get oda styles",
   "variation.original": "Original",
   "cape.remove": "Comot cape",
+
   "controls.reset": "Reset",
   "rotate.title": "Turn-turn",
   "rotate.enable": "Turn di model",
@@ -47,6 +52,7 @@
   "layers.body": "Top cloth / Armor",
   "acc.title": "Accessories",
   "acc.elytra": "Show elytra",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Pick one emote or upload your own .json file",
@@ -56,6 +62,7 @@
   "emote.error": "E no fit read dis emote file",
   "emote.playing": "E dey play: %s",
   "emote.close": "Close",
+
   "bg.title": "Background color",
   "bg.dark": "Dark",
   "bg.light": "Light",
@@ -65,14 +72,18 @@
   "bg.yellow": "Dark yellow",
   "bg.blue": "Dark blue",
   "bg.custom": "Your own color",
+
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Settings",
+
   "modal.title": "Notice",
   "modal.text": "Welcome our visitors! Every skin wey dey dis gallery na result of plenty hours of hard work. Abeg make una respect pesin work. Copyright dey protect all di pictures. You fit look am, but to download, copy, or use am for business, you must ask permission first. Tank you well-well as you understand and keep am straight!",
   "modal.agree": "I don read everitin and I gree",
   "modal.continue": "Continue",
+
   "error.viewer": "Wahala dey to start 3D components.",
   "error.json": "E no fit read JSON config files.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Wey wear mask",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -180,6 +191,7 @@
   "skin.name.ger_summer": "Ger Summer",
   "skin.name.ger_maid_skeleton": "Ger Maid Skeleton",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Pan",
   "cape.name.15th_anniversary": "15th Anniversary",
@@ -226,6 +238,7 @@
   "cape.name.millionth_customer": "Millionth Customer",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Fear catch am",
   "emote.name.SPE_Ankha_Dance": "Ankha Dance (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Stand (League of Legends)",
@@ -245,6 +258,7 @@
   "emote.name.SPE_Fantastic_pose7": "Fantastic pose (Option 7)",
   "emote.name.SPE_Fantastic_pose8": "Fantastic Pose (Option 8)",
   "emote.name.SPE_Fantastic_pose9": "Fantastic pose (Option 9)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -258,7 +272,5 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana",
-  "person.Ишак": "Ishak",
-  "person.Раналда": "Ranalda"
+  "person.Яна": "Yana"
 }

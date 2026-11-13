@@ -250,7 +250,6 @@
   "emote.name.SPE_Bodybuilding_pose1": "የबॉडी빌ዲንግ አቋም (ስፖርት) (вариант 1)",
   "emote.name.SPE_Clown_Dance": "ቀልድ (ዳንስ)",
   "emote.name.SPE_Fantastic_pose1": "ድንቅ አቋም (አማራጭ 1)",
-  "emote.name.SPE_Fantastic_pace2": "ድንቅ አቋም (አማራጭ 2)",
   "emote.name.SPE_Fantastic_pose3": "ድንቅ አቋም (አማራጭ 3)",
   "emote.name.SPE_Fantastic_pose4": "ድንቅ አቋም (አማራጭ 4)",
   "emote.name.SPE_Fantastic_pose5": "ድንቅ አቋም (አማራጭ 5)",
@@ -258,6 +257,7 @@
   "emote.name.SPE_Fantastic_pose7": "ድንቅ አቋም (አማራጭ 7)",
   "emote.name.SPE_Fantastic_pose8": "ድንቅ አቋም (አማራጭ 8)",
   "emote.name.SPE_Fantastic_pose9": "ድንቅ አቋም (አማራጭ 9)",
+  "emote.name.SPE_Fantastic_pose2": "ድንቅ ፖዝ (አማራጭ 2)",
 
   "person.Артур": "አርቱር",
   "person.Вайкату": "ቫይካቱ",
@@ -272,7 +272,5 @@
   "person.Хуман": "ሁማን",
   "person.Цыпляш": "ጺፕልያሽ",
   "person.Эппоп": "ኤፖፕ",
-  "person.Яна": "ያና",
-  "person.Ишак": "ኢሻክ",
-  "person.Раналда": "ራናልዳ"
+  "person.Яна": "ያና"
 }

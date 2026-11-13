@@ -4,9 +4,11 @@
   "language.codes": "sw",
   "language.title": "Lugha",
   "language.auto": "Otomatiki",
+
   "site.title": "Matunzio ya Tsyplyash",
   "gallery.title": "Matunzio",
   "loading.text": "Inapakia moduli za kuonyesha...",
+
   "sort.title": "Panga",
   "sort.default": "Chaguomsingi",
   "sort.author": "Kwa mwandishi",
@@ -19,6 +21,7 @@
   "tab.skins": "Skini",
   "tab.capes": "Koti za mabegani",
   "search.placeholder": "Tafuta kwa jina, mteja, mwandishi...",
+
   "meta.customer": "Mteja",
   "meta.artist": "Msanii",
   "meta.date": "Tarehe ya agizo",
@@ -26,11 +29,13 @@
   "meta.date_unset": "Haijabainishwa",
   "meta.show_orders": "Onyesha maagizo yote kutoka kwa %s",
   "meta.open_author": "Fungua ukurasa wa mwandishi (%s)",
+
   "skin.untitled": "Bila jina",
   "skin.type": "Aina: %s",
   "skin.has_variations": "Ina matoleo mengine",
   "variation.original": "Asili",
   "cape.remove": "Vua koti",
+
   "controls.reset": "Weka upya",
   "rotate.title": "Mzunguko",
   "rotate.enable": "Zungusha modeli",
@@ -47,6 +52,7 @@
   "layers.body": "Nguo za nje / Dirii",
   "acc.title": "Vifaa vya ziada",
   "acc.elytra": "Onyesha elytra",
+
   "emote.button": "Hisia",
   "emote.title": "Hisia",
   "emote.hint": "Chagua hisia au pakia faili yako ya .json",
@@ -56,6 +62,7 @@
   "emote.error": "Imeshindwa kusoma faili ya hisia",
   "emote.playing": "Inacheza: %s",
   "emote.close": "Funga",
+
   "bg.title": "Rangi ya mandharinyuma",
   "bg.dark": "Giza",
   "bg.light": "Mwanga",
@@ -65,14 +72,18 @@
   "bg.yellow": "Njano iliyokolea",
   "bg.blue": "Bluu iliyokolea",
   "bg.custom": "Rangi maalum",
+
   "mobile.gallery": "📁 Matunzio",
   "mobile.settings": "⚙️ Mipangilio",
+
   "modal.title": "Taarifa",
   "modal.text": "Wageni wapendwa! Kila skini katika matunzio haya ni matokeo ya saa nyingi za kazi ngumu. Tafadhali heshimu kazi za wengine. Picha zote zinalindwa na hakimiliki. Kutazama kunaruhusiwa, lakini kupakua, kunakili, na matumizi ya kibiashara yanaruhusiwa tu kwa makubaliano ya awali. Asante kwa uelewa na uaminifu wako!",
   "modal.agree": "Nimesoma yote na ninakubali",
   "modal.continue": "Endelea",
+
   "error.viewer": "Hitilafu katika kuanzisha vipengele vya 3D.",
   "error.json": "Imeshindwa kusoma faili za usanidi za JSON.",
+
   "skin.name.vova_halloween26": "Vova wa Halowini 2026",
   "variation.name.vova_in_mask_halloween26": "Aliyevaa kinyago",
   "skin.name.day_halloween26": "Day wa Halowini 2026",
@@ -180,6 +191,7 @@
   "skin.name.ger_summer": "Ger wa Kiangazi",
   "skin.name.ger_maid_skeleton": "Ger Mifupa ya Mjakazi",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mhamiaji",
   "cape.name.pan": "Chapati",
   "cape.name.15th_anniversary": "Maadhimisho ya Miaka 15",
@@ -226,6 +238,7 @@
   "cape.name.millionth_customer": "Mteja wa Milioni Moja",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kuogopa",
   "emote.name.SPE_Ankha_Dance": "Ngoma ya Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Mkao wa Evelynn (League of Legends)",
@@ -245,6 +258,7 @@
   "emote.name.SPE_Fantastic_pose7": "Mkao wa kustaajabisha (Chaguo la 7)",
   "emote.name.SPE_Fantastic_pose8": "Mkao wa kustaajabisha (Chaguo la 8)",
   "emote.name.SPE_Fantastic_pose9": "Mkao wa kustaajabisha (Chaguo la 9)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -258,7 +272,5 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana",
-  "person.Ишак": "Ishak",
-  "person.Раналда": "Ranalda"
+  "person.Яна": "Yana"
 }

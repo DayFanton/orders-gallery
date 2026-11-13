@@ -250,7 +250,6 @@
   "emote.name.SPE_Bodybuilding_pose1": "ボディビルポーズ (スポーツ) (オプション 1)",
   "emote.name.SPE_Clown_Dance": "道化 (ダンス)",
   "emote.name.SPE_Fantastic_pose1": "ファンタスティックポーズ (オプション 1)",
-  "emote.name.SPE_Fantastic_poze2": "ファンタスティックポーズ (オプション 2)",
   "emote.name.SPE_Fantastic_pose3": "ファンタスティックポーズ (オプション 3)",
   "emote.name.SPE_Fantastic_pose4": "ファンタスティックポーズ (オプション 4)",
   "emote.name.SPE_Fantastic_pose5": "ファンタスティックポーズ (オプション 5)",
@@ -258,6 +257,7 @@
   "emote.name.SPE_Fantastic_pose7": "ファンタスティックポーズ (オプション 7)",
   "emote.name.SPE_Fantastic_pose8": "ファンタスティックポーズ (オプション 8)",
   "emote.name.SPE_Fantastic_pose9": "ファンタスティックポーズ (オプション 9)",
+  "emote.name.SPE_Fantastic_pose2": "ファンタスティック・ポーズ (オプション 2)",
 
   "person.Артур": "アーサー",
   "person.Вайкату": "ワイカツ",
@@ -272,7 +272,5 @@
   "person.Хуман": "ヒューマン",
   "person.Цыпляш": "ツィプライャッシュ",
   "person.Эппоп": "エッпоップ",
-  "person.Яна": "ヤナ",
-  "person.Ишак": "イシャク",
-  "person.Раналда": "ラナルダ"
+  "person.Яна": "ヤナ"
 }

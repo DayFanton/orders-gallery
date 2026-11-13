@@ -256,7 +256,6 @@
   "emote.name.SPE_Fantastic_pose5": "Posa fantastica (Opzione 5)",
   "emote.name.SPE_Fantastic_pose6": "Posa fantastica (Opzione 6)",
   "emote.name.SPE_Fantastic_pose7": "Posa fantastica (Opzione 7)",
-  "emote.name.SPE_Graph_pose8": "Posa fantastica (Opzione 8)",
   "emote.name.SPE_Fantastic_pose8": "Posa fantastica (Opzione 8)",
   "emote.name.SPE_Fantastic_pose9": "Posa fantastica (Opzione 9)",
 
@@ -273,7 +272,5 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana",
-  "person.Ишак": "Ishak",
-  "person.Раналда": "Ranalda"
+  "person.Яна": "Yana"
 }

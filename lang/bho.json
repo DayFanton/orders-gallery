@@ -4,9 +4,11 @@
   "language.codes": "bho",
   "language.title": "भाषा",
   "language.auto": "ऑटो",
+
   "site.title": "त्सिप्लेश के गैलरी",
   "gallery.title": "गैलरी",
   "loading.text": "विज़ुअलाइज़ेशन मॉड्यूल लोड होत बा...",
+
   "sort.title": "क्रम",
   "sort.default": "डिफ़ॉल्ट",
   "sort.author": "लेखक के अनुसार",
@@ -19,6 +21,7 @@
   "tab.skins": "स्किन",
   "tab.capes": "केप्स",
   "search.placeholder": "नाम, ग्राहक, लेखक द्वारा खोजें...",
+
   "meta.customer": "ग्राहक",
   "meta.artist": "कलाकार",
   "meta.date": "ऑर्डर के तारीख",
@@ -26,11 +29,13 @@
   "meta.date_unset": "तारीख नइखे बतावल",
   "meta.show_orders": "%s के सब ऑर्डर देखव",
   "meta.open_author": "लेखक के पेज खोलव (%s)",
+
   "skin.untitled": "बेनाम",
   "skin.type": "प्रकार: %s",
   "skin.has_variations": "वैरिएशन उपलब्ध बा",
   "variation.original": "मूल",
   "cape.remove": "केप हटव",
+
   "controls.reset": "रीसेट",
   "rotate.title": "घुमाव",
   "rotate.enable": "मॉडल घुमाव",
@@ -47,6 +52,7 @@
   "layers.body": "ऊपर के कपड़ा / कवच",
   "acc.title": "सहायक उपकरण",
   "acc.elytra": "एलाइट्रा देखव",
+
   "emote.button": "इमोशन",
   "emote.title": "इमोशन",
   "emote.hint": "कोनो इमोशन चुनव या अपना .json फाइल लोड करव",
@@ -56,6 +62,7 @@
   "emote.error": "इमोशन फाइल पढ़ल ना जा सकल",
   "emote.playing": "चल रहल बा: %s",
   "emote.close": "बंद करव",
+
   "bg.title": "बैकग्राउंड रंग",
   "bg.dark": "अंधार",
   "bg.light": "उजार",
@@ -65,14 +72,18 @@
   "bg.yellow": "गहिरा पियर",
   "bg.blue": "गहिरा नीला",
   "bg.custom": "अपना मनपसंद रंग",
+
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
+
   "modal.title": "सूचना",
   "modal.text": "प्रिय अतिथि लोग! एह गैलरी के हर स्किन कई घंटा के मेहनत के फल ह। कृपया दूसर के मेहनत के सम्मान करव। सभ तस्वीर कॉपीराइट से सुरक्षित बा। देखल अनुमति बा, बाकि डाउनलोड, कॉपी आ कमर्शियल इस्तेमाल सिर्फ पहिलका सहमति से मिल सकेला। समझे आ इमानदारी खातिर धन्यवाद!",
   "modal.agree": "हम सब पढ़ लेलीं आ सहमत बानी",
   "modal.continue": "आगे बढ़व",
+
   "error.viewer": "3D कंपोनेंट शुरू करे में त्रुटि.",
   "error.json": "JSON कॉन्फ़िगरेशन फाइल पढ़ल ना जा सकल.",
+
   "skin.name.vova_halloween26": "वोवा हैलोवीन 2026",
   "variation.name.vova_in_mask_halloween26": "मुखौटा में",
   "skin.name.day_halloween26": "डे हैलोवीन 2026",
@@ -180,6 +191,7 @@
   "skin.name.ger_summer": "गेर गर्मी",
   "skin.name.ger_maid_skeleton": "गेर मेड-कंकाल",
   "skin.name.stars": "स्टार्ज",
+
   "cape.name.migrator": "माइग्रेटर",
   "cape.name.pan": "पैनकेक",
   "cape.name.15th_anniversary": "15वीं वर्षगांठ",
@@ -226,6 +238,7 @@
   "cape.name.millionth_customer": "दस लाखवाँ ग्राहक",
   "cape.name.db": "dB",
   "cape.name.prismarine": "प्रिज़्मरिन",
+
   "emote.name.SPE_Get_scared": "डर जाब",
   "emote.name.SPE_Ankha_Dance": "अंख्हा डांस (एनिमल क्रॉसिंग)",
   "emote.name.SPE_Evelynn_Stand": "एवलिन स्टैंड (लीग ऑफ लीजेंड्स)",
@@ -245,6 +258,7 @@
   "emote.name.SPE_Fantastic_pose7": "शानदार पोज़ (सातवाँ विकल्प)",
   "emote.name.SPE_Fantastic_pose8": "शानदार पोज़ (आठवाँ विकल्प)",
   "emote.name.SPE_Fantastic_pose9": "शानदार पोज़ (नौवाँ विकल्प)",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वैकातु",
   "person.Виакор": "वियाकोर",
@@ -258,7 +272,5 @@
   "person.Хуман": "मानव",
   "person.Цыпляш": "त्सिप्लेश",
   "person.Эппоп": "एपोप",
-  "person.Яна": "याना",
-  "person.Ишаक": "इशाक",
-  "person.Раналда": "रानाल्डा"
+  "person.Яна": "याना"
 }

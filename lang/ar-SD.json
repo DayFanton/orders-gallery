@@ -4,9 +4,11 @@
   "language.codes": "ar-SD",
   "language.title": "اللغة",
   "language.auto": "تلقائي",
+
   "site.title": "معرض تسيبلياش",
   "gallery.title": "المعرض",
   "loading.text": "جاري تحميل وحدات العرض المرئي...",
+
   "sort.title": "الفرز",
   "sort.default": "الافتراضي",
   "sort.author": "حسب المؤلف",
@@ -19,6 +21,7 @@
   "tab.skins": "الأشكال",
   "tab.capes": "العباءات",
   "search.placeholder": "البحث بالاسم، العميل، المؤلف...",
+
   "meta.customer": "العميل",
   "meta.artist": "الرسام",
   "meta.date": "تاريخ الطلب",
@@ -26,11 +29,13 @@
   "meta.date_unset": "غير محدد",
   "meta.show_orders": "إظهار كل الطلبات من %s",
   "meta.open_author": "فتح صفحة المؤلف (%s)",
+
   "skin.untitled": "بدون عنوان",
   "skin.type": "النوع: %s",
   "skin.has_variations": "يحتوي على تنوعات",
   "variation.original": "الأصلي",
   "cape.remove": "إزالة العباءة",
+
   "controls.reset": "إعادة تعيين",
   "rotate.title": "الدوران",
   "rotate.enable": "تدوير النموذج",
@@ -47,6 +52,7 @@
   "layers.body": "الملابس الخارجية / الدروع",
   "acc.title": "الإكسسوارات",
   "acc.elytra": "إظهار الإليترا",
+
   "emote.button": "المشاعر",
   "emote.title": "المشاعر",
   "emote.hint": "اختر شعوراً أو قم بتحميل ملف .json الخاص بك",
@@ -56,6 +62,7 @@
   "emote.error": "تعذر قراءة ملف الشعور",
   "emote.playing": "قيد التشغيل: %s",
   "emote.close": "إغلاق",
+
   "bg.title": "لون الخلفية",
   "bg.dark": "داكن",
   "bg.light": "فاتح",
@@ -65,14 +72,18 @@
   "bg.yellow": "أصفر داكن",
   "bg.blue": "أزرق داكن",
   "bg.custom": "لون مخصص",
+
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
+
   "modal.title": "إشعار",
   "modal.text": "أيها الضيوف الأعزاء! كل شكل (سكين) في هذا المعرض هو نتيجة ساعات طويلة من العمل الشاق. يرجى احترام عمل الآخرين. جميع الصور محمية بحقوق النشر. يُسمح بالعرض، ولكن التحميل والنسخ والاستخدام التجاري متاح فقط باتفاق مسبق. شكراً لتفهمكم وأمانتكم!",
   "modal.agree": "لقد قرأت كل شيء وأوافق",
   "modal.continue": "متابعة",
+
   "error.viewer": "خطأ في تهيئة مكونات ثلاثية الأبعاد.",
   "error.json": "فشل في قراءة ملفات تكوين JSON.",
+
   "skin.name.vova_halloween26": "فوفا هالوين 2026",
   "variation.name.vova_in_mask_halloween26": "قناع",
   "skin.name.day_halloween26": "داي هالوين 2026",
@@ -180,6 +191,7 @@
   "skin.name.ger_summer": "غير صيف",
   "skin.name.ger_maid_skeleton": "غير خادمة هيكل عظمي",
   "skin.name.stars": "ستارز",
+
   "cape.name.migrator": "المهاجر",
   "cape.name.pan": "الفطيرة",
   "cape.name.15th_anniversary": "الذكرى الـ 15",
@@ -226,6 +238,7 @@
   "cape.name.millionth_customer": "العميل رقم مليون",
   "cape.name.db": "dB",
   "cape.name.prismarine": "بريسمارين",
+
   "emote.name.SPE_Get_scared": "الشعور بالخوف",
   "emote.name.SPE_Ankha_Dance": "رقصة أنخا (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "وقفة إيفيلين (League of Legends)",
@@ -245,9 +258,9 @@
   "emote.name.SPE_Fantastic_pose7": "وضعية رائعة (الخيار 7)",
   "emote.name.SPE_Fantastic_pose8": "وضعية رائعة (الخيار 8)",
   "emote.name.SPE_Fantastic_pose9": "وضعية رائعة (الخيار 9)",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
-  "person.Виаكور": "فياكور",
   "person.Вова": "فوفا",
   "person.Гэр": "غير",
   "person.Игроки": "اللاعبون",
@@ -259,5 +272,5 @@
   "person.Цыпляш": "تسيبلياش",
   "person.Эппоп": "إيبوب",
   "person.Яна": "يانا",
-  "person.Ишак": "إشاك"
+  "person.Виакор": "فياكور"
 }

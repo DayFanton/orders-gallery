@@ -4,9 +4,11 @@
   "language.codes": "pnb",
   "language.title": "بولی",
   "language.auto": "آٹو",
+
   "site.title": "تسیپلیاش دی گیلری",
   "gallery.title": "گیلری",
   "loading.text": "ویژولائزیشن ماڈیول لوڈ ہو رہے نیں...",
+
   "sort.title": "ترتیب",
   "sort.default": "ڈیفالٹ",
   "sort.author": "بنان والے دے حساب نال",
@@ -19,6 +21,7 @@
   "tab.skins": "سکنز",
   "tab.capes": "کیپس",
   "search.placeholder": "ناں، آرڈر دین والے یا بنان والے نال لبھو...",
+
   "meta.customer": "آرڈر دین والا",
   "meta.artist": "آرٹسٹ",
   "meta.date": "آرڈر دی تریخ",
@@ -26,11 +29,13 @@
   "meta.date_unset": "نئیں دسی گئی",
   "meta.show_orders": "%s دے سارے آرڈر وکھاؤ",
   "meta.open_author": "بنان والے دا صفحہ کھولو (%s)",
+
   "skin.untitled": "بناں ناں توں",
   "skin.type": "قسم: %s",
   "skin.has_variations": "ہور قسم وی ہیگی اے",
   "variation.original": "اصل",
   "cape.remove": "کیپ لاہ دیو",
+
   "controls.reset": "ری سیٹ",
   "rotate.title": "گھماؤ",
   "rotate.enable": "ماڈل نوں گھماؤ",
@@ -47,6 +52,7 @@
   "layers.body": "اُتلے کپڑے / بکتر",
   "acc.title": "اسیسریز",
   "acc.elytra": "ایلائٹرا وکھاؤ",
+
   "emote.button": "ایموٹس",
   "emote.title": "ایموٹس",
   "emote.hint": "کوئی ایموٹ چُنو یا اپنی .json فائل اپلوڈ کرو",
@@ -56,6 +62,7 @@
   "emote.error": "ایموٹ دی فائل نئیں پڑھی جا سکی",
   "emote.playing": "چل رہیا اے: %s",
   "emote.close": "بند کرو",
+
   "bg.title": "پچھوکڑ دا رنگ",
   "bg.dark": "گوڑھا",
   "bg.light": "ہلکا",
@@ -65,14 +72,18 @@
   "bg.yellow": "گوڑھا پیلا",
   "bg.blue": "گوڑھا نیلا",
   "bg.custom": "اپنا رنگ",
+
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ سیٹنگز",
+
   "modal.title": "اطلاع",
   "modal.text": "پیارے مہمانو! ایس گیلری دی ہر سکن کئی گھنٹیاں دی محنت دا نتیجہ اے۔ مہربانی کر کے دوجیاں دی محنت دا احترام کرو۔ ساریاں تصویراں کاپی رائٹ دے تحت محفوظ نیں۔ ویکھن دی اجازت اے، پر ڈاؤن لوڈ کرنا، کاپی کرنا تے تجارتی استعمال صرف پہلاں اجازت لین نال ای ممکن اے۔ تہاڈی سمجھداری تے ایمانداری دا شکریہ!",
   "modal.agree": "میں سب کجھ پڑھ لیا اے تے متفق آں",
   "modal.continue": "اگے ودھو",
+
   "error.viewer": "3D حصیاں نوں چلان وچ خرابی آئی اے۔",
   "error.json": "JSON کنفیگریشن فائلاں نئیں پڑھیاں جا سکیاں۔",
+
   "skin.name.vova_halloween26": "ووا ہالووین 2026",
   "variation.name.vova_in_mask_halloween26": "ماسک وچ",
   "skin.name.day_halloween26": "ڈے ہالووین 2026",
@@ -180,6 +191,7 @@
   "skin.name.ger_summer": "گیر گرمیاں",
   "skin.name.ger_maid_skeleton": "گیر خادمہ ڈھانچہ",
   "skin.name.stars": "سٹارز",
+
   "cape.name.migrator": "مائیگریٹر",
   "cape.name.pan": "پراٹھا کیپ",
   "cape.name.15th_anniversary": "15ویں سالگرہ",
@@ -226,6 +238,7 @@
   "cape.name.millionth_customer": "دس لکھواں گاہک",
   "cape.name.db": "dB",
   "cape.name.prismarine": "پرزمارین",
+
   "emote.name.SPE_Get_scared": "ڈر جانا",
   "emote.name.SPE_Ankha_Dance": "انکھا ڈانس (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ایولین پوز (League of Legends)",
@@ -245,6 +258,7 @@
   "emote.name.SPE_Fantastic_pose7": "شاندار پوز (ستواں ورژن)",
   "emote.name.SPE_Fantastic_pose8": "شاندار پوز (اٹھواں ورژن)",
   "emote.name.SPE_Fantastic_pose9": "شاندار پوز (نواں ورژن)",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وائیکاتو",
   "person.Виакор": "ویاکور",
@@ -258,7 +272,5 @@
   "person.Хуман": "ہیومن",
   "person.Цыпляш": "تسیپلیاش",
   "person.Эппоп": "ایپوپ",
-  "person.Яна": "یانا",
-  "person.Ишак": "اشاک",
-  "person.Раналда": "رانالڈا"
+  "person.Яна": "یانا"
 }
