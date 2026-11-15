@@ -7,6 +7,7 @@
   "language.search": "узбекский, oʻzbekcha, uzbek, узб",
   "language.search_placeholder": "Tilni qidirish...",
   "language.no_results": "Tillar topilmadi",
+  "language.rtl": false,
 
   "site.title": "Tsyplyash galereyasi",
   "gallery.title": "Galereya",

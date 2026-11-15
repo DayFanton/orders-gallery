@@ -8,9 +8,11 @@
   "language.search_placeholder": "ভাষা বিচাৰক...",
   "language.no_results": "কোনো ভাষা পোৱা নগ'ল",
   "language.rtl": false,
+
   "site.title": "চিপ্লিয়াছৰ গেলাৰী",
   "gallery.title": "গেলাৰী",
   "loading.text": "ভিজুৱেলাইজেচন মডিউলসমূহ লোড হৈ আছে...",
+
   "sort.title": "সজাওক",
   "sort.default": "ডিফল্ট",
   "sort.author": "সৃষ্টিকৰ্তা অনুসৰি",
@@ -23,6 +25,7 @@
   "tab.skins": "স্কিনসমূহ",
   "tab.capes": "কেপসমূহ",
   "search.placeholder": "নাম, গ্ৰাহক, সৃষ্টিকৰ্তা অনুসৰি বিচাৰক...",
+
   "meta.customer": "গ্ৰাহক",
   "meta.artist": "শিল্পী",
   "meta.date": "অৰ্ডাৰৰ তাৰিখ",
@@ -30,12 +33,14 @@
   "meta.date_unset": "উল্লেখ কৰা হোৱা নাই",
   "meta.show_orders": "%s-ৰ সকলো অৰ্ডাৰ দেখুৱাওক",
   "meta.open_author": "সৃষ্টিকৰ্তাৰ পৃষ্ঠা খোলক (%s)",
+
   "skin.untitled": "শিৰোনামহীন",
   "skin.type": "প্ৰকাৰ: %s",
   "skin.has_variations": "ভিন্নতা আছে",
   "variation.original": "মূল",
   "cape.remove": "কেপ আঁতৰাওক",
   "badge.new": "নতুন",
+
   "controls.reset": "ৰিছেট কৰক",
   "rotate.title": "ঘূৰ্ণন",
   "rotate.enable": "মডেল ঘূৰাওক",
@@ -52,6 +57,7 @@
   "layers.body": "বাহিৰৰ পোছাক / বৰ্ম",
   "acc.title": "আনুষংগিক সামগ্ৰী",
   "acc.elytra": "এলিট্ৰা দেখুৱাওক",
+
   "emote.button": "ইমোটসমূহ",
   "emote.title": "ইমোটসমূহ",
   "emote.hint": "এটা ইমোট বাছনি কৰক বা আপোনাৰ নিজৰ .json ফাইল আপলোড কৰক",
@@ -61,6 +67,7 @@
   "emote.error": "এই ইমোট ফাইলটো পঢ়িব পৰা নগ'ল",
   "emote.playing": "চলি আছে: %s",
   "emote.close": "বন্ধ কৰক",
+
   "bg.title": "পৃষ্ঠভূমিৰ ৰং",
   "bg.dark": "গাঢ়",
   "bg.light": "পাতল",
@@ -91,14 +98,18 @@
   "block.planks": "ওক কাঠৰ তক্তা",
   "block.netherrack": "নেদাৰৰেক",
   "block.end_stone": "এণ্ড শিল",
+
   "mobile.gallery": "📁 গেলাৰী",
   "mobile.settings": "⚙️ ছেটিংছ",
+
   "modal.title": "জাননী",
   "modal.text": "প্ৰিয় দৰ্শকসকল! এই গেলাৰীৰ প্ৰতিটো স্কিন বহু ঘণ্টাৰ কঠোৰ পৰিশ্ৰমৰ ফল। অনুগ্ৰহ কৰি আনৰ পৰিশ্ৰমক সন্মান কৰক। সকলো ছবি কপিৰাইট দ্বাৰা সুৰক্ষিত। কেৱল চোৱাৰ অনুমতি আছে, কিন্তু ডাউনলোড, কপি আৰু বাণিজ্যিক ব্যৱহাৰ কেৱল পূৰ্বানুমতি সাপেক্ষেহে অনুমোদিত। আপোনাৰ বুজাবুজি আৰু সততাৰ বাবে ধন্যবাদ!",
   "modal.agree": "মই সকলো পঢ়িছোঁ আৰু সন্মত হৈছোঁ",
   "modal.continue": "আগবাঢ়ক",
+
   "error.viewer": "3D উপাদানসমূহ আৰম্ভ কৰোঁতে ত্ৰুটি হৈছে।",
   "error.json": "JSON কনফিগাৰেচন ফাইলসমূহ পঢ়িব পৰা নগ'ল।",
+
   "skin.name.vova_halloween26": "ভোভা হেলোৱিন ২০২৬",
   "variation.name.vova_in_mask_halloween26": "মুখা পিন্ধা",
   "skin.name.day_halloween26": "ডেই হেলোৱিন ২০২৬",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "গেৰ গ্ৰীষ্ম",
   "skin.name.ger_maid_skeleton": "গেৰ পৰিচাৰিকা-জঁকা",
   "skin.name.stars": "ষ্টাৰ্ছ",
+
   "cape.name.migrator": "প্ৰব্ৰজনকাৰী",
   "cape.name.pan": "পেনকেক",
   "cape.name.15th_anniversary": "১৫তম বাৰ্ষিকী",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "দহ লাখতম গ্ৰাহক",
   "cape.name.db": "dB",
   "cape.name.prismarine": "প্ৰিজমেৰিন",
+
   "emote.name.SPE_Get_scared": "ভয় খোৱা",
   "emote.name.SPE_Ankha_Dance": "আংখাৰ নৃত্য (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ইভেলিনৰ ভংগীমা (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "ডাইনীৰ ভংগীমা (দুঃস্বপ্ন)",
   "emote.name.SPE_Yandere_Pose": "য়াণ্ডেৰেৰ ভংগীমা (দুঃস্বপ্ন)",
   "emote.name.SPE_Zoro_Pose": "জোৰোৰ ভংগীমা (মাল্টিভাৰ্ছ) (One Piece)",
+
   "person.Артур": "আৰ্থাৰ",
   "person.Вайкату": "ৱাইকাটু",
   "person.Виакор": "ভায়াকোৰ",

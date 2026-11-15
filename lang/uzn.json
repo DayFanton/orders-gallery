@@ -8,9 +8,11 @@
   "language.search_placeholder": "Tilni qidirish...",
   "language.no_results": "Tillar topilmadi",
   "language.rtl": false,
+
   "site.title": "Siplyash galereyasi",
   "gallery.title": "Galereya",
   "loading.text": "Vizualizatsiya modullari yuklanmoqda...",
+
   "sort.title": "Saralash",
   "sort.default": "Standart boʻyicha",
   "sort.author": "Muallif boʻyicha",
@@ -23,6 +25,7 @@
   "tab.skins": "Skinlar",
   "tab.capes": "Yopinchiqlar",
   "search.placeholder": "Nomi, buyurtmachi, muallif boʻyicha qidirish...",
+
   "meta.customer": "Buyurtmachi",
   "meta.artist": "Rassom",
   "meta.date": "Buyurtma sanasi",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Koʻrsatilmagan",
   "meta.show_orders": "%s ning barcha buyurtmalarini koʻrsatish",
   "meta.open_author": "Muallif sahifasini ochish (%s)",
+
   "skin.untitled": "Nomsiz",
   "skin.type": "Turi: %s",
   "skin.has_variations": "Variantlari bor",
   "variation.original": "Asl nusxa",
   "cape.remove": "Yopinchiqni yechish",
   "badge.new": "YANGI",
+
   "controls.reset": "Tiklash",
   "rotate.title": "Aylantirish",
   "rotate.enable": "Modelni aylantirish",
@@ -52,6 +57,7 @@
   "layers.body": "Ustki kiyim / Zirh",
   "acc.title": "Aksessuarlar",
   "acc.elytra": "Elitralarni koʻrsatish",
+
   "emote.button": "Emotsiyalar",
   "emote.title": "Emotsiyalar",
   "emote.hint": "Emotsiyani tanlang yoki oʻz .json faylingizni yuklang",
@@ -61,6 +67,7 @@
   "emote.error": "Emotsiya faylini oʻqib boʻlmadi",
   "emote.playing": "Ijro etilmoqda: %s",
   "emote.close": "Yopish",
+
   "bg.title": "Fon rangi",
   "bg.dark": "Toʻq",
   "bg.light": "Yorugʻ",
@@ -91,14 +98,18 @@
   "block.planks": "Eman taxtalar",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End toshi",
+
   "mobile.gallery": "📁 Galereya",
   "mobile.settings": "⚙️ Sozlamalar",
+
   "modal.title": "Bildirishnoma",
   "modal.text": "Hurmatli mehmonlar! Ushbu galereyadagi har bir skin koʻp soatlik mehnat samarasidir. Iltimos, oʻzgalar mehnatini hurmat qiling. Barcha tasvirlar mualliflik huquqi bilan himoyalangan. Koʻrishga ruxsat beriladi, ammo yuklab olish, nusxalash va tijorat maqsadlarida foydalanish faqat oldindan kelishuv asosida mumkin. Tushunganingiz va halolligingiz uchun rahmat!",
   "modal.agree": "Hammasini oʻqib chiqdim va roziman",
   "modal.continue": "Davom etish",
+
   "error.viewer": "3D komponentlarni ishga tushirishda xatolik.",
   "error.json": "JSON konfiguratsiya fayllarini oʻqib boʻlmadi.",
+
   "skin.name.vova_halloween26": "Vova Xellouin 2026",
   "variation.name.vova_in_mask_halloween26": "Niqobda",
   "skin.name.day_halloween26": "Dey Xellouin 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger yozgi",
   "skin.name.ger_maid_skeleton": "Ger oqsoch-skelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Koʻchib oʻtuvchi",
   "cape.name.pan": "Quymoqli",
   "cape.name.15th_anniversary": "15 yillik yubiley",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Millioninchi xaridor",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Qoʻrqib ketish",
   "emote.name.SPE_Ankha_Dance": "Anxa raqsi (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelin turishi (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Jodugar pozasi (Dahshatlar)",
   "emote.name.SPE_Yandere_Pose": "Yandere pozasi (Dahshatlar)",
   "emote.name.SPE_Zoro_Pose": "Zoro turishi (Multikoinot) (One Piece)",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Vaykatu",
   "person.Виакор": "Viakor",

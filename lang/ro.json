@@ -7,6 +7,7 @@
   "language.search": "румынский, română, romanian, moldovenesc, молдавский, рум",
   "language.search_placeholder": "Caută limba...",
   "language.no_results": "Nu s-au găsit limbi",
+  "language.rtl": false,
 
   "site.title": "Galeria Țîplyaș",
   "gallery.title": "Galerie",

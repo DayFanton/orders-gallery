@@ -7,6 +7,7 @@
   "language.search": "тайский, ไทย, thai, тай",
   "language.search_placeholder": "ค้นหาภาษา...",
   "language.no_results": "ไม่พบภาษา",
+  "language.rtl": false,
 
   "site.title": "แกลเลอรีของซิปเลียช",
   "gallery.title": "แกลเลอรี",

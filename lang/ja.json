@@ -7,6 +7,7 @@
   "language.search": "японский, 日本語, japanese, нихонго, яп",
   "language.search_placeholder": "言語を検索...",
   "language.no_results": "言語が見つかりません",
+  "language.rtl": false,
 
   "site.title": "ツィプライャッシュのギャラリー",
   "gallery.title": "ギャラリー",

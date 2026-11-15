@@ -7,6 +7,7 @@
   "language.search": "немецкий, deutsch, german, дойч, нем",
   "language.search_placeholder": "Sprache suchen...",
   "language.no_results": "Keine Sprachen gefunden",
+  "language.rtl": false,
 
   "site.title": "Tsyplyashs Galerie",
   "gallery.title": "Galerie",

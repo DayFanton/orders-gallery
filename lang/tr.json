@@ -7,6 +7,7 @@
   "language.search": "турецкий, türkçe, turkish, тур",
   "language.search_placeholder": "Dil ara...",
   "language.no_results": "Dil bulunamadı",
+  "language.rtl": false,
 
   "site.title": "Çiplyaş'ın Galerisi",
   "gallery.title": "Galeri",

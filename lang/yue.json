@@ -7,6 +7,7 @@
   "language.search": "кантонский, 粵語, cantonese, гуандунский, юэ",
   "language.search_placeholder": "搜尋語言...",
   "language.no_results": "搵唔到語言",
+  "language.rtl": false,
 
   "site.title": "小雞畫廊",
   "gallery.title": "畫廊",

@@ -7,6 +7,7 @@
   "language.search": "украинский, українська, ukrainian, україна, укр",
   "language.search_placeholder": "Пошук мови...",
   "language.no_results": "Мови не знайдено",
+  "language.rtl": false,
 
   "site.title": "Галерея Ципляша",
   "gallery.title": "Галерея",

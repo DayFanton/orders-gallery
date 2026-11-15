@@ -7,6 +7,7 @@
   "language.search": "китайский, 中文, chinese, 汉语, 漢語, кит",
   "language.search_placeholder": "搜索语言...",
   "language.no_results": "未找到语言",
+  "language.rtl": false,
 
   "site.title": "齐普利亚什的画廊",
   "gallery.title": "画廊",

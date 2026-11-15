@@ -7,6 +7,7 @@
   "language.search": "французский, français, french, франсе, фран",
   "language.search_placeholder": "Rechercher une langue...",
   "language.no_results": "Aucune langue trouvée",
+  "language.rtl": false,
 
   "site.title": "Galerie de Tsyplyash",
   "gallery.title": "Galerie",

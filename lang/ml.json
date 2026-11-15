@@ -7,6 +7,7 @@
   "language.search": "малаялам, മലയാളം, malayalam",
   "language.search_placeholder": "ഭാഷ തിരയുക...",
   "language.no_results": "ഭാഷകളൊന്നും കണ്ടെത്തിയില്ല",
+  "language.rtl": false,
 
   "site.title": "സിപ്ല്യാഷിന്റെ ഗാലറി",
   "gallery.title": "ഗാലറി",

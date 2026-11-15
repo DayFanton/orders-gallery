@@ -7,6 +7,7 @@
   "language.search": "бенгальский, বাংলা, bengali, бангла",
   "language.search_placeholder": "ভাষা খুঁজুন...",
   "language.no_results": "কোনো ভাষা পাওয়া যায়নি",
+  "language.rtl": false,
 
   "site.title": "সিপ্ল্যাশের গ্যালারি",
   "gallery.title": "গ্যালারি",

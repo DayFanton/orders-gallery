@@ -7,6 +7,7 @@
   "language.search": "вьетнамский, tiếng việt, vietnamese, вьет",
   "language.search_placeholder": "Tìm kiếm ngôn ngữ...",
   "language.no_results": "Không tìm thấy ngôn ngữ nào",
+  "language.rtl": false,
 
   "site.title": "Thư viện của Tsyplyash",
   "gallery.title": "Thư viện",

@@ -7,6 +7,7 @@
   "language.search": "польский, polski, polish, польс",
   "language.search_placeholder": "Szukaj języka...",
   "language.no_results": "Nie znaleziono języków",
+  "language.rtl": false,
 
   "site.title": "Galeria Cyplaszo",
   "gallery.title": "Galeria",

@@ -7,6 +7,7 @@
   "language.search": "бходжпури, भोजपुरी, bhojpuri",
   "language.search_placeholder": "भाषा खोजीं...",
   "language.no_results": "कवनो भाषा ना मिलल",
+  "language.rtl": false,
 
   "site.title": "त्सिप्लेश के गैलरी",
   "gallery.title": "गैलरी",

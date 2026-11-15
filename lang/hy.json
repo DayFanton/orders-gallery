@@ -7,6 +7,7 @@
   "language.search": "армянский, հայերեն, armenian, hayeren, арм",
   "language.search_placeholder": "Որոնել լեզուն...",
   "language.no_results": "Լեզուներ չեն գտնվել",
+  "language.rtl": false,
 
   "site.title": "Ցիպլյաշի պատկերասրահ",
   "gallery.title": "Պատկերասրահ",

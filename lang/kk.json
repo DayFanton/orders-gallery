@@ -7,6 +7,7 @@
   "language.search": "казахский, қазақша, kazakh, қазақ, каз",
   "language.search_placeholder": "Тілді іздеу...",
   "language.no_results": "Тілдер табылмады",
+  "language.rtl": false,
 
   "site.title": "Цыпляш галереясы",
   "gallery.title": "Галерея",
