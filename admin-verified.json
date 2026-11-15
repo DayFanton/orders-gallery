@@ -1,5 +1,102 @@
 {
  "hy": {
-  "language.name": "Հայերեն"
+  "language.name": "Հայերեն",
+  "cape.name.db": "dB"
+ },
+ "ua": {
+  "cape.name.db": "dB"
+ },
+ "kk": {
+  "cape.name.db": "dB"
+ },
+ "ro": {
+  "cape.name.db": "dB"
+ },
+ "es": {
+  "cape.name.db": "dB"
+ },
+ "pt": {
+  "cape.name.db": "dB"
+ },
+ "de": {
+  "cape.name.db": "dB"
+ },
+ "zh": {
+  "cape.name.db": "dB"
+ },
+ "fr": {
+  "cape.name.db": "dB"
+ },
+ "zh-Hans": {
+  "cape.name.db": "dB"
+ },
+ "ja": {
+  "cape.name.db": "dB"
+ },
+ "ko": {
+  "cape.name.db": "dB"
+ },
+ "id": {
+  "cape.name.db": "dB"
+ },
+ "tr": {
+  "cape.name.db": "dB"
+ },
+ "th": {
+  "cape.name.db": "dB"
+ },
+ "pl": {
+  "cape.name.db": "dB"
+ },
+ "it": {
+  "cape.name.db": "dB"
+ },
+ "ml": {
+  "cape.name.db": "dB"
+ },
+ "ta": {
+  "cape.name.db": "dB"
+ },
+ "am": {
+  "cape.name.db": "ዲቢ"
+ },
+ "sw": {
+  "cape.name.db": "dB"
+ },
+ "ha": {
+  "cape.name.db": "dB"
+ },
+ "yo": {
+  "cape.name.db": "dB"
+ },
+ "pcm": {
+  "cape.name.db": "dB"
+ },
+ "te": {
+  "cape.name.db": "dB"
+ },
+ "bho": {
+  "cape.name.db": "dB"
+ },
+ "ps": {
+  "cape.name.db": "dB"
+ },
+ "yue": {
+  "cape.name.db": "dB"
+ },
+ "ajp": {
+  "cape.name.db": "dB"
+ },
+ "mai": {
+  "cape.name.db": "dB"
+ },
+ "uz": {
+  "cape.name.db": "dB"
+ },
+ "su": {
+  "cape.name.db": "dB"
+ },
+ "mr": {
+  "cape.name.db": "dB"
  }
 }
