@@ -4,6 +4,9 @@
   "language.codes": "ro",
   "language.title": "Limbă",
   "language.auto": "Auto",
+  "language.search": "румынский, română, romanian, moldovenesc, молдавский, рум",
+  "language.search_placeholder": "Caută limba...",
+  "language.no_results": "Nu s-au găsit limbi",
 
   "site.title": "Galeria Țîplyaș",
   "gallery.title": "Galerie",
@@ -72,6 +75,14 @@
   "bg.yellow": "Galben închis",
   "bg.blue": "Albastru închis",
   "bg.custom": "Culoare personalizată",
+  "bg.image.button": "Imagine de fundal",
+  "bg.image.title": "Imagine de fundal",
+  "bg.image.hint": "Alegeți o imagine sau încărcați propria imagine",
+  "bg.image.upload": "Încărcați propria imagine",
+  "bg.image.yours": "Imaginea dvs.",
+  "bg.image.empty": "Nu s-au găsit imagini (dosarul backgrounds/)",
+  "bg.image.error": "Nu s-a putut deschide această imagine",
+  "bg.image.close": "Închide",
 
   "mobile.gallery": "📁 Galerie",
   "mobile.settings": "⚙️ Setări",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Țîplyaș",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Iana"
+  "person.Яна": "Iana",
+
+  "badge.new": "NOU",
+
+  "platform.title": "Platformă",
+  "platform.enable": "Plasează o platformă sub personaj",
+  "platform.block": "Bloc",
+  "platform.time": "Momentul zilei",
+  "block.grass": "Bloc de iarbă",
+  "block.dirt": "Pământ",
+  "block.stone": "Piatră",
+  "block.cobblestone": "Piatră spartă",
+  "block.sand": "Nisip",
+  "block.snow": "Bloc de zăpadă",
+  "block.planks": "Scânduri de stejar",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Piatră de End"
 }

@@ -4,6 +4,9 @@
   "language.codes": "yue",
   "language.title": "語言",
   "language.auto": "自動",
+  "language.search": "кантонский, 粵語, cantonese, гуандунский, юэ",
+  "language.search_placeholder": "搜尋語言...",
+  "language.no_results": "搵唔到語言",
 
   "site.title": "小雞畫廊",
   "gallery.title": "畫廊",
@@ -72,6 +75,14 @@
   "bg.yellow": "深黃色",
   "bg.blue": "深藍色",
   "bg.custom": "自訂顏色",
+  "bg.image.button": "背景圖片",
+  "bg.image.title": "背景圖片",
+  "bg.image.hint": "揀一張相片或者上載你自己嘅相",
+  "bg.image.upload": "上載您自己嘅相片",
+  "bg.image.yours": "妳嘅相片",
+  "bg.image.empty": "搵唔到相片 (backgrounds/ 資料夾)",
+  "bg.image.error": "開唔到呢張相片",
+  "bg.image.close": "關閉",
 
   "mobile.gallery": "📁 畫廊",
   "mobile.settings": "⚙️ 設定",
@@ -272,5 +283,21 @@
   "person.Хуман": "人類",
   "person.Цыпляш": "小雞",
   "person.Эппоп": "埃普波普",
-  "person.Яна": "雅娜"
+  "person.Яна": "雅娜",
+
+  "badge.new": "新",
+
+  "platform.title": "平台",
+  "platform.enable": "喺角色下面放個平台",
+  "platform.block": "方塊",
+  "platform.time": "一日之內嘅時間",
+  "block.grass": "草方塊",
+  "block.dirt": "泥土",
+  "block.stone": "石頭",
+  "block.cobblestone": "圓石",
+  "block.sand": "沙",
+  "block.snow": "雪塊",
+  "block.planks": "橡木木板",
+  "block.netherrack": "下界岩",
+  "block.end_stone": "末地石"
 }

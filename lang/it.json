@@ -4,6 +4,9 @@
   "language.codes": "it",
   "language.title": "Lingua",
   "language.auto": "Auto",
+  "language.search": "итальянский, italiano, italian, итал",
+  "language.search_placeholder": "Cerca lingua...",
+  "language.no_results": "Nessuna lingua trovata",
 
   "site.title": "Galleria di Tsyplyash",
   "gallery.title": "Galleria",
@@ -72,6 +75,14 @@
   "bg.yellow": "Giallo scuro",
   "bg.blue": "Blu scuro",
   "bg.custom": "Colore personalizzato",
+  "bg.image.button": "Immagine di sfondo",
+  "bg.image.title": "Immagine di sfondo",
+  "bg.image.hint": "Scegli un'immagine o carica la tua",
+  "bg.image.upload": "Carica la tua immagine",
+  "bg.image.yours": "La tua immagine",
+  "bg.image.empty": "Nessuna immagine trovata (cartella backgrounds/)",
+  "bg.image.error": "Impossibile aprire questa immagine",
+  "bg.image.close": "Chiudi",
 
   "mobile.gallery": "📁 Galleria",
   "mobile.settings": "⚙️ Impostazioni",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NUOVO",
+
+  "platform.title": "Piattaforma",
+  "platform.enable": "Posiziona una piattaforma sotto il personaggio",
+  "platform.block": "Blocco",
+  "platform.time": "Ora del giorno",
+  "block.grass": "Blocco d'erba",
+  "block.dirt": "Terra",
+  "block.stone": "Pietra",
+  "block.cobblestone": "Pietrisco",
+  "block.sand": "Sabbia",
+  "block.snow": "Blocco di neve",
+  "block.planks": "Assa di quercia",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Pietra dell'End"
 }

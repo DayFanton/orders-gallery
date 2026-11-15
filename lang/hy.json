@@ -4,6 +4,9 @@
   "language.codes": "hy",
   "language.title": "Լեզու",
   "language.auto": "Ավտո",
+  "language.search": "армянский, հայերեն, armenian, hayeren, арм",
+  "language.search_placeholder": "Որոնել լեզուն...",
+  "language.no_results": "Լեզուներ չեն գտնվել",
 
   "site.title": "Ցիպլյաշի պատկերասրահ",
   "gallery.title": "Պատկերասրահ",
@@ -72,6 +75,14 @@
   "bg.yellow": "Մուգ դեղին",
   "bg.blue": "Մուգ կապույտ",
   "bg.custom": "Անհատական գույն",
+  "bg.image.button": "Ֆոնային նկար",
+  "bg.image.title": "Ֆոնային նկար",
+  "bg.image.hint": "Ընտրեք նկար կամ վերբեռնեք ձերը",
+  "bg.image.upload": "Վերբեռնեք ձեր սեփական պատկերը",
+  "bg.image.yours": "Ձեր պատկերը",
+  "bg.image.empty": "Պատկերներ չեն գտնվել (backgrounds/ թղթապանակ)",
+  "bg.image.error": "Հնարավոր չեղավ բացել այս պատկերը",
+  "bg.image.close": "Փակել",
 
   "mobile.gallery": "📁 Պատկերասրահ",
   "mobile.settings": "⚙️ Կարգավորումներ",
@@ -272,5 +283,21 @@
   "person.Хуман": "Հուման",
   "person.Цыпляш": "Ցիպլյաշ",
   "person.Эппоп": "Էպպոպ",
-  "person.Яна": "Յանա"
+  "person.Яна": "Յանա",
+
+  "badge.new": "ՆՈՐ",
+
+  "platform.title": "Պլատֆորմ / Հարթակ",
+  "platform.enable": "Տեղադրեք հարթակ կերպարի տակ",
+  "platform.block": "Բլոկ",
+  "platform.time": "Օրվա ժամանակ",
+  "block.grass": "Խոտածածկ բլոկ",
+  "block.dirt": "Հող",
+  "block.stone": "Քար",
+  "block.cobblestone": "Սալաքար",
+  "block.sand": "Ավազ",
+  "block.snow": "Ձյան բլոկ",
+  "block.planks": "Կաղնու տախտակներ",
+  "block.netherrack": "Նեդերռաք",
+  "block.end_stone": "Էնդի քար"
 }

@@ -4,6 +4,9 @@
   "language.codes": "uz",
   "language.title": "Til",
   "language.auto": "Avto",
+  "language.search": "узбекский, oʻzbekcha, uzbek, узб",
+  "language.search_placeholder": "Tilni qidirish...",
+  "language.no_results": "Tillar topilmadi",
 
   "site.title": "Tsyplyash galereyasi",
   "gallery.title": "Galereya",
@@ -72,6 +75,14 @@
   "bg.yellow": "To'q sariq",
   "bg.blue": "To'q ko'k",
   "bg.custom": "Maxsus rang",
+  "bg.image.button": "Fon rasmi",
+  "bg.image.title": "Fon rasmi",
+  "bg.image.hint": "Rasm tanlang yoki o'zingiznikini yuklang",
+  "bg.image.upload": "O'z rasmingizni yuklang",
+  "bg.image.yours": "Sizning rasmingiz",
+  "bg.image.empty": "Rasmlar topilmadi (backgrounds/ papkasi)",
+  "bg.image.error": "Ushbu rasmni ochib bo'lmadi",
+  "bg.image.close": "Yopish",
 
   "mobile.gallery": "📁 Galereya",
   "mobile.settings": "⚙️ Sozlamalar",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "YANGI",
+
+  "platform.title": "Platforma",
+  "platform.enable": "Personaj ostiga platforma qo‘ying",
+  "platform.block": "Blok",
+  "platform.time": "Kun vaqti",
+  "block.grass": "O‘t blok",
+  "block.dirt": "Tuproq",
+  "block.stone": "Tosh",
+  "block.cobblestone": "Tosh",
+  "block.sand": "Qum",
+  "block.snow": "Qor bloki",
+  "block.planks": "Emak taxtalari",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "End toshi"
 }

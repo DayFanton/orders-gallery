@@ -4,6 +4,9 @@
   "language.codes": "ko",
   "language.title": "언어",
   "language.auto": "자동",
+  "language.search": "корейский, 한국어, 조선말, korean, кор",
+  "language.search_placeholder": "언어 검색...",
+  "language.no_results": "언어를 찾을 수 없습니다",
 
   "site.title": "치플랴시의 갤러리",
   "gallery.title": "갤러리",
@@ -72,6 +75,14 @@
   "bg.yellow": "어두운 노란색",
   "bg.blue": "어두운 파란색",
   "bg.custom": "사용자 지정 색상",
+  "bg.image.button": "배경 이미지",
+  "bg.image.title": "배경 이미지",
+  "bg.image.hint": "이미지를 선택하거나 직접 업로드하세요",
+  "bg.image.upload": "나만의 이미지 업로드",
+  "bg.image.yours": "당신의 이미지",
+  "bg.image.empty": "이미지를 찾을 수 없습니다 (backgrounds/ 폴더)",
+  "bg.image.error": "이 이미지를 열 수 없습니다",
+  "bg.image.close": "닫기",
 
   "mobile.gallery": "📁 갤러리",
   "mobile.settings": "⚙️ 설정",
@@ -272,5 +283,21 @@
   "person.Хуман": "휴먼",
   "person.Цыпляш": "치플랴시",
   "person.Эппоп": "에폽",
-  "person.Яна": "야나"
+  "person.Яна": "야나",
+
+  "badge.new": "신규",
+
+  "platform.title": "플랫폼",
+  "platform.enable": "캐릭터 아래에 플랫폼을 배치하세요",
+  "platform.block": "블록",
+  "platform.time": "시간대",
+  "block.grass": "잔디 블록",
+  "block.dirt": "흙",
+  "block.stone": "돌",
+  "block.cobblestone": "조약돌",
+  "block.sand": "모래",
+  "block.snow": "눈 블록",
+  "block.planks": "참나무 판자",
+  "block.netherrack": "네더랙",
+  "block.end_stone": "엔드 돌"
 }

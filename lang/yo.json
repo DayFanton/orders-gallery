@@ -4,6 +4,9 @@
   "language.codes": "yo",
   "language.title": "Èdè",
   "language.auto": "Fúnra rẹ̀",
+  "language.search": "йоруба, èdè yorùbá, yoruba",
+  "language.search_placeholder": "Wa èdè...",
+  "language.no_results": "Ko si ede ti a ri",
 
   "site.title": "Ilé Ìfihàn Tsyplyash",
   "gallery.title": "Ilé Ìfihàn",
@@ -72,6 +75,14 @@
   "bg.yellow": "Òkùnkùn fẹ́lẹ́fẹ́",
   "bg.blue": "Òkùnkùn búlùù",
   "bg.custom": "Àwọ̀ tirẹ̀",
+  "bg.image.button": "Aworan abẹlẹ",
+  "bg.image.title": "Aworan abẹlẹ",
+  "bg.image.hint": "Yan aworan tabi gbe tirẹ soke",
+  "bg.image.upload": "Gbe aworan rẹ soke",
+  "bg.image.yours": "Aworan rẹ",
+  "bg.image.empty": "Ko si aworan ti a ri (folda backgrounds/)",
+  "bg.image.error": "Ko le ṣii aworan yii",
+  "bg.image.close": "Pa",
 
   "mobile.gallery": "📁 Ilé Ìfihàn",
   "mobile.settings": "⚙️ Ẹ̀rọ",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "TUNTUN",
+
+  "platform.title": "Pẹpẹ / Syeed",
+  "platform.enable": "Gbe pẹpẹ si abẹ ohun kikọ",
+  "platform.block": "Bloku",
+  "platform.time": "Àkókò ọjọ́",
+  "block.grass": "Bloku Koriko",
+  "block.dirt": "Ilẹ̀",
+  "block.stone": "Òkúta",
+  "block.cobblestone": "Òkúta",
+  "block.sand": "Iyanrin",
+  "block.snow": "Blọọki yìnyín",
+  "block.planks": "Awọn pako oak",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Òkúta End"
 }

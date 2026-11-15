@@ -4,6 +4,10 @@
   "language.codes": "ps",
   "language.title": "ژبه",
   "language.auto": "اتومات",
+  "language.search": "пушту, پښتو, pashto, пуштунский",
+  "language.search_placeholder": "ژبه ولټوئ...",
+  "language.rtl": true,
+  "language.no_results": "هیڅ ژبې ونه موندل شوې",
 
   "site.title": "د څیپلاش ګالري",
   "gallery.title": "ګالري",
@@ -72,6 +76,14 @@
   "bg.yellow": "تیر ژیړ",
   "bg.blue": "تیر شین",
   "bg.custom": "ګانکړی رنګ",
+  "bg.image.button": "د پس منظر انځور",
+  "bg.image.title": "د پس منظر انځور",
+  "bg.image.hint": "یو انځور وټاکئ یا خپل خپله اپلوډ کړئ",
+  "bg.image.upload": "خپله انځور پورته کړئ",
+  "bg.image.yours": "ستاسو انځور",
+  "bg.image.empty": "هیڅ انځورونه ونه موندل شول (backgrounds/ فولډر)",
+  "bg.image.error": "دا انځور نش شو پرانیستلی",
+  "bg.image.close": "وتړئ",
 
   "mobile.gallery": "📁 ګالري",
   "mobile.settings": "⚙️ تنظیمات",
@@ -272,5 +284,21 @@
   "person.Хуман": "انسان",
   "person.Цыпляш": "څیپلاش",
   "person.Эппоп": "اپوپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "badge.new": "نوی",
+
+  "platform.title": "پلیټ فارم / دریځ",
+  "platform.enable": "د کرکټر لاندې یو پلیټ فارم ځای په ځای کړئ",
+  "platform.block": "بلاک",
+  "platform.time": "د ورځی وخت",
+  "block.grass": "د واښو بلاک",
+  "block.dirt": "خاوره",
+  "block.stone": "ډبره",
+  "block.cobblestone": "ډبره",
+  "block.sand": "شګه",
+  "block.snow": "د واورې بلاک",
+  "block.planks": "د بلوط تختې",
+  "block.netherrack": "نیدرایک",
+  "block.end_stone": "د پای ډبره"
 }

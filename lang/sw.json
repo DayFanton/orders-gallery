@@ -4,6 +4,9 @@
   "language.codes": "sw",
   "language.title": "Lugha",
   "language.auto": "Otomatiki",
+  "language.search": "суахили, kiswahili, swahili",
+  "language.search_placeholder": "Tafuta lugha...",
+  "language.no_results": "Hakuna lugha zilizopatikana",
 
   "site.title": "Matunzio ya Tsyplyash",
   "gallery.title": "Matunzio",
@@ -72,6 +75,14 @@
   "bg.yellow": "Njano iliyokolea",
   "bg.blue": "Bluu iliyokolea",
   "bg.custom": "Rangi maalum",
+  "bg.image.button": "Picha ya mandhari",
+  "bg.image.title": "Picha ya mandhari",
+  "bg.image.hint": "Chagua picha au pakia yako mwenyewe",
+  "bg.image.upload": "Pakia picha yako mwenyewe",
+  "bg.image.yours": "Picha yako",
+  "bg.image.empty": "Hakuna picha zilizopatikana (folda backgrounds/)",
+  "bg.image.error": "Haikuwezekana kufungua picha hii",
+  "bg.image.close": "Funga",
 
   "mobile.gallery": "📁 Matunzio",
   "mobile.settings": "⚙️ Mipangilio",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "MPYA",
+
+  "platform.title": "Jukwaa",
+  "platform.enable": "Weka jukwaa chini ya mhusika",
+  "platform.block": "Bloku",
+  "platform.time": "Wakati wa siku",
+  "block.grass": "Bloku ya Nyasi",
+  "block.dirt": "Udongo",
+  "block.stone": "Jiwe",
+  "block.cobblestone": "Jiwe",
+  "block.sand": "Mchanga",
+  "block.snow": "Kizuizi cha theluji",
+  "block.planks": "Mbao za mwaloni",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Jiwe la End"
 }

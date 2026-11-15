@@ -4,6 +4,9 @@
   "language.codes": "ja",
   "language.title": "言語",
   "language.auto": "自動",
+  "language.search": "японский, 日本語, japanese, нихонго, яп",
+  "language.search_placeholder": "言語を検索...",
+  "language.no_results": "言語が見つかりません",
 
   "site.title": "ツィプライャッシュのギャラリー",
   "gallery.title": "ギャラリー",
@@ -72,6 +75,14 @@
   "bg.yellow": "ダークイエロー",
   "bg.blue": "ダークブルー",
   "bg.custom": "カスタムカラー",
+  "bg.image.button": "背景画像",
+  "bg.image.title": "背景画像",
+  "bg.image.hint": "画像を選択するか、自分でアップロードしてください",
+  "bg.image.upload": "独自の画像をアップロード",
+  "bg.image.yours": "あなたの画像",
+  "bg.image.empty": "画像が見つかりません (backgrounds/ フォルダ)",
+  "bg.image.error": "この画像を開けませんでした",
+  "bg.image.close": "閉じる",
 
   "mobile.gallery": "📁 ギャラリー",
   "mobile.settings": "⚙️ 設定",
@@ -272,5 +283,21 @@
   "person.Хуман": "ヒューマン",
   "person.Цыпляш": "ツィプライャッシュ",
   "person.Эппоп": "エッпоップ",
-  "person.Яна": "ヤナ"
+  "person.Яна": "ヤナ",
+
+  "badge.new": "新着",
+
+  "platform.title": "プラットフォーム",
+  "platform.enable": "キャラクターの下にプラットフォームを配置する",
+  "platform.block": "ブロック",
+  "platform.time": "時間帯",
+  "block.grass": "草ブロック",
+  "block.dirt": "土",
+  "block.stone": "石",
+  "block.cobblestone": "丸石",
+  "block.sand": "砂",
+  "block.snow": "雪ブロック",
+  "block.planks": "オークの木材",
+  "block.netherrack": "ネザーラック",
+  "block.end_stone": "エンドストーン"
 }

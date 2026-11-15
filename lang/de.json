@@ -4,6 +4,9 @@
   "language.codes": "de",
   "language.title": "Sprache",
   "language.auto": "Auto",
+  "language.search": "немецкий, deutsch, german, дойч, нем",
+  "language.search_placeholder": "Sprache suchen...",
+  "language.no_results": "Keine Sprachen gefunden",
 
   "site.title": "Tsyplyashs Galerie",
   "gallery.title": "Galerie",
@@ -72,6 +75,14 @@
   "bg.yellow": "Dunkelgelb",
   "bg.blue": "Dunkelblau",
   "bg.custom": "Benutzerdefinierte Farbe",
+  "bg.image.button": "Hintergrundbild",
+  "bg.image.title": "Hintergrundbild",
+  "bg.image.hint": "Wählen Sie ein Bild aus oder laden Sie Ihr eigenes hoch",
+  "bg.image.upload": "Laden Sie Ihr eigenes Bild hoch",
+  "bg.image.yours": "Ihr Bild",
+  "bg.image.empty": "Keine Bilder gefunden (Ordner backgrounds/)",
+  "bg.image.error": "Dieses Bild konnte nicht geöffnet werden",
+  "bg.image.close": "Schließen",
 
   "mobile.gallery": "📁 Galerie",
   "mobile.settings": "⚙️ Einstellungen",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NEU",
+
+  "platform.title": "Plattform",
+  "platform.enable": "Platziere eine Plattform unter den Charakter",
+  "platform.block": "Block",
+  "platform.time": "Tageszeit",
+  "block.grass": "Grasblock",
+  "block.dirt": "Erde",
+  "block.stone": "Stein",
+  "block.cobblestone": "Bruchstein",
+  "block.sand": "Sand",
+  "block.snow": "Schneeblock",
+  "block.planks": "Eichenholzbretter",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Endstein"
 }

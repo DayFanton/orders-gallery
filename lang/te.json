@@ -4,6 +4,9 @@
   "language.codes": "te",
   "language.title": "భాష",
   "language.auto": "ఆటో",
+  "language.search": "телугу, తెలుగు, telugu",
+  "language.search_placeholder": "భాషను వెతకండి...",
+  "language.no_results": "భాషలు కనుగొనబడలేదు",
 
   "site.title": "సిప్ల్యాష్ గ్యాలరీ",
   "gallery.title": "గ్యాలరీ",
@@ -72,6 +75,14 @@
   "bg.yellow": "ముదురు పసుపు",
   "bg.blue": "ముదురు నీలం",
   "bg.custom": "అనుకూల రంగు",
+  "bg.image.button": "నేหลัง చిత్రం",
+  "bg.image.title": "నేหลัง చిత్రం",
+  "bg.image.hint": "చిత్రాన్ని ఎంచుకోండి లేదా మీ స్వంతంగా అప్‌లోడ్ చేయండి",
+  "bg.image.upload": "మీ స్వంత చిత్రాన్ని అప్‌లోड చేయండి",
+  "bg.image.yours": "మీ చిత్రం",
+  "bg.image.empty": "చిత్రాలు కనుగొనబడలేదు (backgrounds/ ఫోల్డర్)",
+  "bg.image.error": "ఈ చిత్రాన్ని తెరవలేకపోయింది",
+  "bg.image.close": "మూసివేయి",
 
   "mobile.gallery": "📁 గ్యాలరీ",
   "mobile.settings": "⚙️ సెట్టింగ్‌లు",
@@ -272,5 +283,21 @@
   "person.Хуман": "హ్యూమన్",
   "person.Цыпляш": "సిప్ల్యాష్",
   "person.Эппоп": "ఎప్పాప్",
-  "person.Яна": "యానా"
+  "person.Яна": "యానా",
+
+  "badge.new": "కొత్తది",
+
+  "platform.title": "వేదిక / ప్లాట్‌ఫారమ్",
+  "platform.enable": "పాత్ర క్రింద ఒక వేదికను ఉంచండి",
+  "platform.block": "బ్లాక్",
+  "platform.time": "రోజు సమయం",
+  "block.grass": "గడ్డి బ్లాక్",
+  "block.dirt": "మట్టి",
+  "block.stone": "రాయి",
+  "block.cobblestone": "రాయి",
+  "block.sand": "ఇసుక",
+  "block.snow": "మంచు బ్లాక్",
+  "block.planks": "ఓక్ పలకలు",
+  "block.netherrack": "నెదర్‌రాక్",
+  "block.end_stone": "ఎండ్ రాయి"
 }

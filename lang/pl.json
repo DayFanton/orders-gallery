@@ -4,6 +4,9 @@
   "language.codes": "pl",
   "language.title": "Język",
   "language.auto": "Auto",
+  "language.search": "польский, polski, polish, польс",
+  "language.search_placeholder": "Szukaj języka...",
+  "language.no_results": "Nie znaleziono języków",
 
   "site.title": "Galeria Cyplaszo",
   "gallery.title": "Galeria",
@@ -72,6 +75,14 @@
   "bg.yellow": "Ciemnożółty",
   "bg.blue": "Ciemnoniebieski",
   "bg.custom": "Własny kolor",
+  "bg.image.button": "Obraz tła",
+  "bg.image.title": "Obraz tła",
+  "bg.image.hint": "Wybierz zdjęcie lub prześlij własne",
+  "bg.image.upload": "Prześlij własny obraz",
+  "bg.image.yours": "Twój obraz",
+  "bg.image.empty": "Nie znaleziono obrazów (folder backgrounds/)",
+  "bg.image.error": "Nie można otworzyć tego obrazu",
+  "bg.image.close": "Zamknij",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Ustawienia",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Cyplasz",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Jana"
+  "person.Яна": "Jana",
+
+  "badge.new": "NOWE",
+
+  "platform.title": "Platforma",
+  "platform.enable": "Umieść platformę pod postacią",
+  "platform.block": "Blok",
+  "platform.time": "Pora dnia",
+  "block.grass": "Blok trawy",
+  "block.dirt": "Ziemia",
+  "block.stone": "Kamień",
+  "block.cobblestone": "Bruk",
+  "block.sand": "Piasek",
+  "block.snow": "Blok śniegu",
+  "block.planks": "Dębowe deski",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Kamień Kresu"
 }

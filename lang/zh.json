@@ -4,6 +4,9 @@
   "language.codes": "zh",
   "language.title": "语言",
   "language.auto": "自动",
+  "language.search": "китайский, 中文, chinese, 汉语, 漢語, кит",
+  "language.search_placeholder": "搜索语言...",
+  "language.no_results": "未找到语言",
 
   "site.title": "齐普利亚什的画廊",
   "gallery.title": "画廊",
@@ -72,6 +75,14 @@
   "bg.yellow": "深黄色",
   "bg.blue": "深蓝色",
   "bg.custom": "自定义颜色",
+  "bg.image.button": "背景图片",
+  "bg.image.title": "背景图片",
+  "bg.image.hint": "选择图片或上传您自己的图片",
+  "bg.image.upload": "上传您自己的图片",
+  "bg.image.yours": "您的图片",
+  "bg.image.empty": "未找到图片 (backgrounds/ 文件夹)",
+  "bg.image.error": "无法打开此图片",
+  "bg.image.close": "关闭",
 
   "mobile.gallery": "📁 画廊",
   "mobile.settings": "⚙️ 设置",
@@ -272,5 +283,21 @@
   "person.Хуман": "人类",
   "person.Цыпляш": "齐普利亚什",
   "person.Эппоп": "埃波普",
-  "person.Яна": "亚娜"
+  "person.Яна": "亚娜",
+
+  "badge.new": "新",
+
+  "platform.title": "平台",
+  "platform.enable": "在角色下方放置一个平台",
+  "platform.block": "方块",
+  "platform.time": "一天中的时间",
+  "block.grass": "草方块",
+  "block.dirt": "泥土",
+  "block.stone": "石头",
+  "block.cobblestone": "圆石",
+  "block.sand": "沙子",
+  "block.snow": "雪块",
+  "block.planks": "橡木木板",
+  "block.netherrack": "下界岩",
+  "block.end_stone": "末地石"
 }

@@ -4,6 +4,9 @@
   "language.codes": "pt",
   "language.title": "Idioma",
   "language.auto": "Auto",
+  "language.search": "португальский, português, portuguese, бразильский, brasileiro, порт",
+  "language.search_placeholder": "Pesquisar idioma...",
+  "language.no_results": "Nenhum idioma encontrado",
 
   "site.title": "Galeria da Tsyplyash",
   "gallery.title": "Galeria",
@@ -72,6 +75,14 @@
   "bg.yellow": "Amarelo escuro",
   "bg.blue": "Azul escuro",
   "bg.custom": "Cor personalizada",
+  "bg.image.button": "Imagem de fundo",
+  "bg.image.title": "Imagem de fundo",
+  "bg.image.hint": "Escolha uma imagem ou carregue a sua própria",
+  "bg.image.upload": "Carregue a sua própria imagem",
+  "bg.image.yours": "A sua imagem",
+  "bg.image.empty": "Nenhuma imagem encontrada (pasta backgrounds/)",
+  "bg.image.error": "Não foi possível abrir esta imagem",
+  "bg.image.close": "Fechar",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Configurações",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NOVO",
+
+  "platform.title": "Plataforma",
+  "platform.enable": "Coloque uma plataforma sob o personagem",
+  "platform.block": "Bloco",
+  "platform.time": "Hora do dia",
+  "block.grass": "Bloco de grama",
+  "block.dirt": "Terra",
+  "block.stone": "Pedra",
+  "block.cobblestone": "Pedregulho",
+  "block.sand": "Areia",
+  "block.snow": "Bloco de neve",
+  "block.planks": "Tábuas de carvalho",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Pedra do Fim"
 }

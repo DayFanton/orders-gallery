@@ -4,6 +4,9 @@
   "language.codes": "vi",
   "language.title": "Ngôn ngữ",
   "language.auto": "Tự động",
+  "language.search": "вьетнамский, tiếng việt, vietnamese, вьет",
+  "language.search_placeholder": "Tìm kiếm ngôn ngữ...",
+  "language.no_results": "Không tìm thấy ngôn ngữ nào",
 
   "site.title": "Thư viện của Tsyplyash",
   "gallery.title": "Thư viện",
@@ -72,6 +75,14 @@
   "bg.yellow": "Vàng đậm",
   "bg.blue": "Xanh dương đậm",
   "bg.custom": "Màu tùy chỉnh",
+  "bg.image.button": "Hình nền",
+  "bg.image.title": "Hình nền",
+  "bg.image.hint": "Chọn hình ảnh hoặc tải lên hình ảnhของ bạn",
+  "bg.image.upload": "Tải lên hình ảnh của riêng bạn",
+  "bg.image.yours": "Hình ảnh của bạn",
+  "bg.image.empty": "Không tìm thấy hình ảnh nào (thư mục backgrounds/)",
+  "bg.image.error": "Không thể mở hình ảnh này",
+  "bg.image.close": "Đóng",
 
   "mobile.gallery": "📁 Thư viện",
   "mobile.settings": "⚙️ Cài đặt",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "MỚI",
+
+  "platform.title": "Nền tảng",
+  "platform.enable": "Đặt một nền tảng dưới nhân vật",
+  "platform.block": "Khối",
+  "platform.time": "Thời gian trong ngày",
+  "block.grass": "Khối cỏ",
+  "block.dirt": "Đất",
+  "block.stone": "Đá",
+  "block.cobblestone": "Đá cuội",
+  "block.sand": "Cát",
+  "block.snow": "Khối tuyết",
+  "block.planks": "Ván gỗ sồi",
+  "block.netherrack": "Đá Nether",
+  "block.end_stone": "Đá End"
 }

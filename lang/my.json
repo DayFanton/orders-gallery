@@ -4,6 +4,9 @@
   "language.codes": "my",
   "language.title": "ဘာသာစကား",
   "language.auto": "အလိုအလျောက်",
+  "language.search": "бирманский, မြန်မာစာ, burmese, мьянманский",
+  "language.search_placeholder": "ဘာသာစကား ရှာရန်...",
+  "language.no_results": "ဘာသာစကားများ မတွေ့ပါ",
 
   "site.title": "စီပလပ်ရှ်၏ ပြခန်း",
   "gallery.title": "ပြခန်း",
@@ -72,6 +75,14 @@
   "bg.yellow": "အမှောင်ဝါရောင်",
   "bg.blue": "အမှောင်ပြာရောင်",
   "bg.custom": "စိတ်ကြိုက်အရောင်",
+  "bg.image.button": "နောက်ခံပုံ",
+  "bg.image.title": "နောက်ခံပုံ",
+  "bg.image.hint": "ပုံတစ်ပုံကို ရွေးပါ (သို့) သင့်ကိုယ်ပိုင်ပုံကို တင်ပါ",
+  "bg.image.upload": "ကိုယ်ပိုင်ပုံကို တင်ვიပါ။",
+  "bg.image.yours": "သင့်ပုံ",
+  "bg.image.empty": "ပုံများမတွေ့ပါ (backgrounds/ ဖိုင်တွဲ)",
+  "bg.image.error": "ဤပုံကို ဖွင့်၍မရပါ",
+  "bg.image.close": "ပိတ်ရန်",
 
   "mobile.gallery": "📁 ပြခန်း",
   "mobile.settings": "⚙️ ဆက်တင်များ",
@@ -272,5 +283,21 @@
   "person.Хуман": "ဟူမန်",
   "person.Цыпляш": "စီပလပ်ရှ်",
   "person.Эппоп": "အက်ပေါ့ပ်",
-  "person.Яна": "ယာနာ"
+  "person.Яна": "ယာနာ",
+
+  "badge.new": "အသစ်",
+
+  "platform.title": "ပလက်ဖောင်း",
+  "platform.enable": "ကာရိုက်တာအောက်တွင် ပလက်ဖောင်းတစ်ခု ထားပါ",
+  "platform.block": "ဘလောက်",
+  "platform.time": "နေ့အချိန်",
+  "block.grass": "မြက်ဘလောက်",
+  "block.dirt": "မြေကြီး",
+  "block.stone": "ကျောက်",
+  "block.cobblestone": "ကျောက်ခဲ",
+  "block.sand": "သဲ",
+  "block.snow": "ဆီးနှင်းတုံး",
+  "block.planks": "ဝက်သစ်ချပျဉ်ပြားများ",
+  "block.netherrack": "නෙදර්‍රැක්",
+  "block.end_stone": "အန့်ကျောက်"
 }

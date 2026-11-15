@@ -4,6 +4,9 @@
   "language.codes": "kn",
   "language.title": "ಭಾಷೆ",
   "language.auto": "ಆಟೋ",
+  "language.search": "каннада, ಕನ್ನಡ, kannada",
+  "language.search_placeholder": "ಭಾಷೆಯನ್ನು ಹುಡುಕಿ...",
+  "language.no_results": "ಯಾವುದೇ ಭಾಷೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
 
   "site.title": "ತ್ಸಿಪ್ಲ್ಯಾಶ್ ಗ್ಯಾಲರಿ",
   "gallery.title": "ಗ್ಯಾಲರಿ",
@@ -72,6 +75,14 @@
   "bg.yellow": "ಗಾಢ ಹಳದಿ",
   "bg.blue": "ಗಾಢ ನೀಲಿ",
   "bg.custom": "ಕಸ್ಟಮ್ ಬಣ್ಣ",
+  "bg.image.button": "ಹಿನ್ನೆಲೆ ಚಿತ್ರ",
+  "bg.image.title": "ಹಿನ್ನೆಲೆ ಚಿತ್ರ",
+  "bg.image.hint": "ಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ನಿಮ್ಮದೇ ಆದದನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+  "bg.image.upload": "ನಿಮ್ಮ ಸ್ವಂತ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+  "bg.image.yours": "ನಿಮ್ಮ ಚಿತ್ರ",
+  "bg.image.empty": "ಯಾವುದೇ ಚಿತ್ರಗಳು ಕಂಡುಬಂದಿಲ್ಲ (backgrounds/ ಫೋಲ್ಡರ್)",
+  "bg.image.error": "ಈ ಚಿತ್ರವನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+  "bg.image.close": "ಮುಚ್ಚಿ",
 
   "mobile.gallery": "📁 ಗ್ಯಾಲರಿ",
   "mobile.settings": "⚙️ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
@@ -272,5 +283,21 @@
   "person.Хуман": "ಹ್ಯೂಮನ್",
   "person.Цыпляш": "ತ್ಸಿಪ್ಲ್ಯಾಶ್",
   "person.Эппоп": "ಎಪ್ಪೋಪ್",
-  "person.Яна": "ಯಾನಾ"
+  "person.Яна": "ಯಾನಾ",
+
+  "badge.new": "ಹೊಸದು",
+
+  "platform.title": "ವೇದಿಕೆ / ಪ್ಲಾಟ್‌ಫಾರ್ಮ್",
+  "platform.enable": "ಪಾತ್ರದ ಕೆಳಗೆ ಒಂದು ವೇದಿಕೆಯನ್ನು ಇರಿಸಿ",
+  "platform.block": "ಬ್ಲಾಕ್",
+  "platform.time": "ದಿನದ ಸಮಯ",
+  "block.grass": "ಹುಲ್ಲಿನ ಬ್ಲಾಕ್",
+  "block.dirt": "ಮಣ್ಣು",
+  "block.stone": "ಕಲ್ಲು",
+  "block.cobblestone": "ಕಲ್ಲು",
+  "block.sand": "ಮರಳು",
+  "block.snow": "ಹಿಮದ ಬ್ಲಾಕ್",
+  "block.planks": "ಓಕ್ ಹಲಗೆಗಳು",
+  "block.netherrack": "ನೆದರ್‌ರಾಕ್",
+  "block.end_stone": "ಎಂಡ್ ಕಲ್ಲು"
 }

@@ -4,6 +4,9 @@
   "language.codes": "or",
   "language.title": "ଭାଷା",
   "language.auto": "ଅଟୋ",
+  "language.search": "одия, ଓଡ଼ିଆ, odia, ория",
+  "language.search_placeholder": "ଭାଷା ଖୋଜନ୍ତୁ...",
+  "language.no_results": "କୌଣସି ଭାଷା ମିଳିଲା ନାହିଁ",
 
   "site.title": "ତ୍ସିପ୍ଲ୍ୟାଶ୍‌ଙ୍କ ଗ୍ୟାଲେରୀ",
   "gallery.title": "ଗ୍ୟାଲେରୀ",
@@ -72,6 +75,14 @@
   "bg.yellow": "ଗାଢ଼ ହଳଦିଆ",
   "bg.blue": "ଗାଢ଼ ନୀଳ",
   "bg.custom": "କଷ୍ଟମ୍ ରଙ୍ଗ",
+  "bg.image.button": "ପୃଷ୍ଠଭୂମି ପ୍ରତିଛବି",
+  "bg.image.title": "ପୃଷ୍ଠଭୂମି ପ୍ରତିଛବି",
+  "bg.image.hint": "ଗୋଟିଏ ପ୍ରତିଛବି ବାଛନ୍ତୁ କିମ୍ବା ଆପଣଙ୍କର ନିଜର ଅପଲୋଡ୍ କରନ୍ତୁ",
+  "bg.image.upload": "ଆପଣଙ୍କର ନିଜର ପ୍ରତିଛବି ଅପଲୋଡ୍ କରନ୍ତୁ",
+  "bg.image.yours": "ଆପଣଙ୍କ ପ୍ରତିଛବି",
+  "bg.image.empty": "କୌଣସି ପ୍ରତିଛବି ମିଳିଲା ନାହିଁ (backgrounds/ ଫୋଲ୍ଡର୍)",
+  "bg.image.error": "ଏହି ପ୍ରତିଛବି ଖୋଲି ହେଲା ନାହିଁ",
+  "bg.image.close": "ବନ୍ଦ କରନ୍ତୁ",
 
   "mobile.gallery": "📁 ଗ୍ୟାଲେରୀ",
   "mobile.settings": "⚙️ ସେଟିଂସ୍",
@@ -272,5 +283,21 @@
   "person.Хуман": "ମାନବ",
   "person.Цыпляш": "ତ୍ସିପ୍ଲ୍ୟାଶ୍",
   "person.Эппоп": "ଏପୋପ୍",
-  "person.Яна": "ଯାନା"
+  "person.Яна": "ଯାନା",
+
+  "badge.new": "ନୂଆ",
+
+  "platform.title": "ପ୍ଲାଟଫର୍ମ / ମଞ୍ଚ",
+  "platform.enable": "ଚରିତ୍ର κά୍ଲିରେ ଏକ ପ୍ଲାଟଫର୍ମ ରଖନ୍ତୁ",
+  "platform.block": "ବ୍ଲକ୍",
+  "platform.time": "ଦିନର ସମୟ",
+  "block.grass": "ଘାସ ବ୍ଲକ୍",
+  "block.dirt": "ମାଟି",
+  "block.stone": "ପଥର",
+  "block.cobblestone": "ପଥର",
+  "block.sand": "ବାଲି",
+  "block.snow": "ବରଫ ବ୍ଲକ",
+  "block.planks": "ଓକ୍ ପ୍ଲାଙ୍କ୍",
+  "block.netherrack": "ନେଥର୍ରାକ୍",
+  "block.end_stone": "ଏଣ୍ଡ ପଥର"
 }

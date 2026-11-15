@@ -4,6 +4,9 @@
   "language.codes": "ru",
   "language.title": "Язык",
   "language.auto": "Авто",
+  "language.search": "русский, russian, руский, росийский, рашн, русс",
+  "language.search_placeholder": "Поиск языка...",
+  "language.no_results": "Языки не найдены",
 
   "site.title": "Галерея Цыпляша",
   "gallery.title": "Галерея",
@@ -72,6 +75,14 @@
   "bg.yellow": "Тёмно-жёлтый",
   "bg.blue": "Тёмно-синий",
   "bg.custom": "Свой цвет",
+  "bg.image.button": "Фоновое изображение",
+  "bg.image.title": "Фоновое изображение",
+  "bg.image.hint": "Выберите картинку или загрузите свою",
+  "bg.image.upload": "Загрузите собственное изображение",
+  "bg.image.yours": "Ваше изображение",
+  "bg.image.empty": "Изображения не найдены (папка backgrounds/)",
+  "bg.image.error": "Не удалось открыть это изображение",
+  "bg.image.close": "Закрыть",
 
   "mobile.gallery": "📁 Галерея",
   "mobile.settings": "⚙️ Настройки",
@@ -272,5 +283,21 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "badge.new": "НОВОЕ",
+
+  "platform.title": "Платформа",
+  "platform.enable": "Поставь платформу под персонажа",
+  "platform.block": "Блок",
+  "platform.time": "Время суток",
+  "block.grass": "Блок травы",
+  "block.dirt": "Земля",
+  "block.stone": "Камень",
+  "block.cobblestone": "Булыжник",
+  "block.sand": "Песок",
+  "block.snow": "Блок снега",
+  "block.planks": "Дубовые доски",
+  "block.netherrack": "Адский камень",
+  "block.end_stone": "Камень Края"
 }

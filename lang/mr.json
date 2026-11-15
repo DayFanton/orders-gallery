@@ -4,6 +4,9 @@
   "language.codes": "mr",
   "language.title": "भाषा",
   "language.auto": "ऑटो",
+  "language.search": "маратхи, मराठी, marathi",
+  "language.search_placeholder": "भाषा शोधा...",
+  "language.no_results": "कोणतीही भाषा आढळली नाही",
 
   "site.title": "त्सिप्लायशची गॅलरी",
   "gallery.title": "गॅलरी",
@@ -72,6 +75,14 @@
   "bg.yellow": "गडद पिवळा",
   "bg.blue": "गडद निळा",
   "bg.custom": "कस्टम रंग",
+  "bg.image.button": "पार्श्वभूमी प्रतिमा",
+  "bg.image.title": "पार्श्वभूमी प्रतिमा",
+  "bg.image.hint": "चित्र निवडा किंवा तुमचे स्वतःचे अपलोड करा",
+  "bg.image.upload": "तुमची स्वतःची प्रतिमा अपलोड करा",
+  "bg.image.yours": "तुमची प्रतिमा",
+  "bg.image.empty": "कोणतीही प्रतिमा सापडली नाही (backgrounds/ फोल्डर)",
+  "bg.image.error": "ही प्रतिमा उघडू शकली नाही",
+  "bg.image.close": "बंद करा",
 
   "mobile.gallery": "📁 गॅलरी",
   "mobile.settings": "⚙️ सेटिंग्ज",
@@ -272,5 +283,21 @@
   "person.Хуман": "ह्युमन",
   "person.Цыпляш": "त्सिप्लायश",
   "person.Эппоп": "एपॉप",
-  "person.Яна": "याна"
+  "person.Яна": "याна",
+
+  "badge.new": "नवीन",
+
+  "platform.title": "प्लॅटफॉर्म / व्यासपीठ",
+  "platform.enable": "पात्राच्या खाली एक प्लॅटफॉर्म ठेवा",
+  "platform.block": "ब्लॉक",
+  "platform.time": "दिवसाची वेळ",
+  "block.grass": "गवत ब्लॉक",
+  "block.dirt": "माती",
+  "block.stone": "दगड",
+  "block.cobblestone": "दगड",
+  "block.sand": "वाळू",
+  "block.snow": "बर्फाचा ब्लॉक",
+  "block.planks": "ओक फळ्या",
+  "block.netherrack": "नेदररॅक",
+  "block.end_stone": "एंड दगड"
 }

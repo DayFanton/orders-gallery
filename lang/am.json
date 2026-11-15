@@ -4,6 +4,9 @@
   "language.codes": "am",
   "language.title": "ቋንቋ",
   "language.auto": "አውቶ",
+  "language.search": "амхарский, አማርኛ, amharic",
+  "language.search_placeholder": "ቋንቋ ይፈልጉ...",
+  "language.no_results": "ምንም ቋንቋዎች አልተገኙም",
 
   "site.title": "የጺፕልያሽ ማዕከለ-ስዕላት",
   "gallery.title": "ማዕከለ-ስዕላት",
@@ -72,6 +75,14 @@
   "bg.yellow": "ጨለማ ቢጫ",
   "bg.blue": "ጨለማ ሰማያዊ",
   "bg.custom": "ብጁ ቀለም",
+  "bg.image.button": "የ배경 ምስል",
+  "bg.image.title": "የ배경 ምስል",
+  "bg.image.hint": "ምስል ይምረጡ ወይም የራስዎን ይስቀሉ",
+  "bg.image.upload": "δώθ Ձέφ Ձδψπ",
+  "bg.image.yours": "ምስልዎ",
+  "bg.image.empty": "ምስሎች አልተገኙም (backgrounds/ አቃፊ)",
+  "bg.image.error": "ይህን ምስል መክፈት አልተቻለም",
+  "bg.image.close": "ዝጋ",
 
   "mobile.gallery": "📁 ማዕከለ-ስዕላት",
   "mobile.settings": "⚙️ ማስተካከያዎች",
@@ -272,5 +283,21 @@
   "person.Хуман": "ሁማን",
   "person.Цыпляш": "ጺፕልያሽ",
   "person.Эппоп": "ኤፖፕ",
-  "person.Яна": "ያና"
+  "person.Яна": "ያና",
+
+  "badge.new": "አዲስ",
+
+  "platform.title": "መድረክ",
+  "platform.enable": "በገጸ-ባህሪው ስር መድረክ አስቀምጥ",
+  "platform.block": "ብሎክ",
+  "platform.time": "የቀኑ ሰዓት",
+  "block.grass": "የሣር ብሎክ",
+  "block.dirt": "አፈር",
+  "block.stone": "ድንጋይ",
+  "block.cobblestone": "ድንጋይ",
+  "block.sand": "አሸዋ",
+  "block.snow": "የበረዶ ብሎክ",
+  "block.planks": "የبلوጥ ጽሕፈቶች",
+  "block.netherrack": "ኔዘርራክ",
+  "block.end_stone": "የኢንድ ድንጋይ"
 }

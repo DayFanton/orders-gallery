@@ -4,6 +4,10 @@
   "language.codes": "sd",
   "language.title": "ٻولي",
   "language.auto": "خودڪار",
+  "language.search": "синдхи, سنڌي, sindhi",
+  "language.search_placeholder": "ٻولي ڳوليو...",
+  "language.rtl": true,
+  "language.no_results": "ڪابه ٻولي نه ملي",
 
   "site.title": "سυπلياش جي گئلري",
   "gallery.title": "گئلري",
@@ -72,6 +76,14 @@
   "bg.yellow": "اونداهو پيلو",
   "bg.blue": "اونداهو نيرو",
   "bg.custom": "پنهنجو رنگ",
+  "bg.image.button": "پس منظر جي تصوير",
+  "bg.image.title": "پس منظر جي تصوير",
+  "bg.image.hint": "ڪابه تصوير چونڊيو يا پنهنجي اپلوڊ ڪريو",
+  "bg.image.upload": "پنهنجو پنهنجو تصوير اپلوڊ ڪريو",
+  "bg.image.yours": "توهان جي تصوير",
+  "bg.image.empty": "ڪابه تصوير نه ملي (backgrounds/ فولڊر)",
+  "bg.image.error": "هي تصوير کولي نه سگهجي",
+  "bg.image.close": "بند ڪريو",
 
   "mobile.gallery": "📁 گئلري",
   "mobile.settings": "⚙️ ترتيبون",
@@ -272,5 +284,21 @@
   "person.Хуман": "انسان",
   "person.Цыпляш": "سυπلياش",
   "person.Эппоп": "ايپوپ",
-  "person.Яна": "يانا"
+  "person.Яна": "يانا",
+
+  "badge.new": "نئون",
+
+  "platform.title": "پليٽ فارم",
+  "platform.enable": "پليٽ فارم ڪردار جي هيٺان رکو",
+  "platform.block": "بلاڪ",
+  "platform.time": "ڏينهن جو وقت",
+  "block.grass": "گاه جو بلاڪ",
+  "block.dirt": "مٽي",
+  "block.stone": "پٿر",
+  "block.cobblestone": "پٿر",
+  "block.sand": "واري",
+  "block.snow": "برف جو بلاڪ",
+  "block.planks": "بلوط جا تختاتا",
+  "block.netherrack": "نيدرريڪ",
+  "block.end_stone": "اينڊ پٿر"
 }

@@ -4,6 +4,9 @@
   "language.codes": "tl, fil",
   "language.title": "Wika",
   "language.auto": "Auto",
+  "language.search": "тагальский, filipino, филиппинский, tagalog, тагал",
+  "language.search_placeholder": "Maghanap ng wika...",
+  "language.no_results": "Walang nahanap na wika",
 
   "site.title": "Galeriya ni Tsyplyash",
   "gallery.title": "Galeriya",
@@ -72,6 +75,14 @@
   "bg.yellow": "Madilim na dilaw",
   "bg.blue": "Madilim na asul",
   "bg.custom": "Sariling kulay",
+  "bg.image.button": "Larawan sa background",
+  "bg.image.title": "Larawan sa background",
+  "bg.image.hint": "Pumili ng larawan o mag-upload ng sa iyo",
+  "bg.image.upload": "Mag-upload ng sarili mong larawan",
+  "bg.image.yours": "Ang iyong larawan",
+  "bg.image.empty": "Walang nakitang mga larawan (folder backgrounds/)",
+  "bg.image.error": "Hindi mabuksan ang larawang ito",
+  "bg.image.close": "Isara",
 
   "mobile.gallery": "📁 Galeriya",
   "mobile.settings": "⚙️ Mga Setting",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "BAGO",
+
+  "platform.title": "Plataporma",
+  "platform.enable": "Maglagay ng platform sa ilalim ng karakter",
+  "platform.block": "Bloke",
+  "platform.time": "Oras ng araw",
+  "block.grass": "Bloke ng Damo",
+  "block.dirt": "Lupa",
+  "block.stone": "Bato",
+  "block.cobblestone": "Bato",
+  "block.sand": "Buhangin",
+  "block.snow": "Bloke ng niyebe",
+  "block.planks": "Mga tablones na oak",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "End stone"
 }

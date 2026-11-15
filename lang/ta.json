@@ -4,6 +4,9 @@
   "language.codes": "ta",
   "language.title": "மொழி",
   "language.auto": "தானியங்கி",
+  "language.search": "тамильский, தமிழ், tamil, тамил",
+  "language.search_placeholder": "மொழியைத் தேடு...",
+  "language.no_results": "மொழிகள் எதுவும் கிடைக்கவில்லை",
 
   "site.title": "சிப்ளியாஷின் கேலரி",
   "gallery.title": "கேலரி",
@@ -72,6 +75,14 @@
   "bg.yellow": "அடர் மஞ்சள்",
   "bg.blue": "அடர் நீலம்",
   "bg.custom": "தனிப்பயன் நிறம்",
+  "bg.image.button": "பின்னணி படம்",
+  "bg.image.title": "பின்னணி படம்",
+  "bg.image.hint": "ஒரு படத்தைத் தேர்ந்தெடுக்கவும் அல்லது உங்களுடையதைப் பதிவேற்றவும்",
+  "bg.image.upload": "உங்கள் சொந்த படத்தை பதிவேற்றவும்",
+  "bg.image.yours": "உங்கள் படம்",
+  "bg.image.empty": "படங்கள் எதுவும் கிடைக்கவில்லை (backgrounds/ கோப்புறை)",
+  "bg.image.error": "இந்தப் படத்தைத் திறக்க முடியவில்லை",
+  "bg.image.close": "மூடு",
 
   "mobile.gallery": "📁 கேலரி",
   "mobile.settings": "⚙️ அமைப்புகள்",
@@ -272,5 +283,21 @@
   "person.Хуман": "ஹ்யூமன்",
   "person.Цыпляш": "சிப்ளியாஷ்",
   "person.Эппоп": "எப்போப்",
-  "person.Яна": "யானா"
+  "person.Яна": "யானா",
+
+  "badge.new": "புதியது",
+
+  "platform.title": "தளம்",
+  "platform.enable": "பாத்திரத்தின் கீழே ஒரு தளத்தை வைக்கவும்",
+  "platform.block": "பிளாக்",
+  "platform.time": "நாளின் நேரம்",
+  "block.grass": "புல் பிளாக்",
+  "block.dirt": "மண்",
+  "block.stone": "கல்",
+  "block.cobblestone": "கூழாங்கல்",
+  "block.sand": "மணல்",
+  "block.snow": "பனித் தொகுதி",
+  "block.planks": "ஓக் பலகைகள்",
+  "block.netherrack": "நெதராக்",
+  "block.end_stone": "எண்ட் கல்"
 }

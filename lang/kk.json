@@ -4,6 +4,9 @@
   "language.codes": "kk",
   "language.title": "Тіл",
   "language.auto": "Авто",
+  "language.search": "казахский, қазақша, kazakh, қазақ, каз",
+  "language.search_placeholder": "Тілді іздеу...",
+  "language.no_results": "Тілдер табылмады",
 
   "site.title": "Цыпляш галереясы",
   "gallery.title": "Галерея",
@@ -72,6 +75,14 @@
   "bg.yellow": "Күңгірт сары",
   "bg.blue": "Күңгірт көк",
   "bg.custom": "Жеке түс",
+  "bg.image.button": "Фон суреті",
+  "bg.image.title": "Фон суреті",
+  "bg.image.hint": "Суретті таңдаңыз немесе өзіңіздікін жүктеңіз",
+  "bg.image.upload": "Өз суретіңізді жүктеңіз",
+  "bg.image.yours": "Сіздің суретіңіз",
+  "bg.image.empty": "Суреттер табылмады (backgrounds/ бумасы)",
+  "bg.image.error": "Бұл суретті ашу мүмкін болмады",
+  "bg.image.close": "Жабу",
 
   "mobile.gallery": "📁 Галерея",
   "mobile.settings": "⚙️ Баптаулар",
@@ -272,5 +283,21 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "badge.new": "ЖАҢА",
+
+  "platform.title": "Платформа",
+  "platform.enable": "Кейіпкердің астына платформа қойыңыз",
+  "platform.block": "Блок",
+  "platform.time": "Тәулік мезгілі",
+  "block.grass": "Шөп блок",
+  "block.dirt": "Топырақ",
+  "block.stone": "Тас",
+  "block.cobblestone": "Брукчатка",
+  "block.sand": "Құм",
+  "block.snow": "Қар блоғы",
+  "block.planks": "Емен тақтайлар",
+  "block.netherrack": "Тозақ тасы",
+  "block.end_stone": "Энд тасы"
 }

@@ -4,6 +4,10 @@
   "language.codes": "ajp",
   "language.title": "اللغة",
   "language.auto": "تلقائي",
+  "language.search": "южнолевантийский арабский, south levantine arabic, палестинский арабский, иорданский арабский",
+  "language.search_placeholder": "ابحث عن لغة...",
+  "language.rtl": true,
+  "language.no_results": "ما انلقى لغات",
 
   "site.title": "معرض تسيبلياش",
   "gallery.title": "المعرض",
@@ -72,6 +76,14 @@
   "bg.yellow": "أصفر داكن",
   "bg.blue": "أزرق داكن",
   "bg.custom": "لون مخصص",
+  "bg.image.button": "صورة الخلفية",
+  "bg.image.title": "صورة الخلفية",
+  "bg.image.hint": "اختار صورة أو ارفع صورتك الخاصة",
+  "bg.image.upload": "حمل صورتك الخاصة",
+  "bg.image.yours": "صورتك",
+  "bg.image.empty": "ما لقيت صور (مجلد backgrounds/)",
+  "bg.image.error": "ما قدرت أفتح هذه الصورة",
+  "bg.image.close": "إغلاق",
 
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
@@ -272,5 +284,21 @@
   "person.Хуман": "هومان",
   "person.Цыпляш": "تسيبلياش",
   "person.Эппоп": "إيبوب",
-  "person.Яна": "يانا"
+  "person.Яна": "يانا",
+
+  "badge.new": "جديد",
+
+  "platform.title": "منصة",
+  "platform.enable": "حط منصة تحت الشخصية",
+  "platform.block": "بلوك",
+  "platform.time": "وقت اليوم",
+  "block.grass": "بلوك عشب",
+  "block.dirt": "تراب",
+  "block.stone": "حجر",
+  "block.cobblestone": "حصى",
+  "block.sand": "رمل",
+  "block.snow": "كتلة ثلج",
+  "block.planks": "ألواح بلوط",
+  "block.netherrack": "نذراكت",
+  "block.end_stone": "حجر النهاية"
 }

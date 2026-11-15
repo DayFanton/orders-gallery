@@ -4,6 +4,9 @@
   "language.codes": "jv",
   "language.title": "Basa",
   "language.auto": "Otomatis",
+  "language.search": "яванский, basa jawa, javanese, ява",
+  "language.search_placeholder": "Golèk basa...",
+  "language.no_results": "Ora ana basa sing ditemokake",
 
   "site.title": "Galeri Tsyplyash",
   "gallery.title": "Galeri",
@@ -72,6 +75,14 @@
   "bg.yellow": "Kuning peteng",
   "bg.blue": "Biru peteng",
   "bg.custom": "Warna kustom",
+  "bg.image.button": "Gambar latar",
+  "bg.image.title": "Gambar latar",
+  "bg.image.hint": "Pilih gambar utawa unggah gambar Panjenengan",
+  "bg.image.upload": "Unggah gambar Panjenengan",
+  "bg.image.yours": "Gambar Panjenengan",
+  "bg.image.empty": "Ora ana gambar sing ditemokake (folder backgrounds/)",
+  "bg.image.error": "Ora bisa mbukak gambar iki",
+  "bg.image.close": "Tutup",
 
   "mobile.gallery": "📁 Galeri",
   "mobile.settings": "⚙️ Pengaturan",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "ANYAR",
+
+  "platform.title": "Platform",
+  "platform.enable": "Selehake platform ing ngisor karakter",
+  "platform.block": "Blok",
+  "platform.time": "Wektu dina",
+  "block.grass": "Blok suket",
+  "block.dirt": "Lemah",
+  "block.stone": "Watu",
+  "block.cobblestone": "Watu pecah",
+  "block.sand": "Pasir",
+  "block.snow": "Blok salju",
+  "block.planks": "Papan kayu oak",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Watu End"
 }

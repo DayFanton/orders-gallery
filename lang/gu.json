@@ -4,6 +4,9 @@
   "language.codes": "gu",
   "language.title": "ભાષા",
   "language.auto": "ઓટો",
+  "language.search": "гуджарати, ગુજરાતી, gujarati",
+  "language.search_placeholder": "ભાષા શોધો...",
+  "language.no_results": "કોઈ ભાષાઓ મળી નથી",
 
   "site.title": "સિપ્લ્યાશની ગેલેરી",
   "gallery.title": "ગેલેરી",
@@ -72,6 +75,14 @@
   "bg.yellow": "ઘાટો પીળો",
   "bg.blue": "ઘાટો વાદળી",
   "bg.custom": "કસ્ટમ રંગ",
+  "bg.image.button": "બેકગ્રાઉન્ડ ઇમેજ",
+  "bg.image.title": "બેકગ્રાઉન્ડ ઇમેજ",
+  "bg.image.hint": "કોઈ ચિત્ર પસંદ કરો અથવા તમારું પોતાનું અપલોડ કરો",
+  "bg.image.upload": "તમારી પોતાની છબી અપલોડ કરો",
+  "bg.image.yours": "તમારી છબી",
+  "bg.image.empty": "કોઈ છબીઓ મળી નથી (backgrounds/ ફોલ્ડર)",
+  "bg.image.error": "આ છબી ખોલી શકાઈ નથી",
+  "bg.image.close": "બંધ કરો",
 
   "mobile.gallery": "📁 ગેલેરી",
   "mobile.settings": "⚙️ સેટિંગ્સ",
@@ -272,5 +283,21 @@
   "person.Хуман": "હ્યુમન",
   "person.Цыпляш": "સિપ્લ્યાશ",
   "person.Эппоп": "એપોપ",
-  "person.Яна": "યાના"
+  "person.Яна": "યાના",
+
+  "badge.new": "નવું",
+
+  "platform.title": "પ્લેટફોર્મ / મંચ",
+  "platform.enable": "પાત્રની નીચે એક પ્લેટફોર્મ મૂકો",
+  "platform.block": "બ્લોક",
+  "platform.time": "દિવસનો સમય",
+  "block.grass": "ઘાસનો બ્લોક",
+  "block.dirt": "માટી",
+  "block.stone": "પથ્થર",
+  "block.cobblestone": "પથ્થર",
+  "block.sand": "રેતી",
+  "block.snow": "બરફ બ્લોક",
+  "block.planks": "ઓક પાટડા",
+  "block.netherrack": "નેધરરેક",
+  "block.end_stone": "એન્ડ પથ્થર"
 }

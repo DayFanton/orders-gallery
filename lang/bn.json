@@ -4,6 +4,9 @@
   "language.codes": "bn",
   "language.title": "ভাষা",
   "language.auto": "স্বয়ংক্রিয়",
+  "language.search": "бенгальский, বাংলা, bengali, бангла",
+  "language.search_placeholder": "ভাষা খুঁজুন...",
+  "language.no_results": "কোনো ভাষা পাওয়া যায়নি",
 
   "site.title": "সিপ্ল্যাশের গ্যালারি",
   "gallery.title": "গ্যালারি",
@@ -72,6 +75,14 @@
   "bg.yellow": "গাঢ় হলুদ",
   "bg.blue": "গাঢ় নীল",
   "bg.custom": "কাস্টম রঙ",
+  "bg.image.button": "পটভূমি চিত্র",
+  "bg.image.title": "পটভূমি চিত্র",
+  "bg.image.hint": "একটি ছবি চয়ন করুন বা আপনার নিজের আপলোড করুন",
+  "bg.image.upload": "আপনার নিজের ছবি আপلود করুন",
+  "bg.image.yours": "আপনার ছবি",
+  "bg.image.empty": "কোনো ছবি পাওয়া যায়নি (backgrounds/ ফোল্ডার)",
+  "bg.image.error": "এই ছবিটি খোলা যায়নি",
+  "bg.image.close": "বন্ধ করুন",
 
   "mobile.gallery": "📁 গ্যালারি",
   "mobile.settings": "⚙️ সেটিংস",
@@ -272,5 +283,21 @@
   "person.Хуман": "হিউম্যান",
   "person.Цыпляш": "সিপ্ল্যাশ",
   "person.Эппоп": "এপপপ",
-  "person.Яна": "ইয়ানা"
+  "person.Яна": "ইয়ানা",
+
+  "badge.new": "নতুন",
+
+  "platform.title": "প্ল্যাটফর্ম",
+  "platform.enable": "চরিত্রের নিচে একটি প্ল্যাটফর্ম রাখুন",
+  "platform.block": "ব্লক",
+  "platform.time": "দিনের সময়",
+  "block.grass": "ঘাসের ব্লক",
+  "block.dirt": "মাটি",
+  "block.stone": "পাথর",
+  "block.cobblestone": "কোবলস্টোন",
+  "block.sand": "বালি",
+  "block.snow": "বরফের ব্লক",
+  "block.planks": "ওক তক্তা",
+  "block.netherrack": "নেদারর্যাক",
+  "block.end_stone": "এন্ড স্টোন"
 }

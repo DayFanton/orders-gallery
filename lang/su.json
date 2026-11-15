@@ -4,6 +4,9 @@
   "language.codes": "su",
   "language.title": "Basa",
   "language.auto": "Otomatis",
+  "language.search": "сунданский, basa sunda, sundanese, сунда",
+  "language.search_placeholder": "Téangan basa...",
+  "language.no_results": "Teu kapanggih basa",
 
   "site.title": "Galeri Tsyplyash",
   "gallery.title": "Galeri",
@@ -72,6 +75,14 @@
   "bg.yellow": "Kuning gelap",
   "bg.blue": "Biru gelap",
   "bg.custom": "Warna sorangan",
+  "bg.image.button": "Gambar latar tukang",
+  "bg.image.title": "Gambar latar tukang",
+  "bg.image.hint": "Pilih gambar atawa unggah gambar sorangan",
+  "bg.image.upload": "Unggah gambar anjeun sorangan",
+  "bg.image.yours": "Gambar anjeun",
+  "bg.image.empty": "Henteu kapanggih gambar (foldér backgrounds/)",
+  "bg.image.error": "Teu bisa muka gambar ieu",
+  "bg.image.close": "Tutup",
 
   "mobile.gallery": "📁 Galeri",
   "mobile.settings": "⚙️ Setélan",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "ANYAR",
+
+  "platform.title": "Platform",
+  "platform.enable": "Teunde platform di handapeun karakter",
+  "platform.block": "Blok",
+  "platform.time": "Waktu poé",
+  "block.grass": "Blok juk",
+  "block.dirt": "Taneuh",
+  "block.stone": "Batu",
+  "block.cobblestone": "Batu",
+  "block.sand": "Pasir",
+  "block.snow": "Blok salju",
+  "block.planks": "Papan kai sélaéh",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Batu End"
 }

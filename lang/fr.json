@@ -4,6 +4,9 @@
   "language.codes": "fr",
   "language.title": "Langue",
   "language.auto": "Auto",
+  "language.search": "французский, français, french, франсе, фран",
+  "language.search_placeholder": "Rechercher une langue...",
+  "language.no_results": "Aucune langue trouvée",
 
   "site.title": "Galerie de Tsyplyash",
   "gallery.title": "Galerie",
@@ -72,6 +75,14 @@
   "bg.yellow": "Jaune foncé",
   "bg.blue": "Bleu foncé",
   "bg.custom": "Couleur personnalisée",
+  "bg.image.button": "Image d'arrière-plan",
+  "bg.image.title": "Image d'arrière-plan",
+  "bg.image.hint": "Choisissez une image ou téléchargez la vôtre",
+  "bg.image.upload": "Téléchargez votre propre image",
+  "bg.image.yours": "Votre image",
+  "bg.image.empty": "Aucune image trouvée (dossier backgrounds/)",
+  "bg.image.error": "Impossible d'ouvrir cette image",
+  "bg.image.close": "Fermer",
 
   "mobile.gallery": "📁 Galerie",
   "mobile.settings": "⚙️ Paramètres",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NOUVEAU",
+
+  "platform.title": "Plateforme",
+  "platform.enable": "Placez une plateforme sous le personnage",
+  "platform.block": "Bloc",
+  "platform.time": "Moment de la journée",
+  "block.grass": "Bloc d'herbe",
+  "block.dirt": "Terre",
+  "block.stone": "Pierre",
+  "block.cobblestone": "Pierre",
+  "block.sand": "Sable",
+  "block.snow": "Bloc de neige",
+  "block.planks": "Planches de chêne",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Pierre de l'End"
 }

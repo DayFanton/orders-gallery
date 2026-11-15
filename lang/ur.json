@@ -4,6 +4,10 @@
   "language.codes": "ur",
   "language.title": "زبان",
   "language.auto": "خودکار",
+  "language.search": "урду, اردو, urdu",
+  "language.search_placeholder": "زبان تلاش کریں...",
+  "language.rtl": true,
+  "language.no_results": "کوئی زبان نہیں ملی",
 
   "site.title": "تسیپلاش کی گیلری",
   "gallery.title": "گیلری",
@@ -72,6 +76,14 @@
   "bg.yellow": "گہرا پیلا",
   "bg.blue": "گہرا نیلا",
   "bg.custom": "حسب ضرورت رنگ",
+  "bg.image.button": "پس منظر کی تصویر",
+  "bg.image.title": "پس منظر کی تصویر",
+  "bg.image.hint": "ایک تصویر منتخب کریں یا اپنی خود اپ لوڈ کریں۔",
+  "bg.image.upload": "اپنی تصویر اپ لوڈ کریں",
+  "bg.image.yours": "آپ کی تصویر",
+  "bg.image.empty": "کوئی تصاویر نہیں ملیں (backgrounds/ فولڈر)",
+  "bg.image.error": "اس تصویر کو کھولا نہیں جا سکا",
+  "bg.image.close": "بند کریں",
 
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ ترتیبات",
@@ -272,5 +284,21 @@
   "person.Хуман": "ہیومن",
   "person.Цыпляш": "تسیپلاش",
   "person.Эппоп": "ایپاپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "badge.new": "نیا",
+
+  "platform.title": "پلیٹ فارم",
+  "platform.enable": "کردار کے نیچے ایک پلیٹ فارم رکھیں",
+  "platform.block": "بلاک",
+  "platform.time": "دن کا وقت",
+  "block.grass": "گھاس کا بلاک",
+  "block.dirt": "مٹی",
+  "block.stone": "پتھر",
+  "block.cobblestone": "کوبل سٹون",
+  "block.sand": "ریت",
+  "block.snow": "برف کا بلاک",
+  "block.planks": "بلوط کے تختے",
+  "block.netherrack": "نیدر ریک",
+  "block.end_stone": "اینڈ پتھر"
 }

@@ -4,6 +4,9 @@
   "language.codes": "ml",
   "language.title": "ഭാഷ",
   "language.auto": "ഓട്ടോ",
+  "language.search": "малаялам, മലയാളം, malayalam",
+  "language.search_placeholder": "ഭാഷ തിരയുക...",
+  "language.no_results": "ഭാഷകളൊന്നും കണ്ടെത്തിയില്ല",
 
   "site.title": "സിപ്ല്യാഷിന്റെ ഗാലറി",
   "gallery.title": "ഗാലറി",
@@ -72,6 +75,14 @@
   "bg.yellow": "കടും മഞ്ഞ",
   "bg.blue": "കടും നീല",
   "bg.custom": "ഇഷ്ടാനുസൃത നിറം",
+  "bg.image.button": "പശ്ചാത്തല ചിത്രം",
+  "bg.image.title": "പശ്ചാത്തല ചിത്രം",
+  "bg.image.hint": "ഒരു ചിത്രം തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ നിങ്ങളുടേത് അപ്‌ലോഡ് ചെയ്യുക",
+  "bg.image.upload": "നിങ്ങളുടെ സ്വന്തം ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+  "bg.image.yours": "നിങ്ങളുടെ ചിത്രം",
+  "bg.image.empty": "ചിത്രങ്ങളൊന്നും കണ്ടെത്തിയില്ല (backgrounds/ ഫോൾഡർ)",
+  "bg.image.error": "ഈ ചിത്രം തുറക്കാനായില്ല",
+  "bg.image.close": "അടയ്ക്കുക",
 
   "mobile.gallery": "📁 ഗാലറി",
   "mobile.settings": "⚙️ ക്രമീകരണങ്ങൾ",
@@ -272,5 +283,21 @@
   "person.Хуман": "ഹ്യൂമൻ",
   "person.Цыпляш": "സിപ്ല്യാഷ്",
   "person.Эппоп": "എപ്പോപ്പ്",
-  "person.Яна": "യാന"
+  "person.Яна": "യാന",
+
+  "badge.new": "പുതിയത്",
+
+  "platform.title": "പ്ലാറ്റ്‌ഫോം",
+  "platform.enable": "കഥാപാത്രത്തിന് കീഴിൽ ഒരു പ്ലാറ്റ്‌ഫോം സ്ഥാപിക്കുക",
+  "platform.block": "ബ്ലോക്ക്",
+  "platform.time": "ദിവസത്തെ സമയം",
+  "block.grass": "പുല്ല് ബ്ലോക്ക്",
+  "block.dirt": "മണ്ണ്",
+  "block.stone": "കല്ല്",
+  "block.cobblestone": "കല്ല്",
+  "block.sand": "മണൽ",
+  "block.snow": "മഞ്ഞുകട്ട",
+  "block.planks": "ഓക്ക് പലകകൾ",
+  "block.netherrack": "നെതർറാക്ക്",
+  "block.end_stone": "എൻഡ് കല്ല്"
 }

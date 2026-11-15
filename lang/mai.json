@@ -4,6 +4,9 @@
   "language.codes": "mai",
   "language.title": "भाषा",
   "language.auto": "स्वतः",
+  "language.search": "майтхили, मैथिली, maithili",
+  "language.search_placeholder": "भाषा ताकू...",
+  "language.no_results": "कोनो भाषा नहि भेटल",
 
   "site.title": "त्सिपल्याश क' गैलरी",
   "gallery.title": "गैलरी",
@@ -72,6 +75,14 @@
   "bg.yellow": "गूढपियर",
   "bg.blue": "गूढनील",
   "bg.custom": "कस्टम रंग",
+  "bg.image.button": "पृष्ठभूमि छवि",
+  "bg.image.title": "पृष्ठभूमि छवि",
+  "bg.image.hint": "कोनो तस्वीर चुनू वा अपना तरफ सँ अपलोड करू",
+  "bg.image.upload": "अपन इमेज अपलोड करू",
+  "bg.image.yours": "अहाँक इमेज",
+  "bg.image.empty": "कोनियो इमेज नै भेटल (backgrounds/ फोल्डर)",
+  "bg.image.error": "ई इमेज नै खोलि सकल",
+  "bg.image.close": "बन्द करू",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग्स",
@@ -272,5 +283,21 @@
   "person.Хуман": "हुमन",
   "person.Цыпляш": "त्सिपल्याश",
   "person.Эппоп": "एपोप",
-  "person.Яна": "याना"
+  "person.Яна": "याना",
+
+  "badge.new": "नव",
+
+  "platform.title": "प्लेटफार्म / मंच",
+  "platform.enable": "पात्रक नीचाँ एकटा प्लेटफार्म राखू",
+  "platform.block": "ब्लॉक",
+  "platform.time": "दिनक समय",
+  "block.grass": "घासकटा ब्लॉक",
+  "block.dirt": "माटी",
+  "block.stone": "पत्थर",
+  "block.cobblestone": "पाथर",
+  "block.sand": "बालू",
+  "block.snow": "बर्फक ब्लक",
+  "block.planks": "ओक के पाटा",
+  "block.netherrack": "नेदररैक",
+  "block.end_stone": "एंड स्टोन"
 }

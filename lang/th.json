@@ -4,6 +4,9 @@
   "language.codes": "th",
   "language.title": "ภาษา",
   "language.auto": "อัตโนมัติ",
+  "language.search": "тайский, ไทย, thai, тай",
+  "language.search_placeholder": "ค้นหาภาษา...",
+  "language.no_results": "ไม่พบภาษา",
 
   "site.title": "แกลเลอรีของซิปเลียช",
   "gallery.title": "แกลเลอรี",
@@ -72,6 +75,14 @@
   "bg.yellow": "เหลืองเข้ม",
   "bg.blue": "น้ำเงินเข้ม",
   "bg.custom": "กำหนดสีเอง",
+  "bg.image.button": "ภาพพื้นหลัง",
+  "bg.image.title": "ภาพพื้นหลัง",
+  "bg.image.hint": "เลือกรูปภาพหรืออัปโหลดรูปภาพของคุณเอง",
+  "bg.image.upload": "อัปโหลดรูปภาพของคุณเอง",
+  "bg.image.yours": "รูปภาพของคุณ",
+  "bg.image.empty": "ไม่พบรูปภาพ (โฟลเดอร์ backgrounds/)",
+  "bg.image.error": "ไม่สามารถเปิดรูปภาพนี้ได้",
+  "bg.image.close": "ปิด",
 
   "mobile.gallery": "📁 แกลเลอรี",
   "mobile.settings": "⚙️ การตั้งค่า",
@@ -272,5 +283,21 @@
   "person.Хуман": "ฮิวแมน",
   "person.Цыпляш": "ซิปเลียช",
   "person.Эппоп": "เอปปอป",
-  "person.Яна": "ยานา"
+  "person.Яна": "ยานา",
+
+  "badge.new": "ใหม่",
+
+  "platform.title": "แพลตฟอร์ม",
+  "platform.enable": "วางแพลตฟอร์มไว้ใต้ตัวละคร",
+  "platform.block": "บล็อก",
+  "platform.time": "ช่วงเวลาของวัน",
+  "block.grass": "บล็อกหญ้า",
+  "block.dirt": "ดิน",
+  "block.stone": "หิน",
+  "block.cobblestone": "หิน",
+  "block.sand": "ทราย",
+  "block.snow": "บล็อกหิมะ",
+  "block.planks": "ไม้โอ๊กแผ่น",
+  "block.netherrack": "เนเธอร์แร็ค",
+  "block.end_stone": "หินเอนด์"
 }

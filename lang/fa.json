@@ -4,6 +4,10 @@
   "language.codes": "fa",
   "language.title": "زبان",
   "language.auto": "خودکار",
+  "language.search": "персидский, فارسی, persian, фарси, farsi, иранский",
+  "language.search_placeholder": "جستجوی زبان...",
+  "language.rtl": true,
+  "language.no_results": "زبانی یافت نشد",
 
   "site.title": "گالری تسپلیاش",
   "gallery.title": "گالری",
@@ -72,6 +76,14 @@
   "bg.yellow": "زرد تیره",
   "bg.blue": "آبی تیره",
   "bg.custom": "رنگ سفارشی",
+  "bg.image.button": "تصویر پس‌زمینه",
+  "bg.image.title": "تصویر پس‌زمینه",
+  "bg.image.hint": "تصویری را انتخاب کنید یا تصویر خود را آپلود کنید",
+  "bg.image.upload": "تصویر خود را آپلود کنید",
+  "bg.image.yours": "تصویر شما",
+  "bg.image.empty": "تصویری یافت نشد (پوشه backgrounds/)",
+  "bg.image.error": "باز کردن این تصویر امکان‌پذیر نبود",
+  "bg.image.close": "بستن",
 
   "mobile.gallery": "📁 گالری",
   "mobile.settings": "⚙️ تنظیمات",
@@ -272,5 +284,21 @@
   "person.Хуман": "انسان",
   "person.Цыпляш": "تسپلیاش",
   "person.Эппоп": "اپپوپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "badge.new": "جدید",
+
+  "platform.title": "پلتفرم / سکو",
+  "platform.enable": "یک پلتفرم زیر کاراکتر قرار دهید",
+  "platform.block": "بلوک",
+  "platform.time": "زمان روز",
+  "block.grass": "بلوک چمن",
+  "block.dirt": "خاک",
+  "block.stone": "سنگ",
+  "block.cobblestone": "سنگ‌فرش",
+  "block.sand": "شن",
+  "block.snow": "بلوک برف",
+  "block.planks": "تخته‌های بلوط",
+  "block.netherrack": "سنگ ندر",
+  "block.end_stone": "سنگ اند"
 }

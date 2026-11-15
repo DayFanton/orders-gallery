@@ -4,6 +4,9 @@
   "language.codes": "tr",
   "language.title": "Dil",
   "language.auto": "Otomatik",
+  "language.search": "турецкий, türkçe, turkish, тур",
+  "language.search_placeholder": "Dil ara...",
+  "language.no_results": "Dil bulunamadı",
 
   "site.title": "Çiplyaş'ın Galerisi",
   "gallery.title": "Galeri",
@@ -72,6 +75,14 @@
   "bg.yellow": "Koyu sarı",
   "bg.blue": "Koyu mavi",
   "bg.custom": "Özel renk",
+  "bg.image.button": "Arka plan resmi",
+  "bg.image.title": "Arka plan resmi",
+  "bg.image.hint": "Bir resim seçin veya kendinizinkini yükleyin",
+  "bg.image.upload": "Kendi görselinizi yükleyin",
+  "bg.image.yours": "Görseliniz",
+  "bg.image.empty": "Görsel bulunamadı (backgrounds/ klasörü)",
+  "bg.image.error": "Bu görsel açılamadı",
+  "bg.image.close": "Kapat",
 
   "mobile.gallery": "📁 Galeri",
   "mobile.settings": "⚙️ Ayarlar",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Çiplyaş",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "YENİ",
+
+  "platform.title": "Platform",
+  "platform.enable": "Karakterin altına bir platform yerleştirin",
+  "platform.block": "Blok",
+  "platform.time": "Günün saati",
+  "block.grass": "Çimen Blok",
+  "block.dirt": "Toprak",
+  "block.stone": "Taş",
+  "block.cobblestone": "Kırıktaş",
+  "block.sand": "Kum",
+  "block.snow": "Kar Bloğu",
+  "block.planks": "Meşe kereste",
+  "block.netherrack": "Nether taşı",
+  "block.end_stone": "End taşı"
 }

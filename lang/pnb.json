@@ -4,6 +4,10 @@
   "language.codes": "pnb",
   "language.title": "بولی",
   "language.auto": "آٹو",
+  "language.search": "панджаби, پنجابی, panjabi, western punjabi, панджабский",
+  "language.search_placeholder": "بولی لبھو...",
+  "language.rtl": true,
+  "language.no_results": "کوئی بولی نہیں لبھی",
 
   "site.title": "تسیپلیاش دی گیلری",
   "gallery.title": "گیلری",
@@ -72,6 +76,14 @@
   "bg.yellow": "گوڑھا پیلا",
   "bg.blue": "گوڑھا نیلا",
   "bg.custom": "اپنا رنگ",
+  "bg.image.button": "پچھوکڑ دی تصویر",
+  "bg.image.title": "پچھوکڑ دی تصویر",
+  "bg.image.hint": "کوئی تصویر چنو یا اپنی اپ لوڈ کرو",
+  "bg.image.upload": "اپنی تصویر اپ لوڈ کرو",
+  "bg.image.yours": "آپ کی تصویر",
+  "bg.image.empty": "کوئی تصاویر نہیں ملیاں (backgrounds/ فولڈر)",
+  "bg.image.error": "ایس تصویر نوں کھولیا نہیں جا سکیا",
+  "bg.image.close": "بند کرو",
 
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ سیٹنگز",
@@ -272,5 +284,21 @@
   "person.Хуман": "ہیومن",
   "person.Цыпляш": "تسیپلیاش",
   "person.Эппоп": "ایپوپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "badge.new": "نواں",
+
+  "platform.title": "پلیٹ فارم",
+  "platform.enable": "کردار دے تھلے اک پلیٹ فارم رکھو",
+  "platform.block": "بلاک",
+  "platform.time": "دن دا ویلا",
+  "block.grass": "گھاس دا بلاک",
+  "block.dirt": "مٹی",
+  "block.stone": "پتھر",
+  "block.cobblestone": "کوبل سٹون",
+  "block.sand": "ریت",
+  "block.snow": "برف کا بلاک",
+  "block.planks": "بلوط دے تختے",
+  "block.netherrack": "نیدر ریک",
+  "block.end_stone": "اینڈ پتھر"
 }

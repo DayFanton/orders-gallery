@@ -4,6 +4,9 @@
   "language.codes": "es",
   "language.title": "Idioma",
   "language.auto": "Auto",
+  "language.search": "испанский, español, spanish, castilian, castellano, эспаньол, исп",
+  "language.search_placeholder": "Buscar idioma...",
+  "language.no_results": "No se encontraron idiomas",
 
   "site.title": "Galería de Tsyplyash",
   "gallery.title": "Galería",
@@ -72,6 +75,14 @@
   "bg.yellow": "Amarillo oscuro",
   "bg.blue": "Azul oscuro",
   "bg.custom": "Color personalizado",
+  "bg.image.button": "Imagen de fondo",
+  "bg.image.title": "Imagen de fondo",
+  "bg.image.hint": "Elige una imagen o sube la tuya",
+  "bg.image.upload": "Sube tu propia imagen",
+  "bg.image.yours": "Tu imagen",
+  "bg.image.empty": "No se encontraron imágenes (carpeta backgrounds/)",
+  "bg.image.error": "No se pudo abrir esta imagen",
+  "bg.image.close": "Cerrar",
 
   "mobile.gallery": "📁 Galería",
   "mobile.settings": "⚙️ Ajustes",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NUEVO",
+
+  "platform.title": "Plataforma",
+  "platform.enable": "Coloca una plataforma bajo el personaje",
+  "platform.block": "Bloque",
+  "platform.time": "Hora del día",
+  "block.grass": "Bloque de hierba",
+  "block.dirt": "Tierra",
+  "block.stone": "Piedra",
+  "block.cobblestone": "Adoquín",
+  "block.sand": "Arena",
+  "block.snow": "Bloque de nieve",
+  "block.planks": "Tablones de roble",
+  "block.netherrack": "Infiedra",
+  "block.end_stone": "Piedra de End"
 }

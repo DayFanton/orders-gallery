@@ -4,6 +4,9 @@
   "language.codes": "pcm",
   "language.title": "Language",
   "language.auto": "Auto",
+  "language.search": "нигерийский пиджин, nigerian pidgin, pidgin",
+  "language.search_placeholder": "Search language...",
+  "language.no_results": "No language dem find",
 
   "site.title": "Tsyplyash Gallery",
   "gallery.title": "Gallery",
@@ -72,6 +75,14 @@
   "bg.yellow": "Dark yellow",
   "bg.blue": "Dark blue",
   "bg.custom": "Your own color",
+  "bg.image.button": "Background image",
+  "bg.image.title": "Background image",
+  "bg.image.hint": "Choose a picture or upload your own",
+  "bg.image.upload": "Upload your own image",
+  "bg.image.yours": "Your image",
+  "bg.image.empty": "No image wey dem find (backgrounds/ folder)",
+  "bg.image.error": "Dem no fit open dis image",
+  "bg.image.close": "Close",
 
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Settings",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "NEW",
+
+  "platform.title": "Platform",
+  "platform.enable": "Put platform under the character",
+  "platform.block": "Block",
+  "platform.time": "Time of day",
+  "block.grass": "Grass block",
+  "block.dirt": "Dɔt",
+  "block.stone": "Stɔn",
+  "block.cobblestone": "Kobulston",
+  "block.sand": "Sand",
+  "block.snow": "Snow blok",
+  "block.planks": "Oak plank dem",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "End ston"
 }

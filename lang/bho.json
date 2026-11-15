@@ -4,6 +4,9 @@
   "language.codes": "bho",
   "language.title": "भाषा",
   "language.auto": "ऑटो",
+  "language.search": "бходжпури, भोजपुरी, bhojpuri",
+  "language.search_placeholder": "भाषा खोजीं...",
+  "language.no_results": "कवनो भाषा ना मिलल",
 
   "site.title": "त्सिप्लेश के गैलरी",
   "gallery.title": "गैलरी",
@@ -72,6 +75,14 @@
   "bg.yellow": "गहिरा पियर",
   "bg.blue": "गहिरा नीला",
   "bg.custom": "अपना मनपसंद रंग",
+  "bg.image.button": "पृष्ठभूमि के इमेज",
+  "bg.image.title": "पृष्ठभूमि के इमेज",
+  "bg.image.hint": "एगो तस्वीर चुनीं भा अपना ओरिएंटेशन के अपलोड करीं",
+  "bg.image.upload": "अपना खुद के इमेज अपलोड करीं",
+  "bg.image.yours": "आपके इमेज",
+  "bg.image.empty": "कवनो इमेज ना मिलल (backgrounds/ फोल्डर)",
+  "bg.image.error": "ई इमेज के खोलल ना जा सकल",
+  "bg.image.close": "बंद करीं",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
@@ -272,5 +283,21 @@
   "person.Хуман": "मानव",
   "person.Цыпляш": "त्सिप्लेश",
   "person.Эппоп": "एपोप",
-  "person.Яна": "याना"
+  "person.Яна": "याना",
+
+  "badge.new": "नया",
+
+  "platform.title": "प्लेटफार्म / मंच",
+  "platform.enable": "पात्र के नीचे एगो प्लेटफार्म रखीं",
+  "platform.block": "ब्लॉक",
+  "platform.time": "दिन के समय",
+  "block.grass": "घास के ब्लॉक",
+  "block.dirt": "माटी",
+  "block.stone": "पाथर",
+  "block.cobblestone": "पाथर",
+  "block.sand": "बालू",
+  "block.snow": "बर्फ के ब्लॉक",
+  "block.planks": "ओक के पाटा",
+  "block.netherrack": "नेदररैक",
+  "block.end_stone": "एंड स्टोन"
 }

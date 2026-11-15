@@ -4,6 +4,9 @@
   "language.codes": "hi",
   "language.title": "भाषा",
   "language.auto": "ऑटो",
+  "language.search": "хинди, हिन्दी, hindi, индийский",
+  "language.search_placeholder": "भाषा खोजें...",
+  "language.no_results": "कोई भाषा नहीं मिली",
 
   "site.title": "त्सयпляश की गैलरी",
   "gallery.title": "गैलरी",
@@ -72,6 +75,14 @@
   "bg.yellow": "गहरा पीला",
   "bg.blue": "गहरा नीला",
   "bg.custom": "कस्टम रंग",
+  "bg.image.button": "पृष्ठभूमि छवि",
+  "bg.image.title": "पृष्ठभूमि छवि",
+  "bg.image.hint": "एक चित्र चुनें या अपना खुद का अपलोड करें",
+  "bg.image.upload": "अपनी खुद की छवि अपलोड करें",
+  "bg.image.yours": "आपकी छवि",
+  "bg.image.empty": "कोई छवियां नहीं मिलीं (backgrounds/ फ़ोल्डर)",
+  "bg.image.error": "इस छवि को खोला नहीं जा सका",
+  "bg.image.close": "बंद करें",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग्स",
@@ -272,5 +283,21 @@
   "person.Хуман": "ह्यूमन",
   "person.Цыпляш": "त्सयпляш",
   "person.Эппоп": "एपोप",
-  "person.Яна": "याना"
+  "person.Яна": "याना",
+
+  "badge.new": "नया",
+
+  "platform.title": "प्लेटफ़ॉर्म / मंच",
+  "platform.enable": "पात्र के नीचे एक प्लेटफ़ॉर्म रखें",
+  "platform.block": "ब्लॉक",
+  "platform.time": "दिन का समय",
+  "block.grass": "घास का ब्लॉक",
+  "block.dirt": "मिट्टी",
+  "block.stone": "पत्थर",
+  "block.cobblestone": "कबलस्टोन",
+  "block.sand": "रेत",
+  "block.snow": "बर्फ का ब्लॉक",
+  "block.planks": "ओक के तख्ते",
+  "block.netherrack": "नेदररैक",
+  "block.end_stone": "एंड स्टोन"
 }

@@ -4,6 +4,9 @@
   "language.codes": "uk,ua",
   "language.title": "Мова",
   "language.auto": "Авто",
+  "language.search": "украинский, українська, ukrainian, україна, укр",
+  "language.search_placeholder": "Пошук мови...",
+  "language.no_results": "Мови не знайдено",
 
   "site.title": "Галерея Ципляша",
   "gallery.title": "Галерея",
@@ -72,6 +75,14 @@
   "bg.yellow": "Темно-жовтий",
   "bg.blue": "Темно-синій",
   "bg.custom": "Власний колір",
+  "bg.image.button": "Фонове зображення",
+  "bg.image.title": "Фонове зображення",
+  "bg.image.hint": "Виберіть зображення або завантажте своє",
+  "bg.image.upload": "Завантажте власне зображення",
+  "bg.image.yours": "Ваше зображення",
+  "bg.image.empty": "Зображень не знайдено (папка backgrounds/)",
+  "bg.image.error": "Не вдалося відкрити це зображення",
+  "bg.image.close": "Закрити",
 
   "mobile.gallery": "📁 Галерея",
   "mobile.settings": "⚙️ Налаштування",
@@ -272,5 +283,21 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Ципляш",
   "person.Эппоп": "Еппоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "badge.new": "НОВЕ",
+
+  "platform.title": "Платформа",
+  "platform.enable": "Постав платформу під персонажа",
+  "platform.block": "Блок",
+  "platform.time": "Час доби",
+  "block.grass": "Блок трави",
+  "block.dirt": "Земля",
+  "block.stone": "Камінь",
+  "block.cobblestone": "Бруківка",
+  "block.sand": "Пісок",
+  "block.snow": "Сніговий блок",
+  "block.planks": "Дубові дошки",
+  "block.netherrack": "Незеррак",
+  "block.end_stone": "Камінь Краю"
 }

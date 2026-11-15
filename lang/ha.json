@@ -4,6 +4,9 @@
   "language.codes": "ha",
   "language.title": "Harshe",
   "language.auto": "Ta atomatik",
+  "language.search": "хауса, harshen hausa, hausa",
+  "language.search_placeholder": "Nemi harshe...",
+  "language.no_results": "Ba a sami harsuna ba",
 
   "site.title": "Wurin Nuni na Tsipliyash",
   "gallery.title": "Wurin Nuni",
@@ -72,6 +75,14 @@
   "bg.yellow": "Rawaya mai duhu",
   "bg.blue": "Shuɗi mai duhu",
   "bg.custom": "Launin kanka",
+  "bg.image.button": "Hoto na baya",
+  "bg.image.title": "Hoto na baya",
+  "bg.image.hint": "Zaɓi hoto ko loda naka",
+  "bg.image.upload": "Sanya hoton ku na kanku",
+  "bg.image.yours": "Hoton ku",
+  "bg.image.empty": "Ba a samun hotuna ba (fayil backgrounds/)",
+  "bg.image.error": "Ba a iya buɗe wannan hoton ba",
+  "bg.image.close": "Rufe",
 
   "mobile.gallery": "📁 Wurin Nuni",
   "mobile.settings": "⚙️ Saituna",
@@ -272,5 +283,21 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsipliyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "badge.new": "SABO",
+
+  "platform.title": "Dandamali",
+  "platform.enable": "Sanya dandamali a karkashin hali",
+  "platform.block": "Bloku",
+  "platform.time": "Lokacin rana",
+  "block.grass": "Blokin Ciyawa",
+  "block.dirt": "Ƙasa",
+  "block.stone": "Dutse",
+  "block.cobblestone": "Dutse",
+  "block.sand": "Yashi",
+  "block.snow": "Blokin dusar ƙanƙara",
+  "block.planks": "Allon oak",
+  "block.netherrack": "Netherrack",
+  "block.end_stone": "Dutsen End"
 }
