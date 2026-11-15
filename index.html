@@ -38,7 +38,7 @@
         #sidebar {
             width: 360px;
             background-color: var(--bg-sidebar);
-            border-right: 1px solid var(--border);
+            border-inline-end: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
@@ -97,7 +97,7 @@
         .dropdown-menu {
             position: absolute;
             top: calc(100% + 6px);
-            right: 0;
+            inset-inline-end: 0;
             background: var(--bg-sidebar);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -311,7 +311,7 @@
             font-size: 0.85rem;
             line-height: 1;
             transition: color 0.15s;
-            margin-left: 1px;
+            margin-inline-start: 1px;
         }
         .search-tag .tag-close:hover {
             color: #ef4444;
@@ -355,11 +355,11 @@
             height: 32px !important;
             border-radius: 4px;
             background: #27272a;
-            margin-right: 12px;
+            margin-inline-end: 12px;
             flex-shrink: 0;
         }
-        .skin-list.view-list .skin-name { text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; font-size: 0.85rem; padding-right: 20px; }
-        .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-left: auto; margin-right: 16px; flex-shrink: 0; }
+        .skin-list.view-list .skin-name { text-align: start; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1; font-size: 0.85rem; padding-inline-end: 20px; }
+        .skin-list.view-list .skin-date { font-size: 0.75rem; color: var(--text-muted); display: inline !important; margin-inline-start: auto; margin-inline-end: 16px; flex-shrink: 0; }
 
         .skin-list.view-grid {
             display: grid !important;
@@ -405,15 +405,15 @@
             white-space: nowrap;
             width: 100% !important;
             display: block !important;
-            padding-left: 2px;
-            padding-right: 10px;
+            padding-inline-start: 2px;
+            padding-inline-end: 10px;
         }
         .skin-list.view-grid .skin-date { display: none !important; }
 
         .model-badge {
             position: absolute;
             bottom: 6px;
-            right: 6px;
+            inset-inline-end: 6px;
             width: 14px;
             height: 14px;
             border-radius: 3px;
@@ -455,8 +455,8 @@
         }
         .variation-badge svg { width: 9px; height: 9px; display: block; pointer-events: none; }
         .variation-badge:hover { transform: scale(1.4); box-shadow: 0 0 6px rgba(255, 240, 1, 0.5); }
-        .skin-list.view-grid .variation-badge { bottom: 6px; right: 24px; }
-        .skin-list.view-list .variation-badge { bottom: 24px; right: 6px; }
+        .skin-list.view-grid .variation-badge { bottom: 6px; inset-inline-end: 24px; }
+        .skin-list.view-list .variation-badge { bottom: 24px; inset-inline-end: 6px; }
 
         .meta-customers {
             display: flex;
@@ -469,12 +469,12 @@
         }
         .meta-customers .meta-value { max-width: 100%; }
         .customer-item { display: inline-flex; align-items: center; max-width: 100%; }
-        .customer-sep { color: var(--text-muted); font-size: 0.85rem; margin: 0 6px 0 1px; }
+        .customer-sep { color: var(--text-muted); font-size: 0.85rem; margin: 0; margin-inline-start: 1px; margin-inline-end: 6px; }
 
         .new-badge {
             position: absolute;
             top: 6px;
-            left: 6px;
+            inset-inline-start: 6px;
             background-color: #ef4444;
             color: #ffffff;
             font-size: 0.6rem;
@@ -578,8 +578,8 @@
         #variations_container {
             position: absolute;
             top: 20px;
-            right: 20px; 
-            left: auto;
+            inset-inline-end: 20px;
+            inset-inline-start: auto;
             transform: none;
             display: flex;
             gap: 8px;
@@ -631,7 +631,7 @@
         #controls_panel {
             width: 300px;
             background-color: var(--bg-sidebar);
-            border-left: 1px solid var(--border);
+            border-inline-start: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
@@ -977,7 +977,7 @@
         #lang_container {
             position: absolute;
             top: 20px;
-            left: 20px;
+            inset-inline-start: 20px;
             z-index: 6;
             background: rgba(19, 19, 22, 0.85);
             backdrop-filter: blur(10px);
@@ -1002,7 +1002,7 @@
         .lang-btn:hover { color: var(--text-main); border-color: var(--text-muted); }
         .lang-btn.active { color: var(--accent); border-color: var(--accent); }
         .lang-btn .flag { font-size: 1.1rem; }
-        #lang_container .dropdown-menu { top: calc(100% + 6px); left: 0; right: auto; min-width: 190px; }
+        #lang_container .dropdown-menu { top: calc(100% + 6px); inset-inline-start: 0; inset-inline-end: auto; min-width: 190px; }
         .dropdown-item.disabled { opacity: 0.7; cursor: default; pointer-events: none; font-size: 0.72rem; white-space: normal; }
         @media (min-width: 901px) {
             #viewer_zone #variations_container { max-width: calc(100% - 120px); }
@@ -1019,14 +1019,14 @@
                 border-radius: 50%;
                 align-self: center;
             }
-            #langMenuMobile { top: auto; bottom: calc(100% + 10px); left: auto; right: 0; min-width: 190px; }
+            #langMenuMobile { top: auto; bottom: calc(100% + 10px); inset-inline-start: auto; inset-inline-end: 0; min-width: 190px; }
         }
 
         .modal-content { position: relative; }
-        #modalLangContainer { position: absolute; top: 14px; right: 14px; text-align: left; }
+        #modalLangContainer { position: absolute; top: 14px; inset-inline-end: 14px; text-align: start; }
         #modalLangContainer .lang-btn { padding: 6px 10px; }
-        #modalLangContainer .dropdown-menu { top: calc(100% + 6px); right: 0; left: auto; min-width: 200px; }
-        .lang-menu { max-height: 60vh; overflow-y: auto; }
+        #modalLangContainer .dropdown-menu { top: calc(100% + 6px); inset-inline-end: 0; inset-inline-start: auto; min-width: 200px; }
+        /* высота списка языков задаётся у .lang-list (см. блок «Версия 1.7» ниже) */
 
         /* ---- Эмоции ---- */
         .emote-btn { width: 100%; margin-top: 12px; padding: 13px 14px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.3px; cursor: pointer;
@@ -1050,7 +1050,7 @@
             background: transparent; border: 1px solid var(--border); border-radius: 6px; }
         .emote-close:hover { color: #fff; border-color: var(--text-muted); }
         .emote-hint { font-size: 0.8rem; color: var(--text-muted); }
-        .emote-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; overflow-y: auto; min-height: 60px; padding-right: 4px; color: var(--text-muted); font-size: 0.85rem; }
+        .emote-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; overflow-y: auto; min-height: 60px; padding-inline-end: 4px; color: var(--text-muted); font-size: 0.85rem; }
         .emote-card { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px; cursor: pointer; text-align: center; font-size: 0.78rem; color: #ddd;
             background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 8px; transition: all 0.15s ease; }
         .emote-card:hover { border-color: var(--accent); background: rgba(255, 240, 1, 0.08); }
@@ -1059,6 +1059,45 @@
         .emote-test { width: 100%; padding: 12px; font-size: 0.9rem; font-weight: 600; cursor: pointer; color: var(--accent);
             background: transparent; border: 1px dashed var(--accent); border-radius: 6px; transition: all 0.2s ease; }
         .emote-test:hover { background: rgba(255, 240, 1, 0.1); }
+
+        /* ================= Версия 1.7 ================= */
+        /* Зеркальный интерфейс (RTL): разрядка букв ломает арабскую вязь, поэтому для RTL она отключается */
+        [dir="rtl"] .section-title, [dir="rtl"] .author-group-header, [dir="rtl"] .modal-content h3, [dir="rtl"] .emote-head h3,
+        [dir="rtl"] .new-badge, [dir="rtl"] .emote-btn { letter-spacing: 0; }
+        .search-tag .tag-prefix { unicode-bidi: isolate; direction: ltr; }
+
+        /* Поиск по языкам */
+        .lang-menu { min-width: 230px; }
+        .lang-search-wrap { padding: 2px 2px 6px; }
+        .lang-search { width: 100%; box-sizing: border-box; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-main);
+            border-radius: 6px; padding: 7px 10px; font-size: 0.8rem; outline: none; -webkit-user-select: text; user-select: text; }
+        .lang-search:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15); }
+        .lang-list { display: flex; flex-direction: column; gap: 2px; max-height: min(52vh, 340px); overflow-y: auto; }
+        .lang-empty { display: none; padding: 10px; font-size: 0.78rem; color: var(--text-muted); text-align: center; }
+
+        /* Картинка на фон */
+        .bg-image-btn { display: flex; align-items: center; gap: 10px; width: 100%; margin-top: 10px; padding: 8px 10px; font-size: 0.82rem; font-weight: 600;
+            cursor: pointer; text-align: start; color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.2s; }
+        .bg-image-btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
+        .bg-image-btn.active { border-color: var(--accent); color: var(--accent); }
+        .bg-image-thumb { flex: 0 0 auto; width: 36px; height: 22px; border-radius: 4px; background: #27272a center / cover no-repeat;
+            display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+        .bgimg-list { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+        .bgimg-list .emote-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #222; }
+        .emote-card.active { border-color: var(--accent); background: rgba(255, 240, 1, 0.08); }
+
+        /* Платформа и время суток */
+        .platform-label { margin: 14px 0 6px; font-size: 0.8rem; color: var(--text-muted); }
+        .block-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+        .block-btn { aspect-ratio: 1 / 1; padding: 0; overflow: hidden; cursor: pointer; background: var(--bg-card); border: 2px solid transparent; border-radius: 6px; transition: 0.2s; }
+        .block-btn:hover { transform: scale(1.05); }
+        .block-btn.active { border-color: #fff; }
+        .block-btn canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+        #time_val { unicode-bidi: isolate; direction: ltr; }
+        .time-slider { -webkit-appearance: none; appearance: none; direction: ltr; width: 100%; height: 8px; border-radius: 4px; outline: none; cursor: pointer;
+            background: linear-gradient(90deg, #0a0f2c 0%, #0a0f2c 19%, #e8894a 25%, #79b4ff 36%, #79b4ff 64%, #e8894a 75%, #0a0f2c 81%, #0a0f2c 100%); }
+        .time-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 2px solid #111; }
+        .time-slider::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid #111; }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1120,7 +1159,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.6.5</div>
+            <div class="site-version">v1.7.0</div>
         </div>
     </div>
 
@@ -1219,11 +1258,31 @@
                     <span>Отображать элитры</span>
                 </label>
             </div>
+
+            <div class="control-group" id="platformGroup">
+                <h3>Платформа</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="platform_toggle">
+                    <span>Поставить платформу под персонажем</span>
+                </label>
+                <div id="platformOptions" style="display:none;">
+                    <div class="platform-label" id="lbl_block">Блок</div>
+                    <div class="block-grid" id="blockGrid"></div>
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <span id="lbl_time">Время суток</span>
+                            <span id="time_val">12:00</span>
+                        </div>
+                        <input type="range" id="time_slider" class="time-slider" min="0" max="24" step="0.25" value="12">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="bg-selector-group">
             <span class="section-title" style="padding:0;">Цвет фона</span>
             <div class="bg-grid" id="bgGrid"></div>
+            <button id="btnBgImage" class="bg-image-btn" type="button"><span id="bgImageThumb" class="bg-image-thumb">🖼</span><span class="bg-image-label">Картинка на фон</span></button>
         </div>
     </div>
 
@@ -1271,6 +1330,20 @@
         </div>
     </div>
 
+    <div id="bgImageModal" class="emote-overlay">
+        <div class="emote-panel">
+            <div class="emote-head">
+                <h3 id="bgImageTitle">Картинка на фон</h3>
+                <button id="btnBgImageClose" class="emote-close" type="button" title="Закрыть">&times;</button>
+            </div>
+            <div id="bgImageHint" class="emote-hint">Выберите картинку или загрузите свою</div>
+            <div id="bgImageList" class="emote-list bgimg-list"></div>
+            <div id="bgImageMsg" class="emote-msg"></div>
+            <button id="btnBgUpload" class="emote-test" type="button">Загрузить свою картинку</button>
+            <input type="file" id="bgImageFile" accept="image/*" style="display:none">
+        </div>
+    </div>
+
     <script>
         let skinViewer = null;
         let globalSkins = [];
@@ -1299,15 +1372,16 @@
         let backEquipmentRequestId = 0;
 
         let currentViewMode = 'list';
+        let currentBgKey = 'dark';      // фон: см. Backdrop (в ссылке - параметр bg)
 
         const bgPresets = [
-            { name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
-            { name: 'Светлый', value: 'radial-gradient(circle at center, #cbd5e1 0%, #94a3b8 100%)', color: '#94a3b8' },
-            { name: 'Тёмно-фиолетовый', value: 'radial-gradient(circle at center, #2e1065 0%, #0f052d 100%)', color: '#2e1065' },
-            { name: 'Тёмно-красный', value: 'radial-gradient(circle at center, #4c0519 0%, #18000a 100%)', color: '#4c0519' },
-            { name: 'Тёмно-розовый', value: 'radial-gradient(circle at center, #500732 0%, #1c0010 100%)', color: '#500732' },
-            { name: 'Тёмно-жёлтый', value: 'radial-gradient(circle at center, #ba8e23 0%, #544211 100%)', color: '#ba8e23' },
-            { name: 'Тёмно-синий', value: 'radial-gradient(circle at center, #172554 0%, #050b24 100%)', color: '#172554' }
+            { id: 'dark', name: 'Тёмный', value: 'radial-gradient(circle at center, #1c1c24 0%, #0b0b0d 100%)', color: '#1c1c24' },
+            { id: 'light', name: 'Светлый', value: 'radial-gradient(circle at center, #cbd5e1 0%, #94a3b8 100%)', color: '#94a3b8' },
+            { id: 'purple', name: 'Тёмно-фиолетовый', value: 'radial-gradient(circle at center, #2e1065 0%, #0f052d 100%)', color: '#2e1065' },
+            { id: 'red', name: 'Тёмно-красный', value: 'radial-gradient(circle at center, #4c0519 0%, #18000a 100%)', color: '#4c0519' },
+            { id: 'pink', name: 'Тёмно-розовый', value: 'radial-gradient(circle at center, #500732 0%, #1c0010 100%)', color: '#500732' },
+            { id: 'yellow', name: 'Тёмно-жёлтый', value: 'radial-gradient(circle at center, #ba8e23 0%, #544211 100%)', color: '#ba8e23' },
+            { id: 'blue', name: 'Тёмно-синий', value: 'radial-gradient(circle at center, #172554 0%, #050b24 100%)', color: '#172554' }
         ];
 
         document.addEventListener('contextmenu', e => e.preventDefault());
@@ -1396,7 +1470,32 @@
             "emote.empty": "No emotes found (folder emotes/)",
             "emote.error": "Could not read this emote file",
             "emote.playing": "Playing: %s",
-            "emote.close": "Close"
+            "emote.close": "Close",
+            "badge.new": "NEW",
+            "language.search_placeholder": "Search language...",
+            "language.no_results": "No languages found",
+            "language.search": "english, английский, englisch, anglais, inglés",
+            "bg.image.button": "Background image",
+            "bg.image.title": "Background image",
+            "bg.image.hint": "Choose a picture or upload your own",
+            "bg.image.upload": "Upload your own image",
+            "bg.image.yours": "Your image",
+            "bg.image.empty": "No images found (folder backgrounds/)",
+            "bg.image.error": "Could not open this image",
+            "bg.image.close": "Close",
+            "platform.title": "Platform",
+            "platform.enable": "Place a platform under the character",
+            "platform.block": "Block",
+            "platform.time": "Time of day",
+            "block.grass": "Grass block",
+            "block.dirt": "Dirt",
+            "block.stone": "Stone",
+            "block.cobblestone": "Cobblestone",
+            "block.sand": "Sand",
+            "block.snow": "Snow block",
+            "block.planks": "Oak planks",
+            "block.netherrack": "Netherrack",
+            "block.end_stone": "End stone"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
@@ -1444,6 +1543,15 @@
             ['#emoteHint', 'emote.hint'],
             ['#btnEmoteTest', 'emote.test'],
             ['#btnEmoteClose', 'emote.close', 'title'],
+            ['#btnBgImage .bg-image-label', 'bg.image.button'],
+            ['#bgImageTitle', 'bg.image.title'],
+            ['#bgImageHint', 'bg.image.hint'],
+            ['#btnBgUpload', 'bg.image.upload'],
+            ['#btnBgImageClose', 'bg.image.close', 'title'],
+            ['#platformGroup > h3', 'platform.title'],
+            ['#platform_toggle + span', 'platform.enable'],
+            ['#lbl_block', 'platform.block'],
+            ['#lbl_time', 'platform.time'],
             ['#mobileBtnSidebar', 'mobile.gallery'],
             ['#mobileBtnControls', 'mobile.settings'],
             ['#agreementModal h3', 'modal.title'],
@@ -1552,12 +1660,14 @@
                     flag: l.data['language.flag'] || '🌐',
                     codes: [l.code, ...String(l.data['language.codes'] || '').split(',')].map(c => c.trim().toLowerCase()).filter(Boolean)
                 }));
+                i18nLangs.forEach(l => { l.aliases = buildLangAliases(l); });
                 i18nFilesMissing = i18nLangs.length === 0;
 
                 let en = i18nLangs.find(l => l.code === 'en');
                 if (!en) {
                     console.warn('Не найден lang/en.json - используется встроенный английский. Папка lang должна лежать рядом с index.html.');
                     en = { code: 'en', data: I18N_BUILTIN, name: 'English', flag: '🇬🇧', codes: ['en'] };
+                    en.aliases = buildLangAliases(en);
                     i18nLangs.unshift(en);
                 }
                 i18nBase = en.data;
@@ -1580,6 +1690,65 @@
             document.body.classList.remove('i18n-pending');
         }
 
+        /* ---------- Поиск по языкам ----------
+           Для каждого языка ищется по: коду, language.codes, language.name и по списку из ключа language.search
+           (через запятую: название на разных языках, сокращения, как люди это пишут - "russian, русский, рус, rusa").
+           Регистр, акценты и ё/е не важны. */
+        function normSearch(s) {
+            return String(s || '').toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0591-\u05c7\u200b-\u200f]/g, '')
+                .replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/ؤ/g, 'و').replace(/ئ/g, 'ي').replace(/ک/g, 'ك').replace(/ی/g, 'ي')
+                .replace(/ı/g, 'i').replace(/[đð]/g, 'd').replace(/ø/g, 'o').replace(/ł/g, 'l').replace(/æ/g, 'ae').replace(/œ/g, 'oe').replace(/ß/g, 'ss').replace(/þ/g, 'th')
+                .replace(/\s+/g, ' ').trim();
+        }
+        function buildLangAliases(l) {
+            const extra = String((l.data && l.data['language.search']) || '').split(/[,;\n|]+/);
+            return [...new Set([l.code, ...l.codes, l.name, ...extra].map(normSearch).filter(Boolean))];
+        }
+        // 0 - точное совпадение, 1 - начало, 2 - начало слова, 3 - где-то внутри; null - не подходит
+        function scoreLang(aliases, q) {
+            let best = null;
+            for (const a of aliases) {
+                let sc = null;
+                if (a === q) sc = 0;
+                else if (a.startsWith(q)) sc = 1;
+                else if (a.split(/[\s\-_/]+/).some(w => w.startsWith(q))) sc = 2;
+                else if (a.includes(q)) sc = 3;
+                if (sc !== null && (best === null || sc < best)) best = sc;
+            }
+            return best;
+        }
+        function filterLangMenu(menu) {
+            const rows = menu._rows || [];
+            const q = normSearch(menu._search ? menu._search.value : '');
+            let shown = 0;
+            if (!q) {
+                rows.forEach(r => { r.el.style.display = ''; menu._list.appendChild(r.el); });
+                shown = rows.length;
+            } else {
+                const hits = [];
+                rows.forEach((r, i) => {
+                    const sc = r.auto ? null : scoreLang(r.aliases, q);
+                    if (sc === null) r.el.style.display = 'none';
+                    else hits.push({ r, sc, i });
+                });
+                hits.sort((a, b) => a.sc - b.sc || a.i - b.i);
+                hits.forEach(h => { h.r.el.style.display = ''; menu._list.appendChild(h.r.el); });
+                shown = hits.length;
+                menu._list.scrollTop = 0;
+            }
+            if (menu._empty) menu._empty.style.display = shown ? 'none' : 'block';
+        }
+        function resetLangSearch(menu) {
+            if (menu && menu._search && menu._search.value) { menu._search.value = ''; filterLangMenu(menu); }
+        }
+
+        // language.rtl: true в файле языка - интерфейс зеркалится (арабский, иврит, персидский...). Нет строки - слева направо.
+        function langIsRtl(data) {
+            const v = data && data['language.rtl'];
+            return v === true || (typeof v === 'string' && v.trim().toLowerCase() === 'true');
+        }
+
         // explicitTag = null - вернуть автоопределение
         function setLanguage(explicitTag, sync = true) {
             const r = resolveLanguage(explicitTag);
@@ -1598,6 +1767,8 @@
                 const active = el.dataset.lang === 'auto' ? langExplicit === null : el.dataset.lang === langExplicit;
                 el.classList.toggle('active', active);
             });
+            document.querySelectorAll('.lang-search').forEach(el => { el.placeholder = t('language.search_placeholder'); });
+            document.querySelectorAll('.lang-empty').forEach(el => { el.textContent = t('language.no_results'); });
             document.querySelectorAll('.lang-auto-label').forEach(el => {
                 el.textContent = t('language.auto') + (detected ? ` (${detected.name})` : '');
                 if (el.parentElement) el.parentElement.title = getLangSignalsText();
@@ -1606,6 +1777,7 @@
 
         function applyI18n(rerender = true) {
             document.documentElement.lang = currentLang;
+            document.documentElement.dir = langIsRtl(i18nDict) ? 'rtl' : 'ltr';
             document.title = t('site.title');
             I18N_STATIC.forEach(([sel, key, attr]) => {
                 try {
@@ -1621,6 +1793,8 @@
             document.querySelectorAll('[data-orig]').forEach(b => { b.textContent = t('variation.original'); });
             document.querySelectorAll('[data-var-file]').forEach(b => { b.textContent = ownText('variation.name.' + b.dataset.varFile, b.dataset.varName); });
             updateLangButtons();
+            Backdrop.refresh();
+            Scene3D.refreshUi();
             if (typeof refreshEmoteUi === 'function') refreshEmoteUi();
             if (rerender) {
                 renderTagsDOM();
@@ -1633,7 +1807,7 @@
             LANG_UIS.forEach(([triggerId, menuId]) => {
                 const trigger = document.getElementById(triggerId);
                 const menu = document.getElementById(menuId);
-                if (menu) menu.classList.remove('show');
+                if (menu) { menu.classList.remove('show'); resetLangSearch(menu); }
                 if (trigger) trigger.classList.remove('active');
             });
         }
@@ -1646,6 +1820,22 @@
 
                 menu.innerHTML = '';
 
+                const searchWrap = document.createElement('div');
+                searchWrap.className = 'lang-search-wrap';
+                const search = document.createElement('input');
+                search.type = 'text';
+                search.className = 'lang-search';
+                search.autocomplete = 'off';
+                search.spellcheck = false;
+                searchWrap.appendChild(search);
+                const list = document.createElement('div');
+                list.className = 'lang-list';
+                const empty = document.createElement('div');
+                empty.className = 'lang-empty';
+                menu.append(searchWrap, list, empty);
+
+                const rows = [];
+
                 const autoRow = document.createElement('div');
                 autoRow.classList.add('dropdown-item');
                 autoRow.dataset.lang = 'auto';
@@ -1655,7 +1845,7 @@
                     closeLangMenu();
                     setLanguage(null);
                 };
-                menu.appendChild(autoRow);
+                rows.push({ el: autoRow, auto: true });
 
                 i18nLangs.forEach(l => {
                     const item = document.createElement('div');
@@ -1669,15 +1859,33 @@
                         closeLangMenu();
                         setLanguage(l.code);
                     };
-                    menu.appendChild(item);
+                    rows.push({ el: item, aliases: l.aliases || [] });
                 });
+                rows.forEach(r => list.appendChild(r.el));
 
                 if (i18nFilesMissing) {
                     const hint = document.createElement('div');
                     hint.classList.add('dropdown-item', 'disabled');
                     hint.textContent = '⚠ ' + t('language.missing');
-                    menu.appendChild(hint);
+                    list.appendChild(hint);
                 }
+
+                menu._rows = rows;
+                menu._list = list;
+                menu._empty = empty;
+                menu._search = search;
+                menu.addEventListener('click', (e) => e.stopPropagation());   // клик по полю поиска / полосе прокрутки не закрывает меню
+                search.addEventListener('input', () => filterLangMenu(menu));
+                search.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {                                  // Enter - выбрать лучший найденный язык
+                        e.preventDefault();
+                        if (!search.value.trim()) return;
+                        const first = rows.find(r => !r.auto && r.el.style.display !== 'none');
+                        if (first) first.el.click();
+                    } else if (e.key === 'Escape') {
+                        closeLangMenu();
+                    }
+                });
 
                 trigger.onclick = (e) => {
                     e.stopPropagation();
@@ -1688,6 +1896,9 @@
                     if (!wasOpen) {
                         menu.classList.add('show');
                         trigger.classList.add('active');
+                        const act = list.querySelector('.dropdown-item.active');   // показать выбранный язык, даже если он где-то в конце списка
+                        if (act) list.scrollTop = act.getBoundingClientRect().top - list.getBoundingClientRect().top + list.scrollTop - list.clientHeight / 2;
+                        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) search.focus();   // на телефоне клавиатуру сама не открываем
                     }
                 };
             });
@@ -1855,7 +2066,11 @@
                 sort: SORT_FIELDS.includes(p.get('sort')) ? p.get('sort') : 'default',
                 order: p.get('order') === 'asc' ? 'asc' : 'desc',
                 lang: p.get('lang'),
-                cape: p.get('cape')
+                cape: p.get('cape'),
+                bg: p.get('bg'),
+                elytra: p.get('elytra') === '1',
+                plat: p.get('plat'),
+                time: p.get('time')
             };
         }
 
@@ -1869,6 +2084,13 @@
             if (currentSortField !== 'default') p.set('sort', currentSortField);
             if (currentSortOrder !== 'desc') p.set('order', currentSortOrder);
             if (langExplicit) p.set('lang', langExplicit);
+            if (currentBgKey && currentBgKey !== 'dark') p.set('bg', currentBgKey);
+            if (elytraEnabled) p.set('elytra', '1');
+            const pl = Scene3D.state();
+            if (pl.on) {
+                p.set('plat', pl.block);
+                if (Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
+            }
             const q = p.toString();
             return window.location.pathname + (q ? '?' + q : '');
         }
@@ -1878,6 +2100,13 @@
             if (url !== window.location.pathname + window.location.search) {
                 window.history.replaceState({}, '', url);
             }
+        }
+
+        // Для частых событий (ползунки, выбор цвета): браузеры ограничивают число вызовов history API
+        let syncUrlTimer = 0;
+        function syncUrlStateSoon() {
+            clearTimeout(syncUrlTimer);
+            syncUrlTimer = setTimeout(syncUrlState, 250);
         }
 
         function pushStateUrl(skinFilename) {
@@ -1925,6 +2154,14 @@
 
             const wantedLang = st.lang ? findLang(st.lang) : null;
             if ((wantedLang ? wantedLang.code : null) !== langExplicit) setLanguage(wantedLang ? wantedLang.code : null, false);
+
+            Backdrop.apply(st.bg, false);
+            if (st.elytra !== elytraEnabled) {
+                elytraEnabled = st.elytra;
+                document.getElementById('elytra_toggle').checked = elytraEnabled;
+                updateBackEquipment();
+            }
+            Scene3D.applyState(st.plat, st.time);
 
             const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
             if (wantedCape !== currentCapeFilename) {
@@ -2075,6 +2312,7 @@
                 if (requestId !== backEquipmentRequestId) return;
 
                 await skinViewer.loadCape(textureUrl, { backEquipment: elytraEnabled ? 'elytra' : 'cape' });
+                Scene3D.refreshCasters();
             } catch (err) {
                 console.error("Ошибка при обновлении спины персонажа:", err);
             }
@@ -2233,7 +2471,7 @@
                 item.setAttribute('title', fullName);
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
-                const newBadgeHtml = cape.new ? `<div class="new-badge">NEW</div>` : '';
+                const newBadgeHtml = cape.new ? `<div class="new-badge">${t('badge.new')}</div>` : '';
 
                 item.innerHTML = `
                     ${newBadgeHtml}
@@ -2349,45 +2587,7 @@
             }
         }
 
-        function buildBackgroundSelector() {
-            const grid = document.getElementById('bgGrid');
-            grid.innerHTML = ''; 
-            
-            bgPresets.forEach((bg, idx) => {
-                const dot = document.createElement('div');
-                dot.classList.add('bg-dot');
-                if (idx === 0) dot.classList.add('active');
-                dot.style.backgroundColor = bg.color;
-                dot.title = t(BG_KEYS[idx]);
-                
-                dot.onclick = () => {
-                    document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                    dot.classList.add('active');
-                    document.getElementById('viewer_zone').style.background = bg.value;
-                };
-                grid.appendChild(dot);
-            });
-
-            const customDot = document.createElement('div');
-            customDot.classList.add('bg-dot', 'custom-color-btn');
-            customDot.title = t('bg.custom');
-
-            const colorInput = document.createElement('input');
-            colorInput.type = 'color';
-            colorInput.value = '#1c1c24'; 
-
-            colorInput.addEventListener('input', (e) => {
-                document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
-                customDot.classList.add('active');
-                
-                const chosenColor = e.target.value;
-                document.getElementById('viewer_zone').style.background = chosenColor;
-                customDot.style.backgroundColor = chosenColor;
-            });
-
-            customDot.appendChild(colorInput);
-            grid.appendChild(customDot);
-        }
+        function buildBackgroundSelector() { Backdrop.buildGrid(); }
 
         async function drawSkinAvatar(filename, canvasElement) {
             try {
@@ -2404,6 +2604,708 @@
                 console.log("Не удалось загрузить миниатюру");
             }
         }
+
+        /* ---------- Фон: цвета, картинки из папки backgrounds/ и своя картинка ----------
+           Состояние фона лежит в ссылке параметром bg:
+             bg=purple            - готовый цвет (dark / light / purple / red / pink / yellow / blue); тёмный по умолчанию в ссылку не пишется
+             bg=c-ff8800          - свой цвет
+             bg=i-day.jpg         - картинка из папки backgrounds/ (список - backgrounds/backgrounds.json, как у эмоций)
+             bg=upload            - своя загруженная картинка. Файл с компьютера в ссылку не положишь, поэтому он хранится
+                                    в этом браузере (IndexedDB); в чужом браузере по такой ссылке откроется обычный фон. */
+        const Backdrop = (() => {
+            const $ = (id) => document.getElementById(id);
+            const SAFE_FILE = /^[A-Za-z0-9][A-Za-z0-9_.\- ]{0,119}$/;      // имя файла из ссылки: без путей и спецсимволов
+            const MAX_UPLOAD = 25 * 1024 * 1024;
+            let manifest = null;
+            let uploadUrl = null;
+            let customDot = null, colorInput = null;
+
+            const baseName = (f) => f.replace(/\.[^.]+$/, '');
+            const prettify = (f) => baseName(f).replace(/_/g, ' ').trim();
+            const titleFor = (file) => ownText('bgimg.name.' + baseName(file), prettify(file));
+
+            function normalizeKey(raw) {
+                const s = String(raw || '').trim();
+                if (!s) return 'dark';
+                if (bgPresets.some(p => p.id === s)) return s;
+                let m = /^c-([0-9a-f]{6})$/i.exec(s);
+                if (m) return 'c-' + m[1].toLowerCase();
+                m = /^i-(.+)$/.exec(s);
+                if (m && SAFE_FILE.test(m[1]) && !m[1].includes('..')) return 'i-' + m[1];
+                if (s === 'upload') return 'upload';
+                return 'dark';
+            }
+
+            function cssFor(key) {
+                if (key.startsWith('c-')) return '#' + key.slice(2);
+                if (key.startsWith('i-')) return `#0b0b0d center / cover no-repeat url("backgrounds/${encodeURIComponent(key.slice(2))}")`;
+                if (key === 'upload' && uploadUrl) return `#0b0b0d center / cover no-repeat url("${uploadUrl}")`;
+                const p = bgPresets.find(x => x.id === key);
+                return (p || bgPresets[0]).value;
+            }
+
+            function imageSrcFor(key) {
+                if (key.startsWith('i-')) return 'backgrounds/' + encodeURIComponent(key.slice(2));
+                if (key === 'upload') return uploadUrl;
+                return null;
+            }
+
+            function updateUi() {
+                const key = currentBgKey;
+                const dots = document.querySelectorAll('#bgGrid .bg-dot');
+                dots.forEach(d => d.classList.remove('active'));
+                const idx = bgPresets.findIndex(p => p.id === key);
+                if (idx >= 0 && dots[idx]) dots[idx].classList.add('active');
+                if (key.startsWith('c-') && customDot) customDot.classList.add('active');
+
+                const isImage = key.startsWith('i-') || key === 'upload';
+                const btn = $('btnBgImage'), thumb = $('bgImageThumb');
+                if (btn) btn.classList.toggle('active', isImage);
+                if (thumb) {
+                    const src = imageSrcFor(key);
+                    thumb.style.backgroundImage = src ? `url("${src}")` : '';
+                    thumb.textContent = src ? '' : '🖼';
+                }
+            }
+
+            // Единственная точка, где меняется фон. sync=false - не трогать адресную строку (чтение из ссылки / popstate)
+            function apply(raw, sync = true) {
+                const key = normalizeKey(raw);
+                if (key === 'upload' && !uploadUrl) {
+                    restoreUpload().then(ok => apply(ok ? 'upload' : 'dark', true));
+                    return;
+                }
+                const el = $('viewer_zone');
+                if (el) el.style.background = cssFor(key);
+                currentBgKey = key;
+                if (key.startsWith('c-') && colorInput) {
+                    colorInput.value = '#' + key.slice(2);
+                    if (customDot) customDot.style.backgroundColor = '#' + key.slice(2);
+                }
+                updateUi();
+                if (sync) syncUrlState();
+                if (key.startsWith('i-')) {          // картинки нет в списке (удалена / подделана ссылка) - возвращаем обычный фон
+                    const file = key.slice(2);
+                    loadManifest().then(list => { if (currentBgKey === key && !list.includes(file)) apply('dark', true); });
+                }
+            }
+
+            function buildGrid() {
+                const grid = $('bgGrid');
+                grid.innerHTML = '';
+                bgPresets.forEach((bg, idx) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('bg-dot');
+                    dot.style.backgroundColor = bg.color;
+                    dot.title = t(BG_KEYS[idx]);
+                    dot.onclick = () => apply(bg.id);
+                    grid.appendChild(dot);
+                });
+
+                customDot = document.createElement('div');
+                customDot.classList.add('bg-dot', 'custom-color-btn');
+                customDot.title = t('bg.custom');
+                colorInput = document.createElement('input');
+                colorInput.type = 'color';
+                colorInput.value = '#1c1c24';
+                colorInput.addEventListener('input', (e) => {
+                    apply('c-' + e.target.value.slice(1), false);     // ползунок цвета шлёт десятки событий - ссылку обновляем с задержкой
+                    syncUrlStateSoon();
+                });
+                customDot.appendChild(colorInput);
+                grid.appendChild(customDot);
+                updateUi();
+            }
+
+            /* ---- своя картинка: хранится в IndexedDB ---- */
+            function idb() {
+                return new Promise((resolve, reject) => {
+                    const r = indexedDB.open('tsyplyash-gallery', 1);
+                    r.onupgradeneeded = () => r.result.createObjectStore('kv');
+                    r.onsuccess = () => resolve(r.result);
+                    r.onerror = () => reject(r.error);
+                });
+            }
+            async function idbSet(key, value) {
+                const db = await idb();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction('kv', 'readwrite');
+                    tx.objectStore('kv').put(value, key);
+                    tx.oncomplete = () => resolve();
+                    tx.onerror = () => reject(tx.error);
+                });
+            }
+            async function idbGet(key) {
+                const db = await idb();
+                return new Promise((resolve, reject) => {
+                    const req = db.transaction('kv').objectStore('kv').get(key);
+                    req.onsuccess = () => resolve(req.result);
+                    req.onerror = () => reject(req.error);
+                });
+            }
+            function setUploadBlob(blob) {
+                if (uploadUrl) URL.revokeObjectURL(uploadUrl);
+                uploadUrl = URL.createObjectURL(blob);
+            }
+            async function restoreUpload() {
+                try {
+                    const blob = await idbGet('bgUpload');
+                    if (blob && blob.type && blob.type.startsWith('image/')) { setUploadBlob(blob); return true; }
+                } catch (e) { /* приватный режим / IndexedDB недоступна */ }
+                return false;
+            }
+
+            /* ---- окно выбора картинки (как у эмоций) ---- */
+            async function loadManifest() {
+                if (manifest) return manifest;
+                try {
+                    const r = await fetch('backgrounds/backgrounds.json?v=' + Math.random());
+                    const j = r.ok ? await r.json() : [];
+                    manifest = (Array.isArray(j) ? j : []).map(String).filter(f => SAFE_FILE.test(f));
+                } catch (e) { manifest = []; }
+                return manifest;
+            }
+            function message(text) { $('bgImageMsg').textContent = text || ''; }
+
+            async function renderList() {
+                const box = $('bgImageList');
+                const files = await loadManifest();
+                box.innerHTML = '';
+                const addCard = (key, src, title) => {
+                    const card = document.createElement('div');
+                    card.className = 'emote-card' + (currentBgKey === key ? ' active' : '');
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = '';
+                    img.loading = 'lazy';
+                    const name = document.createElement('span');
+                    name.textContent = title;
+                    card.append(img, name);
+                    card.onclick = () => { apply(key); close(); };
+                    box.appendChild(card);
+                };
+                if (uploadUrl) addCard('upload', uploadUrl, t('bg.image.yours'));
+                files.forEach(f => addCard('i-' + f, 'backgrounds/' + encodeURIComponent(f), titleFor(f)));
+                if (!uploadUrl && files.length === 0) box.textContent = t('bg.image.empty');
+            }
+            async function open() {
+                message('');
+                $('bgImageModal').classList.add('show');
+                if (!uploadUrl && currentBgKey !== 'upload') await restoreUpload();
+                renderList();
+            }
+            function close() { $('bgImageModal').classList.remove('show'); }
+
+            function handleFile(file) {
+                if (!file) return;
+                if (!/^image\//.test(file.type) || file.size > MAX_UPLOAD) { message(t('bg.image.error')); return; }
+                const probe = new Image();
+                const url = URL.createObjectURL(file);
+                probe.onload = () => {
+                    URL.revokeObjectURL(url);
+                    setUploadBlob(file);
+                    idbSet('bgUpload', file).catch(() => {});
+                    apply('upload');
+                    close();
+                };
+                probe.onerror = () => { URL.revokeObjectURL(url); message(t('bg.image.error')); };
+                probe.src = url;
+            }
+
+            function refresh() {            // после смены языка
+                updateUi();
+                if ($('bgImageModal').classList.contains('show')) renderList();
+            }
+
+            function init() {
+                $('btnBgImage').onclick = open;
+                $('btnBgImageClose').onclick = close;
+                $('bgImageModal').onclick = (e) => { if (e.target === $('bgImageModal')) close(); };
+                $('btnBgUpload').onclick = () => $('bgImageFile').click();
+                $('bgImageFile').onchange = (e) => { const f = e.target.files && e.target.files[0]; if (f) handleFile(f); e.target.value = ''; };
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+            }
+            init();
+            return { buildGrid, apply, refresh, normalizeKey };
+        })();
+
+        /* ---------- Платформа из блоков под персонажем + время суток (свет и тени) ----------
+           Все объекты (меш, материалы, текстуры, свет) создаются теми же классами three.js, которые уже использует skinview3d,
+           - они берутся из объектов вьюера. Так не возникает конфликта версий с отдельно подключённым three.js.
+           Состояние в ссылке:  plat=grass  (платформа включена, блок)   time=18.5  (время суток в часах, 12 по умолчанию). */
+        const Scene3D = (() => {
+            'use strict';
+            const $ = (id) => document.getElementById(id);
+
+            // ===== Настройки. Если картинка слишком тёмная/светлая или тени не те - правьте здесь =====
+            const CFG = {
+                block: 16,                  // размер блока в единицах модели (игрок = 32 единицы = 2 блока)
+                sunDistance: 140,           // расстояние от центра до «солнца»
+                sunPeak: 2.5,               // сила солнца в полдень
+                moonPeak: 0.9,              // сила луны ночью
+                ambientDay: 0.8,            // рассеянный свет днём (меньше - темнее тени)
+                ambientNight: 0.7,          // и ночью
+                shadowMap: 1024,            // качество теней (на телефонах вдвое меньше)
+                shadowBias: -0.0008,
+                shadowNormalBias: 0.1,
+                defaultHour: 12,
+                tweenMs: 450,
+                view: { pos: [0, 22, 78], target: [0, -10, 0] },     // камера при включённой платформе
+                homeView: { pos: [0, 0, 60], target: [0, -2, 0] }    // обычная камера
+            };
+
+            const BLOCKS = ['grass', 'dirt', 'stone', 'cobblestone', 'sand', 'snow', 'planks', 'netherrack', 'end_stone'];
+            // Холмик сверху вниз: какие клетки (x, z) заняты в каждом слое. Центр (0, 0) - под персонажем.
+            const LAYERS = [
+                (x, z) => Math.abs(x) <= 1 && Math.abs(z) <= 1,                                                                  // 3×3
+                (x, z) => Math.abs(x) <= 2 && Math.abs(z) <= 2 && !(Math.abs(x) === 2 && Math.abs(z) === 2),                     // 5×5 без углов
+                (x, z) => Math.abs(x) <= 3 && Math.abs(z) <= 3 && Math.abs(x) + Math.abs(z) <= 4                                 // 7×7 «круглый»
+            ];
+
+            const state = { on: false, block: 'grass', hour: CFG.defaultHour };
+            let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null;
+
+            /* ---------- Процедурные текстуры блоков 16×16 (своих файлов не нужно) ---------- */
+            function rng(seed) {
+                let a = seed >>> 0;
+                return () => {
+                    a = (a + 0x6D2B79F5) >>> 0;
+                    let t = a;
+                    t = Math.imul(t ^ (t >>> 15), t | 1);
+                    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+                };
+            }
+            const hashStr = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return h >>> 0; };
+            const c8 = (v) => Math.max(0, Math.min(255, Math.round(v)));
+            const rgb = (c) => `rgb(${c8(c[0])},${c8(c[1])},${c8(c[2])})`;
+            function tex16(draw) {
+                const cv = document.createElement('canvas');
+                cv.width = cv.height = 16;
+                draw(cv.getContext('2d'));
+                return cv;
+            }
+            function speckle(ctx, r, base, amp, x0 = 0, y0 = 0, w = 16, h = 16) {
+                for (let y = y0; y < y0 + h; y++) for (let x = x0; x < x0 + w; x++) {
+                    const d = (r() - 0.5) * 2 * amp;
+                    ctx.fillStyle = rgb([base[0] + d, base[1] + d, base[2] + d]);
+                    ctx.fillRect(x, y, 1, 1);
+                }
+            }
+            function spots(ctx, r, color, count) {
+                ctx.fillStyle = rgb(color);
+                for (let i = 0; i < count; i++) ctx.fillRect(Math.floor(r() * 16), Math.floor(r() * 16), 1 + (r() < 0.3 ? 1 : 0), 1);
+            }
+            const one = (cv) => ({ top: cv, side: cv, bottom: cv });
+
+            function makeFaces(id) {
+                const r = rng(hashStr(id));
+                const dirt = () => tex16(c => { speckle(c, r, [134, 96, 67], 16); spots(c, r, [104, 72, 49], 16); });
+                switch (id) {
+                    case 'grass': {
+                        const green = [98, 161, 58];
+                        const top = tex16(c => speckle(c, r, green, 15));
+                        const bottom = dirt();
+                        const side = tex16(c => {
+                            c.drawImage(bottom, 0, 0);
+                            for (let x = 0; x < 16; x++) speckle(c, r, green, 15, x, 0, 1, 3 + Math.floor(r() * 3));   // неровная кромка травы
+                        });
+                        return { top, side, bottom };
+                    }
+                    case 'dirt': return one(dirt());
+                    case 'stone': return one(tex16(c => { speckle(c, r, [128, 128, 128], 12); spots(c, r, [102, 102, 102], 18); }));
+                    case 'cobblestone': return one(tex16(c => {
+                        c.fillStyle = 'rgb(84,84,84)'; c.fillRect(0, 0, 16, 16);
+                        for (let row = 0; row < 4; row++) {
+                            let x = -Math.floor(r() * 4);
+                            while (x < 16) {
+                                const w = 4 + Math.floor(r() * 4), v = 108 + r() * 42;
+                                const x0 = Math.max(0, x);
+                                c.fillStyle = rgb([v, v, v]);
+                                c.fillRect(x0, row * 4, Math.min(16, x + w - 1) - x0, 3);
+                                x += w;
+                            }
+                        }
+                    }));
+                    case 'sand': return one(tex16(c => { speckle(c, r, [221, 208, 160], 8); spots(c, r, [200, 186, 140], 10); }));
+                    case 'snow': return one(tex16(c => { speckle(c, r, [246, 250, 252], 4); spots(c, r, [222, 232, 240], 8); }));
+                    case 'planks': return one(tex16(c => {
+                        for (let b = 0; b < 4; b++) {
+                            speckle(c, r, [164 - (b % 2) * 8, 132 - (b % 2) * 6, 80 - (b % 2) * 4], 9, 0, b * 4, 16, 4);
+                            c.fillStyle = 'rgb(112,86,48)'; c.fillRect(0, b * 4 + 3, 16, 1);            // шов между досками
+                            c.fillRect(Math.floor(r() * 16), b * 4, 1, 3);                                // стык по длине
+                        }
+                    }));
+                    case 'netherrack': return one(tex16(c => { speckle(c, r, [112, 52, 52], 22); spots(c, r, [78, 30, 32], 22); }));
+                    case 'end_stone': return one(tex16(c => { speckle(c, r, [222, 225, 166], 9); spots(c, r, [194, 196, 138], 20); }));
+                    default: return one(tex16(c => speckle(c, r, [128, 128, 128], 12)));
+                }
+            }
+            const faceCache = {};
+            const faces = (id) => faceCache[id] || (faceCache[id] = makeFaces(id));
+
+            /* ---------- Классы three.js - те же, что у skinview3d ---------- */
+            function firstMeshOf(o) {
+                if (!o) return null;
+                if (o.isMesh) return o;
+                for (const c of (o.children || [])) { const m = firstMeshOf(c); if (m) return m; }
+                return null;
+            }
+            function getKit() {
+                const v = skinViewer;
+                if (!v || !v.playerObject || !v.playerObject.skin) throw new Error('viewer is not ready');
+                const m = firstMeshOf(v.playerObject.skin.head.innerLayer);
+                if (!m) throw new Error('model mesh not found');
+                const mat = Array.isArray(m.material) ? m.material[0] : m.material;
+                let proto = Object.getPrototypeOf(m.geometry);
+                while (proto && !Object.prototype.hasOwnProperty.call(proto, 'setIndex')) proto = Object.getPrototypeOf(proto);
+                if (!proto) throw new Error('BufferGeometry not found');
+                const G = window.THREE || {};
+                const k = {
+                    Mesh: m.constructor,
+                    Geometry: proto.constructor,
+                    Attr: m.geometry.attributes.position.constructor,
+                    Material: mat.constructor,
+                    Texture: (mat.map && mat.map.constructor) || G.CanvasTexture || G.Texture,
+                    Light: v.cameraLight ? v.cameraLight.constructor : null,
+                    skinMap: mat.map || null
+                };
+                if (!k.Texture) throw new Error('Texture class not found');
+                return k;
+            }
+
+            // Где у модели в покое находятся подошвы (в мировых координатах сцены). Обычно -16.
+            function measureFeetY() {
+                try {
+                    const leg = skinViewer.playerObject.skin.leftLeg;
+                    const m = firstMeshOf(leg.innerLayer);
+                    const g = m.geometry;
+                    if (!g.boundingBox) g.computeBoundingBox();
+                    let y = g.boundingBox.min.y;
+                    for (let o = m; o; o = o.parent) y = y * o.scale.y + o.position.y;
+                    if (isFinite(y) && y < 0 && y > -64) return y;
+                } catch (e) { /* возьмём значение по умолчанию */ }
+                return -16;
+            }
+
+            /* ---------- Геометрия холмика: одна сетка, видимые грани, 3 группы материалов (верх / бок / низ) ---------- */
+            function hillArrays(feetY) {
+                const S = CFG.block, cells = new Set(), key = (l, x, z) => l + ',' + x + ',' + z;
+                LAYERS.forEach((allow, l) => { for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) if (allow(x, z)) cells.add(key(l, x, z)); });
+                const has = (l, x, z) => cells.has(key(l, x, z));
+                const buckets = [[], [], []];             // 0 - верх, 1 - бок, 2 - низ; в каждом: [позиции четырёх углов..., нормаль]
+                for (const k of cells) {
+                    const [l, x, z] = k.split(',').map(Number);
+                    const x0 = x * S - S / 2, x1 = x0 + S, z0 = z * S - S / 2, z1 = z0 + S, y1 = feetY - l * S, y0 = y1 - S;
+                    if (!has(l - 1, x, z)) buckets[0].push([[x0, y1, z1], [x1, y1, z1], [x1, y1, z0], [x0, y1, z0], [0, 1, 0]]);
+                    if (!has(l + 1, x, z)) buckets[2].push([[x0, y0, z0], [x1, y0, z0], [x1, y0, z1], [x0, y0, z1], [0, -1, 0]]);
+                    if (!has(l, x + 1, z)) buckets[1].push([[x1, y0, z1], [x1, y0, z0], [x1, y1, z0], [x1, y1, z1], [1, 0, 0]]);
+                    if (!has(l, x - 1, z)) buckets[1].push([[x0, y0, z0], [x0, y0, z1], [x0, y1, z1], [x0, y1, z0], [-1, 0, 0]]);
+                    if (!has(l, x, z + 1)) buckets[1].push([[x0, y0, z1], [x1, y0, z1], [x1, y1, z1], [x0, y1, z1], [0, 0, 1]]);
+                    if (!has(l, x, z - 1)) buckets[1].push([[x1, y0, z0], [x0, y0, z0], [x0, y1, z0], [x1, y1, z0], [0, 0, -1]]);
+                }
+                const pos = [], nrm = [], uv = [], index = [], groups = [];
+                const UV = [[0, 0], [1, 0], [1, 1], [0, 1]];
+                buckets.forEach((quads, mi) => {
+                    const start = index.length;
+                    quads.forEach(q => {
+                        const base = pos.length / 3;
+                        for (let i = 0; i < 4; i++) { pos.push(...q[i]); nrm.push(...q[4]); uv.push(...UV[i]); }
+                        index.push(base, base + 1, base + 2, base, base + 2, base + 3);
+                    });
+                    groups.push([start, index.length - start, mi]);
+                });
+                return { pos, nrm, uv, index, groups };
+            }
+
+            function makeTexture(canvas) {
+                const tx = new kit.Texture(canvas);
+                tx.magFilter = 1003;                   // NearestFilter - пиксельные блоки, как в Minecraft
+                tx.minFilter = 1003;
+                tx.generateMipmaps = false;
+                if (kit.skinMap) {                     // та же цветовая настройка, что у текстуры скина
+                    if ('colorSpace' in kit.skinMap) tx.colorSpace = kit.skinMap.colorSpace;
+                    if ('encoding' in kit.skinMap) tx.encoding = kit.skinMap.encoding;
+                }
+                tx.needsUpdate = true;
+                return tx;
+            }
+
+            function disposeMesh() {
+                if (!mesh) return;
+                if (mesh.parent) mesh.parent.remove(mesh);
+                if (mesh.geometry && mesh.geometry.dispose) mesh.geometry.dispose();
+                (Array.isArray(mesh.material) ? mesh.material : [mesh.material]).forEach(m => {
+                    if (m.map && m.map.dispose) m.map.dispose();
+                    if (m.dispose) m.dispose();
+                });
+                mesh = null;
+            }
+
+            function buildMesh() {
+                disposeMesh();
+                const feetY = measureFeetY();
+                const a = hillArrays(feetY);
+                const g = new kit.Geometry();
+                g.setAttribute('position', new kit.Attr(new Float32Array(a.pos), 3));
+                g.setAttribute('normal', new kit.Attr(new Float32Array(a.nrm), 3));
+                g.setAttribute('uv', new kit.Attr(new Float32Array(a.uv), 2));
+                g.setIndex(a.index);
+                a.groups.forEach(([start, count, mi]) => g.addGroup(start, count, mi));
+                const f = faces(state.block);
+                const mats = [f.top, f.side, f.bottom].map(cv => new kit.Material({ map: makeTexture(cv) }));
+                mesh = new kit.Mesh(g, mats);
+                mesh.name = 'gallery-platform';
+                mesh.frustumCulled = false;
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+                skinViewer.scene.add(mesh);
+            }
+
+            /* ---------- Свет: «солнце» днём и «луна» ночью, тени от персонажа на блоки ---------- */
+            const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+            const mix = (a, b, k) => a + (b - a) * k;
+            const mix3 = (a, b, k) => [mix(a[0], b[0], k), mix(a[1], b[1], k), mix(a[2], b[2], k)];
+            const DEG = Math.PI / 180;
+
+            function lightingAt(hRaw) {
+                const h = ((hRaw % 24) + 24) % 24;
+                const day = h >= 6 && h < 18;
+                const t = day ? (h - 6) / 12 : ((h < 6 ? h + 24 : h) - 18) / 12;           // 0..1 вдоль дуги по небу
+                const elev = (6 + ((day ? 62 : 50) - 6) * Math.sin(Math.PI * t)) * DEG;     // высота над горизонтом
+                const az = (mix(-75, 75, t) + 15) * DEG;                                    // с левого края к правому, чуть смещено к зрителю
+                const dir = [Math.sin(az) * Math.cos(elev), Math.sin(elev), Math.cos(az) * Math.cos(elev)];
+                // Солнце и луна - один источник света. Переключаются в 6:00 и 18:00, а к этому моменту оба уже полностью погасли (зазор 12 минут),
+                // поэтому тень не «перескакивает» с одной стороны на другую.
+                const sunI = day ? CFG.sunPeak * smooth(6.1, 7.5, h) * (1 - smooth(16.5, 17.9, h)) : 0;
+                const moonI = day ? 0 : CFG.moonPeak * (h >= 18 ? smooth(18.1, 19.5, h) : 1 - smooth(4.5, 5.9, h));
+                const lightCol = day ? mix3([255, 140, 72], [255, 246, 230], smooth(6, 30, elev / DEG)) : [150, 172, 255];
+                const dayness = smooth(5.5, 7.5, h) * (1 - smooth(16.5, 18.5, h));
+                const dusk = 1 - Math.abs(2 * dayness - 1);                                  // 1 на рассвете и закате
+                const amb = mix3(mix3([105, 125, 200], [255, 255, 255], dayness), [255, 175, 125], 0.35 * dusk);
+                return { dir, lightCol, lightI: day ? sunI : moonI, amb, ambI: mix(CFG.ambientNight, CFG.ambientDay, dayness) };
+            }
+
+            // Старые версии three.js (до r155) считают интенсивность света в π раз «ярче» - подстраиваемся
+            function lightScale() {
+                const r = skinViewer.renderer || {};
+                const legacy = r.useLegacyLights === true || (r.useLegacyLights === undefined && r.physicallyCorrectLights === false);
+                return legacy ? 1 / Math.PI : 1;
+            }
+
+            function ensureSun() {
+                if (sun || !kit.Light) return;
+                sun = new kit.Light(0xffffff, 0);
+                sun.name = 'gallery-sun';
+                sun.distance = 0;
+                sun.decay = 0;                         // свет не слабеет с расстоянием - как настоящее солнце
+                sun.castShadow = true;
+                if (sun.shadow) {
+                    const m = window.innerWidth <= 900 ? CFG.shadowMap / 2 : CFG.shadowMap;
+                    sun.shadow.mapSize.set(m, m);
+                    sun.shadow.bias = CFG.shadowBias;
+                    sun.shadow.normalBias = CFG.shadowNormalBias;
+                    const sc = sun.shadow.camera;
+                    if (sc) {
+                        sc.near = 8;
+                        sc.far = 600;
+                        if (sc.isOrthographicCamera) { sc.left = -90; sc.right = 90; sc.top = 90; sc.bottom = -90; }   // на случай направленного света
+                        if (sc.updateProjectionMatrix) sc.updateProjectionMatrix();
+                    }
+                }
+                skinViewer.scene.add(sun);
+            }
+
+            function applyLighting() {
+                if (!skinViewer || !state.on) return;
+                const L = lightingAt(state.hour), K = lightScale(), a = skinViewer.globalLight;
+                if (sun) {
+                    sun.position.set(L.dir[0] * CFG.sunDistance, L.dir[1] * CFG.sunDistance, L.dir[2] * CFG.sunDistance);
+                    sun.color.setRGB(L.lightCol[0] / 255, L.lightCol[1] / 255, L.lightCol[2] / 255);
+                    sun.intensity = L.lightI * K;
+                }
+                if (a) {
+                    a.color.setRGB(L.amb[0] / 255, L.amb[1] / 255, L.amb[2] / 255);
+                    a.intensity = L.ambI * K;
+                }
+            }
+
+            // Персонаж отбрасывает тень (в том числе меши эмоций, которые создаются позже - их вызывает EmoteRuntime)
+            function refreshCasters() {
+                if (!skinViewer || !skinViewer.playerObject) return;
+                const on = state.on && !!sun;
+                skinViewer.playerObject.traverse(o => { if (o.isMesh) o.castShadow = on; });
+            }
+
+            function markMaterialsDirty() {
+                skinViewer.playerObject.traverse(o => {
+                    if (!o.isMesh) return;
+                    (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => { if (m) m.needsUpdate = true; });
+                });
+            }
+
+            /* ---------- Камера ---------- */
+            function currentView() {
+                const c = skinViewer.camera.position, t = skinViewer.controls.target;
+                return { pos: [c.x, c.y, c.z], target: [t.x, t.y, t.z] };
+            }
+            function moveCamera(view, animate) {
+                if (!skinViewer || !skinViewer.controls) return;
+                cancelAnimationFrame(tweenId);
+                const cam = skinViewer.camera, tg = skinViewer.controls.target;
+                const from = currentView();
+                const put = (k) => {
+                    cam.position.set(mix(from.pos[0], view.pos[0], k), mix(from.pos[1], view.pos[1], k), mix(from.pos[2], view.pos[2], k));
+                    tg.set(mix(from.target[0], view.target[0], k), mix(from.target[1], view.target[1], k), mix(from.target[2], view.target[2], k));
+                    if (skinViewer.controls.update) skinViewer.controls.update();
+                };
+                if (!animate) { put(1); return; }
+                const t0 = performance.now();
+                const step = (now) => {
+                    const k = Math.min(1, (now - t0) / CFG.tweenMs);
+                    put(1 - Math.pow(1 - k, 3));
+                    if (k < 1) tweenId = requestAnimationFrame(step);
+                };
+                tweenId = requestAnimationFrame(step);
+            }
+
+            /* ---------- Включение / выключение ---------- */
+            function teardown() {
+                disposeMesh();
+                if (sun) {
+                    if (sun.parent) sun.parent.remove(sun);
+                    if (typeof sun.dispose === 'function') sun.dispose();
+                    sun = null;
+                }
+                const a = skinViewer && skinViewer.globalLight;
+                if (a && savedAmbient) {
+                    a.color.setRGB(savedAmbient.color[0], savedAmbient.color[1], savedAmbient.color[2]);
+                    a.intensity = savedAmbient.intensity;
+                }
+                savedAmbient = null;
+                if (skinViewer && skinViewer.playerObject) {
+                    skinViewer.playerObject.traverse(o => { if (o.isMesh) o.castShadow = false; });
+                }
+            }
+
+            function setUi(on) {
+                $('platform_toggle').checked = on;
+                $('platformOptions').style.display = on ? '' : 'none';
+            }
+
+            function setEnabled(on, opts = {}) {
+                const sync = opts.sync !== false, animate = opts.animate !== false;
+                on = !!on;
+                if (on === state.on) { setUi(on); if (sync) syncUrlState(); return; }
+                try {
+                    if (on) {
+                        kit = getKit();
+                        const a = skinViewer.globalLight;
+                        savedAmbient = a ? { color: [a.color.r, a.color.g, a.color.b], intensity: a.intensity } : null;
+                        if (skinViewer.renderer && skinViewer.renderer.shadowMap) {
+                            skinViewer.renderer.shadowMap.enabled = true;
+                            skinViewer.renderer.shadowMap.type = 1;       // PCFShadowMap
+                        }
+                        buildMesh();
+                        ensureSun();
+                        state.on = true;
+                        applyLighting();
+                        markMaterialsDirty();
+                        refreshCasters();
+                        savedView = currentView();
+                        moveCamera(CFG.view, animate);
+                    } else {
+                        state.on = false;
+                        teardown();
+                        markMaterialsDirty();
+                        moveCamera(savedView || CFG.homeView, animate);
+                        savedView = null;
+                    }
+                } catch (e) {
+                    console.error('[platform]', e);
+                    state.on = false;
+                    try { teardown(); } catch (e2) { /* ничего */ }
+                    on = false;
+                }
+                setUi(state.on);
+                if (sync) syncUrlState();
+            }
+
+            function setBlock(id, sync = true) {
+                if (!BLOCKS.includes(id)) return;
+                state.block = id;
+                document.querySelectorAll('#blockGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.block === id));
+                if (state.on) { try { buildMesh(); } catch (e) { console.error('[platform]', e); } }
+                if (sync) syncUrlState();
+            }
+
+            const pad = (n) => String(n).padStart(2, '0');
+            function timeText(h) {
+                const hh = Math.floor(h) % 24, mm = Math.round((h - Math.floor(h)) * 60) % 60;
+                const icon = (h < 5 || h >= 19) ? '🌙' : (h < 7 ? '🌅' : (h < 17 ? '☀️' : '🌇'));
+                return icon + ' ' + pad(hh) + ':' + pad(mm);
+            }
+            function setTime(h, sync = true, soon = false) {
+                state.hour = Math.min(24, Math.max(0, isFinite(h) ? h : CFG.defaultHour));
+                $('time_slider').value = state.hour;
+                $('time_val').textContent = timeText(state.hour);
+                applyLighting();
+                if (sync) { if (soon) syncUrlStateSoon(); else syncUrlState(); }
+            }
+
+            // Из ссылки / popstate. plat - id блока или пусто (платформы нет)
+            function applyState(plat, time, opts = {}) {
+                const id = BLOCKS.includes(plat) ? plat : null;
+                if (id) state.block = id;
+                document.querySelectorAll('#blockGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.block === state.block));
+                const parsed = parseFloat(time);
+                state.hour = isFinite(parsed) ? Math.min(24, Math.max(0, parsed)) : CFG.defaultHour;
+                $('time_slider').value = state.hour;
+                $('time_val').textContent = timeText(state.hour);
+                if (id && state.on) { try { buildMesh(); } catch (e) { console.error('[platform]', e); } applyLighting(); }
+                setEnabled(!!id, { sync: false, animate: opts.animate !== false });
+                if (state.on) applyLighting();
+            }
+
+            function buildBlockGrid() {
+                const grid = $('blockGrid');
+                grid.innerHTML = '';
+                BLOCKS.forEach(id => {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'block-btn' + (id === state.block ? ' active' : '');
+                    b.dataset.block = id;
+                    b.title = t('block.' + id);
+                    const cv = document.createElement('canvas');
+                    cv.width = cv.height = 16;
+                    cv.getContext('2d').drawImage(faces(id).side, 0, 0);
+                    b.appendChild(cv);
+                    b.onclick = () => setBlock(id);
+                    grid.appendChild(b);
+                });
+            }
+
+            function refreshUi() {
+                document.querySelectorAll('#blockGrid .block-btn').forEach(b => { b.title = t('block.' + b.dataset.block); });
+            }
+
+            function resetCamera() { if (state.on) moveCamera(CFG.view, false); }
+
+            function init() {
+                buildBlockGrid();
+                $('time_val').textContent = timeText(state.hour);
+                $('platform_toggle').onchange = (e) => setEnabled(e.target.checked);
+                $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
+            }
+            init();
+
+            return {
+                applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
+                state: () => ({ on: state.on, block: state.block, hour: state.hour }),
+                // для проверок из консоли
+                _debug: { lightingAt, hillArrays, CFG, faces }
+            };
+        })();
 
         /* EMOTE-CORE-BEGIN */
 const EmoteCore = (() => {
@@ -2822,16 +3724,9 @@ const EmoteCore = (() => {
         const o = init.torso, r = pose.root, t = pose.torso;
         const W = mul(T4(r.x, r.y, r.z), aboutPoint(rotZYX(r.pitch, r.yaw, r.roll), o[0], o[1] + WAIST_Y, o[2]));
         const partM = (p, name) => mul(T4(init[name][0] + p.x, init[name][1] + p.y, init[name][2] + p.z), rotZYX(p.pitch, p.yaw, p.roll));
-        const hasBend = Math.abs(t.bend) > 0.001;
-        const bendM = hasBend ? aboutPoint(rotX(t.bend), o[0], o[1] + TORSO_BEND_PIVOT_Y, o[2]) : I4();
-        const useBend = pose.applyBend !== false && hasBend;
-        const B = useBend ? bendM : I4();
-        // Плащ и элитры крепятся к спине: двигаются вместе со всей моделью (W), со своим движением туловища
-        // и с изгибом верхней части (меш туловища изгибается во всех версиях формата, поэтому изгиб берём всегда).
-        // Матрица нормирована: в покое это единичная матрица, т.е. это именно СДВИГ относительно позы покоя.
-        const torsoOwn = mul(partM(t, 'torso'), T4(-o[0], -o[1], -o[2]));
+        const useBend = pose.applyBend !== false && Math.abs(t.bend) > 0.001;
+        const B = useBend ? aboutPoint(rotX(t.bend), o[0], o[1] + TORSO_BEND_PIVOT_Y, o[2]) : I4();
         return {
-            back: toThree(mul(W, mul(torsoOwn, bendM))),
             torso: toThree(mul(W, partM(t, 'torso'))),
             head: toThree(mul(W, mul(B, partM(pose.head, 'head')))),
             rightArm: toThree(mul(W, mul(B, partM(pose.rightArm, 'rightArm')))),
@@ -2906,7 +3801,7 @@ const EmoteCore = (() => {
         }
         return list;
     }
-    function mountEntries(skin, list) { for (const e of list) { skin[e.part].add(e.mesh); e.origObj.visible = false; } }
+    function mountEntries(skin, list) { for (const e of list) { skin[e.part].add(e.mesh); e.origObj.visible = false; } if (typeof Scene3D !== 'undefined') Scene3D.refreshCasters(); }
     function unmountEntries(skin, list) {
         for (const e of list) {
             skin[e.part].remove(e.mesh);
@@ -2942,43 +3837,6 @@ const EmoteCore = (() => {
     }
     const layerChecked = (id) => { const el = document.getElementById(id); return el ? el.checked : true; };
 
-    // ---- плащ и элитры ----
-    // В skinview3d cape/elytra лежат рядом со skin (а не внутри тела), поэтому когда эмоция двигает тело матрицами,
-    // они остаются на месте. Каждый кадр переносим их на то же смещение, что и туловище:
-    //   новая_матрица = S * D * S^-1 * локальная_матрица_в_покое, где S - матрица skin, D - смещение туловища.
-    let backTouched = false;
-    const backObjects = () => {
-        const po = (typeof skinViewer !== 'undefined' && skinViewer) ? skinViewer.playerObject : null;
-        return po ? [po.cape, po.elytra].filter(Boolean) : [];
-    };
-    function applyBack(skin, backArr) {
-        const objs = backObjects();
-        if (!objs.length || !backArr) return;
-        skin.updateMatrix();
-        const M4 = skin.matrix.constructor;
-        const S = skin.matrix;
-        const Sinv = new M4().copy(S);
-        if (typeof Sinv.invert === 'function') Sinv.invert(); else Sinv.getInverse(S);
-        const D = new M4().fromArray(backArr);
-        const shift = new M4().multiplyMatrices(new M4().multiplyMatrices(S, D), Sinv);
-        for (const o of objs) {
-            o.matrixAutoUpdate = false;
-            const rest = new M4().compose(o.position, o.quaternion, o.scale);   // обычная локальная поза плаща (position/rotation)
-            o.matrix.multiplyMatrices(shift, rest);
-            o.matrixWorldNeedsUpdate = true;
-        }
-        backTouched = true;
-    }
-    function restoreBack() {
-        if (!backTouched) return;
-        backTouched = false;
-        for (const o of backObjects()) {
-            o.matrixAutoUpdate = true;
-            o.updateMatrix();
-            o.matrixWorldNeedsUpdate = true;
-        }
-    }
-
     function onFrame(dt) {
         if (!active || !emote) return;
         try {
@@ -3001,7 +3859,6 @@ const EmoteCore = (() => {
                 p.matrix.fromArray(rig[BONE[k] === 'torso' ? 'torso' : BONE[k]]);
                 p.matrixWorldNeedsUpdate = true;
             }
-            applyBack(skin, rig.back);
             const bodyOuter = layerChecked('layer_body');
             for (const e of entries) {
                 const bend = pose[BONE[e.part]].bend;
@@ -3027,8 +3884,6 @@ const EmoteCore = (() => {
         if (!skin) throw new Error('viewer is not ready');
         try {
             if (!active) {
-                // плащ/крылья элитр могли застыть в позе ходьбы или полёта - возвращаем их в позу покоя
-                try { if (skinViewer.playerObject.resetJoints) skinViewer.playerObject.resetJoints(); } catch (rjErr) { /* не критично */ }
                 slimState = detectSlim(skin);
                 entries = buildEntries(skin, slimState);
                 saved = {};
@@ -3060,7 +3915,6 @@ const EmoteCore = (() => {
         const wasActive = active;
         active = false;
         emote = null;
-        restoreBack();   // плащ и элитры снова управляются движком skinview3d
         const skin = getSkin();
         if (skin && entries) {
             unmountEntries(skin, entries);
@@ -3310,7 +4164,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 const badgeColor = isAlex ? '#94C892' : '#00AFAF';
                 const modelType = isAlex ? 'alex' : 'steve';
 
-                const newBadgeHtml = skin.new ? `<div class="new-badge">NEW</div>` : '';
+                const newBadgeHtml = skin.new ? `<div class="new-badge">${t('badge.new')}</div>` : '';
                 const variationBadgeHtml = itemHasVariations(skin)
                     ? `<div class="variation-badge" title="${t('skin.has_variations')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>`
                     : '';
@@ -3465,6 +4319,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
 
             document.getElementById('elytra_toggle').onchange = async (e) => {
                 elytraEnabled = e.target.checked;
+                syncUrlState();
                 await updateBackEquipment();
             };
 
@@ -3517,6 +4372,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 skinViewer.controls.beta = 0;
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
+                Scene3D.resetCamera();
 
                 if (currentActiveSkinFilename) {
                     selectSkin(currentActiveSkinFilename, false);
@@ -3730,9 +4586,12 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 currentSortField = urlState.sort;
                 currentSortOrder = urlState.order;
                 currentCapeFilename = (urlState.cape && globalCapes.some(c => c.filename === urlState.cape)) ? urlState.cape : null;
+                elytraEnabled = urlState.elytra;
 
                 initViewer();
-                if (currentCapeFilename) updateBackEquipment();
+                document.getElementById('elytra_toggle').checked = elytraEnabled;
+                Backdrop.apply(urlState.bg, false);
+                if (currentCapeFilename || elytraEnabled) updateBackEquipment();
                 initAgreementModal(); 
                 initSortListeners();
                 applyViewModeUI();
@@ -3744,8 +4603,9 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 window.addEventListener('popstate', handlePopState);
 
                 if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
+                    await selectSkin(currentActiveSkinFilename, false);
                 }
+                Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
 
             } catch (err) {
                 document.getElementById('loading').textContent = t('error.json');
