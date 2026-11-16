@@ -1,79 +1,387 @@
 [
-  "SPE_Ankha_Dance",
-  "SPE_Evelynn_Stand",
-  "SPE_Bodybuilding_pose1",
-  "SPE_Bodybuilding_pose2",
-  "SPE_Bodybuilding_pose3",
-  "SPE_Fantastic_pose1",
-  "SPE_Fantastic_pose2",
-  "SPE_Fantastic_pose3",
-  "SPE_Fantastic_pose4",
-  "SPE_Fantastic_pose5",
-  "SPE_Fantastic_pose6",
-  "SPE_Fantastic_pose7",
-  "SPE_Fantastic_pose8",
-  "SPE_Fantastic_pose9",
-  "SPE_Anasui_Pose",
-  "SPE_Aski_Pose",
-  "SPE_Ayanami_Rei_Pose",
-  "SPE_Black_Widow_Pose",
-  "SPE_Fighting_pose",
-  "SPE_Frankenstein_Pose",
-  "SPE_Giorno_giovanna_pose",
-  "SPE_Iron_Man_Pose",
-  "SPE_Jinx_Stand",
-  "SPE_Jojo_pose1",
-  "SPE_Jojo_pose2",
-  "SPE_Jojo_pose3",
-  "SPE_Jojo_pose4",
-  "SPE_Jojo_pose5",
-  "SPE_Jojo_pose6",
-  "SPE_Jojo_pose7",
-  "SPE_Jojo_pose8",
-  "SPE_Kakashi_Pose",
-  "SPE_Kaoru_Pose",
-  "SPE_Kira_Yoshikage_pose",
-  "SPE_Marie_pose",
-  "SPE_Naruto_Pose",
-  "SPE_Photogenic_pose",
-  "SPE_Photogenic_pose1",
-  "SPE_Photogenic_pose2",
-  "SPE_Photogenic_pose3",
-  "SPE_Photogenic_pose4",
-  "SPE_Photogenic_pose5",
-  "SPE_Photogenic_pose6",
-  "SPE_Photogenic_pose7",
-  "SPE_Photogenic_pose8",
-  "SPE_Reigen_Arataka_Pose",
-  "SPE_Sailor_Mars_Pose",
-  "SPE_Sailor_Mercury_Pose",
-  "SPE_Sailor_Moon_Pose",
-  "SPE_Sakura_Pose",
-  "SPE_Sasuke_pose",
-  "SPE_Shigeo_Kageyama_Pose",
-  "SPE_Shinji_Pose",
-  "SPE_Spider_Man_Pose",
-  "SPE_Spider_Man_Pose1",
-  "SPE_Stylish_pose1",
-  "SPE_Stylish_pose2",
-  "SPE_Stylish_pose3",
-  "SPE_Stylish_pose4",
-  "SPE_Stylish_pose5",
-  "SPE_Stylish_pose6",
-  "SPE_Stylish_pose7",
-  "SPE_Stylish_pose8",
-  "SPE_Stylish_pose9",
-  "SPE_Successful_pose",
-  "SPE_t_pose",
-  "SPE_The_Gats_Pose",
-  "SPE_The_Harley_Quinn_Pose",
-  "SPE_Vindictive_pose",
-  "SPE_Witch_Pose",
-  "SPE_Yandere_Pose",
-  "SPE_Zoro_Pose",
-  "SPE_Backflip",
-  "SPE_Get_scared",
-  "SPE_Be_shy",
-  "SPE_Clown_Dance",
-  "SPE_Apologize"
+  {
+    "id": "SPE_Ankha_Dance",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Evelynn_Stand",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Bodybuilding_pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Bodybuilding_pose2",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Bodybuilding_pose3",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose2",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose3",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose4",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose5",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose6",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose7",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose8",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fantastic_pose9",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Anasui_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Aski_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Ayanami_Rei_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Black_Widow_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Fighting_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Frankenstein_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Giorno_giovanna_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Iron_Man_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jinx_Stand",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose2",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose3",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose4",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose5",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose6",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose7",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Jojo_pose8",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Kakashi_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Kaoru_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Kira_Yoshikage_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Marie_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Naruto_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose2",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose3",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose4",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose5",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose6",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose7",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Photogenic_pose8",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Reigen_Arataka_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Sailor_Mars_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Sailor_Mercury_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Sailor_Moon_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Sakura_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Sasuke_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Shigeo_Kageyama_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Shinji_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Spider_Man_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Spider_Man_Pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose1",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose2",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose3",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose4",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose5",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose6",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose7",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose8",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Stylish_pose9",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Successful_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_t_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_The_Gats_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_The_Harley_Quinn_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Vindictive_pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Witch_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Yandere_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Zoro_Pose",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Backflip",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Get_scared",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Be_shy",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Clown_Dance",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  },
+  {
+    "id": "SPE_Apologize",
+    "author": "SPEmotes",
+    "authorUrl": "https://spemotes.com/speplus/"
+  }
 ]
