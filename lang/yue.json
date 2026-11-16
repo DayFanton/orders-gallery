@@ -376,7 +376,7 @@
 
   "folder.add": "添加",
   "folder.delete": "删除",
-  "folder.delete_confirm": "要從你的資料夾中刪除\\\"%s\\\"嗎？",
+  "folder.delete_confirm": "要從你的資料夾中刪除\"%s\"嗎？",
   "folder.empty": "呢度仲未有任何嘢 - 按「+」嚟新增你嘅第一個檔案",
   "folder.local_note": "文件仅在此浏览器中存储",
   "folder.memory_only": "浏览器存储不可用 - 关闭标签页时文件会消失",
