@@ -59,7 +59,7 @@
 
   "emote.button": "İfadeler",
   "emote.title": "İfadeler",
-  "emote.hint": "Bir ifade seçin veya kendi .json dosyanızı yükleyin",
+  "emote.hint": "Bir ifade seçin veya kendi ifadenizi eklemek için \\\"Emojilerim\\\" bölümünü açın",
   "emote.stop": "İfadeyi durdur",
   "emote.test": "Kendi ifade ni test et",
   "emote.empty": "İfade bulunamadı (emotes/ klasörü)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Pozu (Kabuslar)",
   "emote.name.SPE_Zoro_Pose": "Zoro Pozu (Multiverse) (One Piece)",
 
+  "emote.by": "%s tarafından",
+  "emote.search_placeholder": "İfade ara...",
+  "emote.no_results": "İfade bulunamadı",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Meşe kereste",
   "block.netherrack": "Nether taşı",
   "block.end_stone": "End taşı",
+  "block.plain": "Doku yok",
 
   "bgimg.name.day": "Gündüz",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gece",
   "bgimg.name.snow": "Kar",
-  "bgimg.name.sunset": "Gün batımı"
+  "bgimg.name.sunset": "Gün batımı",
+
+  "blocks.empty": "Henüz blok yok - dokuları blocks/ klasörüne atın veya kendi dokularınızı ekleyin",
+
+  "folder.add": "Ekle",
+  "folder.delete": "Sil",
+  "folder.delete_confirm": "\\\"%s\\\" klasörünüzden silinsin mi?",
+  "folder.empty": "Henüz burada hiçbir şey yok - ilk dosyanızı eklemek için \\\"+\\\" düğmesine basın",
+  "folder.local_note": "Dosyalar yalnızca bu tarayıchıda saklanır",
+  "folder.memory_only": "Tarayıcı depolaması kullanılamıyor - sekmeyi kapattığınızda dosyalar kaybolacak",
+  "folder.error": "Bu dosya eklenemedi",
+  "folder.bg.open": "Resimlerim",
+  "folder.bg.title": "Resimlerim",
+  "folder.bg.hint": "Yüklediğiniz görseller. Yeni bir tane eklemek için \\\"+\\\" düğmesine basın",
+  "folder.block.open": "Bloklarım",
+  "folder.block.title": "Bloklarım",
+  "folder.block.hint": "Tüm yüzler için tek bir görsel kullanılır. Veya ..._top, ..._side ve ..._bottom adında üç dosya seçin",
+  "folder.block.error": "Tek bir görsel veya _top, _side veya _bottom ile biten dosyalar seçin",
+  "folder.emote.open": "İfadelerim",
+  "folder.emote.title": "İfadelerim",
+  "folder.emote.hint": "Bir ifade .json dosyası ve isterseniz aynı iletişim penceresinde bir simge görseli (.png) seçin",
+  "folder.emote.icon": "Simgeyi değiştir",
+
+  "ui.hide": "Arayüzü gizle (H)",
+  "ui.show": "Arayüzü göster (H)",
+
+  "shot.title": "Ekran görüntüsünü kaydet (şeffaf arka plan için Shift tuşunu basılı tutun)",
+  "shot.error": "Ekran görüntüsü kaydedilemedi"
 }

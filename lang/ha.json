@@ -59,7 +59,7 @@
 
   "emote.button": "Motsin jiki",
   "emote.title": "Motsin jiki",
-  "emote.hint": "Zaɓi motsin jiki ko ka loda naka fayil ɗin .json",
+  "emote.hint": "Zaɓi emote ko buɗe \\\"Emote na\\\" don ƙara naka",
   "emote.stop": "Dakatar da motsi",
   "emote.test": "Gwada naka motsin",
   "emote.empty": "Ba a sami motsin jiki ba (babban fayil emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Matsayin Yandere (Mummunan Mafarki)",
   "emote.name.SPE_Zoro_Pose": "Matsayin Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "daga %s",
+  "emote.search_placeholder": "Binciki abubuwan motsa jiki...",
+  "emote.no_results": "Ba a samri abubuwan motsa jiki ba",
+
   "person.Артур": "Atu",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Biyakor",
@@ -359,11 +363,39 @@
   "block.planks": "Allon oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dutsen End",
+  "block.plain": "Babu laushi",
 
   "bgimg.name.day": "Rana",
   "bgimg.name.end": "Ƙarshe",
   "bgimg.name.nether": "Lahira",
   "bgimg.name.night": "Dare",
   "bgimg.name.snow": "Dusar ƙanƙara",
-  "bgimg.name.sunset": "Faɗuwar rana"
+  "bgimg.name.sunset": "Faɗuwar rana",
+
+  "blocks.empty": "Babu tubalan tukuna - sanya laushi a cikin fayilolin blocks/ ko ƙara naka",
+
+  "folder.add": "Ƙara",
+  "folder.delete": "Share",
+  "folder.delete_confirm": "Kana so a goge \\\"%s\\\" daga babban fayil ɗinka?",
+  "folder.empty": "Babu komai a nan a nan - danna \\\"+\\\" don ƙara fayil ɗinka na farko",
+  "folder.local_note": "Ana adana fayiloli ne kawai a cikin wannan burauzar",
+  "folder.memory_only": "Ajiyar burauzar bata da amfani - fayiloli za su bace lokacin da kuka rufe shafin",
+  "folder.error": "Ba a iya ƙara wannan fayil ba",
+  "folder.bg.open": "Hotuna na",
+  "folder.bg.title": "Hotuna na",
+  "folder.bg.hint": "Hotunan da ka ɗora. Danna \\\"+\\\" don ƙara sabuwar hoto",
+  "folder.block.open": "Tubalan na",
+  "folder.block.title": "Tubalan na",
+  "folder.block.hint": "Ana amfani da hoton guda ɗaya don duk fuskoki. Ko zaɓi fayiloli guda uku masu suna ..._top, ..._side da ..._bottom",
+  "folder.block.error": "Zaɓi hoton guda ɗaya, ko fayilolin da suka ƙare da _top, _side ko _bottom",
+  "folder.emote.open": "Emote dina",
+  "folder.emote.title": "Emote dina",
+  "folder.emote.hint": "Zaɓi fayil ɗin .json na emote kuma, idan kuna so, hoton gunkin (.png) a cikin tattaunawa guda ɗaya",
+  "folder.emote.icon": "Canza alamar",
+
+  "ui.hide": "Ɓoye mai amfani (H)",
+  "ui.show": "Nuna mai amfani (H)",
+
+  "shot.title": "Ajiye hoton allo (riƙe Shift don samun bango mai haske)",
+  "shot.error": "Ba a iya ajiye hoton allo ba"
 }

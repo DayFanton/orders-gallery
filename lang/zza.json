@@ -59,7 +59,7 @@
 
   "emote.button": "Emoti",
   "emote.title": "Emoti",
-  "emote.hint": "Yew emot weçine ya zi dosyaya xoya .json bar ke",
+  "emote.hint": "Yew emote weçin yan zi \\\"Emoteê mı\\\" vekin ke emoteê xo cı kerdê",
   "emote.stop": "Emoti vındarne",
   "emote.test": "Emotê xo test ke",
   "emote.empty": "Emoti nêamey diyayene (klasorê emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pozê Yandere (Kabusi)",
   "emote.name.SPE_Zoro_Pose": "Vındertışê Zoro (Pir-kainat) (One Piece)",
 
+  "emote.by": "%s ra",
+  "emote.search_placeholder": "Emoti bigêre...",
+  "emote.no_results": "Emoti nê dîyê",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Texteyê mazêri",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kemera Endi",
+  "block.plain": "Tekstur çın o",
 
   "bgimg.name.day": "Roje",
   "bgimg.name.end": "Peyni",
   "bgimg.name.nether": "Cehenem",
   "bgimg.name.night": "Şewe",
   "bgimg.name.snow": "Vewre",
-  "bgimg.name.sunset": "Roşawan"
+  "bgimg.name.sunset": "Roşawan",
+
+  "blocks.empty": "Hanjî bloki çini - ti têkستuran biveke qutiya blocks/ ra ya zi xo bınusne",
+
+  "folder.add": "Tê de",
+  "folder.delete": "Bınusne",
+  "folder.delete_confirm": "\\\"%s\\\" pelgeya xo ra wedarnê?",
+  "folder.empty": "Nêzdê tiştek çin o - ji bo zêdekirina dosyaya xwe ya yekem \\\"+\\\" bitikîne",
+  "folder.local_note": "Fıli tenya nê brawser de ameyê qaytkerdene",
+  "folder.memory_only": "Brawser de cayin qın niyo - eke ti tabi bınusnê fıli qediyê",
+  "folder.error": "Fıli nê babi tê de",
+  "folder.bg.open": "Resmê mı",
+  "folder.bg.title": "Resmê mı",
+  "folder.bg.hint": "Wêneyên ku te barkirine. Ji bo lêzêdekirina wêneyeke nû \\\"+\\\" bitikîne",
+  "folder.block.open": "Bloke mı",
+  "folder.block.title": "Bloke mı",
+  "folder.block.hint": "Hemu ruyani ra yew resm e yena gurenayene. Ya zi hirê fıli ke name inan ..._top, ..._side u ..._bottom o, bıvake",
+  "folder.block.error": "Resmo ke yew ya zi fıli ke bi _top, _side ya zi _bottom qediyenê, bıvake",
+  "folder.emote.open": "Emoti mı",
+  "folder.emote.title": "Emoti mı",
+  "folder.emote.hint": "Yew fıli .jsoni yê emoti u eke to wazeno, yew resmê iconi (.png) ebe yew dialog de bıvake",
+  "folder.emote.icon": "Icon bıvurnê",
+
+  "ui.hide": "Enterfeyi bınusne (H)",
+  "ui.show": "Enterfeyi bımocne (H)",
+
+  "shot.title": "Screenshot qeyd ke (seba peyniyo şefaf Shift tepışte bıtepışne)",
+  "shot.error": "Screenshot nê qeyd bi"
 }

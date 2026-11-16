@@ -59,7 +59,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Koi emote chuno ya apan .json file upload karo",
+  "emote.hint": "Ek emote chuno ya \\\"Mere emotes\\\" kholo aur apna emote joro",
   "emote.stop": "Emote roko",
   "emote.test": "Apan emote check karo",
   "emote.empty": "Koi emote nahi mila (emotes/ folder)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere ke Mudra (Bura Sapna)",
   "emote.name.SPE_Zoro_Pose": "Zoro ke Mudra (Bahubrahmand) (One Piece)",
 
+  "emote.by": "%s dwara",
+  "emote.search_placeholder": "Emotes khojo...",
+  "emote.no_results": "Koi emotes nahi mila",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Oak ke takhta",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End ke patthar",
+  "block.plain": "Koi texture nahi hai",
 
   "bgimg.name.day": "Din",
   "bgimg.name.end": "Ant",
   "bgimg.name.nether": "Narak",
   "bgimg.name.night": "Raat",
   "bgimg.name.snow": "Baraf",
-  "bgimg.name.sunset": "Suryast"
+  "bgimg.name.sunset": "Suryast",
+
+  "blocks.empty": "Abhi koi block nahi hai - blocks/ folder me texture dalo ya apna jodo",
+
+  "folder.add": "Jodo",
+  "folder.delete": "Mitao",
+  "folder.delete_confirm": "You want delete \\\"%s\\\" from your folder?",
+  "folder.empty": "Abhi yahan kuch bhi nai hai - apna pehla file add karne ke liye \\\"+\\\" dabao",
+  "folder.local_note": "Files sirf is browser me store hoti hai",
+  "folder.memory_only": "Browser storage available nahi hai - tab band karte hi files gayab ho jaayengi",
+  "folder.error": "Yeh file add nahi ki ja saki",
+  "folder.bg.open": "Meri images",
+  "folder.bg.title": "Meri images",
+  "folder.bg.hint": "Tum upload kiya hua images. Naya add karne ke liye \\\"+\\\" dabao",
+  "folder.block.open": "Meri blocks",
+  "folder.block.title": "Meri blocks",
+  "folder.block.hint": "Sabhi faces ke liye ek image use ki jaati hai. Ya teen files select karo jinka naam ..._top, ..._side aur ..._bottom ho",
+  "folder.block.error": "Ek image chuno, ya aisi files chuno jiska ant _top, _side ya _bottom se ho",
+  "folder.emote.open": "Meri emotes",
+  "folder.emote.title": "Meri emotes",
+  "folder.emote.hint": "Ek emote .json file chuno aur, agar chaho, ek icon image (.png) wahi dialog me",
+  "folder.emote.icon": "Icon badlo",
+
+  "ui.hide": "Interface chupao (H)",
+  "ui.show": "Interface dikhao (H)",
+
+  "shot.title": "Screenshot save karo (transparent background ke liye Shift dabaye rakho)",
+  "shot.error": "Screenshot save nahi kiya ja saka"
 }

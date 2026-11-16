@@ -59,7 +59,7 @@
 
   "emote.button": "감정표현",
   "emote.title": "감정표현",
-  "emote.hint": "감정표현을 선택하거나 .json 파일을 업로드하세요",
+  "emote.hint": "이모트를 선택하거나 \\\"내 이모트\\\"를 열어 나만의 이모트를 추가하세요",
   "emote.stop": "감정표현 중지",
   "emote.test": "내 감정표현 테스트",
   "emote.empty": "감정표현을 찾을 수 없음 (emotes/ 폴더)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "얀데레 포즈 (악몽)",
   "emote.name.SPE_Zoro_Pose": "조로 포즈 (멀티버스) (원피스)",
 
+  "emote.by": "제작: %s",
+  "emote.search_placeholder": "이모트 검색...",
+  "emote.no_results": "이모트를 찾을 수 없습니다",
+
   "person.Артур": "아서",
   "person.Вайкату": "와이카투",
   "person.Виакор": "비아코르",
@@ -359,11 +363,39 @@
   "block.planks": "참나무 판자",
   "block.netherrack": "네더랙",
   "block.end_stone": "엔드 돌",
+  "block.plain": "텍스처 없음",
 
   "bgimg.name.day": "낮",
   "bgimg.name.end": "엔드",
   "bgimg.name.nether": "네더",
   "bgimg.name.night": "밤",
   "bgimg.name.snow": "눈",
-  "bgimg.name.sunset": "일몰"
+  "bgimg.name.sunset": "일몰",
+
+  "blocks.empty": "아직 블록이 없습니다 - blocks/ 폴더에 텍스처를 넣거나 직접 추가하세요",
+
+  "folder.add": "추가",
+  "folder.delete": "삭제",
+  "folder.delete_confirm": "폴더에서 \\\"%s\\\"을(를) 삭제하시겠습니까?",
+  "folder.empty": "아직 아무것도 없습니다 - \\\"+\\\"를 눌러 첫 번째 파일을 추가하세요",
+  "folder.local_note": "파일은 이 브라우저에만 저장됩니다",
+  "folder.memory_only": "브라우저 저장소를 사용할 수 없습니다. 탭을 닫으면 파일이 사라집니다.",
+  "folder.error": "이 파일을 추가할 수 없습니다",
+  "folder.bg.open": "내 이미지",
+  "folder.bg.title": "내 이미지",
+  "folder.bg.hint": "업로드한 이미지입니다. 새 이미지를 추가하려면 \\\"+\\\"를 누르세요",
+  "folder.block.open": "내 블록",
+  "folder.block.title": "내 블록",
+  "folder.block.hint": "모든 면에 하나의 이미지가 사용됩니다. 또는 ..._top, ..._side, ..._bottom 이름의 파일 세 개를 선택하세요",
+  "folder.block.error": "이미지 하나 또는 _top, _side, _bottom으로 끝나는 파일을 선택하세요",
+  "folder.emote.open": "내 이모트",
+  "folder.emote.title": "내 이모트",
+  "folder.emote.hint": "이모트 .json 파일과 원하시는 경우 아이콘 이미지(.png)를 동일한 대화상자에서 선택하세요",
+  "folder.emote.icon": "아이콘 변경",
+
+  "ui.hide": "인터페이스 숨기기 (H)",
+  "ui.show": "인터페이스 표시 (H)",
+
+  "shot.title": "스크린샷 저장 (투명 배경을 원하면 Shift 키를 누르세요)",
+  "shot.error": "스크린샷을 저장할 수 없습니다"
 }

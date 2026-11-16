@@ -59,7 +59,7 @@
 
   "emote.button": "Binkadilu",
   "emote.title": "Binkadilu",
-  "emote.hint": "Pona nkadilu to kotisa mukanda na nge ya .json",
+  "emote.hint": "Poná emote to fungolá \\\"Ba-emote na mono\\\" samu na kubakisa ya nge mosi",
   "emote.stop": "Sukisa nkadilu",
   "emote.test": "Meka nkadilu na nge mosi",
   "emote.empty": "Binkadilu bimonekaka ve (mukanda emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Ntelama ya Yandere (Bandosi)",
   "emote.name.SPE_Zoro_Pose": "Ntelama ya Zoro (Banza mingi) (One Piece)",
 
+  "emote.by": "ya %s",
+  "emote.search_placeholder": "Posa bilembo...",
+  "emote.no_results": "Bilembo ve ku monana",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viyakor",
@@ -359,11 +363,39 @@
   "block.planks": "Mabaya ya nti ya chêne",
   "block.netherrack": "Ditadi ya Nether",
   "block.end_stone": "Ditadi ya End",
+  "block.plain": "Tekstur ve",
 
   "bgimg.name.day": "Mwini",
   "bgimg.name.end": "Nsuka",
   "bgimg.name.nether": "Bilungi",
   "bgimg.name.night": "Mpimpa",
   "bgimg.name.snow": "Mvula ya mpembe",
-  "bgimg.name.sunset": "Ndinda ya ntangu"
+  "bgimg.name.sunset": "Ndinda ya ntangu",
+
+  "blocks.empty": "Bilembo ve nate - tula textur na kati ya fɔlɔdɛ blocks/ to yika ya nge mosi",
+
+  "folder.add": "Yika",
+  "folder.delete": "Katula",
+  "folder.delete_confirm": "Ngeye kusala \\\"%s\\\" na dosye na nge?",
+  "folder.empty": "Kima ve kele awa ntete ve - finama \\\"+\\\" sambu na kuyika fisyé na nge ya ntete",
+  "folder.local_note": "Mikanda ke bumba kaka na browser yina",
+  "folder.memory_only": "Luveka ya browser kele ve - mikanda lenda bika ntangu nge ta vanda tab",
+  "folder.error": "Lenda ve kuyika file yayi",
+  "folder.bg.open": "Bifu ya mono",
+  "folder.bg.title": "Bifu ya mono",
+  "folder.bg.hint": "Bilembo ya bifwanisu yina nge me kotisa. Finama \\\"+\\\" sambu na kuyika ya mpa",
+  "folder.block.open": "Bifu ya blocks",
+  "folder.block.title": "Bifu ya blocks",
+  "folder.block.hint": "Bifu mosi ke sadila sambu na bilongi yonso. To baka mikanda tatu ya zina ..._top, ..._side mpe ..._bottom",
+  "folder.block.error": "Baka bifu mosi, to mikanda ke manisa na _top, _side to _bottom",
+  "folder.emote.open": "Bilembo ya mono",
+  "folder.emote.title": "Bilembo ya mono",
+  "folder.emote.hint": "Baka file .json ya emote mpe, kana nge ke zola, kifwani ya icon (.png) na dialog mosi",
+  "folder.emote.icon": "Baka icon ya sika",
+
+  "ui.hide": "Tumika interface (H)",
+  "ui.show": "Monika interface (H)",
+
+  "shot.title": "Bumba kifwani ya ekrani (simba Shift sambu na kuvanda na nima ya kumonika)",
+  "shot.error": "Lenda ve bumba kifwani ya ekrani"
 }

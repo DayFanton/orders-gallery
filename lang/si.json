@@ -60,7 +60,7 @@
 
   "emote.button": "හැඟීම්",
   "emote.title": "හැඟීම්",
-  "emote.hint": "හැඟීමක් තෝරන්න හෝ ඔබේම .json ගොනුවක් පූරණය කරන්න",
+  "emote.hint": "ඉමෝට් එකක් තෝරන්න, නැතහොත් ඔබේම එකක් එක් කිරීමට \\\"මගේ ඉමෝට්\\\" විවෘත කරන්න",
   "emote.stop": "හැඟීම නවත්වන්න",
   "emote.test": "ඔබේම හැඟීම පරීක්ෂා කරන්න",
   "emote.empty": "හැඟීම් හමු නොවීය (emotes/ ෆෝල්ඩරය)",
@@ -98,6 +98,7 @@
   "block.planks": "ඕක් ලෑලි",
   "block.netherrack": "නෙදර්‍රැක්",
   "block.end_stone": "එන්ඩ් ගල්",
+  "block.plain": "වයනයක් නැත",
 
   "mobile.gallery": "📁 ගැලරිය",
   "mobile.settings": "⚙️ සැකසුම්",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "යැන්ඩරේ ඉරියව්ව (බියකරු සිහින)",
   "emote.name.SPE_Zoro_Pose": "සොරෝ ඉරියව්ව (බහු විශ්වය) (One Piece)",
 
+  "emote.by": "%s විසිනි",
+  "emote.search_placeholder": "ඉමෝට් සොයන්න...",
+  "emote.no_results": "කිසිදු ඉමෝට් එකක් හමු නොවීය",
+
   "person.Артур": "ආතර්",
   "person.Вайкату": "වයිකටු",
   "person.Виакор": "වියාකෝර්",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "නෙදර්",
   "bgimg.name.night": "රාත්‍රිය",
   "bgimg.name.snow": "හිම",
-  "bgimg.name.sunset": "හිරු බැස යෑම"
+  "bgimg.name.sunset": "හිරු බැස යෑම",
+
+  "blocks.empty": "තවමත් බ්ලොක් නැත - blocks/ საქടියට වයනය දමන්න හෝ ඔබේම එකක් එක් කරන්න",
+
+  "folder.add": "එකතු කරන්න",
+  "folder.delete": "ඉවත් කරන්න",
+  "folder.delete_confirm": "ඔබගේ ෆෝල්ඩරයෙන් \\\"%s\\\" මකා දැමීමට අවශ්‍යද?",
+  "folder.empty": "මෙහි තවම කිසිවක් නැත - ඔබේ පළමු ගොනුව එක් කිරීමට \\\"+\\\" ඔබන්න",
+  "folder.local_note": "ගොනු මෙම බ්‍රව්සරයේ පමණක් ගබඩා කර ඇත",
+  "folder.memory_only": "බ්‍රව්සරයේ ගබඩාව නොමැත - ටැබය වැසූ විට ගොනු අਲෝප වනු ඇත",
+  "folder.error": "මෙම ගොනුව එකතු කිරීමට නොහැකි විය",
+  "folder.bg.open": "මගේ පින්තූර",
+  "folder.bg.title": "මගේ පින්තූර",
+  "folder.bg.hint": "ඔබ උඩුගත කළ රූප. නව රූපයක් එක් කිරීමට \\\"+\\\" ඔබන්න",
+  "folder.block.open": "මගේ බ්ලොක්",
+  "folder.block.title": "මගේ බ්ලොක්",
+  "folder.block.hint": "සියලුම මුහුණු සඳහා එක් පින්තූරයක් භාවිතා කරයි. නැතහොත් ..._top, ..._side සහ ..._bottom නම් ගොනු තුනක් තෝරන්න",
+  "folder.block.error": "පින්තූරයක් හෝ _top, _side හෝ _bottom වලින් අවසන් වන ගොනු තෝරන්න",
+  "folder.emote.open": "මගේ ඉමෝට්",
+  "folder.emote.title": "මගේ ඉමෝට්",
+  "folder.emote.hint": "emote .json ගොනුවක් සහ ඔබට අවශ්‍ය නම් එම සංවාද කවුළුවෙන්ම අයිකਨ පින්තූරයක් (.png) තෝරන්න",
+  "folder.emote.icon": "අයිකනය වෙනස් කරන්න",
+
+  "ui.hide": "අතුරු මුහුණත සඟවන්න (H)",
+  "ui.show": "අතුරු මුහුණත පෙන්වන්න (H)",
+
+  "shot.title": "තිර රුව සුරකින්න (විනිවිද පෙනෙන පසුබිමක් සඳහා Shift ඔබාගෙන සිටින්න)",
+  "shot.error": "තිර රුව සුර키මට නොහැකි විය"
 }

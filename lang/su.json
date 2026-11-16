@@ -59,7 +59,7 @@
 
   "emote.button": "Émosi",
   "emote.title": "Émosi",
-  "emote.hint": "Pilih émosi atanapi muatkeun file .json anjeun sorangan",
+  "emote.hint": "Pilih emote atawa buka \\\"Emote kuring\\\" pikeun nambahkeun emote sorangan",
   "emote.stop": "Eureunkeun émosi",
   "emote.test": "Coba émosi anjeun sorangan",
   "emote.empty": "Teu aya émosi kapanggih (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose Yandere (Impian goréng)",
   "emote.name.SPE_Zoro_Pose": "Pose Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "ku %s",
+  "emote.search_placeholder": "Milarian émot...",
+  "emote.no_results": "Teu aya émot anu kapinggih",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Papan kai sélaéh",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
+  "block.plain": "Teu aya tékstur",
 
   "bgimg.name.day": "Beurang",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Peuting",
   "bgimg.name.snow": "Salju",
-  "bgimg.name.sunset": "Panonpoé surup"
+  "bgimg.name.sunset": "Panonpoé surup",
+
+  "blocks.empty": "Teu aya blok - lebetkeun tékstur kana polder blocks/ atanapi tambahkeun nu anjeun",
+
+  "folder.add": "Tambahkeun",
+  "folder.delete": "Hapus",
+  "folder.delete_confirm": "Hapus \\\"%s\\\" tina polder anjeun?",
+  "folder.empty": "Can aya nanaon di dieu - pencét \\\"+\\\" pikeun nambahkeun berkas munggaran anjeun",
+  "folder.local_note": "Berkas disimpen ngan ukur dina panyungsi ieu",
+  "folder.memory_only": "Panyimpenan panyungsi teu sadia - berkas bakal leungit nalika anjeun nutup tab",
+  "folder.error": "Teu tiasa nambahkeun berkas ieu",
+  "folder.bg.open": "Gambar kuring",
+  "folder.bg.title": "Gambar kuring",
+  "folder.bg.hint": "Gambar anu geus diunggah. Pencét \\\"+\\\" pikeun nambahkeun gambar anyar",
+  "folder.block.open": "Blok kuring",
+  "folder.block.title": "Blok kuring",
+  "folder.block.hint": "Hiji gambar dipaké pikeun sakabéh raray. Atawa pilih tilu berkas nu ngaranna ..._top, ..._side jeung ..._bottom",
+  "folder.block.error": "Pilih hiji gambar, atawa berkas nu tukarna _top, _side atawa _bottom",
+  "folder.emote.open": "Émot kuring",
+  "folder.emote.title": "Émot kuring",
+  "folder.emote.hint": "Pilih berkas .json émot jeung, upama miharep, gambar ikon (.png) dina dialog nu sarua",
+  "folder.emote.icon": "Robah ikon",
+
+  "ui.hide": "Sumputkeun antarbeungeut (H)",
+  "ui.show": "Témbongkeun antarbeungeut (H)",
+
+  "shot.title": "Simpen tangkapan layar (tahan Shift pikeun latar tukang transparan)",
+  "shot.error": "Teu tiasa nyimpen tangkapan layar"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Emote",
   "emote.title": "Emote",
-  "emote.hint": "Pilih emote atau unggah file .json milikmu",
+  "emote.hint": "Pilih emote atau buka \\\"Emote saya\\\" untuk menambahkan emote sendiri",
   "emote.stop": "Hentikan emote",
   "emote.test": "Uji emote milikmu",
   "emote.empty": "Emote tidak ditemukan (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose Yandere (Mimpi Buruk)",
   "emote.name.SPE_Zoro_Pose": "Pose Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "oleh %s",
+  "emote.search_placeholder": "Cari emote...",
+  "emote.no_results": "Tidak ada emote yang ditemukan",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Papan kayu ek",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
+  "block.plain": "Tanpa tekstur",
 
   "bgimg.name.day": "Siang",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Malam",
   "bgimg.name.snow": "Salju",
-  "bgimg.name.sunset": "Matahari terbenam"
+  "bgimg.name.sunset": "Matahari terbenam",
+
+  "blocks.empty": "Belum ada blok - letakkan tekstur ke dalam folder blocks/ atau tambahkan sendiri",
+
+  "folder.add": "Tambahkan",
+  "folder.delete": "Hapus",
+  "folder.delete_confirm": "Hapus \\\"%s\\\" dari folder Anda?",
+  "folder.empty": "Belum ada apa pun di sini - tekan \\\"+\\\" untuk menambahkan file pertama Anda",
+  "folder.local_note": "Berkas hanya disimpan di peramban ini",
+  "folder.memory_only": "Penyimpanan peramban tidak tersedia - berkas akan hilang saat Anda menutup tab",
+  "folder.error": "Tidak dapat menambahkan berkas ini",
+  "folder.bg.open": "Gambar saya",
+  "folder.bg.title": "Gambar saya",
+  "folder.bg.hint": "Gambar yang Anda unggah. Tekan \\\"+\\\" untuk menambahkan gambar baru",
+  "folder.block.open": "Blok saya",
+  "folder.block.title": "Blok saya",
+  "folder.block.hint": "Satu gambar digunakan untuk semua sisi. Atau pilih tiga file bernama ..._top, ..._side, dan ..._bottom",
+  "folder.block.error": "Pilih satu gambar, atau file yang berakhiran _top, _side, atau _bottom",
+  "folder.emote.open": "Emote saya",
+  "folder.emote.title": "Emote saya",
+  "folder.emote.hint": "Pilih file .json emote dan, jika mau, gambar ikon (.png) dalam dialog yang sama",
+  "folder.emote.icon": "Ubah ikon",
+
+  "ui.hide": "Sembunyikan antarmuka (H)",
+  "ui.show": "Tampilkan antarmuka (H)",
+
+  "shot.title": "Simpan tangkapan layar (tahan Shift untuk latar belakang transparan)",
+  "shot.error": "Tidak dapat menyimpan tangkapan layar"
 }

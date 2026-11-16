@@ -60,7 +60,7 @@
 
   "emote.button": "Hisia",
   "emote.title": "Hisia",
-  "emote.hint": "Chagula hisia au pakia faili yako ya .json",
+  "emote.hint": "Saku emote au fungula \\\"Emote syangu\\\" ili ungeze yako",
   "emote.stop": "Simamisha hisia",
   "emote.test": "Jaribu hisia yako mwenyewe",
   "emote.empty": "Paliwambone hisia (folda ya emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Mbao za mwaloni",
   "block.netherrack": "Liyanga la Nether",
   "block.end_stone": "Liyanga la End",
+  "block.plain": "Pangasiman texture",
 
   "mobile.gallery": "📁 Nyumba ya Maimbo",
   "mobile.settings": "⚙️ Mipangilio",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Mkao wa Yandere (Ndoto Mbaya)",
   "emote.name.SPE_Zoro_Pose": "Mkao wa Zoro (Ulimwengu Mwingi) (One Piece)",
 
+  "emote.by": "na %s",
+  "emote.search_placeholder": "Kupapia ma-emote...",
+  "emote.no_results": "Pangasiman ma-emote",
+
   "person.Артур": "Aturi",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viakori",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Moto",
   "bgimg.name.night": "Chilo",
   "bgimg.name.snow": "Theluji",
-  "bgimg.name.sunset": "Kuhwa kwa liduva"
+  "bgimg.name.sunset": "Kuhwa kwa liduva",
+
+  "blocks.empty": "Pangasiman ma-block - sika ma-texture mu folder ja blocks/ kapena musaje ginu",
+
+  "folder.add": "Saje",
+  "folder.delete": "Sangula",
+  "folder.delete_confirm": "Unnombolele \\\"%s\\\" mu folda jinu?",
+  "folder.empty": "Nanga kili kanema apa - konyani \\\"+\\\" kuongeza faili yenu ya kwanza",
+  "folder.local_note": "Masengo gasungidwa mu browser ajino geca",
+  "folder.memory_only": "Browser storage pangasiman - masengo gachijika naga mwaŋgula tab",
+  "folder.error": "Pangasiman kwanja masengo ajino",
+  "folder.bg.open": "Masengo gangu",
+  "folder.bg.title": "Masengo gangu",
+  "folder.bg.hint": "Picha zinu ziliyo upakile. Konyani \\\"+\\\" kuongeza picha mpya",
+  "folder.block.open": "Ma-block gangu",
+  "folder.block.title": "Ma-block gangu",
+  "folder.block.hint": "Masengo gamo gasakaga mu misango josambo. Kapena kusaka masengo gatatu gasyo ..._top, ..._side ni ..._bottom",
+  "folder.block.error": "Kusaka masengo gamo, kapena masengo gasyo _top, _side ni _bottom",
+  "folder.emote.open": "Ma-emote gangu",
+  "folder.emote.title": "Ma-emote gangu",
+  "folder.emote.hint": "Kusaka masengo gakesi ga .json ga emote ni, naga mwangala, masengo ga icon (.png) mu browser ajino jili jemu",
+  "folder.emote.icon": "Kushintsha icon",
+
+  "ui.hide": "Chisisi interface (H)",
+  "ui.show": "Langanya interface (H)",
+
+  "shot.title": "Sungani chiwulili cha pa sikilini (kamulani Shift kuti mpate kunyuma kwakuwoneka)",
+  "shot.error": "Pangasiman kusungani chiwulili cha pa sikilini"
 }

@@ -60,7 +60,7 @@
 
   "emote.button": "Fihetseham-po",
   "emote.title": "Fihetseham-po",
-  "emote.hint": "Misafidiana fihetseham-po na ampidiro ny rakitra .json anao",
+  "emote.hint": "Misafidiana emote na sokafy ny \\\"Emote-ko\\\" mba hanampiana ny anao",
   "emote.stop": "Ajanony ny fihetseham-po",
   "emote.test": "Andramo ny fihetseham-ponao",
   "emote.empty": "Tsy misy fihetseham-po hita (lahatahiry emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Hazo fisaka oaka",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Vaton'ny End",
+  "block.plain": "Tsy misy rafitra",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Fikirana",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Paozin'i Yandere (Nofy ratsy)",
   "emote.name.SPE_Zoro_Pose": "Paozin'i Zoro (Tontolo maro) (One Piece)",
 
+  "emote.by": "nataon'i %s",
+  "emote.search_placeholder": "Mitady emo...",
+  "emote.no_results": "Tsy misy emo hita",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Afobe",
   "bgimg.name.night": "Alina",
   "bgimg.name.snow": "Oram-panala",
-  "bgimg.name.sunset": "Filentehan'ny masoandro"
+  "bgimg.name.sunset": "Filentehan'ny masoandro",
+
+  "blocks.empty": "Tsy misy blôka mbola - apetraho ao amin'ny fanaovana blocks/ ny rafitra na ampio ny anao",
+
+  "folder.add": "Ampio",
+  "folder.delete": "Fafao",
+  "folder.delete_confirm": "Te hamafa ny \\\"%s\\\" ao amin'ny lahatahirinao ve ianao?",
+  "folder.empty": "Tsy mbola misy na inona na inona eto - tsindrio \\\"+\\\" mba hanampiana ny rakitrao voalohany",
+  "folder.local_note": "Ao amin'ity browser ity ihany no misy ny rakitra",
+  "folder.memory_only": "Tsy misy tahiry amin'ny browser - ho levona ny rakitra rehefa manidy ny tab ianao",
+  "folder.error": "Tsy azo nampiana ity rakitra ity",
+  "folder.bg.open": "Ny sariko",
+  "folder.bg.title": "Ny sariko",
+  "folder.bg.hint": "Sary nampidirinao. Tsindrio \\\"+\\\" mba hanampiana sary vaovao",
+  "folder.block.open": "Ny blôkiko",
+  "folder.block.title": "Ny blôkiko",
+  "folder.block.hint": "Sarika tokana no ampiasaina amin'ny tarehy rehetra. Na misafidy rakitra telo mitondra ny anarana ..._top, ..._side ary ..._bottom",
+  "folder.block.error": "Safidio ny sarika tokana, na rakitra mifarana amin'ny _top, _side na _bottom",
+  "folder.emote.open": "Ny emoiko",
+  "folder.emote.title": "Ny emoiko",
+  "folder.emote.hint": "Safidio ny rakitra .json an'ny emote ary, raha tianao, ny sarin'ny kisary (.png) ao amin'ny resaka iray ihany",
+  "folder.emote.icon": "Ovay ny kisary",
+
+  "ui.hide": "Afeno ny endrika (H)",
+  "ui.show": "Asehoy ny endrika (H)",
+
+  "shot.title": "Tehirizo ny pikantsary (tazomy ny Shift mba hahazoana ambadika mangarahara)",
+  "shot.error": "Tsy azo ntehirizina ilay pikantsary"
 }

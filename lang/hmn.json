@@ -60,7 +60,7 @@
 
   "emote.button": "Kev ua yeeb yam",
   "emote.title": "Kev ua yeeb yam",
-  "emote.hint": "Xaiv ib qho kev ua yeeb yam los yog thauj koj tus kheej cov ntaub ntawv .json",
+  "emote.hint": "Xaiv ib lub emote lossis qhib \\\"Kuv cov emote\\\" ntxiv koj li",
   "emote.stop": "Tsum kev ua yeeb yam",
   "emote.test": "Sim koj tus kheej kev ua yeeb yam",
   "emote.empty": "Tsis pom kev ua yeeb yam (lub nplaub tshev emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Txiag ntoo qhib",
   "block.netherrack": "Pob zeb Netherrack",
   "block.end_stone": "Pob zeb End",
+  "block.plain": "Tsis muaj duab",
 
   "mobile.gallery": "📁 Chaw Sau Duab",
   "mobile.settings": "⚙️ Kev Teeb Tsa",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Kev Sawv (Npau Suav Phem)",
   "emote.name.SPE_Zoro_Pose": "Zoro Kev Sawv (Ntau Lub Ntiaj Teb) (One Piece)",
 
+  "emote.by": "los ntawm %s",
+  "emote.search_placeholder": "Nrhiav cov duab...",
+  "emote.no_results": "Tsis pom cov duab",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Tub tuag teb",
   "bgimg.name.night": "Hmo ntuj",
   "bgimg.name.snow": "Daus",
-  "bgimg.name.sunset": "Hnub poob"
+  "bgimg.name.sunset": "Hnub poob",
+
+  "blocks.empty": "Tsis muaj block tsis tau - muab cov duab tso rau hauv blocks/ folder lossis ntxiv koj li",
+
+  "folder.add": "Ntxiv",
+  "folder.delete": "Rho tawm",
+  "folder.delete_confirm": "Koj puas xav rho \\\"%s\\\" tawm ntawm koj daim nplaub tshev?",
+  "folder.empty": "Tseem tsis tau muaj dab tsi ntawm no - nias \\\"+\\\" ntxiv koj thawj daim ntawv",
+  "folder.local_note": "Cov ntaub ntawv khaws cia rau hauv browser no xwb",
+  "folder.memory_only": "Browser storage tsis muaj - cov ntaub ntawv yuav ploj mus thaum koj kaw tab",
+  "folder.error": "Tsis tuaj yeem ntxiv cov ntaub ntawv no",
+  "folder.bg.open": "Kuv cov duab",
+  "folder.bg.title": "Kuv cov duab",
+  "folder.bg.hint": "Cov duab uas koj tau muab tso. Nias \\\"+\\\" ntxiv ib daim duab tshiab",
+  "folder.block.open": "Kuv cov block",
+  "folder.block.title": "Kuv cov block",
+  "folder.block.hint": "Ib daim duab siv rau tag nrho cov ntsej muag. Los yog xaiv peb cov ntaub ntawv npe hu ua ..._top, ..._side thiab ..._bottom",
+  "folder.block.error": "Xaiv ib daim duab, los yog cov ntaub ntawv xaus nrog _top, _side los yog _bottom",
+  "folder.emote.open": "Kuv cov emote",
+  "folder.emote.title": "Kuv cov emote",
+  "folder.emote.hint": "Xaiv ib daim ntaub ntawv emote .json thiab, yog koj xav tau, ib daim duab icon (.png) nyob rau hauv tib lub dialog",
+  "folder.emote.icon": "Hloov icon",
+
+  "ui.hide": "Nkaum qhov screen (H)",
+  "ui.show": "Qhia qhov screen (H)",
+
+  "shot.title": "Txuag daim duab screen (nias Shift tuav kom tau keeb kwm pob tshab)",
+  "shot.error": "Tsis tuaj yeem tso npe daim duab screen"
 }

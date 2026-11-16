@@ -59,7 +59,7 @@
 
   "emote.button": "Tembiasa",
   "emote.title": "Tembiasa",
-  "emote.hint": "Eiporavo peteĩ tembiasa térã ehupi ne marandurenda .json",
+  "emote.hint": "Eiporavo peteĩ emote térã eike \\\"Che emote-kuéra\\\"-pe emoĩ hag̃ua nde mba'éva",
   "emote.stop": "Ejoko tembiasa",
   "emote.test": "Eha'ã ne tembiasa tee",
   "emote.empty": "Ndojejuhúi tembiasa (emotes/ ñongatuha)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Ñembo'y (Kerai)",
   "emote.name.SPE_Zoro_Pose": "Zoro Ñembo'y (Arapyeta) (One Piece)",
 
+  "emote.by": "%s rembiapo",
+  "emote.search_placeholder": "Ñepyru emote...",
+  "emote.no_results": "Ndahetéi emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Yvyra pe",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End Ita",
+  "block.plain": "Ndahetéi textura",
 
   "bgimg.name.day": "Ára",
   "bgimg.name.end": "Paha",
   "bgimg.name.nether": "Añaretã",
   "bgimg.name.night": "Pyhare",
   "bgimg.name.snow": "Yrypy'a",
-  "bgimg.name.sunset": "Kuarahy reike"
+  "bgimg.name.sunset": "Kuarahy reike",
+
+  "blocks.empty": "Ndahetéi block - emongoi texture umi blocks/ folder-pe térã emongoi ndeva",
+
+  "folder.add": "Emongoi",
+  "folder.delete": "Mbogue",
+  "folder.delete_confirm": "¿Reipotapa rembogue \\\"%s\\\" ne carpeta-gui?",
+  "folder.empty": "Ko'ápe ndaipóri gueteri mba'eve - eikutu \\\"+\\\" emoĩ hag̃ua ne vore peteĩha",
+  "folder.local_note": "Umi mba'ekuaarã oñongatupaite ko browser-pe añoite",
+  "folder.memory_only": "Browser storage noĩri - umi mba'ekuaarã omanoéta reñoty vove pe tab",
+  "folder.error": "Ndaikatúi omoĩ ko mba'ekuaarã",
+  "folder.bg.open": "Che ra'anga",
+  "folder.bg.title": "Che ra'anga",
+  "folder.bg.hint": "Ta'ãnga emoĩva. Eikutu \\\"+\\\" emoĩ hag̃ua ta'ãnga pyahu",
+  "folder.block.open": "Che block",
+  "folder.block.title": "Che block",
+  "folder.block.hint": "Peteĩva ta'anga ojejapo opaite henda guive. Térã eiporavo mbohapy file hérava ..._top, ..._side ha ..._bottom",
+  "folder.block.error": "Eiporavo peteĩva ta'anga, térã umi file opáva _top, _side térã _bottom-pe",
+  "folder.emote.open": "Che emote",
+  "folder.emote.title": "Che emote",
+  "folder.emote.hint": "Eiporavo peteĩ emote .json file ha, reipotárõ, peteĩ icon image (.png) pe dialog peteĩvape",
+  "folder.emote.icon": "Emboguejy icon",
+
+  "ui.hide": "Emonguete interface (H)",
+  "ui.show": "Hechauka interface (H)",
+
+  "shot.title": "Eñongatu pantalla ra'anga (ejoko Shift ikatu hag̃uáicha hapykue hesakã)",
+  "shot.error": "Ndaikatúi eñongatu pe pantalla ra'anga"
 }

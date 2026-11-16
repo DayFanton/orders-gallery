@@ -59,7 +59,7 @@
 
   "emote.button": "Eleet",
   "emote.title": "Eleet",
-  "emote.hint": "Valitse ele tai lataa oma .json-tiedostosi",
+  "emote.hint": "Valitse emote tai avaa \\\"Omat emote-reaktiot\\\" lisätäksesi oman",
   "emote.stop": "Lopeta ele",
   "emote.test": "Testaa omaa elettä",
   "emote.empty": "Eleitä ei löytynyt (kansio emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yanderen poseeraus (Painajaiset)",
   "emote.name.SPE_Zoro_Pose": "Zoron poseeraus (Multiversumi) (One Piece)",
 
+  "emote.by": "tekijä: %s",
+  "emote.search_placeholder": "Etsi hymiöitä...",
+  "emote.no_results": "Hymiöitä ei löytynyt",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Tammilankut",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End-kivi",
+  "block.plain": "Ei tekstuuria",
 
   "bgimg.name.day": "Päivä",
   "bgimg.name.end": "Ääri",
   "bgimg.name.nether": "Hornan",
   "bgimg.name.night": "Yö",
   "bgimg.name.snow": "Lumi",
-  "bgimg.name.sunset": "Auringonlasku"
+  "bgimg.name.sunset": "Auringonlasku",
+
+  "blocks.empty": "Ei lohkoja vielä - lisää tekstuurit blocks/ kansioon tai lisää omasi",
+
+  "folder.add": "Lisää",
+  "folder.delete": "Poista",
+  "folder.delete_confirm": "Poistetaanko \\\"%s\\\" kansiostasi?",
+  "folder.empty": "Täällä ei ole vielä mitään - lisää ensimmäinen tiedostosi painamalla \\\"+\\",
+  "folder.local_note": "Tiedostot tallennetaan vain tähän selaimeen",
+  "folder.memory_only": "Selaimen tallennustila ei ole käytettävissä - tiedostot häviävät, kun suljet välilehden",
+  "folder.error": "Tätä tiedostoa ei voitu lisätä",
+  "folder.bg.open": "Omat kuvani",
+  "folder.bg.title": "Omat kuvani",
+  "folder.bg.hint": "Ladatut kuvasi. Lisää uusi kuva painamalla \\\"+\\",
+  "folder.block.open": "Omat blokit",
+  "folder.block.title": "Omat blokit",
+  "folder.block.hint": "Kaikille pinnoille käytetään yhtä kuvaa. Tai valitse kolme tiedostoa nimeltä ..._top, ..._side ja ..._bottom",
+  "folder.block.error": "Valitse yksi kuva tai tiedostot, joiden pääte on _top, _side tai _bottom",
+  "folder.emote.open": "Omat emote-liikkeet",
+  "folder.emote.title": "Omat emote-liikkeet",
+  "folder.emote.hint": "Valitse emote .json -tiedosto ja halutessasi kuvakekuva (.png) samassa ikkunassa",
+  "folder.emote.icon": "Vaihda kuvake",
+
+  "ui.hide": "Piilota käyttöliittymä (H)",
+  "ui.show": "Näytä käyttöliittymä (H)",
+
+  "shot.title": "Tallenna kuvakaappaus (pidä Shift painettuna läpinäkyvää taustaa varten)",
+  "shot.error": "Kuvakaappausta ei voitu tallentaa"
 }

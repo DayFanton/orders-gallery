@@ -59,7 +59,7 @@
 
   "emote.button": "Эмоции",
   "emote.title": "Эмоции",
-  "emote.hint": "Выберите эмоцию или загрузите свой .json файл",
+  "emote.hint": "Выберите эмоцию или откройте \\\"Мои эмоции\\\", чтобы добавить свою",
   "emote.stop": "Прервать эмоцию",
   "emote.test": "Проверить свою эмоцию",
   "emote.empty": "Эмоции не найдены (папка emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Поза Яндере (Кошмары)",
   "emote.name.SPE_Zoro_Pose": "Стойка Зоро (Мульти вселенная) (One Piece)",
 
+  "emote.by": "автор: %s",
+  "emote.search_placeholder": "Поиск эмоций...",
+  "emote.no_results": "Эмоции не найдены",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
@@ -359,11 +363,39 @@
   "block.planks": "Дубовые доски",
   "block.netherrack": "Адский камень",
   "block.end_stone": "Камень Края",
+  "block.plain": "Без текстуры",
 
   "bgimg.name.day": "День",
   "bgimg.name.end": "Энд",
   "bgimg.name.nether": "Незер",
   "bgimg.name.night": "Ночь",
   "bgimg.name.snow": "Снег",
-  "bgimg.name.sunset": "Закат"
+  "bgimg.name.sunset": "Закат",
+
+  "blocks.empty": "Блоков пока нет — поместите текстуры в папку blocks/ или добавьте свои",
+
+  "folder.add": "Добавить",
+  "folder.delete": "Удалить",
+  "folder.delete_confirm": "Удалить \\\"%s\\\" из вашей папки?",
+  "folder.empty": "Здесь пока ничего нет — нажмите \\\"+\\\", чтобы добавить первый файл",
+  "folder.local_note": "Файлы хранятся только в этом браузере",
+  "folder.memory_only": "Хранилище браузера недоступно — файлы исчезнут при закрытии вкладки",
+  "folder.error": "Не удалось добавить этот файл",
+  "folder.bg.open": "Мои изображения",
+  "folder.bg.title": "Мои изображения",
+  "folder.bg.hint": "Загруженные вами изображения. Нажмите \\\"+\\\", чтобы добавить новое",
+  "folder.block.open": "Мои блоки",
+  "folder.block.title": "Мои блоки",
+  "folder.block.hint": "Для всех граней используется одно изображение. Или выберите три файла с именами ..._top, ..._side и ..._bottom",
+  "folder.block.error": "Выберите одно изображение или файлы, заканчивающиеся на _top, _side или _bottom",
+  "folder.emote.open": "Мои эмоции",
+  "folder.emote.title": "Мои эмоции",
+  "folder.emote.hint": "Выберите файл эмоута .json и, если хотите, файл значка (.png) в том же диалоговом окне",
+  "folder.emote.icon": "Изменить иконку",
+
+  "ui.hide": "Скрыть интерфейс (H)",
+  "ui.show": "Показать интерфейс (H)",
+
+  "shot.title": "Сохранить скриншот (удерживайте Shift для прозрачного фона)",
+  "shot.error": "Не удалось сохранить скриншот"
 }

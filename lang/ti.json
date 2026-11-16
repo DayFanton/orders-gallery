@@ -60,7 +60,7 @@
 
   "emote.button": "ስምዒታት",
   "emote.title": "ስምዒታት",
-  "emote.hint": "ስምዒት ምረጽ ወይ ናይ ባዕልኻ .json ፋይል ጽዓን",
+  "emote.hint": "ኢሞት ምረጽ ወይ ናትካ ንምውሳኽ \\\"ኢሞታተይ\\\" ክፈት",
   "emote.stop": "ስምዒት ኣቋርጽ",
   "emote.test": "ናይ ባዕልኻ ስምዒት ፈትን",
   "emote.empty": "ዝተረኽበ ስምዒት የለን (ኣቃፊ emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "ሉሕ ኦክ",
   "block.netherrack": "ኔዘርራክ",
   "block.end_stone": "እምኒ ኤንድ",
+  "block.plain": "ዝኾነ ቅርጺ የብሉን",
 
   "mobile.gallery": "📁 ጋለሪ",
   "mobile.settings": "⚙️ ቅጥዕታት",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "ኣቃውማ ያንዴሬ (ህልምታት)",
   "emote.name.SPE_Zoro_Pose": "ኣቃውማ ዞሮ (ብዙሕ ዓለማት) (One Piece)",
 
+  "emote.by": "ብ%s",
+  "emote.search_placeholder": "ስሜት ገጾ ជំនጽ...",
+  "emote.no_results": "ዝኾነ ስሜት ገጽ ኣይተረኽበን",
+
   "person.Артур": "ኣርተር",
   "person.Вайкату": "ዋይካቱ",
   "person.Виакор": "ቪያኮር",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "ሲኦል",
   "bgimg.name.night": "ለይቲ",
   "bgimg.name.snow": "በረድ",
-  "bgimg.name.sunset": "ዕራርቦ"
+  "bgimg.name.sunset": "ዕራርቦ",
+
+  "blocks.empty": "ክሳብጂጂ ብሎኮች የለዉን - ሸካራታት ኣብ blocks/ አቃፊ ኣእቱ ወይ ናትካ ወስኽ",
+
+  "folder.add": "ሓጐስ",
+  "folder.delete": "ደምስስ",
+  "folder.delete_confirm": "\\\"%s\\\" ካብ ፎልደርካ ክስረዝ ይደሊ?",
+  "folder.empty": "ኣብዚ ገና ዝኾነ ነገር የለን - ናይ መጀመርታ ፋይልካ ንምውሳኽ \\\"+\\\" ጠውቕ",
+  "folder.local_note": "ፋይላት ኣብዚ መርበብ ሓበሬታ ጥራይ እዮም ዝቕመጡ",
+  "folder.memory_only": "መርበብ ሓበሬታ መኽዘን የብሉን - ታብ ክትዓጹ እንተለኻ ፋይላት ይጠፍኡ",
+  "folder.error": "ነዚ ፋይል ክትሕዞ ኣይከኣለን",
+  "folder.bg.open": "ምስልታተይ",
+  "folder.bg.title": "ምስልታተይ",
+  "folder.bg.hint": "እቶም ዘስቀልካዮም ስእልታት። ሓድሽ ስእሊ ንምውሳኽ \\\"+\\\" ጠውቕ",
+  "folder.block.open": "ብሎካትይ",
+  "folder.block.title": "ብሎካትይ",
+  "folder.block.hint": "ንኹሉ ገጽ ሓደ ምስል'ዩ ዝጥቀመሉ። ወይ ድማ ..._top፡ ..._side ከምኡ'ውን ..._bottom ዝተባህሉ ሰለስተ ፋይላት ምረጽ",
+  "folder.block.error": "ሓደ ምስል ምረጽ፡ ወይ ድማ በቲ _top፡ _side ወይ ድማ _bottom ዝዛዘሙ ፋይላት ምረጽ",
+  "folder.emote.open": "ኤሞትታተይ",
+  "folder.emote.title": "ኤሞትታተይ",
+  "folder.emote.hint": "ኤሞት .json ፋይል ምረጽ፡ ከደሊኻ ድማ ኣብቲ ሓደ ዲያሎግ ስእሊ ኣይኮን (.png) ምረጽ",
+  "folder.emote.icon": "ኣይኮን ቀይር",
+
+  "ui.hide": "መራኸቢ ሕብረተሰብ ሓብእ (H)",
+  "ui.show": "መራኸቢ ሕብረተሰብ ኣርኢ (H)",
+
+  "shot.title": "ስክሪንሾት ዓቅብ (ንጹር ድሕረ-ባይታ ንምርካብ Shift ጸቒጥካ ሓዝ)",
+  "shot.error": "ስክሪንሾት ከምቅማጥ ኣይከኣለን"
 }

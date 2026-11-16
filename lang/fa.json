@@ -59,7 +59,7 @@
 
   "emote.button": "ایموت‌ها",
   "emote.title": "ایموت‌ها",
-  "emote.hint": "یک ایموت انتخاب کنید یا فایل json. خود را آپلود کنید",
+  "emote.hint": "یک ایموت انتخاب کنید یا برای افزودن ایموت خودتان، \\\"ایموت‌های من\\\" را باز کنید",
   "emote.stop": "متوقف کردن ایموت",
   "emote.test": "تست ایموت خود",
   "emote.empty": "هیچ ایموتی یافت نشد (پوشه emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "پز یاندره (کابوس‌ها)",
   "emote.name.SPE_Zoro_Pose": "پز زورو (چندجهانی) (وان پیس)",
 
+  "emote.by": "توسط %s",
+  "emote.search_placeholder": "جستجوی ایموت‌ها...",
+  "emote.no_results": "هیچ ایموتی پیدا نشد",
+
   "person.Артур": "آرتور",
   "person.Вайкату": "وایکاتو",
   "person.Виакор": "ویاکور",
@@ -359,11 +363,39 @@
   "block.planks": "تخته‌های بلوط",
   "block.netherrack": "سنگ ندر",
   "block.end_stone": "سنگ اند",
+  "block.plain": "بدون بافت",
 
   "bgimg.name.day": "روز",
   "bgimg.name.end": "اند",
   "bgimg.name.nether": "ندر",
   "bgimg.name.night": "شب",
   "bgimg.name.snow": "برف",
-  "bgimg.name.sunset": "غروب"
+  "bgimg.name.sunset": "غروب",
+
+  "blocks.empty": "هنوز بلوکی وجود ندارد - بافت‌ها را در پوشه blocks/ قرار دهید یا بافت خود را اضافه کنید",
+
+  "folder.add": "افزودن",
+  "folder.delete": "حذف",
+  "folder.delete_confirm": "آیا می‌خواهید \\\"%s\\\" را از پوشه خود حذف کنید؟",
+  "folder.empty": "هنوز چیزی اینجا نیست - برای افزودن اولین فایل خود، \\\"+\\\" را فشار دهید",
+  "folder.local_note": "فایل‌ها فقط در همین مرورگر ذخیره می‌شوند",
+  "folder.memory_only": "حافظه مرورگر in دسترسی نیست - با بستن تب فایل‌ها از بین خواهند رفت",
+  "folder.error": "امکان افزودن این فایل وجود نداشت",
+  "folder.bg.open": "تصاویر من",
+  "folder.bg.title": "تصاویر من",
+  "folder.bg.hint": "تصاویر بارگذاری‌شده شما. برای افزودن تصویر جدید، \\\"+\\\" را فشار دهید",
+  "folder.block.open": "بلوک‌های من",
+  "folder.block.title": "بلوک‌های من",
+  "folder.block.hint": "یک تصویر برای تمام وجوه استفاده می‌شود. یا سه فایل به نام‌های ..._top، ..._side و ..._bottom را انتخاب کنید",
+  "folder.block.error": "یک تصویر یا فایل‌های با پسوند _top، _side یا _bottom را انتخاب کنید",
+  "folder.emote.open": "ایموت‌های من",
+  "folder.emote.title": "ایموت‌های من",
+  "folder.emote.hint": "یک فایل .json ایموت و در صورت تمایل، تصویر آیکون (.png) را در همان کادر گفتگو انتخاب کنید",
+  "folder.emote.icon": "تغییر آیکون",
+
+  "ui.hide": "مخفی کردن رابط کاربری (H)",
+  "ui.show": "نمایش رابط کاربری (H)",
+
+  "shot.title": "ذخیره اسکرین‌شات (برای پس‌زمینه شفاف کلید Shift را نگه دارید)",
+  "shot.error": "امکان ذخیره اسکرین‌شات وجود نداشت"
 }

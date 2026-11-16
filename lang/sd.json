@@ -59,7 +59,7 @@
 
   "emote.button": "ايموٽس",
   "emote.title": "ايموٽس",
-  "emote.hint": "ڪو ايموٽ چونڊيو يا پنهنجو .json فائل لوڊ ڪريو",
+  "emote.hint": "هڪ ايموٽ چونڊيو يا پنهنجو ايموٽ شامل ڪرڻ لاءِ \\\"منهنجا ايموٽس\\\" کوليو",
   "emote.stop": "ايموٽ روڪيو",
   "emote.test": "پنهنجو ايموٽ چيڪ ڪريو",
   "emote.empty": "ڪو ايموٽ نه مليو (emotes/ فولڊر)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "يانديري جو پوز (بدخواب)",
   "emote.name.SPE_Zoro_Pose": "زورو جو پوز (ملٽيورس) (ون پيس)",
 
+  "emote.by": "پاران %s",
+  "emote.search_placeholder": "ايموٽس ڳوليو...",
+  "emote.no_results": "ڪي به ايموٽس نه مليا",
+
   "person.Артур": "آرٿر",
   "person.Вайкату": "وائڪاتو",
   "person.Виакор": "وياءڪور",
@@ -359,11 +363,39 @@
   "block.planks": "بلوط جا تختاتا",
   "block.netherrack": "نيدرريڪ",
   "block.end_stone": "اينڊ پٿر",
+  "block.plain": "ڪو به ٽيڪسچر ناهي",
 
   "bgimg.name.day": "ڏينهن",
   "bgimg.name.end": "پڄاڻي",
   "bgimg.name.nether": "دوزخ",
   "bgimg.name.night": "رات",
   "bgimg.name.snow": "برف",
-  "bgimg.name.sunset": "سج لٿو"
+  "bgimg.name.sunset": "سج لٿو",
+
+  "blocks.empty": "اڃا تائيد ٿيل بلاڪ ناهي - ٽيڪسچر blocks/ فولڊر ۾ رکو يا پنهنجا شامل ڪريو",
+
+  "folder.add": "شامل ڪيو",
+  "folder.delete": "ڊليٽ ڪريو",
+  "folder.delete_confirm": "ڇا توھان \\\"%s\\\" پنھنجي فولڊر مان ختم ڪرڻ چاھيو ٿا؟",
+  "folder.empty": "هتي اڃا ڪجھ به ناهي - پنهنجي پهرين فائل شامل ڪرڻ لاءِ \\\"+\\\" دٻايو",
+  "folder.local_note": "فائلون صرف هن برائوزر ۾ محفوظ آهن",
+  "folder.memory_only": "برائوزر جي اسٽوريج موجود ناهي - ٽيب بند ڪرڻ تي فائلون غائب ٿي وينديون",
+  "folder.error": "هي فائل شامل نه ٿي سگهي",
+  "folder.bg.open": "منهنجي تصويرون",
+  "folder.bg.title": "منهنجي تصويرون",
+  "folder.bg.hint": "توهان جون اپلوڊ ڪيل تصويرون. نئين تصوير شامل ڪرڻ لاءِ \\\"+\\\" دٻايو",
+  "folder.block.open": "منهنجا بلاڪ",
+  "folder.block.title": "منهنجا بلاڪ",
+  "folder.block.hint": "سڀني چهري لاءِ هڪ ئيميج استعمال ٿيندي آهي. يا ٽي فائلون چونڊيو جن جا نالا ..._top، ..._side ۽ ..._bottom آهن",
+  "folder.block.error": "ھڪ تصوير چونڊيو، يا اهڙيون فائلون جن جو انت _top، _side يا _bottom تي ٿئي",
+  "folder.emote.open": "منهنجا ايموٽس",
+  "folder.emote.title": "منهنجا ايموٽس",
+  "folder.emote.hint": "هڪ اي موٽ .json فائل چونڊيو، ۽ جيڪڏهن چاھيو ته ساڳئي ڊائلاگ ۾ هڪ آئڪن تصوير (.png) چونڊيو",
+  "folder.emote.icon": "آئیکن تبديل ڪريو",
+
+  "ui.hide": "انٽرفيس لڪايو (H)",
+  "ui.show": "انٽرفيس ڏکوءِ (H)",
+
+  "shot.title": "اسڪرين شاٽ محفوظ ڪريو (شفاف پس منظر لاءِ Shift دٻائي رکو)",
+  "shot.error": "اسڪرين شاٽ محفوظ نه ٿي سگهيو"
 }

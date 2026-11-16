@@ -60,7 +60,7 @@
 
   "emote.button": "المشاعر",
   "emote.title": "المشاعر",
-  "emote.hint": "اختر تعبيرًا أو قم بتحميل ملف .json الخاص بك",
+  "emote.hint": "إختار إيموت ولا إفتح \\\"إيموتاتي\\\" باش تزيد إيموت ديالك",
   "emote.stop": "إيقاف التعبير",
   "emote.test": "اختبار تعبيرك الخاص",
   "emote.empty": "لم يتم العثور على مشاعر (مجلد emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "ألواح خشب البلوط",
   "block.netherrack": "حجر نذير",
   "block.end_stone": "حجر النهاية",
+  "block.plain": "Nime texture",
 
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "وقفة يانديري (الكوابيس)",
   "emote.name.SPE_Zoro_Pose": "وقفة زورو (عالم متعدد) (One Piece)",
 
+  "emote.by": "%s bita",
+  "emote.search_placeholder": "Nime emotes...",
+  "emote.no_results": "Nime ma laka emotes",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "النذر",
   "bgimg.name.night": "ليل",
   "bgimg.name.snow": "ثلج",
-  "bgimg.name.sunset": "غروب الشمس"
+  "bgimg.name.sunset": "غروب الشمس",
+
+  "blocks.empty": "Nime blocks la - tura texture fi folder blocks/ wala zid bteyk",
+
+  "folder.add": "Zid",
+  "folder.delete": "Masah",
+  "folder.delete_confirm": "واش تحب تمسح \\\"%s\\\" من الدوسي تاعك؟",
+  "folder.empty": "ما في شي هنا لسه - اضغط على \\\"+\\\" عشان تضيف أول ملف ليك",
+  "folder.local_note": "Files tigi misah fi browser da",
+  "folder.memory_only": "Storage ta browser ma tigi - files tigi tahab mata tab iqfal",
+  "folder.error": "Mafidir tzid file da",
+  "folder.bg.open": "Sura ta'i",
+  "folder.bg.title": "Sura ta'i",
+  "folder.bg.hint": "الصور اللي رفعتها. اضغط على \\\"+\\\" عشان تضيف صورة جديدة",
+  "folder.block.open": "Blocks ta'i",
+  "folder.block.title": "Blocks ta'i",
+  "folder.block.hint": "Sura wahid tigi istikdam fi kulli wijuh. Wala ikhtar talata files isimhum ..._top, ..._side w ..._bottom",
+  "folder.block.error": "Ikhtar sura wahid, wala files albitnadi bi _top, _side wala _bottom",
+  "folder.emote.open": "Emotes ta'i",
+  "folder.emote.title": "Emotes ta'i",
+  "folder.emote.hint": "Ikhtar file .json ta emote, wala baddak, sura ta icon (.png) fi nafs dialogue da",
+  "folder.emote.icon": "Giyir icon",
+
+  "ui.hide": "Ikhfi interface (H)",
+  "ui.show": "Zahhir interface (H)",
+
+  "shot.title": "Ihfaz screenshot (amsik Shift li khalfiya shaffafa)",
+  "shot.error": "Mafidir tahfiz screenshot"
 }

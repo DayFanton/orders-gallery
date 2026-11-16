@@ -59,7 +59,7 @@
 
   "emote.button": "Zoux-sin",
   "emote.title": "Zoux-sin",
-  "emote.hint": "Jienv aengx zoux-sin aeqv zoux meih nyei .json waengh-daanv",
+  "emote.hint": "Emote pilih atau buka \\\"Emote saya\\\" untuk tambah emote sendiri",
   "emote.stop": "Tingc zoux-sin",
   "emote.test": "Siiv meih nyei zoux-sin",
   "emote.empty": "Maiv puangv zoux-sin (emotes/ daanv-hnyouv)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Yangh (Hnyouv-Fiev)",
   "emote.name.SPE_Zoro_Pose": "Zoro Nyei Yangh (Zingh-Ndeix) (One Piece)",
 
+  "emote.by": "by %s",
+  "emote.search_placeholder": "Search emotes...",
+  "emote.no_results": "No emotes found",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Oak Ndiangx-Baangv",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End Laangx",
+  "block.plain": "No texture",
 
   "bgimg.name.day": "Hnoi",
   "bgimg.name.end": "Mvanc",
   "bgimg.name.nether": "Dielc",
   "bgimg.name.night": "Hmzangv",
   "bgimg.name.snow": "Buv",
-  "bgimg.name.sunset": "Hnoi duqv"
+  "bgimg.name.sunset": "Hnoi duqv",
+
+  "blocks.empty": "No blocks yet - put textures into the blocks/ folder or add your own",
+
+  "folder.add": "Add",
+  "folder.delete": "Delete",
+  "folder.delete_confirm": "Nyiang nyi \\\"%s\\\" che folder nang?",
+  "folder.empty": "Apu kima iha itia - tap \\\"+\\\" ma ukinang i file a umuna",
+  "folder.local_note": "Files are stored only in this browser",
+  "folder.memory_only": "Browser storage is unavailable - files will disappear when you close the tab",
+  "folder.error": "Could not add this file",
+  "folder.bg.open": "My images",
+  "folder.bg.title": "My images",
+  "folder.bg.hint": "Imej i a i upload. Tap \\\"+\\\" ma ukinang i imej a i mialo",
+  "folder.block.open": "My blocks",
+  "folder.block.title": "My blocks",
+  "folder.block.hint": "One image is used for all faces. Or pick three files named ..._top, ..._side and ..._bottom",
+  "folder.block.error": "Pick one image, or files ending in _top, _side or _bottom",
+  "folder.emote.open": "My emotes",
+  "folder.emote.title": "My emotes",
+  "folder.emote.hint": "Pick an emote .json file and, if you want, an icon image (.png) in the same dialog",
+  "folder.emote.icon": "Change icon",
+
+  "ui.hide": "Hide interface (H)",
+  "ui.show": "Show interface (H)",
+
+  "shot.title": "Save screenshot (hold Shift for a transparent background)",
+  "shot.error": "Could not save the screenshot"
 }

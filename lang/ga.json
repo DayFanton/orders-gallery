@@ -60,7 +60,7 @@
 
   "emote.button": "Mothúcháin",
   "emote.title": "Mothúcháin",
-  "emote.hint": "Roghnaigh mothúchán nó lódáil do chomhad .json féin",
+  "emote.hint": "Roghnaigh straoiseog nó oscail \\\"Mo chuid straoiseog\\\" chun do cheann féin a chur leis",
   "emote.stop": "Stop an mothúchán",
   "emote.test": "Tástáil do mhothúchán féin",
   "emote.empty": "Níor aimsíodh aon mhothúcháin (fillteán emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Cláir darach",
   "block.netherrack": "Neamhchloch",
   "block.end_stone": "Cloch na Críche",
+  "block.plain": "Gan uigeacht",
 
   "mobile.gallery": "📁 Gailearaí",
   "mobile.settings": "⚙️ Socruithe",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Staidiúir Yandere (Tromluithe)",
   "emote.name.SPE_Zoro_Pose": "Staidiúir Zoro (Ilchruinne) (One Piece)",
 
+  "emote.by": "ó %s",
+  "emote.search_placeholder": "Cuardaigh emoticons...",
+  "emote.no_results": "Níor fuarthas aon emoticons",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "An Íochtar",
   "bgimg.name.night": "Oíche",
   "bgimg.name.snow": "Sneachta",
-  "bgimg.name.sunset": "Luí na gréine"
+  "bgimg.name.sunset": "Luí na gréine",
+
+  "blocks.empty": "Níl aon bloic fós - cuir uigeachtaí sa fillteán blocks/ nó cuir do chuid féin leis",
+
+  "folder.add": "Cuir leis",
+  "folder.delete": "Scrios",
+  "folder.delete_confirm": "An bhfuil fonn ort \\\"%s\\\" a scriosadh ó d’fhillteán?",
+  "folder.empty": "Níl aon rud anseo fós - brúigh \\\"+\\\" chun do chéad chomhad a chur leis",
+  "folder.local_note": "Stóráiltear comhaid sa bhrabhsálaí seo amháin",
+  "folder.memory_only": "Níl stóráil an bhrabhsálaí ar fáil - imífidh comhaid nuair a dhúnann tú an cluaisín",
+  "folder.error": "Níorbh fhéidir an comhad seo a chur leis",
+  "folder.bg.open": "Mo chuid íomhánna",
+  "folder.bg.title": "Mo chuid íomhánna",
+  "folder.bg.hint": "Na híomhánna atá uaslódáilte agat. Brúigh \\\"+\\\" chun ceann nua a chur leis",
+  "folder.block.open": "Mo chuid bloic",
+  "folder.block.title": "Mo chuid bloic",
+  "folder.block.hint": "Úsáidtear íomhá amháin do gach aghaidh. Nó roghainigh trí chomhad darb ainm ..._top, ..._side agus ..._bottom",
+  "folder.block.error": "Roghnaigh íomhá amháin, nó comhaid a chríochnaíonn le _top, _side nó _bottom",
+  "folder.emote.open": "Mo chuid emote",
+  "folder.emote.title": "Mo chuid emote",
+  "folder.emote.hint": "Roghnaigh comhad .json emote agus, más mian leat, íomhá deilbhín (.png) sa chείν diyailog céanna",
+  "folder.emote.icon": "Athraigh deilbhín",
+
+  "ui.hide": "Folaigh an comhéadan (H)",
+  "ui.show": "Taispeáin an comhéadan (H)",
+
+  "shot.title": "Sábháil an scáileán (coinnigh Shift síos le haghaidh cúlra trédhearcach)",
+  "shot.error": "Níorbh fhéidir an scáileán a shábháil"
 }

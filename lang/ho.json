@@ -59,7 +59,7 @@
 
   "emote.button": "Laloa hahedinaraia",
   "emote.title": "Laloa hahedinaraia",
-  "emote.hint": "Marere ta abia hidi o oiemu .json faila atoa daekau",
+  "emote.hint": "Hili emote ida o openim \\\"My emotes\\\" blong addim emote bilong yu",
   "emote.stop": "Marere hadoa",
   "emote.test": "Oiemu marere tohoa",
   "emote.empty": "Marere ta davaria lasi (emotes/ maua)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere ena gini (Nihi Dika)",
   "emote.name.SPE_Zoro_Pose": "Zoro ena gini (Tanobada Momo) (One Piece)",
 
+  "emote.by": "%s amo",
+  "emote.search_placeholder": "Emotes amo...",
+  "emote.no_results": "Emotes amo ta",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Au palaka",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End nadi",
+  "block.plain": "Texture amo ta",
 
   "bgimg.name.day": "Dina",
   "bgimg.name.end": "Dokona",
   "bgimg.name.nether": "Hade",
   "bgimg.name.night": "Hanuaboi",
   "bgimg.name.snow": "Sino",
-  "bgimg.name.sunset": "Dina diho"
+  "bgimg.name.sunset": "Dina diho",
+
+  "blocks.empty": "Blocks amo ta - blocks/ folder mo texture tulu o ama da",
+
+  "folder.add": "Tulu",
+  "folder.delete": "Doidoi",
+  "folder.delete_confirm": "Yu laik rausim \\\"%s\\\" long folder bilong yu?",
+  "folder.empty": "I no gat samting yet long hia - presim \\\"+\\\" blong ademap fes fail blong yu",
+  "folder.local_note": "Files di mo browser lalon tau",
+  "folder.memory_only": "Browser storage amo ta - tab lalon tau files gado bo",
+  "folder.error": "File amo duɔni ma da",
+  "folder.bg.open": "Images amo na",
+  "folder.bg.title": "Images amo na",
+  "folder.bg.hint": "Ol pija long yu. Presim \\\"+\\\" blong ademap wan niufala",
+  "folder.block.open": "Blocks amo na",
+  "folder.block.title": "Blocks amo na",
+  "folder.block.hint": "Sabhi faces la ek image use kela gela. Ota three files select me ..._top, ..._side and ..._bottom",
+  "folder.block.error": "Image amo one select me, ota files _top, _side or _bottom gado terminar kela",
+  "folder.emote.open": "Emotes amo na",
+  "folder.emote.title": "Emotes amo na",
+  "folder.emote.hint": "Emote .json file select me, ota wati, icon image (.png) dialog samo lalon",
+  "folder.emote.icon": "Icon change me",
+
+  "ui.hide": "Interface amo lalon (H)",
+  "ui.show": "Interface amo nene (H)",
+
+  "shot.title": "Screenshot save me (transparent background la Shift hold me)",
+  "shot.error": "Screenshot save amo kela"
 }

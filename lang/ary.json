@@ -60,7 +60,7 @@
 
   "emote.button": "الإيموتات",
   "emote.title": "الإيموتات",
-  "emote.hint": "ختار شي إيموت ولا ديپلۆديشيشيشيشيشي فایل .json ديالك",
+  "emote.hint": "اختار إيموت ولا حلّ \\\"الإيموتات ديالي\\\" باش تزيد ديالك",
   "emote.stop": "حبس الإيموت",
   "emote.test": "جرب الإيموت ديالك",
   "emote.empty": "ما لقينا حتى شي إيموت (فالدوسي emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "ألواح السنديان",
   "block.netherrack": "نيثيرراك",
   "block.end_stone": "حجر الإند",
+  "block.plain": "بلا تكسطور",
 
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "وقفة يانديري (كوابيس)",
   "emote.name.SPE_Zoro_Pose": "وقفة زورو (عالم متعدد) (One Piece)",
 
+  "emote.by": "بواسطة %s",
+  "emote.search_placeholder": "البحث على التعبيرات...",
+  "emote.no_results": "ما لقينا حتى تعبير",
+
   "person.Артур": "آرتور",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "النذر",
   "bgimg.name.night": "ليل",
   "bgimg.name.snow": "ثلج",
-  "bgimg.name.sunset": "غروب الشمس"
+  "bgimg.name.sunset": "غروب الشمس",
+
+  "blocks.empty": "ما كاينينش كتل دابا - حط التكسطورات فدوسي blocks/ ولا زيد ديلك",
+
+  "folder.add": "زيد",
+  "folder.delete": "مسح",
+  "folder.delete_confirm": "واش بغيتي تحذف \\\"%s\\\" من المجلد ديالك؟",
+  "folder.empty": "ما كاين والو هنا دابا - ضغط على \\\"+\\\" باش تزيد أول ملف ديالك",
+  "folder.local_note": "الملفات مخزونة غير ف هاد المتصفح",
+  "folder.memory_only": "التخزين دياب المتصفح ما خدامش - الملفات غاتمحي فاش تسد لۆقِيتة",
+  "folder.error": "ما قدرناش نزيد هاد الملف",
+  "folder.bg.open": "التصاور ديالي",
+  "folder.bg.title": "التصاور ديالي",
+  "folder.bg.hint": "التصاور اللي رفعتي. ضغط على \\\"+\\\" باش تزيد تصويرة جديدة",
+  "folder.block.open": "الكتل ديالي",
+  "folder.block.title": "الكتل ديالي",
+  "folder.block.hint": "كيتستعمل تصويرة وحدة لݣاع الجوايه. ولا اختار تلاثة دالملفات باسم ..._top و ..._side و ..._bottom",
+  "folder.block.error": "اختار تصويرة وحدة، ولا ملفات كايساليو بـ _top ولا _side ولا _bottom",
+  "folder.emote.open": "الشطحات ديالي",
+  "folder.emote.title": "الشطحات ديالي",
+  "folder.emote.hint": "اختارملف .json ديال الشطحة ولا بغيتي تصويرة دأيكونة (.png) ف نفس الديالوج",
+  "folder.emote.icon": "بدل الأيكونة",
+
+  "ui.hide": "خبّي الواجهة (H)",
+  "ui.show": "بين الواجهة (H)",
+
+  "shot.title": "سجل السكرينشوت (بقى مورك على Shift باش تكون الخلفية شفافة)",
+  "shot.error": "ما قدرناش نسجل السكرينشوت"
 }

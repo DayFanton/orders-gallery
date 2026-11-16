@@ -60,7 +60,7 @@
 
   "emote.button": "Inkiguran",
   "emote.title": "Inkiguran",
-  "emote.hint": "Tegeluo enkiguran arashu isiekaki ifaili ino e .json",
+  "emote.hint": "Tɔɓɔ emote alo lɔ́ɔ \\\"Emote áŋ\\\" te nà ɓɔl emote lóo",
   "emote.stop": "Intasheyie enkiguran",
   "emote.test": "Intem enkiguran ino",
   "emote.empty": "Meeta inkiguran natumore (emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Imbaoni e olpurkel",
   "block.netherrack": "Osoit le Nether",
   "block.end_stone": "Osoit le End",
+  "block.plain": "Erisie texture",
 
   "mobile.gallery": "📁 Enyorata",
   "mobile.settings": "⚙️ Inkitobirak",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Enkitashoto e Yandere (Inkulupok narok)",
   "emote.name.SPE_Zoro_Pose": "Enkitashoto e Zoro (Inkopin kumok) (One Piece)",
 
+  "emote.by": "le %s",
+  "emote.search_placeholder": "Ɛmɔɔti...",
+  "emote.no_results": "Erisie emɔɔti",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Olmarei le nkurma",
   "bgimg.name.night": "Kewarie",
   "bgimg.name.snow": "Oloibor",
-  "bgimg.name.sunset": "Enkibooroto enkolong"
+  "bgimg.name.sunset": "Enkibooroto enkolong",
+
+  "blocks.empty": "Erisie block - tolo texture e kishon blocks/ enye toshi enkai",
+
+  "folder.add": "Enget",
+  "folder.delete": "Leki",
+  "folder.delete_confirm": "Kake iyio \\\"%s\\\" e folder inono?",
+  "folder.empty": "Ore inono ake a lelo - iliki \\\"+\\\" pee iyeyie file naa e sidai",
+  "folder.local_note": "Erisie file nabo e browser eni",
+  "folder.memory_only": "Erisie browser storage - file erishore olosho e tab",
+  "folder.error": "Oreji enget file eni",
+  "folder.bg.open": "Oloshisho lani",
+  "folder.bg.title": "Oloshisho lani",
+  "folder.bg.hint": "Inono naa aaitoki. Iliki \\\"+\\\" pee iyeyie enoo e nkai",
+  "folder.block.open": "Olblock lani",
+  "folder.block.title": "Olblock lani",
+  "folder.block.hint": "Oloshisho nabo eany aji. Enye tosh oloshisho olong ..._top, ..._side enye ..._bottom",
+  "folder.block.error": "Enget oloshisho oong, enye file nabo e _top, _side enye _bottom",
+  "folder.emote.open": "Ɛmɔɔti lani",
+  "folder.emote.title": "Ɛmɔɔti lani",
+  "folder.emote.hint": "Enget file oong .json eka ɛmɔɔti enye tosh oloshisho olong .png e dialog eni",
+  "folder.emote.icon": "Enget oloshisho",
+
+  "ui.hide": "Erisie interface (H)",
+  "ui.show": "Erisie interface (H)",
+
+  "shot.title": "Italaa oloshisho le skrin (irripa Shift pee itum enkata naibalunyie)",
+  "shot.error": "Oreji italaa oloshisho le skrin"
 }

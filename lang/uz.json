@@ -59,7 +59,7 @@
 
   "emote.button": "Emotsiyalar",
   "emote.title": "Emotsiyalar",
-  "emote.hint": "Emotsiyani tanlang yoki o'z .json faylingizni yuklang",
+  "emote.hint": "Emotni tanlang yoki o‘zingiznikini qo‘shish uchun \\\"Mening emotlarim\\\" bo‘limini oching",
   "emote.stop": "Emotsiyani to'xtatish",
   "emote.test": "O'z emotsiyangizni sinab ko'ring",
   "emote.empty": "Emotsiyalar topilmadi (emotes/ papkasi)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere pozasi (Kabuslar)",
   "emote.name.SPE_Zoro_Pose": "Zoro pozasi (Multiverse) (One Piece)",
 
+  "emote.by": "muallif: %s",
+  "emote.search_placeholder": "Emotelarni qidirish...",
+  "emote.no_results": "Emotelar topilmadi",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Vaikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Emak taxtalari",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End toshi",
+  "block.plain": "Tekstura yo'q",
 
   "bgimg.name.day": "Kunduz",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Tun",
   "bgimg.name.snow": "Qor",
-  "bgimg.name.sunset": "Quyosh botishi"
+  "bgimg.name.sunset": "Quyosh botishi",
+
+  "blocks.empty": "Hali bloklar yo'q - teksturalarni blocks/ papkasiga qo'ying yoki o'zingiznikini qo'shing",
+
+  "folder.add": "Qo'shish",
+  "folder.delete": "O'chirish",
+  "folder.delete_confirm": "\\\"%s\\\" jildingizdan o‘chirilsinmi?",
+  "folder.empty": "Bu yerda hali hech narsa yo‘q - birinchi faylingizni qo‘shish uchun \\\"+\\\" tugmasini bosing",
+  "folder.local_note": "Fayllar faqat ushbu brauzerda saqlanadi",
+  "folder.memory_only": "Brauzer xotirasi mavjud emas - yorliqni yopsangiz, fayllar yo'qoladi",
+  "folder.error": "Ushbu faylni qo'shib bo'lmadi",
+  "folder.bg.open": "Mening raslarim",
+  "folder.bg.title": "Mening raslarim",
+  "folder.bg.hint": "Siz yuklagan rasmlar. Yangisini qo‘shish uchun \\\"+\\\" tugmasini bosing",
+  "folder.block.open": "Mening bloklarim",
+  "folder.block.title": "Mening bloklarim",
+  "folder.block.hint": "Barcha yuzlar uchun bitta rasm ishlatiladi. Yoki ..._top, ..._side va ..._bottom deb nomlangan uchta faylni tanlang",
+  "folder.block.error": "Bitta rasm yoki _top, _side yoki _bottom bilan tugaydigan fayllarni tanlang",
+  "folder.emote.open": "Mening emotelarim",
+  "folder.emote.title": "Mening emotelarim",
+  "folder.emote.hint": "Emot .json faylini va xohlasangiz, ikonka rasmini (.png) bir xil muloqot oynasida tanlang",
+  "folder.emote.icon": "Ikonkani o'zgartirish",
+
+  "ui.hide": "Interfeysni yashirish (H)",
+  "ui.show": "Interfeysni ko'rsatish (H)",
+
+  "shot.title": "Skrinshotni saqlash (shaffof fon uchun Shift tugmasini bosib turing)",
+  "shot.error": "Skrinshotni saqlab bo'lmadi"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Miirawwan",
   "emote.title": "Miirawwan",
-  "emote.hint": "Miira filadhu ykn faayilii .json kee fe'i",
+  "emote.hint": "Emote filadhu yookaan kan kee dabalachuuf \\\"Emote koo\\\" bani",
   "emote.stop": "Miira dhaabi",
   "emote.test": "Miira kee yaali",
   "emote.empty": "Miirawwan hin argamne (kuusaa emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Dhaabbii Yaandeeree (Abjuu Sodaachisaa)",
   "emote.name.SPE_Zoro_Pose": "Dhaabbii Zooroo (Addunyaa Hedduu) (One Piece)",
 
+  "emote.by": "%s tiin",
+  "emote.search_placeholder": "Ispoortiiwwan barbaadi...",
+  "emote.no_results": "Ispoortiiwwan hin argamne",
+
   "person.Артур": "Artuur",
   "person.Вайкату": "Waayikaatuu",
   "person.Виакор": "Viyaakoor",
@@ -359,11 +363,39 @@
   "block.planks": "Boordii qilxuu",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dhagaa End",
+  "block.plain": "Hanga hin qabne",
 
   "bgimg.name.day": "Guyyaa",
   "bgimg.name.end": "Dhuma",
   "bgimg.name.nether": "Gahaannama",
   "bgimg.name.night": "Halkan",
   "bgimg.name.snow": "Cabbii",
-  "bgimg.name.sunset": "Lixa biiftuu"
+  "bgimg.name.sunset": "Lixa biiftuu",
+
+  "blocks.empty": "Ispoortiiwwan hin jiran - hanga galmee blocks/ keessaa kaa'i ykn kan kee dabali",
+
+  "folder.add": "Dabali",
+  "folder.delete": "Haqi",
+  "folder.delete_confirm": "\\\"%s\\\" galmee kee keessaa haquu barbaaddaa?",
+  "folder.empty": "Amma asitti homtuu hin jiru - faayilii kee isa jalqabaa dabaluuf \\\"+\\\" cuqaasi",
+  "folder.local_note": "Faayiliwwan kanaa qofa keessatti kuufamu",
+  "folder.memory_only": "Kuusaan biraawsarichaa hin jiru - yommuu taabii cufte fayiloonni ni badan",
+  "folder.error": "Faayili kana dabaluu hin danda'amne",
+  "folder.bg.open": "Suuraawwan koo",
+  "folder.bg.title": "Suuraawwan koo",
+  "folder.bg.hint": "Suuraawwan ati ol feete. Haaraa dabaluuf \\\"+\\\" cuqaasi",
+  "folder.block.open": "Blooksii koo",
+  "folder.block.title": "Blooksii koo",
+  "folder.block.hint": "Suuraan tokko fuula hundumaaf tajaajila. Yookiin fayiliwwan sadii ..._top, ..._side fi ..._bottom jedhaman filadhu",
+  "folder.block.error": "Suuraa tokko filadhu, yookiin fayiliwwan _top, _side ykn _bottom dhaan xumuraman filadhu",
+  "folder.emote.open": "Ispoortiiwwan koo",
+  "folder.emote.title": "Ispoortiiwwan koo",
+  "folder.emote.hint": "Faayilii .json ispoortii fi, yoo barbaadde, suuraa ayikoonii (.png) diraamaa tokko keessatti filadhu",
+  "folder.emote.icon": "Ayikoonii jijjiiri",
+
+  "ui.hide": "Fuula dhoqqee dhoksuu (H)",
+  "ui.show": "Fuula dhoqqee agarsiisuu (H)",
+
+  "shot.title": "Suuraa iskiriinii olkaa'i (duubbee ifaa ta'eef Shift qabadhu)",
+  "shot.error": "Suuraa iskiriinii olkaa'uu hin danda'amne"
 }

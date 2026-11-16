@@ -59,7 +59,7 @@
 
   "emote.button": "Mintlhaveko",
   "emote.title": "Mintlhaveko",
-  "emote.hint": "Hlawula ntlhaveko kumbe u layicha fayili ya wena ya .json",
+  "emote.hint": "Hlawula emote kumbe u pfula \\\"Ti-emote ta mina\\\" ku engetela ya wena",
   "emote.stop": "Yimisa ntlhaveko",
   "emote.test": "Ringeta ntlhaveko wa wena",
   "emote.empty": "Ku hava mintlhaveko leyi kumiweke (foludara ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Xiyimo xa Yandere (Milawu yo Chavisa)",
   "emote.name.SPE_Zoro_Pose": "Xiyimo xa Zoro (Vun'we bya Tivuso) (One Piece)",
 
+  "emote.by": "hi %s",
+  "emote.search_placeholder": "Lava ti-emote...",
+  "emote.no_results": "Ku hava ti-emote leti kumiweke",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mapulanga ya murhi wa oku",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ribye ra End",
+  "block.plain": "Ku hava xivumbeko",
 
   "bgimg.name.day": "Nhlikanhi",
   "bgimg.name.end": "Makumu",
   "bgimg.name.nether": "Tihele",
   "bgimg.name.night": "Vusiku",
   "bgimg.name.snow": "Gamboko",
-  "bgimg.name.sunset": "Ku pela ka dyambu"
+  "bgimg.name.sunset": "Ku pela ka dyambu",
+
+  "blocks.empty": "Ku hava ti-block ku fikela sweswi - veka swivumbeko eka folda ya blocks/ kumbe u engetesa swa wena",
+
+  "folder.add": "Engetela",
+  "folder.delete": "Hula",
+  "folder.delete_confirm": "Xana u lava ku susa \\\"%s\\\" eka folda ya wena?",
+  "folder.empty": "A ku na xin'wana laha sweswi - tshikelela \\\"+\\\" ku engetela fayili ya wena yo sungula",
+  "folder.local_note": "Timinete ti hlayisiwa ntsena eka xitirho lexi",
+  "folder.memory_only": "Xitirho xo hlayisa xi nga kumeki - timinete ti ta hela loko u pfula tab",
+  "folder.error": "Swi tsandzehile ku engetela faimi leyi",
+  "folder.bg.open": "Swifaniso swa mina",
+  "folder.bg.title": "Swifaniso swa mina",
+  "folder.bg.hint": "Swifaniso leswi u swi pakiweke. Tshikelela \\\"+\\\" ku engetela lexintshwa",
+  "folder.block.open": "Ti-block ta mina",
+  "folder.block.title": "Ti-block ta mina",
+  "folder.block.hint": "Ku tirhisiwa xifaniso xin’we eka swikandza hinkwaswo. Kumbe hlawula tifayimi tinharhu leti vuriwaka ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Hlawula xifaniso xin’we, kumbe tifayimi leti helaka hi _top, _side kumbe _bottom",
+  "folder.emote.open": "Ti-emote ta mina",
+  "folder.emote.title": "Ti-emote ta mina",
+  "folder.emote.hint": "Hlawula fayimi ya .json ya emote naswino, loko u lava, xifaniso xa icon (.png) eka bokisi rin’we",
+  "folder.emote.icon": "Cinca icon",
+
+  "ui.hide": "Tumika mahlo (H)",
+  "ui.show": "Kombisa mahlo (H)",
+
+  "shot.title": "Hlayisa xifaniso xa xikirini (khoma Shift ku kuma vundzhaku lebyi vonakalaka)",
+  "shot.error": "Swi tsandzehile ku hlayisa xifaniso xa xikirini"
 }

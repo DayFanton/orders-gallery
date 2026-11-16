@@ -60,7 +60,7 @@
 
   "emote.button": "Nneyɛe",
   "emote.title": "Nneyɛe",
-  "emote.hint": "Yi adeyɛ bi anaa fa wo ara wo .json fael bra",
+  "emote.hint": "Paw emote anaa bue \\\"Me emote ahorow\\\" de fa wo de ka ho",
   "emote.stop": "Gyae adeyɛ no",
   "emote.test": "Sɔ wo ara wo adeyɛ hwɛ",
   "emote.empty": "Wɔanhu nneyɛe biara (emotes/ adaka mu)",
@@ -98,6 +98,7 @@
   "block.planks": "Odum ntaabo",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End ɔbo",
+  "block.plain": "Tekstura biara nni hɔ",
 
   "mobile.gallery": "📁 Mfonini Bea",
   "mobile.settings": "⚙️ Nhyehyɛe",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Gyinabea (Ahunahuna)",
   "emote.name.SPE_Zoro_Pose": "Zoro Gyinabea (Wiase Ahorow) (One Piece)",
 
+  "emote.by": "de ma %s",
+  "emote.search_placeholder": "Hwehwɛ emoticons...",
+  "emote.no_results": "Wɔhuu emoticons biara",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Asamando",
   "bgimg.name.night": "Anadwo",
   "bgimg.name.snow": "Sukyerɛmma",
-  "bgimg.name.sunset": "Owiatɔe"
+  "bgimg.name.sunset": "Owiatɔe",
+
+  "blocks.empty": "Blɔk biara nni hɔ - fa tekuwa gu blocks/ folders mu anaasɛ fa wo de hyɛ mu",
+
+  "folder.add": "Ka ho",
+  "folder.delete": "Yi firi hɔ",
+  "folder.delete_confirm": "Wopɛ sɛ wuyi \\\"%s\\\" fi wo folda mu?",
+  "folder.empty": "Hwee biara nni ha - mia \\\"+\\\" na fael a edi kan no ka ho",
+  "folder.local_note": "Wɔde nkrataa no sie browser yi mu nko ara",
+  "folder.memory_only": "Browser storage nni hɔ - nkrataa no bɛyera bere a wowɔ tab no mu",
+  "folder.error": "Entumi nka ho nkrataa yi",
+  "folder.bg.open": "Me mfonini ahorow",
+  "folder.bg.title": "Me mfonini ahorow",
+  "folder.bg.hint": "Wo mfonini a wode akɔmputa so. Mia \\\"+\\\" na foforo ka ho",
+  "folder.block.open": "Me blɔk ahorow",
+  "folder.block.title": "Me blɔk ahorow",
+  "folder.block.hint": "Mfonini baako na wɔde di dwuma wɔ anim nyinaa. Anaasɛ paw nkrataa mmiɛnsa a ne din de ..._top, ..._side ne ..._bottom",
+  "folder.block.error": "Paw mfonini baako, anaasɛ nkrataa a ewie _top, _side anaasɛ _bottom",
+  "folder.emote.open": "Me emoticons ahorow",
+  "folder.emote.title": "Me emoticons ahorow",
+  "folder.emote.hint": "Paw emote .json nkrataa baako anaasɛ sɛ wopɛ a, icon mfonini (.png) wɔ dialog koro no ara mu",
+  "folder.emote.icon": "Sesɛ icon no",
+
+  "ui.hide": "Fa interface no sie (H)",
+  "ui.show": "Kyerɛ interface no (H)",
+
+  "shot.title": "Sie screenshot no (mia Shift so na akyi a ɛda hɔ)",
+  "shot.error": "Entumi nsie screenshot no"
 }

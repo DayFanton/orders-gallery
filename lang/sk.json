@@ -59,7 +59,7 @@
 
   "emote.button": "Emócie",
   "emote.title": "Emócie",
-  "emote.hint": "Vyberte emóciu alebo nahrajte vlastný súbor .json",
+  "emote.hint": "Vyberte emotikon alebo otvorte \\\"Moje emotikony\\\" a pridajte vlastný",
   "emote.stop": "Prerušiť emóciu",
   "emote.test": "Otestovať vlastnú emóciu",
   "emote.empty": "Nenašli sa žiadne emócie (priečinok emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Póza Yandere (Nočné mory)",
   "emote.name.SPE_Zoro_Pose": "Zorov postoj (Multivesmír) (One Piece)",
 
+  "emote.by": "od %s",
+  "emote.search_placeholder": "Hľadať emotikony...",
+  "emote.no_results": "Neboli nájdené žiadne emotikony",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Dubové dosky",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End kameň",
+  "block.plain": "Bez textúry",
 
   "bgimg.name.day": "Deň",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Noc",
   "bgimg.name.snow": "Sneh",
-  "bgimg.name.sunset": "Západ slnka"
+  "bgimg.name.sunset": "Západ slnka",
+
+  "blocks.empty": "Zatiaľ žiadne bloky - vložte textúry do priečinka blocks/ alebo pridajte vlastné",
+
+  "folder.add": "Pridať",
+  "folder.delete": "Vymazať",
+  "folder.delete_confirm": "Odstrániť \\\"%s\\\" z vášho priečinka?",
+  "folder.empty": "Zatiaľ tu nič nie je - stlačte \\\"+\\\" a pridajte svoj prvý súbor",
+  "folder.local_note": "Súbory sa ukladajú iba v tomto prehliadači",
+  "folder.memory_only": "Úložisko prehliadača nie je k dispozícii – súbory po zatvorení karty zmiznú",
+  "folder.error": "Tento súbor sa nepodarilo pridať",
+  "folder.bg.open": "Moje obrázky",
+  "folder.bg.title": "Moje obrázky",
+  "folder.bg.hint": "Vaše nahraté obrázky. Stlačte \\\"+\\\" a pridajte nový",
+  "folder.block.open": "Moje bloky",
+  "folder.block.title": "Moje bloky",
+  "folder.block.hint": "Pre všetky strany sa používa jeden obrázok. Alebo vyberte tri súbory s názvami ..._top, ..._side a ..._bottom",
+  "folder.block.error": "Vyberte jeden obrázok alebo súbory končiace sa na _top, _side alebo _bottom",
+  "folder.emote.open": "Moje emotikony",
+  "folder.emote.title": "Moje emotikony",
+  "folder.emote.hint": "Vyberte .json súbor emota a, ak chcete, aj obrázok ikony (.png) v rovnakom dialógovom okne",
+  "folder.emote.icon": "Zmeniť ikonu",
+
+  "ui.hide": "Skryť rozhranie (H)",
+  "ui.show": "Zobraziť rozhranie (H)",
+
+  "shot.title": "Uložiť snímku obrazovky (podržte Shift pre priehľadné pozadie)",
+  "shot.error": "Snímku obrazovky sa nepodarilo uložiť"
 }

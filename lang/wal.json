@@ -59,7 +59,7 @@
 
   "emote.button": "Qofaa bessuwaa",
   "emote.title": "Qofaa bessuwaa",
-  "emote.hint": "Qofaa bessuwaa doora woy ne .json fayiliyaa gelissa",
+  "emote.hint": "Emote dooro woyye, woyye emote \\\"Ta emote\\\" giddo",
   "emote.stop": "Qofaa bessuwaa essa",
   "emote.test": "Ne qofaa bessuwaa paacca",
   "emote.empty": "Qofaa bessuway beetibeenna (emotes/ karccitiyaa)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Eqquwaa (Iita Aymuwaa)",
   "emote.name.SPE_Zoro_Pose": "Zoro Eqquwaa (Daro Salotaa) (One Piece)",
 
+  "emote.by": "%s giishshaa",
+  "emote.search_placeholder": "Emotes qixxa...",
+  "emote.no_results": "Emotes bayntilde",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mittaa xaawulaa",
   "block.netherrack": "Nezerraakiyaa",
   "block.end_stone": "End shuchchaa",
+  "block.plain": "Texture bayntilde",
 
   "bgimg.name.day": "Gallassa",
   "bgimg.name.end": "Wurssetta",
   "bgimg.name.nether": "Gaannamiya",
   "bgimg.name.night": "Qamma",
   "bgimg.name.snow": "Shachchaa",
-  "bgimg.name.sunset": "Awaa wulliyoogaa"
+  "bgimg.name.sunset": "Awaa wulliyoogaa",
+
+  "blocks.empty": "Blocks bayntilde - texture blocks/ folder kee addih ma ganyinna",
+
+  "folder.add": "Medd",
+  "folder.delete": "Hayggite",
+  "folder.delete_confirm": "\\\"%s\\\" folderiyaappe diggiyo?",
+  "folder.empty": "Hayssi giddon ha'ra giddoy baawa - neeni \\\"+\\\" giigissite koyro fayileta gujja",
+  "folder.local_note": "Files qixxetidayssi hagi browser giddioru",
+  "folder.memory_only": "Browser storage bayntilde - files baynnay tab closed timmi yitanno",
+  "folder.error": "Fayilate qixxetidayssi bayntilde",
+  "folder.bg.open": "Qixxe koo",
+  "folder.bg.title": "Qixxe koo",
+  "folder.bg.hint": "Neeni upload oottida misileta. Haaro misileta gujjaas \\\"+\\\" giigissa",
+  "folder.block.open": "Blocks qixxe koo",
+  "folder.block.title": "Blocks qixxe koo",
+  "folder.block.hint": "Qixxe mittu qixxe ubba huupheray gidoon shiishshetees. Woygiintta ..._top, ..._side ikkofonna ..._bottom gidiya sase files qixxite",
+  "folder.block.error": "Qixxe mittu qixxa, woygiintta _top, _side woyite _bottom gidiya gita files qixxite",
+  "folder.emote.open": "Emotes qixxe koo",
+  "folder.emote.title": "Emotes qixxe koo",
+  "folder.emote.hint": "Emote .json file qixxite, woygiintta cayya gidoon icon image (.png) dialoge mittu giddro qixxite",
+  "folder.emote.icon": "Icon qixxite",
+
+  "ui.hide": "Interface qixxa (H)",
+  "ui.show": "Interface bescite (H)",
+
+  "shot.title": "Screenshot naaga (qoncciya guyyaassi Shift oyqqa)",
+  "shot.error": "Screenshot naaga bayntilde"
 }

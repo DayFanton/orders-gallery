@@ -60,7 +60,7 @@
 
   "emote.button": "אימוטים",
   "emote.title": "אימוטים",
-  "emote.hint": "בחר אימוט או העלה קובץ .json משלך",
+  "emote.hint": "בחרו אמוט או פתחו את \\\"האמוטים שלי\\\" כדי להוסיף אמוט משלכם",
   "emote.stop": "עצור אימוט",
   "emote.test": "בדוק אימוט משלך",
   "emote.empty": "לא נמצאו אימוטים (תיקיית emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "קרשי אלון",
   "block.netherrack": "נת'ראק",
   "block.end_stone": "אבן אנדר",
+  "block.plain": "ללא מרקם",
 
   "mobile.gallery": "📁 גלריה",
   "mobile.settings": "⚙️ הגדרות",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "פוזת יאנדרה (סיוטים)",
   "emote.name.SPE_Zoro_Pose": "העמידה של זורו (מולטיוורס) (One Piece)",
 
+  "emote.by": "מאת %s",
+  "emote.search_placeholder": "חפש רגשונים...",
+  "emote.no_results": "לא נמצאו רגשונים",
+
   "person.Артур": "ארתור",
   "person.Вайкату": "וואיקאטו",
   "person.Виакор": "ויאקור",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "הנת'ר",
   "bgimg.name.night": "לילה",
   "bgimg.name.snow": "שלג",
-  "bgimg.name.sunset": "שקיעה"
+  "bgimg.name.sunset": "שקיעה",
+
+  "blocks.empty": "אין בלוקים עדיין - הכנס טקסטורות לתיקייה blocks/ או הוסף משלך",
+
+  "folder.add": "הוסף",
+  "folder.delete": "מחק",
+  "folder.delete_confirm": "למחוק את \\\"%s\\\" מהתיקייה שלך?",
+  "folder.empty": "עדיין אין כאן כלום - לחצו על \\\"+\\\" כדי להוסיף את הקובץ הראשון שלכם",
+  "folder.local_note": "הקבצים מאוחסנים בדפדפן זה בלבד",
+  "folder.memory_only": "אחסון הדפדפן אינו זמין - הקבצים ייעלמו כשתסגור את הלשונית",
+  "folder.error": "לא ניתן להוסיף קובץ זה",
+  "folder.bg.open": "התמונות שלי",
+  "folder.bg.title": "התמונות שלי",
+  "folder.bg.hint": "התמונות שהעליתם. לחצו על \\\"+\\\" כדי להוסיף תמונה חדשה",
+  "folder.block.open": "הבלוקים שלי",
+  "folder.block.title": "הבלוקים שלי",
+  "folder.block.hint": "תמונה אחת משמשת לכל הפאות. או בחר שלושה קבצים בשם ..._top, ..._side ו-..._bottom",
+  "folder.block.error": "בחר תמונה אחת, או קבצים המסתיימים ב-_top, _side או _bottom",
+  "folder.emote.open": "האמותים שלי",
+  "folder.emote.title": "האמותים שלי",
+  "folder.emote.hint": "בחר קובץ .json של אמות ותמונה לסמל (.png), אם תרצה, באותה תיבת דו-שיח",
+  "folder.emote.icon": "שנה סמל",
+
+  "ui.hide": "הסתר ממשק (H)",
+  "ui.show": "הצג ממשק (H)",
+
+  "shot.title": "שמור צילום מסך (החזק Shift לחוץ לרקע שקוף)",
+  "shot.error": "לא ניתן לשמור את צילום המסך"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Pick one emote or upload your own .json file",
+  "emote.hint": "Choose one emote or open \\\"My emotes\\\" to add your own",
   "emote.stop": "Stop emote",
   "emote.test": "Test your own emote",
   "emote.empty": "No emote dey (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere pose (Nightmares)",
   "emote.name.SPE_Zoro_Pose": "Zoro pose (Multiverse) (One Piece)",
 
+  "emote.by": "by %s",
+  "emote.search_placeholder": "Search emotes...",
+  "emote.no_results": "No emotes found",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Oak plank dem",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End ston",
+  "block.plain": "No texture",
 
   "bgimg.name.day": "Day",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Night",
   "bgimg.name.snow": "Snow",
-  "bgimg.name.sunset": "Sunset"
+  "bgimg.name.sunset": "Sunset",
+
+  "blocks.empty": "No blocks yet - put textures inside the blocks/ folder or add your own",
+
+  "folder.add": "Add",
+  "folder.delete": "Delete",
+  "folder.delete_confirm": "You wan delete \\\"%s\\\" from your folder?",
+  "folder.empty": "Nọting dey here yet - press \\\"+\\\" to add your first file",
+  "folder.local_note": "Files dey store only inside dis browser",
+  "folder.memory_only": "Browser storage no dey available - files go disappear when you close di tab",
+  "folder.error": "No fit add dis file",
+  "folder.bg.open": "My images",
+  "folder.bg.title": "My images",
+  "folder.bg.hint": "Di images wey you upload. Press \\\"+\\\" to add a new one",
+  "folder.block.open": "My blocks",
+  "folder.block.title": "My blocks",
+  "folder.block.hint": "Dem dey use one image for all di faces. Or pick three files wey name ..._top, ..._side and ..._bottom",
+  "folder.block.error": "Pick one image, or files wey dey end with _top, _side or _bottom",
+  "folder.emote.open": "My emotes",
+  "folder.emote.title": "My emotes",
+  "folder.emote.hint": "Pick one emote .json file and, if you like, icon image (.png) inside di same dialog",
+  "folder.emote.icon": "Change icon",
+
+  "ui.hide": "Hide interface (H)",
+  "ui.show": "Show interface (H)",
+
+  "shot.title": "Save screenshot (hold Shift for transparent background)",
+  "shot.error": "No fit save dis screenshot"
 }

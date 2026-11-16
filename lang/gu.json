@@ -59,7 +59,7 @@
 
   "emote.button": "ઇમોટ્સ",
   "emote.title": "ઇમોટ્સ",
-  "emote.hint": "ઇમોટ પસંદ કરો અથવા તમારી પોતાની .json ફાઇલ લોડ કરો",
+  "emote.hint": "ઇમોટ પસંદ કરો અથવા તમારું પોતાનું ઉમેરવા માટે \\\"મારા ઇમોટ્સ\\\" ખોલો",
   "emote.stop": "ઇમોટ અટકાવો",
   "emote.test": "તમારી પોતાની ઇમોટ તપાસો",
   "emote.empty": "કોઈ ઇમોટ્સ મળ્યા નથી (emotes/ ફોલ્ડર)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "યાન્ડેરે પોઝ (દુસ્વપ્નો)",
   "emote.name.SPE_Zoro_Pose": "ઝોરો પોઝ (મલ્ટીવર્સ) (વન પીસ)",
 
+  "emote.by": "%s દ્વારા",
+  "emote.search_placeholder": "ઇમોટ્સ શોધો...",
+  "emote.no_results": "કોઈ ઇમોટ્સ મળ્યા નથી",
+
   "person.Артур": "આર્થુર",
   "person.Вайкату": "વાઇકાટુ",
   "person.Виакор": "વિયાકોર",
@@ -359,11 +363,39 @@
   "block.planks": "ઓક પાટડા",
   "block.netherrack": "નેધરરેક",
   "block.end_stone": "એન્ડ પથ્થર",
+  "block.plain": "કોઈ ટેક્સચર નથી",
 
   "bgimg.name.day": "દિવસ",
   "bgimg.name.end": "એન્ડ",
   "bgimg.name.nether": "નેધર",
   "bgimg.name.night": "રાત",
   "bgimg.name.snow": "બરફ",
-  "bgimg.name.sunset": "સૂર્યાસ્ત"
+  "bgimg.name.sunset": "સૂર્યાસ્ત",
+
+  "blocks.empty": "હજી સુધી કોઈ બ્લોક નથી - blocks/ ফোল্ডারে ટેક્ષ્ચર મૂકો અથવા તમારું પોતાનું ઉમેરો",
+
+  "folder.add": "ઉમેરો",
+  "folder.delete": "કાઢી નાખો",
+  "folder.delete_confirm": "શું તમે તમારા ફોલ્ડરમાંથી \\\"%s\\\" કાઢી નાખવા માંગો છો?",
+  "folder.empty": "અહીં હજી કંઈ નથી - તમારી પ્રથમ ફાઇલ ઉમેરવા માટે \\\"+\\\" દબાવો",
+  "folder.local_note": "ફાઇલો ફક્ત આ બ્રાઉઝરમાં જ સંગ્રહित છે",
+  "folder.memory_only": "બ્રાઉઝર સ્ટોરેજ ઉપਲબ્ધ નથી - ટેબ બંધ કરવા पर ഫાઇલો गायब થઈ જશે",
+  "folder.error": "આ ફાઇલ ઉમેરી શકાઈ નથી",
+  "folder.bg.open": "મારી છબીઓ",
+  "folder.bg.title": "મારી છબીઓ",
+  "folder.bg.hint": "તમે અપલોડ કરેલી છબીઓ. નવી છબી ઉમેરવા માટે \\\"+\\\" દબાવો",
+  "folder.block.open": "મારા બ્લોક્સ",
+  "folder.block.title": "મારા બ્લોક્સ",
+  "folder.block.hint": "બધા ચહેરાઓ માટે એક જ છબી વપરાય છે. અથવા ..._top, ..._side અને ..._bottom નામની ત્રણ ફાઇલો પસંદ કરો",
+  "folder.block.error": "એક છબી પસંદ કરો, અથવા _top, _side અથવા _bottom સાથે સમાપ્ત થતી ફાઇલો પસંદ કરો",
+  "folder.emote.open": "મારા ઇમોટ્સ",
+  "folder.emote.title": "મારા ઇમોટ્સ",
+  "folder.emote.hint": "એક ઇમોટ .json ફાઇલ અને, જો you ઈચ્છો તો, સમાન સંવાદમાં આયકન છબી (.png) પસંદ કરો",
+  "folder.emote.icon": "આઇકન બદલો",
+
+  "ui.hide": "ઇન્ટરફેસ છુપાવો (H)",
+  "ui.show": "ઇન્ટરફેસ બરો (H)",
+
+  "shot.title": "સ્ક્રીનશૉટ સાચવો (પારદર્શક પૃષ્ઠભૂમિ માટે Shift દબાવી રાખો)",
+  "shot.error": "સ્ક્રીનશૉટ સાચવી શકાયો નથી"
 }

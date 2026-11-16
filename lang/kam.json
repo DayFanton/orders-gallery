@@ -59,7 +59,7 @@
 
   "emote.button": "Mĩĩko",
   "emote.title": "Mĩĩko",
-  "emote.hint": "Sakua mũĩko kana wĩkĩe faili yaku ya .json",
+  "emote.hint": "Sagua emote kana uvungue \\\"Emote syakwa\\\" nĩ ũonge ya kwaku",
   "emote.stop": "Ũngamya mũĩko",
   "emote.test": "Tata mũĩko waku",
   "emote.empty": "Vai mĩĩko yonekie (folder ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Mũũngamĩle wa Yandere (Ndoto nthũku)",
   "emote.name.SPE_Zoro_Pose": "Mũũngamĩle wa Zoro (Nthĩ Nyingĩ) (One Piece)",
 
+  "emote.by": "ni %s",
+  "emote.search_placeholder": "Nthĩĩa indo cia kũguigua...",
+  "emote.no_results": "Ndũĩndwa indo cia kũguigua syoneka",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mbaũ sya mũti wa oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ĩvia ya End",
+  "block.plain": "Ndũĩndwa kyũmbe",
 
   "bgimg.name.day": "Mũthenya",
   "bgimg.name.end": "Mũthya",
   "bgimg.name.nether": "Ngai ya nthi",
   "bgimg.name.night": "Ũtukũ",
   "bgimg.name.snow": "Ĩia",
-  "bgimg.name.sunset": "Kũthũa kwa syũa"
+  "bgimg.name.sunset": "Kũthũa kwa syũa",
+
+  "blocks.empty": "Ndũĩndwa kyũmbe - ikĩa syũmbe thĩinĩ wa folda ya blocks/ kana ũyongere syaku",
+
+  "folder.add": "Ĩsya",
+  "folder.delete": "Tharia",
+  "folder.delete_confirm": "Wenda kwosa \\\"%s\\\" mu folda yaku?",
+  "folder.empty": "Kena kitu hano oyu - inya \\\"+\\\" nĩ kana kwongela failĩ yaku ya mbee",
+  "folder.local_note": "Masomo ni mĩthee tu ndailo inono",
+  "folder.memory_only": "Ndũĩndwa kyũmbe kĩa ndailo - masomo nĩmakathata ũkĩthasya tabu",
+  "folder.error": "Ndũĩndwa kwĩsya masomo ĩnọ",
+  "folder.bg.open": "Mbica syakwa",
+  "folder.bg.title": "Mbica syakwa",
+  "folder.bg.hint": "Mĩtĩ ya picha yĩla wĩkĩte. Inya \\\"+\\\" nĩ kana kwongela ĩmwe nzeo",
+  "folder.block.open": "Mbiko syakwa",
+  "folder.block.title": "Mbiko syakwa",
+  "folder.block.hint": "Mbica ĩmwe nĩyo ĩthũmĩawa mbica syothe. Kana ũthuurie masomo matatũ metawa ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Mbica ĩmwe, kana masomo methirwe na _top, _side kana _bottom",
+  "folder.emote.open": "Mbica syakwa",
+  "folder.emote.title": "Mbica syakwa",
+  "folder.emote.hint": "Mbica ya emote .json na, twĩ kũenda, mbica ya icon (.png) thĩinĩ wa mbica ĩmwe",
+  "folder.emote.icon": "Ũvũndũla icon",
+
+  "ui.hide": "Ĩtheka mbica (H)",
+  "ui.show": "Tharia mbica (H)",
+
+  "shot.title": "Ia mbica ya kĩonereria (kwata Shift nĩ kana ũkwate ĩtina yonekaa)",
+  "shot.error": "Ndũĩndwa kwĩsya mbica ya kĩonereria"
 }

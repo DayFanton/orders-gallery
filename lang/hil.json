@@ -59,7 +59,7 @@
 
   "emote.button": "Mga Emote",
   "emote.title": "Mga Emote",
-  "emote.hint": "Magpili sang emote ukon mag-load sang imo kaugalingon nga .json file",
+  "emote.hint": "Magpili sang emote ukon buksan ang \\\"Akong mga emote\\\" para makadugang sang imo kaugalingon",
   "emote.stop": "Untaton ang emote",
   "emote.test": "Tilawan ang imo kaugalingon nga emote",
   "emote.empty": "Wala sing nakita nga mga emote (folder nga emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Porma nga Yandere (Mga Damgo nga Malain)",
   "emote.name.SPE_Zoro_Pose": "Porma ni Zoro (Multiberso) (One Piece)",
 
+  "emote.by": "ni %s",
+  "emote.search_placeholder": "Pangitaa ang mga emote...",
+  "emote.no_results": "Wala sang nakit-an nga mga emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Tablon nga kahoy",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Bato sang End",
+  "block.plain": "Wala sang tekstura",
 
   "bgimg.name.day": "Adlaw",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gab-i",
   "bgimg.name.snow": "Niebe",
-  "bgimg.name.sunset": "Pagsalop sang adlaw"
+  "bgimg.name.sunset": "Pagsalop sang adlaw",
+
+  "blocks.empty": "Wala pa sang mga bloke - ibutang ang mga tekstura sa blocks/ folder ukon magdugang sang imo",
+
+  "folder.add": "Idugang",
+  "folder.delete": "Panumptol",
+  "folder.delete_confirm": "Kwaon ang \\\"%s\\\" sa imo folder?",
+  "folder.empty": "Wala pa sang sulod diri - pindota ang \\\"+\\\" para madugangan ang imo una nga file",
+  "folder.local_note": "Ang mga file ginapabilin lamang sa sini nga browser",
+  "folder.memory_only": "Ang pagtipig sa browser indi magamit - ang mga file madula kon isira mo ang tab",
+  "folder.error": "Indi maangot ining file",
+  "folder.bg.open": "Ang akon mga litrato",
+  "folder.bg.title": "Ang akon mga litrato",
+  "folder.bg.hint": "Mga larawan nga gin-upload mo. Pinduta ang \\\"+\\\" para magdugang sang bag-o",
+  "folder.block.open": "Ang akon mga block",
+  "folder.block.title": "Ang akon mga block",
+  "folder.block.hint": "Isa ka litrato ang ginagamit para sa tanan nga guya. Ukon pili tatlo ka file nga ginhingalanan ..._top, ..._side kag ..._bottom",
+  "folder.block.error": "Piliا sang isa ka litrato, ukon mga file nga naga-untat sa _top, _side ukon _bottom",
+  "folder.emote.open": "Ang akon mga emote",
+  "folder.emote.title": "Ang akon mga emote",
+  "folder.emote.hint": "Piliا sang emote .json file kag, kung gusto mo, isa ka icon image (.png) sa amo gihapon nga dialog",
+  "folder.emote.icon": "Ilisan ang icon",
+
+  "ui.hide": "Itago ang interface (H)",
+  "ui.show": "Ipakita ang interface (H)",
+
+  "shot.title": "I-save ang screenshot (hupti ang Shift para sa transparent nga background)",
+  "shot.error": "Indi ma-save ang screenshot"
 }

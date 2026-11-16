@@ -60,7 +60,7 @@
 
   "emote.button": "Kuyuykuna (Emotes)",
   "emote.title": "Kuyuykuna (Emotes)",
-  "emote.hint": "Huk kuyuyta akllay utaq kikiykipa .json willañiqiykita churay",
+  "emote.hint": "Huk emote akllaykuy utaq \\\"Ñuqap emote-kuna\\\" nisqata kichay, kikinpa emote-ykita yapanaykipaq",
   "emote.stop": "Kuyuyta sayachiy",
   "emote.test": "Kikiykipa kuyuyta malliy",
   "emote.empty": "Mana kuyuykuna tarisqachu (emotes/ wayaqa)",
@@ -98,6 +98,7 @@
   "block.planks": "K'ullu p'alltakuna",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End rumi",
+  "block.plain": "Mana textura kanchu",
 
   "mobile.gallery": "📁 Rikuchina Wasi",
   "mobile.settings": "⚙️ Allichaykuna",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yanderepa Sayaynin (Manchay Musquykuna)",
   "emote.name.SPE_Zoro_Pose": "Zoropa Sayaynin (Achka Pacha) (One Piece)",
 
+  "emote.by": "%s pa",
+  "emote.search_placeholder": "Emotekunata maskay...",
+  "emote.no_results": "Mana emotekunata tarisqachu",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Ukhupacha",
   "bgimg.name.night": "Tuta",
   "bgimg.name.snow": "Rit'i",
-  "bgimg.name.sunset": "Inti yaykuy"
+  "bgimg.name.sunset": "Inti yaykuy",
+
+  "blocks.empty": "Manaraq blockkuna kanchu - blocks/ raqayman teksturakunata churay utaq kikinpaq yapay",
+
+  "folder.add": "Yapay",
+  "folder.delete": "Qulluy",
+  "folder.delete_confirm": "¿Munaykiku \\\"%s\\\" nisqata qillqana mayt'iykimanta qulluyta?",
+  "folder.empty": "Kaypiqa manaraq imapas kanchu - ñawpaq khipuykita yapaypaq \\\"+\\\" ñit'iy",
+  "folder.local_note": "Willakuykuna kay browserllapim waqaychasqa kachkan",
+  "folder.memory_only": "Browser qullana mana kanchu - willakuykunaqa tabkita wichaptiki chinkapunqa",
+  "folder.error": "Kay willakuytaqa manam yapayta atikunchu",
+  "folder.bg.open": "Rikrachakuna",
+  "folder.bg.title": "Rikrachakuna",
+  "folder.bg.hint": "Willañaykuna qam churamusqayki. Musuq willañayta yapaypaq \\\"+\\\" ñit'iy",
+  "folder.block.open": "Blokkunakuna",
+  "folder.block.title": "Blokkunakuna",
+  "folder.block.hint": "Llapan uya runakunapaq huk rikrakachallam llamk'achikun. Manaqa ..._top, ..._side, ..._bottom sutiyuq kimsa willakuykunata akllay",
+  "folder.block.error": "Huk rikrakachatallam akllay, utaq _top, _side icha _bottom nisqawan tukukuq willakuykunata",
+  "folder.emote.open": "Emotekunakuna",
+  "folder.emote.title": "Emotekunakuna",
+  "folder.emote.hint": "Huk emote .json willakuyta akllay, munanktataq chayqa, huk icon rikrakachatapas (.png) kikin rimanakunallapim",
+  "folder.emote.icon": "Iconta t'ikray",
+
+  "ui.hide": "Rikchayta pakay (H)",
+  "ui.show": "Rikchayta qawachiy (H)",
+
+  "shot.title": "Pantalla hap'isqata waqaychay (ch'uya qhipanpaq Shift ñit'ispa hap'iy)",
+  "shot.error": "Pantalla hap'isqataqa manam waqaychayta atikunchu"
 }

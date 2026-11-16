@@ -59,7 +59,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Välj en emote eller ladda upp en egen .json-fil",
+  "emote.hint": "Välj en emote eller öppna \\\"Mina emotes\\\" för att lägga till en egen",
   "emote.stop": "Avbryt emote",
   "emote.test": "Testa egen emote",
   "emote.empty": "Inga emotes hittades (mappen emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere-pose (Mardrömmar)",
   "emote.name.SPE_Zoro_Pose": "Zoros pose (Multiversum) (One Piece)",
 
+  "emote.by": "av %s",
+  "emote.search_placeholder": "Sök emotes...",
+  "emote.no_results": "Inga emotes hittades",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Ekplankor",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endsten",
+  "block.plain": "Ingen textur",
 
   "bgimg.name.day": "Dag",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Natt",
   "bgimg.name.snow": "Snö",
-  "bgimg.name.sunset": "Solnedgång"
+  "bgimg.name.sunset": "Solnedgång",
+
+  "blocks.empty": "Inga block än - lägg till texturer i mappen blocks/ eller lägg till dina egna",
+
+  "folder.add": "Lägg till",
+  "folder.delete": "Radera",
+  "folder.delete_confirm": "Ta bort \\\"%s\\\" från din mapp?",
+  "folder.empty": "Här finns inget ännu - tryck på \\\"+\\\" för att lägga till din första fil",
+  "folder.local_note": "Filer lagras endast i den här webbläsaren",
+  "folder.memory_only": "Webbläsarlagring är inte tillgänglig - filer försvinner när du stänger fliken",
+  "folder.error": "Kunde inte lägga till den här filen",
+  "folder.bg.open": "Mina bilder",
+  "folder.bg.title": "Mina bilder",
+  "folder.bg.hint": "Dina uppladdade bilder. Tryck på \\\"+\\\" för att lägga till en ny",
+  "folder.block.open": "Mina block",
+  "folder.block.title": "Mina block",
+  "folder.block.hint": "En bild används för alla sidor. Eller välj tre filer som heter ..._top, ..._side och ..._bottom",
+  "folder.block.error": "Välj en bild eller filer som slutar på _top, _side eller _bottom",
+  "folder.emote.open": "Mina emotes",
+  "folder.emote.title": "Mina emotes",
+  "folder.emote.hint": "Välj en .json-fil för emoten och, om du vill, en ikonbild (.png) i samma dialogruta",
+  "folder.emote.icon": "Byt ikon",
+
+  "ui.hide": "Dölj gränssnitt (H)",
+  "ui.show": "Visa gränssnitt (H)",
+
+  "shot.title": "Spara skärmdump (håll ned Shift för genomskinlig bakgrund)",
+  "shot.error": "Kunde inte spara skärmdumpen"
 }

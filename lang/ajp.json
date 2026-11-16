@@ -59,7 +59,7 @@
 
   "emote.button": "الحركات التعبيرية",
   "emote.title": "الحركات التعبيرية",
-  "emote.hint": "اختر حركة تعبيرية أو حمّل ملف .json الخاص بك",
+  "emote.hint": "اختار إيموت أو افتح \\\"الإيموتات تبعي\\\" لتضيف إيموت خاص فيك",
   "emote.stop": "إيقاف الحركة",
   "emote.test": "اختبار حركتك التعبيرية",
   "emote.empty": "لم يتم العثور على حركات (مجلد emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "وضعية يانديري (كوابيس)",
   "emote.name.SPE_Zoro_Pose": "وضعية زورو (الكون المتعدد) (ون بيس)",
 
+  "emote.by": "بواسطة %s",
+  "emote.search_placeholder": "بحث عن تعبيرات...",
+  "emote.no_results": "ما لقينا تعبيرات",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -359,11 +363,39 @@
   "block.planks": "ألواح بلوط",
   "block.netherrack": "نذراكت",
   "block.end_stone": "حجر النهاية",
+  "block.plain": "بدون قوام",
 
   "bgimg.name.day": "نهار",
   "bgimg.name.end": "النهاية",
   "bgimg.name.nether": "النذر",
   "bgimg.name.night": "ليل",
   "bgimg.name.snow": "ثلج",
-  "bgimg.name.sunset": "غروب الشمس"
+  "bgimg.name.sunset": "غروب الشمس",
+
+  "blocks.empty": "ما في كتل لسا - حط القوام بمجلد blocks/ أو ضيف قوامك الخاص",
+
+  "folder.add": "أضيف",
+  "folder.delete": "حذف",
+  "folder.delete_confirm": "بدّك تحذف \\\"%s\\\" من مجلّدك؟",
+  "folder.empty": "لسا ما في شي هون - اضغط على \\\"+\\\" لتضيف أول ملف إلك",
+  "folder.local_note": "الملفات مخزنة في هاد المتصفح بس",
+  "folder.memory_only": "تخزين المتصفح مو شغال - الملفات رح تختفي لما تسكر التبويب",
+  "folder.error": "ما قدرت أضيف هاد الملف",
+  "folder.bg.open": "صوري",
+  "folder.bg.title": "صوري",
+  "folder.bg.hint": "الصور اللي رفعتها. اضغط على \\\"+\\\" لتضيف صورة جديدة",
+  "folder.block.open": "كتلتي",
+  "folder.block.title": "كتلتي",
+  "folder.block.hint": "بتستعمل صورة وحدة لكل الوجهات. أو اختار ثلاث ملفات باسم ..._top و ..._side و ..._bottom",
+  "folder.block.error": "اختار صورة وحدة، أو ملفات بتخلص بـ _top أو _side أو _bottom",
+  "folder.emote.open": "رقصاتي",
+  "folder.emote.title": "رقصاتي",
+  "folder.emote.hint": "اختار ملف .json للرقصة وإذا بدك، صورة الأيقونة (.png) بنفس نافذة الحوار",
+  "folder.emote.icon": "غيّر الأيقونة",
+
+  "ui.hide": "إخفاء الواجهة (H)",
+  "ui.show": "إظهار الواجهة (H)",
+
+  "shot.title": "احفظ لقطة الشاشة (اضغط باستمرار على Shift لخلفية شفافة)",
+  "shot.error": "ما قدرت أحفظ لقطة الشاشة"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Emote",
   "emote.title": "Emote",
-  "emote.hint": "Pèlè emote otabâ muat file .json dhibi'",
+  "emote.hint": "Pilih emote apa bukak \\\"Emote sengkok\\\" ben nambah emote dhibi' dhibi",
   "emote.stop": "Pote emote",
   "emote.test": "Cobhâ emote dhibi'",
   "emote.empty": "Emote ta' ètemmo (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Posisi Yandere (Mimpi Buruk)",
   "emote.name.SPE_Zoro_Pose": "Posisi Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "olèh %s",
+  "emote.search_placeholder": "Nyarè emote...",
+  "emote.no_results": "Èbâ ta' kapanggih emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Papan kaju",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
+  "block.plain": "Èbâ ta' kapanggih tekstur",
 
   "bgimg.name.day": "Sèyang",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Malem",
   "bgimg.name.snow": "Salju",
-  "bgimg.name.sunset": "Compè' arè"
+  "bgimg.name.sunset": "Compè' arè",
+
+  "blocks.empty": "Èbâ ta' ghâḍbhâ blok - pasang tekstur è ḍâlem folder blocks/ o tambâ' dhibi",
+
+  "folder.add": "Tambah",
+  "folder.delete": "Èbâ malä",
+  "folder.delete_confirm": "Apa \\\"%s\\\" e kaḍhuk saka folder bâ'na?",
+  "folder.empty": "Bâḍâ' ta' arèya apa-apa - tèken \\\"+\\\" bâ' tamba file sè pertama",
+  "folder.local_note": "Berkas èsimpen coma è ḍâlem browser panèka",
+  "folder.memory_only": "Panyimpenan browser ta' ekasè - berkas bakal èlang bâjâna ngettep tab",
+  "folder.error": "Èbâ ta' kapèngghâ file panèka",
+  "folder.bg.open": "Gambar sengko",
+  "folder.bg.title": "Gambar sengko",
+  "folder.bg.hint": "Gambar sè la èunggah. Tèken \\\"+\\\" bâ' nambah gambar anyar",
+  "folder.block.open": "Blok sengko",
+  "folder.block.title": "Blok sengko",
+  "folder.block.hint": "Sèttong gambar èangghuy ka'angghuy sakabbhina muka. Otabâ pèlè tello' berkas sè anyama ..._top, ..._side bi' ..._bottom",
+  "folder.block.error": "Pèlè sèttong gambar, otabâ berkas sè èpon _top, _side otabâ _bottom",
+  "folder.emote.open": "Emot sengko",
+  "folder.emote.title": "Emot sengko",
+  "folder.emote.hint": "Pèlè berkas .json emote otabâ, mon terro, gambar ikon (.png) è ḍâlem dialog sè padhâ",
+  "folder.emote.icon": "Ghântè' ikon",
+
+  "ui.hide": "Sembunyikan antarmuka (H)",
+  "ui.show": "Tampilkan antarmuka (H)",
+
+  "shot.title": "Simpen tangkapan layar (tahan Shift ka'angghuy latar belakang transparan)",
+  "shot.error": "Simpen tangkapan layar ta' kapèngghâ"
 }

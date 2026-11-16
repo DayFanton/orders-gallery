@@ -60,7 +60,7 @@
 
   "emote.button": "Dareemu",
   "emote.title": "Dareemu",
-  "emote.hint": "Dareemu doorit hinnay isi .json faayil oobis",
+  "emote.hint": "Emote dooritak ama \\\"Emoteh yan\\\" furtak, atu ku emote inkih additak",
   "emote.stop": "Dareemu soolis",
   "emote.test": "Isi dareemu aqayyaare",
   "emote.empty": "Dareemu makattiminna (emotes/ sanduq)",
@@ -98,6 +98,7 @@
   "block.planks": "Alwi xaqxaq",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End xaa",
+  "block.plain": "Texture ma ganyinna",
 
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Massos",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Soolo (Meqsi)",
   "emote.name.SPE_Zoro_Pose": "Zoro Soolo (Maggo Qalam) (One Piece)",
 
+  "emote.by": "%s",
+  "emote.search_placeholder": "Emotes saggi...",
+  "emote.no_results": "Emotes ma ganyinna",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Jahannam",
   "bgimg.name.night": "Bar",
   "bgimg.name.snow": "Baraf",
-  "bgimg.name.sunset": "Ayró caddo"
+  "bgimg.name.sunset": "Ayró caddo",
+
+  "blocks.empty": "Blocks ma ganyinna - texture blocks/ folder kee addih ma ganyinna",
+
+  "folder.add": "Dabali",
+  "folder.delete": "Suggis",
+  "folder.delete_confirm": "\\\"%s\\\" folderitak ken xayyoosuh?",
+  "folder.empty": "Agabu gibda mali - \\\"+\\\" kinnimtek addah tanih fayil gexxa",
+  "folder.local_note": "Files maxsuudi mahin browser koo",
+  "folder.memory_only": "Browser storage ma ganyinna - files maxsuudi tab koo",
+  "folder.error": "File koo ma ganyinna",
+  "folder.bg.open": "Images koo",
+  "folder.bg.title": "Images koo",
+  "folder.bg.hint": "Kuwayti ayti upload takkeh. Kinnimtek \\\"+\\\" takkeh cusubih addah",
+  "folder.block.open": "Blocks koo",
+  "folder.block.title": "Blocks koo",
+  "folder.block.hint": "Image koo all faces kee addih useysinna. Kalli three files addisaysu ..._top, ..._side kee ..._bottom",
+  "folder.block.error": "Image koo, woyite _top, _side kee _bottom kee yocissah files koo addisaysu",
+  "folder.emote.open": "Emotes koo",
+  "folder.emote.title": "Emotes koo",
+  "folder.emote.hint": "Emote .json file kee, woyite addisaysu woyite, icon image (.png) dialog koo kee addisaysu",
+  "folder.emote.icon": "Icon koo cissa",
+
+  "ui.hide": "Interface maggana (H)",
+  "ui.show": "Interface takki (H)",
+
+  "shot.title": "Screenshot dacrisa (baxxaqqa le gambu Shift ibbix)",
+  "shot.error": "Screenshot dacrisa maynna"
 }

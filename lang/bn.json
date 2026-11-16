@@ -59,7 +59,7 @@
 
   "emote.button": "ইমোটস",
   "emote.title": "ইমোটস",
-  "emote.hint": "একটি ইমোট চয়ন করুন বা আপনার নিজস্ব .json ফাইল লোড করুন",
+  "emote.hint": "একটি ইমোট বেছে নিন অথবা নিজের ইমোট যোগ করতে \\\"আমার ইমোট\\\" খুলুন",
   "emote.stop": "ইমোট থামান",
   "emote.test": "আপনার নিজস্ব ইমোট পরীক্ষা করুন",
   "emote.empty": "কোনো ইমোট পাওয়া যায়নি (emotes/ ফোল্ডার)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "ইয়ান্দেরে পোজ (দুঃস্বপ্ন)",
   "emote.name.SPE_Zoro_Pose": "জোরো পোজ (মাল্টিভার্স) (ওয়ান পিস)",
 
+  "emote.by": "%s দ্বারা",
+  "emote.search_placeholder": "ইমোট খুঁজুন...",
+  "emote.no_results": "কোনো ইমোট পাওয়া যায়নি",
+
   "person.Артур": "আর্থুর",
   "person.Вайкату": "ওয়াইকাতু",
   "person.Виакор": "ভিয়াকোর",
@@ -359,11 +363,39 @@
   "block.planks": "ওক তক্তা",
   "block.netherrack": "নেদারর্যাক",
   "block.end_stone": "এন্ড স্টোন",
+  "block.plain": "কোনো টেক্সচার নেই",
 
   "bgimg.name.day": "দিন",
   "bgimg.name.end": "এন্ড",
   "bgimg.name.nether": "নেদার",
   "bgimg.name.night": "রাত",
   "bgimg.name.snow": "তুষার",
-  "bgimg.name.sunset": "সূর্যাস্ত"
+  "bgimg.name.sunset": "সূর্যাস্ত",
+
+  "blocks.empty": "এখনো কোনো ব্লক নেই - blocks/ ফোল্ডারে টেক্সচার রাখুন অথবা আপনার নিজেরটি যোগ করুন",
+
+  "folder.add": "যোগ করুন",
+  "folder.delete": "মুছে ফেলুন",
+  "folder.delete_confirm": "আপনি কি আপনার ফোল্ডার থেকে \\\"%s\\\" মুছে ফেলতে চান?",
+  "folder.empty": "এখানে এখনও কিছু নেই - আপনার প্রথম ফাইল যোগ করতে \\\"+\\\" চাপুন",
+  "folder.local_note": "ফাইলগুলো শুধুমাত্র এই ব্রাউজারে সংরক্ষিত থাকে",
+  "folder.memory_only": "ব্রাউজার স্টোরেজ উপলভ্য নয় - ট্যাব বন্ধ করলে ফাইলগুলো হারিয়ে যাবে",
+  "folder.error": "এই ফাইল যোগ করা যায়নি",
+  "folder.bg.open": "আমার ছবি",
+  "folder.bg.title": "আমার ছবি",
+  "folder.bg.hint": "আপনার আপলোড করা ছবিগুলো। নতুন ছবি যোগ করতে \\\"+\\\" চাপুন",
+  "folder.block.open": "আমার ব্লকগুলো",
+  "folder.block.title": "আমার ব্লকগুলো",
+  "folder.block.hint": "সব মুখের জন্য একটি ছবি ব্যবহার করা হয়। অথবা ..._top, ..._side এবং ..._bottom নামের তিনটি ফাইল বেছে নিন",
+  "folder.block.error": "একটি ছবি, অথবা _top, _side বা _bottom দিয়ে শেষ হওয়া ফাইলগুলো বেছে নিন",
+  "folder.emote.open": "আমার ইমোটগুলো",
+  "folder.emote.title": "আমার ইমোটগুলো",
+  "folder.emote.hint": "একটি emote .json ফাইল এবং আপনি চাইলে একই ডায়ালগে একটি আইকন ছবি (.png) বেছে নিন",
+  "folder.emote.icon": "আইকন পরিবর্তন করুন",
+
+  "ui.hide": "ইন্টারফেস লুকান (H)",
+  "ui.show": "ইন্টারফেস দেখান (H)",
+
+  "shot.title": "স্ক্রিনশট সংরক্ষণ করুন (স্বচ্ছ ব্যাকগ্রাউন্ডের জন্য Shift ধরে রাখুন)",
+  "shot.error": "স্ক্রিনশট সংরক্ষণ করা যায়নি"
 }

@@ -60,7 +60,7 @@
 
   "emote.button": "ইমোটসমূহ",
   "emote.title": "ইমোটসমূহ",
-  "emote.hint": "এটা ইমোট বাছনি কৰক বা আপোনাৰ নিজৰ .json ফাইল আপলোড কৰক",
+  "emote.hint": "এটা ইম'ট বাছনি কৰক বা নিজৰটো যোগ কৰিবলৈ \\\"মোৰ ইম'ট\\\" খোলক",
   "emote.stop": "ইমোট বন্ধ কৰক",
   "emote.test": "নিজৰ ইমোট পৰীক্ষা কৰক",
   "emote.empty": "কোনো ইমোট পোৱা নগ'ল (emotes/ ফোল্ডাৰ)",
@@ -98,6 +98,7 @@
   "block.planks": "ওক কাঠৰ তক্তা",
   "block.netherrack": "নেদাৰৰেক",
   "block.end_stone": "এণ্ড শিল",
+  "block.plain": "কোনো টেক্সচাৰ নাই",
 
   "mobile.gallery": "📁 গেলাৰী",
   "mobile.settings": "⚙️ ছেটিংছ",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "য়াণ্ডেৰেৰ ভংগীমা (দুঃস্বপ্ন)",
   "emote.name.SPE_Zoro_Pose": "জোৰোৰ ভংগীমা (মাল্টিভাৰ্ছ) (One Piece)",
 
+  "emote.by": "%s দ্বাৰা",
+  "emote.search_placeholder": "ইম’ট বিচা দিয়ক...",
+  "emote.no_results": "কোনো ইম’ট পোৱা নগ’ল",
+
   "person.Артур": "আৰ্থাৰ",
   "person.Вайкату": "ৱাইকাটু",
   "person.Виакор": "ভায়াকোৰ",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "নেদাৰ",
   "bgimg.name.night": "ৰাতি",
   "bgimg.name.snow": "বৰফ",
-  "bgimg.name.sunset": "সূৰ্যাস্ত"
+  "bgimg.name.sunset": "সূৰ্যাস্ত",
+
+  "blocks.empty": "এতিয়ালৈকে কোনো ব্লাক নাই - blocks/ ফোল্ডাৰত টেক্সচাৰ ৰাখক বা আপোনাৰ নিজৰ যোগ কৰক",
+
+  "folder.add": "যোগ কৰক",
+  "folder.delete": "মচি পেলাও",
+  "folder.delete_confirm": "আপোনাৰ ফোল্ডাৰৰ পৰা \\\"%s\\\" মচি পেলাবনে?",
+  "folder.empty": "ইয়াত এতিয়াও একো নাই - আপোনাৰ প্ৰথম ফাইলটো যোগ কৰিবলৈ \\\"+\\\" টিপক",
+  "folder.local_note": "ফাইল কেৱল এই ব্ৰাউজাৰতেই সংৰক্ষিত কৰা হয়",
+  "folder.memory_only": "ব্ৰাউজাৰ ষ্ট’ৰেজ উপলব্ধ নহয় - টেৱ বন্ধ কৰিলে ফাইলসমূহ নাইকিয়া হৈ যাব",
+  "folder.error": "এই ফাইলটো যোগ কৰκ নোৱাৰিলে",
+  "folder.bg.open": "মোৰ ছবিসমূহ",
+  "folder.bg.title": "মোৰ ছবিসমূহ",
+  "folder.bg.hint": "আপোনাৰ আপলোড কৰা ছবিসমূহ। নতুন ছবি যোগ কৰিবলৈ \\\"+\\\" টিপক",
+  "folder.block.open": "মোৰ ব্লাকসমূহ",
+  "folder.block.title": "মোৰ ব্লাকসমূহ",
+  "folder.block.hint": "সকলো মুখৰ বাবে এটা ছবি ব্যৱহাৰ কৰা হয়। অথবা ..._top, ..._side আৰু ..._bottom নামৰ তিনিটা ফাইল বাোচনি কৰক",
+  "folder.block.error": "এটা ছবি, বা _top, _side অথবা _bottom এ শেষ হোৱা ফাইল বাছনি কৰক",
+  "folder.emote.open": "মোৰ ইম’টসমূহ",
+  "folder.emote.title": "মোৰ ইম’টসমূহ",
+  "folder.emote.hint": "এটা emote .json ফাইল আৰু যদি আপুনি বিচাৰে, একেটা ডাইলাগত এটা আইকন ছবি (.png) বাছনি কৰক",
+  "folder.emote.icon": "আইকন সলনি কৰক",
+
+  "ui.hide": "ইণ্টাৰফেচ ল εkuৱক (H)",
+  "ui.show": "ইণ্টাৰফেচ দেখুৱক (H)",
+
+  "shot.title": "স্ক্ৰীণশ্বট সংৰক্ষণ কৰক (স্বচ্ছ পৃষ্ঠভূমিৰ বাবে Shift হেঁচি ধৰক)",
+  "shot.error": "স্ক্ৰীণশ্বট সংৰক্ষণ কৰিব নোৱাৰিলে"
 }

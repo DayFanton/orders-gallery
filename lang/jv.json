@@ -59,7 +59,7 @@
 
   "emote.button": "Émosi",
   "emote.title": "Émosi",
-  "emote.hint": "Pilih émosi utawa unggah file .json sampeyan dhewe",
+  "emote.hint": "Pilih emote utawa bukak \\\"Emoteku\\\" kanggo nambah emote duwekmu dhewe",
   "emote.stop": "Mandhegake émosi",
   "emote.test": "Tes émosi sampeyan dhewe",
   "emote.empty": "Ora ana émosi sing ditemokake (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose Yandere (Ngimpi Elek)",
   "emote.name.SPE_Zoro_Pose": "Pose Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "dening %s",
+  "emote.search_placeholder": "Golek emote...",
+  "emote.no_results": "Ora ana emote sing ditemokake",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Papan kayu oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Watu End",
+  "block.plain": "Tanpa tekstur",
 
   "bgimg.name.day": "Rina",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Bengi",
   "bgimg.name.snow": "Salju",
-  "bgimg.name.sunset": "Surup"
+  "bgimg.name.sunset": "Surup",
+
+  "blocks.empty": "Durung ana blok - pasang tekstur ing folder blocks/ utawa tambahake dhewe",
+
+  "folder.add": "Tambah",
+  "folder.delete": "Hapus",
+  "folder.delete_confirm": "Busak \\\"%s\\\" saka folder sampeyan?",
+  "folder.empty": "Durung ana apa-apa ing kéné - pencet \\\"+\\\" kanggo nambah file pisananmu",
+  "folder.local_note": "Berkas mung disimpen ing browser iki",
+  "folder.memory_only": "Panyimpenan browser ora kasedhiya - berkas bakal ilang nalika sampeyan nutup tab",
+  "folder.error": "Ora bisa nambah berkas iki",
+  "folder.bg.open": "Gambarku",
+  "folder.bg.title": "Gambarku",
+  "folder.bg.hint": "Gambar sing wis kok unggah. Pencet \\\"+\\\" kanggo nambah gambar anyar",
+  "folder.block.open": "Blokku",
+  "folder.block.title": "Blokku",
+  "folder.block.hint": "Siji gambar digunakake kanggo kabeh pasuryan. Utawa pilih telung berkas sing jenenge ..._top, ..._side lan ..._bottom",
+  "folder.block.error": "Pilih siji gambar, utawa berkas sing nganggo _top, _side utawa _bottom",
+  "folder.emote.open": "Emotku",
+  "folder.emote.title": "Emotku",
+  "folder.emote.hint": "Pilih berkas .json emote lan, yen pengin, gambar ikon (.png) ing dialog sing padha",
+  "folder.emote.icon": "Ganti ikon",
+
+  "ui.hide": "Sembunyikan antarmuka (H)",
+  "ui.show": "Tampilkan antarmuka (H)",
+
+  "shot.title": "Simpen tangkapan layar (tahan Shift kanggo latar mburi transparan)",
+  "shot.error": "Ora bisa nyimpen tangkapan layar"
 }

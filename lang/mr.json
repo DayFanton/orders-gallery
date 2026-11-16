@@ -59,7 +59,7 @@
 
   "emote.button": "इमोजी",
   "emote.title": "इमोजी",
-  "emote.hint": "एक इमोजी निवडा किंवा स्वतःची .json फाइल अपलोड करा",
+  "emote.hint": "एखादा इमोट निवडा किंवा स्वतःचा इमोट जोडण्यासाठी \\\"माझे इमोट्स\\\" उघडा",
   "emote.stop": "इमोजी थांबवा",
   "emote.test": "तुमची स्वतःची इमोजी तपासा",
   "emote.empty": "कोणतीही इमोजी आढळली नाही (emotes/ फोल्डर)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "यांदेरे पोझ (दुस्वप्ने)",
   "emote.name.SPE_Zoro_Pose": "झोरो पोझ (मल्टीव्हर्स) (वन पीस)",
 
+  "emote.by": "%s द्वारे",
+  "emote.search_placeholder": "इमोट्स शोधा...",
+  "emote.no_results": "कोणतेही इमोट्स सापडले नाहीत",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वायकातू",
   "person.Виакор": "वियाकोर",
@@ -359,11 +363,39 @@
   "block.planks": "ओक फळ्या",
   "block.netherrack": "नेदररॅक",
   "block.end_stone": "एंड दगड",
+  "block.plain": "कोणतीही पोत नाही",
 
   "bgimg.name.day": "दिवस",
   "bgimg.name.end": "एंड",
   "bgimg.name.nether": "नेदर",
   "bgimg.name.night": "रात्र",
   "bgimg.name.snow": "बर्फ",
-  "bgimg.name.sunset": "सूर्यास्त"
+  "bgimg.name.sunset": "सूर्यास्त",
+
+  "blocks.empty": "अद्याप कोणतेही ब्लॉक नाहीत - blocks/フォल्डरमध्ये पोत टाका किंवा तुमचे स्वतःचे जोडा",
+
+  "folder.add": "जोडा",
+  "folder.delete": "हटवा",
+  "folder.delete_confirm": "तुमच्या फोल्डरमधून \\\"%s\\\" हटवायचे आहे का?",
+  "folder.empty": "येथे अद्याप काहीही नाही - तुमची पहिली फाइल जोडण्यासाठी \\\"+\\\" दाबा",
+  "folder.local_note": "फाईल्स केवळ या ब्राउझरमध्ये साठवल्या जातात",
+  "folder.memory_only": "ब्राउझर स्टोरेज उपलब्ध नाही - टॅब बंद केल्यावर फाईल्स नाहीशा होतीან",
+  "folder.error": "ही फाइल जोडली जाऊ शकली नाही",
+  "folder.bg.open": "माझ्या प्रतिमा",
+  "folder.bg.title": "माझ्या प्रतिमा",
+  "folder.bg.hint": "तुम्ही अपलोड केलेल्या प्रतिमा. नवीन प्रतिमा जोडण्यासाठी \\\"+\\\" दाबा",
+  "folder.block.open": "माझे ब्लॉक",
+  "folder.block.title": "माझे ब्लॉक",
+  "folder.block.hint": "सर्व चेहऱ्यांसाठी एकच प्रतिमा वापरली जाते. किंवा ..._top, ..._side आणि ..._bottom नावाच्या तीन फायली निवडा",
+  "folder.block.error": "एक प्रतिमा किंवा _top, _side किंवा _bottom सह संपणाऱ्या फायली निवडा",
+  "folder.emote.open": "माझे इमोट्स",
+  "folder.emote.title": "माझे इमोट्स",
+  "folder.emote.hint": "एक इमोट .json फाइल निवडा आणि, इच्छा असल्यास, त्याच संवादात आयकॉन प्रतिमा (.png) निवडा",
+  "folder.emote.icon": "आयकॉन बदला",
+
+  "ui.hide": "इंटरफेस लपवा (H)",
+  "ui.show": "इंटरफेस दाखवा (H)",
+
+  "shot.title": "स्क्रीनशॉट सेव्ह करा (पारदर्शक पार्श्वभूमीसाठी Shift दाबून ठेवा)",
+  "shot.error": "स्क्रीनशॉट सेव्ह केला जाऊ शकला नाही"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "इमोट्स",
   "emote.title": "इमोट्स",
-  "emote.hint": "कोई इमोट चुनें या अपनी .json फ़ाइल लोड करें",
+  "emote.hint": "कोई इमोट चुनें या अपना इमोट जोड़ने के लिए \\\"मेरे इमोट्स\\\" खोलें",
   "emote.stop": "इमोट रोकें",
   "emote.test": "अपना इमोट टेस्ट करें",
   "emote.empty": "कोई इमोट नहीं मिला (emotes/ फ़ोल्डर)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "यांदेरे मुद्रा (दुःस्वप्न)",
   "emote.name.SPE_Zoro_Pose": "ज़ोरो मुद्रा (मल्टीवर्स) (वन पीस)",
 
+  "emote.by": "द्वारा %s",
+  "emote.search_placeholder": "इमोट्स खोजें...",
+  "emote.no_results": "कोई इमोट्स नहीं मिला",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वाइकातु",
   "person.Виакор": "वियाकोर",
@@ -359,11 +363,39 @@
   "block.planks": "ओक के तख्ते",
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
+  "block.plain": "कोई टेक्सचर नहीं",
 
   "bgimg.name.day": "दिन",
   "bgimg.name.end": "एंड",
   "bgimg.name.nether": "नेदर",
   "bgimg.name.night": "रात",
   "bgimg.name.snow": "बर्फ़",
-  "bgimg.name.sunset": "सूर्यास्त"
+  "bgimg.name.sunset": "सूर्यास्त",
+
+  "blocks.empty": "अभी कोई ब्लॉक नहीं हैं - blocks/ फ़ोल्डर में टेक्सचर डालें या अपना खुद का जोड़ें",
+
+  "folder.add": "जोड़ें",
+  "folder.delete": "हटाएँ",
+  "folder.delete_confirm": "क्या आप \\\"%s\\\" को अपने फ़ोल्डर से हटाना चाहते हैं?",
+  "folder.empty": "यहाँ अभी कुछ नहीं है - अपनी पहली फ़ाइल जोड़ने के लिए \\\"+\\\" दबाएँ",
+  "folder.local_note": "फ़ाइलें केवल इस ब्राउज़र में संग्रहीत हैं",
+  "folder.memory_only": "ब्राउज़र स्टोरेज उपलब्ध नहीं है - टैब बंद करते ही फ़ाइलें غائب हो जाएंगी",
+  "folder.error": "यह फ़ाइल जोड़ी नहीं जा सकी",
+  "folder.bg.open": "मेरी छवियां",
+  "folder.bg.title": "मेरी छवियां",
+  "folder.bg.hint": "आपके अपलोड किए गए चित्र। नया चित्र जोड़ने के लिए \\\"+\\\" दबाएँ",
+  "folder.block.open": "मेरे ब्लॉक",
+  "folder.block.title": "मेरे ब्लॉक",
+  "folder.block.hint": "सभी चेहरों के लिए एक ही छवि का उपयोग किया जाता है। या ..._top, ..._side और ..._bottom नाम की तीन फ़ाइलें चुनें",
+  "folder.block.error": "एक छवि, या _top, _side या _bottom पर समाप्त होने والی फ़ाइलें चुनें",
+  "folder.emote.open": "मेरे इमोट्स",
+  "folder.emote.title": "मेरे इमोट्स",
+  "folder.emote.hint": "एक इमोट .json फ़ाइल चुनें और, यदि आप चाहें, तो उसी संवाद में एक आइकन छवि (.png) चुनें",
+  "folder.emote.icon": "आइकन बदलें",
+
+  "ui.hide": "इंटरफ़ेस छुपाएं (H)",
+  "ui.show": "इंटरफ़ेस दिखाएं (H)",
+
+  "shot.title": "स्क्रीनशॉट सहेजें (पारदर्शी पृष्ठभूमि के लिए Shift दबाए रखें)",
+  "shot.error": "स्क्रीनशॉट सहेजा नहीं जा सका"
 }

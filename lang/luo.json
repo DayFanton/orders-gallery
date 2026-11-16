@@ -59,7 +59,7 @@
 
   "emote.button": "Timbe",
   "emote.title": "Timbe",
-  "emote.hint": "Yier tim achiel kata ket fail mari mar .json",
+  "emote.hint": "Yier emote kata yabi \\\"Emote maga\\\" mondo idhi nyisa mar kendi",
   "emote.stop": "Chung' tim",
   "emote.test": "Tem tim mari iwuon",
   "emote.empty": "Onge timbe ma oyudore (folder mar emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Chung' mar Yandere (Lek marach)",
   "emote.name.SPE_Zoro_Pose": "Chung' mar Zoro (Pinje Mang'eny) (One Piece)",
 
+  "emote.by": "mar %s",
+  "emote.search_placeholder": "Chien gi emoticons...",
+  "emote.no_results": "Oonge emoticons mowinjore",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Bao mag yath",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kidi mar End",
+  "block.plain": "Oonge kit kido",
 
   "bgimg.name.day": "Odiecthieng",
   "bgimg.name.end": "Giko",
   "bgimg.name.nether": "Mach",
   "bgimg.name.night": "Otieno",
   "bgimg.name.snow": "Pe",
-  "bgimg.name.sunset": "Podho chieng"
+  "bgimg.name.sunset": "Podho chieng",
+
+  "blocks.empty": "Oonge block moro amora - ket kit kido e foya mar blocks/ kata iket mari owegi",
+
+  "folder.add": "Med",
+  "folder.delete": "Chwany",
+  "folder.delete_confirm": "Idwaro \\\"%s\\\" aa iwe e folder mari?",
+  "folder.empty": "Onge gima niti kae sani - di \\\"+\\\" mondo iket file mari mokwongo",
+  "folder.local_note": "Oseik goyo e broza ma",
+  "folder.memory_only": "Oseik goyo e broza ma - file biro nyime ka iyang'o tab",
+  "folder.error": "Ok nyal medo file ma",
+  "folder.bg.open": "Picha magka",
+  "folder.bg.title": "Picha magka",
+  "folder.bg.hint": "Picha mane ma isepel. Di \\\"+\\\" mondo iket machielo manyien",
+  "folder.block.open": "Block magka",
+  "folder.block.title": "Block magka",
+  "folder.block.hint": "Picha achiel e ma tiyo gi yore duto. Kata yier file adek ma nyinggi en ..._top, ..._side kod ..._bottom",
+  "folder.block.error": "Yier picha achiel, kata file ma ochopo gi _top, _side kata _bottom",
+  "folder.emote.open": "Emotes magka",
+  "folder.emote.title": "Emotes magka",
+  "folder.emote.hint": "Yier file mar emote .json kata, ka dwaro, picha mar icon (.png) e dialog achiel",
+  "folder.emote.icon": "Lok icon",
+
+  "ui.hide": "Mon gima (H)",
+  "ui.show": "Nyis gima (H)",
+
+  "shot.title": "Kan picha mar skrin (mak Shift mondo iyud ng'eyo ma nenore)",
+  "shot.error": "Ok nyal kano picha mar skrin"
 }

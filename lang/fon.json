@@ -59,7 +59,7 @@
 
   "emote.button": "Nǔwiwa agbaza tɔn",
   "emote.title": "Nǔwiwa agbaza tɔn",
-  "emote.hint": "Cyán nǔwiwa ɖokpó alǒ zé wěmà .json towe",
+  "emote.hint": "Xɔ emote ɖé alo ʋu \\\"Emote nyè tɔn\\\" nǔ he wò tɔn",
   "emote.stop": "Ɖó nǔwiwa ɔ́ tè",
   "emote.test": "Tɛ́n nǔwiwa towe kpɔ́n",
   "emote.empty": "È mɔ nǔwiwa ɖěbǔ ǎ (gòbá emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Tèninɔ Yandere Tɔn (Nǔkúdɔ̀)",
   "emote.name.SPE_Zoro_Pose": "Tèninɔ Zoro Tɔn (Wɛ̀kɛ́ Gègě) (One Piece)",
 
+  "emote.by": "gbɔn %s dali",
+  "emote.search_placeholder": "Ba emoti...",
+  "emote.no_results": "E mɔ emoti ɖe ǎ",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Atín chêne tɔn",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Àwìnyà End tɔn",
+  "block.plain": "Tɛsutuxu ɖe ǎ",
 
   "bgimg.name.day": "Kèzé",
   "bgimg.name.end": "Vɔvɔ",
   "bgimg.name.nether": "Zomɛ",
   "bgimg.name.night": "Zǎn",
   "bgimg.name.snow": "Agɔ",
-  "bgimg.name.sunset": "Hwèsixɔ"
+  "bgimg.name.sunset": "Hwèsixɔ",
+
+  "blocks.empty": "Blɔku ɖe a ɖo te kpɔ - sɔ tɛsutuxu ɖó fláta blocks/ tɔn mɛ Ɓɛ walla belɛ tɔn tɔn",
+
+  "folder.add": "Sɔ",
+  "folder.delete": "Sɛ̀",
+  "folder.delete_confirm": "A jlo na ɖo \\\"%s\\\" ɖe wò folder me?",
+  "folder.empty": "Nukún ɖò alɔ̀mɛ̀ ɖé ɖo - tɔ́n \\\"+\\\" nǔ ɖé ɖó ɖò wɛ́",
+  "folder.local_note": "Gbɔn fláta ɔ mɛ wɛ wema lɛ ɖè",
+  "folder.memory_only": "Fláta ɔ mɛ wɛ wema lɛ ɖè ǎ - wema lɛ na bu hwenu e na sɔ xójɔnu ɖó tɛntin ɔ",
+  "folder.error": "E sixɔ nɔ wema élɔ ǎ",
+  "folder.bg.open": "Yɔtɔ nye tɔn",
+  "folder.bg.title": "Yɔtɔ nye tɔn",
+  "folder.bg.hint": "Wémà ɖó wɛ ɖò wɛ́. Tɔ́n \\\"+\\\" nǔ ɖé ɖó wɛ́",
+  "folder.block.open": "Blɔku nye tɔn",
+  "folder.block.title": "Blɔku nye tɔn",
+  "folder.block.hint": "Yɔtɔ ɖokpo wɛ nɔ zán nu kɔn lɛ bi. Kpodo wɛ sɔ wema atɔɔn e nɔ ylɔ ɖɔ ..._top, ..._side kpo ..._bottom kpo",
+  "folder.block.error": "Sɔ yɔtɔ ɖokpo, Ɓɛ wema e nɔ vɔ ɖo _top, _side mɛ lɛ tɔn",
+  "folder.emote.open": "Emoti nye tɔn",
+  "folder.emote.title": "Emoti nye tɔn",
+  "folder.emote.hint": "Sɔ wema .json emoti tɔn ɖokpo kpodo yɔtɔ icon tɔn (.png) kpo ɖo fláta ɖokpo ɔ mɛ",
+  "folder.emote.icon": "Trɔ icon ɔ",
+
+  "ui.hide": "Xò nɔ wiwlé tɔn (H)",
+  "ui.show": "Xò nɔ wiwlé tɔn xlɛ (H)",
+
+  "shot.title": "Hɛn nǔ e ɖò ekran jí é (hɛn Shift ɖó te nú gúdo tɔn ní wé)",
+  "shot.error": "E sixɔ nɔ hɛn nǔ e ɖò ekran jí é ǎ"
 }

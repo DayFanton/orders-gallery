@@ -59,7 +59,7 @@
 
   "emote.button": "Maipfi a zwifanyiso",
   "emote.title": "Maipfi a zwifanyiso",
-  "emote.hint": "Nangani maipfi a tshifanyiso kana ni longe faela yaṋu ya .json",
+  "emote.hint": "Nangani emote kana ni vula \\\"Emote dzanga\\\" u engedze yaṋu",
   "emote.stop": "Imisani maipfi a tshifanyiso",
   "emote.test": "Lingani maipfi aṋu a tshifanyiso",
   "emote.empty": "A hu na maipfi a zwifanyiso o wanalaho (foḽuda ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Tshiimo tsha Yandere (Miloro mivhi)",
   "emote.name.SPE_Zoro_Pose": "Tshiimo tsha Zoro (Ḽifhasi ḽinzhi) (One Piece)",
 
+  "emote.by": "nga %s",
+  "emote.search_placeholder": "Toledani zwiga...",
+  "emote.no_results": "A hu zwiga zwo wanaho",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mapulanga a muoki",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Tombo ḽa End",
+  "block.plain": "A hu thekisiture",
 
   "bgimg.name.day": "Masiari",
   "bgimg.name.end": "Magumo",
   "bgimg.name.nether": "Hele",
   "bgimg.name.night": "Vhusiku",
   "bgimg.name.snow": "Mahada",
-  "bgimg.name.sunset": "U kovhela ha ḓuvha"
+  "bgimg.name.sunset": "U kovhela ha ḓuvha",
+
+  "blocks.empty": "A hu na zwiVulo zwino - isa thekisiture kha foluda ya blocks/ kana uwedze dza vha",
+
+  "folder.add": "Vhea",
+  "folder.delete": "Thakha",
+  "folder.delete_confirm": "Ni khou ṱoḓa u phumula \\\"%s\\\" kha foludara yaṋu?",
+  "folder.empty": "A hu na tshithu hafha zwino - puṱedzani \\\"+\\\" u engedze faela yaṋu ya u thoma",
+  "folder.local_note": "Faela dzi vhulungwa fha kha hei burauza",
+  "folder.memory_only": "Vhulungelo ha burauza a vhu wanwi - faela dzi do nyamalala musi ni tshi vala thebu",
+  "folder.error": "A zwo ngo kona u vhea hei faela",
+  "folder.bg.open": "Zwanḓa zwanga",
+  "folder.bg.title": "Zwanḓa zwanga",
+  "folder.bg.hint": "Zwifanyiso zwe na u ṱanganedza. Puṱedzani \\\"+\\\" u engedze tshiṅwe",
+  "folder.block.open": "Zvivulo zwanga",
+  "folder.block.title": "Zvivulo zwanga",
+  "folder.block.hint": "Hu shumiswa tshifanyiso tshithihi kha zwifhaṱuwo zwoṱhe. Kana ni nange faela tharu dzi re na dzina ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Nangani tshifanyiso tshithihi, kana faela dzi fhelaho nga _top, _side kana _bottom",
+  "folder.emote.open": "Zwiga zwanga",
+  "folder.emote.title": "Zwiga zwanga",
+  "folder.emote.hint": "Nangani faela ya .json ya emote nahone, arali na toda, tshifanyiso tsha icon (.png) kha Dayalogo yo fanaho",
+  "folder.emote.icon": "Shandukisa icon",
+
+  "ui.hide": "Vhaedza zwiga (H)",
+  "ui.show": "Luvhadza zwiga (H)",
+
+  "shot.title": "Vhulungani tshifanyiso tsha tshikirini (farani Shift u itela murahu hu vhonalaho)",
+  "shot.error": "A zwo ngo kona u vhulunga tshifanyiso tsha tshikirini"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Seselelãmewo",
   "emote.title": "Seselelãmewo",
-  "emote.hint": "Tia seselelãme aɖe alo tsɔ wò ŋutɔ wò .json faɛl",
+  "emote.hint": "Tia emote alo ʋu \\\"Nye emote siwo\\\" be nà tsɔ wò tɔ kpe ɖe eŋu",
   "emote.stop": "Tɔ seselelãme la",
   "emote.test": "Do wò ŋutɔ wò seselelãme kpɔ",
   "emote.empty": "Womekpɔ seselelãme aɖeke o (emotes/ agbalẽdzraɖoƒe)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere ƒe Nɔnɔme (Drɔ̃e Vɔ̃wo)",
   "emote.name.SPE_Zoro_Pose": "Zoro ƒe Nɔnɔme (Xexeme Geɖe) (One Piece)",
 
+  "emote.by": "tɔ %s",
+  "emote.search_placeholder": "Di emo...",
+  "emote.no_results": "Wòkpɔ emo aɖeke o",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Ati ƒe ʋuƒo",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Nuwuwu kpe",
+  "block.plain": "Tekstura mele o",
 
   "bgimg.name.day": "Ŋdɔ",
   "bgimg.name.end": "Nuwuwu",
   "bgimg.name.nether": "Dzomavɔ",
   "bgimg.name.night": "Zã",
   "bgimg.name.snow": "Sno",
-  "bgimg.name.sunset": "Ɣedzeƒe"
+  "bgimg.name.sunset": "Ɣedzeƒe",
+
+  "blocks.empty": "Blɔk mele o - ɖo teksturawo ɖe blocks/ ƒomedada me alo tsɔ wò ŋutɔ tɔ",
+
+  "folder.add": "Tsɔ",
+  "folder.delete": "Tututu",
+  "folder.delete_confirm": "Èdi be yea ɖe \\\"%s\\\" ɖa le wò folder mea?",
+  "folder.empty": "Naneke mele afisia o haɖe - zi \\\"+\\\" be nà tsɔ wò faɛl gbãtɔ kpe ɖe eŋu",
+  "folder.local_note": "Woɖona nuŋlɔɖiwo ɖe nɔnɔmɛ sia ko me",
+  "folder.memory_only": "Nɔnɔmɛ sia mele kɔ gɔme o - nuŋlɔɖiwo nabu ne ètsi tab la dzi",
+  "folder.error": "Mewɔ ɖe edzi be maʋli nuŋlɔɖi sia o",
+  "folder.bg.open": "Nye nɔnɔmetatawo",
+  "folder.bg.title": "Nye nɔnɔmetatawo",
+  "folder.bg.hint": "Wò nɔnɔmetata siwo nèdzra ɖo ɖe internet dzi. Zi \\\"+\\\" be nà tsɔ bubu yeyea kpe ɖe eŋu",
+  "folder.block.open": "Nye blɔkwo",
+  "folder.block.title": "Nye blɔkwo",
+  "folder.block.hint": "Nɔnɔmetata ɖeka koe woƒãna na nu sia nu. Alo tia nuŋlɔɖi etɔ̃ siwo ŋkɔ woe nye ..._top, ..._side kple ..._bottom",
+  "folder.block.error": "Tia nɔnɔmetata ɖeka, alo nuŋlɔɖi siwo wu enu kple _top, _side alo _bottom",
+  "folder.emote.open": "Nye emo",
+  "folder.emote.title": "Nye emo",
+  "folder.emote.hint": "Tia emote .json nuŋlɔɖi ɖeka eye ne èdi la, nɔnɔmetata icon (.png) le nɔnɔmɛ ɖeka ma ko me",
+  "folder.emote.icon": "Trɔ icon la",
+
+  "ui.hide": "Ɓla nɔnɔmɛ la (H)",
+  "ui.show": "Fia nɔnɔmɛ la (H)",
+
+  "shot.title": "Dzra screen la ƒe nɔnɔmetata ɖo (lé Shift ɖe asi be megbe nakɔ)",
+  "shot.error": "Mewɔ ɖe edzi be maʋli screen la ƒe nɔnɔmetata o"
 }

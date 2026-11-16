@@ -60,7 +60,7 @@
 
   "emote.button": "اشارے",
   "emote.title": "اشارے",
-  "emote.hint": "کوئی اشارہ چُݨو یا اپݨی .json فائل لوڈ کرو",
+  "emote.hint": "ہک ایموٹ چنو یا اپنا ایموٹ شامل کرݨ کیتے \\\"میرے ایموٹس\\\" کھولو",
   "emote.stop": "اشارہ روکو",
   "emote.test": "اپݨا اشارہ چیک کرو",
   "emote.empty": "کوئی اشارہ کائنی لبھیا (emotes/ فولڈر)",
@@ -98,6 +98,7 @@
   "block.planks": "بلوط دے تختے",
   "block.netherrack": "نیدررینک",
   "block.end_stone": "اینڈ دا پتھر",
+  "block.plain": "کوئی ٹیکسچر نئیں",
 
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ ترتیباں",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "یانڈیرے دا پوز (ڈراؤݨے خواب)",
   "emote.name.SPE_Zoro_Pose": "زورو دا پوز (ملٹی ورس) (One Piece)",
 
+  "emote.by": "%s ولوں",
+  "emote.search_placeholder": "ایموٹس لبھو...",
+  "emote.no_results": "کوئی ایموٹس نئیں لبھا",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وائیکاتو",
   "person.Виакор": "ویاکور",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "دوزخ",
   "bgimg.name.night": "رات",
   "bgimg.name.snow": "برف",
-  "bgimg.name.sunset": "سج لہݨ"
+  "bgimg.name.sunset": "سج لہݨ",
+
+  "blocks.empty": "کوئی بلاک نئیں - ٹیکسچر blocks/ فولڈر وچ رکھو یا اپݨے شامل کرو",
+
+  "folder.add": "رلاؤ",
+  "folder.delete": "مٹاؤ",
+  "folder.delete_confirm": "کیا تساں \\\"%s\\\" آپݨے فولڈر وچوں مٹاوݨ چاہندے او؟",
+  "folder.empty": "ایتھاں ہݨ تک کجھ وی کائنی - اپݨی پہلی فائل شامل کرݨ کیتے \\\"+\\\" دباؤ",
+  "folder.local_note": "فائلز صرف ایں برائوزر وچ محفوظ تھیندیاں ہن",
+  "folder.memory_only": "برائوزر دی اسٹوریج دستیاب نئیں - ٹیب بند کرݨ تے فائلز غائب تھی ویسن",
+  "folder.error": "اے فائل شامل نئیں تھی سڳدی",
+  "folder.bg.open": "می݃ں تصاویر",
+  "folder.bg.title": "می݃ں تصاویر",
+  "folder.bg.hint": "تہاڈیاں اپ لوڈ کیتیاں ہوئیاں تصویراں۔ نویں تصویر شامل کرݨ کیتے \\\"+\\\" دباؤ",
+  "folder.block.open": "می݃ں بلاکس",
+  "folder.block.title": "می݃ں بلاکس",
+  "folder.block.hint": "ساریاں چھہریں واسطے ہک تصویر ورتی ویندی اے۔ یا ترئے فائیلاں چنو جنہاں دا ناں ..._top، ..._side تے ..._bottom ہوندے",
+  "folder.block.error": "ہک تصویر چنو، یا او فائیلاں جنہاں دا انت _top، _side یا _bottom تے تھیندا ہے",
+  "folder.emote.open": "می݃ں ایموٹس",
+  "folder.emote.title": "می݃ں ایموٹس",
+  "folder.emote.hint": "ہک emote .json فائل چنو تے جے چاہو تاں اسی ڈائیلاگ وچ ہک آئیکن تصویر (.png) وی چنو",
+  "folder.emote.icon": "آئیکن تبدیل کرو",
+
+  "ui.hide": "انٹرفیس لکاؤ (H)",
+  "ui.show": "انٹرفیس ڈکھاؤ (H)",
+
+  "shot.title": "اسکرین شاٹ محفوظ کرو (شفاف پس منظر واسطے Shift دبائی رکھو)",
+  "shot.error": "اسکرین شاٹ محفوظ نئیں تھیندیاڳ سڳیا"
 }

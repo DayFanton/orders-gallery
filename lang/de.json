@@ -59,7 +59,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Wähle ein Emote oder lade deine eigene .json-Datei hoch",
+  "emote.hint": "Wähle ein Emote aus oder öffne \\\"Meine Emotes\\\", um dein eigenes hinzuzufügen",
   "emote.stop": "Emote abbrechen",
   "emote.test": "Dein eigenes Emote testen",
   "emote.empty": "Keine Emotes gefunden (Ordner emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere-Pose (Alpträume)",
   "emote.name.SPE_Zoro_Pose": "Zoro-Pose (Multiversum) (One Piece)",
 
+  "emote.by": "von %s",
+  "emote.search_placeholder": "Emotes suchen...",
+  "emote.no_results": "Keine Emotes gefunden",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Eichenholzbretter",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endstein",
+  "block.plain": "Keine Textur",
 
   "bgimg.name.day": "Tag",
   "bgimg.name.end": "Ende",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Nacht",
   "bgimg.name.snow": "Schnee",
-  "bgimg.name.sunset": "Sonnenuntergang"
+  "bgimg.name.sunset": "Sonnenuntergang",
+
+  "blocks.empty": "Noch keine Blöcke – lege Texturen in den Ordner blocks/ oder füge eigene hinzu",
+
+  "folder.add": "Hinzufügen",
+  "folder.delete": "Löschen",
+  "folder.delete_confirm": "\\\"%s\\\" aus Ihrem Ordner löschen?",
+  "folder.empty": "Hier ist noch nichts - drücke \\\"+\\\", um deine erste Datei hinzuzufügen",
+  "folder.local_note": "Dateien werden nur in diesem Browser gespeichert",
+  "folder.memory_only": "Browserspeicher ist nicht verfügbar – Dateien verschwinden, wenn Sie den Tab schließen",
+  "folder.error": "Diese Datei konnte nicht hinzugefügt werden",
+  "folder.bg.open": "Meine Bilder",
+  "folder.bg.title": "Meine Bilder",
+  "folder.bg.hint": "Deine hochgeladenen Bilder. Drücke \\\"+\\\", um ein neues hinzuzufügen",
+  "folder.block.open": "Meine Blöcke",
+  "folder.block.title": "Meine Blöcke",
+  "folder.block.hint": "Ein Bild wird für alle Seiten verwendet. Oder wählen Sie drei Dateien mit den Namen ..._top, ..._side und ..._bottom",
+  "folder.block.error": "Wählen Sie ein Bild oder Dateien, die auf _top, _side oder _bottom enden",
+  "folder.emote.open": "Meine Emotes",
+  "folder.emote.title": "Meine Emotes",
+  "folder.emote.hint": "Wählen Sie eine Emote-.json-Datei und optional ein Vorschaubild (.png) im selben Dialogfeld aus",
+  "folder.emote.icon": "Symbol ändern",
+
+  "ui.hide": "Interface ausblenden (H)",
+  "ui.show": "Interface anzeigen (H)",
+
+  "shot.title": "Screenshot speichern (Shift gedrückt halten für transparenten Hintergrund)",
+  "shot.error": "Screenshot konnte nicht gespeichert werden"
 }

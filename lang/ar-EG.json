@@ -59,7 +59,7 @@
 
   "emote.button": "الحركات التعبيرية",
   "emote.title": "الحركات التعبيرية",
-  "emote.hint": "اختر حركة تعبيرية أو ارفع ملف .json الخاص بك",
+  "emote.hint": "اختار إيموت أو افتح \\\"الإيموتات بتاعتي\\\" عشان تضيف إيموت خاص بيك",
   "emote.stop": "إيقاف الحركة",
   "emote.test": "تجربة حركتك الخاصة",
   "emote.empty": "لم يتم العثور على حركات (مجلد emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "وضعية يانديري (كوابيس)",
   "emote.name.SPE_Zoro_Pose": "وضعية زورو (الكون المتعدد) (ون بيس)",
 
+  "emote.by": "بواسطة %s",
+  "emote.search_placeholder": "البحث عن تعبيرات...",
+  "emote.no_results": "لم يتم العثور على تعبيرات",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -359,11 +363,39 @@
   "block.planks": "ألواح خشب البلوط",
   "block.netherrack": "نذراكت",
   "block.end_stone": "حجر النهاية",
+  "block.plain": "بدون ملمس",
 
   "bgimg.name.day": "نهار",
   "bgimg.name.end": "النهاية",
   "bgimg.name.nether": "النذر",
   "bgimg.name.night": "ليل",
   "bgimg.name.snow": "ثلج",
-  "bgimg.name.sunset": "غروب الشمس"
+  "bgimg.name.sunset": "غروب الشمس",
+
+  "blocks.empty": "لا توجد كتل بعد - ضع القوام في مجلد blocks/ أو أضف قوامك الخاص",
+
+  "folder.add": "إضافة",
+  "folder.delete": "حذف",
+  "folder.delete_confirm": "هل تريد حذف \\\"%s\\\" من فولدرك؟",
+  "folder.empty": "مفيش حاجة هنا لسه - اضغط على \\\"+\\\" علشان تضيف أول ملف ليك",
+  "folder.local_note": "يتم تخزين الملفات في هذا المتصفح فقط",
+  "folder.memory_only": "تخزين المتصفح غير متوفر - ستختفي الملفات عند إغلاق علامة التبويب",
+  "folder.error": "تعذر إضافة هذا الملف",
+  "folder.bg.open": "صورى",
+  "folder.bg.title": "صورى",
+  "folder.bg.hint": "الصور اللي رفعتها. اضغط على \\\"+\\\" علشان تضيف صورة جديدة",
+  "folder.block.open": "كتلتي",
+  "folder.block.title": "كتلتي",
+  "folder.block.hint": "تُستخدم صورة واحدة لجميع الأوجه. أو اختر ثلاثة ملفات باسم ..._top و ..._side و ..._bottom",
+  "folder.block.error": "اختر صورة واحدة، أو ملفات تنتهي بـ _top أو _side أو _bottom",
+  "folder.emote.open": "رقصاتي",
+  "folder.emote.title": "رقصاتي",
+  "folder.emote.hint": "اختر ملف .json الخاص بالرقصة، وإذا أردت، صورة أيقونة (.png) في نفس مربع الحوار",
+  "folder.emote.icon": "تغيير الأيقونة",
+
+  "ui.hide": "إخفاء الواجهة (H)",
+  "ui.show": "إظهار الواجهة (H)",
+
+  "shot.title": "حفظ لقطة الشاشة (اضغط باستمرار على Shift للحصول على خلفية شفافة)",
+  "shot.error": "تعذر حفظ لقطة الشاشة"
 }

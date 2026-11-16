@@ -60,7 +60,7 @@
 
   "emote.button": "Ba-emote",
   "emote.title": "Ba-emote",
-  "emote.hint": "Pɔná emote moko to tyá fisyé na yɔ ya .json",
+  "emote.hint": "Pona emote to fungola \\\"Ba emote na ngai\\\" mpo na kobakisa oyo ya yo",
   "emote.stop": "Kátá emote",
   "emote.test": "Meká emote na yɔ mɔ́kɔ́",
   "emote.empty": "Emote moko te emonani (dosye emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Mabaya ya chêne",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Libangá ya End",
+  "block.plain": "Tekstur te",
 
   "mobile.gallery": "📁 Galerí",
   "mobile.settings": "⚙️ Bobongisi",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Pozɛ ya Yandere (Bandɔ́tɔ ya mabe)",
   "emote.name.SPE_Zoro_Pose": "Pozɛ ya Zoro (Molɔ́ngɔ́ mingi) (One Piece)",
 
+  "emote.by": "na %s",
+  "emote.search_placeholder": "Boluka bilembo...",
+  "emote.no_results": "Bilembo te ebimi",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Lifelo",
   "bgimg.name.night": "Butu",
   "bgimg.name.snow": "Mbula ya mpembe",
-  "bgimg.name.sunset": "Kolala ya moi"
+  "bgimg.name.sunset": "Kolala ya moi",
+
+  "blocks.empty": "Bilembo te ezali naino - tinda tecsur na kati ya fɔlɔdɛ blocks/ to bakisa ya yo moko",
+
+  "folder.add": "Bakisa",
+  "folder.delete": "Longola",
+  "folder.delete_confirm": "Olingi kolongola \\\"%s\\\" na dossier na yo?",
+  "folder.empty": "Eloko moko ezali naino awa te - finá \\\"+\\\" mpo na kobakisa fisyé na yo ya liboso",
+  "folder.local_note": "Bafile ebombami kaka na browser oyo",
+  "folder.memory_only": "Polisi ya browser ezali te - bafile ekokende na yango soki omoni tab",
+  "folder.error": "Ezali na likoki te kobakisa file oyo",
+  "folder.bg.open": "Bililingi na ngai",
+  "folder.bg.title": "Bililingi na ngai",
+  "folder.bg.hint": "Bilili oyo otyeisi. Finá \\\"+\\\" mpo na kobakisa mosusu ya sika",
+  "folder.block.open": "Ba-block na ngai",
+  "folder.block.title": "Ba-block na ngai",
+  "folder.block.hint": "Bililingi moko ezali kosalelama mpo na bilongi nyonso. To poná bafile misato oyo ezali na nkombo ..._top, ..._side mpe ..._bottom",
+  "folder.block.error": "Poná bililingi moko, to bafile oyo ezali kosuka na _top, _side to _bottom",
+  "folder.emote.open": "Bilembo na ngai",
+  "folder.emote.title": "Bilembo na ngai",
+  "folder.emote.hint": "Poná file .json ya emote mpe, soki olingi, bililingi ya icon (.png) na dialog moko",
+  "folder.emote.icon": "Bóngola icon",
+
+  "ui.hide": "Bomba interface (H)",
+  "ui.show": "Monisa interface (H)",
+
+  "shot.title": "Bomba fɔtɔ ya ekra (simba Shift mpo na kozwa nsima oyo emonanaka)",
+  "shot.error": "Ezali na likoki te kobomba fɔtɔ ya ekra"
 }

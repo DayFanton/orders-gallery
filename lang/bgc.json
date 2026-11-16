@@ -60,7 +60,7 @@
 
   "emote.button": "भाव",
   "emote.title": "भाव",
-  "emote.hint": "कोई भाव चुणो या अपणी .json फ़ाइल चढ़ाओ",
+  "emote.hint": "एकटा इमोट चुनो या अपणो इमोट जोड़बा खातर \\\"म्हारा इमोट\\\" खोलो",
   "emote.stop": "भाव रोको",
   "emote.test": "अपणा भाव जांचो",
   "emote.empty": "कोई भाव ना मिल्या (emotes/ फ़ोल्डर)",
@@ -98,6 +98,7 @@
   "block.planks": "ओक के तख़्ते",
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
+  "block.plain": "कोई टेक्सचर नहीं",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "यांडेरे की मुद्रा (डरावने सपने)",
   "emote.name.SPE_Zoro_Pose": "ज़ोरो की अदा (बहुब्रह्मांड) (One Piece)",
 
+  "emote.by": "%s द्वारा",
+  "emote.search_placeholder": "इमोट्स खोजो...",
+  "emote.no_results": "कोई इमोट्स नहीं मिल्या",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वायकातू",
   "person.Виакор": "वियाकोर",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "नरक",
   "bgimg.name.night": "रात",
   "bgimg.name.snow": "बर्फ",
-  "bgimg.name.sunset": "सूर्यास्त"
+  "bgimg.name.sunset": "सूर्यास्त",
+
+  "blocks.empty": "कोई ब्लॉक नहीं है - blocks/ फोल्डर में टेक्सचर डालो या अपना जोड़ो",
+
+  "folder.add": "जोड़ो",
+  "folder.delete": "डिलीट करो",
+  "folder.delete_confirm": "के तुस अपने फोल्डर चों \\\"%s\\\" हटाना चांह्दे ओ?",
+  "folder.empty": "इथं अजून काहीच नाय - तुमची पहिली फाइल जोडण्यासाठी \\\"+\\\" दाबा",
+  "folder.local_note": "फाइल सिर्फ इस ब्राउज़र में स्टोर होती हैं",
+  "folder.memory_only": "ब्राउज़र स्टोरेज उपलब्ध नहीं है - टैब बंद करते ही फ़ाइलें غائب ہو जाएंगी",
+  "folder.error": "ये फ़ाइल जोड़ी नहीं जा सकी",
+  "folder.bg.open": "मेरी इमेज",
+  "folder.bg.title": "मेरी इमेज",
+  "folder.bg.hint": "तुमी अपलोड केलेली चित्रे. नवीन चित्र जोडण्यासाठी \\\"+\\\" दाबा",
+  "folder.block.open": "मेरे ब्लॉक",
+  "folder.block.title": "मेरे ब्लॉक",
+  "folder.block.hint": "सारे चेहरों खातिर एक इमेज काम में ली जा है। या ..._top, ..._side अर ..._bottom नाम की तीन फाइल चुनो",
+  "folder.block.error": "एक इमेज चुनो, या _top, _side अर _bottom पै खत्म होने वाली फाइल चुनो",
+  "folder.emote.open": "मेरे इमोट्स",
+  "folder.emote.title": "मेरे इमोट्स",
+  "folder.emote.hint": "एक emote .json फाइल चुनो, अर चाहो तो उसी डायलॉग में एक आइकन इमेज (.png) चुनो",
+  "folder.emote.icon": "आइकन बदलो",
+
+  "ui.hide": "इंटरफेस छुपाओ (H)",
+  "ui.show": "इंटरफेस दिखाओ (H)",
+
+  "shot.title": "स्क्रीनशॉट सेव करो (पारदर्शी बैकग्राउंड खातिर Shift दबा के रखो)",
+  "shot.error": "स्क्रीनशॉट सेव नहीं हो सका"
 }

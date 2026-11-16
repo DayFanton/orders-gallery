@@ -59,7 +59,7 @@
 
   "emote.button": "Biểu cảm",
   "emote.title": "Biểu cảm",
-  "emote.hint": "Chọn biểu cảm hoặc tải tệp .json của riêng bạn",
+  "emote.hint": "Chọn biểu cảm hoặc mở \\\"Biểu cảm của tôi\\\" để thêm biểu cảm của riêng bạn",
   "emote.stop": "Dừng biểu cảm",
   "emote.test": "Kiểm tra biểu cảm của bạn",
   "emote.empty": "Không tìm thấy biểu cảm (thư mục emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Tư thế Yandere (Ác mộng)",
   "emote.name.SPE_Zoro_Pose": "Tư thế Zoro (Đa vũ trụ) (One Piece)",
 
+  "emote.by": "bởi %s",
+  "emote.search_placeholder": "Tìm biểu cảm...",
+  "emote.no_results": "Không tìm thấy biểu cảm",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Ván gỗ sồi",
   "block.netherrack": "Đá Nether",
   "block.end_stone": "Đá End",
+  "block.plain": "Không có kết cấu",
 
   "bgimg.name.day": "Ban ngày",
   "bgimg.name.end": "The End",
   "bgimg.name.nether": "Địa Ngục",
   "bgimg.name.night": "Đêm",
   "bgimg.name.snow": "Tuyết",
-  "bgimg.name.sunset": "Hoàng hôn"
+  "bgimg.name.sunset": "Hoàng hôn",
+
+  "blocks.empty": "Chưa có khối nào - hãy đặt kết cấu vào thư mục blocks/ hoặc thêm của riêng bạn",
+
+  "folder.add": "Thêm",
+  "folder.delete": "Xóa",
+  "folder.delete_confirm": "Xóa \\\"%s\\\" khỏi thư mục của bạn?",
+  "folder.empty": "Chưa có gì ở đây - nhấn \\\"+\\\" để thêm tệp đầu tiên của bạn",
+  "folder.local_note": "Tệp chỉ được lưu trữ trong trình duyệt này",
+  "folder.memory_only": "Bộ nhớ trình duyệt không khả dụng - các tệp sẽ biến mất khi bạn đóng tab",
+  "folder.error": "Không thể thêm tệp này",
+  "folder.bg.open": "Hình ảnh của tôi",
+  "folder.bg.title": "Hình ảnh của tôi",
+  "folder.bg.hint": "Hình ảnh bạn đã tải lên. Nhấn \\\"+\\\" để thêm hình ảnh mới",
+  "folder.block.open": "Các khối của tôi",
+  "folder.block.title": "Các khối của tôi",
+  "folder.block.hint": "Một hình ảnh được dùng cho tất cả các mặt. Hoặc chọn ba tệp có tên ..._top, ..._side và ..._bottom",
+  "folder.block.error": "Chọn một hình ảnh hoặc các tệp có đuôi _top, _side hoặc _bottom",
+  "folder.emote.open": "Điệu nhảy của tôi",
+  "folder.emote.title": "Điệu nhảy của tôi",
+  "folder.emote.hint": "Chọn một tệp .json biểu cảm và, nếu muốn, một hình ảnh biểu tượng (.png) trong cùng một hộp thoại",
+  "folder.emote.icon": "Thay đổi biểu tượng",
+
+  "ui.hide": "ẩn giao diện (H)",
+  "ui.show": "Hiện giao diện (H)",
+
+  "shot.title": "Lưu ảnh chụp màn hình (giữ phím Shift để có nền trong suốt)",
+  "shot.error": "Không thể lưu ảnh chụp màn hình"
 }

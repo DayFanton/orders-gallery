@@ -60,7 +60,7 @@
 
   "emote.button": "Maikutlo",
   "emote.title": "Maikutlo",
-  "emote.hint": "Khetha boitšisinyo kapa u kenye faele ea hau ea .json",
+  "emote.hint": "Khetha emote kapa u bule \\\"Li-emote tsa ka\\\" ho eketsa ea hao",
   "emote.stop": "Emisa boitšisinyo",
   "emote.test": "Leka boitšisinyo ba hau",
   "emote.empty": "Ha ho maikutlo a fumanoeng (foldara ea emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Mapolanka a oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Lejoe la End",
+  "block.plain": "Ha ho sebopeho",
 
   "mobile.gallery": "📁 Galari",
   "mobile.settings": "⚙️ Litlhophiso",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Boemo ba Yandere (Litoro tse mpe)",
   "emote.name.SPE_Zoro_Pose": "Boemo ba Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "ka %s",
+  "emote.search_placeholder": "Batla li-emote...",
+  "emote.no_results": "Ha ho li-emote tse fumanehetseng",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Dihele",
   "bgimg.name.night": "Bosiu",
   "bgimg.name.snow": "Lehloa",
-  "bgimg.name.sunset": "Ho likela ha letsatsi"
+  "bgimg.name.sunset": "Ho likela ha letsatsi",
+
+  "blocks.empty": "Ha ho li-block hajoale - kenya libopeho ka har'a folda ya blocks/ kapa o kenye tsa hao",
+
+  "folder.add": "Kenya",
+  "folder.delete": "Hlakola",
+  "folder.delete_confirm": "Na u batla ho hlakola \\\"%s\\\" foldareng ea hau?",
+  "folder.empty": "Ha ho letho mona hajoale - tobetsa \\\"+\\\" ho kenya faele ea hau ea pele",
+  "folder.local_note": "Lifa li bolokoa feela sebatli sena",
+  "folder.memory_only": "Polokelo ea sebatli ha e fumanehe - lifa li tla nyamela ha u koala khoele",
+  "folder.error": "Ha e khone ho kenya faele ena",
+  "folder.bg.open": "Litšoantšo tsa ka",
+  "folder.bg.title": "Litšoantšo tsa ka",
+  "folder.bg.hint": "Litšoantšo tseo u li kentseng. Tobetsa \\\"+\\\" ho kenya e ncha",
+  "folder.block.open": "Liblock tsa ka",
+  "folder.block.title": "Liblock tsa ka",
+  "folder.block.hint": "Ho sebelisoa setšoantšo se le seng bakeng sa sefahleho se seng le se seng. Kapa khetha lifaele tse tharo tse bitsoang ..._top, ..._side le ..._bottom",
+  "folder.block.error": "Khetha setšoantšo se le seng, atau lifaele tse qetellang ka _top, _side kapa _bottom",
+  "folder.emote.open": "Li-emote tsa ka",
+  "folder.emote.title": "Li-emote tsa ka",
+  "folder.emote.hint": "Khetha faele ea .json ea emote le, haeba u batla, setšoantšo sa Letšoao (.png) moqoqong o tšoanang",
+  "folder.emote.icon": "Fetola letšoao",
+
+  "ui.hide": "Patla sebopeho (H)",
+  "ui.show": "Bontša sebopeho (H)",
+
+  "shot.title": "Boloka setšoantšo sa skrine (tšoara Shift bakeng sa bokamorao bo bonaletsang)",
+  "shot.error": "Ha e khone ho boloka setšoantšo sa skrine"
 }

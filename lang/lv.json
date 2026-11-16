@@ -60,7 +60,7 @@
 
   "emote.button": "Emocijas",
   "emote.title": "Emocijas",
-  "emote.hint": "Izvēlieties emociju vai augšupielādējiet savu .json failu",
+  "emote.hint": "Izvēlieties emocijzīmi vai atveriet \\\"Manas emocijzīmes\\\", lai pievienotu savu",
   "emote.stop": "Pārtraukt emociju",
   "emote.test": "Pārbaudīt savu emociju",
   "emote.empty": "Emocijas nav atrastas (mape emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Ozola dēļi",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Enda akmens",
+  "block.plain": "Nav tekstūras",
 
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Iestatījumi",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Janderes poza (Murgi)",
   "emote.name.SPE_Zoro_Pose": "Zoro poza (Multivisums) (One Piece)",
 
+  "emote.by": "autors: %s",
+  "emote.search_placeholder": "Meklēt emocijzīmes...",
+  "emote.no_results": "Nav atrasta neviena emocijzīme",
+
   "person.Артур": "Artūrs",
   "person.Вайкату": "Vaikatu",
   "person.Виакор": "Viakors",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Nakts",
   "bgimg.name.snow": "Sniegs",
-  "bgimg.name.sunset": "Saulriets"
+  "bgimg.name.sunset": "Saulriets",
+
+  "blocks.empty": "Vēl nav neviena bloka - ievietojiet tekstūras mapē blocks/ vai pievienojiet savas",
+
+  "folder.add": "Pievienot",
+  "folder.delete": "Dzēst",
+  "folder.delete_confirm": "Vai dzēst \\\"%s\\\" no jūsu mapes?",
+  "folder.empty": "Šeit vēl nekā nav - nospiediet \\\"+\\\", lai pievienotu savu pirmo failu",
+  "folder.local_note": "Faili tiek glabāti tikai šajā pārlūkprogrammā",
+  "folder.memory_only": "Pārlūkprogrammas krātuve nav pieejama - faili pazudīs, aizverot cilni",
+  "folder.error": "Neizdevās pievienot šo failu",
+  "folder.bg.open": "Mani attēli",
+  "folder.bg.title": "Mani attēli",
+  "folder.bg.hint": "Jūsu augšupielādētie attēli. Nospiediet \\\"+\\\", lai pievienotu jaunu",
+  "folder.block.open": "Mani bloki",
+  "folder.block.title": "Mani bloki",
+  "folder.block.hint": "Visām pusēm tiek izmantots viens attēls. Vai arī izvēlieties trīs failus ar nosaukumiem ..._top, ..._side un ..._bottom",
+  "folder.block.error": "Izvēlieties vienu attēlu vai failus, kuru nosaukums beidzas ar _top, _side vai _bottom",
+  "folder.emote.open": "Manas emocijas",
+  "folder.emote.title": "Manas emocijas",
+  "folder.emote.hint": "Izvēlieties emota .json failu un, ja vēlaties, ikonas attēlu (.png) tajā pašā dialoglodziņā",
+  "folder.emote.icon": "Mainīt ikonu",
+
+  "ui.hide": "Slēpt interfeisu (H)",
+  "ui.show": "Rādīt interfeisu (H)",
+
+  "shot.title": "Saglabāt ekrānuzņēmumu (turiet nospiestu Shift, lai iegūtu caurspīdīgu fonu)",
+  "shot.error": "Neizdevās saglabāt ekrānuzņēmumu"
 }

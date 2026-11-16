@@ -59,7 +59,7 @@
 
   "emote.button": "Emosiyalar",
   "emote.title": "Emosiyalar",
-  "emote.hint": "Emosiya seçin və ya öz .json faylınızı yükləyin",
+  "emote.hint": "Emot seçin və ya öz emotunuzu əlavə etmək üçün \\\"Emotlarım\\\" bölməsini açın",
   "emote.stop": "Emosiyanı dayandır",
   "emote.test": "Öz emosiyanızı yoxlayın",
   "emote.empty": "Emosiyalar tapılmadı (emotes/ qovluğu)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere pozası (Kabuslar)",
   "emote.name.SPE_Zoro_Pose": "Zoro duruşu (Multikainat) (One Piece)",
 
+  "emote.by": "müəllif: %s",
+  "emote.search_placeholder": "İfadə axtar...",
+  "emote.no_results": "İfadə tapılmadı",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Vaykatu",
   "person.Виакор": "Vyakor",
@@ -359,11 +363,39 @@
   "block.planks": "Palıd taxtaları",
   "block.netherrack": "Neterrak",
   "block.end_stone": "End daşı",
+  "block.plain": "Tekstura yoxdur",
 
   "bgimg.name.day": "Gündüz",
   "bgimg.name.end": "Son",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gecə",
   "bgimg.name.snow": "Qar",
-  "bgimg.name.sunset": "Gün batımı"
+  "bgimg.name.sunset": "Gün batımı",
+
+  "blocks.empty": "Hələ blok yoxdur - teksturaları blocks/ qovluğuna qoyun və ya özünüzünkünü əlavə edin",
+
+  "folder.add": "Əlavə et",
+  "folder.delete": "Sil",
+  "folder.delete_confirm": "\\\"%s\\\" qovluğunuzdan silinsin?",
+  "folder.empty": "Burada hələ heç nə yoxdur - ilk faylınızı əlavə etmək üçün \\\"+\\\" düyməsinə basın",
+  "folder.local_note": "Fayllar yalnız bu brauzerdə saxlanılır",
+  "folder.memory_only": "Brauzer yaddaşı əlçatmazdır - vərəqi bağladığınız zaman fayllar yox olacaq",
+  "folder.error": "Bu faylı əlavə etmək mümkün olmadı",
+  "folder.bg.open": "Mənim şəkillərim",
+  "folder.bg.title": "Mənim şəkillərim",
+  "folder.bg.hint": "Yüklədiyiniz şəkillər. Yeni şəkil əlavə etmək üçün \\\"+\\\" düyməsinə basın",
+  "folder.block.open": "Mənim bloklarım",
+  "folder.block.title": "Mənim bloklarım",
+  "folder.block.hint": "Bütün üzlər üçün bir şəkil istifadə olunur. Və ya ..._top, ..._side və ..._bottom adlanan üç fayl seçin",
+  "folder.block.error": "Bir şəkil və ya _top, _side və ya _bottom ilə bitən fayllar seçin",
+  "folder.emote.open": "Mənim ifadələrim",
+  "folder.emote.title": "Mənim ifadələrim",
+  "folder.emote.hint": "Emot .json faylını və istəsinizsə, ikon şəklini (.png) eyni dialoq pəncərəsində seçin",
+  "folder.emote.icon": "İkonu dəyiş",
+
+  "ui.hide": "İnterfeysi gizlət (H)",
+  "ui.show": "İnterfeysi göstər (H)",
+
+  "shot.title": "Ekran görüntüsünü yadda saxla (şəffaf fon üçün Shift düyməsini basılı saxlayın)",
+  "shot.error": "Ekran görüntüsünü yadda saxlamaq mümkün olmadı"
 }

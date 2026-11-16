@@ -60,7 +60,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Pilieten ti emote wenno ikarga ti bukod a .json a file",
+  "emote.hint": "Pilien ti maysa nga emote wenno lukatan ti \\\"Dagiti emote-ko\\\" tapno manginayon iti bukodmo",
   "emote.stop": "Ipasardeng ti emote",
   "emote.test": "Padasen ti bukod a emote",
   "emote.empty": "Awan ti nadakamat nga emotes (folder emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Tablones ti roble",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Bato ti End",
+  "block.plain": "Awan ti tekstura",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Settings",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Posision ti Yandere (Nightmares)",
   "emote.name.SPE_Zoro_Pose": "Posision ni Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "ni %s",
+  "emote.search_placeholder": "Biruken dagiti emote...",
+  "emote.no_results": "Awan ti nadakamat nga emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Rabii",
   "bgimg.name.snow": "Niebe",
-  "bgimg.name.sunset": "Ilelennek ti init"
+  "bgimg.name.sunset": "Ilelennek ti init",
+
+  "blocks.empty": "Awan pay ti bloke - mangikabil kadagiti tekstura iti blocks/ folder wenno agikabil iti kukua mo",
+
+  "folder.add": "Iraman",
+  "folder.delete": "Ikkaten",
+  "folder.delete_confirm": "Ikkaten ti \\\"%s\\\" manipud iti folder-mo?",
+  "folder.empty": "Awan pay ania ditoy - pinduten ti \\\"+\\\" tapno maidagdag ti umuna a papelesmo",
+  "folder.local_note": "Dagiti file ket naskip laeng iti daytoy a browser",
+  "folder.memory_only": "Saan a magastos ti pannakaidulin iti browser - mapukaw dagiti file no ilennedmo ti tab",
+  "folder.error": "Saan a maikabil daytoy a file",
+  "folder.bg.open": "Dagiti ladawan ko",
+  "folder.bg.title": "Dagiti ladawan ko",
+  "folder.bg.hint": "Dagiti ladawan a in-uploadmo. Pinduten ti \\\"+\\\" tapno makadagdag iti baro",
+  "folder.block.open": "Dagiti block ko",
+  "folder.block.title": "Dagiti block ko",
+  "folder.block.hint": "Maysa a ladawan ti mausar para kadagiti amin a mukha. Wenno agpili iti tallo a file nga napanagan iti ..._top, ..._side ken ..._bottom",
+  "folder.block.error": "Agpili iti maysa a ladawan, wenno dagiti file nga agpatingga iti _top, _side wenno _bottom",
+  "folder.emote.open": "Dagiti emote ko",
+  "folder.emote.title": "Dagiti emote ko",
+  "folder.emote.hint": "Agpili iti maysa a file nga emote .json ken, no kayatmo, maysa a ladawan ti icon (.png) iti isu met laeng a dialog",
+  "folder.emote.icon": "Sukatan ti icon",
+
+  "ui.hide": "Ilemmeng ti interface (H)",
+  "ui.show": "Ipakita ti interface (H)",
+
+  "shot.title": "Idulin ti screenshot (talinaayen a nakapindut ti Shift para iti nalawag a background)",
+  "shot.error": "Saan a maidulin ti screenshot"
 }

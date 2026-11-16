@@ -60,7 +60,7 @@
 
   "emote.button": "Эмоцыі",
   "emote.title": "Эмоцыі",
-  "emote.hint": "Выберыце эмоцыю або загрузіце свой .json файл",
+  "emote.hint": "Выберыце эмоцыю або адкрыйце \\\"Мае эмоцыі\\\", каб дадаць сваю",
   "emote.stop": "Перапыніць эмоцыю",
   "emote.test": "Праверыць сваю эмоцыю",
   "emote.empty": "Эмоцыі не знойдзены (папка emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Дубовыя дошкі",
   "block.netherrack": "Нэдарэк",
   "block.end_stone": "Камень Энда",
+  "block.plain": "Без тэкстуры",
 
   "mobile.gallery": "📁 Галерэя",
   "mobile.settings": "⚙️ Налады",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Поза Яндэрэ (Кашмары)",
   "emote.name.SPE_Zoro_Pose": "Стойка Зора (Мультысусвет) (One Piece)",
 
+  "emote.by": "аўтар: %s",
+  "emote.search_placeholder": "Пошук эмоцый...",
+  "emote.no_results": "Эмоцый не знойдзена",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Віякор",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Нэзар",
   "bgimg.name.night": "Ноч",
   "bgimg.name.snow": "Снег",
-  "bgimg.name.sunset": "Захад сонца"
+  "bgimg.name.sunset": "Захад сонца",
+
+  "blocks.empty": "Блокаў пакуль няма — пакладзіце тэкстуры ў тэчку blocks/ або дадайце свае",
+
+  "folder.add": "Дадаць",
+  "folder.delete": "Выдаліць",
+  "folder.delete_confirm": "Выдаліць \\\"%s\\\" з вашай папкі?",
+  "folder.empty": "Тут пакуль нічога няма — націсніце \\\"+\\\", каб дадаць першы файл",
+  "folder.local_note": "Файлы захоўваюцца толькі ў гэтым браўзеры",
+  "folder.memory_only": "Сховішча браўзера недаступнае — файлы знікнуць пры закрыцці ўкладкі",
+  "folder.error": "Не ўдалося дадаць гэты файл",
+  "folder.bg.open": "Мае выявы",
+  "folder.bg.title": "Мае выявы",
+  "folder.bg.hint": "Загружаныя вамі выявы. Націсніце \\\"+\\\", каб дадаць новую",
+  "folder.block.open": "Мае блокі",
+  "folder.block.title": "Мае блокі",
+  "folder.block.hint": "Адна выява выкарыстоўваецца для ўсіх граняў. Або выберыце тры файлы з іменамі ..._top, ..._side і ..._bottom",
+  "folder.block.error": "Выберыце адну выяву або файлы, якія заканчваюцца на _top, _side або _bottom",
+  "folder.emote.open": "Мае эмоцыі",
+  "folder.emote.title": "Мае эмоцыі",
+  "folder.emote.hint": "Выберыце файл эмоута .json і, калі хочаце, выяву значка (.png) у тым жа дыялогавым акне",
+  "folder.emote.icon": "Змяніць значок",
+
+  "ui.hide": "Схаваць інтэрфейс (H)",
+  "ui.show": "Паказаць інтэрфейс (H)",
+
+  "shot.title": "Захаваць скрыншот (утрымлівайце Shift для празрыстага фону)",
+  "shot.error": "Не ўдалося захаваць скрыншот"
 }

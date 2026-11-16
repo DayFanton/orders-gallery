@@ -59,7 +59,7 @@
 
   "emote.button": "Yëngatu yu bopp",
   "emote.title": "Yëngatu yu bopp",
-  "emote.hint": "Tànnal benn yëngatu walla yebal sa fiise .json",
+  "emote.hint": "Tànn emote walla ubëri \\\"Emote yi ma\\\" ngir yokk sa biir",
   "emote.stop": "Taxawal yëngatu gi",
   "emote.test": "Seet sa yëngatu bopp",
   "emote.empty": "Gisuñu benn yëngatu (dosiye emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Taxawaayu Yandere (Géent yu bon)",
   "emote.name.SPE_Zoro_Pose": "Taxawaayu Zoro (Àdduna yu bari) (One Piece)",
 
+  "emote.by": "ci %s",
+  "emote.search_placeholder": "Seet emoticons...",
+  "emote.no_results": "Amul benn emoticon buñ gis",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Déng yu garab",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Doju End",
+  "block.plain": "Amul benn tekisur",
 
   "bgimg.name.day": "Bëccëg",
   "bgimg.name.end": "Mujj",
   "bgimg.name.nether": "Sawara",
   "bgimg.name.night": "Guddi",
   "bgimg.name.snow": "Nees",
-  "bgimg.name.sunset": "Sowu jant"
+  "bgimg.name.sunset": "Sowu jant",
+
+  "blocks.empty": "Amul benn mbooloo - dugal tekisur yi ci fólóor blocks/ walla nga dolli sa bopp",
+
+  "folder.add": "Dolli",
+  "folder.delete": "Far",
+  "folder.delete_confirm": "Ndax bëgg nga dindi \\\"%s\\\" ci sa dosiye?",
+  "folder.empty": "Amul dara dara ci fii - bësal \\\"+\\\" ngir yokk sa njël file",
+  "folder.local_note": "Loolu tax faayil yi dañuy tëraloo ci biir web browser bi rekk",
+  "folder.memory_only": "Tëraloo web browser bi amul - faayil yi dañuy jéggi su fekke nga tëj tab bi",
+  "folder.error": "Mënuloo dolli faayil bi",
+  "folder.bg.open": "Sama natal yi",
+  "folder.bg.title": "Sama natal yi",
+  "folder.bg.hint": "Sa nataal yi nga yónnee. Bësal \\\"+\\\" ngir yokk benn bu bees",
+  "folder.block.open": "Sama mbooloo yi",
+  "folder.block.title": "Sama mbooloo yi",
+  "folder.block.hint": "Benn natal lañuy jëfandikoo ci bépp kanamu. Wallaa nga tann ñetti faayil yu tudd ..._top, ..._side ak ..._bottom",
+  "folder.block.error": "Tann benn natal, wallaa ay faayil yu jeex ci _top, _side walla _bottom",
+  "folder.emote.open": "Sama emoticon yi",
+  "folder.emote.title": "Sama emoticon yi",
+  "folder.emote.hint": "Tann benn faayil .jsonu emote walla, su ko nee ko bëggée, benn natal u icon (.png) ci biir dialog bi rekk",
+  "folder.emote.icon": "Wayli icon bi",
+
+  "ui.hide": "Dollikul interface bi (H)",
+  "ui.show": "Wone interface bi (H)",
+
+  "shot.title": "Dencal nataalu ekraŋ bi (tëyël Shift ngir am ginaaw gu leer)",
+  "shot.error": "Mënuloo dencal nataalu ekraŋ bi"
 }

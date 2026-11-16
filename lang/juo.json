@@ -60,7 +60,7 @@
 
   "emote.button": "动作",
   "emote.title": "动作",
-  "emote.hint": "选择一个动作或上传您自己的 .json 文件",
+  "emote.hint": "Выберите эмот или откройте \\\"Мои эмоты\\\", чтобы добавить свой",
   "emote.stop": "停止动作",
   "emote.test": "测试您自己的动作",
   "emote.empty": "未找到动作（emotes/ 文件夹）",
@@ -98,6 +98,7 @@
   "block.planks": "橡木木板",
   "block.netherrack": "下界岩",
   "block.end_stone": "末地石",
+  "block.plain": "Texture duɔni naani",
 
   "mobile.gallery": "📁 画廊",
   "mobile.settings": "⚙️ 设置",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "病娇姿势 (噩梦)",
   "emote.name.SPE_Zoro_Pose": "索隆站姿 (多元宇宙) (海贼王)",
 
+  "emote.by": "%s duɔn",
+  "emote.search_placeholder": "Nime emotes...",
+  "emote.no_results": "Emotes duɔni naani",
+
   "person.Артур": "亚瑟",
   "person.Вайкату": "怀卡图",
   "person.Виакор": "维亚科尔",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Mach",
   "bgimg.name.night": "War",
   "bgimg.name.snow": "Pe",
-  "bgimg.name.sunset": "Podho ceng"
+  "bgimg.name.sunset": "Podho ceng",
+
+  "blocks.empty": "Blocks duɔni naani - texture tɔ blocks/ folder duɔni walla duɔni mɛn",
+
+  "folder.add": "Duɔni",
+  "folder.delete": "Tuur",
+  "folder.delete_confirm": "\\\"%s\\\" ni kaɗa ɗa folder ma?",
+  "folder.empty": "Onge gima niti kae sani - di \\\"+\\\" mondo iket file mari mokwongo",
+  "folder.local_note": "Files duɔni nani browser duɔni kɛ",
+  "folder.memory_only": "Browser storage duɔni nani - files duɔni di tab gbugni naani",
+  "folder.error": "File duɔni nani duɔni ma",
+  "folder.bg.open": "Images duɔni naani",
+  "folder.bg.title": "Images duɔni naani",
+  "folder.bg.hint": "Picha mane ma isepel. Di \\\"+\\\" mondo iket machielo manyien",
+  "folder.block.open": "Blocks duɔni naani",
+  "folder.block.title": "Blocks duɔni naani",
+  "folder.block.hint": "Image duɔni nani kɛ duɔni. Wala files duɔni ..._top, ..._side wala ..._bottom",
+  "folder.block.error": "Image duɔni naani, wala files duɔni _top, _side wala _bottom",
+  "folder.emote.open": "Emotes duɔni naani",
+  "folder.emote.title": "Emotes duɔni naani",
+  "folder.emote.hint": "Emote .json file duɔni naani, wala bua, icon image (.png) dialog duɔni kɛ",
+  "folder.emote.icon": "Icon duɔni",
+
+  "ui.hide": "Interface duɔni nani (H)",
+  "ui.show": "Interface duɔni nani (H)",
+
+  "shot.title": "Screenshot duɔni nani (Shift duɔni kɛ background duɔni)",
+  "shot.error": "Screenshot duɔni nani duɔni ma"
 }

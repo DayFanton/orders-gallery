@@ -59,7 +59,7 @@
 
   "emote.button": "Mĩtugo",
   "emote.title": "Mĩtugo",
-  "emote.hint": "Thuura mũtugo kana wĩkĩre faili yaku ya .json",
+  "emote.hint": "Riria emote kana ukanua \\\"Emote nakon\\\" noka uonge emote yaku",
   "emote.stop": "Rũgamia mũtugo",
   "emote.test": "Geria mũtugo waku",
   "emote.empty": "Gũtirĩ mĩtugo yonekire (mbahasha ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Mũrũgamĩre wa Yandere (Iroto njũru)",
   "emote.name.SPE_Zoro_Pose": "Mũrũgamĩre wa Zoro (Thĩ Nyingĩ) (One Piece)",
 
+  "emote.by": "nĩ %s",
+  "emote.search_placeholder": "Caria indo cia kũguigua...",
+  "emote.no_results": "Gũtirĩ indo cia kũguigua cionekire",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mbaũ cia Mũgandi",
   "block.netherrack": "Ihiga rĩa Nether",
   "block.end_stone": "Ihiga rĩa End",
+  "block.plain": "Gũtirĩ mũkingo",
 
   "bgimg.name.day": "Mũthenya",
   "bgimg.name.end": "Mũthia",
   "bgimg.name.nether": "Jehanamu",
   "bgimg.name.night": "Ũtukũ",
   "bgimg.name.snow": "Ira",
-  "bgimg.name.sunset": "Kũthũa kwa riũa"
+  "bgimg.name.sunset": "Kũthũa kwa riũa",
+
+  "blocks.empty": "Gũtirĩ mĩkingo o na imwe - ikia mũkingo thĩinĩ wa fολدا blocks/ kana wiyongerere ciongo",
+
+  "folder.add": "Ongerera",
+  "folder.delete": "Tharia",
+  "folder.delete_confirm": "Wenda kuura \\\"%s\\\" kuuma folda yako?",
+  "folder.empty": "Guti kimwe gîtũire haha rĩu - nyita \\\"+\\\" nĩguo wongere file yaku ya mbere",
+  "folder.local_note": "Rũru rũigĩtwo tu mbica-inĩ ino",
+  "folder.memory_only": "Gũtirĩ kĩhumo kĩa gũigĩra gĩa mbica-inĩ - rũru rũkaora rũgĩtwo rũgĩtwo",
+  "folder.error": "Gũtirĩ ũndũ gũkwa gũtongeria rũru rũu",
+  "folder.bg.open": "Thano ciakwa",
+  "folder.bg.title": "Thano ciakwa",
+  "folder.bg.hint": "Mĩhianano ĩrĩa waũkĩrĩte. Nyita \\\"+\\\" nĩguo wongere mũhianano mũnene",
+  "folder.block.open": "Mĩkingo ciakwa",
+  "folder.block.title": "Mĩkingo ciakwa",
+  "folder.block.hint": "Thano ĩmwe nĩyo ĩhũthagĩrwo cia ciothe. Kana ũthuurie faili ithatũ cietagwo ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Thano ĩmwe, kana faili cithire na _top, _side kana _bottom",
+  "folder.emote.open": "Indo cia kũguigua ciakwa",
+  "folder.emote.title": "Indo cia kũguigua ciakwa",
+  "folder.emote.hint": "Thano ya emote .json na, angĩkorwo nĩ ũrenda, thano ya icon (.png) thĩinĩ wa mbica ĩmwe",
+  "folder.emote.icon": "Guũruria icon",
+
+  "ui.hide": "Thweka kĩhumo (H)",
+  "ui.show": "Cionia kĩhumo (H)",
+
+  "shot.title": "Igia mbica ya kĩonereria (nyita Shift nĩguo ũgĩe na thutha ũroneka)",
+  "shot.error": "Gũtirĩ ũndũ gũkwa gũtongeria mbica ya kĩonereria"
 }

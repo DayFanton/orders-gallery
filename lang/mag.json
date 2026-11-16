@@ -60,7 +60,7 @@
 
   "emote.button": "इमोट",
   "emote.title": "इमोट",
-  "emote.hint": "कोनो इमोट चुनू या अपन .json फ़ाइल अपलोड करू",
+  "emote.hint": "एकटा इमोट चुनू अथवा अपन इमोट जोड़बाक लेल \\\"हमर इमोट\\\" खोलू",
   "emote.stop": "इमोट रोकू",
   "emote.test": "अपन इमोट जाँचू",
   "emote.empty": "कोनो इमोट नइ मिलल (emotes/ फ़ोल्डर)",
@@ -98,6 +98,7 @@
   "block.planks": "ओक के तख्ता",
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
+  "block.plain": "कोनो टेक्सचर नाई",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "यांडेरे के पोज़ (डरावना सपना)",
   "emote.name.SPE_Zoro_Pose": "ज़ोरो के पोज़ (मल्टीवर्स) (One Piece)",
 
+  "emote.by": "%s द्वारा",
+  "emote.search_placeholder": "इमोट्स खोजीं...",
+  "emote.no_results": "कोनो इमोट ना मिलल",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वाइकातु",
   "person.Виакор": "वियाकोर",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "नरक",
   "bgimg.name.night": "रात",
   "bgimg.name.snow": "बरफ",
-  "bgimg.name.sunset": "सूर्यास्त"
+  "bgimg.name.sunset": "सूर्यास्त",
+
+  "blocks.empty": "कोनो ब्लॉक नाइ भेल अछि - blocks/ फ़ोल्डर में टेक्सचर राखीं आ अपना तरफसँ जोड़ीं",
+
+  "folder.add": "जोड़ीं",
+  "folder.delete": "मेटाउ",
+  "folder.delete_confirm": "की अपने फोल्डर से \\\"%s\\\" हटाबे चाहै छी?",
+  "folder.empty": "एतय एखन किछु नहि अछि - अपन पहिल फाइल जोड़बाक लेल \\\"+\\\" दबाउ",
+  "folder.local_note": "फाइल खाली इ ब्राउज़र में स्टोर होला",
+  "folder.memory_only": "ब्राउज़र स्टोरेज उपलब्ध नाइ अछि - टैब बंद करत ही फाइल गायब हो जाई",
+  "folder.error": "ई फाइल जोरल ना जा सकल",
+  "folder.bg.open": "हमार फोटो",
+  "folder.bg.title": "हमार फोटो",
+  "folder.bg.hint": "अहाँक अपलोड कएल तस्वीरसभ। नव तस्वीर जोड़बाक लेल \\\"+\\\" दबाउ",
+  "folder.block.open": "हमार ब्लॉक",
+  "folder.block.title": "हमार ब्लॉक",
+  "folder.block.hint": "सब चेहरा खातिर एगो फोटो इस्तेमाल होखे छै। ना त ..._top, ..._side आ ..._bottom नाम के तीन गो फाइल चुनीं",
+  "folder.block.error": "एगो फोटो चुनीं, भा अउरी फाइल चुनीं जे _top, _side भा _bottom पर खत्म होखे छै",
+  "folder.emote.open": "हमार इमोट्स",
+  "folder.emote.title": "हमार इमोट्स",
+  "folder.emote.hint": "एगो emote .json फाइल चुनीं आ, अगरचाहें त, ओही संवाद में एगो आइकन फोटो (.png) चुनीं",
+  "folder.emote.icon": "आइकन बदलीं",
+
+  "ui.hide": "इंटरफेस लुकाव (H)",
+  "ui.show": "इंटरफेस देखाव (H)",
+
+  "shot.title": "स्क्रीनशॉट सहेजीं (पारदर्शी बैकग्राउंड खातिर Shift दबा के रखीं)",
+  "shot.error": "स्क्रीनशॉट सहेजल ना जा सकल"
 }

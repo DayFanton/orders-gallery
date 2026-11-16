@@ -60,7 +60,7 @@
 
   "emote.button": "Imiva",
   "emote.title": "Imiva",
-  "emote.hint": "Khetsa umiva nome ulayishe lifayela lakho le-.json",
+  "emote.hint": "Khetsa i-emote noma uvule \\\"Emote tami\\\" kuze wente yakho",
   "emote.stop": "Misa umiva",
   "emote.test": "Hlola umiva wakho",
   "emote.empty": "Kute imiva letfolakele (lifolda emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Emapulango e-oki",
   "block.netherrack": "I-Netherrack",
   "block.end_stone": "Litje le-End",
+  "block.plain": "Ayikho i-texture",
 
   "mobile.gallery": "📁 Igalari",
   "mobile.settings": "⚙️ Tihlelo",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Kuma kwa-Yandere (Emaphupho lamabi)",
   "emote.name.SPE_Zoro_Pose": "Kuma kwa-Zoro (Imihlaba leminyenti) (One Piece)",
 
+  "emote.by": "ngu-%s",
+  "emote.search_placeholder": "Sesha emothi...",
+  "emote.no_results": "Azikho emothi letfolakele",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Sihogo",
   "bgimg.name.night": "Busuku",
   "bgimg.name.snow": "Likhwa",
-  "bgimg.name.sunset": "Kushona kwelilanga"
+  "bgimg.name.sunset": "Kushona kwelilanga",
+
+  "blocks.empty": "Awekho emabhulokhi – faka tikhumba kufolda ye-blocks/ noma wengeze takho",
+
+  "folder.add": "Engetela",
+  "folder.delete": "Susa",
+  "folder.delete_confirm": "Uyafuna kususa \\\"%s\\\" kufolda yakho?",
+  "folder.empty": "Kute lutfo lapha nyalo - cindzetela \\\"+\\\" kuze ungeze lifayela lakho lekucala",
+  "folder.local_note": "Tilwimi tigcinwa kuphela kulesiphequluli",
+  "folder.memory_only": "Isitoreji selibhrawuza asitfolakali - tilwimi titawunyamalala nawuvala ithebhu",
+  "folder.error": "Ayikwanga kungeniswa lelifayela",
+  "folder.bg.open": "Tithombe tami",
+  "folder.bg.title": "Tithombe tami",
+  "folder.bg.hint": "Titfombe lotifakile. Cindzetela \\\"+\\\" kuze ungeze lensha",
+  "folder.block.open": "Emabhulokhi ami",
+  "folder.block.title": "Emabhulokhi ami",
+  "folder.block.hint": "Kusetjentiswa sitfombe sinye kuto tonkhe tindlela. Noma khetfa tilwimi letintsatfu letibitwa nge ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Khetfa sitfombe sinye, noma tilwimi letiphela nge _top, _side noma _bottom",
+  "folder.emote.open": "Emothi tami",
+  "folder.emote.title": "Emothi tami",
+  "folder.emote.hint": "Khetfa lifayela le-.json lelemothi, futsi uma ufuna, sitfombe sesitfombe (.png) kulencociswano lefanako",
+  "folder.emote.icon": "Shintsha sitfombe",
+
+  "ui.hide": "Fihla isikhombandlela (H)",
+  "ui.show": "Khombisa isikhombandlela (H)",
+
+  "shot.title": "Gcina sitfombe sesikrinini (bamba u-Shift kuze utfole lingemuva lelibonakalako)",
+  "shot.error": "Ayikwanga kungeniswa sitfombe sesikrinini"
 }

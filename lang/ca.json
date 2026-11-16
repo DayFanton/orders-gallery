@@ -59,7 +59,7 @@
 
   "emote.button": "Gestos",
   "emote.title": "Gestos",
-  "emote.hint": "Tria un gest o carrega el teu propi fitxer .json",
+  "emote.hint": "Tria una emote o obre \\\"Les meves emotes\\\" per afegir-ne una de pròpia",
   "emote.stop": "Atura el gest",
   "emote.test": "Prova el teu propi gest",
   "emote.empty": "No s'han trobat gestos (carpeta emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Posi yandere (Malsons)",
   "emote.name.SPE_Zoro_Pose": "Posi de Zoro (Multivers) (One Piece)",
 
+  "emote.by": "per %s",
+  "emote.search_placeholder": "Cercar emotes...",
+  "emote.no_results": "No s'han trobat emotes",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Taulons de roure",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pedra de l'End",
+  "block.plain": "Sense textura",
 
   "bgimg.name.day": "Dia",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Nit",
   "bgimg.name.snow": "Neu",
-  "bgimg.name.sunset": "Posta de sol"
+  "bgimg.name.sunset": "Posta de sol",
+
+  "blocks.empty": "Encara no hi ha blocs - col·loca textures a la carpeta blocks/ o afegeix les teues pròpies",
+
+  "folder.add": "Afegir",
+  "folder.delete": "Esborrar",
+  "folder.delete_confirm": "Voleu suprimir \\\"%s\\\" de la vostra carpeta?",
+  "folder.empty": "Encara no hi ha res aquí - prem \\\"+\\\" per afegir el teu primer fitxer",
+  "folder.local_note": "Els fitxers s'emmagatzemen només en aquest navegador",
+  "folder.memory_only": "L'emmagatzematge del navegador no està disponible - els fitxers desapareixeran en tancar la pestanya",
+  "folder.error": "No s'ha pogut afegir aquest fitxer",
+  "folder.bg.open": "Les meves imatges",
+  "folder.bg.title": "Les meves imatges",
+  "folder.bg.hint": "Les teves imatges pujades. Prem \\\"+\\\" per afegir-ne una de nova",
+  "folder.block.open": "Els meus blocs",
+  "folder.block.title": "Els meus blocs",
+  "folder.block.hint": "S'utilitza una sola imatge per a totes les cares. O tria tres fitxers anomenats ..._top, ..._side i ..._bottom",
+  "folder.block.error": "Trieu una imatge, o fitxers que acabin en _top, _side o _bottom",
+  "folder.emote.open": "Els meus emotes",
+  "folder.emote.title": "Els meus emotes",
+  "folder.emote.hint": "Trieu un fitxer .json d'emote i, si voleu, una imatge d'icona (.png) en el mateix diàleg",
+  "folder.emote.icon": "Canviar icona",
+
+  "ui.hide": "Ocultar la interfície (H)",
+  "ui.show": "Mostrar la interfície (H)",
+
+  "shot.title": "Desa la captura de pantalla (mantén premuda la tecla Maj per a un fons transparent)",
+  "shot.error": "No s'ha pogut desar la captura de pantalla"
 }

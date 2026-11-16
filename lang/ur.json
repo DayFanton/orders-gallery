@@ -59,7 +59,7 @@
 
   "emote.button": "ایموتس",
   "emote.title": "ایموتس",
-  "emote.hint": "کوئی ایموٹ منتخب کریں یا اپنی .json فائل لوڈ کریں",
+  "emote.hint": "کوئی ایموٹ منتخب کریں یا اپنا ایموٹ شامل کرنے کے لیے \\\"میرے ایموٹس\\\" کھولیں",
   "emote.stop": "ایموٹ بند کریں",
   "emote.test": "اپنا ایموٹ آزمائیں",
   "emote.empty": "کوئی ایموٹ نہیں ملا (emotes/ فولڈر)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "یانڈیرے پوز (ڈراونے خواب)",
   "emote.name.SPE_Zoro_Pose": "زورو پوز (ملٹیورس) (ون پیس)",
 
+  "emote.by": "از %s",
+  "emote.search_placeholder": "ایموٹس تلاش کریں...",
+  "emote.no_results": "کوئی ایموٹس نہیں ملے",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وائکاٹو",
   "person.Виакор": "ویاکور",
@@ -359,11 +363,39 @@
   "block.planks": "بلوط کے تختے",
   "block.netherrack": "نیدر ریک",
   "block.end_stone": "اینڈ پتھر",
+  "block.plain": "کوئی ٹیکسچر نہیں",
 
   "bgimg.name.day": "دن",
   "bgimg.name.end": "اینڈ",
   "bgimg.name.nether": "نیدر",
   "bgimg.name.night": "رات",
   "bgimg.name.snow": "برف",
-  "bgimg.name.sunset": "غروب آفتاب"
+  "bgimg.name.sunset": "غروب آفتاب",
+
+  "blocks.empty": "ابھی کوئی بلاکس نہیں ہیں - blocks/ فولڈر میں ٹیکسچر رکھیں یا اپنے شامل کریں",
+
+  "folder.add": "شامل کریں",
+  "folder.delete": "حذف کریں",
+  "folder.delete_confirm": "کیا آپ \\\"%s\\\" کو اپنے فولڈر سے حذف کرنا چاہتے ہیں؟",
+  "folder.empty": "ابھی یہاں کچھ نہیں ہے - اپنی پہلی فائل شامل کرنے کے لیے \\\"+\\\" دبائیں",
+  "folder.local_note": "فائلز صرف اس براؤزر میں محفوظ ہوتی ہیں",
+  "folder.memory_only": "براؤزر اسٹوریج دستیاب نہیں ہے - ٹیب بند کرنے پر فائلیں غائب ہو جائیں گی۔",
+  "folder.error": "یہ فائل شامل نہیں کی جا سکی",
+  "folder.bg.open": "میری تصاویر",
+  "folder.bg.title": "میری تصاویر",
+  "folder.bg.hint": "آپ کی اپ لوڈ کردہ تصاویر۔ نئی تصویر شامل کرنے کے لیے \\\"+\\\" دبائیں",
+  "folder.block.open": "میرے بلاکس",
+  "folder.block.title": "میرے بلاکس",
+  "folder.block.hint": "تمام چہروں کے لیے ایک تصویر استعمال کی جاتی ہے۔ یا ..._top، ..._side اور ..._bottom نامی تین فائلیں منتخب کریں۔",
+  "folder.block.error": "ایک تصویر، یا ایسے فائلز منتخب کریں جن کے آخر में _top، _side یا _bottom ہو",
+  "folder.emote.open": "میرے ایموٹس",
+  "folder.emote.title": "میرے ایموٹس",
+  "folder.emote.hint": "ایک ایموٹ .json فائل منتخب کریں اور اگر چاہیں تو اسی ڈائیلاگ میں آئیکن کی تصویر (.png) بھی منتخب کریں۔",
+  "folder.emote.icon": "آئیکن تبدیل کریں",
+
+  "ui.hide": "انٹرفیس چھپائیں (H)",
+  "ui.show": "انٹرفیس دکھائیں (H)",
+
+  "shot.title": "اسکرین شاٹ محفوظ کریں (شفاف پس منظر کے لیے Shift دبائے رکھیں)",
+  "shot.error": "اسکرین شاٹ محفوظ نہیں کیا جا सका"
 }

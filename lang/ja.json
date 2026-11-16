@@ -59,7 +59,7 @@
 
   "emote.button": "エモート",
   "emote.title": "エモート",
-  "emote.hint": "エモートを選択するか、独自の .json ファイルを読み込んでください",
+  "emote.hint": "エモートを選択するか、「マイエモート」を開いて自分のエモートを追加してください",
   "emote.stop": "エモートを停止",
   "emote.test": "独自のエモートをテスト",
   "emote.empty": "エモートが見つかりません (emotes/ フォルダ)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "ヤンデレのポーズ（悪夢）",
   "emote.name.SPE_Zoro_Pose": "ゾロのポーズ（マルチバース）（ONE PIECE）",
 
+  "emote.by": "作成者: %s",
+  "emote.search_placeholder": "絵文字を検索...",
+  "emote.no_results": "絵文字が見つかりません",
+
   "person.Артур": "アーサー",
   "person.Вайкату": "ワイカツ",
   "person.Виакор": "ヴィアコア",
@@ -359,11 +363,39 @@
   "block.planks": "オークの木材",
   "block.netherrack": "ネザーラック",
   "block.end_stone": "エンドストーン",
+  "block.plain": "テクスチャなし",
 
   "bgimg.name.day": "昼",
   "bgimg.name.end": "ジ・エンド",
   "bgimg.name.nether": "ネザー",
   "bgimg.name.night": "夜",
   "bgimg.name.snow": "雪",
-  "bgimg.name.sunset": "日没"
+  "bgimg.name.sunset": "日没",
+
+  "blocks.empty": "ブロックがまだありません - テクスチャを blocks/ フォルダに入れるか、独自のものを追加してください",
+
+  "folder.add": "追加",
+  "folder.delete": "削除",
+  "folder.delete_confirm": "フォルダーから\\\"%s\\\"を削除しますか？",
+  "folder.empty": "ここにはまだ何もありません - \\\"+\\\" を押して最初のファイルを追加してください",
+  "folder.local_note": "ファイルはこのブラウザにのみ保存されます",
+  "folder.memory_only": "ブラウザのストレージが利用できません - タブを閉じるとファイルが消去されます",
+  "folder.error": "このファイルを追加できませんでした",
+  "folder.bg.open": "マイ画像",
+  "folder.bg.title": "マイ画像",
+  "folder.bg.hint": "アップロードした画像。新しい画像を追加するには「+」を押してください",
+  "folder.block.open": "マイブロック",
+  "folder.block.title": "マイブロック",
+  "folder.block.hint": "すべての面に1つの画像が使用されます。または、..._top、..._side、..._bottom という名前の3つのファイルを選択してください",
+  "folder.block.error": "画像を1つ、または末尾が _top、_side、_bottom のファイルを選択してください",
+  "folder.emote.open": "マイエモート",
+  "folder.emote.title": "マイエモート",
+  "folder.emote.hint": "エモートの .json ファイルと、必要に応じてアイコン画像 (.png) を同じダイアログで選択してください",
+  "folder.emote.icon": "アイコンを変更",
+
+  "ui.hide": "インターフェースを隠す (H)",
+  "ui.show": "インターフェースを表示 (H)",
+
+  "shot.title": "スクリーンショットを保存（Shiftキーを押しながらで背景を透過）",
+  "shot.error": "スクリーンショットを保存できませんでした"
 }

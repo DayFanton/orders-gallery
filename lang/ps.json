@@ -59,7 +59,7 @@
 
   "emote.button": "احساسات",
   "emote.title": "احساسات",
-  "emote.hint": "یو احساس وټاکئ یا خپل .json فایل پورته کړئ",
+  "emote.hint": "یو ایموټ وټاکئ یا د خپل ایموټ زیاتولو لپاره \\\"زما ایموټونه\\\" پرانیزئ",
   "emote.stop": "احساس ودروئ",
   "emote.test": "خپل احساس ازمویئ",
   "emote.empty": "هېڅ احساس ونه موندل شو (د emotes/ پوښۍ)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "د یاندېره پوز (بد خوبونه)",
   "emote.name.SPE_Zoro_Pose": "د زورو پوز (ملټیورس) (ون پیس)",
 
+  "emote.by": "د %s لخوا",
+  "emote.search_placeholder": "د ایموټس لټون...",
+  "emote.no_results": "هیڅ ایموټس ونه موندل شو",
+
   "person.Артур": "آرتور",
   "person.Вайкату": "وایکاټو",
   "person.Виакор": "ویاکور",
@@ -359,11 +363,39 @@
   "block.planks": "د بلوط تختې",
   "block.netherrack": "نیدرایک",
   "block.end_stone": "د پای ډبره",
+  "block.plain": "هیڅ ټکسچر نشته",
 
   "bgimg.name.day": "ورځ",
   "bgimg.name.end": "پای",
   "bgimg.name.nether": "دوزخ",
   "bgimg.name.night": "شپه",
   "bgimg.name.snow": "واوره",
-  "bgimg.name.sunset": "لمر لوېدل"
+  "bgimg.name.sunset": "لمر لوېدل",
+
+  "blocks.empty": "تر اوس پورې کوم بلاک نشته - ټکسچرونه د blocks/ په فولډر کې واچوئ یا خپل یې اضافه کړئ",
+
+  "folder.add": "اضافه کول",
+  "folder.delete": "حذف کول",
+  "folder.delete_confirm": "ایا غواړئ \\\"%s\\\" له خپل پوښښ څخه ړنګ کړئ؟",
+  "folder.empty": "دلته تر اوسه هېڅ نشته - د خپلې لومړۍ دوسیې د زیاتولو لپاره \\\"+\\\" کېکاږئ",
+  "folder.local_note": "فایلونه یوازې په دې براوزر کې ساتل کیږي",
+  "folder.memory_only": "د براوزر ذخیره شتون نلري - کله چې تاسو ټب وتړئ، فایلونه به ورک شي",
+  "folder.error": "دا فایل نه شو اضافه کولی",
+  "folder.bg.open": "زما انځورونه",
+  "folder.bg.title": "زما انځورونه",
+  "folder.bg.hint": "ستاسو پورته کړي انځورونه. د نوي انځور زیاتولو لپاره \\\"+\\\" کېکاږئ",
+  "folder.block.open": "زما بلاکونه",
+  "folder.block.title": "زما بلاکونه",
+  "folder.block.hint": "د ټولو مخونو لپاره یو انځور کارول کیږي. یا درې فایلونه د ..._top، ..._side او ..._bottom په نومونو وټاکئ",
+  "folder.block.error": "یو انځور وټاکئ، یا هغه فایلونه چې په _top، _side یا _bottom پای ته رسیږي",
+  "folder.emote.open": "زما ایموټس",
+  "folder.emote.title": "زما ایموټس",
+  "folder.emote.hint": "د ایموټ .json فایل او که غواړئ، د آیکون انځور (.png) په همدې خبرو اترو کې وټاکئ",
+  "folder.emote.icon": "آیکون بدل کړئ",
+
+  "ui.hide": "انټرفیس پټ کړئ (H)",
+  "ui.show": "انټرفیس ښکاره کړئ (H)",
+
+  "shot.title": "سکرین شاټ خوندي کړئ (د شفاف شالید لپاره Shift ونیسئ)",
+  "shot.error": "سکرین شاټ نه شو خوندي کولی"
 }

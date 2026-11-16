@@ -60,7 +60,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Kies een emote of laad je eigen .json-bestand",
+  "emote.hint": "Kies een emote of open \\\"Mijn emotes\\\" om je eigen emote toe te voegen",
   "emote.stop": "Emote stoppen",
   "emote.test": "Test je eigen emote",
   "emote.empty": "Geen emotes gevonden (map emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Eikenhouten planken",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endsteen",
+  "block.plain": "Geen textuur",
 
   "mobile.gallery": "📁 Galerij",
   "mobile.settings": "⚙️ Instellingen",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere Pose (Nachtmerries)",
   "emote.name.SPE_Zoro_Pose": "Zoro Pose (Multiversum) (One Piece)",
 
+  "emote.by": "door %s",
+  "emote.search_placeholder": "Zoek emotes...",
+  "emote.no_results": "Geen emotes gevonden",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Nacht",
   "bgimg.name.snow": "Sneeuw",
-  "bgimg.name.sunset": "Zonsondergang"
+  "bgimg.name.sunset": "Zonsondergang",
+
+  "blocks.empty": "Nog geen blokken - plaats texturen in de map blocks/ of voeg je eigen toe",
+
+  "folder.add": "Toevoegen",
+  "folder.delete": "Verwijderen",
+  "folder.delete_confirm": "\\\"%s\\\" uit je map verwijderen?",
+  "folder.empty": "Hier is nog niets - druk op \\\"+\\\" om je eerste bestand toe te voegen",
+  "folder.local_note": "Bestanden worden alleen in deze browser opgeslagen",
+  "folder.memory_only": "Browseropslag is niet beschikbaar - bestanden verdwijnen wanneer je het tabblad sluit",
+  "folder.error": "Kan dit bestand niet toevoegen",
+  "folder.bg.open": "Mijn afbeeldingen",
+  "folder.bg.title": "Mijn afbeeldingen",
+  "folder.bg.hint": "Je geüploade afbeeldingen. Druk op \\\"+\\\" om een nieuwe toe te voegen",
+  "folder.block.open": "Mijn blokken",
+  "folder.block.title": "Mijn blokken",
+  "folder.block.hint": "Één afbeelding wordt gebruikt voor alle vlakken. Of kies drie bestanden genaamd ..._top, ..._side en ..._bottom",
+  "folder.block.error": "Kies één afbeelding of bestanden die eindigen op _top, _side of _bottom",
+  "folder.emote.open": "Mijn emotes",
+  "folder.emote.title": "Mijn emotes",
+  "folder.emote.hint": "Kies een emote-.json-bestand en, indien gewenst, een pictogramafbeelding (.png) in hetzelfde dialoogvenster",
+  "folder.emote.icon": "Pictogram wijzigen",
+
+  "ui.hide": "Verberg interface (H)",
+  "ui.show": "Toon interface (H)",
+
+  "shot.title": "Schermafbeelding opslaan (houd Shift ingedrukt voor een transparante achtergrond)",
+  "shot.error": "Kan de schermafbeelding niet opslaan"
 }

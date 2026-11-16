@@ -59,7 +59,7 @@
 
   "emote.button": "ስሜቶች",
   "emote.title": "ስሜቶች",
-  "emote.hint": "ስሜት ይምረጡ ወይም የራስዎን .json ፋይል ይጫኑ",
+  "emote.hint": "ኢሞት ይምረጡ ወይም የራስዎን ለመጨመር \\\"የእኔ ኢሞቶች\\\" ይክፈቱ",
   "emote.stop": "ስሜቱን አቋርጥ",
   "emote.test": "የራስዎን ስሜት ይፈትሹ",
   "emote.empty": "ምንም ስሜቶች አልተገኙም (emotes/ አቃፊ)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "የያንዴሬ አቀማመጥ (ቅዠቶች)",
   "emote.name.SPE_Zoro_Pose": "የዞሮ አቀማመጥ (መልቲቨርስ) (ዋን ፒስ)",
 
+  "emote.by": "በ%s",
+  "emote.search_placeholder": "ስሜت ገጾችን ፈልግ...",
+  "emote.no_results": "කිසිදු ስሜት ገጽ አልተገኘም",
+
   "person.Артур": "አርቱር",
   "person.Вайкату": "ቫይካቱ",
   "person.Виакор": "ቪያኮር",
@@ -359,11 +363,39 @@
   "block.planks": "የبلوጥ ጽሕፈቶች",
   "block.netherrack": "ኔዘርራክ",
   "block.end_stone": "የኢንድ ድንጋይ",
+  "block.plain": "ምንም ሸካራነት የለም",
 
   "bgimg.name.day": "ቀን",
   "bgimg.name.end": "መጨረሻ",
   "bgimg.name.nether": "ሲኦል",
   "bgimg.name.night": "ሌሊት",
   "bgimg.name.snow": "በረዶ",
-  "bgimg.name.sunset": "ጀምበር ስትጠልቅ"
+  "bgimg.name.sunset": "ጀምበር ስትጠልቅ",
+
+  "blocks.empty": "እስካሁን ብሎኮች የሉም - ሸካራዎችን በ blocks/ አቃፊ ውስጥ ያስገቡ ወይም የራስዎን ይጨምሩ",
+
+  "folder.add": "ጨምር",
+  "folder.delete": "ጥፋ",
+  "folder.delete_confirm": "\\\"%s\\\" ከአቃፊዎ ውስጥ ይሰረዝ?",
+  "folder.empty": "እስካሁን እዚህ ምንም የለም - የመጀመሪያ ፋይልዎን ለመጨመር \\\"+\\\" ይጫኑ",
+  "folder.local_note": "ፋይሎች በዚህ አሳሽ ውስጥ ብቻ ይቀመጣሉ",
+  "folder.memory_only": "የአሳሽ ማከማቻ የለም - ትር ሲዘጉ ፋይሎች ይጠፋሉ",
+  "folder.error": "ይህን ፋይል ማከል አልተቻለም",
+  "folder.bg.open": "የእኔ ምስሎች",
+  "folder.bg.title": "የእኔ ምስሎች",
+  "folder.bg.hint": "የሰቀሏቸው ምስሎች። አዲስ ምስል ለመጨመር \\\"+\\\" ይጫኑ",
+  "folder.block.open": "የእኔ ብሎኮች",
+  "folder.block.title": "የእኔ ብሎኮች",
+  "folder.block.hint": "ለሁሉም ፊት አንድ ምስል ጥቅም ላይ ይውላል። ወይም ..._top፣ ..._side እና ..._bottom የተسمዩ ሶስት ፋይሎችን ይምረጡ",
+  "folder.block.error": "አንድ ምስል ይምረጡ፣ ወይም በ _top፣ _side ወይም _bottom የሚያልቁ ፋይሎችን ይምረጡ",
+  "folder.emote.open": "የእኔ ስሜት ገጾች",
+  "folder.emote.title": "የእኔ ስሜት ገጾች",
+  "folder.emote.hint": "የኢሞት .json ፋይል ይምረጡ እና ከፈለጉ በተመሳሳይ ሳጥን ውስጥ የአייኮን ምስል (.png) ይምረጡ",
+  "folder.emote.icon": "አዕማድ ቀይር",
+
+  "ui.hide": "በይነገጽ ደብቅ (H)",
+  "ui.show": "በይነገጽ አሳይ (H)",
+
+  "shot.title": "ቅጽበታዊ ገጽ እይታን አስቀምጥ (ግልጽ ዳራ ለማግኘት Shift ን ተጭነው ይያዙ)",
+  "shot.error": "ቅጽበታዊ ገጽ እይታውን ማስቀመጥ አልተቻለም"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "ایموٹ",
   "emote.title": "ایموٹ",
-  "emote.hint": "ایموٹے گچین بہ کن ات یا وتی .json فائل ءَ لوڈ بہ کن ات",
+  "emote.hint": "یک ایموت اِنتخاب کن یا وتی ایموت اِضافه کنگا \\\"مِنی ایموتان\\\" باز کن",
   "emote.stop": "ایموٹ ءَ بند کن",
   "emote.test": "وتی ایموٹ ءَ چکاس",
   "emote.empty": "هچ ایموٹ در نہ کپت (emotes/ فولڈر)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "یاندیرے ءِ پوز (تُرسناکیں واب)",
   "emote.name.SPE_Zoro_Pose": "زورو ءِ پوز (ملٹی ورس) (One Piece)",
 
+  "emote.by": "%s a",
+  "emote.search_placeholder": "ایموٹ پدگ...",
+  "emote.no_results": "هیچ ایموت پدگ نه بوت",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وایکاتو",
   "person.Виакор": "ویاکور",
@@ -359,11 +363,39 @@
   "block.planks": "بلوط ءِ تختگ",
   "block.netherrack": "نیدررک",
   "block.end_stone": "اینڈ سنگ",
+  "block.plain": "هیچ تیکستور نیست",
 
   "bgimg.name.day": "روچ",
   "bgimg.name.end": "آهری",
   "bgimg.name.nether": "دوزخ",
   "bgimg.name.night": "شپ",
   "bgimg.name.snow": "برپ",
-  "bgimg.name.sunset": "روچ ایرشت"
+  "bgimg.name.sunset": "روچ ایرشت",
+
+  "blocks.empty": "هچ بلوک نیست - تیکستوراں په blocks/ فولدر ءَ بیار یا وتی وا شه اضافه کن",
+
+  "folder.add": "اضافه کنائ",
+  "folder.delete": "پاک کنائ",
+  "folder.delete_confirm": "آیا شما می‌خواهید \\\"%s\\\" را از پوشه خود حذف کنید؟",
+  "folder.empty": "Hite ajun kai nathi - tamari pehli file umerva mate \\\"+\\\" dabavo",
+  "folder.local_note": "فایلان فقط په همین بروزر ءَ محفوظ بنت",
+  "folder.memory_only": "بروزر ءِ اسټوریج دسترسی نیست - فایلان په بستگء تب گم بنت",
+  "folder.error": "ایشی فایل اضافه بوت نه کورت",
+  "folder.bg.open": "منی عکسان",
+  "folder.bg.title": "منی عکسان",
+  "folder.bg.hint": "Tamari upload kelya tasvira. Navi tasvir umerva mate \\\"+\\\" dabavo",
+  "folder.block.open": "منی بلوکان",
+  "folder.block.title": "منی بلوکان",
+  "folder.block.hint": "همک روئِیان یک عکس کارمرز بیت. یان سێ فایل به نامِ ..._top، ..._side و ..._bottom انتخاب کن",
+  "folder.block.error": "یک عکس، یا فایلانی که په _top، _side یا _bottom تمام بنت انتخاب کن",
+  "folder.emote.open": "منی ایموٹ پدگ",
+  "folder.emote.title": "منی ایموٹ پدگ",
+  "folder.emote.hint": "یک ایموت .json فایل و اگر لوٹے، یک آیکون عکس (.png) په همان گفتگو ء انتخاب کن",
+  "folder.emote.icon": "آیکون بدل",
+
+  "ui.hide": "انٹرفیس پچ (H)",
+  "ui.show": "انٹرفیس پیش کن (H)",
+
+  "shot.title": "اسکرین شاٹ محفوظ کن (په شفاف پُشت ءَ Shift ءَ دار)",
+  "shot.error": "اسکرین شاٹ محفوظ بوت نه کورت"
 }

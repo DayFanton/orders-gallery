@@ -59,7 +59,7 @@
 
   "emote.button": "Emotki",
   "emote.title": "Emotki",
-  "emote.hint": "Wybierz emotkę lub wgraj własny plik .json",
+  "emote.hint": "Wybierz emotkę lub otwórz \\\"Moje emotki\\\", aby dodać własną",
   "emote.stop": "Przerwij emotkę",
   "emote.test": "Przetestuj własną emotkę",
   "emote.empty": "Nie znaleziono emotek (folder emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Koszmary)",
   "emote.name.SPE_Zoro_Pose": "Poza Zoro (Multiwersum) (One Piece)",
 
+  "emote.by": "przez %s",
+  "emote.search_placeholder": "Szukaj emot...",
+  "emote.no_results": "Nie znaleziono emot",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Dębowe deski",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kamień Kresu",
+  "block.plain": "Brak tekstury",
 
   "bgimg.name.day": "Dzień",
   "bgimg.name.end": "Kres",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Noc",
   "bgimg.name.snow": "Śnieg",
-  "bgimg.name.sunset": "Zachód słońca"
+  "bgimg.name.sunset": "Zachód słońca",
+
+  "blocks.empty": "Brak bloków - umieść tekstury w folderzie blocks/ lub dodaj własne",
+
+  "folder.add": "Dodaj",
+  "folder.delete": "Usuń",
+  "folder.delete_confirm": "Czy usunąć \\\"%s\\\" z folderu?",
+  "folder.empty": "Na razie nic tu nie ma - naciśnij \\\"+\\\", aby dodać swój pierwszy plik",
+  "folder.local_note": "Pliki są przechowywane tylko w tej przeglądarce",
+  "folder.memory_only": "Pamięć przeglądarki jest niedostępna – pliki znikną po zamknięciu karty",
+  "folder.error": "Nie udało się dodać tego pliku",
+  "folder.bg.open": "Moje obrazy",
+  "folder.bg.title": "Moje obrazy",
+  "folder.bg.hint": "Przesłane obrazy. Naciśnij \\\"+\\\", aby dodać nowy",
+  "folder.block.open": "Moje bloki",
+  "folder.block.title": "Moje bloki",
+  "folder.block.hint": "Jeden obraz jest używany dla wszystkich ścian. Lub wybierz trzy pliki o nazwach ..._top, ..._side i ..._bottom",
+  "folder.block.error": "Wybierz jeden obraz lub pliki kończące się na _top, _side lub _bottom",
+  "folder.emote.open": "Moje emotki",
+  "folder.emote.title": "Moje emotki",
+  "folder.emote.hint": "Wybierz plik .json emotki i, jeśli chcesz, obraz ikony (.png) w tym samym oknie dialogowym",
+  "folder.emote.icon": "Zmień ikonę",
+
+  "ui.hide": "Ukryj interfejs (H)",
+  "ui.show": "Pokaż interfejs (H)",
+
+  "shot.title": "Zapisz zrzut ekranu (przytrzymaj Shift, aby uzyskać przezroczyste tło)",
+  "shot.error": "Nie udało się zapisać zrzutu ekranu"
 }

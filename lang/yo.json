@@ -59,7 +59,7 @@
 
   "emote.button": "Ìfarahàn",
   "emote.title": "Àwọn ìfarahàn",
-  "emote.hint": "Yan ìfarahàn tàbí gbe fáìlì .json rẹ sori rẹ̀",
+  "emote.hint": "Yan emote kan tàbí ṣí \\\"Àwọn emote mi\\\" láti fi èyí tìrẹ kún un",
   "emote.stop": "Dá ìfarahàn dúró",
   "emote.test": "Dán ìfarahàn rẹ wo",
   "emote.empty": "Kò sí ìfarahàn tí a rí (àpótí emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Ipo Yandere (Àlá burúkú)",
   "emote.name.SPE_Zoro_Pose": "Ipo Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "lati ọwọ %s",
+  "emote.search_placeholder": "Wa awọn ifihan...",
+  "emote.no_results": "Ko ri awọn ifihan kankan",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Awọn pako oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Òkúta End",
+  "block.plain": "Ko si aworan",
 
   "bgimg.name.day": "Ọ̀sán",
   "bgimg.name.end": "Òpin",
   "bgimg.name.nether": "Ọ̀run Àpáàdì",
   "bgimg.name.night": "Òru",
   "bgimg.name.snow": "Yìnyín",
-  "bgimg.name.sunset": "Ìwọ̀ oòrùn"
+  "bgimg.name.sunset": "Ìwọ̀ oòrùn",
+
+  "blocks.empty": "Ko si awọn bulọọki sibẹsibẹ - fi awọn aworan si inu folda blocks/ tabi ṣafikun tirẹ",
+
+  "folder.add": "Fi kun",
+  "folder.delete": "Paẹ",
+  "folder.delete_confirm": "Ṣé o fẹ́ pa \\\"%s\\\" rẹ́ kúrò nínú àpò ìpamọ́ rẹ?",
+  "folder.empty": "Kò sí ohunkóhun níbí síbẹ̀ - tẹ \\\"+\\\" láti fi fáìlì àkọ́kọ́ rẹ kún un",
+  "folder.local_note": "Awọn faili ni a n fipamọ nikan ni aṣàwákiri yii",
+  "folder.memory_only": "Ibi ipamọ aṣàwákiri ko si - awọn faili yoo parẹ nigbati o ba pa taabu naa",
+  "folder.error": "Ko le fi faili yii kun",
+  "folder.bg.open": "Awọn aworan mi",
+  "folder.bg.title": "Awọn aworan mi",
+  "folder.bg.hint": "Àwọn àwòrán tí o gbé sórí ètò. Tẹ \\\"+\\\" láti fi àwòrán tuntun kún un",
+  "folder.block.open": "Awọn bulọọki mi",
+  "folder.block.title": "Awọn bulọọki mi",
+  "folder.block.hint": "A lo aworan kan fun gbogbo awọn oju. Tabí yan awọn faili mẹta ti a npè ni ..._top, ..._side ati ..._bottom",
+  "folder.block.error": "Yan aworan kan, tabi awọn faili ti o pari pẹlu _top, _side tabi _bottom",
+  "folder.emote.open": "Awọn emote mi",
+  "folder.emote.title": "Awọn emote mi",
+  "folder.emote.hint": "Yan faili .json emote kan, ti o ba fẹ, aworan aami (.png) ninu ijiroro kan naa",
+  "folder.emote.icon": "Yi aami pada",
+
+  "ui.hide": "Tọ ko oju aṣayan (H)",
+  "ui.show": "Fi oju aṣayan han (H)",
+
+  "shot.title": "Fi aworan iboju pamọ (di Shift mu fun abẹlẹ ti o han gbangba)",
+  "shot.error": "Ko le fi aworan iboju pamọ"
 }

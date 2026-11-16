@@ -59,7 +59,7 @@
 
   "emote.button": "Ibimenyetso",
   "emote.title": "Ibimenyetso",
-  "emote.hint": "Hitamwo ikimenyetso canke ushiremwo idosiye yawe ya .json",
+  "emote.hint": "Hitamwo emote canke ufungure \\\"Emote zanje\\\" kugira ngo wongereko iyawe",
   "emote.stop": "Hagarika ikimenyetso",
   "emote.test": "Gerageza ikimenyetso cawe",
   "emote.empty": "Nta bimenyetso vyabonetse (ububiko emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Impagararo ya Yandere (Inzozi mbi)",
   "emote.name.SPE_Zoro_Pose": "Impagararo ya Zoro (Isi nyinshi) (One Piece)",
 
+  "emote.by": "na %s",
+  "emote.search_placeholder": "Shakisha utumenyetso...",
+  "emote.no_results": "Nta butumwa bwabonetse",
+
   "person.Артур": "Aritiri",
   "person.Вайкату": "Wayikatu",
   "person.Виакор": "Viyakore",
@@ -359,11 +363,39 @@
   "block.planks": "Imbaho z'igiti c'umweloni",
   "block.netherrack": "Ibuye ryo mu kuzimu (Netherrack)",
   "block.end_stone": "Ibuye ryo kw'iherezo (End stone)",
+  "block.plain": "Nta bice bifatika",
 
   "bgimg.name.day": "Umurango",
   "bgimg.name.end": "Iherezo",
   "bgimg.name.nether": "Ikuzimu",
   "bgimg.name.night": "Ijoro",
   "bgimg.name.snow": "Shelegi",
-  "bgimg.name.sunset": "Izuba rirenga"
+  "bgimg.name.sunset": "Izuba rirenga",
+
+  "blocks.empty": "Nta bice bibonetse - shyira texture mu bubiko bwa blocks/ cyangwa wongere ibyawe",
+
+  "folder.add": "Yongera",
+  "folder.delete": "Siba",
+  "folder.delete_confirm": "Urashaka gukura \\\"%s\\\" muri dosiye yawe?",
+  "folder.empty": "Nta kintu kirahari hano - kanda \\\"+\\\" kugira ngo wongere dosiye yawe ya mbere",
+  "folder.local_note": "Dosi zibitswe gusa muri uyu mushakashatsi",
+  "folder.memory_only": "Ububiko bw'umushakashatsi ntibuboneka - dosi zizaburama niyo ukinguye tabu",
+  "folder.error": "Ntibyashobotse kongera iyi dosi",
+  "folder.bg.open": "Amafoto yanje",
+  "folder.bg.title": "Amafoto yanje",
+  "folder.bg.hint": "Amafoto washizeko. Kanda \\\"+\\\" kugira ngo wongere irindi foto",
+  "folder.block.open": "Block zanjye",
+  "folder.block.title": "Block zanjye",
+  "folder.block.hint": "Foto imwe irakoreshwa kuri vyose. Canke uhitemwo dosi zitatu zifite amazina ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Hitamo foto imwe, cyangwa dosi zirangira kuri _top, _side cyangwa _bottom",
+  "folder.emote.open": "Utumenyetso twanje",
+  "folder.emote.title": "Utumenyetso twanje",
+  "folder.emote.hint": "Hitamo dosi ya .json y'emote kandi, niba ubishaka, ishusho y'ikoni (.png) muri iyo dialogu",
+  "folder.emote.icon": "Hindura ikoni",
+
+  "ui.hide": "Hisha interface (H)",
+  "ui.show": "Erekana interface (H)",
+
+  "shot.title": "Bika ifoto ya ecran (fyonda Shift kugira ngo ubone inyuma habonerana)",
+  "shot.error": "Ntibyashobotse kubika ifoto ya ecran"
 }

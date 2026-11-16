@@ -59,7 +59,7 @@
 
   "emote.button": "Emocione",
   "emote.title": "Emocione",
-  "emote.hint": "Zgjidhni një emocion ose ngarkoni skedarin tuaj .json",
+  "emote.hint": "Zgjidh një emote ose hap \\\"Emotet e mia\\\" për të shtuar tëndin",
   "emote.stop": "Ndalo emocionin",
   "emote.test": "Testo emocionin tënd",
   "emote.empty": "Nuk u gjetën emocione (dosja emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Makthet)",
   "emote.name.SPE_Zoro_Pose": "Poza e Zoro-s (Multiversi) (One Piece)",
 
+  "emote.by": "nga %s",
+  "emote.search_placeholder": "Kërko emoji...",
+  "emote.no_results": "Nuk u gjet asnjë emoji",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Dërrasa lisi",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Gur i End-it",
+  "block.plain": "Pa teksturë",
 
   "bgimg.name.day": "Ditë",
   "bgimg.name.end": "Fundi",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Natë",
   "bgimg.name.snow": "Borë",
-  "bgimg.name.sunset": "Perëndim dielli"
+  "bgimg.name.sunset": "Perëndim dielli",
+
+  "blocks.empty": "Ende nuk ka blokura - vendosni tekstura në dosjen blocks/ ose shtoni tuajat",
+
+  "folder.add": "Shto",
+  "folder.delete": "Fshi",
+  "folder.delete_confirm": "Të fshihet \\\"%s\\\" nga dosja juaj?",
+  "folder.empty": "Këtu nuk ka ende asgjë - shtypni \\\"+\\\" për të shtuar skedarin tuaj të parë",
+  "folder.local_note": "Skedarët ruhen vetëm në këtë shfletues",
+  "folder.memory_only": "Hapësira ruajtëse e shfletuesit nuk është e disponueshme - skedarët do të zhduken kur të mbyllni skedën",
+  "folder.error": "Nuk u mund të shtohej ky skedar",
+  "folder.bg.open": "Imazhet e mia",
+  "folder.bg.title": "Imazhet e mia",
+  "folder.bg.hint": "Imazhet që keni ngarkuar. Shtypni \\\"+\\\" për të shtuar një të re",
+  "folder.block.open": "Blloket e mia",
+  "folder.block.title": "Blloket e mia",
+  "folder.block.hint": "Një imazh përdoret për të gjitha faqet. Ose zgjidhni tre skedarë të quajtur ..._top, ..._side dhe ..._bottom",
+  "folder.block.error": "Zgjidhni një imazh, ose skedarë që përfundojnë në _top, _side ose _bottom",
+  "folder.emote.open": "Emote-t e mia",
+  "folder.emote.title": "Emote-t e mia",
+  "folder.emote.hint": "Zgjidhni një skedar .json të emote dhe, nëse dëshironi, një imazh ikone (.png) në të njëjtin dialog",
+  "folder.emote.icon": "Ndrysho ikonën",
+
+  "ui.hide": "Fshih ndërfaqen (H)",
+  "ui.show": "Shfaq ndërfaqen (H)",
+
+  "shot.title": "Ruaj pamjen e ekranit (mbani shtypur Shift për sfond transparent)",
+  "shot.error": "Nuk u mund të ruhej pamja e ekranit"
 }

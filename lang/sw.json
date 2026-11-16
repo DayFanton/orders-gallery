@@ -59,7 +59,7 @@
 
   "emote.button": "Hisia",
   "emote.title": "Hisia",
-  "emote.hint": "Chagua hisia au pakia faili yako ya .json",
+  "emote.hint": "Chagua emote au fungua \\\"Emote zangu\\\" ili kuongeza emote yako mwenyewe",
   "emote.stop": "Katisha hisia",
   "emote.test": "Jaribu hisia yako mwenyewe",
   "emote.empty": "Hakuna hisia zilizopatikana (folda ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose ya Yandere (Ndoto za Kutisha)",
   "emote.name.SPE_Zoro_Pose": "Pose ya Zoro (Ulimwengu mwingi) (One Piece)",
 
+  "emote.by": "na %s",
+  "emote.search_placeholder": "Tafuta hisia...",
+  "emote.no_results": "Hakuna hisia zilizopatikana",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mbao za mwaloni",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Jiwe la End",
+  "block.plain": "Hakuna muundo",
 
   "bgimg.name.day": "Mchana",
   "bgimg.name.end": "Mwisho",
   "bgimg.name.nether": "Kuzimu",
   "bgimg.name.night": "Usiku",
   "bgimg.name.snow": "Theluji",
-  "bgimg.name.sunset": "Machweo"
+  "bgimg.name.sunset": "Machweo",
+
+  "blocks.empty": "Hakuna vizuizi bado - weka miundo kwenye folda ya blocks/ au ongeza yako mwenyewe",
+
+  "folder.add": "Ongeza",
+  "folder.delete": "Futa",
+  "folder.delete_confirm": "Je, unataka kufuta \\\"%s\\\" kutoka kwenye folda yako?",
+  "folder.empty": "Bado hakuna kitu hapa - bonyeza \\\"+\\\" ili kuongeza faili yako ya kwanza",
+  "folder.local_note": "Faili zimehifadhiwa kwenye kivinjari hiki pekee",
+  "folder.memory_only": "Uhifadhi wa kivinjari haupatikani - faili zitatoweka utakapofunga kichupo",
+  "folder.error": "Haiwezi kuongeza faili hili",
+  "folder.bg.open": "Picha zangu",
+  "folder.bg.title": "Picha zangu",
+  "folder.bg.hint": "Picha ulizopakia. Bonyeza \\\"+\\\" ili kuongeza picha mpya",
+  "folder.block.open": "Vizuizi vyangu",
+  "folder.block.title": "Vizuizi vyangu",
+  "folder.block.hint": "Picha moja inatumika kwa nyuso zote. Au chagua faili tatu zenye jina ..._top, ..._side na ..._bottom",
+  "folder.block.error": "Chagua picha moja, au faili zinazoishia na _top, _side au _bottom",
+  "folder.emote.open": "Emote zangu",
+  "folder.emote.title": "Emote zangu",
+  "folder.emote.hint": "Chagua faili ya .json ya emote na, ukitaka, picha ya ikoni (.png) kwenye kidirisha kimoja",
+  "folder.emote.icon": "Badilisha ikoni",
+
+  "ui.hide": "Ficha kiolesura (H)",
+  "ui.show": "Onyesha kiolesura (H)",
+
+  "shot.title": "Hifadhi picha ya skrini (shikilia Shift kwa mandharinyuma angavu)",
+  "shot.error": "Haiwezi kuhusisha picha ya skrini"
 }

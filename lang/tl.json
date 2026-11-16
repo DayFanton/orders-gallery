@@ -59,7 +59,7 @@
 
   "emote.button": "Mga Emote",
   "emote.title": "Mga Emote",
-  "emote.hint": "Pumili ng emote o mag-upload ng sariling .json file",
+  "emote.hint": "Pumili ng emote o buksan ang \\\"Mga emote ko\\\" para magdagdag ng sarili mong emote",
   "emote.stop": "Ihinto ang emote",
   "emote.test": "Subukan ang sariling emote",
   "emote.empty": "Walang nahanap na emote (folder na emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose ng Yandere (Mga Bangungot)",
   "emote.name.SPE_Zoro_Pose": "Pose ng Zoro (Multiverse) (One Piece)",
 
+  "emote.by": "ni %s",
+  "emote.search_placeholder": "Maghanap ng mga emote...",
+  "emote.no_results": "Walang nakitang mga emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Mga tablones na oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End stone",
+  "block.plain": "Walang tekstura",
 
   "bgimg.name.day": "Araw",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gabi",
   "bgimg.name.snow": "Niyebe",
-  "bgimg.name.sunset": "Takipsilim"
+  "bgimg.name.sunset": "Takipsilim",
+
+  "blocks.empty": "Wala pang mga bloc - maglagay ng mga tekstura sa blocks/ folder o magdagdag ng sarili mo",
+
+  "folder.add": "Idagdag",
+  "folder.delete": "Tanggalin",
+  "folder.delete_confirm": "Tanggalin ang \\\"%s\\\" sa iyong folder?",
+  "folder.empty": "Wala pang laman dito - pindutin ang \\\"+\\\" para idagdag ang una mong file",
+  "folder.local_note": "Ang mga file ay nakaimbak lamang sa browser na ito",
+  "folder.memory_only": "Hindi available ang imbakan ng browser - mawawala ang mga file kapag isinara mo ang tab",
+  "folder.error": "Hindi maidagdag ang file na ito",
+  "folder.bg.open": "Aking mga larawan",
+  "folder.bg.title": "Aking mga larawan",
+  "folder.bg.hint": "Mga larawang in-upload mo. Pindutin ang \\\"+\\\" para magdagdag ng bago",
+  "folder.block.open": "Ang aking mga block",
+  "folder.block.title": "Ang aking mga block",
+  "folder.block.hint": "Isang larawan ang ginagamit para sa lahat ng mukha. O pumili ng tatlong file na pinangalanang ..._top, ..._side at ..._bottom",
+  "folder.block.error": "Pumili ng isang larawan, o mga file na nagtatapos sa _top, _side o _bottom",
+  "folder.emote.open": "Ang aking mga emote",
+  "folder.emote.title": "Ang aking mga emote",
+  "folder.emote.hint": "Pumili ng .json file ng emote at, kung gusto mo, isang larawan ng icon (.png) sa parehong dialog",
+  "folder.emote.icon": "Palitan ang icon",
+
+  "ui.hide": "Itago ang interface (H)",
+  "ui.show": "Ipakita ang interface (H)",
+
+  "shot.title": "I-save ang screenshot (pindutin nang matagal ang Shift para sa transparent na background)",
+  "shot.error": "Hindi ma-save ang screenshot"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Zochita",
   "emote.title": "Zochita",
-  "emote.hint": "Sankhani chochita kapena ikani fayilo yanu ya .json",
+  "emote.hint": "Sankhani emote kapena tsegulani \\\"Ma emote anga\\\" kuti muwonjezere yanu",
   "emote.stop": "Imitsani chochita",
   "emote.test": "Yesani chochita chanu",
   "emote.empty": "Palibe zochita zomwe zapezeka (foda ya emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Kaimidwe ka Yandere (Maloto Oipa)",
   "emote.name.SPE_Zoro_Pose": "Kaimidwe ka Zoro (Zilengedwe Zambiri) (One Piece)",
 
+  "emote.by": "ndi %s",
+  "emote.search_placeholder": "Sakani ma-emote...",
+  "emote.no_results": "Palibe ma-emote apezedwa",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Matabwa a mtengo wa oku",
   "block.netherrack": "Mwala wa Nether",
   "block.end_stone": "Mwala wa End",
+  "block.plain": "Palibe mawonekedwe",
 
   "bgimg.name.day": "Masana",
   "bgimg.name.end": "Mapeto",
   "bgimg.name.nether": "Gehena",
   "bgimg.name.night": "Usiku",
   "bgimg.name.snow": "Chipale",
-  "bgimg.name.sunset": "Kulowa kwa dzuwa"
+  "bgimg.name.sunset": "Kulowa kwa dzuwa",
+
+  "blocks.empty": "Palibe ma-block pano - ikani ma-texture m'thumba la blocks/ kapena onjezani anu",
+
+  "folder.add": "Onjezani",
+  "folder.delete": "Chotsani",
+  "folder.delete_confirm": "Mukufuna kuchotsa \\\"%s\\\" mufoda yanu?",
+  "folder.empty": "Palibe kanthu pano pakali pano - dinani \\\"+\\\" kuti muwonjezere fayilo yanu yoyamba",
+  "folder.local_note": "Fayilo zimasungidwa mu msakatuli uyu wokha",
+  "folder.memory_only": "Kusungira kwa msakatuli sikuli - fayilolo zidzatha mukatsekula taabu",
+  "folder.error": "Sizotheka kuwonjezera fayiloyi",
+  "folder.bg.open": "Zithunzi zanga",
+  "folder.bg.title": "Zithunzi zanga",
+  "folder.bg.hint": "Zithunzi zomwe mudakweza. Dinani \\\"+\\\" kuti muwonjezere china chatsopano",
+  "folder.block.open": "Ma-block anga",
+  "folder.block.title": "Ma-block anga",
+  "folder.block.hint": "Chithunzi chimodzi chimagwiritsidwa ntchito pazinthu zonse. Kapena sankhani mafayilo atatu otchedwa ..._top, ..._side ndi ..._bottom",
+  "folder.block.error": "Sankhani chithunzi chimodzi, kapena mafayilo othamanga ndi _top, _side kapena _bottom",
+  "folder.emote.open": "Ma-emote anga",
+  "folder.emote.title": "Ma-emote anga",
+  "folder.emote.hint": "Sankhani fayilo ya .json ya emote ndipo, ngati mukufuna, chithunzi cha icon (.png) mu zokambirana zomweyo",
+  "folder.emote.icon": "Sintha icon",
+
+  "ui.hide": "Bisani mawonekedwe (H)",
+  "ui.show": "Sonyezani mawonekedwe (H)",
+
+  "shot.title": "Sungani chithunzi cha pa sikirini (gwirani Shift kuti mupeze kumbuyo kooneka)",
+  "shot.error": "Sizotheka kusungira chithunzi cha pa sikirini"
 }

@@ -60,7 +60,7 @@
 
   "emote.button": "Emote-ok",
   "emote.title": "Emote-ok",
-  "emote.hint": "Válassz egy emote-ot, vagy töltsd fel a saját .json fájlodat",
+  "emote.hint": "Válassz egy emote-ot, vagy nyisd meg a \\\"Saját emote-jaim\\\" részt a sajátod hozzáadásához",
   "emote.stop": "Emote leállítása",
   "emote.test": "Saját emote tesztelése",
   "emote.empty": "Nem találhatók emote-ok (emotes/ mappa)",
@@ -98,6 +98,7 @@
   "block.planks": "Tölgydeszka",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endkő",
+  "block.plain": "Nincs textúra",
 
   "mobile.gallery": "📁 Galéria",
   "mobile.settings": "⚙️ Beállítások",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere póz (Rémálmok)",
   "emote.name.SPE_Zoro_Pose": "Zoro póz (Multiverzum) (One Piece)",
 
+  "emote.by": "szerző: %s",
+  "emote.search_placeholder": "Emotikonok keresése...",
+  "emote.no_results": "Nem találhatók emotikonok",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Alvilág",
   "bgimg.name.night": "Éjszaka",
   "bgimg.name.snow": "Hó",
-  "bgimg.name.sunset": "Naplemente"
+  "bgimg.name.sunset": "Naplemente",
+
+  "blocks.empty": "Még nincsenek blokkok - tegyen textúrákat a blocks/ mappába, vagy adjon hozzá sajátot",
+
+  "folder.add": "Hozzáadás",
+  "folder.delete": "Törlés",
+  "folder.delete_confirm": "Törli a(z) \\\"%s\\\" elemet a mappából?",
+  "folder.empty": "Itt még nincs semmi - nyomd meg a \\\"+\\\" gombot az első fájl hozzáadásához",
+  "folder.local_note": "A fájlok csak ebben a böngészőben tárolódnak",
+  "folder.memory_only": "A böngésző tárhelye nem érhető el - a fájlok eltűnnek a fül bezárásakor",
+  "folder.error": "Ezt a fájlt nem sikerült hozzáadni",
+  "folder.bg.open": "Képeim",
+  "folder.bg.title": "Képeim",
+  "folder.bg.hint": "Feltöltött képeid. Nyomd meg a \\\"+\\\" gombot új kép hozzáadásához",
+  "folder.block.open": "Blokjaim",
+  "folder.block.title": "Blokjaim",
+  "folder.block.hint": "Egy kép az összes oldalhoz. Vagy válasszon ki három fájlt ..._top, ..._side és ..._bottom néven",
+  "folder.block.error": "Válasszon ki egy képet, vagy a _top, _side vagy _bottom végződésű fájlokat",
+  "folder.emote.open": "Emotjaim",
+  "folder.emote.title": "Emotjaim",
+  "folder.emote.hint": "Válasszon ki egy emote .json fájlt, és ha szeretné, egy ikonképet (.png) ugyanabban a párbeszédablakban",
+  "folder.emote.icon": "Ikon módosítása",
+
+  "ui.hide": "Felület elrejtése (H)",
+  "ui.show": "Felület megjelenítése (H)",
+
+  "shot.title": "Képernyőkép mentése (tartsa lenyomva a Shiftet az átlátszó háttérhez)",
+  "shot.error": "A képernyőképet nem sikerült menteni"
 }

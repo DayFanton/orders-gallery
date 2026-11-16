@@ -59,7 +59,7 @@
 
   "emote.button": "Imizwa",
   "emote.title": "Imizwa",
-  "emote.hint": "Khetha umuzwa namkha ulayitjhe ifayela lakho le-.json",
+  "emote.hint": "Khetha i-emote namkha uvule \\\"Ama-emote wami\\\" ukwengeza eyakho",
   "emote.stop": "Misa umuzwa",
   "emote.test": "Hlola umuzwa wakho",
   "emote.empty": "Ayikho imizwa etholakeleko (ifolda ye-emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Ukujama kukaYandere (Amabhudango amambi)",
   "emote.name.SPE_Zoro_Pose": "Ukujama kukaZoro (Amaphasi amanengi) (One Piece)",
 
+  "emote.by": "ngu-%s",
+  "emote.search_placeholder": "Sesha ama-emote...",
+  "emote.no_results": "Azikho ama-emote ezitholakele",
+
   "person.Артур": "U-Arthur",
   "person.Вайкату": "UWaikatu",
   "person.Виакор": "UViacore",
@@ -359,11 +363,39 @@
   "block.planks": "Amapulanka we-oki",
   "block.netherrack": "INetherrack",
   "block.end_stone": "Ilitje le-End",
+  "block.plain": "Akukho texture",
 
   "bgimg.name.day": "Imini",
   "bgimg.name.end": "Isiphetho",
   "bgimg.name.nether": "Isihogo",
   "bgimg.name.night": "Ubusuku",
   "bgimg.name.snow": "Iqwa",
-  "bgimg.name.sunset": "Ukutjhinga kwelanga"
+  "bgimg.name.sunset": "Ukutjhinga kwelanga",
+
+  "blocks.empty": "Akukho ama-bloku okwamanje - faka ama-texture kufolda ye-blocks/ kumbe ufake awakho",
+
+  "folder.add": "Engeza",
+  "folder.delete": "Susa",
+  "folder.delete_confirm": "Ufuna ukususa i-\\\"%s\\\" kufolda yakho?",
+  "folder.empty": "Akukho litho la lapha okwamanje - cindezela \\\"+\\\" ukwengeza ifayela lakho lokuqala",
+  "folder.local_note": "Amafayela agcinwa kuphela esipheqululini lesi",
+  "folder.memory_only": "Ukugcinwa kwesiphequluli akutholakali - amafayela azonyamalala nxa uvala ithebhu",
+  "folder.error": "Akwazanga ukungeza ifayela leli",
+  "folder.bg.open": "Imifanekiso yami",
+  "folder.bg.title": "Imifanekiso yami",
+  "folder.bg.hint": "Iinthombe ozifakileko. Cindezela \\\"+\\\" ukwengeza esitjha",
+  "folder.block.open": "Ama-bloku ami",
+  "folder.block.title": "Ama-bloku ami",
+  "folder.block.hint": "Kusetshenziswa umfanekiso munye kizo zonke ubuso. Noma khetha amafayela amathathu abizwa ngokuthi ..._top, ..._side kanye ..._bottom",
+  "folder.block.error": "Khetha umfanekiso munye, kumbe amafayela aphela ngo-_top, _side noma _bottom",
+  "folder.emote.open": "Ama-emote ami",
+  "folder.emote.title": "Ama-emote ami",
+  "folder.emote.hint": "Khetha ifayela ye-.json ye-emote, kanti uma ufuna, umfanekiso wesithonjana (.png) kwingxoxo leyo",
+  "folder.emote.icon": "Shintsha isithonjana",
+
+  "ui.hide": "Fihla isikhombimsebenzisi (H)",
+  "ui.show": "Khombisa isikhombimsebenzisi (H)",
+
+  "shot.title": "Bulunga isithombe sesikrini (bamba u-Shift ukuze ufumane ingemuva elibonakalako)",
+  "shot.error": "Akwazanga ukubulunga isithombe sesikrini"
 }

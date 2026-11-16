@@ -59,7 +59,7 @@
 
   "emote.button": "ایموٹس",
   "emote.title": "ایموٹس",
-  "emote.hint": "کوئی ایموٹ چُنو یا اپنی .json فائل اپلوڈ کرو",
+  "emote.hint": "اک ایموٹ چنو یا اپنا ایموٹ شامل کرن لئی \\\"میرے ایموٹس\\\" کھولو",
   "emote.stop": "ایموٹ روکو",
   "emote.test": "اپنا ایموٹ چیک کرو",
   "emote.empty": "کوئی ایموٹ نئیں لبھیا (فولڈر emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "یانڈیرے پوز (ڈراونے خواب)",
   "emote.name.SPE_Zoro_Pose": "زورو پوز (ملٹیورس) (ون پیس)",
 
+  "emote.by": "از %s",
+  "emote.search_placeholder": "ایموٹس تلاش کرو...",
+  "emote.no_results": "کوئی ایموٹس نہیں ملے",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وائیکاتو",
   "person.Виакор": "ویاکور",
@@ -359,11 +363,39 @@
   "block.planks": "بلوط دے تختے",
   "block.netherrack": "نیدر ریک",
   "block.end_stone": "اینڈ پتھر",
+  "block.plain": "کوئی ٹیکسچر نہیں",
 
   "bgimg.name.day": "دن",
   "bgimg.name.end": "اینڈ",
   "bgimg.name.nether": "نیدر",
   "bgimg.name.night": "رات",
   "bgimg.name.snow": "برف",
-  "bgimg.name.sunset": "غروب آفتاب"
+  "bgimg.name.sunset": "غروب آفتاب",
+
+  "blocks.empty": "ابھی کوئی بلاکس نہیں ہیں - blocks/ فولڈر میں ٹیکسچر رکھو یا اپنے شامل کرو",
+
+  "folder.add": "شامل کرو",
+  "folder.delete": "مٹاؤ",
+  "folder.delete_confirm": "تسی \\\"%s\\\" نوں اپنے فولڈر وچوں حذف کرنا چاہندے او؟",
+  "folder.empty": "ایتھے ہجے کجھ وی نئیں - اپنی پہلی فائل شامل کرن لئی \\\"+\\\" دباؤ",
+  "folder.local_note": "فائلز صرف اس براؤزر وچ محفوظ ہوندیاں نیں",
+  "folder.memory_only": "براؤزر اسٹوریج دستیاب نہیں ہے - ٹیب بند کرن تے فائلز غائب تھی ویسن",
+  "folder.error": "اے فائل شامل نہیں کی جا سکی",
+  "folder.bg.open": "میری تصاویر",
+  "folder.bg.title": "میری تصاویر",
+  "folder.bg.hint": "تہاڈیاں اپ لوڈ کیتیاں ہوئیاں تصویراں۔ نویں تصویر شامل کرن لئی \\\"+\\\" دباؤ",
+  "folder.block.open": "میرے بلاکس",
+  "folder.block.title": "میرے بلاکس",
+  "folder.block.hint": "تمام چہریاں واسطے ہک تصویر ورتی جاندی اے۔ یا ..._top، ..._side تے ..._bottom ناں دیاں تن فائیلاں چنو",
+  "folder.block.error": "ہک تصویر چنو، یا او فائیلاں جنہاں دا انت _top، _side یا _bottom تے ہوندے",
+  "folder.emote.open": "میرے ایموٹس",
+  "folder.emote.title": "میرے ایموٹس",
+  "folder.emote.hint": "ہک emote .json فائل چنو تے جے چاہو تاں اسی ڈائیلاگ وچ ہک آئیکن تصویر (.png) چنو",
+  "folder.emote.icon": "آئیکن بدل کرو",
+
+  "ui.hide": "انٹرفیس چھپاؤ (H)",
+  "ui.show": "انٹرفیس دکھاؤ (H)",
+
+  "shot.title": "اسکرین شاٹ محفوظ کرو (شفاف پس منظر واسطے Shift دبائی رکھو)",
+  "shot.error": "اسکرین شاٹ محفوظ نہیں کیتا جا سکیا"
 }

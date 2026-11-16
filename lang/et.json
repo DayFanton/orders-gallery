@@ -60,7 +60,7 @@
 
   "emote.button": "Emotsioonid",
   "emote.title": "Emotsioonid",
-  "emote.hint": "Vali emotsioon või laadi üles oma .json-fail",
+  "emote.hint": "Vali emoot või ava \\\"Minu emoodid\\\", et lisada enda oma",
   "emote.stop": "Katkesta emotsioon",
   "emote.test": "Testi oma emotsiooni",
   "emote.empty": "Emotsioone ei leitud (kaust emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Tammelauad",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Lõpukivi",
+  "block.plain": "Tekstuur puudub",
 
   "mobile.gallery": "📁 Galerii",
   "mobile.settings": "⚙️ Seaded",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere poos (Õudusunenäod)",
   "emote.name.SPE_Zoro_Pose": "Zoro poos (Multiversum) (One Piece)",
 
+  "emote.by": "autor: %s",
+  "emote.search_placeholder": "Otsi emotsioone...",
+  "emote.no_results": "Emotsioone ei leitud",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Öö",
   "bgimg.name.snow": "Lumi",
-  "bgimg.name.sunset": "Päikeseloojang"
+  "bgimg.name.sunset": "Päikeseloojang",
+
+  "blocks.empty": "Plokke pole veel - pange tekstuurid kausta blocks/ või lisage oma",
+
+  "folder.add": "Lisa",
+  "folder.delete": "Kustuta",
+  "folder.delete_confirm": "Kas kustutada \\\"%s\\\" teie kaustast?",
+  "folder.empty": "Siin pole veel midagi - vajutage \\\"+\\\", et lisada oma esimene fail",
+  "folder.local_note": "Faile hoitakse ainult selles brauseris",
+  "folder.memory_only": "Brauseri salvestusruum pole saadaval - failid kaovad vahekaardi sulgemisel",
+  "folder.error": "Selle faili lisamine ebaõnnestus",
+  "folder.bg.open": "Minu pildid",
+  "folder.bg.title": "Minu pildid",
+  "folder.bg.hint": "Teie üleslaaditud pildid. Uue lisamiseks vajutage \\\"+\\",
+  "folder.block.open": "Minu plokid",
+  "folder.block.title": "Minu plokid",
+  "folder.block.hint": "Kõigi külgede jaoks kasutatakse ühte pilti. Või valige kolm faili nimedega ..._top, ..._side ja ..._bottom",
+  "folder.block.error": "Valige üks pilt või failid, mis lõpevad _top, _side või _bottom",
+  "folder.emote.open": "Minu emotsioonid",
+  "folder.emote.title": "Minu emotsioonid",
+  "folder.emote.hint": "Valige emotsiooni .json-fail ja soovi korral ikoonipilt (.png) samas dialoogiaknas",
+  "folder.emote.icon": "Muuda ikooni",
+
+  "ui.hide": "Peida liides (H)",
+  "ui.show": "Näita liidest (H)",
+
+  "shot.title": "Salvesta ekraanipilt (läbipaistva tausta jaoks hoidke all klahvi Shift)",
+  "shot.error": "Ekraanipildi salvestamine ebaõnnestus"
 }

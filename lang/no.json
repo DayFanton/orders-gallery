@@ -59,7 +59,7 @@
 
   "emote.button": "Emoter",
   "emote.title": "Emoter",
-  "emote.hint": "Velg en emote eller last opp din egen .json-fil",
+  "emote.hint": "Velg en emote eller åpne \\\"Mine emotes\\\" for å legge til din egen",
   "emote.stop": "Avbryt emote",
   "emote.test": "Test din egen emote",
   "emote.empty": "Ingen emoter funnet (mappen emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yandere-positur (Mareritt)",
   "emote.name.SPE_Zoro_Pose": "Zoros positur (Multivers) (One Piece)",
 
+  "emote.by": "av %s",
+  "emote.search_placeholder": "Søk etter emotes...",
+  "emote.no_results": "Ingen emotes funnet",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Eikeplanker",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End-stein",
+  "block.plain": "Ingen tekstur",
 
   "bgimg.name.day": "Dag",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Natt",
   "bgimg.name.snow": "Snø",
-  "bgimg.name.sunset": "Solnedgang"
+  "bgimg.name.sunset": "Solnedgang",
+
+  "blocks.empty": "Ingen blokker ennå - legg teksturer i mappen blocks/ eller legg til dine egne",
+
+  "folder.add": "Legg til",
+  "folder.delete": "Slett",
+  "folder.delete_confirm": "Vil du slette \\\"%s\\\" fra mappen din?",
+  "folder.empty": "Det er ingenting her ennå - trykk på \\\"+\\\" for å legge til din første fil",
+  "folder.local_note": "Filer lagres kun i denne nettleseren",
+  "folder.memory_only": "Nettleserlagring er utilgjengelig - filer vil forsvinne når du lukker fanen",
+  "folder.error": "Kunne ikke legge til denne filen",
+  "folder.bg.open": "Mine bilder",
+  "folder.bg.title": "Mine bilder",
+  "folder.bg.hint": "Dine opplastede bilder. Trykk på \\\"+\\\" for å legge til et nytt",
+  "folder.block.open": "Mine blokker",
+  "folder.block.title": "Mine blokker",
+  "folder.block.hint": "Ett bilde brukes for alle sider. Eller velg tre filer som heter ..._top, ..._side og ..._bottom",
+  "folder.block.error": "Velg ett bilde, eller filer som slutter på _top, _side eller _bottom",
+  "folder.emote.open": "Mine emotes",
+  "folder.emote.title": "Mine emotes",
+  "folder.emote.hint": "Velg en emote-.json-fil og, hvis du vil, et ikonbilde (.png) i samme dialogboks",
+  "folder.emote.icon": "Endre ikon",
+
+  "ui.hide": "Skjul grensesnitt (H)",
+  "ui.show": "Vis grensesnitt (H)",
+
+  "shot.title": "Lagre skjermbilde (hold inne Shift for gjennomsiktig bakgrunn)",
+  "shot.error": "Kunne ikke lagre skjermbildet"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Dareenno",
   "emote.title": "Dareenno",
-  "emote.hint": "Dooro dareen ama soo geli faylkaaga .json",
+  "emote.hint": "Dooro emote ama fur \\\"Emote-yadayda\\\" si aad mid kuu gaar ah ugu darto",
   "emote.stop": "Jooji dareenka",
   "emote.test": "Tijaabi dareenkaaga",
   "emote.empty": "Dareenno lama helin (galka emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Istaagga Yandere (Riyooyin xun)",
   "emote.name.SPE_Zoro_Pose": "Istaagga Zoro (Koonfur-badan) (One Piece)",
 
+  "emote.by": "waxaa qoray %s",
+  "emote.search_placeholder": "Raadi dareen-muujin...",
+  "emote.no_results": "Lama helin wax dareen-muujin ah",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Alwaax geedka Oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dhagaxa End",
+  "block.plain": "Ma jiro qaab-dhismeed",
 
   "bgimg.name.day": "Maalin",
   "bgimg.name.end": "Dhammaad",
   "bgimg.name.nether": "Naarta",
   "bgimg.name.night": "Habeen",
   "bgimg.name.snow": "Baraf",
-  "bgimg.name.sunset": "Qorrax dhac"
+  "bgimg.name.sunset": "Qorrax dhac",
+
+  "blocks.empty": "Ma jiraan blocks weli - geli qaab-dhismeedka galalka blocks/ ama ku dar kanada",
+
+  "folder.add": "Ku dar",
+  "folder.delete": "Tirtir",
+  "folder.delete_confirm": "Ma rabtaa inaad \\\"%s\\\" ka tirtirto galkaaga?",
+  "folder.empty": "Weli waxba halkan kama jiraan - riix \\\"+\\\" si aad ugu darto faylkaaga ugu horreeya",
+  "folder.local_note": "Faylalka waxaa lagu kaydiyaa biraawsarkan oo keliya",
+  "folder.memory_only": "Kaydinta biraawsarka lama heli karo - faylalka waa dabar go'ayaan marka aad xirto tab-ka",
+  "folder.error": "Kuma darin fayilkan",
+  "folder.bg.open": "Sawiradayda",
+  "folder.bg.title": "Sawiradayda",
+  "folder.bg.hint": "Sawirrada aad soo gelisay. Riix \\\"+\\\" si aad mid cusub ugu darto",
+  "folder.block.open": "Blocks-kayda",
+  "folder.block.title": "Blocks-kayda",
+  "folder.block.hint": "Hal sawir ayaa loo isticmaalaa dhammaan wajiyada. Ama dooro saddex fayl oo lagu magacaabo ..._top, ..._side iyo ..._bottom",
+  "folder.block.error": "Dooro hal sawir, ama faylal ku dhammaada _top, _side ama _bottom",
+  "folder.emote.open": "Emotes-kayda",
+  "folder.emote.title": "Emotes-kayda",
+  "folder.emote.hint": "Dooro faylka .json ee emote-ka iyo, haddii aad rabto, sawirka astaanta (.png) ee isla wadahadalkaas",
+  "folder.emote.icon": "Beddel astaamaha",
+
+  "ui.hide": "Qari is dhexgalka (H)",
+  "ui.show": "Muuji is dhexgalka (H)",
+
+  "shot.title": "Keydi sawirka shaashadda (qabo Shift si aad u hesho asal hufan)",
+  "shot.error": "Kuma darin keydinta sawirka shaashadda"
 }

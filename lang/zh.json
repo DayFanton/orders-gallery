@@ -59,7 +59,7 @@
 
   "emote.button": "动作",
   "emote.title": "动作",
-  "emote.hint": "选择一个动作或加载你自己的 .json 文件",
+  "emote.hint": "選擇一個表情，或打開「我的表情」來新增自己的表情",
   "emote.stop": "停止动作",
   "emote.test": "测试你的自定义动作",
   "emote.empty": "未找到动作（emotes/ 文件夹）",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "病娇姿势（噩梦）",
   "emote.name.SPE_Zoro_Pose": "索隆姿势（多元宇宙）（海贼王）",
 
+  "emote.by": "作者：%s",
+  "emote.search_placeholder": "搜索表情...",
+  "emote.no_results": "未找到表情",
+
   "person.Артур": "亚瑟",
   "person.Вайкату": "怀卡图",
   "person.Виакор": "维亚科尔",
@@ -359,11 +363,39 @@
   "block.planks": "橡木木板",
   "block.netherrack": "下界岩",
   "block.end_stone": "末地石",
+  "block.plain": "无材质",
 
   "bgimg.name.day": "白天",
   "bgimg.name.end": "終界",
   "bgimg.name.nether": "地獄",
   "bgimg.name.night": "夜晚",
   "bgimg.name.snow": "雪",
-  "bgimg.name.sunset": "日落"
+  "bgimg.name.sunset": "日落",
+
+  "blocks.empty": "暂无方块 - 请将材质放入 blocks/ 文件夹或添加您自己的材质",
+
+  "folder.add": "添加",
+  "folder.delete": "删除",
+  "folder.delete_confirm": "要从您的文件夹中删除\\\"%s\\\"吗？",
+  "folder.empty": "这里还没有内容 - 点击 \\\"+\\\" 添加您的第一个文件",
+  "folder.local_note": "文件仅在此浏览器中存储",
+  "folder.memory_only": "浏览器存储不可用 - 关闭标签页时文件将会消失",
+  "folder.error": "无法添加此文件",
+  "folder.bg.open": "我的图片",
+  "folder.bg.title": "我的图片",
+  "folder.bg.hint": "您上传的图片。点击 \\\"+\\\" 添加新图片",
+  "folder.block.open": "我的方块",
+  "folder.block.title": "我的方块",
+  "folder.block.hint": "所有面使用同一张图片。或者选择三个名为 ..._top、..._side 和 ..._bottom 的文件",
+  "folder.block.error": "选择一张图片，或以 _top、_side 或 _bottom 结尾的文件",
+  "folder.emote.open": "我的动作",
+  "folder.emote.title": "我的动作",
+  "folder.emote.hint": "选择一个动作 .json 文件，如果需要，还可以在同一对话框中选择一个图标图片 (.png)",
+  "folder.emote.icon": "更改图标",
+
+  "ui.hide": "隐藏界面 (H)",
+  "ui.show": "显示界面 (H)",
+
+  "shot.title": "保存截图（按住 Shift 可获得透明背景）",
+  "shot.error": "无法保存截图"
 }

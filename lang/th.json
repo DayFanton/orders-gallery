@@ -59,7 +59,7 @@
 
   "emote.button": "ท่าทาง",
   "emote.title": "ท่าทาง",
-  "emote.hint": "เลือกท่าทางหรืออัปโหลดไฟล์ .json ของคุณเอง",
+  "emote.hint": "เลือกอีโมตหรือเปิด \\\"อีโมตของฉัน\\\" เพื่อเพิ่มอีโมตของคุณเอง",
   "emote.stop": "หยุดท่าทาง",
   "emote.test": "ทดสอบท่าทางของคุณเอง",
   "emote.empty": "ไม่พบท่าทาง (โฟลเดอร์ emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "ท่าโพสยันเดะระ (ฝันร้าย)",
   "emote.name.SPE_Zoro_Pose": "ท่าโพสโซโร (มัลติเวิร์ส) (One Piece)",
 
+  "emote.by": "โดย %s",
+  "emote.search_placeholder": "ค้นหาอีโมต...",
+  "emote.no_results": "ไม่พบอีโมต",
+
   "person.Артур": "อาร์เธอร์",
   "person.Вайкату": "ไวคาตู",
   "person.Виакор": "เวียคอร์",
@@ -359,11 +363,39 @@
   "block.planks": "ไม้โอ๊กแผ่น",
   "block.netherrack": "เนเธอร์แร็ค",
   "block.end_stone": "หินเอนด์",
+  "block.plain": "ไม่มีพื้นผิว",
 
   "bgimg.name.day": "กลางวัน",
   "bgimg.name.end": "ดิเอนด์",
   "bgimg.name.nether": "เนเธอร์",
   "bgimg.name.night": "กลางคืน",
   "bgimg.name.snow": "หิมะ",
-  "bgimg.name.sunset": "พระอาทิตย์ตก"
+  "bgimg.name.sunset": "พระอาทิตย์ตก",
+
+  "blocks.empty": "ยังไม่มีบล็อก - วางพื้นผิวลงในโฟลเดอร์ blocks/ หรือเพิ่มของคุณเอง",
+
+  "folder.add": "เพิ่ม",
+  "folder.delete": "ลบ",
+  "folder.delete_confirm": "ลบ \\\"%s\\\" ออกจากโฟลเดอร์ของคุณหรือไม่?",
+  "folder.empty": "ยังไม่มีอะไรที่นี่ - กด \\\"+\\\" เพื่อเพิ่มไฟล์แรกของคุณ",
+  "folder.local_note": "ไฟล์จะถูกจัดเก็บไว้ในเบราว์เซอร์นี้เท่านั้น",
+  "folder.memory_only": "พื้นจัดเก็บข้อมูลของเบราว์เซอร์ไม่พร้อมใช้งาน - ไฟล์จะหายไปเมื่อคุณปิดแท็บ",
+  "folder.error": "ไม่สามารถเพิ่มไฟล์นี้ได้",
+  "folder.bg.open": "รูปภาพของฉัน",
+  "folder.bg.title": "รูปภาพของฉัน",
+  "folder.bg.hint": "รูปภาพที่คุณอัปโหลด กด \\\"+\\\" เพื่อเพิ่มรูปภาพใหม่",
+  "folder.block.open": "บล็อกของฉัน",
+  "folder.block.title": "บล็อกของฉัน",
+  "folder.block.hint": "ใช้ภาพเดียวสำหรับทุกด้าน หรือเลือกไฟล์สามไฟล์ชื่อ ..._top, ..._side และ ..._bottom",
+  "folder.block.error": "เลือกรูปภาพหนึ่งรูป หรือไฟล์ที่ลงท้ายด้วย _top, _side หรือ _bottom",
+  "folder.emote.open": "อีโมตของฉัน",
+  "folder.emote.title": "อีโมตของฉัน",
+  "folder.emote.hint": "เลือกไฟล์ .json ของอีโมต และหากต้องการ ให้เลือกรูปภาพไอคอน (.png) ในหน้าต่างสนทนาเดียวกัน",
+  "folder.emote.icon": "เปลี่ยนไอคอน",
+
+  "ui.hide": "ซ่อนอินเทอร์เฟซ (H)",
+  "ui.show": "แสดงอินเทอร์เฟซ (H)",
+
+  "shot.title": "บันทึกภาพหน้าจอ (กด Shift ค้างไว้เพื่อใช้พื้นหลังโปร่งใส)",
+  "shot.error": "ไม่สามารถบันทึกภาพหน้าจอได้"
 }

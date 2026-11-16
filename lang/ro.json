@@ -59,7 +59,7 @@
 
   "emote.button": "Emote-uri",
   "emote.title": "Emote-uri",
-  "emote.hint": "Alege un emote sau încarcă propriul fișier .json",
+  "emote.hint": "Alege o emoticonă sau deschide „Emoticoanele mele” pentru a o adăuga pe a ta",
   "emote.stop": "Oprește emote-ul",
   "emote.test": "Testează propriul emote",
   "emote.empty": "Nu s-au găsit emote-uri (dosarul emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Coșmaruri)",
   "emote.name.SPE_Zoro_Pose": "Poza Zoro (Multivers) (One Piece)",
 
+  "emote.by": "de %s",
+  "emote.search_placeholder": "Căutare emoții...",
+  "emote.no_results": "Nu s-au găsit emoții",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Scânduri de stejar",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Piatră de End",
+  "block.plain": "Fără textură",
 
   "bgimg.name.day": "Zi",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Noapte",
   "bgimg.name.snow": "Zăpadă",
-  "bgimg.name.sunset": "Apus"
+  "bgimg.name.sunset": "Apus",
+
+  "blocks.empty": "Niciun bloc încă - plasați texturele în folderul blocks/ sau adăugați propriile dvs.",
+
+  "folder.add": "Adăugați",
+  "folder.delete": "Șterge",
+  "folder.delete_confirm": "Ștergeți \\\"%s\\\" din dosarul dvs.?",
+  "folder.empty": "Momentan nu există nimic aici - apăsați \\\"+\\\" pentru a adăuga primul fișier",
+  "folder.local_note": "Fișierele sunt stocate doar în acest browser",
+  "folder.memory_only": "Stocarea browserului este indisponibilă - fișierele vor dispărea când închideți fila",
+  "folder.error": "Nu s-a putut adăuga acest fișier",
+  "folder.bg.open": "Imaginile mele",
+  "folder.bg.title": "Imaginile mele",
+  "folder.bg.hint": "Imaginile încărcate de dvs. Apăsați \\\"+\\\" pentru a adăuga una nouă",
+  "folder.block.open": "Blocurile mele",
+  "folder.block.title": "Blocurile mele",
+  "folder.block.hint": "O singură imagine este folosită pentru toate fețele. Sau alegeți trei fișiere numite ..._top, ..._side și ..._bottom",
+  "folder.block.error": "Alegeți o singură imagine sau fișiere care se termină în _top, _side sau _bottom",
+  "folder.emote.open": "Emoturile mele",
+  "folder.emote.title": "Emoturile mele",
+  "folder.emote.hint": "Alegeți un fișier .json pentru emote și, opțional, o imagine pictogramă (.png) în aceeași fereastră de dialog",
+  "folder.emote.icon": "Schimbați pictograma",
+
+  "ui.hide": "Ascunde interfața (H)",
+  "ui.show": "Afișează interfața (H)",
+
+  "shot.title": "Salvează captura de ecran (țineți apăsat Shift pentru un fundal transparent)",
+  "shot.error": "Nu s-a putut salva captura de ecran"
 }

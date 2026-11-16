@@ -60,7 +60,7 @@
 
   "emote.button": "Ovilikilo",
   "emote.title": "Ovilikilo",
-  "emote.hint": "Nõla ocilikilo ale kapa ofayele yove .json",
+  "emote.hint": "Sola emote ou fundula \\\"Emote yange\\\" ku mu kwatekako yove",
   "emote.stop": "Imbula ocilikilo",
   "emote.test": "Seteka ocilikilo cove",
   "emote.empty": "Ka kuli ovilikilo via sangiwa (ofayele emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Ovipaya viuti wo carvalho",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ewe lio End",
+  "block.plain": "Kuli ovitumiko via sangiwe",
 
   "mobile.gallery": "📁 Ogaleriya",
   "mobile.settings": "⚙️ Oku-pongolola",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Ocilikilo ca Yandere (Ovinjondjo)",
   "emote.name.SPE_Zoro_Pose": "Ocilikilo ca Zoro (Oluali Lualua) (One Piece)",
 
+  "emote.by": "la %s",
+  "emote.search_placeholder": "Sanda ovitumiko...",
+  "emote.no_results": "Kuli ovitumiko via sangiwe",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Ifelu",
   "bgimg.name.night": "Uteke",
   "bgimg.name.snow": "Ocikukui",
-  "bgimg.name.sunset": "Okutokela kuekumbi"
+  "bgimg.name.sunset": "Okutokela kuekumbi",
+
+  "blocks.empty": "Kuli ovitumiko via sangiwe - tula ovitumiko vo fɔlɔdɛ blocks/ ale tula via ove",
+
+  "folder.add": "Velela",
+  "folder.delete": "Tapa",
+  "folder.delete_confirm": "Okwata okutyila \\\"%s\\\" mu pasta yove?",
+  "folder.empty": "Kima kimosi ka kiala apa - kanda \\\"+\\\" kutambula faila yove ya kutanga",
+  "folder.local_note": "Ovinyiko vi tumbika lika volukayi olu",
+  "folder.memory_only": "Ovinyiko vi volukayi ka vi sangiwe - ovinyiko vi loha ovikondo vi pua",
+  "folder.error": "Ka ci vangiwa oku tumika ovinyiko evi",
+  "folder.bg.open": "Ovifeva viange",
+  "folder.bg.title": "Ovifeva viange",
+  "folder.bg.hint": "Ifanisu yove ya tukula. Kanda \\\"+\\\" kutambula ifanisu yimosi ya mpa",
+  "folder.block.open": "Oviblock viange",
+  "folder.block.title": "Oviblock viange",
+  "folder.block.hint": "Ovifeva vimwe vi ka la lisukila kovina viose. Ale pita ovinyiko vitatu via lomboloka ..._top, ..._side kuenda ..._bottom",
+  "folder.block.error": "Pita ovifeva vimwe, ale ovinyiko vi pwa la _top, _side kuenda _bottom",
+  "folder.emote.open": "Ovitumiko viange",
+  "folder.emote.title": "Ovitumiko viange",
+  "folder.emote.hint": "Pita ovinyiko vi .json via emote kuenda, nda wati, ovifeva vi icon (.png) volukayi olu rumue",
+  "folder.emote.icon": "Sakula icon",
+
+  "ui.hide": "Tumika interface (H)",
+  "ui.show": "Monika interface (H)",
+
+  "shot.title": "Soleka ociluvialuvio (kuata Shift oco o kale lonyima yi muiwila)",
+  "shot.error": "Ka ci vangiwa oku soleka ociluvialuvio"
 }

@@ -59,7 +59,7 @@
 
   "emote.button": "Maikutlo",
   "emote.title": "Maikutlo",
-  "emote.hint": "Tlhopha maikutlo kgotsa o tsenye faele ya gago ya .json",
+  "emote.hint": "Tlhopha emote kgotsa o bule \\\"Di-emote tsa me\\\" go tsenya ya gago",
   "emote.stop": "Emisa maikutlo",
   "emote.test": "Leka maikutlo a gago",
   "emote.empty": "Ga go maikutlo a a bonweng (sephutheli sa emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Maemo a Yandere (Ditoro tse di tshosang)",
   "emote.name.SPE_Zoro_Pose": "Maemo a ga Zoro (Mafatshe a Mantsi) (One Piece)",
 
+  "emote.by": "ka %s",
+  "emote.search_placeholder": "Batla di-emote...",
+  "emote.no_results": "Ga go di-emote di di bonweng",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Dipolanka tsa oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Leje la End",
+  "block.plain": "Ga go na sebopeho",
 
   "bgimg.name.day": "Motshegare",
   "bgimg.name.end": "Bokhutlo",
   "bgimg.name.nether": "Dihele",
   "bgimg.name.night": "Bosigo",
   "bgimg.name.snow": "Kapoko",
-  "bgimg.name.sunset": "Phirimo ya letsatsi"
+  "bgimg.name.sunset": "Phirimo ya letsatsi",
+
+  "blocks.empty": "Ga go ise go nne le di-block - tsenya diseboho mo kgannyeng ya blocks/ kgotsa o tsenye tsa gago",
+
+  "folder.add": "Tsenya",
+  "folder.delete": "Phimola",
+  "folder.delete_confirm": "A o batla go phimola \\\"%s\\\" mo foldareng ya gago?",
+  "folder.empty": "Ga go na sepe fa - tobetsa \\\"+\\\" go tsenya faele ya gago ya ntlha",
+  "folder.local_note": "Faele di bolokwa fela mo sebatling seno",
+  "folder.memory_only": "Polokelo ya sebatli ga e bonwe - faele e tla nyamalala fa o tswala taba",
+  "folder.error": "Ga e kgone go tsenya faele e",
+  "folder.bg.open": "Dinepe tsa me",
+  "folder.bg.title": "Dinepe tsa me",
+  "folder.bg.hint": "Ditshwantsho tse o di tsentseng. Tobetsa \\\"+\\\" go tsenya e ntšha",
+  "folder.block.open": "Di-block tsa me",
+  "folder.block.title": "Di-block tsa me",
+  "folder.block.hint": "Go dirisiwa setshwantsho se le seng mo difahegong tsotlhe. Kgotsa tlhopha faele tse tharo tse di bidiwang ..._top, ..._side le ..._bottom",
+  "folder.block.error": "Kgetha setshwantsho se le seng, kgotsa faele tse di felelang ka _top, _side kgotsa _bottom",
+  "folder.emote.open": "Di-emote tsa me",
+  "folder.emote.title": "Di-emote tsa me",
+  "folder.emote.hint": "Kgetha faele ya emote ya .json mme, fa o batla, setshwantsho sa letshwao (.png) mo motlotlong o le mongwe",
+  "folder.emote.icon": "Fetola letshwao",
+
+  "ui.hide": "Fitlha sebopego (H)",
+  "ui.show": "Bontsha sebopego (H)",
+
+  "shot.title": "Boloka setshwantsho sa sekirini (tshwara Shift go bona lemorago le le bonaletsang)",
+  "shot.error": "Ga e kgone go boloka setshwantsho sa sekirini"
 }

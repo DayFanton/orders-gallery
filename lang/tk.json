@@ -59,7 +59,7 @@
 
   "emote.button": "Emosiýalar",
   "emote.title": "Emosiýalar",
-  "emote.hint": "Emosiýa saýlaň ýa-da öz .json faýlyňyzy ýükläň",
+  "emote.hint": "Emot saýlaň ýa-da öz emotiňizi goşmak üçin \\\"Meniň emotlarym\\\" bölümini açyň",
   "emote.stop": "Emosiýany duruz",
   "emote.test": "Öz emosiýaňy barla",
   "emote.empty": "Emosiýa tapylmady (emotes/ bukjasy)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Ýandereniň pozasy (Elhenç düýşler)",
   "emote.name.SPE_Zoro_Pose": "Zoronyň durşy (Multi-älem) (One Piece)",
 
+  "emote.by": "%s tarapyndan",
+  "emote.search_placeholder": "Emot gözle...",
+  "emote.no_results": "Emot tapylmady",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Waýkatu",
   "person.Виакор": "Wiakor",
@@ -359,11 +363,39 @@
   "block.planks": "Dub tagtalary",
   "block.netherrack": "Nezer daşy",
   "block.end_stone": "End daşy",
+  "block.plain": "Tekstur ýok",
 
   "bgimg.name.day": "Gündiz",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gije",
   "bgimg.name.snow": "Gar",
-  "bgimg.name.sunset": "Gün ýaşmagy"
+  "bgimg.name.sunset": "Gün ýaşmagy",
+
+  "blocks.empty": "Henüz blok ýok - teksturlary blocks/ bukjasyna goýuň ýa-da özüňizinkini goşuň",
+
+  "folder.add": "Goşmak",
+  "folder.delete": "Pozmak",
+  "folder.delete_confirm": "\\\"%s\\\" faýly bukjanyňyzdan pozulsynmy?",
+  "folder.empty": "Bu ýerde entek hiç zat ýok - ilkinji faýlyňyzy goşmak üçin \\\"+\\\" düwmesine basyň",
+  "folder.local_note": "Faýllar diňe şu brauzerde saklanýar",
+  "folder.memory_only": "Brauzer ýady elýeterli däl - goýberiş ýapylanda faýllar ýitip giter",
+  "folder.error": "Bu faýly goşup bolmady",
+  "folder.bg.open": "Suratlarım",
+  "folder.bg.title": "Suratlarım",
+  "folder.bg.hint": "Ýükleýän suratlaryňyz. Täzesini goşmak üçin \\\"+\\\" düwmesine basyň",
+  "folder.block.open": "Bloklarym",
+  "folder.block.title": "Bloklarym",
+  "folder.block.hint": "Ähli ýüzler üçin bir surat ulanylýar. Ýa-da ..._top, ..._side we ..._bottom atly üç faýly saýlaň",
+  "folder.block.error": "Bir surat ýa-da _top, _side ýa-da _bottom bilen gutarýan faýllary saýlaň",
+  "folder.emote.open": "Emotlarym",
+  "folder.emote.title": "Emotlarym",
+  "folder.emote.hint": "Emot .json faýlyny we isleseňiz, nyşan suratyny (.png) şol bir dialog penjiresinde saýlaň",
+  "folder.emote.icon": "Nyşany üýtgetmek",
+
+  "ui.hide": "Interfeýsi gizlemek (H)",
+  "ui.show": "Interfeýsi görkezmek (H)",
+
+  "shot.title": "Skrinşoty ýatda saklamak (dury fon üçin Shift düwmesini basyp saklaň)",
+  "shot.error": "Skrinşoty ýatda saklap bolmady"
 }

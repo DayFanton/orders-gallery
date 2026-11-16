@@ -60,7 +60,7 @@
 
   "emote.button": "Čustva",
   "emote.title": "Čustva",
-  "emote.hint": "Izberite čustvo ali naložite svojo datoteko .json",
+  "emote.hint": "Izberite emot ali odprite \\\"Moji emoti\\\", da dodate svojega",
   "emote.stop": "Ustavi čustvo",
   "emote.test": "Preizkusi svoje čustvo",
   "emote.empty": "Čustev ni mogoče najti (mapa emotes/)",
@@ -98,6 +98,7 @@
   "block.planks": "Hrastove deske",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End kamen",
+  "block.plain": "Brez teksture",
 
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Nastavitve",
@@ -343,6 +344,10 @@
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Nočne more)",
   "emote.name.SPE_Zoro_Pose": "Zorova drža (Multiverzum) (One Piece)",
 
+  "emote.by": "avtor: %s",
+  "emote.search_placeholder": "Išči čustvene simbole...",
+  "emote.no_results": "Ni najdenih čustvenih simbolov",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -363,5 +368,32 @@
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Noč",
   "bgimg.name.snow": "Sneg",
-  "bgimg.name.sunset": "Sončni zahod"
+  "bgimg.name.sunset": "Sončni zahod",
+
+  "blocks.empty": "Ni še blokov - postavite teksture v mapo blocks/ ali dodajte svoje",
+
+  "folder.add": "Dodaj",
+  "folder.delete": "Izbriši",
+  "folder.delete_confirm": "Želite izbrisati \\\"%s\\\" iz svoje mape?",
+  "folder.empty": "Tukaj še ni ničesar - pritisnite \\\"+\\\" in dodajte svojo prvo datoteko",
+  "folder.local_note": "Datoteke so shranjene samo v tem brskalniku",
+  "folder.memory_only": "Shramba brskalnika ni na voljo - datoteke bodo izginile, ko zaprete zavihek",
+  "folder.error": "Tega datoteke ni bilo mogoče dodati",
+  "folder.bg.open": "Moje slike",
+  "folder.bg.title": "Moje slike",
+  "folder.bg.hint": "Vaše naložene slike. Pritisnite \\\"+\\\" za dodajanje nove",
+  "folder.block.open": "Moji bloki",
+  "folder.block.title": "Moji bloki",
+  "folder.block.hint": "Za vse strani se uporablja ena slika. Ali izberite tri datoteke z imenom ..._top, ..._side in ..._bottom",
+  "folder.block.error": "Izberite eno sliko ali datoteke, ki se končajo z _top, _side ali _bottom",
+  "folder.emote.open": "Moji emoti",
+  "folder.emote.title": "Moji emoti",
+  "folder.emote.hint": "Izberite .json datoteko emota in, če želite, sliko ikone (.png) v istem pogovornem oknu",
+  "folder.emote.icon": "Spremeni ikono",
+
+  "ui.hide": "Skrij vmesnik (H)",
+  "ui.show": "Prikaži vmesnik (H)",
+
+  "shot.title": "Shrani posnetek zaslona (držite Shift za prozorno ozadje)",
+  "shot.error": "Posnetka zaslona ni bilo mogoče shraniti"
 }

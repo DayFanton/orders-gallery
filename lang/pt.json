@@ -59,7 +59,7 @@
 
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "emote.hint": "Escolha um emote ou carregue seu próprio arquivo .json",
+  "emote.hint": "Escolha um emote ou abra \\\"Meus emotes\\\" para adicionar o seu",
   "emote.stop": "Parar emote",
   "emote.test": "Testar seu próprio emote",
   "emote.empty": "Nenhum emote encontrado (pasta emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Pose de Yandere (Pesadelos)",
   "emote.name.SPE_Zoro_Pose": "Pose de Zoro (Multiverso) (One Piece)",
 
+  "emote.by": "por %s",
+  "emote.search_placeholder": "Pesquisar emotes...",
+  "emote.no_results": "Nenhum emote encontrado",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -359,11 +363,39 @@
   "block.planks": "Tábuas de carvalho",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pedra do Fim",
+  "block.plain": "Sem textura",
 
   "bgimg.name.day": "Dia",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Noite",
   "bgimg.name.snow": "Neve",
-  "bgimg.name.sunset": "Pôr do sol"
+  "bgimg.name.sunset": "Pôr do sol",
+
+  "blocks.empty": "Nenhum bloco ainda - coloque texturas na pasta blocks/ ou adicione as suas próprias",
+
+  "folder.add": "Adicionar",
+  "folder.delete": "Excluir",
+  "folder.delete_confirm": "Excluir \\\"%s\\\" da sua pasta?",
+  "folder.empty": "Ainda não há nada aqui - pressione \\\"+\\\" para adicionar seu primeiro arquivo",
+  "folder.local_note": "Os arquivos são armazenados apenas neste navegador",
+  "folder.memory_only": "O armazenamento do navegador não está disponível - os arquivos desaparecerão ao fechar a aba",
+  "folder.error": "Não foi possível adicionar este arquivo",
+  "folder.bg.open": "Minhas imagens",
+  "folder.bg.title": "Minhas imagens",
+  "folder.bg.hint": "Suas imagens enviadas. Pressione \\\"+\\\" para adicionar uma nova",
+  "folder.block.open": "Meus blocos",
+  "folder.block.title": "Meus blocos",
+  "folder.block.hint": "Uma imagem é usada para todas as faces. Ou escolha três arquivos chamados ..._top, ..._side e ..._bottom",
+  "folder.block.error": "Escolha uma imagem ou arquivos terminados em _top, _side ou _bottom",
+  "folder.emote.open": "Meus emotes",
+  "folder.emote.title": "Meus emotes",
+  "folder.emote.hint": "Escolha um arquivo .json de emote e, se quiser, uma imagem de ícone (.png) na mesma caixa de diálogo",
+  "folder.emote.icon": "Alterar ícone",
+
+  "ui.hide": "Ocultar interface (H)",
+  "ui.show": "Mostrar interface (H)",
+
+  "shot.title": "Salvar captura de tela (segure Shift para um fundo transparente)",
+  "shot.error": "Não foi possível salvar a captura de tela"
 }

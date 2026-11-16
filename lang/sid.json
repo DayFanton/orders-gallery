@@ -59,7 +59,7 @@
 
   "emote.button": "Hedote leellisho",
   "emote.title": "Hedote leellisho",
-  "emote.hint": "Hedote leellisho doori woy umi'ne .json faayile eessi",
+  "emote.hint": "Emote dooro woyyo, ka \\\"Ta emote\\\" fano, kee ta emote ledo",
   "emote.stop": "Hedote leellisho uurrisi",
   "emote.test": "Umi'ne hedote leellisho fatani",
   "emote.empty": "Hedote leellisho di-afantino (emotes/ maahoyye)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "Yaandeeree Uurrinsha (Waajjishsha)",
   "emote.name.SPE_Zoro_Pose": "Zooroo Uurrinsha (Babbaxxitino Kalqe) (One Piece)",
 
+  "emote.by": "%s lao",
+  "emote.search_placeholder": "Emotes qorqori...",
+  "emote.no_results": "Emotes afamištění",
+
   "person.Артур": "Artuur",
   "person.Вайкату": "Waaykaatu",
   "person.Виакор": "Viyaakoor",
@@ -359,11 +363,39 @@
   "block.planks": "Oda'u saanka",
   "block.netherrack": "Nezerraak",
   "block.end_stone": "Eend kincho",
+  "block.plain": "Texture afamištění",
 
   "bgimg.name.day": "Barrimma",
   "bgimg.name.end": "Goofimarcho",
   "bgimg.name.nether": "Gaannama",
   "bgimg.name.night": "Hashsha",
   "bgimg.name.snow": "Hawaado",
-  "bgimg.name.sunset": "Arrishsho e'a"
+  "bgimg.name.sunset": "Arrishsho e'a",
+
+  "blocks.empty": "Blocks afamištění - texture blocks/ folder kee addih ma ganyinna",
+
+  "folder.add": "Gari",
+  "folder.delete": "Siwissa",
+  "folder.delete_confirm": "\\\"%s\\\" foorolderete giddo digeessitoni?",
+  "folder.empty": "Hatte geeshsha hino de'ne - \\\"+\\\" xoqqute umi fayilete ledo",
+  "folder.local_note": "Files xiggissamino bbawo qara qixxikkinniiti",
+  "folder.memory_only": "Browser storage afamištění - files afaminohu tab closed timmi yitanno",
+  "folder.error": "Horootu fayilate afamištění",
+  "folder.bg.open": "Qixxee koo",
+  "folder.bg.title": "Qixxee koo",
+  "folder.bg.hint": "Suuraawwan ne upload goote. \\\"+\\\" xoqqite haaro suuraa ledo",
+  "folder.block.open": "Blocks koo",
+  "folder.block.title": "Blocks koo",
+  "folder.block.hint": "Qixxee mittu qixxee baalunkira halantanno. Hattohuinni ..._top, ..._side ikkofonna ..._bottom woyite sase files qixxa",
+  "folder.block.error": "Qixxee mittu qixxa, woyite _top, _side woyite _bottom yaani xumurannota files qixxa",
+  "folder.emote.open": "Emotes koo",
+  "folder.emote.title": "Emotes koo",
+  "folder.emote.hint": "Emote .json file qixxa, woyite qixxattoro, icon image (.png) dialoge mittu giddro qixxa",
+  "folder.emote.icon": "Icon qixxa",
+
+  "ui.hide": "Interface qorqora (H)",
+  "ui.show": "Interface leellishshu (H)",
+
+  "shot.title": "Screenshot suuqi (leellanno badheera Shift amadi)",
+  "shot.error": "Screenshot suuqa afamištění"
 }

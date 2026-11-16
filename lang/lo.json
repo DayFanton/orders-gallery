@@ -59,7 +59,7 @@
 
   "emote.button": "ທ່າທາງ",
   "emote.title": "ທ່າທາງ",
-  "emote.hint": "ເລືອກທ່າທາງ ຫຼື ອັບໂຫຼດໄຟລ໌ .json ຂອງທ່ານ",
+  "emote.hint": "ເລືອກອີໂມດ ຫຼື ເປີດ \\\"ອີໂມດຂອງຂ້ອຍ\\\" ເພື່ອເພີ່ມອີໂມດຂອງທ່ານເອງ",
   "emote.stop": "ຢຸດທ່າທາງ",
   "emote.test": "ທົດສອບທ່າທາງຂອງທ່ານ",
   "emote.empty": "ບໍ່ພົບທ່າທາງ (ໂຟນເດີ emotes/)",
@@ -329,6 +329,10 @@
   "emote.name.SPE_Yandere_Pose": "ທ່າຢັນເດເຣະ (ຝັນຮ້າຍ)",
   "emote.name.SPE_Zoro_Pose": "ທ່າຢືນຂອງໂຊໂຣ (ພະຫຸຈັກກະວານ) (One Piece)",
 
+  "emote.by": "ໂດຍ %s",
+  "emote.search_placeholder": "ຄົ້ນຫາອີໂມດ...",
+  "emote.no_results": "ບໍ່ພົບອີໂມດ",
+
   "person.Артур": "ອາເທີ",
   "person.Вайкату": "ໄວກາຕູ",
   "person.Виакор": "ວິອາຄໍ",
@@ -359,11 +363,39 @@
   "block.planks": "ແປ້ນໄມ້ໂອກ",
   "block.netherrack": "ເນເທີແຣັກ",
   "block.end_stone": "ຫີນເອັນ",
+  "block.plain": "ບໍ່ມີພື້ນຜິວ",
 
   "bgimg.name.day": "ກາງເວັນ",
   "bgimg.name.end": "ດິເອນ",
   "bgimg.name.nether": "ເນເທີ",
   "bgimg.name.night": "ກາງຄືນ",
   "bgimg.name.snow": "ຫິມະ",
-  "bgimg.name.sunset": "ຕາເວັນຕົກດິນ"
+  "bgimg.name.sunset": "ຕາເວັນຕົກດິນ",
+
+  "blocks.empty": "ຍังບໍ່ມີบล็อก - ວາງພື້ນຜິວລົງໃນโฟลເດີ blocks/ ຫຼືເພີ່ມຂອງທ່ານเอง",
+
+  "folder.add": "ເພີ່ມ",
+  "folder.delete": "ລົບ",
+  "folder.delete_confirm": "ທ່ານຕ້ອງການລຶບ \\\"%s\\\" ອອກຈາກໂຟນເດີຂອງທ່ານບໍ?",
+  "folder.empty": "ຍັງບໍ່ມີຫຍັງຢູ່ທີ່ນີ້ - ກົດ \\\"+\\\" ເພື່ອເພີ່ມໄຟລ໌ທຳອິດຂອງທ່ານ",
+  "folder.local_note": "ໄຟລ໌ຖືກບັນທຶກໄວ້ສະເພາະໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ",
+  "folder.memory_only": "ພື້ນທີ່ຈັດເກັບຂໍ້ມູນຂອງບຣາວເຊີ ບໍ່ສາມາດໃຊ້ງານໄດ້ - ໄຟລ໌ຈະຫາຍໄປເມື່ອທ່ານປິດແທັບ",
+  "folder.error": "ບໍ່ສາມາດເພີ່ມໄຟລ໌ນີ້ໄດ້",
+  "folder.bg.open": "ຮູບພາບຂອງຂ້ອຍ",
+  "folder.bg.title": "ຮູບພາບຂອງຂ້ອຍ",
+  "folder.bg.hint": "ຮູບພາບທີ່ທ່ານອັບໂຫຼດ. ກົດ \\\"+\\\" ເພື່ອເພີ່ມຮູບໃໝ່",
+  "folder.block.open": "ບລັອກຂອງຂ້ອຍ",
+  "folder.block.title": "ບລັອກຂອງຂ້ອຍ",
+  "folder.block.hint": "ໃຊ້ຮູບດຽວສຳລັບທຸກໜ້າ. ຫຼືເລືອກ 3 ໄຟລ໌ທີ່ມີຊື່ວ່າ ..._top, ..._side ແລະ ..._bottom",
+  "folder.block.error": "ເລືອກຮູບພາບດຽວ, ຫຼື ໄຟລ໌ທີ່ລົງທ້າຍດ້ວຍ _top, _side ຫຼື _bottom",
+  "folder.emote.open": "ອີໂມດຂອງຂ້ອຍ",
+  "folder.emote.title": "ອີໂມດຂອງຂ້ອຍ",
+  "folder.emote.hint": "ເລືອກໄຟລ໌ .json ຂອງອີໂມດ ແລະ ຖ້າຕ້ອງການ, ເລືອກຮູບໄອຄອນ (.png) ໃນໜ້າຕ່າງດຽວກັນ",
+  "folder.emote.icon": "ປ່ຽນໄອຄອນ",
+
+  "ui.hide": "ซ่อนສ່ວນຕິດຕໍ່ (H)",
+  "ui.show": "ສະແດງສ່ວນຕິດຕໍ່ (H)",
+
+  "shot.title": "ບັນທຶກພາບໜ້າຈໍ (ກົດ Shift ຄ້າງໄວ້ເພື່ອໃຫ້ພື້ນຫຼັງໂປ່ງໃສ)",
+  "shot.error": "ບໍ່ສາມາດບັນທຶກພາບໜ້າຈໍໄດ້"
 }
