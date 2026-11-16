@@ -1179,6 +1179,37 @@
             #viewer_tools { top: 20px; bottom: auto; inset-inline-start: 20px; inset-inline-end: auto; }
             #variations_container { max-width: calc(100% - 152px); }
         }
+    
+        /* ================= Версия 1.7.6 ================= */
+        /* Скрытие языков */
+        .lang-bar { display: flex; flex-direction: column; gap: 4px; padding: 2px 2px 6px; }
+        .lang-bar-btn { display: none; width: 100%; padding: 7px 10px; font-size: 0.78rem; font-weight: 600; text-align: start; cursor: pointer;
+            color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
+        .lang-bar-btn:hover { color: #fff; border-color: var(--text-muted); }
+        .lang-bar-hint { display: none; padding: 2px 4px; font-size: 0.74rem; color: var(--text-muted); }
+        .lang-menu[data-mode="list"] .lang-bar-hide, .lang-menu[data-mode="list"].has-hidden .lang-bar-hidden, .lang-menu[data-mode="hidden"] .lang-bar-back { display: block; }
+        .lang-menu[data-mode="select"] .lang-bar-hint, .lang-menu[data-mode="hidden"] .lang-bar-hint { display: block; }
+        .lang-menu[data-mode="hidden"] .lang-bar-hint { font-weight: 700; color: var(--text-main); }
+        .lang-check { display: none; width: 15px; height: 15px; box-sizing: border-box; flex-shrink: 0; align-items: center; justify-content: center;
+            border: 1px solid var(--text-muted); border-radius: 3px; font-size: 0.7rem; line-height: 1; font-weight: 700; color: #111; }
+        .lang-menu[data-mode="select"] .lang-check { display: inline-flex; }
+        .lang-menu[data-mode="select"] .dropdown-item[data-lang] .radio-circle { display: none; }
+        .dropdown-item.lang-checked .lang-check { background: var(--accent); border-color: var(--accent); }
+        .dropdown-item.lang-checked .lang-check::after { content: '✓'; }
+        .lang-unhide { display: none; }
+        .lang-menu[data-mode="hidden"] .dropdown-item[data-lang] { flex-wrap: wrap; }
+        .lang-menu[data-mode="hidden"] .lang-unhide { display: block; flex: 1 0 100%; margin: 2px 0; padding: 6px 8px; font-size: 0.74rem; font-weight: 600; cursor: pointer;
+            color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 5px; }
+        .lang-menu[data-mode="hidden"] .lang-unhide:hover { background: rgba(255, 240, 1, 0.1); }
+        .lang-actions { display: flex; gap: 8px; }
+        .lang-actions button { flex: 1; padding: 8px 10px; font-size: 0.8rem; font-weight: 700; cursor: pointer; color: var(--text-main);
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
+        .lang-actions button:hover { border-color: var(--text-muted); }
+        .lang-actions button.primary { color: #111; background: var(--accent); border-color: var(--accent); }
+        .lang-actions button.primary:hover { filter: brightness(1.08); }
+        .lang-foot { display: none; padding: 8px 2px 2px; }
+        .lang-menu[data-mode="select"] .lang-foot { display: flex; }
+        .lang-confirm-text { font-size: 0.95rem; line-height: 1.5; color: var(--text-main); }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1240,7 +1271,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.5</div>
+            <div class="site-version">v1.7.7</div>
         </div>
     </div>
 
@@ -1404,6 +1435,17 @@
                     <span>Я всё прочел и согласен</span>
                 </label>
                 <button id="agreementBtn" class="btn" disabled>Продолжить</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="langConfirmModal" class="emote-overlay">
+        <div class="emote-panel" style="max-width: 380px;">
+            <div class="emote-head"><h3 id="langConfirmTitle">Скрыть языки</h3></div>
+            <div id="langConfirmText" class="lang-confirm-text">Вы точно хотите скрыть все языки без галочек?</div>
+            <div class="lang-actions">
+                <button id="langConfirmYes" type="button" class="primary">Да, скрыть</button>
+                <button id="langConfirmNo" type="button">Отмена</button>
             </div>
         </div>
     </div>
@@ -1728,9 +1770,130 @@
             "ui.hide": "Hide interface (H)",
             "ui.show": "Show interface (H)",
             "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download it, hold Shift for a transparent background)",
-            "shot.error": "Could not take the screenshot"
+            "shot.error": "Could not take the screenshot",
+            "language.hide_btn": "Hide certain languages",
+            "language.hidden_tab": "Hidden languages",
+            "language.back": "Back",
+            "language.select_hint": "Uncheck the languages you don't need",
+            "language.save": "Save",
+            "language.cancel": "Cancel",
+            "language.confirm_title": "Hide languages",
+            "language.confirm_text": "Are you sure you want to hide all languages without a checkmark?",
+            "language.confirm_yes": "Yes, hide",
+            "language.show_in_list": "Show language in the main list"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
+
+        /* ---------- Скрытие языков (1.7.6) ----------
+           Скрытые языки хранятся в localStorage браузера (ключ hiddenLangs) - не пропадают после перезагрузки и закрытия вкладки.
+           Режимы меню: 'list' - обычный список, 'select' - выбор галочками, 'hidden' - вкладка «Скрытые языки». */
+        const HIDDEN_LANGS_KEY = 'hiddenLangs';
+        let hiddenLangs = new Set();
+        let langMode = 'list';
+        let langChecked = new Set();      // языки с галочкой в режиме выбора
+        let langConfirmCodes = null;      // языки, ожидающие подтверждения скрытия
+
+        function loadHiddenLangs() {
+            try {
+                const arr = JSON.parse(localStorage.getItem(HIDDEN_LANGS_KEY) || '[]');
+                hiddenLangs = new Set(Array.isArray(arr) ? arr.filter(c => typeof c === 'string') : []);
+            } catch (e) { hiddenLangs = new Set(); }
+        }
+        function saveHiddenLangs() {
+            try { localStorage.setItem(HIDDEN_LANGS_KEY, JSON.stringify([...hiddenLangs])); }
+            catch (e) { console.warn('Не удалось сохранить скрытые языки в браузере.', e); }
+        }
+        loadHiddenLangs();
+        window.addEventListener('storage', (e) => {   // настройка изменилась в другой вкладке
+            if (e.key !== HIDDEN_LANGS_KEY && e.key !== null) return;
+            loadHiddenLangs();
+            if (langMode === 'select') langMode = 'list';
+            refreshLangMenus();
+        });
+
+        function hiddenLangCount() { return i18nLangs.filter(l => hiddenLangs.has(l.code)).length; }
+
+        function syncLangChecks() {
+            LANG_UIS.forEach(([, menuId]) => {
+                const menu = document.getElementById(menuId);
+                if (menu && menu._rows) menu._rows.forEach(r => { if (r.code) r.el.classList.toggle('lang-checked', langChecked.has(r.code)); });
+            });
+        }
+
+        function refreshLangMenus() {
+            const n = hiddenLangCount();
+            if (langMode === 'hidden' && !n) langMode = 'list';
+            LANG_UIS.forEach(([, menuId]) => {
+                const menu = document.getElementById(menuId);
+                if (!menu || !menu._rows || !menu._ui) return;
+                const ui = menu._ui;
+                menu.dataset.mode = langMode;
+                menu.classList.toggle('has-hidden', n > 0);
+                ui.hide.textContent = t('language.hide_btn');
+                ui.hidden.textContent = t('language.hidden_tab') + ' (' + n + ')';
+                ui.back.textContent = '← ' + t('language.back');
+                ui.hint.textContent = t(langMode === 'hidden' ? 'language.hidden_tab' : 'language.select_hint');
+                ui.save.textContent = t('language.save');
+                ui.cancel.textContent = t('language.cancel');
+                menu._rows.forEach(r => { if (r.unhide) r.unhide.textContent = t('language.show_in_list'); });
+                filterLangMenu(menu);
+            });
+            syncLangChecks();
+        }
+
+        function setLangMode(mode) {
+            langMode = mode;
+            if (mode === 'select') langChecked = new Set(i18nLangs.filter(l => !hiddenLangs.has(l.code)).map(l => l.code));
+            LANG_UIS.forEach(([, menuId]) => { const m = document.getElementById(menuId); if (m && m._search) m._search.value = ''; });
+            refreshLangMenus();
+        }
+
+        function toggleLangChecked(code) {
+            if (langChecked.has(code)) langChecked.delete(code); else langChecked.add(code);
+            syncLangChecks();
+        }
+
+        function applyHiddenLangs(codes) {
+            const known = new Set(i18nLangs.map(l => l.code));
+            hiddenLangs = new Set([...hiddenLangs].filter(c => !known.has(c)).concat(codes));   // коды неизвестных языков не трогаем
+            saveHiddenLangs();
+            setLangMode('list');
+        }
+
+        function onLangSaveClick() {
+            const toHide = i18nLangs.filter(l => !langChecked.has(l.code)).map(l => l.code);
+            const unchanged = toHide.length === hiddenLangCount() && toHide.every(c => hiddenLangs.has(c));
+            if (unchanged) { setLangMode('list'); return; }
+            if (!toHide.length) { applyHiddenLangs([]); return; }   // все с галочками - скрывать нечего
+            openLangConfirm(toHide);
+        }
+
+        function openLangConfirm(codes) {
+            langConfirmCodes = codes;
+            document.getElementById('langConfirmTitle').textContent = t('language.confirm_title');
+            document.getElementById('langConfirmText').textContent = t('language.confirm_text');
+            document.getElementById('langConfirmYes').textContent = t('language.confirm_yes');
+            document.getElementById('langConfirmNo').textContent = t('language.cancel');
+            document.getElementById('langConfirmModal').classList.add('show');
+        }
+        function closeLangConfirm() {
+            langConfirmCodes = null;
+            document.getElementById('langConfirmModal').classList.remove('show');
+        }
+        function initLangConfirm() {
+            const ov = document.getElementById('langConfirmModal');
+            if (!ov) return;
+            ov.onclick = (e) => { e.stopPropagation(); if (e.target === ov) closeLangConfirm(); };   // клик внутри окна не закрывает меню языков
+            document.getElementById('langConfirmNo').onclick = closeLangConfirm;
+            document.getElementById('langConfirmYes').onclick = () => {
+                const codes = langConfirmCodes;
+                closeLangConfirm();
+                if (codes) applyHiddenLangs(codes);
+            };
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && langConfirmCodes) { e.preventDefault(); e.stopPropagation(); closeLangConfirm(); }
+        }, true);
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
 
         // [селектор, ключ в lang/*.json, атрибут (если не указан - меняется текст)]
@@ -1961,13 +2124,14 @@
             const rows = menu._rows || [];
             const q = normSearch(menu._search ? menu._search.value : '');
             let shown = 0;
+            // что показывать в текущем режиме: список - не скрытые + «Авто»; выбор - все языки; вкладка «Скрытые» - только скрытые
+            const allowed = r => r.auto ? langMode === 'list' : (langMode === 'select' || hiddenLangs.has(r.code) === (langMode === 'hidden'));
             if (!q) {
-                rows.forEach(r => { r.el.style.display = ''; menu._list.appendChild(r.el); });
-                shown = rows.length;
+                rows.forEach(r => { const ok = allowed(r); r.el.style.display = ok ? '' : 'none'; menu._list.appendChild(r.el); if (ok) shown++; });
             } else {
                 const hits = [];
                 rows.forEach((r, i) => {
-                    const sc = r.auto ? null : scoreLang(r.aliases, q);
+                    const sc = (r.auto || !allowed(r)) ? null : scoreLang(r.aliases, q);
                     if (sc === null) r.el.style.display = 'none';
                     else hits.push({ r, sc, i });
                 });
@@ -2012,6 +2176,7 @@
                 el.textContent = t('language.auto') + (detected ? ` (${detected.name})` : '');
                 if (el.parentElement) el.parentElement.title = getLangSignalsText();
             });
+            refreshLangMenus();
         }
 
         function applyI18n(rerender = true) {
@@ -2051,6 +2216,7 @@
                 if (menu) { menu.classList.remove('show'); resetLangSearch(menu); }
                 if (trigger) trigger.classList.remove('active');
             });
+            if (langMode !== 'list') setLangMode('list');   // несохранённые галочки не применяются
         }
 
         function initLangMenu() {
@@ -2073,7 +2239,31 @@
                 list.className = 'lang-list';
                 const empty = document.createElement('div');
                 empty.className = 'lang-empty';
-                menu.append(searchWrap, list, empty);
+                const mkBtn = (cls, fn) => {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    if (cls) b.className = cls;
+                    b.onclick = (e) => { e.stopPropagation(); fn(); };
+                    return b;
+                };
+                const ui = {
+                    hide: mkBtn('lang-bar-btn lang-bar-hide', () => setLangMode('select')),
+                    hidden: mkBtn('lang-bar-btn lang-bar-hidden', () => setLangMode('hidden')),
+                    back: mkBtn('lang-bar-btn lang-bar-back', () => setLangMode('list')),
+                    hint: document.createElement('div'),
+                    save: mkBtn('primary', onLangSaveClick),
+                    cancel: mkBtn('', () => setLangMode('list'))
+                };
+                ui.hint.className = 'lang-bar-hint';
+                const bar = document.createElement('div');
+                bar.className = 'lang-bar';
+                bar.append(ui.hide, ui.hidden, ui.back, ui.hint);
+                const foot = document.createElement('div');
+                foot.className = 'lang-actions lang-foot';
+                foot.append(ui.save, ui.cancel);
+                menu.append(bar, searchWrap, list, empty, foot);
+                menu._ui = ui;
+                menu.dataset.mode = langMode;
 
                 const rows = [];
 
@@ -2092,15 +2282,26 @@
                     const item = document.createElement('div');
                     item.classList.add('dropdown-item');
                     item.dataset.lang = l.code;
-                    item.innerHTML = '<span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
+                    item.innerHTML = '<span class="lang-check"></span><span class="radio-circle"></span><span class="flag"></span><span class="lang-name"></span>';
+                    const unhide = document.createElement('button');
+                    unhide.type = 'button';
+                    unhide.className = 'lang-unhide';
+                    unhide.onclick = (e) => {
+                        e.stopPropagation();
+                        hiddenLangs.delete(l.code);
+                        saveHiddenLangs();
+                        refreshLangMenus();
+                    };
+                    item.appendChild(unhide);
                     item.querySelector('.flag').textContent = l.flag;
                     item.querySelector('.lang-name').textContent = l.name;
                     item.onclick = (e) => {
                         e.stopPropagation();
+                        if (langMode === 'select') { toggleLangChecked(l.code); return; }   // в режиме выбора клик ставит/снимает галочку
                         closeLangMenu();
                         setLanguage(l.code);
                     };
-                    rows.push({ el: item, aliases: l.aliases || [] });
+                    rows.push({ el: item, code: l.code, aliases: l.aliases || [], unhide });
                 });
                 rows.forEach(r => list.appendChild(r.el));
 
@@ -2120,7 +2321,7 @@
                 search.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter') {                                  // Enter - выбрать лучший найденный язык
                         e.preventDefault();
-                        if (!search.value.trim()) return;
+                        if (!search.value.trim() || langMode === 'select') return;
                         const first = rows.find(r => !r.auto && r.el.style.display !== 'none');
                         if (first) first.el.click();
                     } else if (e.key === 'Escape') {
@@ -2144,6 +2345,7 @@
                 };
             });
             document.addEventListener('click', closeLangMenu);
+            initLangConfirm();
             updateLangButtons();
         }
 
