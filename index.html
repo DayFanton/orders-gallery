@@ -1218,7 +1218,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.2</div>
+            <div class="site-version">v1.7.3</div>
         </div>
     </div>
 
@@ -1233,7 +1233,7 @@
         </div>
         <div id="variations_container" style="display: none;"></div>
         <div id="viewer_tools">
-            <button id="btnShot" class="tool-btn" type="button" title="Сохранить скриншот">
+            <button id="btnShot" class="tool-btn" type="button" title="Скопировать скриншот (Ctrl - ещё и скачать, Shift - прозрачный фон)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3.5"/></svg>
             </button>
             <button id="btnHideUi" class="tool-btn" type="button" title="Скрыть интерфейс">
@@ -1604,8 +1604,8 @@
             "emote.no_results": "No emotes found",
             "ui.hide": "Hide interface (H)",
             "ui.show": "Show interface (H)",
-            "shot.title": "Save screenshot (hold Shift for a transparent background)",
-            "shot.error": "Could not save the screenshot"
+            "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download it, hold Shift for a transparent background)",
+            "shot.error": "Could not take the screenshot"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
@@ -3861,29 +3861,51 @@
                 setTimeout(() => f.remove(), 400);
             }
 
-            async function takeShot(transparent) {
+            // Собирает кадр (фон + 3D) и возвращает PNG-blob
+            async function renderBlob(transparent) {
+                const cv = skinViewer.canvas;
+                const w = cv.width, h = cv.height;
+                const out = document.createElement('canvas');
+                out.width = w;
+                out.height = h;
+                const ctx = out.getContext('2d');
+                if (!transparent) await paintBackground(ctx, w, h);      // асинхронная часть - до отрисовки 3D, чтобы буфер WebGL не успел очиститься
+                if (typeof skinViewer.render === 'function') skinViewer.render();
+                else skinViewer.renderer.render(skinViewer.scene, skinViewer.camera);
+                ctx.drawImage(cv, 0, 0, w, h);
+                return new Promise((resolve, reject) => out.toBlob(b => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'));
+            }
+
+            function downloadBlob(blob) {
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = fileName();
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+            }
+
+            // Обычное нажатие - только в буфер обмена. С зажатым Ctrl (Cmd на Mac) - ещё и скачивание файла.
+            // Если буфер обмена недоступен (нет https, старый браузер, запрет), файл скачивается, чтобы снимок не пропал.
+            async function takeShot(transparent, download) {
                 if (!skinViewer) return;
                 const tools = $('viewer_tools');
                 tools.style.visibility = 'hidden';      // на время снимка кнопки не показываются
                 try {
-                    const cv = skinViewer.canvas;
-                    const w = cv.width, h = cv.height;
-                    const out = document.createElement('canvas');
-                    out.width = w;
-                    out.height = h;
-                    const ctx = out.getContext('2d');
-                    if (!transparent) await paintBackground(ctx, w, h);      // асинхронная часть - до отрисовки 3D, чтобы буфер WebGL не успел очиститься
-                    if (typeof skinViewer.render === 'function') skinViewer.render();
-                    else skinViewer.renderer.render(skinViewer.scene, skinViewer.camera);
-                    ctx.drawImage(cv, 0, 0, w, h);
-                    const blob = await new Promise((resolve, reject) => out.toBlob(b => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'));
-                    const a = document.createElement('a');
-                    a.href = URL.createObjectURL(blob);
-                    a.download = fileName();
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+                    const blobPromise = renderBlob(transparent);
+                    blobPromise.catch(() => {});        // ошибку обработаем ниже, здесь она не должна стать необработанной
+                    let copied = false;
+                    try {
+                        if (!navigator.clipboard || typeof ClipboardItem === 'undefined') throw new Error('clipboard API unavailable');
+                        // ClipboardItem получает промис: запись начинается сразу по клику (так требует Safari), а снимок дорисовывается позже
+                        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobPromise })]);
+                        copied = true;
+                    } catch (e) {
+                        console.warn('[screenshot] не удалось скопировать в буфер обмена', e);
+                    }
+                    const blob = await blobPromise;
+                    if (download || !copied) downloadBlob(blob);
                     flash();
                 } catch (e) {
                     console.error('[screenshot]', e);
@@ -3895,7 +3917,7 @@
 
             function init() {
                 $('btnHideUi').onclick = () => setHidden(!hidden);
-                $('btnShot').onclick = (e) => takeShot(e.shiftKey);
+                $('btnShot').onclick = (e) => takeShot(e.shiftKey, e.ctrlKey || e.metaKey);
                 document.addEventListener('keydown', (e) => {
                     if (e.ctrlKey || e.metaKey || e.altKey) return;
                     const tag = (e.target && e.target.tagName) || '';
