@@ -394,6 +394,6 @@
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",
 
-  "shot.title": "Bika ifoto ya ecran (kanda Shift kugira ngo ubone inyuma habonerana)",
-  "shot.error": "Ntibyashobotse kubika ifoto ya ecran"
+  "shot.title": "Kopiye screenshot kuri clipboard (fata Ctrl kugira ngo unayikure, Shift kugira ngo ushiremo inyuma hagaragara)",
+  "shot.error": "Byanze gufata ifoto ya screen"
 }

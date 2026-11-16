@@ -396,6 +396,6 @@
   "ui.hide": "Chisisi interface (H)",
   "ui.show": "Langanya interface (H)",
 
-  "shot.title": "Sungani chiwulili cha pa sikilini (kamulani Shift kuti mpate kunyuma kwakuwoneka)",
-  "shot.error": "Pangasiman kusungani chiwulili cha pa sikilini"
+  "shot.title": "Kopesya screenshot ku clipboard (kama Ctrl kuti jige so, Shift pa background jwakuloleka)",
+  "shot.error": "Ngakwanila kutola chithunzi cha pa skrini"
 }

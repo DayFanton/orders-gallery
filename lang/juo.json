@@ -394,6 +394,6 @@
   "ui.hide": "Interface duɔni nani (H)",
   "ui.show": "Interface duɔni nani (H)",
 
-  "shot.title": "Screenshot duɔni nani (Shift duɔni kɛ background duɔni)",
-  "shot.error": "Screenshot duɔni nani duɔni ma"
+  "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download, Shift for transparent background)",
+  "shot.error": "Screenshot be me nyi"
 }

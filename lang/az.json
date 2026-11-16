@@ -396,6 +396,6 @@
   "ui.hide": "İnterfeysi gizlət (H)",
   "ui.show": "İnterfeysi göstər (H)",
 
-  "shot.title": "Ekran görüntüsünü yadda saxla (şəffaf fon üçün Shift düyməsini basılı saxlayın)",
-  "shot.error": "Ekran görüntüsünü yadda saxlamaq mümkün olmadı"
+  "shot.title": "Ekran görüntüsünü mübadilə buferinə kopyalayın (həmçinin yükləmək üçün Ctrl, şəffaf fon üçün Shift düyməsini saxlayın)",
+  "shot.error": "Ekran görüntüsü çəkmək mümkün olmadı"
 }

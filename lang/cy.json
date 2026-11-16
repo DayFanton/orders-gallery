@@ -396,6 +396,6 @@
   "ui.hide": "Cuddio'r rhyngwyneb (H)",
   "ui.show": "Dangos y rhyngwyneb (H)",
 
-  "shot.title": "Cadw sgrinlun (daliwch Shift i lawr am gefndir tryloyw)",
-  "shot.error": "Methwyd cadw'r sgrinlun"
+  "shot.title": "Copio'r sgrin-gip i'r clipfwrdd (dal Ctrl i lawr i lwytho i lawr hefyd, Shift ar gyfer cefndir tryloyw)",
+  "shot.error": "Methwyd â chael sgrinlun"
 }

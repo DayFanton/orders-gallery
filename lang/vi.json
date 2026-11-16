@@ -396,6 +396,6 @@
   "ui.hide": "ẩn giao diện (H)",
   "ui.show": "Hiện giao diện (H)",
 
-  "shot.title": "Lưu ảnh chụp màn hình (giữ phím Shift để có nền trong suốt)",
-  "shot.error": "Không thể lưu ảnh chụp màn hình"
+  "shot.title": "Sao chép ảnh chụp màn hình vào khâu tạm (giữ Ctrl để tải xuống thêm, Shift để có nền trong suốt)",
+  "shot.error": "Không thể chụp màn hình"
 }

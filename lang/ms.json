@@ -394,6 +394,6 @@
   "ui.hide": "Sembunyikan antara muka (H)",
   "ui.show": "Tunjukkan antara muka (H)",
 
-  "shot.title": "Simpan tangkapan skrin (tahan Shift untuk latar belakang lutsinar)",
-  "shot.error": "Tidak dapat menyimpan tangkapan skrin"
+  "shot.title": "Salin tangkapan skrin ke papan klip (tahan Ctrl untuk turut memuat turun, Shift untuk latar belakang telus)",
+  "shot.error": "Gagal mengambil tangkapan skrin"
 }

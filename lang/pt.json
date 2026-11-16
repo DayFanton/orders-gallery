@@ -396,6 +396,6 @@
   "ui.hide": "Ocultar interface (H)",
   "ui.show": "Mostrar interface (H)",
 
-  "shot.title": "Salvar captura de tela (segure Shift para um fundo transparente)",
-  "shot.error": "Não foi possível salvar a captura de tela"
+  "shot.title": "Copiar captura de ecrã para a área de transferência (mantenha Ctrl para descarregar também, Shift para fundo transparente)",
+  "shot.error": "Não foi possível tirar a captura de tela"
 }

@@ -394,6 +394,6 @@
   "ui.hide": "Nkaum qhov screen (H)",
   "ui.show": "Qhia qhov screen (H)",
 
-  "shot.title": "Txuag daim duab screen (nias Shift tuav kom tau keeb kwm pob tshab)",
-  "shot.error": "Tsis tuaj yeem tso npe daim duab screen"
+  "shot.title": "Luam duab screen rau clipboard (tuav Ctrl txhawm rau rub tawm thiab, Shift rau keeb kwm yav dhau los)",
+  "shot.error": "Tsis tuaj yeem ntes cov duab tshuaj ntsuam"
 }

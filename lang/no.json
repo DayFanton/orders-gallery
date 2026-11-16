@@ -396,6 +396,6 @@
   "ui.hide": "Skjul grensesnitt (H)",
   "ui.show": "Vis grensesnitt (H)",
 
-  "shot.title": "Lagre skjermbilde (hold inne Shift for gjennomsiktig bakgrunn)",
-  "shot.error": "Kunne ikke lagre skjermbildet"
+  "shot.title": "Kopier skjermbilde til utklippstavle (hold inne Ctrl for å laste ned også, Shift for transparent bakgrunn)",
+  "shot.error": "Kunne ikke ta skjermbilde"
 }

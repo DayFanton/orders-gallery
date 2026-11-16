@@ -394,6 +394,6 @@
   "ui.hide": "Slēpt interfeisu (H)",
   "ui.show": "Rādīt interfeisu (H)",
 
-  "shot.title": "Saglabāt ekrānuzņēmumu (turiet nospiestu Shift, lai iegūtu caurspīdīgu fonu)",
-  "shot.error": "Neizdevās saglabāt ekrānuzņēmumu"
+  "shot.title": "Kopēt ekrānuzņēmumu starplaikuvē (turiet nospiestu Ctrl, lai arī lejupielādētu, Shift — caurspīdīgam fonam)",
+  "shot.error": "Neizdevās uzņemt ekrānuzņēmumu"
 }

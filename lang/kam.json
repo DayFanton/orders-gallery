@@ -396,6 +396,6 @@
   "ui.hide": "Ĩtheka mbica (H)",
   "ui.show": "Tharia mbica (H)",
 
-  "shot.title": "Ia mbica ya kĩonereria (kwata Shift nĩ kana ũkwate ĩtina yonekaa)",
-  "shot.error": "Ndũĩndwa kwĩsya mbica ya kĩonereria"
+  "shot.title": "Kopi screenshot kuri clipboard (kwata Ctrl niguo uthĩe, Shift niguo ugethe background ya kiaria)",
+  "shot.error": "Ndwaĩ kũtw'a screenshot"
 }

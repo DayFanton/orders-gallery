@@ -396,6 +396,6 @@
   "ui.hide": "Zonwe interface ahụ (H)",
   "ui.show": "Gosi interface ahụ (H)",
 
-  "shot.title": "Chekwaa nseta ihuenyo (jide Shift maka ndabere doro anya)",
-  "shot.error": "Enweghị ike ichekwa nseta ihuenyo"
+  "shot.title": "Detuo nsetụ ihuenyo na clipboard (jikọta Ctrl iji budatakwa, Shift maka ndabere doro anya)",
+  "shot.error": "E nweghị ike iwere nseta ihuenyo"
 }

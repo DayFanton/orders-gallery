@@ -396,6 +396,6 @@
   "ui.hide": "Thweka kĩhumo (H)",
   "ui.show": "Cionia kĩhumo (H)",
 
-  "shot.title": "Igia mbica ya kĩonereria (nyita Shift nĩguo ũgĩe na thutha ũroneka)",
-  "shot.error": "Gũtirĩ ũndũ gũkwa gũtongeria mbica ya kĩonereria"
+  "shot.title": "Kopi screenshot kuri clipboard (batira Ctrl niguo uthĩe, Shift niguo ugethe background ya kiaria)",
+  "shot.error": "Gũtiagĩka gũtunyia thirimũ"
 }

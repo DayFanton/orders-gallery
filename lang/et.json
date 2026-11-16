@@ -394,6 +394,6 @@
   "ui.hide": "Peida liides (H)",
   "ui.show": "Näita liidest (H)",
 
-  "shot.title": "Salvesta ekraanipilt (läbipaistva tausta jaoks hoidke all klahvi Shift)",
-  "shot.error": "Ekraanipildi salvestamine ebaõnnestus"
+  "shot.title": "Kopeeri ekraanipilt lõikelauale (allalaadimiseks hoia all Ctrl, läbipaistva tausta jaoks Shift)",
+  "shot.error": "Ekraanitõmmise tegemine ebaõnnestus"
 }

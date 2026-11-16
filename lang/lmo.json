@@ -394,6 +394,6 @@
   "ui.hide": "Scond l'interfaccia (H)",
   "ui.show": "Mostra l'interfaccia (H)",
 
-  "shot.title": "Salva la schermada (tegn schisciaa Shift per on sfond trasparent)",
-  "shot.error": "El poeu minga salvà la schermada"
+  "shot.title": "Copia el screenshot in su i appunti (tignen premut Ctrl per descarcà anca, Shift për el fond trasparent)",
+  "shot.error": "L'è minga riuscì a fà la foto a la schena"
 }

@@ -396,6 +396,6 @@
   "ui.hide": "Interface ausblenden (H)",
   "ui.show": "Interface anzeigen (H)",
 
-  "shot.title": "Screenshot speichern (Shift gedrückt halten für transparenten Hintergrund)",
-  "shot.error": "Screenshot konnte nicht gespeichert werden"
+  "shot.title": "Screenshot in die Zwischenablage kopieren (halten Sie Strg gedrückt, um ihn auch herunterzuladen, Shift für transparenten Hintergrund)",
+  "shot.error": "Screenshot konnte nicht aufgenommen werden"
 }

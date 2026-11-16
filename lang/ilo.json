@@ -394,6 +394,6 @@
   "ui.hide": "Ilemmeng ti interface (H)",
   "ui.show": "Ipakita ti interface (H)",
 
-  "shot.title": "Idulin ti screenshot (talinaayen a nakapindut ti Shift para iti nalawag a background)",
-  "shot.error": "Saan a maidulin ti screenshot"
+  "shot.title": "Kopiaen ti screenshot iti clipboard (idengnget ti Ctrl tapno ma-download pay, Shift para iti transparent a background)",
+  "shot.error": "Nabigo a mangala iti screenshot"
 }

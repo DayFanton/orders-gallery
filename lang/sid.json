@@ -396,6 +396,6 @@
   "ui.hide": "Interface qorqora (H)",
   "ui.show": "Interface leellishshu (H)",
 
-  "shot.title": "Screenshot suuqi (leellanno badheera Shift amadi)",
-  "shot.error": "Screenshot suuqa afamištění"
+  "shot.title": "Screenshot clipboard e qoli (Ctrl minci, Shift transparent background)",
+  "shot.error": "Screen-a xummo afiidi"
 }

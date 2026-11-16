@@ -396,6 +396,6 @@
   "ui.hide": "Skrýt rozhraní (H)",
   "ui.show": "Zobrazit rozhraní (H)",
 
-  "shot.title": "Uložit snímek obrazovky (podržte Shift pro průhledné pozadí)",
-  "shot.error": "Snímek obrazovky se nepodařilo uložit"
+  "shot.title": "Zkopírovat snímek obrazovky do schránky (podržte Ctrl pro stažení, Shift pro průhledné pozadí)",
+  "shot.error": "Nepodařilo se pořídit snímek obrazovky"
 }

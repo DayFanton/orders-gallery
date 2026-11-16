@@ -394,6 +394,6 @@
   "ui.hide": "Fihla isikhombandlela (H)",
   "ui.show": "Khombisa isikhombandlela (H)",
 
-  "shot.title": "Gcina sitfombe sesikrinini (bamba u-Shift kuze utfole lingemuva lelibonakalako)",
-  "shot.error": "Ayikwanga kungeniswa sitfombe sesikrinini"
+  "shot.title": "Kopa sitfombe seskrini ku-clipboard (bamba u-Ctrl kute ulande futsi, u-Shift kwendzawo lebhonakalako)",
+  "shot.error": "Kuhlulekile kutfatha sitfombe sesikrini"
 }

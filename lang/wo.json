@@ -396,6 +396,6 @@
   "ui.hide": "Dollikul interface bi (H)",
   "ui.show": "Wone interface bi (H)",
 
-  "shot.title": "Dencal nataalu ekraŋ bi (tëyël Shift ngir am ginaaw gu leer)",
-  "shot.error": "Mënuloo dencal nataalu ekraŋ bi"
+  "shot.title": "Copier screenshot bi ci clipboard bi (muñlal Ctrl ngir téléchargé ite, Shift ngir arrier-plan bu leer)",
+  "shot.error": "Mënulul a jël foto ekran bi"
 }

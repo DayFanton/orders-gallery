@@ -396,6 +396,6 @@
   "ui.hide": "Arayüzü gizle (H)",
   "ui.show": "Arayüzü göster (H)",
 
-  "shot.title": "Ekran görüntüsünü kaydet (şeffaf arka plan için Shift tuşunu basılı tutun)",
-  "shot.error": "Ekran görüntüsü kaydedilemedi"
+  "shot.title": "Ekran görüntüsünü panoya kopyala (indirmek için Ctrl'yi basılı tutun, şeffaf arka plan için Shift)",
+  "shot.error": "Ekran görüntüsü alınamadı"
 }

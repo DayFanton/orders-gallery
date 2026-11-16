@@ -394,6 +394,6 @@
   "ui.hide": "Folaigh an comhéadan (H)",
   "ui.show": "Taispeáin an comhéadan (H)",
 
-  "shot.title": "Sábháil an scáileán (coinnigh Shift síos le haghaidh cúlra trédhearcach)",
-  "shot.error": "Níorbh fhéidir an scáileán a shábháil"
+  "shot.title": "Cóipeáil an seat scáinean go dtí an ngearrthaisce (coinnigh síos Ctrl chun íoslódáil freisin, Shift le haghaidh cúlra trédhearcach)",
+  "shot.error": "Níorbh fhéidir gabháil scáileáin a thógáil"
 }

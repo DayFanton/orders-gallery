@@ -396,6 +396,6 @@
   "ui.hide": "Fitlha sebopego (H)",
   "ui.show": "Bontsha sebopego (H)",
 
-  "shot.title": "Boloka setshwantsho sa sekirini (tshwara Shift go bona lemorago le le bonaletsang)",
-  "shot.error": "Ga e kgone go boloka setshwantsho sa sekirini"
+  "shot.title": "Kopa setshwantsho sa skrini mo clipboard (tshwara Ctrl go laolola gape, Shift ya bokantle jo bo bonalang)",
+  "shot.error": "Go paletswe go tsaya setshwantsho sa sekirini"
 }

@@ -394,6 +394,6 @@
   "ui.hide": "Afeno ny endrika (H)",
   "ui.show": "Asehoy ny endrika (H)",
 
-  "shot.title": "Tehirizo ny pikantsary (tazomy ny Shift mba hahazoana ambadika mangarahara)",
-  "shot.error": "Tsy azo ntehirizina ilay pikantsary"
+  "shot.title": "Adikao ny pikantsary ao amin'ny clipboard (hazòny ny Ctrl raha te-hampidina koa, Shift ho an'ny ambadika mangarahara)",
+  "shot.error": "Tsy nahomby tamin'ny fakana sary ny efijery"
 }

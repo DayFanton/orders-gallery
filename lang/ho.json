@@ -396,6 +396,6 @@
   "ui.hide": "Interface amo lalon (H)",
   "ui.show": "Interface amo nene (H)",
 
-  "shot.title": "Screenshot save me (transparent background la Shift hold me)",
-  "shot.error": "Screenshot save amo kela"
+  "shot.title": "Screenshot clipboard lalon (Ctrl dabam, Shift transparent background)",
+  "shot.error": "Screenshot lasi na gau"
 }

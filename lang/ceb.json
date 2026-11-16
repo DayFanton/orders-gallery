@@ -394,6 +394,6 @@
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
 
-  "shot.title": "I-save ang screenshot (hupti ang Shift alang sa transparent nga background)",
-  "shot.error": "Dili ma-save ang screenshot"
+  "shot.title": "Kopyaha ang screenshot sa clipboard (i-hold ang Ctrl aron ma-download usab, Shift para sa transparent nga background)",
+  "shot.error": "Napakyas sa pagkuha sa screenshot"
 }

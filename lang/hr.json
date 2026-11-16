@@ -396,6 +396,6 @@
   "ui.hide": "Sakrij sučelje (H)",
   "ui.show": "Prikaži sučelje (H)",
 
-  "shot.title": "Spremi snimku zaslona (držite Shift za prozirnu pozadinu)",
-  "shot.error": "Nije bilo moguće spremiti snimku zaslona"
+  "shot.title": "Kopiraj snimku zaslona u međuspremnik (držite Ctrl za preuzimanje, Shift za prozirnu pozadinu)",
+  "shot.error": "Nije uspjelo snimanje zaslona"
 }

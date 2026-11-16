@@ -396,6 +396,6 @@
   "ui.hide": "Ukryj interfejs (H)",
   "ui.show": "Pokaż interfejs (H)",
 
-  "shot.title": "Zapisz zrzut ekranu (przytrzymaj Shift, aby uzyskać przezroczyste tło)",
-  "shot.error": "Nie udało się zapisać zrzutu ekranu"
+  "shot.title": "Skopiuj zrzut ekranu do schowka (przytrzymaj Ctrl, aby także pobrać, Shift — dla przezroczystego tła)",
+  "shot.error": "Nie udało się zrobić zrzutu ekranu"
 }

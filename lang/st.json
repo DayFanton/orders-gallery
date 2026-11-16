@@ -394,6 +394,6 @@
   "ui.hide": "Patla sebopeho (H)",
   "ui.show": "Bontša sebopeho (H)",
 
-  "shot.title": "Boloka setšoantšo sa skrine (tšoara Shift bakeng sa bokamorao bo bonaletsang)",
-  "shot.error": "Ha e khone ho boloka setšoantšo sa skrine"
+  "shot.title": "Kopa skrini ho clipboard (tšoara Ctrl ho khoasolla hape, Shift bakeng sa bokantle bo hlakileng)",
+  "shot.error": "Ho hlolehile ho nka setšoantšo sa skrineng"
 }

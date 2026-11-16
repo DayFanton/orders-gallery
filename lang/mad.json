@@ -396,6 +396,6 @@
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
 
-  "shot.title": "Simpen tangkapan layar (tahan Shift ka'angghuy latar belakang transparan)",
-  "shot.error": "Simpen tangkapan layar ta' kapèngghâ"
+  "shot.title": "Salin tangkapan layar ka papan klip (tahan Ctrl ka'ng unduh jugha, Shift ka'ng latar transparan)",
+  "shot.error": "Gagal ngala' tangkapan layar"
 }

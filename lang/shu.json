@@ -394,6 +394,6 @@
   "ui.hide": "Ikhfi interface (H)",
   "ui.show": "Zahhir interface (H)",
 
-  "shot.title": "Ihfaz screenshot (amsik Shift li khalfiya shaffafa)",
-  "shot.error": "Mafidir tahfiz screenshot"
+  "shot.title": "نسخ لقطة الشاشة في الحافظة (اضغط Ctrl عشان تحمل تاني، Shift للخلفية الشفافة)",
+  "shot.error": "Ma mkin nsuwru al-shasha"
 }

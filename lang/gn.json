@@ -396,6 +396,6 @@
   "ui.hide": "Emonguete interface (H)",
   "ui.show": "Hechauka interface (H)",
 
-  "shot.title": "Eñongatu pantalla ra'anga (ejoko Shift ikatu hag̃uáicha hapykue hesakã)",
-  "shot.error": "Ndaikatúi eñongatu pe pantalla ra'anga"
+  "shot.title": "Emohesakuaa ta'ãnga clipboard-pe (ejopy Ctrl emboguejy hag̃ua avei, Shift fondo transparentéva rehegua)",
+  "shot.error": "Ndoikatumái oñemboguejy ta'ãnga screen pegua"
 }

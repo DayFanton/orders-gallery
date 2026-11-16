@@ -396,6 +396,6 @@
   "ui.hide": "Dölj gränssnitt (H)",
   "ui.show": "Visa gränssnitt (H)",
 
-  "shot.title": "Spara skärmdump (håll ned Shift för genomskinlig bakgrund)",
-  "shot.error": "Kunde inte spara skärmdumpen"
+  "shot.title": "Kopiera skärmdump till urklipp (håll ned Ctrl för att ladda ner också, Shift för transparent bakgrund)",
+  "shot.error": "Det gick inte att ta en skärmdump"
 }

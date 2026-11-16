@@ -396,6 +396,6 @@
   "ui.hide": "Fshih ndërfaqen (H)",
   "ui.show": "Shfaq ndërfaqen (H)",
 
-  "shot.title": "Ruaj pamjen e ekranit (mbani shtypur Shift për sfond transparent)",
-  "shot.error": "Nuk u mund të ruhej pamja e ekranit"
+  "shot.title": "Kopjo pametjen e ekranit në kujtesë (mbaj shtypur Ctrl për ta shkarkuar gjithashtu, Shift për sfond transparent)",
+  "shot.error": "Nuk u arrit të bëhej pamja e ekranit"
 }

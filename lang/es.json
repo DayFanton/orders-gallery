@@ -396,6 +396,6 @@
   "ui.hide": "Ocultar interfaz (H)",
   "ui.show": "Mostrar interfaz (H)",
 
-  "shot.title": "Guardar captura de pantalla (mantén pulsado Shift para un fondo transparente)",
-  "shot.error": "No se pudo guardar la captura de pantalla"
+  "shot.title": "Copiar captura de pantalla al portapapeles (mantén presionado Ctrl para descargar también, Shift para fondo transparente)",
+  "shot.error": "No se pudo tomar la captura de pantalla"
 }

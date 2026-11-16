@@ -396,6 +396,6 @@
   "ui.hide": "Ocultar la interfície (H)",
   "ui.show": "Mostrar la interfície (H)",
 
-  "shot.title": "Desa la captura de pantalla (mantén premuda la tecla Maj per a un fons transparent)",
-  "shot.error": "No s'ha pogut desar la captura de pantalla"
+  "shot.title": "Copia la captura de pantalla al porta-retalls (mantén premut Ctrl per descarregar-la també, Shift per a fons transparent)",
+  "shot.error": "No s'ha pogut fer la captura de pantalla"
 }

@@ -396,6 +396,6 @@
   "ui.hide": "Tọ ko oju aṣayan (H)",
   "ui.show": "Fi oju aṣayan han (H)",
 
-  "shot.title": "Fi aworan iboju pamọ (di Shift mu fun abẹlẹ ti o han gbangba)",
-  "shot.error": "Ko le fi aworan iboju pamọ"
+  "shot.title": "Da ẹ̀ka iboju si pátáká àbójútó (di Ctrl mu lati ṣe igbasilẹ pẹlu, Shift fun abẹlẹ ti o han gbangba)",
+  "shot.error": "O le lati ya aworan iboju"
 }

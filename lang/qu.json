@@ -394,6 +394,6 @@
   "ui.hide": "Rikchayta pakay (H)",
   "ui.show": "Rikchayta qawachiy (H)",
 
-  "shot.title": "Pantalla hap'isqata waqaychay (ch'uya qhipanpaq Shift ñit'ispa hap'iy)",
-  "shot.error": "Pantalla hap'isqataqa manam waqaychayta atikunchu"
+  "shot.title": "Pantallamanta fotota clipboardman kopiyay (Ctrl-ta hap'iy apaykachamunaykipaqpis, Shift-ta t'inkisqa qhipaman)",
+  "shot.error": "Pantallamanta fototaqa mana hap'iyta atikurqanchu"
 }

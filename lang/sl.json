@@ -394,6 +394,6 @@
   "ui.hide": "Skrij vmesnik (H)",
   "ui.show": "Prikaži vmesnik (H)",
 
-  "shot.title": "Shrani posnetek zaslona (držite Shift za prozorno ozadje)",
-  "shot.error": "Posnetka zaslona ni bilo mogoče shraniti"
+  "shot.title": "Kopiraj posnetek zaslona v odložišče (pridržite Ctrl za prenos, Shift za prosojno ozadje)",
+  "shot.error": "Posnetka zaslona ni bilo mogoče narediti"
 }

@@ -394,6 +394,6 @@
   "ui.hide": "Erisie interface (H)",
   "ui.show": "Erisie interface (H)",
 
-  "shot.title": "Italaa oloshisho le skrin (irripa Shift pee itum enkata naibalunyie)",
-  "shot.error": "Oreji italaa oloshisho le skrin"
+  "shot.title": "Kopi screenshot e clipboard (taa Ctrl pee ior oloshoroi, Shift pee elo background e sidai)",
+  "shot.error": "Eish, meleu olasho le screenshot"
 }

@@ -394,6 +394,6 @@
   "ui.hide": "Felület elrejtése (H)",
   "ui.show": "Felület megjelenítése (H)",
 
-  "shot.title": "Képernyőkép mentése (tartsa lenyomva a Shiftet az átlátszó háttérhez)",
-  "shot.error": "A képernyőképet nem sikerült menteni"
+  "shot.title": "Képernyőkép másolása a vágólapra (tartsd lenyomva a Ctrl-t a letöltéshez is, Shift az átlátszó háttérért)",
+  "shot.error": "Nem sikerült képernyőképet készíteni"
 }

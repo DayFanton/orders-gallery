@@ -396,6 +396,6 @@
   "ui.hide": "Fihla isikhombimsebenzisi (H)",
   "ui.show": "Khombisa isikhombimsebenzisi (H)",
 
-  "shot.title": "Bulunga isithombe sesikrini (bamba u-Shift ukuze ufumane ingemuva elibonakalako)",
-  "shot.error": "Akwazanga ukubulunga isithombe sesikrini"
+  "shot.title": "Kopa isithombe seskrini ku-clipboard (bamba u-Ctrl ukuthi ulande godu, u-Shift wesendlalelo esibonakalako)",
+  "shot.error": "Kutlulekile ukuthatha isithombe sesikrini"
 }

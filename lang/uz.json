@@ -396,6 +396,6 @@
   "ui.hide": "Interfeysni yashirish (H)",
   "ui.show": "Interfeysni ko'rsatish (H)",
 
-  "shot.title": "Skrinshotni saqlash (shaffof fon uchun Shift tugmasini bosib turing)",
-  "shot.error": "Skrinshotni saqlab bo'lmadi"
+  "shot.title": "Skrinshotni buferga nusxalash (shuningdek yuklab olish uchun Ctrl-ni, shaffof fon uchun Shift-ni bosib turing)",
+  "shot.error": "Skrinshotga olib boʻlmadi"
 }

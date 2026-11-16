@@ -394,6 +394,6 @@
   "ui.hide": "Interface maggana (H)",
   "ui.show": "Interface takki (H)",
 
-  "shot.title": "Screenshot dacrisa (baxxaqqa le gambu Shift ibbix)",
-  "shot.error": "Screenshot dacrisa maynna"
+  "shot.title": "Copy screenshot clipboard kee (Ctrl abenih, Shift transparent background kee)",
+  "shot.error": "Screen-a akakoloh maana"
 }

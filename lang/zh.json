@@ -396,6 +396,6 @@
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",
 
-  "shot.title": "保存截图（按住 Shift 可获得透明背景）",
-  "shot.error": "无法保存截图"
+  "shot.title": "复制截图到剪贴板 (按住 Ctrl 可同时下载，Shift 设为透明背景)",
+  "shot.error": "无法截屏"
 }

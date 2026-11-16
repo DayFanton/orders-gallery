@@ -396,6 +396,6 @@
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
 
-  "shot.title": "Save screenshot (hold Shift for a transparent background)",
-  "shot.error": "Could not save the screenshot"
+  "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download, Shift for transparent background)",
+  "shot.error": "Impossibile prendere screenshot"
 }

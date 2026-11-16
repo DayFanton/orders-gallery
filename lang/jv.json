@@ -396,6 +396,6 @@
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
 
-  "shot.title": "Simpen tangkapan layar (tahan Shift kanggo latar mburi transparan)",
-  "shot.error": "Ora bisa nyimpen tangkapan layar"
+  "shot.title": "Salin tangkapan layar menyang papan klip (tahan Ctrl kanggo ngundhuh uga, Shift kanggo latar mburi transparan)",
+  "shot.error": "Gagal njupuk tangkapan layar"
 }

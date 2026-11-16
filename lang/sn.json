@@ -394,6 +394,6 @@
   "ui.hide": "Vanza interface (H)",
   "ui.show": "Ratidza interface (H)",
 
-  "shot.title": "Chengetedza screenshot (bata Shift kuti uwane kumashure kunopenya)",
-  "shot.error": "Hazina kukwanisa kuchengetedza screenshot iri"
+  "shot.title": "Kopa skrini kuclipboard (bata Ctrl kuitira kurodhawo zvakare, Shift kuitira background yakajeka)",
+  "shot.error": "Zvakundikana kutora mufananidzo wechidzitiro"
 }

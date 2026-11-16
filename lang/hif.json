@@ -396,6 +396,6 @@
   "ui.hide": "Interface chupao (H)",
   "ui.show": "Interface dikhao (H)",
 
-  "shot.title": "Screenshot save karo (transparent background ke liye Shift dabaye rakho)",
-  "shot.error": "Screenshot save nahi kiya ja saka"
+  "shot.title": "Screenshot ke clipboard pe copy karo (download karne ke liye Ctrl dabaye rakho, transparent background ke liye Shift)",
+  "shot.error": "Screenshot nai liwa gais"
 }

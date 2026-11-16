@@ -396,6 +396,6 @@
   "ui.hide": "Skryť rozhranie (H)",
   "ui.show": "Zobraziť rozhranie (H)",
 
-  "shot.title": "Uložiť snímku obrazovky (podržte Shift pre priehľadné pozadie)",
-  "shot.error": "Snímku obrazovky sa nepodarilo uložiť"
+  "shot.title": "Skopírovať snímku obrazovky do schránky (podržte Ctrl pre stiahnutie, Shift pre priesvitné pozadie)",
+  "shot.error": "Nepodarilo sa urobiť snímku obrazovky"
 }

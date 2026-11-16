@@ -396,6 +396,6 @@
   "ui.hide": "Interface qixxa (H)",
   "ui.show": "Interface bescite (H)",
 
-  "shot.title": "Screenshot naaga (qoncciya guyyaassi Shift oyqqa)",
-  "shot.error": "Screenshot naaga bayntilde"
+  "shot.title": "Screenshot clipboard qolishi (Ctrl minca, Shift transparent background)",
+  "shot.error": "Screen-a oykki ba danda"
 }

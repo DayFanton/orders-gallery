@@ -394,6 +394,6 @@
   "ui.hide": "Fa interface no sie (H)",
   "ui.show": "Kyerɛ interface no (H)",
 
-  "shot.title": "Sie screenshot no (mia Shift so na akyi a ɛda hɔ)",
-  "shot.error": "Entumi nsie screenshot no"
+  "shot.title": "Kɔ pɛɛsɛn screenshot kɔ clipboard so (fa Ctrl kyere sɛ wopɛ sɛ wode to hɔ nso, Shift ma background a ɛda hɔ)",
+  "shot.error": "Entumi nfa screenshot no"
 }

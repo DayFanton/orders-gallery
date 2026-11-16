@@ -396,6 +396,6 @@
   "ui.hide": "Ɓla nɔnɔmɛ la (H)",
   "ui.show": "Fia nɔnɔmɛ la (H)",
 
-  "shot.title": "Dzra screen la ƒe nɔnɔmetata ɖo (lé Shift ɖe asi be megbe nakɔ)",
-  "shot.error": "Mewɔ ɖe edzi be maʋli screen la ƒe nɔnɔmetata o"
+  "shot.title": "Wɔ screenshot la kopi ɖe clipboard dzi (lé Ctrl ɖe asi be nàda hã, Shift na gɔmeɖeɖe si le gaglaga)",
+  "shot.error": "Menɔ te ɖe nɔnɔmetata dzidzedzefia o"
 }

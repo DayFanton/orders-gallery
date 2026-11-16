@@ -396,6 +396,6 @@
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
 
-  "shot.title": "Bumba kifwani ya ekrani (simba Shift sambu na kuvanda na nima ya kumonika)",
-  "shot.error": "Lenda ve bumba kifwani ya ekrani"
+  "shot.title": "Kopa screenshot na clipboard (simba Ctrl mpo na kukitula mpe, Shift mpo na background ya pɛtɛ)",
+  "shot.error": "Lenda ve kubaka kifwanisu ya screen"
 }

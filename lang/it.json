@@ -396,6 +396,6 @@
   "ui.hide": "Nascondi interfaccia (H)",
   "ui.show": "Mostra interfaccia (H)",
 
-  "shot.title": "Salva schermata (tieni premuto Maiusc per uno sfondo trasparente)",
-  "shot.error": "Impossibile salvare la schermata"
+  "shot.title": "Copia screenshot negli appunti (tieni premuto Ctrl per scaricare anche, Shift per lo sfondo trasparente)",
+  "shot.error": "Impossibile acquisire la schermata"
 }

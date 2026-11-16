@@ -396,6 +396,6 @@
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
 
-  "shot.title": "Save screenshot (hold Shift for transparent background)",
-  "shot.error": "No fit save dis screenshot"
+  "shot.title": "Kop screenshot go insaid clipboard (hold Ctrl to download join-join, Shift for transparent background)",
+  "shot.error": "E fail to take screenshot"
 }

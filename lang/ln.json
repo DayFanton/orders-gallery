@@ -394,6 +394,6 @@
   "ui.hide": "Bomba interface (H)",
   "ui.show": "Monisa interface (H)",
 
-  "shot.title": "Bomba fɔtɔ ya ekra (simba Shift mpo na kozwa nsima oyo emonanaka)",
-  "shot.error": "Ezali na likoki te kobomba fɔtɔ ya ekra"
+  "shot.title": "Kópi screenshot na clipboard (simba Ctrl mpo na kokitola mpe, Shift mpo na background ya pɛtɛpɛtɛ)",
+  "shot.error": "Ekoki te kozwa kopona ya écran"
 }

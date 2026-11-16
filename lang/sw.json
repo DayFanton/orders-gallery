@@ -396,6 +396,6 @@
   "ui.hide": "Ficha kiolesura (H)",
   "ui.show": "Onyesha kiolesura (H)",
 
-  "shot.title": "Hifadhi picha ya skrini (shikilia Shift kwa mandharinyuma angavu)",
-  "shot.error": "Haiwezi kuhusisha picha ya skrini"
+  "shot.title": "Nakili picha ya skrini kwenye ubao klipu (shikilia Ctrl ili kupakua pia, Shift kwa mandhari ya wazi)",
+  "shot.error": "Imeshindikana kuchukua picha ya skrini"
 }

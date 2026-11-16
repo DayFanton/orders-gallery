@@ -396,6 +396,6 @@
   "ui.hide": "Tumika mahlo (H)",
   "ui.show": "Kombisa mahlo (H)",
 
-  "shot.title": "Hlayisa xifaniso xa xikirini (khoma Shift ku kuma vundzhaku lebyi vonakalaka)",
-  "shot.error": "Swi tsandzehile ku hlayisa xifaniso xa xikirini"
+  "shot.title": "Kopa xifaniso xa screen eka clipboard (khoma Ctrl ku landzula, Shift ku va ni background leyi vonakaka)",
+  "shot.error": "Swi tsandzekile ku teka xifaniso xa screen"
 }

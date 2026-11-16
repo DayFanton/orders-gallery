@@ -396,6 +396,6 @@
   "ui.hide": "Ascunde interfața (H)",
   "ui.show": "Afișează interfața (H)",
 
-  "shot.title": "Salvează captura de ecran (țineți apăsat Shift pentru un fundal transparent)",
-  "shot.error": "Nu s-a putut salva captura de ecran"
+  "shot.title": "Copiați captura de ecran în clipboard (țineți apăsat Ctrl pentru a descărca și, Shift pentru fundal transparent)",
+  "shot.error": "Nu s-a putut face captură de ecran"
 }

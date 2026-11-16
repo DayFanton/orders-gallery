@@ -396,6 +396,6 @@
   "ui.hide": "Slėpti sąsają (H)",
   "ui.show": "Rodyti sąsają (H)",
 
-  "shot.title": "Išsaugoti ekrano kopiją (laikykite nuspaudę Shift, kad fonas būtų skaidrus)",
-  "shot.error": "Nepavyko išsaugoti ekrano kopijos"
+  "shot.title": "Kopijuoti ekrano kopiją į iškarpinę (laikykite nuspaudę „Ctrl“, kad ir atsisiųstumėte, „Shift“ – permatomam fonui)",
+  "shot.error": "Nepavyko padaryti ekrano kopijos"
 }

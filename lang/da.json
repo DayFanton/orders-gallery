@@ -396,6 +396,6 @@
   "ui.hide": "Skjul grænseflade (H)",
   "ui.show": "Vis grænseflade (H)",
 
-  "shot.title": "Gem skærmbillede (hold Shift nede for gennemsigtig baggrund)",
-  "shot.error": "Kunne ikke gemme skærmbilledet"
+  "shot.title": "Kopier skærmbillede til udklipsholder (hold Ctrl nede for også at downloade, Shift for gennemsigtig baggrund)",
+  "shot.error": "Kunne ikke tage skærmbillede"
 }

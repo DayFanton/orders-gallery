@@ -394,6 +394,6 @@
   "ui.hide": "Verberg interface (H)",
   "ui.show": "Toon interface (H)",
 
-  "shot.title": "Schermafbeelding opslaan (houd Shift ingedrukt voor een transparante achtergrond)",
-  "shot.error": "Kan de schermafbeelding niet opslaan"
+  "shot.title": "Screenshot naar klembord kopiëren (houd Ctrl ingedrukt om ook te downloaden, Shift voor een transparante achtergrond)",
+  "shot.error": "Kan geen schermafbeelding maken"
 }

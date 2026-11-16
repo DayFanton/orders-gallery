@@ -396,6 +396,6 @@
   "ui.hide": "Piilota käyttöliittymä (H)",
   "ui.show": "Näytä käyttöliittymä (H)",
 
-  "shot.title": "Tallenna kuvakaappaus (pidä Shift painettuna läpinäkyvää taustaa varten)",
-  "shot.error": "Kuvakaappausta ei voitu tallentaa"
+  "shot.title": "Kopioi kuvakaappaus leikepöydälle (pidä Ctrl painettuna ladataksesi myös, Shift läpinäkyvää taustaa varten)",
+  "shot.error": "Kuvakaappauksen ottaminen epäonnistui"
 }

@@ -396,6 +396,6 @@
   "ui.hide": "Masquer l'interface (H)",
   "ui.show": "Afficher l'interface (H)",
 
-  "shot.title": "Enregistrer la capture d'écran (maintenez Shift pour un arrière-plan transparent)",
-  "shot.error": "Impossible d'enregistrer la capture d'écran"
+  "shot.title": "Copier la capture d'écran dans le presse-papiers (maintenez Ctrl pour télécharger également, Shift pour un fond transparent)",
+  "shot.error": "Impossible de prendre une capture d'écran"
 }

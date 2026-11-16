@@ -396,6 +396,6 @@
   "ui.hide": "Enterfeyi bınusne (H)",
   "ui.show": "Enterfeyi bımocne (H)",
 
-  "shot.title": "Screenshot qeyd ke (seba peyniyo şefaf Shift tepışte bıtepışne)",
-  "shot.error": "Screenshot nê qeyd bi"
+  "shot.title": "Screenshot bıkle clipboard (qele Ctrl bıkle, qele Shift background rındek)",
+  "shot.error": "Ekran ra nêgrewiya"
 }

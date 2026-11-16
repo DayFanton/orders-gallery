@@ -396,6 +396,6 @@
   "ui.hide": "Qari is dhexgalka (H)",
   "ui.show": "Muuji is dhexgalka (H)",
 
-  "shot.title": "Keydi sawirka shaashadda (qabo Shift si aad u hesho asal hufan)",
-  "shot.error": "Kuma darin keydinta sawirka shaashadda"
+  "shot.title": "Koobiyo sawirka shaashadda oo geli sabuuradda (qabo Ctrl si aad u soo dejiso sidoo kale, Shift oo ah asalka hufan)",
+  "shot.error": "Waa lagu guuldarraystay in la qaado sawirka shaashadda"
 }

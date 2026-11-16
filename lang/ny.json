@@ -396,6 +396,6 @@
   "ui.hide": "Bisani mawonekedwe (H)",
   "ui.show": "Sonyezani mawonekedwe (H)",
 
-  "shot.title": "Sungani chithunzi cha pa sikirini (gwirani Shift kuti mupeze kumbuyo kooneka)",
-  "shot.error": "Sizotheka kusungira chithunzi cha pa sikirini"
+  "shot.title": "Koperani chithunzi cha pazenera ku clipboard (gwirani Ctrl kuti mutitsitsenso, Shift yambuyo yowonekera)",
+  "shot.error": "Zalephera kutenga chithunzi cha pazenera"
 }

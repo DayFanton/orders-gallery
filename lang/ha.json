@@ -396,6 +396,6 @@
   "ui.hide": "Ɓoye mai amfani (H)",
   "ui.show": "Nuna mai amfani (H)",
 
-  "shot.title": "Ajiye hoton allo (riƙe Shift don samun bango mai haske)",
-  "shot.error": "Ba a iya ajiye hoton allo ba"
+  "shot.title": "Kwafi hoton allo zuwa allon clipboard (riƙe Ctrl don saukewa ma, Shift don bango mai nuna gaskiya)",
+  "shot.error": "Ba a iya daukar hoton ekran ba"
 }

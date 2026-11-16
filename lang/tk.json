@@ -396,6 +396,6 @@
   "ui.hide": "Interfeýsi gizlemek (H)",
   "ui.show": "Interfeýsi görkezmek (H)",
 
-  "shot.title": "Skrinşoty ýatda saklamak (dury fon üçin Shift düwmesini basyp saklaň)",
-  "shot.error": "Skrinşoty ýatda saklap bolmady"
+  "shot.title": "Ekran suraty buferine göçürmek (hem-de ýüklemek üçin Ctrl düwmesine basyň, aç-açan fon üçin Shift)",
+  "shot.error": "Ekran suratyny alyp bolmady"
 }

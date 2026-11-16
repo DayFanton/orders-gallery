@@ -396,6 +396,6 @@
   "ui.hide": "Vhaedza zwiga (H)",
   "ui.show": "Luvhadza zwiga (H)",
 
-  "shot.title": "Vhulungani tshifanyiso tsha tshikirini (farani Shift u itela murahu hu vhonalaho)",
-  "shot.error": "A zwo ngo kona u vhulunga tshifanyiso tsha tshikirini"
+  "shot.title": "Kopa tshifanyiso tsha skrini kha clipboard (fara Ctrl u uri u ḓowunilude hafhu, Shift ya vhualo vhu leluwaho)",
+  "shot.error": "Zwo vha zwi sa konadziwi u dzhia tshikirini"
 }

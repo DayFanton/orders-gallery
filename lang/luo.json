@@ -396,6 +396,6 @@
   "ui.hide": "Mon gima (H)",
   "ui.show": "Nyis gima (H)",
 
-  "shot.title": "Kan picha mar skrin (mak Shift mondo iyud ng'eyo ma nenore)",
-  "shot.error": "Ok nyal kano picha mar skrin"
+  "shot.title": "Kopi screenshot e clipboard (qab Ctrl mondo ior bende, Shift mondo obed gi background maywany)",
+  "shot.error": "Ok nyalo kawo screenshot"
 }

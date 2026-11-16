@@ -394,6 +394,6 @@
   "ui.hide": "Fihla ujongano (H)",
   "ui.show": "Bonisa ujongano (H)",
 
-  "shot.title": "Gcina umfanekiso weskrini (bamba u-Shift ukuze ufumane imvelaphi ecacileyo)",
-  "shot.error": "Akwazanga ukugcina umfanekiso weskrini"
+  "shot.title": "Kopa umfanekiso weskrini kwibhodi eqokelelwayo (bamba u-Ctrl ukuze ukhuphele kwakhona, u-Shift ngasemva okucacileyo)",
+  "shot.error": "Ayiphumelelanga ukuthatha umfanekiso weskrini"
 }
