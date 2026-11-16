@@ -1,0 +1,16 @@
+[
+  {
+    "id": "grass",
+    "top": { "file": "grass_block_top.png", "tint": "#91bd59" },
+    "side": [ "grass_block_side.png", { "file": "grass_block_side_overlay.png", "tint": "#91bd59" } ],
+    "bottom": "dirt.png"
+  },
+  "dirt",
+  "stone",
+  "cobblestone",
+  "sand",
+  "snow",
+  { "id": "planks", "all": "oak_planks.png" },
+  "netherrack",
+  "end_stone"
+]
