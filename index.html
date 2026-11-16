@@ -1069,9 +1069,9 @@
         /* Поиск по языкам */
         .lang-menu { min-width: 230px; }
         .lang-search-wrap { padding: 2px 2px 6px; }
-        .lang-search { width: 100%; box-sizing: border-box; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-main);
+        .lang-search, .emote-search { width: 100%; box-sizing: border-box; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-main);
             border-radius: 6px; padding: 7px 10px; font-size: 0.8rem; outline: none; -webkit-user-select: text; user-select: text; }
-        .lang-search:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15); }
+        .lang-search:focus, .emote-search:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15); }
         .lang-list { display: flex; flex-direction: column; gap: 2px; max-height: min(52vh, 340px); overflow-y: auto; }
         .lang-empty { display: none; padding: 10px; font-size: 0.78rem; color: var(--text-muted); text-align: center; }
 
@@ -1098,6 +1098,54 @@
             background: linear-gradient(90deg, #0a0f2c 0%, #0a0f2c 19%, #e8894a 25%, #79b4ff 36%, #79b4ff 64%, #e8894a 75%, #0a0f2c 81%, #0a0f2c 100%); }
         .time-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 2px solid #111; }
         .time-slider::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid #111; }
+
+        /* ================= Версия 1.7.1 ================= */
+        /* Личная папка */
+        .folder-ico { font-size: 1rem; }
+        .folder-list { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+        .folder-list .emote-card img, .folder-thumb-empty { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; }
+        .folder-list .emote-card img.folder-thumb-wide, .folder-thumb-empty.folder-thumb-wide { aspect-ratio: 16 / 9; }
+        .folder-list .emote-card img.folder-thumb-pixel { image-rendering: pixelated; object-position: top; background: #222; }
+        .folder-thumb-empty { display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, #2a2a33, #17171c); }
+        .folder-plus { justify-content: center; min-height: 130px; background: transparent; border: 2px dashed var(--accent); color: var(--accent); }
+        .folder-plus-sign { font-size: 2.6rem; line-height: 1; font-weight: 300; }
+        .folder-card { position: relative; }
+        .folder-del, .folder-icon-btn { position: absolute; top: 6px; width: 24px; height: 24px; padding: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; line-height: 1; cursor: pointer; color: #fff; background: rgba(0, 0, 0, 0.7); border: 1px solid var(--border); border-radius: 50%;
+            opacity: 0; transition: opacity 0.15s ease, background 0.15s ease; }
+        .folder-del { inset-inline-end: 6px; font-size: 1.1rem; }
+        .folder-icon-btn { inset-inline-start: 6px; }
+        .folder-card:hover .folder-del, .folder-card:hover .folder-icon-btn, .folder-del:focus, .folder-icon-btn:focus { opacity: 1; }
+        .folder-del:hover { background: #ef4444; }
+        .folder-icon-btn:hover { background: var(--accent); color: #111; }
+        @media (hover: none) { .folder-del, .folder-icon-btn { opacity: 1; } }
+
+        /* Эмоции: поиск и автор */
+        .emote-search { flex-shrink: 0; }
+        .emote-author { font-size: 0.7rem; color: var(--text-muted); }
+        .emote-author a { color: var(--accent); text-decoration: none; }
+        .emote-author a:hover { text-decoration: underline; }
+
+        /* Кнопки над вьюером: скриншот и скрытие интерфейса */
+        #viewer_tools { position: absolute; bottom: 20px; inset-inline-end: 20px; display: flex; gap: 8px; z-index: 6; transition: opacity 0.25s ease; }
+        .tool-btn { width: 42px; height: 42px; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-muted);
+            background: rgba(19, 19, 22, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 8px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); transition: all 0.2s ease; }
+        .tool-btn:hover { color: var(--text-main); border-color: var(--text-muted); }
+        .tool-btn svg { width: 20px; height: 20px; }
+        .ico-eye-off { display: none; }
+        body.ui-hidden .ico-eye { display: none; }
+        body.ui-hidden .ico-eye-off { display: block; }
+        body.ui-hidden #sidebar, body.ui-hidden #controls_panel, body.ui-hidden #lang_container,
+        body.ui-hidden #variations_container, body.ui-hidden #mobile_nav { display: none !important; }
+        body.ui-hidden #viewer_tools { opacity: 0.4; }
+        body.ui-hidden #viewer_tools:hover { opacity: 1; }
+        .shot-flash { position: absolute; inset: 0; z-index: 7; background: #fff; opacity: 0.7; pointer-events: none; animation: shotFlash 0.3s ease-out forwards; }
+        @keyframes shotFlash { to { opacity: 0; } }
+        @media (max-width: 900px) {
+            #viewer_tools { bottom: 84px; }
+            body.ui-hidden #viewer_tools { bottom: 20px; }
+        }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1159,7 +1207,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.0</div>
+            <div class="site-version">v1.7.1</div>
         </div>
     </div>
 
@@ -1173,6 +1221,15 @@
             <div class="dropdown-menu lang-menu" id="langMenu"></div>
         </div>
         <div id="variations_container" style="display: none;"></div>
+        <div id="viewer_tools">
+            <button id="btnShot" class="tool-btn" type="button" title="Сохранить скриншот">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            </button>
+            <button id="btnHideUi" class="tool-btn" type="button" title="Скрыть интерфейс">
+                <svg class="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="ico-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.3 2 12 2 12s3.6 7 10 7c1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+            </button>
+        </div>
         <canvas id="skin_container"></canvas>
     </div>
 
@@ -1268,6 +1325,8 @@
                 <div id="platformOptions" style="display:none;">
                     <div class="platform-label" id="lbl_block">Блок</div>
                     <div class="block-grid" id="blockGrid"></div>
+                    <div class="emote-hint" id="blockGridHint" style="display:none; margin-top:6px;">Блоков пока нет — положите текстуры в папку blocks/ или добавьте свои.</div>
+                    <button id="btnBlockFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои блоки</span></button>
                     <div class="slider-container">
                         <div class="slider-header">
                             <span id="lbl_time">Время суток</span>
@@ -1322,11 +1381,11 @@
                 <h3 id="emoteTitle">Эмоции</h3>
                 <button id="btnEmoteClose" class="emote-close" type="button" title="Закрыть">&times;</button>
             </div>
-            <div id="emoteHint" class="emote-hint">Выберите эмоцию или загрузите свой .json файл</div>
+            <div id="emoteHint" class="emote-hint">Выберите эмоцию или откройте «Мои эмоции», чтобы добавить свою</div>
+            <input type="text" id="emoteSearch" class="emote-search" autocomplete="off" spellcheck="false" placeholder="Поиск эмоций...">
             <div id="emoteList" class="emote-list"></div>
             <div id="emoteMsg" class="emote-msg"></div>
-            <button id="btnEmoteTest" class="emote-test" type="button">Проверить свою эмоцию</button>
-            <input type="file" id="emoteFile" accept=".json,application/json" style="display:none">
+            <button id="btnEmoteTest" class="emote-test" type="button"><span class="folder-ico">📁</span> <span class="folder-lbl">Мои эмоции</span></button>
         </div>
     </div>
 
@@ -1339,8 +1398,23 @@
             <div id="bgImageHint" class="emote-hint">Выберите картинку или загрузите свою</div>
             <div id="bgImageList" class="emote-list bgimg-list"></div>
             <div id="bgImageMsg" class="emote-msg"></div>
-            <button id="btnBgUpload" class="emote-test" type="button">Загрузить свою картинку</button>
-            <input type="file" id="bgImageFile" accept="image/*" style="display:none">
+            <button id="btnBgFolder" class="emote-test" type="button"><span class="folder-ico">📁</span> <span class="folder-lbl">Мои картинки</span></button>
+        </div>
+    </div>
+
+    <div id="folderModal" class="emote-overlay">
+        <div class="emote-panel">
+            <div class="emote-head">
+                <h3 id="folderTitle"></h3>
+                <button id="folderClose" class="emote-close" type="button" title="Закрыть">&times;</button>
+            </div>
+            <div id="folderHint" class="emote-hint"></div>
+            <div id="folderList" class="emote-list folder-list"></div>
+            <div id="folderEmpty" class="emote-hint" style="display:none;">Здесь пока пусто — нажмите «+», чтобы добавить первый файл.</div>
+            <div id="folderMsg" class="emote-msg"></div>
+            <div id="folderNote" class="emote-hint">Файлы хранятся только в этом браузере.</div>
+            <input type="file" id="folderFile" style="display:none">
+            <input type="file" id="folderIconFile" accept="image/*" style="display:none">
         </div>
     </div>
 
@@ -1464,9 +1538,8 @@
             "language.auto": "Auto",
             "emote.button": "Emotes",
             "emote.title": "Emotes",
-            "emote.hint": "Choose an emote or load your own .json file",
+            "emote.hint": "Choose an emote or open \"My emotes\" to add your own",
             "emote.stop": "Stop emote",
-            "emote.test": "Test your own emote",
             "emote.empty": "No emotes found (folder emotes/)",
             "emote.error": "Could not read this emote file",
             "emote.playing": "Playing: %s",
@@ -1478,7 +1551,6 @@
             "bg.image.button": "Background image",
             "bg.image.title": "Background image",
             "bg.image.hint": "Choose a picture or upload your own",
-            "bg.image.upload": "Upload your own image",
             "bg.image.yours": "Your image",
             "bg.image.empty": "No images found (folder backgrounds/)",
             "bg.image.error": "Could not open this image",
@@ -1495,7 +1567,34 @@
             "block.snow": "Snow block",
             "block.planks": "Oak planks",
             "block.netherrack": "Netherrack",
-            "block.end_stone": "End stone"
+            "block.end_stone": "End stone",
+            "block.plain": "No texture",
+            "blocks.empty": "No blocks yet - put textures into the blocks/ folder or add your own.",
+            "folder.add": "Add",
+            "folder.delete": "Delete",
+            "folder.delete_confirm": "Delete \"%s\" from your folder?",
+            "folder.empty": "Nothing here yet - press \"+\" to add your first file.",
+            "folder.local_note": "Files are stored only in this browser.",
+            "folder.memory_only": "Browser storage is unavailable - files will disappear when you close the tab.",
+            "folder.error": "Could not add this file",
+            "folder.bg.open": "My images",
+            "folder.bg.title": "My images",
+            "folder.bg.hint": "Your uploaded images. Press \"+\" to add a new one.",
+            "folder.block.open": "My blocks",
+            "folder.block.title": "My blocks",
+            "folder.block.hint": "One image is used for all faces. Or pick three files named ..._top, ..._side and ..._bottom.",
+            "folder.block.error": "Pick one image, or files ending in _top, _side or _bottom",
+            "folder.emote.open": "My emotes",
+            "folder.emote.title": "My emotes",
+            "folder.emote.hint": "Pick an emote .json file and, if you want, an icon image (.png) in the same dialog.",
+            "folder.emote.icon": "Change icon",
+            "emote.by": "by %s",
+            "emote.search_placeholder": "Search emotes...",
+            "emote.no_results": "No emotes found",
+            "ui.hide": "Hide interface (H)",
+            "ui.show": "Show interface (H)",
+            "shot.title": "Save screenshot (hold Shift for a transparent background)",
+            "shot.error": "Could not save the screenshot"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
         setTimeout(() => document.body.classList.remove('i18n-pending'), 4000);
@@ -1541,12 +1640,18 @@
             ['#btnEmoteStop', 'emote.stop'],
             ['#emoteTitle', 'emote.title'],
             ['#emoteHint', 'emote.hint'],
-            ['#btnEmoteTest', 'emote.test'],
+            ['#btnEmoteTest .folder-lbl', 'folder.emote.open'],
+            ['#emoteSearch', 'emote.search_placeholder', 'placeholder'],
+            ['#btnBgFolder .folder-lbl', 'folder.bg.open'],
+            ['#btnBlockFolder .folder-lbl', 'folder.block.open'],
+            ['#blockGridHint', 'blocks.empty'],
+            ['#folderEmpty', 'folder.empty'],
+            ['#folderNote', 'folder.local_note'],
+            ['#folderClose', 'emote.close', 'title'],
             ['#btnEmoteClose', 'emote.close', 'title'],
             ['#btnBgImage .bg-image-label', 'bg.image.button'],
             ['#bgImageTitle', 'bg.image.title'],
             ['#bgImageHint', 'bg.image.hint'],
-            ['#btnBgUpload', 'bg.image.upload'],
             ['#btnBgImageClose', 'bg.image.close', 'title'],
             ['#platformGroup > h3', 'platform.title'],
             ['#platform_toggle + span', 'platform.enable'],
@@ -1795,6 +1900,8 @@
             updateLangButtons();
             Backdrop.refresh();
             Scene3D.refreshUi();
+            Folder.refresh();
+            ViewerTools.refresh();
             if (typeof refreshEmoteUi === 'function') refreshEmoteUi();
             if (rerender) {
                 renderTagsDOM();
@@ -1928,9 +2035,10 @@
             return (typeof name === 'string' && name.trim()) ? ownText(`person.${name.trim()}`, name) : name;
         }
 
-        // Собирает шаблон со всеми ключами из загруженных skins.json / capes.json (значения - оригиналы).
-        // Вызов из консоли браузера: exportLangTemplate()  - скачается lang_template.json
-        function exportLangTemplate() {
+        // Собирает шаблон со всеми ключами: скины, плащи, вариации, эмоции (+ их авторы), фоны из backgrounds/, блоки из blocks/.
+        // Значения - оригиналы (для эмоций, фонов и блоков - имя файла). Вызов из консоли браузера: exportLangTemplate()
+        // - скачается lang_template.json (и вернётся объект).
+        async function exportLangTemplate() {
             const out = {};
             const people = new Set();
             const addPerson = (n) => {
@@ -1946,6 +2054,11 @@
                 (c.variations || []).forEach(v => { if (v && v.filename && v.name) out[`variation.name.${v.filename}`] = v.name; });
             });
             [...globalSkins, ...globalCapes].forEach(it => { addPerson(it.author); getCustomers(it).forEach(addPerson); });
+
+            const pretty = (x) => String(x).replace(/\.[^.]+$/, '').replace(/[_\-]+/g, ' ').trim();
+            (await EmoteUI.entries()).forEach(e => { out[`emote.name.${e.id}`] = pretty(e.id); addPerson(e.author); });
+            (await Backdrop.files()).forEach(f => { out[`bgimg.name.${f.replace(/\.[^.]+$/, '')}`] = pretty(f); });
+            (await Scene3D.blockIds()).forEach(id => { out[`block.${id}`] = pretty(id); });
             [...people].sort((a, b) => a.localeCompare(b)).forEach(n => { out[`person.${n}`] = n; });
 
             const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
@@ -2605,24 +2718,256 @@
             }
         }
 
-        /* ---------- Фон: цвета, картинки из папки backgrounds/ и своя картинка ----------
+        /* ---------- Общие помощники ---------- */
+        // Название из lang: сначала выбранный язык, потом английский, потом запасной вариант (например, имя файла)
+        function nameFor(key, fallback) {
+            for (const dict of [i18nDict, i18nBase]) {
+                const v = Object.prototype.hasOwnProperty.call(dict, key) ? dict[key] : null;
+                if (typeof v === 'string' && v.trim()) return v;
+            }
+            return fallback;
+        }
+        // Проверка, что браузер умеет открыть файл как картинку
+        function probeImage(blob) {
+            return new Promise((resolve, reject) => {
+                const url = URL.createObjectURL(blob);
+                const im = new Image();
+                im.onload = () => { URL.revokeObjectURL(url); resolve(im); };
+                im.onerror = () => { URL.revokeObjectURL(url); reject(new Error('bad image')); };
+                im.src = url;
+            });
+        }
+        // Ошибка с ключом перевода - её текст показывается пользователю в окне папки
+        class FolderError extends Error {
+            constructor(i18nKey) { super(i18nKey); this.i18n = i18nKey; }
+        }
+
+        /* ---------- Личная папка пользователя ----------
+           Хранится в IndexedDB этого браузера (на сервер ничего не уходит), три раздела:
+             bg    - картинки на фон:     { id, name, blob }
+             block - текстуры блоков:     { id, name, faces: { all | top | side | bottom: Blob } }
+             emote - эмоции:              { id, name, json: текст .json, icon: Blob | null }
+           Если IndexedDB недоступна (приватный режим и т.п.), всё работает в памяти до закрытия вкладки. */
+        const UserLib = (() => {
+            const DB_NAME = 'tsyplyash-gallery', DB_VERSION = 2, KINDS = ['bg', 'block', 'emote'];
+            const mem = { bg: [], block: [], emote: [] }, seq = { bg: 0, block: 0, emote: 0 };
+            let dbPromise = null, persistent = true;
+
+            function open() {
+                if (!dbPromise) {
+                    dbPromise = new Promise((resolve, reject) => {
+                        if (!window.indexedDB) { reject(new Error('IndexedDB unavailable')); return; }
+                        const req = indexedDB.open(DB_NAME, DB_VERSION);
+                        req.onupgradeneeded = () => {
+                            const db = req.result;
+                            if (!db.objectStoreNames.contains('kv')) db.createObjectStore('kv');        // хранилище версии 1.7.0
+                            KINDS.forEach(k => { if (!db.objectStoreNames.contains(k)) db.createObjectStore(k, { keyPath: 'id', autoIncrement: true }); });
+                        };
+                        req.onsuccess = () => resolve(req.result);
+                        req.onerror = () => reject(req.error);
+                    }).catch(() => { persistent = false; return null; });
+                }
+                return dbPromise;
+            }
+            function request(store, mode, fn) {
+                return open().then(db => new Promise((resolve, reject) => {
+                    const tx = db.transaction(store, mode);
+                    let result;
+                    const req = fn(tx.objectStore(store));
+                    if (req) req.onsuccess = () => { result = req.result; };
+                    tx.oncomplete = () => resolve(result);
+                    tx.onerror = () => reject(tx.error);
+                    tx.onabort = () => reject(tx.error);
+                }));
+            }
+
+            async function list(kind) {
+                if (!(await open())) return mem[kind].slice();
+                const all = await request(kind, 'readonly', s => s.getAll());
+                return (all || []).sort((a, b) => a.id - b.id);
+            }
+            async function get(kind, id) {
+                id = Number(id);
+                if (!(await open())) return mem[kind].find(r => r.id === id) || null;
+                return (await request(kind, 'readonly', s => s.get(id))) || null;
+            }
+            async function add(kind, rec) {
+                rec = Object.assign({}, rec, { created: Date.now() });
+                delete rec.id;
+                if (!(await open())) { rec.id = ++seq[kind]; mem[kind].push(rec); return rec; }
+                rec.id = await request(kind, 'readwrite', s => s.add(rec));
+                return rec;
+            }
+            async function put(kind, rec) {
+                if (!(await open())) {
+                    const i = mem[kind].findIndex(r => r.id === rec.id);
+                    if (i >= 0) mem[kind][i] = rec;
+                    return rec;
+                }
+                await request(kind, 'readwrite', s => s.put(rec));
+                return rec;
+            }
+            async function remove(kind, id) {
+                id = Number(id);
+                if (!(await open())) { mem[kind] = mem[kind].filter(r => r.id !== id); return; }
+                await request(kind, 'readwrite', s => s.delete(id));
+            }
+            // Картинка фона версии 1.7.0 лежала в kv под ключом bgUpload - забираем её один раз
+            async function takeLegacyBg() {
+                if (!(await open())) return null;
+                try {
+                    const blob = await request('kv', 'readonly', s => s.get('bgUpload'));
+                    if (blob) { await request('kv', 'readwrite', s => s.delete('bgUpload')); return blob; }
+                } catch (e) { /* нечего забирать */ }
+                return null;
+            }
+            return { list, get, add, put, remove, takeLegacyBg, isPersistent: () => persistent };
+        })();
+
+        /* ---------- Окно «моя папка» (одно на все разделы) ----------
+           Раздел регистрирует себя через Folder.register(kind, {...}):
+             title, hint   - ключи перевода заголовка и подсказки
+             accept, multiple - какие файлы выбирать в диалоге «+»
+             build(files)  - из выбранных файлов делает запись для UserLib (или бросает FolderError)
+             thumb(rec, track) - адрес картинки-превью (track создаёт object URL, который сам уберётся) или null
+             thumbClass, placeholder - вид превью
+             isActive(rec), pick(rec), onRemove(rec), decorate(el, rec, rerender) */
+        const Folder = (() => {
+            const $ = (id) => document.getElementById(id);
+            const CFG = {};
+            let kind = null, urls = [], token = 0;
+
+            const message = (text) => { $('folderMsg').textContent = text || ''; };
+            const revokeAll = () => { urls.forEach(u => URL.revokeObjectURL(u)); urls = []; };
+            const track = (blob) => { const u = URL.createObjectURL(blob); urls.push(u); return u; };
+            const register = (k, cfg) => { CFG[k] = cfg; };
+            const isOpen = () => $('folderModal').classList.contains('show');
+
+            function applyTexts() {
+                if (!kind) return;
+                $('folderTitle').textContent = t(CFG[kind].title);
+                $('folderHint').textContent = t(CFG[kind].hint);
+            }
+
+            function makeCard(c, rec) {
+                const el = document.createElement('div');
+                el.className = 'emote-card folder-card' + (c.isActive && c.isActive(rec) ? ' active' : '');
+                const src = c.thumb ? c.thumb(rec, track) : null;
+                let pic;
+                if (src) {
+                    pic = document.createElement('img');
+                    pic.src = src;
+                    pic.alt = '';
+                    pic.loading = 'lazy';
+                    if (c.thumbClass) pic.className = c.thumbClass;
+                } else {
+                    pic = document.createElement('div');
+                    pic.className = 'folder-thumb-empty ' + (c.thumbClass || '');
+                    pic.textContent = c.placeholder || '📄';
+                }
+                const name = document.createElement('span');
+                name.textContent = rec.name;
+                const del = document.createElement('button');
+                del.type = 'button';
+                del.className = 'folder-del';
+                del.textContent = '×';
+                del.title = t('folder.delete');
+                del.onclick = async (e) => {
+                    e.stopPropagation();
+                    if (!window.confirm(t('folder.delete_confirm', rec.name))) return;
+                    try { await UserLib.remove(kind, rec.id); } catch (err) { console.error('[folder]', err); message(t('folder.error')); return; }
+                    if (c.onRemove) c.onRemove(rec);
+                    render();
+                };
+                el.append(pic, name, del);
+                if (c.decorate) c.decorate(el, rec, render);
+                el.onclick = () => { close(); c.pick(rec); };
+                return el;
+            }
+
+            async function render() {
+                if (!kind) return;
+                const c = CFG[kind], my = ++token;
+                const items = await UserLib.list(kind);
+                if (my !== token) return;
+                revokeAll();
+                const box = $('folderList');
+                box.innerHTML = '';
+                const plus = document.createElement('div');
+                plus.className = 'emote-card folder-plus';
+                plus.innerHTML = '<span class="folder-plus-sign">+</span><span></span>';
+                plus.lastChild.textContent = t('folder.add');
+                plus.onclick = () => { message(''); $('folderFile').click(); };
+                box.appendChild(plus);
+                items.forEach(rec => box.appendChild(makeCard(c, rec)));
+                $('folderEmpty').style.display = items.length ? 'none' : 'block';
+                if (!UserLib.isPersistent()) message(t('folder.memory_only'));
+            }
+
+            async function onFiles(files) {
+                const c = CFG[kind];
+                if (!c || !files.length) return;
+                try {
+                    const rec = await UserLib.add(kind, await c.build(files));
+                    close();
+                    c.pick(rec);                         // добавленное сразу применяется
+                } catch (e) {
+                    console.error('[folder]', e);
+                    message(t(e && e.i18n ? e.i18n : 'folder.error'));
+                }
+            }
+
+            async function open(k) {
+                if (!CFG[k]) return;
+                kind = k;
+                message('');
+                applyTexts();
+                const f = $('folderFile');
+                f.accept = CFG[k].accept || '';
+                f.multiple = !!CFG[k].multiple;
+                $('folderModal').classList.add('show');
+                await render();
+            }
+            function close() {
+                $('folderModal').classList.remove('show');
+                revokeAll();
+                token++;
+            }
+            function refresh() { applyTexts(); if (isOpen()) render(); }      // после смены языка
+
+            function init() {
+                $('folderClose').onclick = close;
+                $('folderModal').onclick = (e) => { if (e.target === $('folderModal')) close(); };
+                $('folderFile').onchange = (e) => { const files = [...e.target.files]; e.target.value = ''; onFiles(files); };
+                // Escape закрывает только верхнее окно (папку), а не всё сразу
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && isOpen()) { close(); e.stopImmediatePropagation(); }
+                }, true);
+            }
+            init();
+            return { register, open, close, refresh, isOpen };
+        })();
+
+        /* ---------- Фон: цвета, картинки из папки backgrounds/ и свои картинки (личная папка) ----------
            Состояние фона лежит в ссылке параметром bg:
              bg=purple            - готовый цвет (dark / light / purple / red / pink / yellow / blue); тёмный по умолчанию в ссылку не пишется
              bg=c-ff8800          - свой цвет
-             bg=i-day.jpg         - картинка из папки backgrounds/ (список - backgrounds/backgrounds.json, как у эмоций)
-             bg=upload            - своя загруженная картинка. Файл с компьютера в ссылку не положишь, поэтому он хранится
-                                    в этом браузере (IndexedDB); в чужом браузере по такой ссылке откроется обычный фон. */
+             bg=i-day.jpg         - картинка из папки backgrounds/ (список - backgrounds/backgrounds.json)
+             bg=u-3               - своя картинка №3 из личной папки. Сам файл в ссылку не положишь: он хранится в этом браузере
+                                    (IndexedDB), в чужом браузере по такой ссылке откроется обычный фон.
+             bg=upload            - старый формат версии 1.7.0, превращается в u-N
+           Названия картинок для перевода: bgimg.name.<имя файла без расширения> (day.jpg -> bgimg.name.day). */
         const Backdrop = (() => {
             const $ = (id) => document.getElementById(id);
             const SAFE_FILE = /^[A-Za-z0-9][A-Za-z0-9_.\- ]{0,119}$/;      // имя файла из ссылки: без путей и спецсимволов
             const MAX_UPLOAD = 25 * 1024 * 1024;
             let manifest = null;
-            let uploadUrl = null;
+            const userUrls = new Map();                                    // id картинки из личной папки -> object URL
             let customDot = null, colorInput = null;
 
             const baseName = (f) => f.replace(/\.[^.]+$/, '');
             const prettify = (f) => baseName(f).replace(/_/g, ' ').trim();
-            const titleFor = (file) => ownText('bgimg.name.' + baseName(file), prettify(file));
+            const titleFor = (file) => nameFor('bgimg.name.' + baseName(file), prettify(file));
 
             function normalizeKey(raw) {
                 const s = String(raw || '').trim();
@@ -2632,21 +2977,23 @@
                 if (m) return 'c-' + m[1].toLowerCase();
                 m = /^i-(.+)$/.exec(s);
                 if (m && SAFE_FILE.test(m[1]) && !m[1].includes('..')) return 'i-' + m[1];
+                m = /^u-(\d{1,9})$/.exec(s);
+                if (m) return 'u-' + Number(m[1]);
                 if (s === 'upload') return 'upload';
                 return 'dark';
             }
+            const userId = (key) => (key.startsWith('u-') ? Number(key.slice(2)) : null);
 
             function cssFor(key) {
                 if (key.startsWith('c-')) return '#' + key.slice(2);
                 if (key.startsWith('i-')) return `#0b0b0d center / cover no-repeat url("backgrounds/${encodeURIComponent(key.slice(2))}")`;
-                if (key === 'upload' && uploadUrl) return `#0b0b0d center / cover no-repeat url("${uploadUrl}")`;
+                if (key.startsWith('u-') && userUrls.has(userId(key))) return `#0b0b0d center / cover no-repeat url("${userUrls.get(userId(key))}")`;
                 const p = bgPresets.find(x => x.id === key);
                 return (p || bgPresets[0]).value;
             }
-
             function imageSrcFor(key) {
                 if (key.startsWith('i-')) return 'backgrounds/' + encodeURIComponent(key.slice(2));
-                if (key === 'upload') return uploadUrl;
+                if (key.startsWith('u-')) return userUrls.get(userId(key)) || null;
                 return null;
             }
 
@@ -2658,7 +3005,7 @@
                 if (idx >= 0 && dots[idx]) dots[idx].classList.add('active');
                 if (key.startsWith('c-') && customDot) customDot.classList.add('active');
 
-                const isImage = key.startsWith('i-') || key === 'upload';
+                const isImage = key.startsWith('i-') || key.startsWith('u-');
                 const btn = $('btnBgImage'), thumb = $('bgImageThumb');
                 if (btn) btn.classList.toggle('active', isImage);
                 if (thumb) {
@@ -2668,11 +3015,29 @@
                 }
             }
 
+            async function loadUser(id) {
+                try {
+                    const rec = await UserLib.get('bg', id);
+                    if (rec && rec.blob) { userUrls.set(id, URL.createObjectURL(rec.blob)); return true; }
+                } catch (e) { /* хранилище недоступно */ }
+                return false;
+            }
+            async function resolveLegacy() {                               // bg=upload из версии 1.7.0
+                try {
+                    const blob = await UserLib.takeLegacyBg();
+                    if (blob && /^image\//.test(blob.type)) { const rec = await UserLib.add('bg', { name: t('bg.image.yours'), blob }); return 'u-' + rec.id; }
+                    const all = await UserLib.list('bg');
+                    if (all.length) return 'u-' + all[all.length - 1].id;
+                } catch (e) { /* ничего */ }
+                return 'dark';
+            }
+
             // Единственная точка, где меняется фон. sync=false - не трогать адресную строку (чтение из ссылки / popstate)
             function apply(raw, sync = true) {
                 const key = normalizeKey(raw);
-                if (key === 'upload' && !uploadUrl) {
-                    restoreUpload().then(ok => apply(ok ? 'upload' : 'dark', true));
+                if (key === 'upload') { resolveLegacy().then(k => apply(k, true)); return; }
+                if (key.startsWith('u-') && !userUrls.has(userId(key))) {
+                    loadUser(userId(key)).then(ok => apply(ok ? key : 'dark', true));
                     return;
                 }
                 const el = $('viewer_zone');
@@ -2717,45 +3082,7 @@
                 updateUi();
             }
 
-            /* ---- своя картинка: хранится в IndexedDB ---- */
-            function idb() {
-                return new Promise((resolve, reject) => {
-                    const r = indexedDB.open('tsyplyash-gallery', 1);
-                    r.onupgradeneeded = () => r.result.createObjectStore('kv');
-                    r.onsuccess = () => resolve(r.result);
-                    r.onerror = () => reject(r.error);
-                });
-            }
-            async function idbSet(key, value) {
-                const db = await idb();
-                return new Promise((resolve, reject) => {
-                    const tx = db.transaction('kv', 'readwrite');
-                    tx.objectStore('kv').put(value, key);
-                    tx.oncomplete = () => resolve();
-                    tx.onerror = () => reject(tx.error);
-                });
-            }
-            async function idbGet(key) {
-                const db = await idb();
-                return new Promise((resolve, reject) => {
-                    const req = db.transaction('kv').objectStore('kv').get(key);
-                    req.onsuccess = () => resolve(req.result);
-                    req.onerror = () => reject(req.error);
-                });
-            }
-            function setUploadBlob(blob) {
-                if (uploadUrl) URL.revokeObjectURL(uploadUrl);
-                uploadUrl = URL.createObjectURL(blob);
-            }
-            async function restoreUpload() {
-                try {
-                    const blob = await idbGet('bgUpload');
-                    if (blob && blob.type && blob.type.startsWith('image/')) { setUploadBlob(blob); return true; }
-                } catch (e) { /* приватный режим / IndexedDB недоступна */ }
-                return false;
-            }
-
-            /* ---- окно выбора картинки (как у эмоций) ---- */
+            /* ---- окно с картинками из папки backgrounds/ ---- */
             async function loadManifest() {
                 if (manifest) return manifest;
                 try {
@@ -2771,48 +3098,32 @@
                 const box = $('bgImageList');
                 const files = await loadManifest();
                 box.innerHTML = '';
-                const addCard = (key, src, title) => {
+                files.forEach(f => {
+                    const key = 'i-' + f;
                     const card = document.createElement('div');
                     card.className = 'emote-card' + (currentBgKey === key ? ' active' : '');
                     const img = document.createElement('img');
-                    img.src = src;
+                    img.src = 'backgrounds/' + encodeURIComponent(f);
                     img.alt = '';
                     img.loading = 'lazy';
                     const name = document.createElement('span');
-                    name.textContent = title;
+                    name.textContent = titleFor(f);
                     card.append(img, name);
                     card.onclick = () => { apply(key); close(); };
                     box.appendChild(card);
-                };
-                if (uploadUrl) addCard('upload', uploadUrl, t('bg.image.yours'));
-                files.forEach(f => addCard('i-' + f, 'backgrounds/' + encodeURIComponent(f), titleFor(f)));
-                if (!uploadUrl && files.length === 0) box.textContent = t('bg.image.empty');
+                });
+                if (files.length === 0) box.textContent = t('bg.image.empty');
             }
-            async function open() {
-                message('');
-                $('bgImageModal').classList.add('show');
-                if (!uploadUrl && currentBgKey !== 'upload') await restoreUpload();
-                renderList();
-            }
+            function open() { message(''); $('bgImageModal').classList.add('show'); return renderList(); }
             function close() { $('bgImageModal').classList.remove('show'); }
 
-            function handleFile(file) {
-                if (!file) return;
-                if (!/^image\//.test(file.type) || file.size > MAX_UPLOAD) { message(t('bg.image.error')); return; }
-                const probe = new Image();
-                const url = URL.createObjectURL(file);
-                probe.onload = () => {
-                    URL.revokeObjectURL(url);
-                    setUploadBlob(file);
-                    idbSet('bgUpload', file).catch(() => {});
-                    apply('upload');
-                    close();
-                };
-                probe.onerror = () => { URL.revokeObjectURL(url); message(t('bg.image.error')); };
-                probe.src = url;
+            function forget(id) {                                          // картинку удалили из личной папки
+                const u = userUrls.get(id);
+                if (u) { URL.revokeObjectURL(u); userUrls.delete(id); }
+                if (currentBgKey === 'u-' + id) apply('dark');
             }
 
-            function refresh() {            // после смены языка
+            function refresh() {                                           // после смены языка
                 updateUi();
                 if ($('bgImageModal').classList.contains('show')) renderList();
             }
@@ -2821,18 +3132,33 @@
                 $('btnBgImage').onclick = open;
                 $('btnBgImageClose').onclick = close;
                 $('bgImageModal').onclick = (e) => { if (e.target === $('bgImageModal')) close(); };
-                $('btnBgUpload').onclick = () => $('bgImageFile').click();
-                $('bgImageFile').onchange = (e) => { const f = e.target.files && e.target.files[0]; if (f) handleFile(f); e.target.value = ''; };
+                $('btnBgFolder').onclick = () => Folder.open('bg');
                 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+                Folder.register('bg', {
+                    title: 'folder.bg.title', hint: 'folder.bg.hint', accept: 'image/*', multiple: false, thumbClass: 'folder-thumb-wide', placeholder: '🖼',
+                    async build(files) {
+                        const f = files[0];
+                        if (!/^image\//.test(f.type) || f.size > MAX_UPLOAD) throw new FolderError('bg.image.error');
+                        try { await probeImage(f); } catch (e) { throw new FolderError('bg.image.error'); }
+                        return { name: baseName(f.name).slice(0, 60) || t('bg.image.yours'), blob: f };
+                    },
+                    thumb: (rec, track) => track(rec.blob),
+                    isActive: (rec) => currentBgKey === 'u-' + rec.id,
+                    pick: (rec) => { apply('u-' + rec.id); close(); },
+                    onRemove: (rec) => forget(rec.id)
+                });
             }
             init();
-            return { buildGrid, apply, refresh, normalizeKey };
+            // files() - для exportLangTemplate; paintInfo() - для скриншота
+            return { buildGrid, apply, refresh, normalizeKey, files: loadManifest, titleFor, paintInfo: () => ({ key: currentBgKey, src: imageSrcFor(currentBgKey) }) };
         })();
 
         /* ---------- Платформа из блоков под персонажем + время суток (свет и тени) ----------
            Все объекты (меш, материалы, текстуры, свет) создаются теми же классами three.js, которые уже использует skinview3d,
            - они берутся из объектов вьюера. Так не возникает конфликта версий с отдельно подключённым three.js.
-           Состояние в ссылке:  plat=grass  (платформа включена, блок)   time=18.5  (время суток в часах, 12 по умолчанию). */
+           Состояние в ссылке:  plat=<блок>  (платформа включена: id блока из blocks/blocks.json, u-N - свой блок из личной папки,
+           plain - если блоков ещё нет)   time=18.5  (время суток в часах, 12 по умолчанию).
+           Текстуры блоков - только из папки blocks/ (см. blocks/README.txt) и из личной папки пользователя. */
         const Scene3D = (() => {
             'use strict';
             const $ = (id) => document.getElementById(id);
@@ -2854,7 +3180,6 @@
                 homeView: { pos: [0, 0, 60], target: [0, -2, 0] }    // обычная камера
             };
 
-            const BLOCKS = ['grass', 'dirt', 'stone', 'cobblestone', 'sand', 'snow', 'planks', 'netherrack', 'end_stone'];
             // Холмик сверху вниз: какие клетки (x, z) заняты в каждом слое. Центр (0, 0) - под персонажем.
             const LAYERS = [
                 (x, z) => Math.abs(x) <= 1 && Math.abs(z) <= 1,                                                                  // 3×3
@@ -2862,87 +3187,168 @@
                 (x, z) => Math.abs(x) <= 3 && Math.abs(z) <= 3 && Math.abs(x) + Math.abs(z) <= 4                                 // 7×7 «круглый»
             ];
 
-            const state = { on: false, block: 'grass', hour: CFG.defaultHour };
-            let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null;
+            const PLAIN = 'plain';          // «блок без текстуры» - только пока в blocks/ ничего нет
+            const state = { on: false, block: '', hour: CFG.defaultHour };
+            let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null, reqId = 0;
 
-            /* ---------- Процедурные текстуры блоков 16×16 (своих файлов не нужно) ---------- */
-            function rng(seed) {
-                let a = seed >>> 0;
-                return () => {
-                    a = (a + 0x6D2B79F5) >>> 0;
-                    let t = a;
-                    t = Math.imul(t ^ (t >>> 15), t | 1);
-                    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-                    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-                };
-            }
-            const hashStr = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return h >>> 0; };
-            const c8 = (v) => Math.max(0, Math.min(255, Math.round(v)));
-            const rgb = (c) => `rgb(${c8(c[0])},${c8(c[1])},${c8(c[2])})`;
-            function tex16(draw) {
-                const cv = document.createElement('canvas');
-                cv.width = cv.height = 16;
-                draw(cv.getContext('2d'));
-                return cv;
-            }
-            function speckle(ctx, r, base, amp, x0 = 0, y0 = 0, w = 16, h = 16) {
-                for (let y = y0; y < y0 + h; y++) for (let x = x0; x < x0 + w; x++) {
-                    const d = (r() - 0.5) * 2 * amp;
-                    ctx.fillStyle = rgb([base[0] + d, base[1] + d, base[2] + d]);
-                    ctx.fillRect(x, y, 1, 1);
-                }
-            }
-            function spots(ctx, r, color, count) {
-                ctx.fillStyle = rgb(color);
-                for (let i = 0; i < count; i++) ctx.fillRect(Math.floor(r() * 16), Math.floor(r() * 16), 1 + (r() < 0.3 ? 1 : 0), 1);
-            }
-            const one = (cv) => ({ top: cv, side: cv, bottom: cv });
+            /* ---------- Блоки: текстуры из папки blocks/ (blocks.json) и свои из личной папки ----------
+               Запись в blocks.json - строка "stone" (файл blocks/stone.png на всех гранях) или объект
+               { "id": "grass", "top": ..., "side": ..., "bottom": ..., "all": ... }, где грань - имя файла,
+               { "file": "...", "tint": "#91bd59" } или список таких слоёв (рисуются друг на друге).
+               Подробности и примеры - в blocks/README.txt. Название для перевода: block.<id>. */
+            const SAFE_FILE = /^[A-Za-z0-9][A-Za-z0-9_.\- ]{0,119}$/;
+            const ID_OK = /^[A-Za-z0-9_\-]{1,40}$/;
+            const HEX = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
+            const prettify = (id) => String(id).replace(/[_\-]+/g, ' ').trim();
+            const blockTitle = (id) => (id === PLAIN ? t('block.plain') : nameFor('block.' + id, prettify(id)));
 
-            function makeFaces(id) {
-                const r = rng(hashStr(id));
-                const dirt = () => tex16(c => { speckle(c, r, [134, 96, 67], 16); spots(c, r, [104, 72, 49], 16); });
-                switch (id) {
-                    case 'grass': {
-                        const green = [98, 161, 58];
-                        const top = tex16(c => speckle(c, r, green, 15));
-                        const bottom = dirt();
-                        const side = tex16(c => {
-                            c.drawImage(bottom, 0, 0);
-                            for (let x = 0; x < 16; x++) speckle(c, r, green, 15, x, 0, 1, 3 + Math.floor(r() * 3));   // неровная кромка травы
-                        });
-                        return { top, side, bottom };
+            const Blocks = (() => {
+                let manifest = null, loading = null;
+                const cache = new Map();                   // id -> Promise<{ top, side, bottom }> (канвасы)
+
+                const layersOf = (v) => (Array.isArray(v) ? v : [v])
+                    .map(x => (typeof x === 'string' ? { file: x } : x))
+                    .filter(x => x && typeof x.file === 'string' && SAFE_FILE.test(x.file))
+                    .map(x => ({ file: x.file, tint: HEX.test(x.tint || '') ? x.tint : null }));
+
+                function normEntry(e) {
+                    if (typeof e === 'string') {
+                        const s = e.trim(), m = /^(.+?)(\.[A-Za-z0-9]+)?$/.exec(s);
+                        if (!m) return null;
+                        return { id: m[1], spec: { all: layersOf(m[2] ? s : m[1] + '.png') } };
                     }
-                    case 'dirt': return one(dirt());
-                    case 'stone': return one(tex16(c => { speckle(c, r, [128, 128, 128], 12); spots(c, r, [102, 102, 102], 18); }));
-                    case 'cobblestone': return one(tex16(c => {
-                        c.fillStyle = 'rgb(84,84,84)'; c.fillRect(0, 0, 16, 16);
-                        for (let row = 0; row < 4; row++) {
-                            let x = -Math.floor(r() * 4);
-                            while (x < 16) {
-                                const w = 4 + Math.floor(r() * 4), v = 108 + r() * 42;
-                                const x0 = Math.max(0, x);
-                                c.fillStyle = rgb([v, v, v]);
-                                c.fillRect(x0, row * 4, Math.min(16, x + w - 1) - x0, 3);
-                                x += w;
-                            }
-                        }
-                    }));
-                    case 'sand': return one(tex16(c => { speckle(c, r, [221, 208, 160], 8); spots(c, r, [200, 186, 140], 10); }));
-                    case 'snow': return one(tex16(c => { speckle(c, r, [246, 250, 252], 4); spots(c, r, [222, 232, 240], 8); }));
-                    case 'planks': return one(tex16(c => {
-                        for (let b = 0; b < 4; b++) {
-                            speckle(c, r, [164 - (b % 2) * 8, 132 - (b % 2) * 6, 80 - (b % 2) * 4], 9, 0, b * 4, 16, 4);
-                            c.fillStyle = 'rgb(112,86,48)'; c.fillRect(0, b * 4 + 3, 16, 1);            // шов между досками
-                            c.fillRect(Math.floor(r() * 16), b * 4, 1, 3);                                // стык по длине
-                        }
-                    }));
-                    case 'netherrack': return one(tex16(c => { speckle(c, r, [112, 52, 52], 22); spots(c, r, [78, 30, 32], 22); }));
-                    case 'end_stone': return one(tex16(c => { speckle(c, r, [222, 225, 166], 9); spots(c, r, [194, 196, 138], 20); }));
-                    default: return one(tex16(c => speckle(c, r, [128, 128, 128], 12)));
+                    if (!e || typeof e !== 'object' || typeof e.id !== 'string') return null;
+                    const spec = {};
+                    ['all', 'top', 'side', 'bottom'].forEach(k => { if (e[k]) { const l = layersOf(e[k]); if (l.length) spec[k] = l; } });
+                    if (!Object.keys(spec).length) spec.all = layersOf(e.id + '.png');
+                    return { id: e.id, spec };
                 }
-            }
-            const faceCache = {};
-            const faces = (id) => faceCache[id] || (faceCache[id] = makeFaces(id));
+
+                function load() {
+                    if (!loading) {
+                        loading = (async () => {
+                            let raw = [];
+                            try { const r = await fetch('blocks/blocks.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет блоков */ }
+                            const seen = new Set();
+                            manifest = (Array.isArray(raw) ? raw : []).map(normEntry).filter(b => {
+                                if (!b || !ID_OK.test(b.id) || b.id === PLAIN || /^u-\d+$/.test(b.id) || seen.has(b.id)) return false;
+                                seen.add(b.id);
+                                return true;
+                            });
+                            return manifest;
+                        })();
+                    }
+                    return loading;
+                }
+
+                const loadImage = (src) => new Promise((resolve, reject) => {
+                    const im = new Image();
+                    im.onload = () => resolve(im);
+                    im.onerror = () => reject(new Error('cannot load ' + src));
+                    im.src = src;
+                });
+
+                // Слои одной грани -> один квадратный канвас. Лента анимации (вода, лава) обрезается до первого кадра.
+                async function compose(layers) {
+                    const imgs = await Promise.all(layers.map(l => loadImage(l.src)));
+                    const size = Math.min(imgs[0].naturalWidth, imgs[0].naturalHeight);
+                    const out = document.createElement('canvas');
+                    out.width = out.height = size;
+                    const ctx = out.getContext('2d');
+                    ctx.imageSmoothingEnabled = false;
+                    imgs.forEach((im, i) => {
+                        const s = Math.min(im.naturalWidth, im.naturalHeight);
+                        if (layers[i].tint) {              // оттенок (как биомная трава): умножаем цвет, прозрачность слоя сохраняем
+                            const tmp = document.createElement('canvas');
+                            tmp.width = tmp.height = size;
+                            const tc = tmp.getContext('2d');
+                            tc.imageSmoothingEnabled = false;
+                            tc.drawImage(im, 0, 0, s, s, 0, 0, size, size);
+                            tc.globalCompositeOperation = 'multiply';
+                            tc.fillStyle = layers[i].tint;
+                            tc.fillRect(0, 0, size, size);
+                            tc.globalCompositeOperation = 'destination-in';
+                            tc.drawImage(im, 0, 0, s, s, 0, 0, size, size);
+                            ctx.drawImage(tmp, 0, 0);
+                        } else {
+                            ctx.drawImage(im, 0, 0, s, s, 0, 0, size, size);
+                        }
+                    });
+                    return out;
+                }
+
+                // Что не задано, берётся у соседней грани: верх <- all/side, бок <- all/top, низ <- all/top
+                async function composeSpec(spec) {
+                    const top = spec.top || spec.all || spec.side || spec.bottom;
+                    const side = spec.side || spec.all || spec.top || spec.bottom;
+                    const bottom = spec.bottom || spec.all || spec.top || spec.side;
+                    const memo = new Map();
+                    const make = (layers) => { if (!memo.has(layers)) memo.set(layers, compose(layers)); return memo.get(layers); };
+                    const [a, b, c] = await Promise.all([make(top), make(side), make(bottom)]);
+                    return { top: a, side: b, bottom: c };
+                }
+
+                function plainFaces() {
+                    const cv = document.createElement('canvas');
+                    cv.width = cv.height = 16;
+                    const c = cv.getContext('2d');
+                    c.fillStyle = '#7d7d7d';
+                    c.fillRect(0, 0, 16, 16);
+                    c.strokeStyle = '#5f5f5f';
+                    c.strokeRect(0.5, 0.5, 15, 15);
+                    return { top: cv, side: cv, bottom: cv };
+                }
+
+                async function userFaces(n) {
+                    const rec = await UserLib.get('block', n);
+                    if (!rec || !rec.faces) return plainFaces();
+                    const urls = [], spec = {};
+                    try {
+                        for (const k of Object.keys(rec.faces)) {
+                            const u = URL.createObjectURL(rec.faces[k]);
+                            urls.push(u);
+                            spec[k] = [{ src: u, tint: null }];
+                        }
+                        return await composeSpec(spec);
+                    } finally { urls.forEach(u => URL.revokeObjectURL(u)); }
+                }
+
+                function get(id) {
+                    if (cache.has(id)) return cache.get(id);
+                    const p = (async () => {
+                        try {
+                            if (id === PLAIN) return plainFaces();
+                            const um = /^u-(\d+)$/.exec(id);
+                            if (um) return await userFaces(Number(um[1]));
+                            await load();
+                            const b = manifest.find(x => x.id === id);
+                            if (!b) return plainFaces();
+                            const spec = {};
+                            for (const k of Object.keys(b.spec)) spec[k] = b.spec[k].map(l => ({ src: 'blocks/' + encodeURIComponent(l.file), tint: l.tint }));
+                            return await composeSpec(spec);
+                        } catch (e) {
+                            console.warn('[block]', id, e);
+                            return plainFaces();
+                        }
+                    })();
+                    cache.set(id, p);
+                    return p;
+                }
+
+                async function exists(id) {
+                    if (!id) return false;
+                    if (id === PLAIN) return true;
+                    const um = /^u-(\d+)$/.exec(id);
+                    if (um) { try { return !!(await UserLib.get('block', Number(um[1]))); } catch (e) { return false; } }
+                    await load();
+                    return manifest.some(b => b.id === id);
+                }
+                return {
+                    load, get, exists,
+                    defaultId: () => (manifest && manifest.length ? manifest[0].id : PLAIN),
+                    forgetUser: (n) => cache.delete('u-' + n)
+                };
+            })();
 
             /* ---------- Классы three.js - те же, что у skinview3d ---------- */
             function firstMeshOf(o) {
@@ -3042,7 +3448,7 @@
                 mesh = null;
             }
 
-            function buildMesh() {
+            function buildMesh(f) {
                 disposeMesh();
                 const feetY = measureFeetY();
                 const a = hillArrays(feetY);
@@ -3052,7 +3458,6 @@
                 g.setAttribute('uv', new kit.Attr(new Float32Array(a.uv), 2));
                 g.setIndex(a.index);
                 a.groups.forEach(([start, count, mi]) => g.addGroup(start, count, mi));
-                const f = faces(state.block);
                 const mats = [f.top, f.side, f.bottom].map(cv => new kit.Material({ map: makeTexture(cv) }));
                 mesh = new kit.Mesh(g, mats);
                 mesh.name = 'gallery-platform';
@@ -3193,28 +3598,36 @@
                 $('platformOptions').style.display = on ? '' : 'none';
             }
 
-            function setEnabled(on, opts = {}) {
-                const sync = opts.sync !== false, animate = opts.animate !== false;
+            async function setEnabled(on, opts = {}) {
+                const sync = opts.sync !== false, animate = opts.animate !== false, my = ++reqId;
                 on = !!on;
-                if (on === state.on) { setUi(on); if (sync) syncUrlState(); return; }
                 try {
                     if (on) {
                         kit = getKit();
-                        const a = skinViewer.globalLight;
-                        savedAmbient = a ? { color: [a.color.r, a.color.g, a.color.b], intensity: a.intensity } : null;
-                        if (skinViewer.renderer && skinViewer.renderer.shadowMap) {
-                            skinViewer.renderer.shadowMap.enabled = true;
-                            skinViewer.renderer.shadowMap.type = 1;       // PCFShadowMap
+                        await Blocks.load();
+                        if (!state.block || !(await Blocks.exists(state.block))) state.block = Blocks.defaultId();
+                        const faces = await Blocks.get(state.block);
+                        if (my !== reqId) return;                    // пока грузились текстуры, пользователь передумал
+                        const first = !state.on;
+                        if (first) {
+                            const a = skinViewer.globalLight;
+                            savedAmbient = a ? { color: [a.color.r, a.color.g, a.color.b], intensity: a.intensity } : null;
+                            if (skinViewer.renderer && skinViewer.renderer.shadowMap) {
+                                skinViewer.renderer.shadowMap.enabled = true;
+                                skinViewer.renderer.shadowMap.type = 1;       // PCFShadowMap
+                            }
                         }
-                        buildMesh();
+                        buildMesh(faces);
                         ensureSun();
                         state.on = true;
                         applyLighting();
                         markMaterialsDirty();
                         refreshCasters();
-                        savedView = currentView();
-                        moveCamera(CFG.view, animate);
-                    } else {
+                        if (first) {
+                            savedView = currentView();
+                            moveCamera(CFG.view, animate);
+                        }
+                    } else if (state.on) {
                         state.on = false;
                         teardown();
                         markMaterialsDirty();
@@ -3225,17 +3638,18 @@
                     console.error('[platform]', e);
                     state.on = false;
                     try { teardown(); } catch (e2) { /* ничего */ }
-                    on = false;
                 }
+                if (my !== reqId) return;
                 setUi(state.on);
+                syncGridActive();
                 if (sync) syncUrlState();
             }
 
-            function setBlock(id, sync = true) {
-                if (!BLOCKS.includes(id)) return;
+            async function setBlock(id, sync = true) {
+                if (!(await Blocks.exists(id))) return;
                 state.block = id;
-                document.querySelectorAll('#blockGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.block === id));
-                if (state.on) { try { buildMesh(); } catch (e) { console.error('[platform]', e); } }
+                syncGridActive();
+                if (state.on) await setEnabled(true, { sync: false, animate: false });
                 if (sync) syncUrlState();
             }
 
@@ -3254,57 +3668,231 @@
             }
 
             // Из ссылки / popstate. plat - id блока или пусто (платформы нет)
-            function applyState(plat, time, opts = {}) {
-                const id = BLOCKS.includes(plat) ? plat : null;
+            async function applyState(plat, time, opts = {}) {
+                await Blocks.load();
+                const id = (plat && await Blocks.exists(plat)) ? plat : null;
                 if (id) state.block = id;
-                document.querySelectorAll('#blockGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.block === state.block));
                 const parsed = parseFloat(time);
                 state.hour = isFinite(parsed) ? Math.min(24, Math.max(0, parsed)) : CFG.defaultHour;
                 $('time_slider').value = state.hour;
                 $('time_val').textContent = timeText(state.hour);
-                if (id && state.on) { try { buildMesh(); } catch (e) { console.error('[platform]', e); } applyLighting(); }
-                setEnabled(!!id, { sync: false, animate: opts.animate !== false });
-                if (state.on) applyLighting();
+                await setEnabled(!!id, { sync: false, animate: opts.animate !== false });
             }
 
-            function buildBlockGrid() {
+            function syncGridActive() {
+                document.querySelectorAll('#blockGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.block === state.block));
+                $('btnBlockFolder').classList.toggle('active', /^u-\d+$/.test(state.block));
+            }
+
+            function paintSwatch(cv, f) {
+                const src = f.side;
+                cv.width = src.width;
+                cv.height = src.height;
+                const c = cv.getContext('2d');
+                c.imageSmoothingEnabled = false;
+                c.drawImage(src, 0, 0);
+            }
+
+            async function buildBlockGrid() {
+                const list = await Blocks.load();
                 const grid = $('blockGrid');
                 grid.innerHTML = '';
-                BLOCKS.forEach(id => {
-                    const b = document.createElement('button');
-                    b.type = 'button';
-                    b.className = 'block-btn' + (id === state.block ? ' active' : '');
-                    b.dataset.block = id;
-                    b.title = t('block.' + id);
+                $('blockGridHint').style.display = list.length ? 'none' : 'block';
+                list.forEach(b => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'block-btn';
+                    btn.dataset.block = b.id;
+                    btn.title = blockTitle(b.id);
                     const cv = document.createElement('canvas');
                     cv.width = cv.height = 16;
-                    cv.getContext('2d').drawImage(faces(id).side, 0, 0);
-                    b.appendChild(cv);
-                    b.onclick = () => setBlock(id);
-                    grid.appendChild(b);
+                    btn.appendChild(cv);
+                    Blocks.get(b.id).then(f => paintSwatch(cv, f));
+                    btn.onclick = () => setBlock(b.id);
+                    grid.appendChild(btn);
                 });
+                syncGridActive();
             }
 
             function refreshUi() {
-                document.querySelectorAll('#blockGrid .block-btn').forEach(b => { b.title = t('block.' + b.dataset.block); });
+                document.querySelectorAll('#blockGrid .block-btn').forEach(b => { b.title = blockTitle(b.dataset.block); });
             }
 
             function resetCamera() { if (state.on) moveCamera(CFG.view, false); }
 
             function init() {
-                buildBlockGrid();
                 $('time_val').textContent = timeText(state.hour);
                 $('platform_toggle').onchange = (e) => setEnabled(e.target.checked);
                 $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
+                $('btnBlockFolder').onclick = () => Folder.open('block');
+
+                // Свой блок: один файл на все грани или до трёх файлов с окончаниями _top / _side / _bottom
+                Folder.register('block', {
+                    title: 'folder.block.title', hint: 'folder.block.hint', accept: 'image/*', multiple: true, thumbClass: 'folder-thumb-pixel', placeholder: '🧱',
+                    async build(files) {
+                        const FACE = /^(.*?)[_\-. ]?(top|side|bottom)$/i;
+                        if (files.length > 3 || files.some(f => !/^image\//.test(f.type))) throw new FolderError('folder.block.error');
+                        const faces = {};
+                        let name = '';
+                        for (const f of files) {
+                            const nm = f.name.replace(/\.[^.]+$/, ''), m = FACE.exec(nm);
+                            if (m) {
+                                const k = m[2].toLowerCase();
+                                if (faces[k]) throw new FolderError('folder.block.error');
+                                faces[k] = f;
+                                name = name || m[1];
+                            } else if (files.length === 1) {
+                                faces.all = f;
+                                name = nm;
+                            } else {
+                                throw new FolderError('folder.block.error');
+                            }
+                        }
+                        for (const f of Object.values(faces)) { try { await probeImage(f); } catch (e) { throw new FolderError('folder.block.error'); } }
+                        return { name: (name || 'block').slice(0, 60), faces };
+                    },
+                    thumb: (rec, track) => { const f = rec.faces.side || rec.faces.all || rec.faces.top || rec.faces.bottom; return f ? track(f) : null; },
+                    isActive: (rec) => state.block === 'u-' + rec.id,
+                    pick: (rec) => setBlock('u-' + rec.id),
+                    onRemove: (rec) => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(Blocks.defaultId()); }
+                });
+                buildBlockGrid();
             }
             init();
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
                 state: () => ({ on: state.on, block: state.block, hour: state.hour }),
+                blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
-                _debug: { lightingAt, hillArrays, CFG, faces }
+                _debug: { lightingAt, hillArrays, CFG, Blocks }
             };
+        })();
+
+        /* ---------- Кнопки над вьюером: скрыть интерфейс и сохранить скриншот ----------
+           Клавиша H (на любой раскладке) тоже скрывает / возвращает интерфейс.
+           Скриншот = фон (цвет / градиент / картинка) + то, что нарисовано в 3D, в размер холста с учётом плотности пикселей экрана.
+           С зажатым Shift - без фона (прозрачный PNG). */
+        const ViewerTools = (() => {
+            const $ = (id) => document.getElementById(id);
+            let hidden = false;
+
+            function updateSizeLater() {
+                updateViewerSize();
+                setTimeout(updateViewerSize, 350);          // на телефоне высота вьюера меняется с анимацией
+            }
+
+            function updateTitles() {
+                $('btnHideUi').title = t(hidden ? 'ui.show' : 'ui.hide');
+                $('btnShot').title = t('shot.title');
+            }
+
+            function setHidden(v) {
+                hidden = !!v;
+                document.body.classList.toggle('ui-hidden', hidden);
+                if (hidden) {
+                    closeLangMenu();
+                    document.getElementById('sortMenu').classList.remove('show');
+                    document.querySelectorAll('#sidebar, #controls_panel').forEach(el => el.classList.remove('mobile-open'));
+                    document.querySelectorAll('.mobile-nav-btn').forEach(el => el.classList.remove('active'));
+                    $('viewer_zone').classList.remove('mobile-shrunk');
+                }
+                updateTitles();
+                updateSizeLater();
+            }
+
+            /* ---- скриншот ---- */
+            // CSS-градиент пресета вида "radial-gradient(circle at center, #aaa 0%, #bbb 100%)" -> градиент для canvas
+            function paintPresetGradient(ctx, css, w, h) {
+                const m = /radial-gradient\([^,]+,\s*(#[0-9a-f]{3,8})\s+0%,\s*(#[0-9a-f]{3,8})\s+100%\)/i.exec(css);
+                if (!m) return false;
+                const r = Math.hypot(w / 2, h / 2);                  // «farthest-corner» - как в CSS по умолчанию
+                const g = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, r);
+                g.addColorStop(0, m[1]);
+                g.addColorStop(1, m[2]);
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+                return true;
+            }
+
+            async function paintBackground(ctx, w, h) {
+                const info = Backdrop.paintInfo(), key = info.key;
+                ctx.fillStyle = '#0b0b0d';
+                ctx.fillRect(0, 0, w, h);
+                if (key.startsWith('c-')) { ctx.fillStyle = '#' + key.slice(2); ctx.fillRect(0, 0, w, h); return; }
+                if (info.src) {                                      // картинка: «cover» - заполняет кадр, лишнее обрезается по краям
+                    const im = await new Promise((resolve, reject) => {
+                        const i = new Image();
+                        i.onload = () => resolve(i);
+                        i.onerror = reject;
+                        i.src = info.src;
+                    });
+                    const k = Math.max(w / im.naturalWidth, h / im.naturalHeight);
+                    const iw = im.naturalWidth * k, ih = im.naturalHeight * k;
+                    ctx.drawImage(im, (w - iw) / 2, (h - ih) / 2, iw, ih);
+                    return;
+                }
+                const p = bgPresets.find(x => x.id === key) || bgPresets[0];
+                if (!paintPresetGradient(ctx, p.value, w, h)) { ctx.fillStyle = p.color; ctx.fillRect(0, 0, w, h); }
+            }
+
+            function fileName() {
+                const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
+                const base = (skin ? skinTitle(skin) : 'skin').replace(/[\\/:*?"<>|\u0000-\u001f]+/g, '_').trim().slice(0, 60) || 'skin';
+                const d = new Date(), p = (n) => String(n).padStart(2, '0');
+                return `${base}_${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.png`;
+            }
+
+            function flash() {
+                const f = document.createElement('div');
+                f.className = 'shot-flash';
+                $('viewer_zone').appendChild(f);
+                setTimeout(() => f.remove(), 400);
+            }
+
+            async function takeShot(transparent) {
+                if (!skinViewer) return;
+                try {
+                    const cv = skinViewer.canvas;
+                    const w = cv.width, h = cv.height;
+                    const out = document.createElement('canvas');
+                    out.width = w;
+                    out.height = h;
+                    const ctx = out.getContext('2d');
+                    if (!transparent) await paintBackground(ctx, w, h);      // асинхронная часть - до отрисовки 3D, чтобы буфер WebGL не успел очиститься
+                    if (typeof skinViewer.render === 'function') skinViewer.render();
+                    else skinViewer.renderer.render(skinViewer.scene, skinViewer.camera);
+                    ctx.drawImage(cv, 0, 0, w, h);
+                    const blob = await new Promise((resolve, reject) => out.toBlob(b => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'));
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = fileName();
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+                    flash();
+                } catch (e) {
+                    console.error('[screenshot]', e);
+                    window.alert(t('shot.error'));
+                }
+            }
+
+            function init() {
+                $('btnHideUi').onclick = () => setHidden(!hidden);
+                $('btnShot').onclick = (e) => takeShot(e.shiftKey);
+                document.addEventListener('keydown', (e) => {
+                    if (e.ctrlKey || e.metaKey || e.altKey) return;
+                    const tag = (e.target && e.target.tagName) || '';
+                    if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag) || (e.target && e.target.isContentEditable)) return;
+                    if (document.querySelector('.emote-overlay.show, .modal-overlay.show')) return;
+                    if (e.code === 'KeyH') { e.preventDefault(); setHidden(!hidden); }
+                    else if (e.key === 'Escape' && hidden) setHidden(false);
+                });
+                updateTitles();
+            }
+            init();
+            return { setHidden, isHidden: () => hidden, takeShot, refresh: updateTitles };
         })();
 
         /* EMOTE-CORE-BEGIN */
@@ -3938,45 +4526,107 @@ const EmoteCore = (() => {
     return { start, stop, isActive: () => active };
 })();
 
+/* Эмоции в интерфейсе.
+   emotes/emotes.json - список: строка "SPE_Get_scared" или объект { "id": "SPE_Get_scared", "author": "Имя", "authorUrl": "https://..." }.
+   Под эмоцией показывается автор (имя - ссылка на authorUrl). Имя автора переводится так же, как у скинов: person.<Имя>.
+   Названия для перевода: emote.name.<id>. Поиск по эмоциям смотрит в названия на ВСЕХ языках из lang/ (+ id и автора). */
 const EmoteUI = (() => {
-    let manifest = null, nowTitleFn = () => '';
+    let manifest = null, index = null, nowTitleFn = () => '', query = '', iconTarget = null;
     const $ = (id) => document.getElementById(id);
     const prettify = (b) => b.replace(/_/g, ' ').trim();
-    const titleFor = (base, fallback) => ownText('emote.name.' + base, fallback || prettify(base));
+    const titleFor = (base, fallback) => nameFor('emote.name.' + base, fallback || prettify(base));
+    const safeUrl = (u) => { const s = String(u || '').trim(); return /^https?:\/\//i.test(s) ? s : null; };
 
     async function loadManifest() {
         if (manifest) return manifest;
         try {
             const r = await fetch('emotes/emotes.json?v=' + Math.random());
             const j = r.ok ? await r.json() : [];
-            manifest = (Array.isArray(j) ? j : []).map(x => String(x).replace(/\.json$/i, ''));
+            manifest = (Array.isArray(j) ? j : []).map(x => {
+                if (typeof x === 'string') return { id: x.replace(/\.json$/i, ''), author: '', authorUrl: null };
+                if (x && typeof x === 'object' && x.id) return { id: String(x.id).replace(/\.json$/i, ''), author: x.author ? String(x.author).trim() : '', authorUrl: safeUrl(x.authorUrl) };
+                return null;
+            }).filter(Boolean);
         } catch (e) { manifest = []; }
+        index = null;
         return manifest;
     }
     function message(text) { $('emoteMsg').textContent = text || ''; }
+
+    // Что искать у каждой эмоции: id, название и имя автора на всех языках сразу
+    function buildIndex() {
+        index = new Map();
+        for (const e of manifest) {
+            const raw = [e.id, prettify(e.id), e.author];
+            i18nLangs.forEach(l => {
+                const d = l.data || {};
+                raw.push(d['emote.name.' + e.id]);
+                if (e.author) raw.push(d['person.' + e.author]);
+            });
+            index.set(e.id, [...new Set(raw.filter(x => typeof x === 'string' && x.trim()).map(normSearch))]);
+        }
+    }
+
+    function authorEl(e) {
+        const wrap = document.createElement('span');
+        wrap.className = 'emote-author';
+        const name = personName(e.author);
+        const tpl = t('emote.by');
+        const i = tpl.indexOf('%s');
+        const pre = i >= 0 ? tpl.slice(0, i) : tpl + ' ', post = i >= 0 ? tpl.slice(i + 2) : '';
+        wrap.appendChild(document.createTextNode(pre));
+        if (e.authorUrl) {
+            const a = document.createElement('a');
+            a.href = e.authorUrl;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = name;
+            a.title = t('meta.open_author', name);
+            a.onclick = (ev) => ev.stopPropagation();       // клик по имени открывает ссылку, а не запускает эмоцию
+            wrap.appendChild(a);
+        } else {
+            wrap.appendChild(document.createTextNode(name));
+        }
+        wrap.appendChild(document.createTextNode(post));
+        return wrap;
+    }
+
+    function makeCard(e) {
+        const card = document.createElement('div');
+        card.className = 'emote-card';
+        card.dataset.emote = e.id;
+        const img = document.createElement('img');
+        img.src = 'emotes/' + encodeURIComponent(e.id) + '.png';
+        img.alt = '';
+        img.onerror = () => { img.style.visibility = 'hidden'; };
+        const name = document.createElement('span');
+        name.textContent = titleFor(e.id);
+        card.append(img, name);
+        if (e.author) card.appendChild(authorEl(e));
+        card.onclick = () => playBase(e.id);
+        return card;
+    }
+
     function renderList() {
         const box = $('emoteList');
         box.innerHTML = '';
         if (!manifest || manifest.length === 0) { box.textContent = t('emote.empty'); return; }
-        manifest.forEach(base => {
-            const card = document.createElement('div');
-            card.className = 'emote-card';
-            const img = document.createElement('img');
-            img.src = 'emotes/' + encodeURIComponent(base) + '.png';
-            img.alt = '';
-            img.onerror = () => { img.style.visibility = 'hidden'; };
-            const name = document.createElement('span');
-            name.textContent = titleFor(base);
-            card.append(img, name);
-            card.onclick = () => playBase(base);
-            box.appendChild(card);
-        });
+        if (!index) buildIndex();
+        const q = normSearch(query);
+        const items = manifest.map((e, i) => ({ e, i, sc: q ? scoreLang(index.get(e.id), q) : 0 })).filter(x => x.sc !== null);
+        if (q) items.sort((a, b) => a.sc - b.sc || a.i - b.i);
+        if (items.length === 0) { box.textContent = t('emote.no_results'); return; }
+        items.forEach(({ e }) => box.appendChild(makeCard(e)));
     }
+
     async function open() {
         message('');
+        query = '';
+        $('emoteSearch').value = '';
         $('emoteModal').classList.add('show');
         await loadManifest();
         renderList();
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) $('emoteSearch').focus();   // на телефоне клавиатуру сама не открываем
     }
     function close() { $('emoteModal').classList.remove('show'); }
 
@@ -4004,14 +4654,12 @@ const EmoteUI = (() => {
         if (n && typeof n === 'object') return ownText(n.translate, EmoteCore.stripFormatting(n.fallback || '')) || prettify(fallback);
         return EmoteCore.stripFormatting(n) || prettify(fallback);
     }
-    function playFile(file) {
-        const reader = new FileReader();
-        reader.onload = () => {
-            try { const json = JSON.parse(reader.result); begin(json, () => jsonTitle(json, file.name.replace(/\.json$/i, ''))); }
-            catch (e) { console.error('[emote]', e); message(t('emote.error')); }
-        };
-        reader.onerror = () => message(t('emote.error'));
-        reader.readAsText(file);
+    // Эмоция из личной папки
+    function playUser(rec) {
+        try {
+            const json = JSON.parse(rec.json);
+            begin(json, () => jsonTitle(json, rec.name));
+        } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
     function refresh() {
         const on = EmoteRuntime.isActive();
@@ -4019,17 +4667,59 @@ const EmoteUI = (() => {
         $('emoteNow').textContent = on ? t('emote.playing', nowTitleFn()) : '';
         if ($('emoteModal').classList.contains('show')) renderList();
     }
+
     function init() {
         $('btnEmotes').onclick = open;
         $('btnEmoteClose').onclick = close;
         $('emoteModal').onclick = (e) => { if (e.target === $('emoteModal')) close(); };
         $('btnEmoteStop').onclick = () => EmoteRuntime.stop(true);
-        $('btnEmoteTest').onclick = () => $('emoteFile').click();
-        $('emoteFile').onchange = (e) => { const f = e.target.files && e.target.files[0]; if (f) playFile(f); e.target.value = ''; };
+        $('btnEmoteTest').onclick = () => Folder.open('emote');
+        $('emoteSearch').addEventListener('input', (e) => { query = e.target.value; renderList(); });
+        $('emoteSearch').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') { e.preventDefault(); const first = $('emoteList').querySelector('.emote-card'); if (first) first.click(); }
+        });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+        // Иконку своей эмоции можно сменить в любой момент (кнопка на карточке в личной папке)
+        $('folderIconFile').onchange = async (e) => {
+            const f = e.target.files && e.target.files[0];
+            e.target.value = '';
+            if (!f || !iconTarget) return;
+            try {
+                await probeImage(f);
+                await UserLib.put('emote', Object.assign({}, iconTarget.rec, { icon: f }));
+                iconTarget.rerender();
+            } catch (err) { console.error('[emote]', err); }
+            iconTarget = null;
+        };
+
+        Folder.register('emote', {
+            title: 'folder.emote.title', hint: 'folder.emote.hint', accept: '.json,application/json,image/*', multiple: true, placeholder: '🎬',
+            // В одном диалоге: .json эмоции и (по желанию) картинка-иконка
+            async build(files) {
+                const jsonFile = files.find(f => /\.json$/i.test(f.name) || f.type === 'application/json');
+                const icon = files.find(f => /^image\//.test(f.type)) || null;
+                if (!jsonFile) throw new FolderError('emote.error');
+                let text;
+                try { text = await jsonFile.text(); EmoteCore.parseEmote(JSON.parse(text)); } catch (e) { throw new FolderError('emote.error'); }
+                if (icon) { try { await probeImage(icon); } catch (e) { throw new FolderError('folder.error'); } }
+                return { name: jsonFile.name.replace(/\.json$/i, '').slice(0, 60) || 'emote', json: text, icon };
+            },
+            thumb: (rec, track) => (rec.icon ? track(rec.icon) : null),
+            decorate(el, rec, rerender) {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'folder-icon-btn';
+                b.textContent = '🖼';
+                b.title = t('folder.emote.icon');
+                b.onclick = (ev) => { ev.stopPropagation(); iconTarget = { rec, rerender }; $('folderIconFile').click(); };
+                el.appendChild(b);
+            },
+            pick: (rec) => playUser(rec)
+        });
     }
     init();
-    return { open, close, refresh };
+    return { open, close, refresh, entries: loadManifest, titleFor };
 })();
 function refreshEmoteUi() { EmoteUI.refresh(); }
 
@@ -4605,7 +5295,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 if (currentActiveSkinFilename) {
                     await selectSkin(currentActiveSkinFilename, false);
                 }
-                Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
+                await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
 
             } catch (err) {
                 document.getElementById('loading').textContent = t('error.json');
