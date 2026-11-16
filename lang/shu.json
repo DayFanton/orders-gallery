@@ -390,6 +390,7 @@
   "folder.emote.title": "Emotes ta'i",
   "folder.emote.hint": "Ikhtar file .json ta emote, wala baddak, sura ta icon (.png) fi nafs dialogue da",
   "folder.emote.icon": "Giyir icon",
+  "folder.reorder": "Jur ila tabdil al-tartiib (aw ista'mil al-asham ← →)",
 
   "ui.hide": "Ikhfi interface (H)",
   "ui.show": "Zahhir interface (H)",

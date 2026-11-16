@@ -392,6 +392,7 @@
   "folder.emote.title": "Mina emotes",
   "folder.emote.hint": "Välj en .json-fil för emoten och, om du vill, en ikonbild (.png) i samma dialogruta",
   "folder.emote.icon": "Byt ikon",
+  "folder.reorder": "Dra för att ändra ordning (eller använd pilarna ← →)",
 
   "ui.hide": "Dölj gränssnitt (H)",
   "ui.show": "Visa gränssnitt (H)",

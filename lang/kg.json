@@ -392,6 +392,7 @@
   "folder.emote.title": "Bilembo ya mono",
   "folder.emote.hint": "Baka file .json ya emote mpe, kana nge ke zola, kifwani ya icon (.png) na dialog mosi",
   "folder.emote.icon": "Baka icon ya sika",
+  "folder.reorder": "Kwenda sambu na kubumba diaka (to sadila miba ← →)",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",

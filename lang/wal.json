@@ -392,6 +392,7 @@
   "folder.emote.title": "Emotes qixxe koo",
   "folder.emote.hint": "Emote .json file qixxite, woygiintta cayya gidoon icon image (.png) dialoge mittu giddro qixxite",
   "folder.emote.icon": "Icon qixxite",
+  "folder.reorder": "Drag to reorder (o arrows ← →)",
 
   "ui.hide": "Interface qixxa (H)",
   "ui.show": "Interface bescite (H)",

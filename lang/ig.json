@@ -392,6 +392,7 @@
   "folder.emote.title": "Emote m",
   "folder.emote.hint": "Họrọ faịlụ .json emote na, ọ bụrụ na chọrọ, onyonyo akara (.png) n'otu mkparịta ụka ahụ",
   "folder.emote.icon": "Gbanwee akara",
+  "folder.reorder": "Dọpụta ka ị hazie ọzọ (ma ọ bụ akụ ← →)",
 
   "ui.hide": "Zonwe interface ahụ (H)",
   "ui.show": "Gosi interface ahụ (H)",

@@ -390,6 +390,7 @@
   "folder.emote.title": "Ii-emote zam",
   "folder.emote.hint": "Khetha ifayile ye-.json ye-emote kwaye, ukuba uyafuna, umfanekiso we-icon (.png) kwingxoxo enye",
   "folder.emote.icon": "Tshintsha i-icon",
+  "folder.reorder": "Tsala ukuze utshintshe ucwangco (okanye usebenzise iintolo ← →)",
 
   "ui.hide": "Fihla ujongano (H)",
   "ui.show": "Bonisa ujongano (H)",

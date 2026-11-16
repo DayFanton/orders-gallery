@@ -390,6 +390,7 @@
   "folder.emote.title": "Dagiti emote ko",
   "folder.emote.hint": "Agpili iti maysa a file nga emote .json ken, no kayatmo, maysa a ladawan ti icon (.png) iti isu met laeng a dialog",
   "folder.emote.icon": "Sukatan ti icon",
+  "folder.reorder": "I-drag tapno sukatan ti urnos (wenno usaren dagiti pana ← →)",
 
   "ui.hide": "Ilemmeng ti interface (H)",
   "ui.show": "Ipakita ti interface (H)",

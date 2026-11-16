@@ -390,6 +390,7 @@
   "folder.emote.title": "Emotjaim",
   "folder.emote.hint": "Válasszon ki egy emote .json fájlt, és ha szeretné, egy ikonképet (.png) ugyanabban a párbeszédablakban",
   "folder.emote.icon": "Ikon módosítása",
+  "folder.reorder": "Húzza az átrendezéshez (vagy használja a ← → nyilakat)",
 
   "ui.hide": "Felület elrejtése (H)",
   "ui.show": "Felület megjelenítése (H)",

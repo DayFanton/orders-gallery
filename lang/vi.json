@@ -392,6 +392,7 @@
   "folder.emote.title": "Điệu nhảy của tôi",
   "folder.emote.hint": "Chọn một tệp .json biểu cảm và, nếu muốn, một hình ảnh biểu tượng (.png) trong cùng một hộp thoại",
   "folder.emote.icon": "Thay đổi biểu tượng",
+  "folder.reorder": "Kéo để sắp xếp lại (hoặc dùng mũi tên ← →)",
 
   "ui.hide": "ẩn giao diện (H)",
   "ui.show": "Hiện giao diện (H)",

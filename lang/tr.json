@@ -392,6 +392,7 @@
   "folder.emote.title": "İfadelerim",
   "folder.emote.hint": "Bir ifade .json dosyası ve isterseniz aynı iletişim penceresinde bir simge görseli (.png) seçin",
   "folder.emote.icon": "Simgeyi değiştir",
+  "folder.reorder": "Yeniden sıralamak için sürükleyin (veya ← → okları)",
 
   "ui.hide": "Arayüzü gizle (H)",
   "ui.show": "Arayüzü göster (H)",

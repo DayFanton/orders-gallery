@@ -390,6 +390,7 @@
   "folder.emote.title": "Mo chuid emote",
   "folder.emote.hint": "Roghnaigh comhad .json emote agus, más mian leat, íomhá deilbhín (.png) sa chείν diyailog céanna",
   "folder.emote.icon": "Athraigh deilbhín",
+  "folder.reorder": "Tarraing chun ord a athrú (nó na saigheada ← →)",
 
   "ui.hide": "Folaigh an comhéadan (H)",
   "ui.show": "Taispeáin an comhéadan (H)",

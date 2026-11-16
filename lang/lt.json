@@ -392,6 +392,7 @@
   "folder.emote.title": "Mano emociukai",
   "folder.emote.hint": "Pasirinkite emociuko .json failą ir, jei norite, piktogramos paveikslėlį (.png) tame pačiame dialogo lange",
   "folder.emote.icon": "Pakeisti piktogramą",
+  "folder.reorder": "Tempkite norėdami pakeisti tvarką (arba rodykles ← →)",
 
   "ui.hide": "Slėpti sąsają (H)",
   "ui.show": "Rodyti sąsają (H)",

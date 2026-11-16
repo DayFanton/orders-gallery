@@ -390,6 +390,7 @@
   "folder.emote.title": "Ma-emote gangu",
   "folder.emote.hint": "Kusaka masengo gakesi ga .json ga emote ni, naga mwangala, masengo ga icon (.png) mu browser ajino jili jemu",
   "folder.emote.icon": "Kushintsha icon",
+  "folder.reorder": "Drag to reorder (ama arrows ← →)",
 
   "ui.hide": "Chisisi interface (H)",
   "ui.show": "Langanya interface (H)",

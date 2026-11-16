@@ -392,6 +392,7 @@
   "folder.emote.title": "Mənim ifadələrim",
   "folder.emote.hint": "Emot .json faylını və istəsinizsə, ikon şəklini (.png) eyni dialoq pəncərəsində seçin",
   "folder.emote.icon": "İkonu dəyiş",
+  "folder.reorder": "Yenidən sıralamaq üçün sürükləyin (və ya ← → oxlarından istifadə edin)",
 
   "ui.hide": "İnterfeysi gizlət (H)",
   "ui.show": "İnterfeysi göstər (H)",

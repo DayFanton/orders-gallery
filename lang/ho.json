@@ -392,6 +392,7 @@
   "folder.emote.title": "Emotes amo na",
   "folder.emote.hint": "Emote .json file select me, ota wati, icon image (.png) dialog samo lalon",
   "folder.emote.icon": "Icon change me",
+  "folder.reorder": "Drag to reorder (o arrow ← →)",
 
   "ui.hide": "Interface amo lalon (H)",
   "ui.show": "Interface amo nene (H)",

@@ -392,6 +392,7 @@
   "folder.emote.title": "Emotes magka",
   "folder.emote.hint": "Yier file mar emote .json kata, ka dwaro, picha mar icon (.png) e dialog achiel",
   "folder.emote.icon": "Lok icon",
+  "folder.reorder": "Guru mondo iji gi chenro (koso ti gi yadh ← →)",
 
   "ui.hide": "Mon gima (H)",
   "ui.show": "Nyis gima (H)",

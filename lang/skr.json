@@ -390,6 +390,7 @@
   "folder.emote.title": "می݃ں ایموٹس",
   "folder.emote.hint": "ہک emote .json فائل چنو تے جے چاہو تاں اسی ڈائیلاگ وچ ہک آئیکن تصویر (.png) وی چنو",
   "folder.emote.icon": "آئیکن تبدیل کرو",
+  "folder.reorder": "ترتیب بدلݨ کیتے کھنچو (یا تیر ← → ورتو)",
 
   "ui.hide": "انٹرفیس لکاؤ (H)",
   "ui.show": "انٹرفیس ڈکھاؤ (H)",

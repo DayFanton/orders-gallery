@@ -392,6 +392,7 @@
   "folder.emote.title": "Indo cia kũguigua ciakwa",
   "folder.emote.hint": "Thano ya emote .json na, angĩkorwo nĩ ũrenda, thano ya icon (.png) thĩinĩ wa mbica ĩmwe",
   "folder.emote.icon": "Guũruria icon",
+  "folder.reorder": "Thurania niguo ũgarũre mwandiko (kana ũhũthĩre mĩguĩ ← →)",
 
   "ui.hide": "Thweka kĩhumo (H)",
   "ui.show": "Cionia kĩhumo (H)",

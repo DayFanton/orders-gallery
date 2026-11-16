@@ -392,6 +392,7 @@
   "folder.emote.title": "Moje emotikony",
   "folder.emote.hint": "Vyberte soubor .json emotikonu a, pokud chcete, i obrázek ikony (.png) ve stejném dialogovém okně",
   "folder.emote.icon": "Změnit ikonu",
+  "folder.reorder": "Přetažením změňte pořadí (nebo použijte šipky ← →)",
 
   "ui.hide": "Skrýt rozhraní (H)",
   "ui.show": "Zobrazit rozhraní (H)",

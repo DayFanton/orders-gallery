@@ -392,6 +392,7 @@
   "folder.emote.title": "Emoturile mele",
   "folder.emote.hint": "Alegeți un fișier .json pentru emote și, opțional, o imagine pictogramă (.png) în aceeași fereastră de dialog",
   "folder.emote.icon": "Schimbați pictograma",
+  "folder.reorder": "Trageți pentru a reordona (sau săgețile ← →)",
 
   "ui.hide": "Ascunde interfața (H)",
   "ui.show": "Afișează interfața (H)",

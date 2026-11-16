@@ -392,6 +392,7 @@
   "folder.emote.title": "Mine emotes",
   "folder.emote.hint": "Velg en emote-.json-fil og, hvis du vil, et ikonbilde (.png) i samme dialogboks",
   "folder.emote.icon": "Endre ikon",
+  "folder.reorder": "Dra for å endre rekkefølge (eller bruk pilene ← →)",
 
   "ui.hide": "Skjul grensesnitt (H)",
   "ui.show": "Vis grensesnitt (H)",

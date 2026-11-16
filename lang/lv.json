@@ -390,6 +390,7 @@
   "folder.emote.title": "Manas emocijas",
   "folder.emote.hint": "Izvēlieties emota .json failu un, ja vēlaties, ikonas attēlu (.png) tajā pašā dialoglodziņā",
   "folder.emote.icon": "Mainīt ikonu",
+  "folder.reorder": "Velciet, lai mainītu secību (vai izmantojiet bultiņas ← →)",
 
   "ui.hide": "Slēpt interfeisu (H)",
   "ui.show": "Rādīt interfeisu (H)",

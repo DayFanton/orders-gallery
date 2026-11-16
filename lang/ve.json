@@ -392,6 +392,7 @@
   "folder.emote.title": "Zwiga zwanga",
   "folder.emote.hint": "Nangani faela ya .json ya emote nahone, arali na toda, tshifanyiso tsha icon (.png) kha Dayalogo yo fanaho",
   "folder.emote.icon": "Shandukisa icon",
+  "folder.reorder": "Gungudani u shandula mbekanyano (kana ni shumise mifura ← →)",
 
   "ui.hide": "Vhaedza zwiga (H)",
   "ui.show": "Luvhadza zwiga (H)",

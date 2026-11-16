@@ -390,6 +390,7 @@
   "folder.emote.title": "Mijn emotes",
   "folder.emote.hint": "Kies een emote-.json-bestand en, indien gewenst, een pictogramafbeelding (.png) in hetzelfde dialoogvenster",
   "folder.emote.icon": "Pictogram wijzigen",
+  "folder.reorder": "Slepen om te herschikken (of gebruik de pijlen ← →)",
 
   "ui.hide": "Verberg interface (H)",
   "ui.show": "Toon interface (H)",

@@ -390,6 +390,7 @@
   "folder.emote.title": "ኤሞትታተይ",
   "folder.emote.hint": "ኤሞት .json ፋይል ምረጽ፡ ከደሊኻ ድማ ኣብቲ ሓደ ዲያሎግ ስእሊ ኣይኮን (.png) ምረጽ",
   "folder.emote.icon": "ኣይኮን ቀይር",
+  "folder.reorder": "ቅደም ተከተል ንምቕያር ስሕብ (ወይ ድማ ← → ጠዋር ተጠቀም)",
 
   "ui.hide": "መራኸቢ ሕብረተሰብ ሓብእ (H)",
   "ui.show": "መራኸቢ ሕብረተሰብ ኣርኢ (H)",

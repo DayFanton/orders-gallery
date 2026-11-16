@@ -392,6 +392,7 @@
   "folder.emote.title": "Sama emoticon yi",
   "folder.emote.hint": "Tann benn faayil .jsonu emote walla, su ko nee ko bëggée, benn natal u icon (.png) ci biir dialog bi rekk",
   "folder.emote.icon": "Wayli icon bi",
+  "folder.reorder": "Bëtu ngir coppti (walla jëfandikoo mbalit yi ← →)",
 
   "ui.hide": "Dollikul interface bi (H)",
   "ui.show": "Wone interface bi (H)",

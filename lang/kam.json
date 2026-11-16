@@ -392,6 +392,7 @@
   "folder.emote.title": "Mbica syakwa",
   "folder.emote.hint": "Mbica ya emote .json na, twĩ kũenda, mbica ya icon (.png) thĩinĩ wa mbica ĩmwe",
   "folder.emote.icon": "Ũvũndũla icon",
+  "folder.reorder": "Thama nĩguo ũvĩndũie mbandĩ (kana ũtumĩe mĩguĩ ← →)",
 
   "ui.hide": "Ĩtheka mbica (H)",
   "ui.show": "Tharia mbica (H)",

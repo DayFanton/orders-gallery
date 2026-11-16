@@ -392,6 +392,7 @@
   "folder.emote.title": "हमर इमोट्स",
   "folder.emote.hint": "एकटा emote .json फाइल चुनू, आ यदि चाहै छी त ओहि संवाद मे एकटा आइकन फोटो (.png) चुनू",
   "folder.emote.icon": "आइकन बदलू",
+  "folder.reorder": "क्रम बदले ले खींची (आ तीर ← → के इस्तेमाल करी)",
 
   "ui.hide": "इंटरफेस लुकाउ (H)",
   "ui.show": "इंटरफेस देखौ (H)",

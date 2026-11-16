@@ -392,6 +392,7 @@
   "folder.emote.title": "Mening emotelarim",
   "folder.emote.hint": "Emot .json faylini va xohlasangiz, ikonka rasmini (.png) bir xil muloqot oynasida tanlang",
   "folder.emote.icon": "Ikonkani o'zgartirish",
+  "folder.reorder": "Tartibini o'zgartirish uchun sudrab olib boring (yoki ← → strelkalaridan foydalaning)",
 
   "ui.hide": "Interfeysni yashirish (H)",
   "ui.show": "Interfeysni ko'rsatish (H)",

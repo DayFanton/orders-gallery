@@ -392,6 +392,7 @@
   "folder.emote.title": "Ti-emote ta mina",
   "folder.emote.hint": "Hlawula fayimi ya .json ya emote naswino, loko u lava, xifaniso xa icon (.png) eka bokisi rin’we",
   "folder.emote.icon": "Cinca icon",
+  "folder.reorder": "Kokela ku cinca landelelano (kumbe u tirhisa mintsu ← →)",
 
   "ui.hide": "Tumika mahlo (H)",
   "ui.show": "Kombisa mahlo (H)",

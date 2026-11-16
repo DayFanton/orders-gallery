@@ -390,6 +390,7 @@
   "folder.emote.title": "Emotekunakuna",
   "folder.emote.hint": "Huk emote .json willakuyta akllay, munanktataq chayqa, huk icon rikrakachatapas (.png) kikin rimanakunallapim",
   "folder.emote.icon": "Iconta t'ikray",
+  "folder.reorder": "Pantallamanta fototaqa mana hap'iyta atikurqanchu",
 
   "ui.hide": "Rikchayta pakay (H)",
   "ui.show": "Rikchayta qawachiy (H)",

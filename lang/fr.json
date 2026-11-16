@@ -392,6 +392,7 @@
   "folder.emote.title": "Mes emotes",
   "folder.emote.hint": "Choisissez un fichier .json d'emote et, si vous le souhaitez, une image d'icône (.png) dans la même boîte de dialogue",
   "folder.emote.icon": "Modifier l'icône",
+  "folder.reorder": "Glisser pour réordonner (ou flèches ← →)",
 
   "ui.hide": "Masquer l'interface (H)",
   "ui.show": "Afficher l'interface (H)",

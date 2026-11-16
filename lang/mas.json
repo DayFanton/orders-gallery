@@ -390,6 +390,7 @@
   "folder.emote.title": "Ɛmɔɔti lani",
   "folder.emote.hint": "Enget file oong .json eka ɛmɔɔti enye tosh oloshisho olong .png e dialog eni",
   "folder.emote.icon": "Enget oloshisho",
+  "folder.reorder": "Eish, olasho le olpiron (ama intare ← →)",
 
   "ui.hide": "Erisie interface (H)",
   "ui.show": "Erisie interface (H)",

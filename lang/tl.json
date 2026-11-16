@@ -392,6 +392,7 @@
   "folder.emote.title": "Ang aking mga emote",
   "folder.emote.hint": "Pumili ng .json file ng emote at, kung gusto mo, isang larawan ng icon (.png) sa parehong dialog",
   "folder.emote.icon": "Palitan ang icon",
+  "folder.reorder": "I-drag para palitan ang pagkakasunod-sunod (o gamitin ang mga arrow ← →)",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",

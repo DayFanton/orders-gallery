@@ -390,6 +390,7 @@
   "folder.emote.title": "Moji emoti",
   "folder.emote.hint": "Izberite .json datoteko emota in, če želite, sliko ikone (.png) v istem pogovornem oknu",
   "folder.emote.icon": "Spremeni ikono",
+  "folder.reorder": "Povlecite za spremembo vrstnega reda (ali uporabite puščice ← →)",
 
   "ui.hide": "Skrij vmesnik (H)",
   "ui.show": "Prikaži vmesnik (H)",

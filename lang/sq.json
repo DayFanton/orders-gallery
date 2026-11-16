@@ -392,6 +392,7 @@
   "folder.emote.title": "Emote-t e mia",
   "folder.emote.hint": "Zgjidhni një skedar .json të emote dhe, nëse dëshironi, një imazh ikone (.png) në të njëjtin dialog",
   "folder.emote.icon": "Ndrysho ikonën",
+  "folder.reorder": "Tërhiq për të rirenditur (ose shigjetat ← →)",
 
   "ui.hide": "Fshih ndërfaqen (H)",
   "ui.show": "Shfaq ndërfaqen (H)",

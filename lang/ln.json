@@ -390,6 +390,7 @@
   "folder.emote.title": "Bilembo na ngai",
   "folder.emote.hint": "Poná file .json ya emote mpe, soki olingi, bililingi ya icon (.png) na dialog moko",
   "folder.emote.icon": "Bóngola icon",
+  "folder.reorder": "Kokaka po na kobongola molongo (to kosalela milolo ← →)",
 
   "ui.hide": "Bomba interface (H)",
   "ui.show": "Monisa interface (H)",

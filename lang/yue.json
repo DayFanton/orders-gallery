@@ -392,6 +392,7 @@
   "folder.emote.title": "我的动作",
   "folder.emote.hint": "选择一个表情 .json 文件，如果你想嘅话，还可以在同一对话框中选择图标图片 (.png)",
   "folder.emote.icon": "更改图标",
+  "folder.reorder": "拖動以重新排序（或使用 ← → 箭頭）",
 
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",

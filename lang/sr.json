@@ -392,6 +392,7 @@
   "folder.emote.title": "Моји емоти",
   "folder.emote.hint": "Изаберите .json фајл емота и, ако желите, слику иконице (.png) у истом дијалогу",
   "folder.emote.icon": "Промени иконицу",
+  "folder.reorder": "Prevucite da promenite redosled (ili strelice ← →)",
 
   "ui.hide": "Сакриј интерфејс (H)",
   "ui.show": "Прикажи интерфејс (H)",

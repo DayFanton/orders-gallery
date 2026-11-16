@@ -390,6 +390,7 @@
   "folder.emote.title": "Ma-emote angu",
   "folder.emote.hint": "Sarudzafaira re .json re emote uye, kana uchida, mufananidzo we icon (.png) mune imwecheteyo dialog",
   "folder.emote.icon": "Chinja icon",
+  "folder.reorder": "Dhonai kuti uchinje kurongeka (kana shandisa miseve ← →)",
 
   "ui.hide": "Vanza interface (H)",
   "ui.show": "Ratidza interface (H)",

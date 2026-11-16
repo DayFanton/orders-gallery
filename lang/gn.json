@@ -392,6 +392,7 @@
   "folder.emote.title": "Che emote",
   "folder.emote.hint": "Eiporavo peteĩ emote .json file ha, reipotárõ, peteĩ icon image (.png) pe dialog peteĩvape",
   "folder.emote.icon": "Emboguejy icon",
+  "folder.reorder": "Emonguevi hag̃ua jey (tereojopy takamburu ← →)",
 
   "ui.hide": "Emonguete interface (H)",
   "ui.show": "Hechauka interface (H)",

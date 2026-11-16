@@ -390,6 +390,7 @@
   "folder.emote.title": "Emotes koo",
   "folder.emote.hint": "Emote .json file kee, woyite addisaysu woyite, icon image (.png) dialog koo kee addisaysu",
   "folder.emote.icon": "Icon koo cissa",
+  "folder.reorder": "Drag to reorder (afa arrow ← →)",
 
   "ui.hide": "Interface maggana (H)",
   "ui.show": "Interface takki (H)",

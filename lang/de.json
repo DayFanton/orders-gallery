@@ -392,6 +392,7 @@
   "folder.emote.title": "Meine Emotes",
   "folder.emote.hint": "Wählen Sie eine Emote-.json-Datei und optional ein Vorschaubild (.png) im selben Dialogfeld aus",
   "folder.emote.icon": "Symbol ändern",
+  "folder.reorder": "Zum Neuanordnen ziehen (oder Pfeile ← → verwenden)",
 
   "ui.hide": "Interface ausblenden (H)",
   "ui.show": "Interface anzeigen (H)",

@@ -392,6 +392,7 @@
   "folder.emote.title": "Di-emote tsa me",
   "folder.emote.hint": "Kgetha faele ya emote ya .json mme, fa o batla, setshwantsho sa letshwao (.png) mo motlotlong o le mongwe",
   "folder.emote.icon": "Fetola letshwao",
+  "folder.reorder": "Gula go fetola thulaganyo (kgotsa dirisa metsu ← →)",
 
   "ui.hide": "Fitlha sebopego (H)",
   "ui.show": "Bontsha sebopego (H)",

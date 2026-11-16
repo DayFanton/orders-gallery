@@ -392,6 +392,7 @@
   "folder.emote.title": "Emotlarym",
   "folder.emote.hint": "Emot .json faýlyny we isleseňiz, nyşan suratyny (.png) şol bir dialog penjiresinde saýlaň",
   "folder.emote.icon": "Nyşany üýtgetmek",
+  "folder.reorder": "Tertibini üýtgetmek üçin süýräň (ýa-da ← → oklaryny ulanyň)",
 
   "ui.hide": "Interfeýsi gizlemek (H)",
   "ui.show": "Interfeýsi görkezmek (H)",

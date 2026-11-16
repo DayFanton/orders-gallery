@@ -392,6 +392,7 @@
   "folder.emote.title": "Utumenyetso twanje",
   "folder.emote.hint": "Hitamo dosi ya .json y'emote kandi, niba ubishaka, ishusho y'ikoni (.png) muri iyo dialogu",
   "folder.emote.icon": "Hindura ikoni",
+  "folder.reorder": "Kurura kugira uhindure urutonde (canke ukoreshe imice ← →)",
 
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",

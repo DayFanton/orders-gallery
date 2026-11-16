@@ -392,6 +392,7 @@
   "folder.emote.title": "Émot kuring",
   "folder.emote.hint": "Pilih berkas .json émot jeung, upama miharep, gambar ikon (.png) dina dialog nu sarua",
   "folder.emote.icon": "Robah ikon",
+  "folder.reorder": "Seret pikeun ngarobah susunan (atawa panah ← →)",
 
   "ui.hide": "Sumputkeun antarbeungeut (H)",
   "ui.show": "Témbongkeun antarbeungeut (H)",

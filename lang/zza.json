@@ -392,6 +392,7 @@
   "folder.emote.title": "Emoti mı",
   "folder.emote.hint": "Yew fıli .jsoni yê emoti u eke to wazeno, yew resmê iconi (.png) ebe yew dialog de bıvake",
   "folder.emote.icon": "Icon bıvurnê",
+  "folder.reorder": "Terbiyayışi vurnenayîşî bikiş (ya zi tîran ← → bixebitîne)",
 
   "ui.hide": "Enterfeyi bınusne (H)",
   "ui.show": "Enterfeyi bımocne (H)",

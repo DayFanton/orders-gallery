@@ -390,6 +390,7 @@
   "folder.emote.title": "Li-emote tsa ka",
   "folder.emote.hint": "Khetha faele ea .json ea emote le, haeba u batla, setšoantšo sa Letšoao (.png) moqoqong o tšoanang",
   "folder.emote.icon": "Fetola letšoao",
+  "folder.reorder": "Hula ho fetola tatellano (kapa sebelisa metsu ← →)",
 
   "ui.hide": "Patla sebopeho (H)",
   "ui.show": "Bontša sebopeho (H)",

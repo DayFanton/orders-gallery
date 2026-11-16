@@ -392,6 +392,7 @@
   "folder.emote.title": "Emot sengko",
   "folder.emote.hint": "Pèlè berkas .json emote otabâ, mon terro, gambar ikon (.png) è ḍâlem dialog sè padhâ",
   "folder.emote.icon": "Ghântè' ikon",
+  "folder.reorder": "Sered ka'ngnga' ganti' urutan (atawa panah ← →)",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",

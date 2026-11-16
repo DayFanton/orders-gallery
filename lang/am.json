@@ -392,6 +392,7 @@
   "folder.emote.title": "የእኔ ስሜት ገጾች",
   "folder.emote.hint": "የኢሞት .json ፋይል ይምረጡ እና ከፈለጉ በተመሳሳይ ሳጥን ውስጥ የአייኮን ምስል (.png) ይምረጡ",
   "folder.emote.icon": "አዕማድ ቀይር",
+  "folder.reorder": "ቅደም ተከተል ለመቀየር ይጎትቱ (ወይም ← → ቀስቶችን ይጠቀሙ)",
 
   "ui.hide": "በይነገጽ ደብቅ (H)",
   "ui.show": "በይነገጽ አሳይ (H)",

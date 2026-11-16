@@ -392,6 +392,7 @@
   "folder.emote.title": "Emote dina",
   "folder.emote.hint": "Zaɓi fayil ɗin .json na emote kuma, idan kuna so, hoton gunkin (.png) a cikin tattaunawa guda ɗaya",
   "folder.emote.icon": "Canza alamar",
+  "folder.reorder": "Jawo domin sake tsarawa (ko amfani da kibiyoyi ← →)",
 
   "ui.hide": "Ɓoye mai amfani (H)",
   "ui.show": "Nuna mai amfani (H)",

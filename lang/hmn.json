@@ -390,6 +390,7 @@
   "folder.emote.title": "Kuv cov emote",
   "folder.emote.hint": "Xaiv ib daim ntaub ntawv emote .json thiab, yog koj xav tau, ib daim duab icon (.png) nyob rau hauv tib lub dialog",
   "folder.emote.icon": "Hloov icon",
+  "folder.reorder": "Luag rub los txhawm rau rov teeb tsa (los yog siv xub ← →)",
 
   "ui.hide": "Nkaum qhov screen (H)",
   "ui.show": "Qhia qhov screen (H)",

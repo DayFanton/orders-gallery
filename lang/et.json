@@ -390,6 +390,7 @@
   "folder.emote.title": "Minu emotsioonid",
   "folder.emote.hint": "Valige emotsiooni .json-fail ja soovi korral ikoonipilt (.png) samas dialoogiaknas",
   "folder.emote.icon": "Muuda ikooni",
+  "folder.reorder": "Lohistage ümberpaigutamiseks (või kasutage nooli ← →)",
 
   "ui.hide": "Peida liides (H)",
   "ui.show": "Näita liidest (H)",

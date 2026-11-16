@@ -390,6 +390,7 @@
   "folder.emote.title": "האמותים שלי",
   "folder.emote.hint": "בחר קובץ .json של אמות ותמונה לסמל (.png), אם תרצה, באותה תיבת דו-שיח",
   "folder.emote.icon": "שנה סמל",
+  "folder.reorder": "גרר כדי לשנות סדר (או השתמש בחצים ← →)",
 
   "ui.hide": "הסתר ממשק (H)",
   "ui.show": "הצג ממשק (H)",

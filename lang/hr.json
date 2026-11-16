@@ -392,6 +392,7 @@
   "folder.emote.title": "Moji emoti",
   "folder.emote.hint": "Odaberite .json datoteku emota i, ako želite, sliku ikone (.png) u istom dijaloškom okviru",
   "folder.emote.icon": "Promijeni ikonu",
+  "folder.reorder": "Povucite za promjenu redoslijeda (ili strelice ← →)",
 
   "ui.hide": "Sakrij sučelje (H)",
   "ui.show": "Prikaži sučelje (H)",

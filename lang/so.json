@@ -392,6 +392,7 @@
   "folder.emote.title": "Emotes-kayda",
   "folder.emote.hint": "Dooro faylka .json ee emote-ka iyo, haddii aad rabto, sawirka astaanta (.png) ee isla wadahadalkaas",
   "folder.emote.icon": "Beddel astaamaha",
+  "folder.reorder": "Jiid si aad dib ugu habayso (ama isticmaal fallaadhaha ← →)",
 
   "ui.hide": "Qari is dhexgalka (H)",
   "ui.show": "Muuji is dhexgalka (H)",

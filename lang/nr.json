@@ -392,6 +392,7 @@
   "folder.emote.title": "Ama-emote ami",
   "folder.emote.hint": "Khetha ifayela ye-.json ye-emote, kanti uma ufuna, umfanekiso wesithonjana (.png) kwingxoxo leyo",
   "folder.emote.icon": "Shintsha isithonjana",
+  "folder.reorder": "Hudula ukutjhugulula ikhambelo (noma sebenzisa imicibisholo ← →)",
 
   "ui.hide": "Fihla isikhombimsebenzisi (H)",
   "ui.show": "Khombisa isikhombimsebenzisi (H)",

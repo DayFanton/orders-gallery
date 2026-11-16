@@ -392,6 +392,7 @@
   "folder.emote.title": "Ovitumiko viange",
   "folder.emote.hint": "Pita ovinyiko vi .json via emote kuenda, nda wati, ovifeva vi icon (.png) volukayi olu rumue",
   "folder.emote.icon": "Sakula icon",
+  "folder.reorder": "Tata phangi o kusinana (nda kusonduka ← →)",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",

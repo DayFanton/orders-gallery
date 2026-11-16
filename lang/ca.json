@@ -392,6 +392,7 @@
   "folder.emote.title": "Els meus emotes",
   "folder.emote.hint": "Trieu un fitxer .json d'emote i, si voleu, una imatge d'icona (.png) en el mateix diàleg",
   "folder.emote.icon": "Canviar icona",
+  "folder.reorder": "Arrossega per reordenar (o utilitza les fletxes ← →)",
 
   "ui.hide": "Ocultar la interfície (H)",
   "ui.show": "Mostrar la interfície (H)",

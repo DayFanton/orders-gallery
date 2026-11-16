@@ -390,6 +390,7 @@
   "folder.emote.title": "I mè emote",
   "folder.emote.hint": "Scerniss un file .json de l'emote e, se te voeut, an imimmagina icona (.png) in quell medem dialogh",
   "folder.emote.icon": "Cambia icona",
+  "folder.reorder": "Trà via per cambià l'ordin (o doprè i flècc ← →)",
 
   "ui.hide": "Scond l'interfaccia (H)",
   "ui.show": "Mostra l'interfaccia (H)",

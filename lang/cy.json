@@ -392,6 +392,7 @@
   "folder.emote.title": "Fy emote i",
   "folder.emote.hint": "Dewiswch ffeil .json emote ac, os dymunwch, ddelwedd eicon (.png) yn yr un ddeialog",
   "folder.emote.icon": "Newid eicon",
+  "folder.reorder": "Llusgo i ail-drefnu (neu ddefnyddio'r saethau ← →)",
 
   "ui.hide": "Cuddio'r rhyngwyneb (H)",
   "ui.show": "Dangos y rhyngwyneb (H)",

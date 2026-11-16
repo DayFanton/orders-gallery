@@ -392,6 +392,7 @@
   "folder.emote.title": "Emote saya",
   "folder.emote.hint": "Pilih file .json emote dan, jika mau, gambar ikon (.png) dalam dialog yang sama",
   "folder.emote.icon": "Ubah ikon",
+  "folder.reorder": "Seret untuk mengubah urutan (atau panah ← →)",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",

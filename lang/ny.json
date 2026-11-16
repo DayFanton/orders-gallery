@@ -392,6 +392,7 @@
   "folder.emote.title": "Ma-emote anga",
   "folder.emote.hint": "Sankhani fayilo ya .json ya emote ndipo, ngati mukufuna, chithunzi cha icon (.png) mu zokambirana zomweyo",
   "folder.emote.icon": "Sintha icon",
+  "folder.reorder": "Kokani kuti musinthe dongosolo (kapena gwiritsani ntchito mivi ← →)",
 
   "ui.hide": "Bisani mawonekedwe (H)",
   "ui.show": "Sonyezani mawonekedwe (H)",

@@ -392,6 +392,7 @@
   "folder.emote.title": "Ispoortiiwwan koo",
   "folder.emote.hint": "Faayilii .json ispoortii fi, yoo barbaadde, suuraa ayikoonii (.png) diraamaa tokko keessatti filadhu",
   "folder.emote.icon": "Ayikoonii jijjiiri",
+  "folder.reorder": "Qindeessuu deebi'anii jijjiiruuf harkisi (ykn xiyyoowwan ← → fayyadami)",
 
   "ui.hide": "Fuula dhoqqee dhoksuu (H)",
   "ui.show": "Fuula dhoqqee agarsiisuu (H)",

@@ -392,6 +392,7 @@
   "folder.emote.title": "Omat emote-liikkeet",
   "folder.emote.hint": "Valitse emote .json -tiedosto ja halutessasi kuvakekuva (.png) samassa ikkunassa",
   "folder.emote.icon": "Vaihda kuvake",
+  "folder.reorder": "Vedä järjestääksesi uudelleen (tai käytä nuolia ← →)",
 
   "ui.hide": "Piilota käyttöliittymä (H)",
   "ui.show": "Näytä käyttöliittymä (H)",

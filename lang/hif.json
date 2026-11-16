@@ -392,6 +392,7 @@
   "folder.emote.title": "Meri emotes",
   "folder.emote.hint": "Ek emote .json file chuno aur, agar chaho, ek icon image (.png) wahi dialog me",
   "folder.emote.icon": "Icon badlo",
+  "folder.reorder": "Drag karo badle ke liye (ya arrows ← → use karo)",
 
   "ui.hide": "Interface chupao (H)",
   "ui.show": "Interface dikhao (H)",

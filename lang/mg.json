@@ -390,6 +390,7 @@
   "folder.emote.title": "Ny emoiko",
   "folder.emote.hint": "Safidio ny rakitra .json an'ny emote ary, raha tianao, ny sarin'ny kisary (.png) ao amin'ny resaka iray ihany",
   "folder.emote.icon": "Ovay ny kisary",
+  "folder.reorder": "Teteho mba hanovana ny filaharana (na ampiasao ireo zana-tsipìka ← →)",
 
   "ui.hide": "Afeno ny endrika (H)",
   "ui.show": "Asehoy ny endrika (H)",

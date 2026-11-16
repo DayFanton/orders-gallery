@@ -392,6 +392,7 @@
   "folder.emote.title": "マイエモート",
   "folder.emote.hint": "エモートの .json ファイルと、必要に応じてアイコン画像 (.png) を同じダイアログで選択してください",
   "folder.emote.icon": "アイコンを変更",
+  "folder.reorder": "ドラッグして並べ替え（または ← → 矢印）",
 
   "ui.hide": "インターフェースを隠す (H)",
   "ui.show": "インターフェースを表示 (H)",

@@ -390,6 +390,7 @@
   "folder.emote.title": "Emothi tami",
   "folder.emote.hint": "Khetfa lifayela le-.json lelemothi, futsi uma ufuna, sitfombe sesitfombe (.png) kulencociswano lefanako",
   "folder.emote.icon": "Shintsha sitfombe",
+  "folder.reorder": "Hudvula kute ushintshe kulandzelana (noma usebentise micibisholo ← →)",
 
   "ui.hide": "Fihla isikhombandlela (H)",
   "ui.show": "Khombisa isikhombandlela (H)",

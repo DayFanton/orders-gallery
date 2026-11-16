@@ -390,6 +390,7 @@
   "folder.emote.title": "Akong mga emote",
   "folder.emote.hint": "Pagpili og emote .json file ug, kung gusto nimo, usa ka icon image (.png) sa parehong dialog",
   "folder.emote.icon": "Usba ang icon",
+  "folder.reorder": "I-drag aron mahipos ang han-ay (o gamita ang mga arrow ← →)",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",

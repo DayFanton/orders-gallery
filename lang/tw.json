@@ -390,6 +390,7 @@
   "folder.emote.title": "Me emoticons ahorow",
   "folder.emote.hint": "Paw emote .json nkrataa baako anaasɛ sɛ wopɛ a, icon mfonini (.png) wɔ dialog koro no ara mu",
   "folder.emote.icon": "Sesɛ icon no",
+  "folder.reorder": "Drag to reorder (ana se arrows ← →)",
 
   "ui.hide": "Fa interface no sie (H)",
   "ui.show": "Kyerɛ interface no (H)",

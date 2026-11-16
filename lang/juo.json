@@ -390,6 +390,7 @@
   "folder.emote.title": "Emotes duɔni naani",
   "folder.emote.hint": "Emote .json file duɔni naani, wala bua, icon image (.png) dialog duɔni kɛ",
   "folder.emote.icon": "Icon duɔni",
+  "folder.reorder": "Lwok luwo kendo (koso tic gi mogo ← →)",
 
   "ui.hide": "Interface duɔni nani (H)",
   "ui.show": "Interface duɔni nani (H)",

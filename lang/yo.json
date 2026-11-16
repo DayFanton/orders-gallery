@@ -392,6 +392,7 @@
   "folder.emote.title": "Awọn emote mi",
   "folder.emote.hint": "Yan faili .json emote kan, ti o ba fẹ, aworan aami (.png) ninu ijiroro kan naa",
   "folder.emote.icon": "Yi aami pada",
+  "folder.reorder": "Fa lati tunto (tabi lo awọn ọfa ← →)",
 
   "ui.hide": "Tọ ko oju aṣayan (H)",
   "ui.show": "Fi oju aṣayan han (H)",

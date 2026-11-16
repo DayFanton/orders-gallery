@@ -390,6 +390,7 @@
   "folder.emote.title": "My emotes",
   "folder.emote.hint": "Pick an emote .json file and, if you want, an icon image (.png) in the same dialog",
   "folder.emote.icon": "Change icon",
+  "folder.reorder": "Drag to reorder (or arrows ← →)",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",

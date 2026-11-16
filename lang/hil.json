@@ -392,6 +392,7 @@
   "folder.emote.title": "Ang akon mga emote",
   "folder.emote.hint": "Piliا sang emote .json file kag, kung gusto mo, isa ka icon image (.png) sa amo gihapon nga dialog",
   "folder.emote.icon": "Ilisan ang icon",
+  "folder.reorder": "I-drag para bag-uhon ang han-ay (o gamita ang mga arrow ← →)",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
