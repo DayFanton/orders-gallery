@@ -1147,6 +1147,15 @@
         .emote-author a { color: var(--accent); text-decoration: none; }
         .emote-author a:hover { text-decoration: underline; }
 
+        /* Цветовые коды Minecraft (§) - см. MC в скрипте */
+        .mc-b { font-weight: 800; }
+        .mc-i { font-style: italic; }
+        .mc-u { text-decoration: underline; }
+        .mc-s { text-decoration: line-through; }
+        .mc-u.mc-s { text-decoration: underline line-through; }
+        .mc-k { font-family: ui-monospace, Consolas, monospace; }
+        .mc-dk { text-shadow: 0 0 1px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 0.3); }   /* тёмные цвета (§0, §1, §4, §5, §8...) иначе не видны на тёмном фоне сайта */
+
         /* Кнопки над вьюером: скриншот и скрытие интерфейса */
         #viewer_tools { position: absolute; bottom: 20px; inset-inline-end: 20px; display: flex; gap: 8px; z-index: 6; transition: opacity 0.25s ease; }
         .tool-btn { width: 42px; height: 42px; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-muted);
@@ -1231,7 +1240,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.4</div>
+            <div class="site-version">v1.7.5</div>
         </div>
     </div>
 
@@ -1443,6 +1452,106 @@
     </div>
 
     <script>
+        /* ---------- Цветовые коды Minecraft ----------
+           Работают везде, где сайт показывает названия и имена: скины, плащи, авторы, заказчики, теги, эмоции, личная папка.
+             §0-§9, §a-§f           - цвета Java Edition
+             §g §h §i §j §p §q §s §t §u - цвета Bedrock (монета, кварц, железо, незерит, золото, изумруд, алмаз, лазурит, аметист)
+             §l жирный, §o курсив, §n подчёркнутый, §m зачёркнутый, §k «запутанный», §r сброс
+           Как в Java Edition: цвет сбрасывает стили (поэтому в именах пишут §1§l§o[ ... ]§f§l§on7).
+           §m и §n в Java - зачёркнутый и подчёркнутый, в Bedrock - красный камень и медь (в таблице кодов они пересекаются).
+           Нужны цвета Bedrock - поставьте BEDROCK_MN = true.
+             MC.html(s)      - строка для innerHTML (текст экранирован)
+             MC.render(el,s) - безопасно вывести в элемент;  MC.frag(s) - то же, но DocumentFragment
+             MC.strip(s)     - текст без кодов: для поиска, сортировки, title, имени файла, confirm */
+        /* MC-BEGIN */
+        const MC = (() => {
+            const BEDROCK_MN = false;
+            const COLORS = {
+                '0': '#000000', '1': '#0000AA', '2': '#00AA00', '3': '#00AAAA', '4': '#AA0000', '5': '#AA00AA', '6': '#FFAA00', '7': '#AAAAAA',
+                '8': '#555555', '9': '#5555FF', 'a': '#55FF55', 'b': '#55FFFF', 'c': '#FF5555', 'd': '#FF55FF', 'e': '#FFFF55', 'f': '#FFFFFF',
+                'g': '#DDD605', 'h': '#E3D4D1', 'i': '#CECACA', 'j': '#443A3B', 'p': '#DEB12D', 'q': '#47A036', 's': '#2CBAA8', 't': '#21497B', 'u': '#9A5CC6'
+            };
+            if (BEDROCK_MN) { COLORS.m = '#971607'; COLORS.n = '#B4684D'; }
+            const lum = (hex) => {
+                const c = [1, 3, 5].map(i => { const v = parseInt(hex.substr(i, 2), 16) / 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+                return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+            };
+            const DARK = {};
+            Object.keys(COLORS).forEach(k => { DARK[k] = lum(COLORS[k]) < 0.12; });
+
+            const fresh = () => ({ c: null, b: false, i: false, u: false, s: false, k: false });
+            const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+            // Разбор строки на куски с одинаковым стилем: [{ text, c, b, i, u, s, k }]
+            // Как в игре: код § + любой символ съедается целиком (неизвестный код просто пропадает), одинокий § в конце пропускается.
+            function parse(input) {
+                const s = String(input == null ? '' : input), out = [];
+                let st = fresh(), buf = '';
+                const flush = () => { if (buf) { out.push(Object.assign({ text: buf }, st)); buf = ''; } };
+                for (let n = 0; n < s.length; n++) {
+                    const ch = s[n];
+                    if (ch !== '\u00a7') { buf += ch; continue; }
+                    if (n + 1 >= s.length) break;
+                    const code = s[++n].toLowerCase();
+                    if (code >= '\ud800' && code <= '\udbff') n++;                    // пара суррогатов - один символ
+                    if (code === 'r') { flush(); st = fresh(); }
+                    else if (COLORS[code]) { flush(); st = Object.assign(fresh(), { c: code }); }   // цвет сбрасывает стили
+                    else if (code === 'l') { flush(); st.b = true; }
+                    else if (code === 'o') { flush(); st.i = true; }
+                    else if (code === 'k') { flush(); st.k = true; }
+                    else if (code === 'n' && !BEDROCK_MN) { flush(); st.u = true; }
+                    else if (code === 'm' && !BEDROCK_MN) { flush(); st.s = true; }
+                }
+                flush();
+                return out;
+            }
+            const strip = (input) => String(input == null ? '' : input).replace(/\u00a7[\s\S]?/g, '');
+
+            const classOf = (g) => [g.b && 'mc-b', g.i && 'mc-i', g.u && 'mc-u', g.s && 'mc-s', g.k && 'mc-k', g.c && DARK[g.c] && 'mc-dk'].filter(Boolean).join(' ');
+            const GLYPHS = '0123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz#$%&*+?@';
+            const scramble = (txt) => txt.replace(/\S/g, () => GLYPHS[Math.floor(Math.random() * GLYPHS.length)]);
+
+            // §k: символы меняются на случайные, пока такие элементы есть на странице
+            let timer = null;
+            const REDUCED = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+            function keepAlive() {
+                if (timer || REDUCED) return;
+                timer = setInterval(() => {
+                    const els = document.querySelectorAll('.mc-k');
+                    if (!els.length) { clearInterval(timer); timer = null; return; }
+                    els.forEach(el => { el.textContent = scramble(el.dataset.t || ''); });
+                }, 90);
+            }
+
+            function html(input) {
+                return parse(input).map(g => {
+                    const cls = classOf(g);
+                    if (!cls && !g.c) return esc(g.text);
+                    const style = g.c ? ` style="color:${COLORS[g.c]}"` : '';
+                    if (g.k) { keepAlive(); return `<span class="${cls}"${style} data-t="${esc(g.text)}">${esc(scramble(g.text))}</span>`; }
+                    return `<span class="${cls}"${style}>${esc(g.text)}</span>`;
+                }).join('');
+            }
+            function frag(input) {
+                const f = document.createDocumentFragment();
+                parse(input).forEach(g => {
+                    const cls = classOf(g);
+                    if (!cls && !g.c) { f.appendChild(document.createTextNode(g.text)); return; }
+                    const sp = document.createElement('span');
+                    if (cls) sp.className = cls;
+                    if (g.c) sp.style.color = COLORS[g.c];
+                    if (g.k) { sp.dataset.t = g.text; sp.textContent = scramble(g.text); keepAlive(); }
+                    else sp.textContent = g.text;
+                    f.appendChild(sp);
+                });
+                return f;
+            }
+            function render(el, input) { el.textContent = ''; el.appendChild(frag(input)); return el; }
+
+            return { parse, strip, html, frag, render, COLORS };
+        })();
+        /* MC-END */
+
         let skinViewer = null;
         let globalSkins = [];
         let globalCapes = []; 
@@ -1825,7 +1934,7 @@
            (через запятую: название на разных языках, сокращения, как люди это пишут - "russian, русский, рус, rusa").
            Регистр, акценты и ё/е не важны. */
         function normSearch(s) {
-            return String(s || '').toLowerCase()
+            return MC.strip(s).toLowerCase()
                 .normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0591-\u05c7\u200b-\u200f]/g, '')
                 .replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/ؤ/g, 'و').replace(/ئ/g, 'ي').replace(/ک/g, 'ك').replace(/ی/g, 'ي')
                 .replace(/ı/g, 'i').replace(/[đð]/g, 'd').replace(/ø/g, 'o').replace(/ł/g, 'l').replace(/æ/g, 'ae').replace(/œ/g, 'oe').replace(/ß/g, 'ss').replace(/þ/g, 'th')
@@ -1921,7 +2030,7 @@
             });
             document.querySelectorAll('#bgGrid .bg-dot').forEach((dot, i) => { dot.title = t(BG_KEYS[i] || 'bg.custom'); });
             document.querySelectorAll('[data-orig]').forEach(b => { b.textContent = t('variation.original'); });
-            document.querySelectorAll('[data-var-file]').forEach(b => { b.textContent = ownText('variation.name.' + b.dataset.varFile, b.dataset.varName); });
+            document.querySelectorAll('[data-var-file]').forEach(b => { MC.render(b, ownText('variation.name.' + b.dataset.varFile, b.dataset.varName)); });
             updateLangButtons();
             Backdrop.refresh();
             Scene3D.refreshUi();
@@ -2105,7 +2214,7 @@
         }
 
         function matchesCustomerTag(item, target) {
-            return getCustomers(item).some(c => c.toLowerCase().includes(target) || String(personName(c)).toLowerCase().includes(target));
+            return getCustomers(item).some(c => MC.strip(c).toLowerCase().includes(target) || MC.strip(personName(c)).toLowerCase().includes(target));
         }
 
         // Дата выбранной версии скина: если у вариации задана своя "date" - берём её, иначе дату основного скина
@@ -2134,8 +2243,8 @@
 
                 const chip = document.createElement('span');
                 chip.classList.add('meta-value', 'clickable');
-                chip.textContent = personName(name);
-                chip.title = t('meta.show_orders', personName(name));
+                MC.render(chip, personName(name));
+                chip.title = t('meta.show_orders', MC.strip(personName(name)));
                 chip.onclick = () => setAndRenderTag('customer', name);
                 wrap.appendChild(chip);
 
@@ -2156,12 +2265,12 @@
 
             const authorEl = document.getElementById('infoAuthor');
             if (item && item.author && item.author !== '-' && item.author !== 'Не указан') {
-                authorEl.textContent = personName(item.author);
+                MC.render(authorEl, personName(item.author));
                 authorEl.classList.add('clickable');
-                authorEl.title = t('meta.open_author', personName(item.author));
+                authorEl.title = t('meta.open_author', MC.strip(personName(item.author)));
                 authorEl.setAttribute('data-url', item.authorUrl || '#');
             } else {
-                authorEl.textContent = (item && item.author && personName(item.author)) || t('meta.unset');
+                MC.render(authorEl, (item && item.author && personName(item.author)) || t('meta.unset'));
                 authorEl.classList.remove('clickable');
                 authorEl.removeAttribute('title');
                 authorEl.removeAttribute('data-url');
@@ -2483,7 +2592,7 @@
                     prefixSpan.textContent = tag.type + ':';
                     
                     const valueSpan = document.createElement('span');
-                    valueSpan.textContent = tag.type === 'customer' ? personName(tag.value) : tag.value;
+                    MC.render(valueSpan, tag.type === 'customer' ? personName(tag.value) : tag.value);
                     
                     const closeBtn = document.createElement('span');
                     closeBtn.classList.add('tag-close');
@@ -2549,10 +2658,10 @@
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
                 
-                return capeTitle(cape).toLowerCase().includes(query) ||
-                       String(personName(cape.author) || '').toLowerCase().includes(query) ||
-                       (cape.capeName || cape.name || '').toLowerCase().includes(query) ||
-                       (cape.author || '').toLowerCase().includes(query) ||
+                return MC.strip(capeTitle(cape)).toLowerCase().includes(query) ||
+                       MC.strip(personName(cape.author) || '').toLowerCase().includes(query) ||
+                       MC.strip(cape.capeName || cape.name || '').toLowerCase().includes(query) ||
+                       MC.strip(cape.author || '').toLowerCase().includes(query) ||
                        (cape.date || '').toLowerCase().includes(query) ||
                        (cape.filename || '').toLowerCase().includes(query);
             });
@@ -2567,8 +2676,8 @@
                 }
 
                 if (currentSortField === 'author') {
-                    const authA = String(personName(a.author || 'Не указан'));
-                    const authB = String(personName(b.author || 'Не указан'));
+                    const authA = MC.strip(personName(a.author || 'Не указан'));
+                    const authB = MC.strip(personName(b.author || 'Не указан'));
                     if (authA !== authB) {
                         return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
                     }
@@ -2578,8 +2687,8 @@
                 }
 
                 if (currentSortField === 'name') {
-                    const nameA = capeTitle(a);
-                    const nameB = capeTitle(b);
+                    const nameA = MC.strip(capeTitle(a));
+                    const nameB = MC.strip(capeTitle(b));
                     return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
                 }
 
@@ -2589,7 +2698,7 @@
                     if (dA !== dB) {
                         return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
                     }
-                    return capeTitle(a).localeCompare(capeTitle(b));
+                    return MC.strip(capeTitle(a)).localeCompare(MC.strip(capeTitle(b)));
                 }
                 return 0;
             });
@@ -2600,13 +2709,13 @@
                     lastAuthor = personName(cape.author);
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || t('meta.unset');
+                    MC.render(header, lastAuthor || t('meta.unset'));
                     list.appendChild(header);
                 }
                 const item = document.createElement('div');
                 item.classList.add('skin-item');
                 const fullName = capeTitle(cape);
-                item.setAttribute('title', fullName);
+                item.setAttribute('title', MC.strip(fullName));
                 if (cape.filename === currentCapeFilename) item.classList.add('active');
 
                 const newBadgeHtml = cape.new ? `<div class="new-badge">${t('badge.new')}</div>` : '';
@@ -2616,7 +2725,7 @@
                     <div class="cape-preview-box">
                         <img alt="cape">
                     </div>
-                    <span class="skin-name">${fullName}</span>
+                    <span class="skin-name">${MC.html(fullName)}</span>
                     <span class="skin-date"></span>
                 `;
                 list.appendChild(item);
@@ -2703,7 +2812,7 @@
                     skin.variations.forEach(v => {
                         const btn = document.createElement('button');
                         btn.classList.add('variation-btn');
-                        btn.textContent = variationTitle(v);
+                        MC.render(btn, variationTitle(v));
                         btn.dataset.varFile = v.filename;
                         btn.dataset.varName = v.name || '';
                         if (targetTextureFile === v.filename) {
@@ -2882,6 +2991,7 @@
              title, hint   - ключи перевода заголовка и подсказки
              accept, multiple - какие файлы выбирать в диалоге «+»
              build(files)  - из выбранных файлов делает запись для UserLib (или бросает FolderError)
+             label(rec)    - название на карточке (по умолчанию rec.name); цветовые коды § показываются цветом
              thumb(rec, track) - адрес картинки-превью (track создаёт object URL, который сам уберётся) или null
              thumbClass, placeholder - вид превью
              isActive(rec), pick(rec), onRemove(rec), decorate(el, rec, rerender) */
@@ -3058,8 +3168,9 @@
                     pic.className = 'folder-thumb-empty ' + (c.thumbClass || '');
                     pic.textContent = c.placeholder || '📄';
                 }
+                const label = c.label ? c.label(rec) : rec.name;           // название может содержать цветовые коды (§)
                 const name = document.createElement('span');
-                name.textContent = rec.name;
+                MC.render(name, label);
                 const del = document.createElement('button');
                 del.type = 'button';
                 del.className = 'folder-del';
@@ -3067,7 +3178,7 @@
                 del.title = t('folder.delete');
                 del.onclick = async (e) => {
                     e.stopPropagation();
-                    if (!window.confirm(t('folder.delete_confirm', rec.name))) return;
+                    if (!window.confirm(t('folder.delete_confirm', MC.strip(label)))) return;
                     try { await UserLib.remove(kind, rec.id); } catch (err) { console.error('[folder]', err); message(t('folder.error')); return; }
                     if (c.onRemove) c.onRemove(rec);
                     render();
@@ -3311,7 +3422,7 @@
                     img.alt = '';
                     img.loading = 'lazy';
                     const name = document.createElement('span');
-                    name.textContent = titleFor(f);
+                    MC.render(name, titleFor(f));
                     card.append(img, name);
                     card.onclick = () => { apply(key); close(); };
                     box.appendChild(card);
@@ -3404,7 +3515,7 @@
             const ID_OK = /^[A-Za-z0-9_\-]{1,40}$/;
             const HEX = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
             const prettify = (id) => String(id).replace(/[_\-]+/g, ' ').trim();
-            const blockTitle = (id) => (id === PLAIN ? t('block.plain') : nameFor('block.' + id, prettify(id)));
+            const blockTitle = (id) => (id === PLAIN ? t('block.plain') : MC.strip(nameFor('block.' + id, prettify(id))));
 
             const Blocks = (() => {
                 let manifest = null, loading = null;
@@ -4042,7 +4153,7 @@
 
             function fileName() {
                 const skin = globalSkins.find(s => s.filename === currentActiveSkinFilename);
-                const base = (skin ? skinTitle(skin) : 'skin').replace(/[\\/:*?"<>|\u0000-\u001f]+/g, '_').trim().slice(0, 60) || 'skin';
+                const base = MC.strip(skin ? skinTitle(skin) : 'skin').replace(/[\\/:*?"<>|\u0000-\u001f]+/g, '_').trim().slice(0, 60) || 'skin';
                 const d = new Date(), p = (n) => String(n).padStart(2, '0');
                 return `${base}_${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.png`;
             }
@@ -4810,12 +4921,12 @@ const EmoteUI = (() => {
             a.href = e.authorUrl;
             a.target = '_blank';
             a.rel = 'noopener noreferrer';
-            a.textContent = name;
-            a.title = t('meta.open_author', name);
+            MC.render(a, name);
+            a.title = t('meta.open_author', MC.strip(name));
             a.onclick = (ev) => ev.stopPropagation();       // клик по имени открывает ссылку, а не запускает эмоцию
             wrap.appendChild(a);
         } else {
-            wrap.appendChild(document.createTextNode(name));
+            wrap.appendChild(MC.frag(name));
         }
         wrap.appendChild(document.createTextNode(post));
         return wrap;
@@ -4830,7 +4941,7 @@ const EmoteUI = (() => {
         img.alt = '';
         img.onerror = () => { img.style.visibility = 'hidden'; };
         const name = document.createElement('span');
-        name.textContent = titleFor(e.id);
+        MC.render(name, titleFor(e.id));
         card.append(img, name);
         if (e.author) card.appendChild(authorEl(e));
         card.onclick = () => playBase(e.id);
@@ -4879,22 +4990,53 @@ const EmoteUI = (() => {
             begin(json, () => titleFor(base, jsonTitle(json, base)));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
-    function jsonTitle(json, fallback) {
+    // Название берётся из самого файла эмоции. Два вида:
+    //   "name": { "translate": "...", "fallback": "Поза §5(§dМульти§5)" } - берётся fallback (но если у языка сайта есть ключ translate - он главнее)
+    //   "name": "Иисус" - обычная строка (старый формат Emotecraft)
+    // Нет названия в файле - берётся имя файла. Цветовые коды (§) остаются в строке - их рисует MC.
+    function jsonTitle(json, fileName) {
         const n = json && json.name;
-        if (n && typeof n === 'object') return ownText(n.translate, EmoteCore.stripFormatting(n.fallback || '')) || prettify(fallback);
-        return EmoteCore.stripFormatting(n) || prettify(fallback);
+        let raw = '';
+        if (n && typeof n === 'object') {
+            const fb = typeof n.fallback === 'string' ? n.fallback : '';
+            raw = (typeof n.translate === 'string' && n.translate) ? ownText(n.translate, fb) : fb;
+        } else if (typeof n === 'string') {
+            raw = n;
+        }
+        raw = String(raw).trim();
+        return MC.strip(raw).trim() ? raw : prettify(String(fileName || 'emote'));
+    }
+    // Название эмоции из личной папки. Считается по самому файлу, поэтому подхватываются и эмоции, добавленные раньше (когда в name писалось имя файла)
+    const userTitles = new Map();              // id записи -> { json, title }
+    function userTitle(rec) {
+        const c = userTitles.get(rec.id);
+        if (c && c.json === rec.json) return c.title;
+        let title;
+        try { title = jsonTitle(JSON.parse(rec.json), rec.file || rec.name); } catch (e) { title = rec.name; }
+        userTitles.set(rec.id, { json: rec.json, title });
+        return title;
     }
     // Эмоция из личной папки
     function playUser(rec) {
         try {
             const json = JSON.parse(rec.json);
-            begin(json, () => jsonTitle(json, rec.name));
+            begin(json, () => userTitle(rec));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
     function refresh() {
         const on = EmoteRuntime.isActive();
+        const now = $('emoteNow');
         $('emoteNowRow').style.display = on ? 'flex' : 'none';
-        $('emoteNow').textContent = on ? t('emote.playing', nowTitleFn()) : '';
+        now.textContent = '';
+        if (on) {
+            const MARK = '\uE000', tpl = t('emote.playing', MARK), i = tpl.indexOf(MARK);
+            if (i < 0) now.appendChild(document.createTextNode(tpl));
+            else {
+                now.appendChild(document.createTextNode(tpl.slice(0, i)));
+                now.appendChild(MC.frag(nowTitleFn()));                    // название эмоции - с цветовыми кодами
+                now.appendChild(document.createTextNode(tpl.slice(i + 1)));
+            }
+        }
         if ($('emoteModal').classList.contains('show')) renderList();
     }
 
@@ -4930,11 +5072,14 @@ const EmoteUI = (() => {
                 const jsonFile = files.find(f => /\.json$/i.test(f.name) || f.type === 'application/json');
                 const icon = files.find(f => /^image\//.test(f.type)) || null;
                 if (!jsonFile) throw new FolderError('emote.error');
-                let text;
-                try { text = await jsonFile.text(); EmoteCore.parseEmote(JSON.parse(text)); } catch (e) { throw new FolderError('emote.error'); }
+                let text, json;
+                try { text = await jsonFile.text(); json = JSON.parse(text); EmoteCore.parseEmote(json); } catch (e) { throw new FolderError('emote.error'); }
                 if (icon) { try { await probeImage(icon); } catch (e) { throw new FolderError('folder.error'); } }
-                return { name: jsonFile.name.replace(/\.json$/i, '').slice(0, 60) || 'emote', json: text, icon };
+                const file = jsonFile.name.replace(/\.json$/i, '').slice(0, 120) || 'emote';
+                const title = jsonTitle(json, file).slice(0, 120).replace(/\u00a7$/, '');     // название - из самого файла (name / name.fallback), имя файла - запасной вариант
+                return { name: title || file, file, json: text, icon };
             },
+            label: userTitle,
             thumb: (rec, track) => (rec.icon ? track(rec.icon) : null),
             decorate(el, rec, rerender) {
                 const b = document.createElement('button');
@@ -5015,10 +5160,10 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 const query = searchQuery.toLowerCase().trim();
                 if (!query) return true;
 
-                return skinTitle(skin).toLowerCase().includes(query) ||
-                       String(personName(skin.author) || '').toLowerCase().includes(query) ||
-                       (skin.skinName || '').toLowerCase().includes(query) ||
-                       (skin.author || '').toLowerCase().includes(query) ||
+                return MC.strip(skinTitle(skin)).toLowerCase().includes(query) ||
+                       MC.strip(personName(skin.author) || '').toLowerCase().includes(query) ||
+                       MC.strip(skin.skinName || '').toLowerCase().includes(query) ||
+                       MC.strip(skin.author || '').toLowerCase().includes(query) ||
                        (skin.date || '').toLowerCase().includes(query) ||
                        (skin.filename || '').toLowerCase().includes(query);
             });
@@ -5033,8 +5178,8 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 }
 
                 if (currentSortField === 'author') {
-                    const authA = String(personName(a.author || 'Не указан'));
-                    const authB = String(personName(b.author || 'Не указан'));
+                    const authA = MC.strip(personName(a.author || 'Не указан'));
+                    const authB = MC.strip(personName(b.author || 'Не указан'));
                     if (authA !== authB) {
                         return currentSortOrder === 'desc' ? authA.localeCompare(authB) : authB.localeCompare(authA);
                     }
@@ -5044,8 +5189,8 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 }
 
                 if (currentSortField === 'name') {
-                    const nameA = skinTitle(a);
-                    const nameB = skinTitle(b);
+                    const nameA = MC.strip(skinTitle(a));
+                    const nameB = MC.strip(skinTitle(b));
                     return currentSortOrder === 'desc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
                 }
 
@@ -5055,7 +5200,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     if (dA !== dB) {
                         return currentSortOrder === 'desc' ? (dB - dA) : (dA - dB);
                     }
-                    return skinTitle(a).localeCompare(skinTitle(b));
+                    return MC.strip(skinTitle(a)).localeCompare(MC.strip(skinTitle(b)));
                 }
                 return 0;
             });
@@ -5066,7 +5211,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     lastAuthor = personName(skin.author);
                     const header = document.createElement('div');
                     header.classList.add('author-group-header');
-                    header.textContent = lastAuthor || t('meta.unset');
+                    MC.render(header, lastAuthor || t('meta.unset'));
                     list.appendChild(header);
                 }
 
@@ -5074,7 +5219,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 item.classList.add('skin-item');
                 item.id = `item-${skin.filename}`;
                 const fullName = skinTitle(skin);
-                item.setAttribute('title', fullName);
+                item.setAttribute('title', MC.strip(fullName));
                 
                 if (skin.filename === currentActiveSkinFilename) {
                     item.classList.add('active');
@@ -5092,7 +5237,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 item.innerHTML = `
                     ${newBadgeHtml}
                     <canvas class="canvas-avatar" width="64" height="64"></canvas>
-                    <span class="skin-name">${fullName}</span>
+                    <span class="skin-name">${MC.html(fullName)}</span>
                     <span class="skin-date">${skin.date || ''}</span>
                     ${variationBadgeHtml}
                     <div class="model-badge" style="background-color: ${badgeColor}; color: ${badgeColor};" title="${t('skin.type', modelType)}"></div>
