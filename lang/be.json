@@ -8,9 +8,11 @@
   "language.search_placeholder": "Пошук мовы...",
   "language.no_results": "Мовы не знойдзены",
   "language.rtl": false,
+
   "site.title": "Галерэя Цыпляшы",
   "gallery.title": "Галерэя",
   "loading.text": "Загрузка модуляў візуалізацыі...",
+
   "sort.title": "Сартаванне",
   "sort.default": "Па змаўчанні",
   "sort.author": "Па аўтары",
@@ -23,6 +25,7 @@
   "tab.skins": "Скіны",
   "tab.capes": "Плашчы",
   "search.placeholder": "Пошук па назве, заказчыку, аўтары...",
+
   "meta.customer": "Заказчык",
   "meta.artist": "Мастак",
   "meta.date": "Дата заказу",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Не пазначана",
   "meta.show_orders": "Паказаць усе заказы ад %s",
   "meta.open_author": "Адкрыць старонку аўтара (%s)",
+
   "skin.untitled": "Без назвы",
   "skin.type": "Тып: %s",
   "skin.has_variations": "Ёсць варыяцыі",
   "variation.original": "Арыгінал",
   "cape.remove": "Зняць плашч",
   "badge.new": "НОВАЕ",
+
   "controls.reset": "Скінуць",
   "rotate.title": "Вярчэнне",
   "rotate.enable": "Круціць мадэль",
@@ -52,6 +57,7 @@
   "layers.body": "Верхняе адзенне / Браня",
   "acc.title": "Аксесуары",
   "acc.elytra": "Адлюстроўваць элітры",
+
   "emote.button": "Эмоцыі",
   "emote.title": "Эмоцыі",
   "emote.hint": "Выберыце эмоцыю або загрузіце свой .json файл",
@@ -61,6 +67,7 @@
   "emote.error": "Не ўдалося прачытаць файл эмоцыі",
   "emote.playing": "Іграе: %s",
   "emote.close": "Закрыць",
+
   "bg.title": "Колер фону",
   "bg.dark": "Цёмны",
   "bg.light": "Светлы",
@@ -91,14 +98,18 @@
   "block.planks": "Дубовыя дошкі",
   "block.netherrack": "Нэдарэк",
   "block.end_stone": "Камень Энда",
+
   "mobile.gallery": "📁 Галерэя",
   "mobile.settings": "⚙️ Налады",
+
   "modal.title": "Паведамленне",
   "modal.text": "Паважаныя госці! Кожны скін у гэтай галерэі — вынік многіх гадзін працы. Калі ласка, паважайце чужую працу. Усе выявы абаронены аўтарскім правам. Прагляд дазволены, але спампоўванне, капіраванне і камерцыйнае выкарыстанне даступныя толькі па папярэдняй дамоўленасці. Дзякуй за разуменне і сумленнасць!",
   "modal.agree": "Я ўсё прачытаў і згодны",
   "modal.continue": "Працягнуць",
+
   "error.viewer": "Памылка ініцыялізацыі 3D кампанентаў.",
   "error.json": "Не ўдалося прачытаць канфігурацыйныя файлы JSON.",
+
   "skin.name.vova_halloween26": "Вова хэлоўінскі 2026",
   "variation.name.vova_in_mask_halloween26": "У масцы",
   "skin.name.day_halloween26": "Дэй хэлоўінскі 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Гэр летняя",
   "skin.name.ger_maid_skeleton": "Гэр пакаёўка-шкілет",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Мігратар",
   "cape.name.pan": "Блінны",
   "cape.name.15th_anniversary": "15-я гадавіна",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Мільённы пакупнік",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Прызмарын",
+
   "emote.name.SPE_Get_scared": "Спалохацца",
   "emote.name.SPE_Ankha_Dance": "Танец Анкхі (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Стойка Эвелін (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Поза Ведзьмы (Кашмары)",
   "emote.name.SPE_Yandere_Pose": "Поза Яндэрэ (Кашмары)",
   "emote.name.SPE_Zoro_Pose": "Стойка Зора (Мультысусвет) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Віякор",
@@ -342,5 +356,12 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эпоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "bgimg.name.day": "Дзень",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Нэзар",
+  "bgimg.name.night": "Ноч",
+  "bgimg.name.snow": "Снег",
+  "bgimg.name.sunset": "Захад сонца"
 }

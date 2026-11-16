@@ -8,9 +8,11 @@
   "language.search_placeholder": "Nrhiav hom lus...",
   "language.no_results": "Tsis pom hom lus twg",
   "language.rtl": false,
+
   "site.title": "Tsyplyash Lub Chaw Sau Duab",
   "gallery.title": "Chaw Sau Duab",
   "loading.text": "Tab tom thauj cov khoom pom duab...",
+
   "sort.title": "Txheeb",
   "sort.default": "Raws li qub",
   "sort.author": "Raws li tus tsim",
@@ -23,6 +25,7 @@
   "tab.skins": "Cov Tawv Nqaij",
   "tab.capes": "Cov Tsho Khuam",
   "search.placeholder": "Nrhiav raws li lub npe, tus neeg yuav, tus tsim...",
+
   "meta.customer": "Tus neeg xaj",
   "meta.artist": "Tus kws kos duab",
   "meta.date": "Hnub xaj",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Tsis tau qhia",
   "meta.show_orders": "Qhia tag nrho cov kev xaj ntawm %s",
   "meta.open_author": "Qhib tus tsim nplooj ntawv (%s)",
+
   "skin.untitled": "Tsis muaj npe",
   "skin.type": "Hom: %s",
   "skin.has_variations": "Muaj ntau hom hloov",
   "variation.original": "Thawj tug",
   "cape.remove": "Hle tsho khuam",
   "badge.new": "TSHIAB",
+
   "controls.reset": "Rov pib dua",
   "rotate.title": "Kev tig",
   "rotate.enable": "Tig tus qauv",
@@ -52,6 +57,7 @@
   "layers.body": "Tsho sab nraud / Khaub ncaws hlau",
   "acc.title": "Khoom siv ntxiv",
   "acc.elytra": "Qhia tis ya (Elytra)",
+
   "emote.button": "Kev ua yeeb yam",
   "emote.title": "Kev ua yeeb yam",
   "emote.hint": "Xaiv ib qho kev ua yeeb yam los yog thauj koj tus kheej cov ntaub ntawv .json",
@@ -61,6 +67,7 @@
   "emote.error": "Nyeem tsis tau cov ntaub ntawv kev ua yeeb yam no",
   "emote.playing": "Tab tom ua: %s",
   "emote.close": "Kaw",
+
   "bg.title": "Xim keeb kwm yav dhau",
   "bg.dark": "Tsaus",
   "bg.light": "Daj ntseg / Pom kev",
@@ -91,14 +98,18 @@
   "block.planks": "Txiag ntoo qhib",
   "block.netherrack": "Pob zeb Netherrack",
   "block.end_stone": "Pob zeb End",
+
   "mobile.gallery": "📁 Chaw Sau Duab",
   "mobile.settings": "⚙️ Kev Teeb Tsa",
+
   "modal.title": "Tsab Ntawv Ceeb Toom",
   "modal.text": "Nyob zoo cov qhua! Txhua daim tawv nqaij hauv chaw sau duab no yog txiaj ntsig ntawm ntau teev ua haujlwm hnyav. Thov hwm lwm tus neeg txoj haujlwm. Tag nrho cov duab raug tiv thaiv los ntawm txoj cai tswjfwm. Kev saib raug tso cai, tab sis kev rub tawm, luam tawm, thiab siv ua lag luam tsuas yog tso cai thaum muaj kev pom zoo ua ntej xwb. Ua tsaug rau koj txoj kev nkag siab thiab kev ncaj ncees!",
   "modal.agree": "Kuv tau nyeem tag nrho thiab kuv pom zoo",
   "modal.continue": "Txuas ntxiv",
+
   "error.viewer": "Ua yuam kev thaum pib cov khoom 3D.",
   "error.json": "Nyeem tsis tau cov ntaub ntawv teeb tsa JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Ntoo daim npog ntsej muag",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Lub Caij Ntuj Sov",
   "skin.name.ger_maid_skeleton": "Ger Tus Ntxhais Ua Haujlwm Pob Txha",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Tus Neeg Tsiv Teb Chaws",
   "cape.name.pan": "Ncuav Cib Yias",
   "cape.name.15th_anniversary": "Hnub Nco Qab Xyoo 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Tus Neeg Yuav Khoom Ib Lab",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Ntshai",
   "emote.name.SPE_Ankha_Dance": "Ankha Zaj Seev Cev (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Kev Sawv (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Tus Poj Ntxoog Kev Sawv (Npau Suav Phem)",
   "emote.name.SPE_Yandere_Pose": "Yandere Kev Sawv (Npau Suav Phem)",
   "emote.name.SPE_Zoro_Pose": "Zoro Kev Sawv (Ntau Lub Ntiaj Teb) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Nruab hnub",
+  "bgimg.name.end": "Qhov kawg",
+  "bgimg.name.nether": "Tub tuag teb",
+  "bgimg.name.night": "Hmo ntuj",
+  "bgimg.name.snow": "Daus",
+  "bgimg.name.sunset": "Hnub poob"
 }

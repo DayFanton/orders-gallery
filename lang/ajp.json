@@ -358,5 +358,12 @@
   "block.snow": "كتلة ثلج",
   "block.planks": "ألواح بلوط",
   "block.netherrack": "نذراكت",
-  "block.end_stone": "حجر النهاية"
+  "block.end_stone": "حجر النهاية",
+
+  "bgimg.name.day": "نهار",
+  "bgimg.name.end": "النهاية",
+  "bgimg.name.nether": "النذر",
+  "bgimg.name.night": "ليل",
+  "bgimg.name.snow": "ثلج",
+  "bgimg.name.sunset": "غروب الشمس"
 }

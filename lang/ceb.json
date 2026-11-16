@@ -8,9 +8,11 @@
   "language.search_placeholder": "Pangita og pinulongan...",
   "language.no_results": "Walay nakit-an nga pinulongan",
   "language.rtl": false,
+
   "site.title": "Galeriya ni Tsyplyash",
   "gallery.title": "Galeriya",
   "loading.text": "Nag-load sa mga module sa pagtan-aw...",
+
   "sort.title": "Paghan-ay",
   "sort.default": "Default",
   "sort.author": "Sumala sa awtor",
@@ -23,6 +25,7 @@
   "tab.skins": "Mga Skin",
   "tab.capes": "Mga Kapa",
   "search.placeholder": "Pangita sumala sa ngalan, kustomer, awtor...",
+
   "meta.customer": "Kustomer",
   "meta.artist": "Artista",
   "meta.date": "Petsa sa order",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Wala gitakda",
   "meta.show_orders": "Ipakita ang tanang order gikan kang %s",
   "meta.open_author": "Ablihi ang panid sa awtor (%s)",
+
   "skin.untitled": "Walay titulo",
   "skin.type": "Matang: %s",
   "skin.has_variations": "Adunay mga baryasyon",
   "variation.original": "Orihinal",
   "cape.remove": "Kuhaa ang kapa",
   "badge.new": "BAG-O",
+
   "controls.reset": "I-reset",
   "rotate.title": "Pagtuyok",
   "rotate.enable": "Ituyok ang modelo",
@@ -52,6 +57,7 @@
   "layers.body": "Pang-ibabaw nga sinina / Armadura",
   "acc.title": "Mga aksesorya",
   "acc.elytra": "Ipakita ang elytra",
+
   "emote.button": "Mga Emote",
   "emote.title": "Mga Emote",
   "emote.hint": "Pagpili og emote o pag-upload sa imong kaugalingong .json file",
@@ -61,6 +67,7 @@
   "emote.error": "Dili mabasa kini nga file sa emote",
   "emote.playing": "Nagdula: %s",
   "emote.close": "Isira",
+
   "bg.title": "Kolor sa background",
   "bg.dark": "Ngitngit",
   "bg.light": "Hayag",
@@ -91,14 +98,18 @@
   "block.planks": "Tabla nga Oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Bato sa Katapusan",
+
   "mobile.gallery": "📁 Galeriya",
   "mobile.settings": "⚙️ Mga Setting",
+
   "modal.title": "Pahibalo",
   "modal.text": "Minahal nga mga bisita! Ang matag skin niining galeriya resulta sa daghang oras nga paghago. Palihug tahora ang trabaho sa uban. Ang tanang hulagway protektado sa copyright. Gitugotan ang pagtan-aw, apan ang pag-download, pagkopya, ug komersyal nga paggamit gitugotan lamang pinaagi sa una nga kasabutan. Salamat sa inyong pagsabot ug pagkamatinud-anon!",
   "modal.agree": "Nabasa na nako ang tanan ug miuyon ko",
   "modal.continue": "Padayon",
+
   "error.viewer": "Sayop sa pag-initialize sa mga 3D component.",
   "error.json": "Napakyas sa pagbasa sa mga JSON configuration file.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Naka-maskara",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Ting-init",
   "skin.name.ger_maid_skeleton": "Ger Katabang-Kalabera",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrador",
   "cape.name.pan": "Pankeyk",
   "cape.name.15th_anniversary": "Ika-15 nga Anibersaryo",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Ika-usa ka Milyon nga Kustomer",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Mahadlok",
   "emote.name.SPE_Ankha_Dance": "Sayaw ni Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Barog ni Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Pose sa Ungo (Mga Damgo nga Makahadlok)",
   "emote.name.SPE_Yandere_Pose": "Pose nga Yandere (Mga Damgo nga Makahadlok)",
   "emote.name.SPE_Zoro_Pose": "Pose ni Zoro (Multiberso) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Adlaw",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Gabii",
+  "bgimg.name.snow": "Niyebe",
+  "bgimg.name.sunset": "Pagsalop sa adlaw"
 }

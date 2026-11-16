@@ -8,9 +8,11 @@
   "language.search_placeholder": "Raadi luqadda...",
   "language.no_results": "Luqado lama helin",
   "language.rtl": false,
+
   "site.title": "Matxafka Tsyplyash",
   "gallery.title": "Matxaf",
   "loading.text": "Soo dejinta qaybaha muuqaalka...",
+
   "sort.title": "Kala sooc",
   "sort.default": "Ugu horrayn",
   "sort.author": "Qoraaga",
@@ -23,6 +25,7 @@
   "tab.skins": "Maqaarrada",
   "tab.capes": "Khamiisyada",
   "search.placeholder": "Ka raadi magac, macmiil, qoraa...",
+
   "meta.customer": "Macmiil",
   "meta.artist": "Farshaxan",
   "meta.date": "Taariikhda dalabka",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Lama cayimin",
   "meta.show_orders": "Tus dhammaan dalabaadka %s",
   "meta.open_author": "Fur bogga qoraaga (%s)",
+
   "skin.untitled": "Magac la'aan",
   "skin.type": "Nooca: %s",
   "skin.has_variations": "Wuxuu leeyahay noocyo",
   "variation.original": "Asalka",
   "cape.remove": "Ka saar khamiiska",
+
   "controls.reset": "Dib u deji",
   "rotate.title": "Wareeg",
   "rotate.enable": "Wareeji qaabka",
@@ -51,6 +56,7 @@
   "layers.body": "Dharka sare / Hubka",
   "acc.title": "Qalabka",
   "acc.elytra": "Tus baalasha Elytra",
+
   "emote.button": "Dareenno",
   "emote.title": "Dareenno",
   "emote.hint": "Dooro dareen ama soo geli faylkaaga .json",
@@ -60,6 +66,7 @@
   "emote.error": "Lama akhrin karin faylka dareenka",
   "emote.playing": "Wuu ciyaarayaa: %s",
   "emote.close": "Xir",
+
   "bg.title": "Midabka asalka",
   "bg.dark": "Madow",
   "bg.light": "Iftiin",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Sawirro lama helin (galka backgrounds/)",
   "bg.image.error": "Lama furi karin sawirkan",
   "bg.image.close": "Xir",
+
   "mobile.gallery": "📁 Matxaf",
   "mobile.settings": "⚙️ Dejinta",
+
   "modal.title": "Ogeysiis",
   "modal.text": "Martida sharafta leh! Maqaar kasta oo ku jira matxafkan waa natiijada saacado badan oo shaqo adag ah. Fadlan ixtiraam shaqada dadka kale. Dhammaan sawirradu waxay ku jiraan xuquuqda daabacaadda. Daawashada waa la oggol yahay, laakiin soo dejinta, koobiyeynta, iyo isticmaalka ganacsiga waxaa la oggol yahay oo keliya heshiis hore. Waad ku mahadsan tahay fahamkaaga iyo daacadnimadaada!",
   "modal.agree": "Waxaan akhriyay wax walba waana oggolahay",
   "modal.continue": "Sii wad",
+
   "error.viewer": "Khalad ayaa ka dhacay bilaabista qaybaha 3D.",
   "error.json": "Lama akhrin karin faylasha qaabeynta JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Maaskaro leh",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Xagaaga",
   "skin.name.ger_maid_skeleton": "Ger Jaariyad-Qalfoof",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Soo-haajire",
   "cape.name.pan": "Canjeero",
   "cape.name.15th_anniversary": "Sannad-guurada 15-aad",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Macmiilkii Milyanaad",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Baqo",
   "emote.name.SPE_Ankha_Dance": "Qoob-ka-ciyaarka Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Istaagga Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Istaagga Saaxiradda (Riyooyin xun)",
   "emote.name.SPE_Yandere_Pose": "Istaagga Yandere (Riyooyin xun)",
   "emote.name.SPE_Zoro_Pose": "Istaagga Zoro (Koonfur-badan) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "CUSUB",
+
   "platform.title": "Barxad",
   "platform.enable": "Dhig barxad jilaaga hoostiisa",
   "platform.block": "Balook",
@@ -342,5 +358,12 @@
   "block.snow": "Balook baraf ah",
   "block.planks": "Alwaax geedka Oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Dhagaxa End"
+  "block.end_stone": "Dhagaxa End",
+
+  "bgimg.name.day": "Maalin",
+  "bgimg.name.end": "Dhammaad",
+  "bgimg.name.nether": "Naarta",
+  "bgimg.name.night": "Habeen",
+  "bgimg.name.snow": "Baraf",
+  "bgimg.name.sunset": "Qorrax dhac"
 }

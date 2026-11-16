@@ -8,9 +8,11 @@
   "language.search_placeholder": "Zıwan bıgêre...",
   "language.no_results": "Zıwan nêame diyayene",
   "language.rtl": false,
+
   "site.title": "Galeriya Tsîplyaşe",
   "gallery.title": "Galeriye",
   "loading.text": "Modûlê asayışi bar benê...",
+
   "sort.title": "Rêzkerdış",
   "sort.default": "Hesıbyaye",
   "sort.author": "Goreyê nuştoği",
@@ -23,6 +25,7 @@
   "tab.skins": "Skini",
   "tab.capes": "Pelerini",
   "search.placeholder": "Goreyê namey, muşteri, nuştoği bıgêre...",
+
   "meta.customer": "Muşteri",
   "meta.artist": "Resam",
   "meta.date": "Tarixê sıparışi",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Nêameyo nışankerdış",
   "meta.show_orders": "Sıparışanê %s pêrune bımocne",
   "meta.open_author": "Pela nuştoği ake (%s)",
+
   "skin.untitled": "Bêname",
   "skin.type": "Tip: %s",
   "skin.has_variations": "Varyasyonê cı estê",
   "variation.original": "Oricinal",
   "cape.remove": "Pelerine bıvece",
+
   "controls.reset": "Reset",
   "rotate.title": "Çarnayış",
   "rotate.enable": "Modeli bıçarn",
@@ -51,6 +56,7 @@
   "layers.body": "Kıncê seri / Zırx",
   "acc.title": "Aksesuari",
   "acc.elytra": "Elitrayan bımocne",
+
   "emote.button": "Emoti",
   "emote.title": "Emoti",
   "emote.hint": "Yew emot weçine ya zi dosyaya xoya .json bar ke",
@@ -60,6 +66,7 @@
   "emote.error": "Dosyaya emoti nêameye wendene",
   "emote.playing": "Kay beno: %s",
   "emote.close": "Qefelne",
+
   "bg.title": "Rengê peyni",
   "bg.dark": "Tari",
   "bg.light": "Roşn",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Resmi nêamey diyayene (klasorê backgrounds/)",
   "bg.image.error": "No resim nêame akerdene",
   "bg.image.close": "Qefelne",
+
   "mobile.gallery": "📁 Galeriye",
   "mobile.settings": "⚙️ Eyari",
+
   "modal.title": "Tebliğ",
   "modal.text": "Meymanê delali! Her skinê na galeriye neticeyê xeylê saetanê gureyayışiyo. Keremê xo ra hurmet bıdê kedê binan. Resımi pêro bınê heqê telifi derê. Ewniyayış serbesto, ema ardışê war, kopyakerdış u karardışo ticari tenya pê qebulkerdışê verêni mumkıno. Semedê famkerdış u durıstiya şıma weş bê!",
   "modal.agree": "Mı pêro wend u ez qebul kena",
   "modal.continue": "Dewam ke",
+
   "error.viewer": "Xetaya destpêkerdışê parçeyanê 3D.",
   "error.json": "Dosyayê konfigurasyonê JSON nêamey wendene.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Pê maske",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Amnan",
   "skin.name.ger_maid_skeleton": "Ger Xızmetkare-İskelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Koçber",
   "cape.name.pan": "Tawa",
   "cape.name.15th_anniversary": "Serra 15ıne",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Muşteriyo Milyonın",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Tersayış",
   "emote.name.SPE_Ankha_Dance": "Dansê Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Vındertışê Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Pozê Cadıye (Kabusi)",
   "emote.name.SPE_Yandere_Pose": "Pozê Yandere (Kabusi)",
   "emote.name.SPE_Zoro_Pose": "Vındertışê Zoro (Pir-kainat) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsîplyaş",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NEWE",
+
   "platform.title": "Platform",
   "platform.enable": "Bınê karakteri de platform rone",
   "platform.block": "Blok",
@@ -342,5 +358,12 @@
   "block.snow": "Blokê vewre",
   "block.planks": "Texteyê mazêri",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Kemera Endi"
+  "block.end_stone": "Kemera Endi",
+
+  "bgimg.name.day": "Roje",
+  "bgimg.name.end": "Peyni",
+  "bgimg.name.nether": "Cehenem",
+  "bgimg.name.night": "Şewe",
+  "bgimg.name.snow": "Vewre",
+  "bgimg.name.sunset": "Roşawan"
 }

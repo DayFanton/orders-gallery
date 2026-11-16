@@ -8,9 +8,11 @@
   "language.search_placeholder": "Sesha ulimi...",
   "language.no_results": "Azikho izilimi ezitholakele",
   "language.rtl": false,
+
   "site.title": "Igalari kaTsyplyash",
   "gallery.title": "Igalari",
   "loading.text": "Ilayisha amamojula wokubuka...",
+
   "sort.title": "Hlunga",
   "sort.default": "Okuzenzakalelayo",
   "sort.author": "Ngombhali",
@@ -23,6 +25,7 @@
   "tab.skins": "Izikhumba",
   "tab.capes": "Amakhephu",
   "search.placeholder": "Sesha ngegama, ikhasimende, umbhali...",
+
   "meta.customer": "Ikhasimende",
   "meta.artist": "Umdwebi",
   "meta.date": "Idethi ye-oda",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Ayicacisiwe",
   "meta.show_orders": "Bonisa wonke ama-oda avela ku-%s",
   "meta.open_author": "Vula ikhasi lombhali (%s)",
+
   "skin.untitled": "Akunasihloko",
   "skin.type": "Uhlobo: %s",
   "skin.has_variations": "Inokuhlukahluka",
   "variation.original": "Okwangempela",
   "cape.remove": "Susa ikhephu",
   "badge.new": "OKUSHA",
+
   "controls.reset": "Setha kabusha",
   "rotate.title": "Ukuzungeza",
   "rotate.enable": "Zungezisa imodeli",
@@ -52,6 +57,7 @@
   "layers.body": "Izingubo zangaphandle / Izembatho zempi",
   "acc.title": "Izesekeli",
   "acc.elytra": "Bonisa ama-elytra",
+
   "emote.button": "Ama-emote",
   "emote.title": "Ama-emote",
   "emote.hint": "Khetha i-emote noma layisha ifayela lakho le-.json",
@@ -61,6 +67,7 @@
   "emote.error": "Ayikwazanga ukufunda leli fayela le-emote",
   "emote.playing": "Iyadlala: %s",
   "emote.close": "Vala",
+
   "bg.title": "Umbala wangemuva",
   "bg.dark": "Omnyama",
   "bg.light": "Okhanyayo",
@@ -91,14 +98,18 @@
   "block.planks": "Amapulangwe e-oki",
   "block.netherrack": "I-Netherrack",
   "block.end_stone": "Itshe le-End",
+
   "mobile.gallery": "📁 Igalari",
   "mobile.settings": "⚙️ Izilungiselelo",
+
   "modal.title": "Isaziso",
   "modal.text": "Bavakashi abathandekayo! Isikhumba ngasinye kule galari siwumphumela wamahora amaningi omsebenzi onzima. Sicela nihloniphe umsebenzi wabanye abantu. Zonke izithombe zivikelwe ngelungelo lobunikazi. Ukubuka kuvumelekile, kodwa ukulanda, ukukopisha, nokusebenzisa kwezohwebo kuvumelekile kuphela ngokuvumelana kwangaphambili. Siyabonga ngokuqonda nokwethembeka kwenu!",
   "modal.agree": "Ngifunde konke futhi ngiyavuma",
   "modal.continue": "Qhubeka",
+
   "error.viewer": "Iphutha ekuqaliseni izingxenye ze-3D.",
   "error.json": "Yehlulekile ukufunda amafayela okumisa e-JSON.",
+
   "skin.name.vova_halloween26": "UVova we-Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Ofake imaski",
   "skin.name.day_halloween26": "UDay we-Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "UGer Wasehlobo",
   "skin.name.ger_maid_skeleton": "UGer Isisebenzi Sohlaka",
   "skin.name.stars": "UStars",
+
   "cape.name.migrator": "Umfuduki",
   "cape.name.pan": "Iphani",
   "cape.name.15th_anniversary": "Isikhumbuzo Seminyaka Eyi-15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Ikhasimende Lesigidi",
   "cape.name.db": "dB",
   "cape.name.prismarine": "I-Prismarine",
+
   "emote.name.SPE_Get_scared": "Ukuthuka",
   "emote.name.SPE_Ankha_Dance": "Umdanso ka-Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Ukuma kuka-Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Ukuma Komthakathi (Amaphupho amabi)",
   "emote.name.SPE_Yandere_Pose": "Ukuma kuka-Yandere (Amaphupho amabi)",
   "emote.name.SPE_Zoro_Pose": "Ukuma kuka-Zoro (I-Multiverse) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Imini",
+  "bgimg.name.end": "Isiphetho",
+  "bgimg.name.nether": "Isihogo",
+  "bgimg.name.night": "Ubusuku",
+  "bgimg.name.snow": "Iqhwa",
+  "bgimg.name.sunset": "Ukushona kwelanga"
 }

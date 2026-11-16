@@ -358,5 +358,12 @@
   "block.snow": "雪ブロック",
   "block.planks": "オークの木材",
   "block.netherrack": "ネザーラック",
-  "block.end_stone": "エンドストーン"
+  "block.end_stone": "エンドストーン",
+
+  "bgimg.name.day": "昼",
+  "bgimg.name.end": "ジ・エンド",
+  "bgimg.name.nether": "ネザー",
+  "bgimg.name.night": "夜",
+  "bgimg.name.snow": "雪",
+  "bgimg.name.sunset": "日没"
 }

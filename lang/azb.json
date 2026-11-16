@@ -8,9 +8,11 @@
   "language.search_placeholder": "دیل آختار...",
   "language.no_results": "هئچ بیر دیل تاپیلمادی",
   "language.rtl": true,
+
   "site.title": "سیپلیاشین قالئرئیاسی",
   "gallery.title": "قالئرئیا",
   "loading.text": "ویزوئاللاشدیرما مودوللاری یوکلنیر...",
+
   "sort.title": "سیرالاما",
   "sort.default": "استاندارد",
   "sort.author": "مؤلفه گؤره",
@@ -23,6 +25,7 @@
   "tab.skins": "اسکین‌لر",
   "tab.capes": "پئلئرین‌لر",
   "search.placeholder": "آد، سیفاریشچی، مؤلفه گؤره آختار...",
+
   "meta.customer": "سیفاریشچی",
   "meta.artist": "رسام",
   "meta.date": "سیفاریش تاریخی",
@@ -30,12 +33,14 @@
   "meta.date_unset": "گؤستریلمه‌ییب",
   "meta.show_orders": "%s طرفیندن بوتون سیفاریش‌لری گؤستر",
   "meta.open_author": "مؤلفین صحیفه‌سینی آچ (%s)",
+
   "skin.untitled": "آدسیز",
   "skin.type": "نؤوع: %s",
   "skin.has_variations": "واریانت‌لاری وار",
   "variation.original": "اوریژینال",
   "cape.remove": "پئلئرینی چیخارت",
   "badge.new": "یئنی",
+
   "controls.reset": "صیفیرلا",
   "rotate.title": "فیرلانما",
   "rotate.enable": "مودئلی فیرلات",
@@ -52,6 +57,7 @@
   "layers.body": "اوست گئییمی / زیرئه",
   "acc.title": "آکسئسوارلار",
   "acc.elytra": "ائلیترالاری گؤستر",
+
   "emote.button": "ائموسیالار",
   "emote.title": "ائموسیالار",
   "emote.hint": "بیر ائموسیا سئچین یا اؤز .json فایلینیزی یوکله‌یین",
@@ -61,6 +67,7 @@
   "emote.error": "بو ائموسیا فایلینی اوخوماق اولمادی",
   "emote.playing": "اوینادیلیر: %s",
   "emote.close": "باغلا",
+
   "bg.title": "آرخا پلان رنگی",
   "bg.dark": "توند",
   "bg.light": "آچیق",
@@ -91,14 +98,18 @@
   "block.planks": "پالید تاختالاری",
   "block.netherrack": "نئزئر داشی",
   "block.end_stone": "ائند داشی",
+
   "mobile.gallery": "📁 قالئرئیا",
   "mobile.settings": "⚙️ تنظیم‌لر",
+
   "modal.title": "بیلدیریش",
   "modal.text": "حؤرمتلی قوناقلار! بو قالئرئیاداکی هر بیر اسکین اوزون ساعات‌لارین امه‌یی نتیجه‌سیدیر. لطفاً باشقالارینین امه‌یینه حؤرمت ائدین. بوتون تصویرلر مؤلف حقوقو ایله قورونور. باخماغا ایجازه وئریلیر، لاکین یوکله‌مک، کوپیالاماق و تیجاری مقصدله ایستیفاده ائتمک یالنیز اؤنجهدن راضیلیق اساسیندا مومکوندور. آنلاییشینیز و دوزگونلویونوز اوچون تشکور ائدیریک!",
   "modal.agree": "هر شئیی اوخودوم و راضییام",
   "modal.continue": "داوام ائت",
+
   "error.viewer": "3D کومپونئنت‌لرینین باشلادیلماسیندا خطا.",
   "error.json": "JSON کونفیقوراسیا فایل‌لارینی اوخوماق مومکون اولمادی.",
+
   "skin.name.vova_halloween26": "وووا هالووین ۲۰۲۶",
   "variation.name.vova_in_mask_halloween26": "ماسکالی",
   "skin.name.day_halloween26": "دئی هالووین ۲۰۲۶",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "گئر یای",
   "skin.name.ger_maid_skeleton": "گئر قوللوقچو-اسکئلئت",
   "skin.name.stars": "استارس",
+
   "cape.name.migrator": "کؤچن",
   "cape.name.pan": "فه‌سه‌لی",
   "cape.name.15th_anniversary": "۱۵-جی ایلدؤنومو",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "میلیونونجو موشتری",
   "cape.name.db": "dB",
   "cape.name.prismarine": "پریزماریین",
+
   "emote.name.SPE_Get_scared": "قورخماق",
   "emote.name.SPE_Ankha_Dance": "آنخا رقسی (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ائوئلین دوروشو (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "جادوگر قادینین پوزاسی (کابوسلار)",
   "emote.name.SPE_Yandere_Pose": "یاندئرئ پوزاسی (کابوسلار)",
   "emote.name.SPE_Zoro_Pose": "زورونون پوزاسی (مولتی‌کائینات) (One Piece)",
+
   "person.Артур": "آرتور",
   "person.Вайкату": "وایکاتو",
   "person.Виакор": "ویاکور",
@@ -342,5 +356,12 @@
   "person.Хуман": "هومان",
   "person.Цыпляш": "سیپلیاش",
   "person.Эппоп": "ائپپوپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "bgimg.name.day": "گوندوز",
+  "bgimg.name.end": "سون",
+  "bgimg.name.nether": "جهنم",
+  "bgimg.name.night": "گئجه",
+  "bgimg.name.snow": "قار",
+  "bgimg.name.sunset": "گون باتیمی"
 }

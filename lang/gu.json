@@ -358,5 +358,12 @@
   "block.snow": "બરફ બ્લોક",
   "block.planks": "ઓક પાટડા",
   "block.netherrack": "નેધરરેક",
-  "block.end_stone": "એન્ડ પથ્થર"
+  "block.end_stone": "એન્ડ પથ્થર",
+
+  "bgimg.name.day": "દિવસ",
+  "bgimg.name.end": "એન્ડ",
+  "bgimg.name.nether": "નેધર",
+  "bgimg.name.night": "રાત",
+  "bgimg.name.snow": "બરફ",
+  "bgimg.name.sunset": "સૂર્યાસ્ત"
 }

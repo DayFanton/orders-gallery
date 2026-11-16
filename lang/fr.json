@@ -358,5 +358,12 @@
   "block.snow": "Bloc de neige",
   "block.planks": "Planches de chêne",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Pierre de l'End"
+  "block.end_stone": "Pierre de l'End",
+
+  "bgimg.name.day": "Jour",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Nuit",
+  "bgimg.name.snow": "Neige",
+  "bgimg.name.sunset": "Coucher du soleil"
 }

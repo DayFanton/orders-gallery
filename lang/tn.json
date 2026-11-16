@@ -8,9 +8,11 @@
   "language.search_placeholder": "Batla puo...",
   "language.no_results": "Ga go dipuo tse di bonweng",
   "language.rtl": false,
+
   "site.title": "Polokelo ya Ditshwantsho ya ga Tsyplyash",
   "gallery.title": "Polokelo ya Ditshwantsho",
   "loading.text": "E tsenya dimmojule tsa go bontsha...",
+
   "sort.title": "Tlhaola",
   "sort.default": "Ya tlwaelo",
   "sort.author": "Ka mokwadi",
@@ -23,6 +25,7 @@
   "tab.skins": "Matlalo",
   "tab.capes": "Dikobo",
   "search.placeholder": "Batla ka leina, moreki, mokwadi...",
+
   "meta.customer": "Moreki",
   "meta.artist": "Motaki",
   "meta.date": "Letlha la odara",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ga le a tlhalosiwa",
   "meta.show_orders": "Bontsha diodara tsotlhe go tswa go %s",
   "meta.open_author": "Bula tsebe ya mokwadi (%s)",
+
   "skin.untitled": "Ga e na leina",
   "skin.type": "Mofuta: %s",
   "skin.has_variations": "E na le dipharologanyo",
   "variation.original": "Ya ntlhantlha",
   "cape.remove": "Tlosa kobo",
+
   "controls.reset": "Busetsa",
   "rotate.title": "Go dikologa",
   "rotate.enable": "Dikolosa sekaelo",
@@ -51,6 +56,7 @@
   "layers.body": "Diaparo tsa kwa ntle / Diaparo tsa ntwa",
   "acc.title": "Didirisiwa",
   "acc.elytra": "Bontsha elytra",
+
   "emote.button": "Maikutlo",
   "emote.title": "Maikutlo",
   "emote.hint": "Tlhopha maikutlo kgotsa o tsenye faele ya gago ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "Ga go a kgonega go buisa faele eno ya maikutlo",
   "emote.playing": "E a tshameka: %s",
   "emote.close": "Tswala",
+
   "bg.title": "Mmala wa kwa morago",
   "bg.dark": "O o fifetseng",
   "bg.light": "O o bonesang",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ga go ditshwantsho tse di bonweng (sephutheli sa backgrounds/)",
   "bg.image.error": "Ga go a kgonega go bula setshwantsho seno",
   "bg.image.close": "Tswala",
+
   "mobile.gallery": "📁 Polokelo",
   "mobile.settings": "⚙️ Dithulaganyo",
+
   "modal.title": "Kitsiso",
   "modal.text": "Baeng ba ba rategang! Letlalo lengwe le lengwe mo polokelong eno ke maduo a diura tse dintsi tsa tiro e e boima. Tsweetswee tlotlang tiro ya ba bangwe. Ditshwantsho tsotlhe di sireleditswe ka ditshwanelo tsa mokwadi. Go leba go letleletswe, mme go kopolola, go gatisa le go dirisa mo kgwebong go letleletswe fela ka tumalano ya pele. Re lebogela tlhaloganyo le boikanyegi jwa lona!",
   "modal.agree": "Ke buisitse sengwe le sengwe mme ke a dumela",
   "modal.continue": "Tswelela",
+
   "error.viewer": "Phoso fa go simololwa dikarolo tsa 3D.",
   "error.json": "Go paletswe ke go buisa difaele tsa dithulaganyo tsa JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "O rwele maseke",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Selemo",
   "skin.name.ger_maid_skeleton": "Ger Mmereki-Lerapo",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mofudugi",
   "cape.name.pan": "Phane (Pan)",
   "cape.name.15th_anniversary": "Segopotso sa bo15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Moreki wa Bomilione",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Go tshoga",
   "emote.name.SPE_Ankha_Dance": "Mmino wa ga Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Maemo a ga Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Maemo a Moloi (Ditoro tse di tshosang)",
   "emote.name.SPE_Yandere_Pose": "Maemo a Yandere (Ditoro tse di tshosang)",
   "emote.name.SPE_Zoro_Pose": "Maemo a ga Zoro (Mafatshe a Mantsi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "E NTŠHA",
+
   "platform.title": "Serala",
   "platform.enable": "Baya serala ka fa tlase ga moanelwa",
   "platform.block": "Boloko",
@@ -342,5 +358,12 @@
   "block.snow": "Boloko jwa kapoko",
   "block.planks": "Dipolanka tsa oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Leje la End"
+  "block.end_stone": "Leje la End",
+
+  "bgimg.name.day": "Motshegare",
+  "bgimg.name.end": "Bokhutlo",
+  "bgimg.name.nether": "Dihele",
+  "bgimg.name.night": "Bosigo",
+  "bgimg.name.snow": "Kapoko",
+  "bgimg.name.sunset": "Phirimo ya letsatsi"
 }

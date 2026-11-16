@@ -358,5 +358,12 @@
   "block.snow": "Schneeblock",
   "block.planks": "Eichenholzbretter",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Endstein"
+  "block.end_stone": "Endstein",
+
+  "bgimg.name.day": "Tag",
+  "bgimg.name.end": "Ende",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Nacht",
+  "bgimg.name.snow": "Schnee",
+  "bgimg.name.sunset": "Sonnenuntergang"
 }

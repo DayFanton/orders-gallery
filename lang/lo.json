@@ -8,9 +8,11 @@
   "language.search_placeholder": "ຄົ້ນຫາພາສາ...",
   "language.no_results": "ບໍ່ພົບພາສາ",
   "language.rtl": false,
+
   "site.title": "ຫໍສະແດງຮູບພາບຂອງນາງຊິບລຽດ",
   "gallery.title": "ຫໍສະແດງຮູບພາບ",
   "loading.text": "ກຳລັງໂຫຼດໂມດູນການສະແດງຜົນ...",
+
   "sort.title": "ຈັດລຽງ",
   "sort.default": "ຄ່າເລີ່ມຕົ້ນ",
   "sort.author": "ຕາມຜູ້ສ້າງ",
@@ -23,6 +25,7 @@
   "tab.skins": "ສະກິນ",
   "tab.capes": "ຜ້າຄຸມ",
   "search.placeholder": "ຄົ້ນຫາຕາມຊື່, ຜູ້ສັ່ງຊື້, ຜູ້ສ້າງ...",
+
   "meta.customer": "ຜູ້ສັ່ງຊື້",
   "meta.artist": "ນັກແຕ້ມ",
   "meta.date": "ວັນທີສັ່ງຊື້",
@@ -30,11 +33,13 @@
   "meta.date_unset": "ບໍ່ໄດ້ລະບຸ",
   "meta.show_orders": "ສະແດງຄຳສັ່ງຊື້ທັງໝົດຈາກ %s",
   "meta.open_author": "ເປີດໜ້າຂອງຜູ້ສ້າງ (%s)",
+
   "skin.untitled": "ບໍ່ມີຊື່",
   "skin.type": "ປະເພດ: %s",
   "skin.has_variations": "ມີຫຼາຍຮູບແບບ",
   "variation.original": "ຕົ້ນສະບັບ",
   "cape.remove": "ຖອດຜ້າຄຸມ",
+
   "controls.reset": "ຣີເຊັດ",
   "rotate.title": "ການໝູນ",
   "rotate.enable": "ໝູນໂມເດວ",
@@ -51,6 +56,7 @@
   "layers.body": "ເສື້ອຄຸມ / ຊຸດເກາະ",
   "acc.title": "ອຸປະກອນເສີມ",
   "acc.elytra": "ສະແດງປີກອີໄລທຣາ",
+
   "emote.button": "ທ່າທາງ",
   "emote.title": "ທ່າທາງ",
   "emote.hint": "ເລືອກທ່າທາງ ຫຼື ອັບໂຫຼດໄຟລ໌ .json ຂອງທ່ານ",
@@ -60,6 +66,7 @@
   "emote.error": "ບໍ່ສາມາດອ່ານໄຟລ໌ທ່າທາງໄດ້",
   "emote.playing": "ກຳລັງຫຼິ້ນ: %s",
   "emote.close": "ປິດ",
+
   "bg.title": "ສີພື້ນຫຼັງ",
   "bg.dark": "ສີມືດ",
   "bg.light": "ສີສະຫວ່າງ",
@@ -77,14 +84,18 @@
   "bg.image.empty": "ບໍ່ພົບຮູບພາບ (ໂຟນເດີ backgrounds/)",
   "bg.image.error": "ບໍ່ສາມາດເປີດຮູບພາບນີ້ໄດ້",
   "bg.image.close": "ປິດ",
+
   "mobile.gallery": "📁 ຫໍສະແດງຮູບພາບ",
   "mobile.settings": "⚙️ ການຕັ້ງຄ່າ",
+
   "modal.title": "ແຈ້ງເຕືອນ",
   "modal.text": "ທ່ານຜູ້ຊົມທີ່ນັບຖື! ທຸກໆສະກິນໃນຫໍສະແດງຮູບພາບນີ້ແມ່ນຜົນງານຈາກຄວາມພະຍາຍາມຫຼາຍຊົ່ວໂມງ. ກະລຸນາເຄົາລົບຜົນງານຂອງຜູ້ອື່ນ. ຮູບພາບທັງໝົດມີລິຂະສິດຄຸ້ມຄອງ. ອະນຸຍາດໃຫ້ເຂົ້າຊົມໄດ້, ແຕ່ການດາວໂຫຼດ, ການສຳເນົາ ແລະ ການນຳໃຊ້ເພື່ອການຄ້າແມ່ນອະນຸຍາດສະເພາະເມື່ອໄດ້ຮັບການຕົກລົງລ່ວງໜ້າເທົ່ານັ້ນ. ຂໍຂອບໃຈສຳລັບຄວາມເຂົ້າໃຈ ແລະ ຄວາມຊື່ສັດ!",
   "modal.agree": "ຂ້ອຍໄດ້ອ່ານທັງໝົດແລ້ວ ແລະ ຕົກລົງ",
   "modal.continue": "ດຳເນີນການຕໍ່",
+
   "error.viewer": "ເກີດຂໍ້ຜິດພາດໃນການເລີ່ມຕົ້ນອົງປະກອບ 3D.",
   "error.json": "ບໍ່ສາມາດອ່ານໄຟລ໌ການຕັ້ງຄ່າ JSON ໄດ້.",
+
   "skin.name.vova_halloween26": "ໂວວາ ຮາໂລວີນ 2026",
   "variation.name.vova_in_mask_halloween26": "ໃສ່ໜ້າກາກ",
   "skin.name.day_halloween26": "ເດ ຮາໂລວີນ 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "ແກ ລະດູຮ້ອນ",
   "skin.name.ger_maid_skeleton": "ແກ ໂຄງກະດູກແມ່ບ້ານ",
   "skin.name.stars": "ສະຕາສ",
+
   "cape.name.migrator": "ຜູ້ຍ້າຍຖິ່ນ",
   "cape.name.pan": "ເຂົ້າໜົມຄົກ",
   "cape.name.15th_anniversary": "ຄົບຮອບ 15 ປີ",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "ລູກຄ້າຄົນທີໜຶ່ງລ້ານ",
   "cape.name.db": "dB",
   "cape.name.prismarine": "ພຣິສມາຣີນ",
+
   "emote.name.SPE_Get_scared": "ຕົກໃຈຢ້ານ",
   "emote.name.SPE_Ankha_Dance": "ທ່າເຕັ້ນອັງຄາ (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ທ່າຢືນເອເວີລິນ (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "ທ່າແມ່ມົດ (ຝັນຮ້າຍ)",
   "emote.name.SPE_Yandere_Pose": "ທ່າຢັນເດເຣະ (ຝັນຮ້າຍ)",
   "emote.name.SPE_Zoro_Pose": "ທ່າຢືນຂອງໂຊໂຣ (ພະຫຸຈັກກະວານ) (One Piece)",
+
   "person.Артур": "ອາເທີ",
   "person.Вайкату": "ໄວກາຕູ",
   "person.Виакор": "ວິອາຄໍ",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "ນາງຊິບລຽດ",
   "person.Эппоп": "ເອັບປັອບ",
   "person.Яна": "ຢານາ",
+
   "badge.new": "ໃໝ່",
+
   "platform.title": "ແທ່ນຢືນ",
   "platform.enable": "ວາງແທ່ນຢືນໄວ້ກ້ອງຕົວລະຄອນ",
   "platform.block": "ບລັອກ",
@@ -342,5 +358,12 @@
   "block.snow": "ບລັອກຫິມະ",
   "block.planks": "ແປ້ນໄມ້ໂອກ",
   "block.netherrack": "ເນເທີແຣັກ",
-  "block.end_stone": "ຫີນເອັນ"
+  "block.end_stone": "ຫີນເອັນ",
+
+  "bgimg.name.day": "ກາງເວັນ",
+  "bgimg.name.end": "ດິເອນ",
+  "bgimg.name.nether": "ເນເທີ",
+  "bgimg.name.night": "ກາງຄືນ",
+  "bgimg.name.snow": "ຫິມະ",
+  "bgimg.name.sunset": "ຕາເວັນຕົກດິນ"
 }

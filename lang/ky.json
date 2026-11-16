@@ -8,9 +8,11 @@
   "language.search_placeholder": "Тилди издөө...",
   "language.no_results": "Тилдер табылган жок",
   "language.rtl": false,
+
   "site.title": "Цыпляштын галереясы",
   "gallery.title": "Галерея",
   "loading.text": "Визуализация модулдары жүктөлүүдө...",
+
   "sort.title": "Иреттөө",
   "sort.default": "Демейки боюнча",
   "sort.author": "Автору боюнча",
@@ -23,6 +25,7 @@
   "tab.skins": "Скиндер",
   "tab.capes": "Плащтар",
   "search.placeholder": "Аталышы, буйрутмачы, автору боюнча издөө...",
+
   "meta.customer": "Буйрутмачы",
   "meta.artist": "Сүрөтчү",
   "meta.date": "Буйрутма датасы",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Көрсөтүлгөн эмес",
   "meta.show_orders": "%s тарабынан берилген бардык буйрутмаларды көрсөтүү",
   "meta.open_author": "Автордун барагын ачуу (%s)",
+
   "skin.untitled": "Аталышы жок",
   "skin.type": "Түрү: %s",
   "skin.has_variations": "Вариациялары бар",
   "variation.original": "Түпнуска",
   "cape.remove": "Плащты чечүү",
+
   "controls.reset": "Баштапкы абалга келтирүү",
   "rotate.title": "Айландыруу",
   "rotate.enable": "Моделди айландыруу",
@@ -51,6 +56,7 @@
   "layers.body": "Сырткы кийим / Соот",
   "acc.title": "Аксессуарлар",
   "acc.elytra": "Элитраларды көрсөтүү",
+
   "emote.button": "Эмоциялар",
   "emote.title": "Эмоциялар",
   "emote.hint": "Эмоцияны тандаңыз же өзүңүздүн .json файлыңызды жүктөңүз",
@@ -60,6 +66,7 @@
   "emote.error": "Эмоция файлын окуу мүмкүн болгон жок",
   "emote.playing": "Ойнотулууда: %s",
   "emote.close": "Жабуу",
+
   "bg.title": "Фондун түсү",
   "bg.dark": "Караңгы",
   "bg.light": "Жарык",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Сүрөттөр табылган жок (backgrounds/ папкасы)",
   "bg.image.error": "Бул сүрөттү ачуу мүмкүн болгон жок",
   "bg.image.close": "Жабуу",
+
   "mobile.gallery": "📁 Галерея",
   "mobile.settings": "⚙️ Жөндөөлөр",
+
   "modal.title": "Эскертме",
   "modal.text": "Урматтуу коноктор! Бул галереядагы ар бир скин — көп сааттык эмгектин натыйжасы. Сураныч, башкалардын эмгегин сыйлаңыздар. Бардык сүрөттөр автордук укук менен корголгон. Көрүүгө уруксат берилет, бирок жүктөп алуу, көчүрүү жана коммерциялык максатта колдонуу алдын ала макулдашуу боюнча гана жеткиликтүү. Түшүнгөнүңүз жана ак ниеттүүлүгүңүз үчүн рахмат!",
   "modal.agree": "Мен баарын окуп чыктым жана макулмун",
   "modal.continue": "Улантуу",
+
   "error.viewer": "3D компоненттерин инициализациялоодо ката кетти.",
   "error.json": "JSON конфигурация файлдарын окуу мүмкүн болгон жок.",
+
   "skin.name.vova_halloween26": "Вова хэллоуиндик 2026",
   "variation.name.vova_in_mask_halloween26": "Беткапчан",
   "skin.name.day_halloween26": "Дэй хэллоуиндик 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Гэр жайкы",
   "skin.name.ger_maid_skeleton": "Гэр кызматчы-скелет",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Мигратор",
   "cape.name.pan": "Куймак",
   "cape.name.15th_anniversary": "15 жылдык маараке",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Миллионунчу кардар",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Коркуу",
   "emote.name.SPE_Ankha_Dance": "Анкха бийи (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Эвелинн турушу (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Жезкемпир позасы (Түнкү коркунучтар)",
   "emote.name.SPE_Yandere_Pose": "Яндере позасы (Түнкү коркунучтар)",
   "emote.name.SPE_Zoro_Pose": "Зоро турушу (Мультиаалам) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
   "person.Яна": "Яна",
+
   "badge.new": "ЖАҢЫ",
+
   "platform.title": "Платформа",
   "platform.enable": "Каармандын астына платформа коюу",
   "platform.block": "Блок",
@@ -342,5 +358,12 @@
   "block.snow": "Кар блогу",
   "block.planks": "Эмен тактайлар",
   "block.netherrack": "Незер ташы",
-  "block.end_stone": "Энд ташы"
+  "block.end_stone": "Энд ташы",
+
+  "bgimg.name.day": "Күн",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Незер",
+  "bgimg.name.night": "Түн",
+  "bgimg.name.snow": "Кар",
+  "bgimg.name.sunset": "Күн батуу"
 }

@@ -356,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Day",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Night",
+  "bgimg.name.snow": "Snow",
+  "bgimg.name.sunset": "Sunset"
 }

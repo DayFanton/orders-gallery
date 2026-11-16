@@ -356,5 +356,12 @@
   "person.Хуман": "হিউমেন",
   "person.Цыпляш": "চিপ্লিয়াছ",
   "person.Эппоп": "এপ্পপ",
-  "person.Яна": "য়ানা"
+  "person.Яна": "য়ানা",
+
+  "bgimg.name.day": "দিন",
+  "bgimg.name.end": "এণ্ড",
+  "bgimg.name.nether": "নেদাৰ",
+  "bgimg.name.night": "ৰাতি",
+  "bgimg.name.snow": "বৰফ",
+  "bgimg.name.sunset": "সূৰ্যাস্ত"
 }

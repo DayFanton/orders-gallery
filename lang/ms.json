@@ -8,9 +8,11 @@
   "language.search_placeholder": "Cari bahasa...",
   "language.no_results": "Tiada bahasa ditemui",
   "language.rtl": false,
+
   "site.title": "Galeri Tsyplyash",
   "gallery.title": "Galeri",
   "loading.text": "Memuatkan modul visualisasi...",
+
   "sort.title": "Susun",
   "sort.default": "Lalai",
   "sort.author": "Mengikut pengarang",
@@ -23,6 +25,7 @@
   "tab.skins": "Skin",
   "tab.capes": "Jubah",
   "search.placeholder": "Cari mengikut nama, pelanggan, pengarang...",
+
   "meta.customer": "Pelanggan",
   "meta.artist": "Pelukis",
   "meta.date": "Tarikh tempahan",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Tidak dinyatakan",
   "meta.show_orders": "Tunjukkan semua tempahan daripada %s",
   "meta.open_author": "Buka halaman pengarang (%s)",
+
   "skin.untitled": "Tanpa tajuk",
   "skin.type": "Jenis: %s",
   "skin.has_variations": "Mempunyai variasi",
   "variation.original": "Asal",
   "cape.remove": "Tanggalkan jubah",
   "badge.new": "BAHARU",
+
   "controls.reset": "Tetapkan semula",
   "rotate.title": "Putaran",
   "rotate.enable": "Putar model",
@@ -52,6 +57,7 @@
   "layers.body": "Pakaian luar / Perisai",
   "acc.title": "Aksesori",
   "acc.elytra": "Paparkan elytra",
+
   "emote.button": "Emote",
   "emote.title": "Emote",
   "emote.hint": "Pilih emote atau muat naik fail .json anda sendiri",
@@ -61,6 +67,7 @@
   "emote.error": "Gagal membaca fail emote ini",
   "emote.playing": "Sedang dimainkan: %s",
   "emote.close": "Tutup",
+
   "bg.title": "Warna latar belakang",
   "bg.dark": "Gelap",
   "bg.light": "Cerah",
@@ -91,14 +98,18 @@
   "block.planks": "Papan Kayu Oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
+
   "mobile.gallery": "📁 Galeri",
   "mobile.settings": "⚙️ Tetapan",
+
   "modal.title": "Pemberitahuan",
   "modal.text": "Para pengunjung yang dihormati! Setiap skin dalam galeri ini adalah hasil kerja keras berjam-jam lamanya. Sila hormati hasil kerja orang lain. Semua imej dilindungi oleh hak cipta. Tontonan adalah dibenarkan, tetapi muat turun, penyalinan, dan penggunaan komersial hanya dibenarkan dengan persetujuan terlebih dahulu. Terima kasih atas pemahaman dan kejujuran anda!",
   "modal.agree": "Saya telah membaca semuanya dan bersetuju",
   "modal.continue": "Teruskan",
+
   "error.viewer": "Ralat memulakan komponen 3D.",
   "error.json": "Gagal membaca fail konfigurasi JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Bertopeng",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Musim Panas",
   "skin.name.ger_maid_skeleton": "Ger Rangka Pembantu Rumah",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Penghijrah",
   "cape.name.pan": "Lempeng",
   "cape.name.15th_anniversary": "Ulang Tahun ke-15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Pelanggan Sejuta",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Terkejut takut",
   "emote.name.SPE_Ankha_Dance": "Tarian Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Gaya Berdiri Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Gaya Ahli Sihir (Mimpi Ngeri)",
   "emote.name.SPE_Yandere_Pose": "Gaya Yandere (Mimpi Ngeri)",
   "emote.name.SPE_Zoro_Pose": "Gaya Zoro (Multivers) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Siang",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Malam",
+  "bgimg.name.snow": "Salji",
+  "bgimg.name.sunset": "Matahari terbenam"
 }

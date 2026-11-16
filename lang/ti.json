@@ -8,9 +8,11 @@
   "language.search_placeholder": "ቋንቋ ድለ...",
   "language.no_results": "ዝተረኽበ ቋንቋ የለን",
   "language.rtl": false,
+
   "site.title": "ጋለሪ ጺፕልያሽ",
   "gallery.title": "ጋለሪ",
   "loading.text": "ሞጁላት ምርኣይ ይጽዕን ኣሎ...",
+
   "sort.title": "ምስራዕ",
   "sort.default": "ነባሪ",
   "sort.author": "ብደራሲ",
@@ -23,6 +25,7 @@
   "tab.skins": "ስኪናት",
   "tab.capes": "ካባታት",
   "search.placeholder": "ብስም፡ ብዓሚል፡ ብደራሲ ድለ...",
+
   "meta.customer": "ዓሚል",
   "meta.artist": "ስነ-ጥበባዊ",
   "meta.date": "ዕለት ትእዛዝ",
@@ -30,12 +33,14 @@
   "meta.date_unset": "ኣይተገልጸን",
   "meta.show_orders": "ኩሎም ትእዛዛት ካብ %s ኣርኢ",
   "meta.open_author": "ገጽ ደራሲ ክፈት (%s)",
+
   "skin.untitled": "ስም ዘይብሉ",
   "skin.type": "ዓይነት፦ %s",
   "skin.has_variations": "ተለዋወጥቲ ኣለዉዎ",
   "variation.original": "ኦሪጅናል",
   "cape.remove": "ካባ ኣልግስ",
   "badge.new": "ሓድሽ",
+
   "controls.reset": "ዳግም ጀምር",
   "rotate.title": "ምዝዋር",
   "rotate.enable": "ሞዴል ኣዙር",
@@ -52,6 +57,7 @@
   "layers.body": "ላዕለዋይ ክዳን / ድርዒ",
   "acc.title": "ተወሰኽቲ ኣቑሑት",
   "acc.elytra": "ኤሊትራ ኣርኢ",
+
   "emote.button": "ስምዒታት",
   "emote.title": "ስምዒታት",
   "emote.hint": "ስምዒት ምረጽ ወይ ናይ ባዕልኻ .json ፋይል ጽዓን",
@@ -61,6 +67,7 @@
   "emote.error": "ነዚ ናይ ስምዒት ፋይል ምንባብ ኣይተኻእለን",
   "emote.playing": "ይጻወት ኣሎ፦ %s",
   "emote.close": "ዕጾ",
+
   "bg.title": "ሕብሪ ድሕረ-ባይታ",
   "bg.dark": "ጸሊም",
   "bg.light": "ብሩህ",
@@ -91,14 +98,18 @@
   "block.planks": "ሉሕ ኦክ",
   "block.netherrack": "ኔዘርራክ",
   "block.end_stone": "እምኒ ኤንድ",
+
   "mobile.gallery": "📁 ጋለሪ",
   "mobile.settings": "⚙️ ቅጥዕታት",
+
   "modal.title": "መፍለጢ",
   "modal.text": "ክቡራት በጻሕቲ! ነፍሲ ወከፍ ስኪን ኣብዚ ጋለሪ ውጽኢት ብዙሕ ሰዓታት ጻዕሪ እዩ። በጃኹም ናይ ካልኦት ስራሕ ኣኽብሩ። ኩሎም ስእልታት ብመሰል ደራሲ ዝተሓለዉ እዮም። ምርኣይ ፍቑድ እዩ፡ ግን ምውራድ፡ ምቕዳሕን ንግዳዊ ኣጠቓቕማን ብኣቐዲሙ ዝተገብረ ስምምዕ ጥራይ እዩ ዝፍቀድ። ስለ ምርዳእኩምን ቅንዕናኹምን ነመስግን!",
   "modal.agree": "ኩሉ ኣንቢበዮ ኣለኹ፡ ይሰማማዕ እውን እየ",
   "modal.continue": "ቀጽል",
+
   "error.viewer": "3D ኣካላት ኣብ ምጅማር ጌጋ ተፈጢሩ።",
   "error.json": "ናይ JSON ውቅር ፋይላት ምንባብ ኣይተኻእለን።",
+
   "skin.name.vova_halloween26": "ቮቫ ሃሎዊን 2026",
   "variation.name.vova_in_mask_halloween26": "ብማስክ",
   "skin.name.day_halloween26": "ዴይ ሃሎዊን 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "ጌር ሓጋይ",
   "skin.name.ger_maid_skeleton": "ጌር ሰራሕተኛ-ዓጽሚ",
   "skin.name.stars": "ስታርስ",
+
   "cape.name.migrator": "ተሰዳዲ",
   "cape.name.pan": "ቂጫ",
   "cape.name.15th_anniversary": "መበል 15 ዓመት",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "መበል ሚልዮን ዓሚል",
   "cape.name.db": "dB",
   "cape.name.prismarine": "ፕሪዝማሪን",
+
   "emote.name.SPE_Get_scared": "ምፍራሕ",
   "emote.name.SPE_Ankha_Dance": "ሳዕስዒት ኣንካ (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ኣቃውማ ኤቨሊን (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "ኣቃውማ ጠንቋሊት (ህልምታት)",
   "emote.name.SPE_Yandere_Pose": "ኣቃውማ ያንዴሬ (ህልምታት)",
   "emote.name.SPE_Zoro_Pose": "ኣቃውማ ዞሮ (ብዙሕ ዓለማት) (One Piece)",
+
   "person.Артур": "ኣርተር",
   "person.Вайкату": "ዋይካቱ",
   "person.Виакор": "ቪያኮር",
@@ -342,5 +356,12 @@
   "person.Хуман": "ሁማን",
   "person.Цыпляш": "ጺፕልያሽ",
   "person.Эппоп": "ኤፖፕ",
-  "person.Яна": "ያና"
+  "person.Яна": "ያና",
+
+  "bgimg.name.day": "መዓልቲ",
+  "bgimg.name.end": "መወዳእታ",
+  "bgimg.name.nether": "ሲኦል",
+  "bgimg.name.night": "ለይቲ",
+  "bgimg.name.snow": "በረድ",
+  "bgimg.name.sunset": "ዕራርቦ"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Пребарај јазик...",
   "language.no_results": "Не се пронајдени јазици",
   "language.rtl": false,
+
   "site.title": "Галеријата на Ципљаш",
   "gallery.title": "Галерија",
   "loading.text": "Се вчитуваат модулите за визуелизација...",
+
   "sort.title": "Подредување",
   "sort.default": "Стандардно",
   "sort.author": "По автор",
@@ -23,6 +25,7 @@
   "tab.skins": "Скинови",
   "tab.capes": "Наметки",
   "search.placeholder": "Пребарувај по име, нарачател, автор...",
+
   "meta.customer": "Нарачател",
   "meta.artist": "Уметник",
   "meta.date": "Датум на нарачка",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Не е наведен",
   "meta.show_orders": "Прикажи ги сите нарачки од %s",
   "meta.open_author": "Отвори ја страницата на авторот (%s)",
+
   "skin.untitled": "Без наслов",
   "skin.type": "Тип: %s",
   "skin.has_variations": "Има варијации",
   "variation.original": "Оригинал",
   "cape.remove": "Отстрани наметка",
+
   "controls.reset": "Ресетирај",
   "rotate.title": "Ротација",
   "rotate.enable": "Ротирај го моделот",
@@ -51,6 +56,7 @@
   "layers.body": "Надворешна облека / Оклоп",
   "acc.title": "Додатоци",
   "acc.elytra": "Прикажи елитри",
+
   "emote.button": "Емоции",
   "emote.title": "Емоции",
   "emote.hint": "Изберете емоција или вчитајте сопствена .json датотека",
@@ -60,6 +66,7 @@
   "emote.error": "Не може да се прочита датотеката за емоција",
   "emote.playing": "Се изведува: %s",
   "emote.close": "Затвори",
+
   "bg.title": "Боја на позадина",
   "bg.dark": "Темна",
   "bg.light": "Светла",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Не се пронајдени слики (папка backgrounds/)",
   "bg.image.error": "Не може да се отвори оваа слика",
   "bg.image.close": "Затвори",
+
   "mobile.gallery": "📁 Галерија",
   "mobile.settings": "⚙️ Поставки",
+
   "modal.title": "Известување",
   "modal.text": "Почитувани посетители! Секој скин во оваа галерија е резултат на многу часови напорна работа. Ве молиме почитувајте го туѓиот труд. Сите слики се заштитени со авторски права. Прегледувањето е дозволено, но преземањето, копирањето и комерцијалната употреба се дозволени само со претходен договор. Ви благодариме за разбирањето и искреноста!",
   "modal.agree": "Прочитав сè и се согласувам",
   "modal.continue": "Продолжи",
+
   "error.viewer": "Грешка при иницијализација на 3D компонентите.",
   "error.json": "Не успеа читањето на конфигурациските датотеки JSON.",
+
   "skin.name.vova_halloween26": "Вова Ноќта на вештерките 2026",
   "variation.name.vova_in_mask_halloween26": "Со маска",
   "skin.name.day_halloween26": "Деј Ноќта на вештерките 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Гер летна",
   "skin.name.ger_maid_skeleton": "Гер слугинка-скелет",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Мигратор",
   "cape.name.pan": "Палачинка",
   "cape.name.15th_anniversary": "15-годишнина",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Милионити купувач",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Исплаши се",
   "emote.name.SPE_Ankha_Dance": "Танцот на Анка (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Поза на Евелин (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Поза на Вештерка (Кошмари)",
   "emote.name.SPE_Yandere_Pose": "Поза на Јандере (Кошмари)",
   "emote.name.SPE_Zoro_Pose": "Поза на Зоро (Мултиверзум) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вајкату",
   "person.Виакор": "Виакор",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Ципљаш",
   "person.Эппоп": "Епоп",
   "person.Яна": "Јана",
+
   "badge.new": "НОВО",
+
   "platform.title": "Платформа",
   "platform.enable": "Постави платформа под ликот",
   "platform.block": "Блок",
@@ -342,5 +358,12 @@
   "block.snow": "Блок снег",
   "block.planks": "Дабови штици",
   "block.netherrack": "Недерак",
-  "block.end_stone": "Камен од Крајот"
+  "block.end_stone": "Камен од Крајот",
+
+  "bgimg.name.day": "Ден",
+  "bgimg.name.end": "Крај",
+  "bgimg.name.nether": "Недер",
+  "bgimg.name.night": "Ноќ",
+  "bgimg.name.snow": "Снег",
+  "bgimg.name.sunset": "Зајдисонце"
 }

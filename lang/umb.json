@@ -8,9 +8,11 @@
   "language.search_placeholder": "Sandiliya elimi...",
   "language.no_results": "Ka kuli alimi a sangiwa",
   "language.rtl": false,
+
   "site.title": "Ogaleriya ya Tsiplyashi",
   "gallery.title": "Ogaleriya",
   "loading.text": "Oku-longa ovina vioku-lekisa...",
+
   "sort.title": "Oku-pongolola",
   "sort.default": "Ndeci ca siata",
   "sort.author": "Konombo yusonehi",
@@ -23,6 +25,7 @@
   "tab.skins": "Ovipa",
   "tab.capes": "Ovikutu viokunyima",
   "search.placeholder": "Sandiliya konduko, komanu va landa, kusonehi...",
+
   "meta.customer": "U o landa",
   "meta.artist": "Usonehi wovikuata",
   "meta.date": "Eteke lioku-landa",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Ka ca tukuiwile",
   "meta.show_orders": "Lekisa ovina viosi via landiwa la %s",
   "meta.open_author": "Yulula emẽla liusonehi (%s)",
+
   "skin.untitled": "Ka kuli onduko",
   "skin.type": "Ocikepa: %s",
   "skin.has_variations": "Kuete ovikuata vikuavo",
   "variation.original": "Catete",
   "cape.remove": "Upa ocikutu cokunyima",
   "badge.new": "COKALIYE",
+
   "controls.reset": "Tiukilako kefetikilo",
   "rotate.title": "Oku-ñuala",
   "rotate.enable": "Ñualisa ociluvialuvia",
@@ -52,6 +57,7 @@
   "layers.body": "Uwalo wokilu / Ovikepa viuyaki",
   "acc.title": "Ovikuata vikuavo",
   "acc.elytra": "Lekisa Elytra",
+
   "emote.button": "Ovilikilo",
   "emote.title": "Ovilikilo",
   "emote.hint": "Nõla ocilikilo ale kapa ofayele yove .json",
@@ -61,6 +67,7 @@
   "emote.error": "Ka ca tavele oku-tanga ofayele yocilikilo eci",
   "emote.playing": "Ci kasi oku-linga: %s",
   "emote.close": "Yika",
+
   "bg.title": "Ovala wonyima",
   "bg.dark": "Ca tekãva",
   "bg.light": "Ca yela",
@@ -91,14 +98,18 @@
   "block.planks": "Ovipaya viuti wo carvalho",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ewe lio End",
+
   "mobile.gallery": "📁 Ogaleriya",
   "mobile.settings": "⚙️ Oku-pongolola",
+
   "modal.title": "Esapulo",
   "modal.text": "A vakwetu wa endi! Ocipa cosi ci kasi vogaleriya eyi ca lingiwa lowola yalua yovopange. Sumbili upange wakuene. Oviluvialuvia viosi vi kuete omoko yusonehi. Oku-tala ca eciwa, pole oku-kopa, oku-pongolola loku-landisa ci lingiwa lika nda kua lingiwa ombangulo catete. Tua pandula elomboloko liene locili cene!",
   "modal.agree": "Nda tanga viosi kuenda nda tava",
   "modal.continue": "Amamako",
+
   "error.viewer": "Ekulihiso lioku-fetika ovikuata vio 3D.",
   "error.json": "Ka ca tavele oku-tanga ofayele yo JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Locikepa cocipala",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Ondombo",
   "skin.name.ger_maid_skeleton": "Ger Ukuenje-Ekepa",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Ukuakutunda",
   "cape.name.pan": "Olosanje",
   "cape.name.15th_anniversary": "Unyamo wekui la tanu",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Ulandisi wohulukayi",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Oku-kuata usumba",
   "emote.name.SPE_Ankha_Dance": "Okupiluka kua Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Okutalama kua Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Ocilikilo co Nganga (Ovinjondjo)",
   "emote.name.SPE_Yandere_Pose": "Ocilikilo ca Yandere (Ovinjondjo)",
   "emote.name.SPE_Zoro_Pose": "Ocilikilo ca Zoro (Oluali Lualua) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsiplyashi",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Utanya",
+  "bgimg.name.end": "Esulilo",
+  "bgimg.name.nether": "Ifelu",
+  "bgimg.name.night": "Uteke",
+  "bgimg.name.snow": "Ocikukui",
+  "bgimg.name.sunset": "Okutokela kuekumbi"
 }

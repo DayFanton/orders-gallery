@@ -358,5 +358,12 @@
   "block.snow": "Kar Bloğu",
   "block.planks": "Meşe kereste",
   "block.netherrack": "Nether taşı",
-  "block.end_stone": "End taşı"
+  "block.end_stone": "End taşı",
+
+  "bgimg.name.day": "Gündüz",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Gece",
+  "bgimg.name.snow": "Kar",
+  "bgimg.name.sunset": "Gün batımı"
 }

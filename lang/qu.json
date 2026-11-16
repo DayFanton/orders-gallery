@@ -8,9 +8,11 @@
   "language.search_placeholder": "Simita maskay...",
   "language.no_results": "Mana simikuna tarisqachu",
   "language.rtl": false,
+
   "site.title": "Tsyplyashpa Rikuchina Wasin",
   "gallery.title": "Rikuchina Wasi",
   "loading.text": "3D rikuchiqkunata kicharispa...",
+
   "sort.title": "Allichay",
   "sort.default": "Ñawpaq kaqman hina",
   "sort.author": "Ruraqman hina",
@@ -23,6 +25,7 @@
   "tab.skins": "Qarakuna (Skins)",
   "tab.capes": "Yaqullakuna",
   "search.placeholder": "Sutiwan, mañakuqwan, ruraqwan maskay...",
+
   "meta.customer": "Mañakuq",
   "meta.artist": "Llimp'iq / Ruraq",
   "meta.date": "Mañakusqa p'unchaw",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Mana churasqachu",
   "meta.show_orders": "%spa tukuy mañakusqankunata rikuchiy",
   "meta.open_author": "Ruraqpa raphinta kichay (%s)",
+
   "skin.untitled": "Mana sutiyuq",
   "skin.type": "Rikch'aynin: %s",
   "skin.has_variations": "Huk rikch'aykunayuq",
   "variation.original": "Qallariy kaq",
   "cape.remove": "Yaqullata hurquy",
   "badge.new": "MUSUQ",
+
   "controls.reset": "Qallariyman kutichiy",
   "rotate.title": "Muyuchiy",
   "rotate.enable": "Rikch'ayta muyuchiy",
@@ -52,6 +57,7 @@
   "layers.body": "Hawa p'acha / Wallqana",
   "acc.title": "Yapana kaqkuna",
   "acc.elytra": "Elytrakunata rikuchiy",
+
   "emote.button": "Kuyuykuna (Emotes)",
   "emote.title": "Kuyuykuna (Emotes)",
   "emote.hint": "Huk kuyuyta akllay utaq kikiykipa .json willañiqiykita churay",
@@ -61,6 +67,7 @@
   "emote.error": "Kay kuyuy willañiqita mana ñawiriyta atikunchu",
   "emote.playing": "Rikuchikuchkan: %s",
   "emote.close": "Wichq'ay",
+
   "bg.title": "Qhipa llimp'i",
   "bg.dark": "Tutayaq",
   "bg.light": "K'anchaq",
@@ -91,14 +98,18 @@
   "block.planks": "K'ullu p'alltakuna",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End rumi",
+
   "mobile.gallery": "📁 Rikuchina Wasi",
   "mobile.settings": "⚙️ Allichaykuna",
+
   "modal.title": "Willakuy",
   "modal.text": "Munasqa watukuqkuna! Kay rikuchina wasipi sapa qaraqa (skin) achka pacha llank'asqamanta rurasqam. Ama hina kaspa, hukkunapa llank'ayninta yupaychaychik. Tukuy siq'ikunaqa ruraqpa derechonwan waqaychasqam. Qhawayqa atikunmi, ichaqa uraykachiy, kikinchay, qhatuypaq llamk'achiy imaqa ñawpaqta rimanakusqallawanmi atikun. Hamut'asqaykichikmanta, chiqaq kasqaykichikmanta anchata yupaychaykiku!",
   "modal.agree": "Llapanta ñawiriniña, arí ninim",
   "modal.continue": "Ñawpaqman puriy",
+
   "error.viewer": "3D ruraykunata qallarichispa pantay.",
   "error.json": "JSON willañiqikunata mana ñawiriyta atikunchu.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Saynatayuq",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Ruphay Pacha",
   "skin.name.ger_maid_skeleton": "Ger Yanapaq Tullu",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Astakuq",
   "cape.name.pan": "Kallana (Kachipa)",
   "cape.name.15th_anniversary": "15 Wata Hunt'ay",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Hunu Kaq Rantiq",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarina",
+
   "emote.name.SPE_Get_scared": "Mancharikuy",
   "emote.name.SPE_Ankha_Dance": "Ankhapa Tusuy (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynnpa Sayaynin (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Layqa Warmipa Sayaynin (Manchay Musquykuna)",
   "emote.name.SPE_Yandere_Pose": "Yanderepa Sayaynin (Manchay Musquykuna)",
   "emote.name.SPE_Zoro_Pose": "Zoropa Sayaynin (Achka Pacha) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "P'unchaw",
+  "bgimg.name.end": "Tukukuy",
+  "bgimg.name.nether": "Ukhupacha",
+  "bgimg.name.night": "Tuta",
+  "bgimg.name.snow": "Rit'i",
+  "bgimg.name.sunset": "Inti yaykuy"
 }

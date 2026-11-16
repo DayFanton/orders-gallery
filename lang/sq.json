@@ -8,9 +8,11 @@
   "language.search_placeholder": "Kërko gjuhën...",
   "language.no_results": "Nuk u gjet asnjë gjuhë",
   "language.rtl": false,
+
   "site.title": "Galeria e Cipëljashit",
   "gallery.title": "Galeria",
   "loading.text": "Po ngarkohen modulet e vizualizimit...",
+
   "sort.title": "Renditja",
   "sort.default": "Parazgjedhur",
   "sort.author": "Sipas autorit",
@@ -23,6 +25,7 @@
   "tab.skins": "Skine",
   "tab.capes": "Pelerina",
   "search.placeholder": "Kërko sipas emrit, klientit, autorit...",
+
   "meta.customer": "Klienti",
   "meta.artist": "Artisti",
   "meta.date": "Data e porosisë",
@@ -30,11 +33,13 @@
   "meta.date_unset": "E papërcaktuar",
   "meta.show_orders": "Shfaq të gjitha porositë nga %s",
   "meta.open_author": "Hap faqen e autorit (%s)",
+
   "skin.untitled": "Pa titull",
   "skin.type": "Lloji: %s",
   "skin.has_variations": "Ka variacione",
   "variation.original": "Origjinali",
   "cape.remove": "Hiq pelerinën",
+
   "controls.reset": "Rivendos",
   "rotate.title": "Rrotullimi",
   "rotate.enable": "Rrotullo modelin",
@@ -51,6 +56,7 @@
   "layers.body": "Veshje e sipërme / Armaturë",
   "acc.title": "Aksesorë",
   "acc.elytra": "Shfaq elitrat",
+
   "emote.button": "Emocione",
   "emote.title": "Emocione",
   "emote.hint": "Zgjidhni një emocion ose ngarkoni skedarin tuaj .json",
@@ -60,6 +66,7 @@
   "emote.error": "Nuk u lexua dot skedari i emocionit",
   "emote.playing": "Po luhet: %s",
   "emote.close": "Mbyll",
+
   "bg.title": "Ngjyra e sfondit",
   "bg.dark": "E errët",
   "bg.light": "E çelët",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Nuk u gjetën imazhe (dosja backgrounds/)",
   "bg.image.error": "Nuk u hap dot ky imazh",
   "bg.image.close": "Mbyll",
+
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Cilësimet",
+
   "modal.title": "Njoftim",
   "modal.text": "Të nderuar vizitorë! Çdo skin në këtë galeri është rezultat i shumë orëve punë. Ju lutemi respektoni punën e të tjerëve. Të gjitha imazhet mbrohen nga e drejta e autorit. Shikimi lejohet, por shkarkimi, kopjimi dhe përdorimi komercial lejohen vetëm me marrëveshje paraprake. Faleminderit për mirëkuptimin dhe ndershmërinë!",
   "modal.agree": "I lexova të gjitha dhe bie dakord",
   "modal.continue": "Vazhdo",
+
   "error.viewer": "Gabim gjatë inicializimit të komponentëve 3D.",
   "error.json": "Nuk u lexuan dot skedarët e konfigurimit JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Me maskë",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Verë",
   "skin.name.ger_maid_skeleton": "Ger Shërbyese-Skelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migruesi",
   "cape.name.pan": "Pelerina Krepa",
   "cape.name.15th_anniversary": "15-vjetori",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Klienti i Miliontë",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarinë",
+
   "emote.name.SPE_Get_scared": "Frikesohu",
   "emote.name.SPE_Ankha_Dance": "Vallja e Ankha-s (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Qëndrimi i Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Poza e Shtrigës (Makthet)",
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Makthet)",
   "emote.name.SPE_Zoro_Pose": "Poza e Zoro-s (Multiversi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Cipëljash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "E RE",
+
   "platform.title": "Platforma",
   "platform.enable": "Vendos një platformë nën personazhin",
   "platform.block": "Blloku",
@@ -342,5 +358,12 @@
   "block.snow": "Bllok bore",
   "block.planks": "Dërrasa lisi",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Gur i End-it"
+  "block.end_stone": "Gur i End-it",
+
+  "bgimg.name.day": "Ditë",
+  "bgimg.name.end": "Fundi",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Natë",
+  "bgimg.name.snow": "Borë",
+  "bgimg.name.sunset": "Perëndim dielli"
 }

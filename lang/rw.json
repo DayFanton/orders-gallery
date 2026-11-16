@@ -8,9 +8,11 @@
   "language.search_placeholder": "Shakisha ururimi...",
   "language.no_results": "Nta ndimi zibonetse",
   "language.rtl": false,
+
   "site.title": "Inzu y'ibihangano ya Tsipulyashi",
   "gallery.title": "Inzu y'ibihangano",
   "loading.text": "Iri gutegura ibikoresho byo kwerekana...",
+
   "sort.title": "Gutoranya",
   "sort.default": "Uko bisanzwe",
   "sort.author": "Ukurikije uwabikoze",
@@ -23,6 +25,7 @@
   "tab.skins": "Imyambaro (Skins)",
   "tab.capes": "Imyitero (Capes)",
   "search.placeholder": "Shakisha izina, uwatumije, uwabikoze...",
+
   "meta.customer": "Uwatumije",
   "meta.artist": "Umuhanzi",
   "meta.date": "Itariki byatumirijweho",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Ntiyavuzwe",
   "meta.show_orders": "Erekana ibyatumijwe byose na %s",
   "meta.open_author": "Fungura urupapuro rw'uwabikoze (%s)",
+
   "skin.untitled": "Nta zina",
   "skin.type": "Ubwoko: %s",
   "skin.has_variations": "Ifite ubundi buryo",
   "variation.original": "Umwimerere",
   "cape.remove": "Kuramo umwitero",
   "badge.new": "GISHYA",
+
   "controls.reset": "Subiza uko byari biri",
   "rotate.title": "Kuzenguruka",
   "rotate.enable": "Zengurutsa ishusho",
@@ -52,6 +57,7 @@
   "layers.body": "Imyenda y'inyuma / Intwaro",
   "acc.title": "Ibikoresho by'inyongera",
   "acc.elytra": "Erekana amababa ya Elytra",
+
   "emote.button": "Ibimenyetso",
   "emote.title": "Ibimenyetso (Emotes)",
   "emote.hint": "Hitamo ikimenyetso cyangwa ushyiremo dosiye yawe ya .json",
@@ -61,6 +67,7 @@
   "emote.error": "Ntibishobotse gusoma iyi dosiye y'ikimenyetso",
   "emote.playing": "Iri gukina: %s",
   "emote.close": "Funga",
+
   "bg.title": "Ibara ry'inyuma",
   "bg.dark": "Ryijimye",
   "bg.light": "Ricyeye",
@@ -91,14 +98,18 @@
   "block.planks": "Imbaho z'igiti cya Oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ibuye rya End",
+
   "mobile.gallery": "📁 Inzu y'ibihangano",
   "mobile.settings": "⚙️ Igenamiterere",
+
   "modal.title": "Itangazo",
   "modal.text": "Bashyitsi bahire! Buri mwambaro (skin) uri muri iyi nzu y'ibihangano ni umusaruro w'amasaha menshi y'umurimo ugoranye. Turabasaba kubaha umurimo w'abandi. Amashusho yose arinzwe n'amategeko arengera abahanzi. Kuyireba biremewe, ariko kuyikuramo, kuyigana no kuyikoresha mu bucuruzi byemewe gusa habanje kubaho ubwumvikane. Murakoze ku bwumvikane n'ubunyangamugayo bwanyu!",
   "modal.agree": "Nasomye byose kandi ndabyemeye",
   "modal.continue": "Komeza",
+
   "error.viewer": "Ikosa mu gutangiza ibice bya 3D.",
   "error.json": "Byanze gusoma dosiye z'igenamiterere za JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Yambaye masike",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Impeshyi",
   "skin.name.ger_maid_skeleton": "Ger Igikanka cy'umukozi",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Uwimukiye ahandi",
   "cape.name.pan": "Capati (Pan)",
   "cape.name.15th_anniversary": "Isabukuru y'imyaka 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Umukiriya wa miliyoni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kugira ubwoba",
   "emote.name.SPE_Ankha_Dance": "Imbyino ya Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Impagararire ya Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Impagararire y'umurozi (Inzozi mbi)",
   "emote.name.SPE_Yandere_Pose": "Impagararire ya Yandere (Inzozi mbi)",
   "emote.name.SPE_Zoro_Pose": "Impagararire ya Zoro (Isi nyinshi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsipulyashi",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Amanywa",
+  "bgimg.name.end": "Iherezo",
+  "bgimg.name.nether": "Ikuzimu",
+  "bgimg.name.night": "Ijoro",
+  "bgimg.name.snow": "Urubura",
+  "bgimg.name.sunset": "Izuba rirenga"
 }

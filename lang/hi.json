@@ -358,5 +358,12 @@
   "block.snow": "बर्फ का ब्लॉक",
   "block.planks": "ओक के तख्ते",
   "block.netherrack": "नेदररैक",
-  "block.end_stone": "एंड स्टोन"
+  "block.end_stone": "एंड स्टोन",
+
+  "bgimg.name.day": "दिन",
+  "bgimg.name.end": "एंड",
+  "bgimg.name.nether": "नेदर",
+  "bgimg.name.night": "रात",
+  "bgimg.name.snow": "बर्फ़",
+  "bgimg.name.sunset": "सूर्यास्त"
 }

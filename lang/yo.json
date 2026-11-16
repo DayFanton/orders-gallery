@@ -358,5 +358,12 @@
   "block.snow": "Blọọki yìnyín",
   "block.planks": "Awọn pako oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Òkúta End"
+  "block.end_stone": "Òkúta End",
+
+  "bgimg.name.day": "Ọ̀sán",
+  "bgimg.name.end": "Òpin",
+  "bgimg.name.nether": "Ọ̀run Àpáàdì",
+  "bgimg.name.night": "Òru",
+  "bgimg.name.snow": "Yìnyín",
+  "bgimg.name.sunset": "Ìwọ̀ oòrùn"
 }

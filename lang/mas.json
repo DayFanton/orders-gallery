@@ -8,9 +8,11 @@
   "language.search_placeholder": "Ing'oru enkutuk...",
   "language.no_results": "Meeta enkutuk natumore",
   "language.rtl": false,
+
   "site.title": "Enyorata e Tsiplyash",
   "gallery.title": "Enyorata oo Mpicha",
   "loading.text": "Eitabaya ilmodulini loo mpicha...",
+
   "sort.title": "Aitobiraki",
   "sort.default": "Enkitobiraki e dukuya",
   "sort.author": "Tenkaraki oloshooni",
@@ -23,6 +25,7 @@
   "tab.skins": "Ilchoni (Skins)",
   "tab.capes": "Ilkarashani (Capes)",
   "search.placeholder": "Ing'oru tenkaraki enkarna, olang'usani, oloshooni...",
+
   "meta.customer": "Olang'usani",
   "meta.artist": "Oloshooni loo mpicha",
   "meta.date": "Olari le ng'usata",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Meitodoluoki",
   "meta.show_orders": "Todoloo ing'usat pooki naaitek %s",
   "meta.open_author": "Taboloo enkurasa e oloshooni (%s)",
+
   "skin.untitled": "Meeta enkarna",
   "skin.type": "Enkoitoi: %s",
   "skin.has_variations": "Eeta ilkuapi likae",
   "variation.original": "Enkoitoi e dukuya",
   "cape.remove": "Iwuaa olkarasha",
   "badge.new": "NGEJUK",
+
   "controls.reset": "Itushulaki",
   "rotate.title": "Aibelibel",
   "rotate.enable": "Ibelibela olchoni",
@@ -52,6 +57,7 @@
   "layers.body": "Ilkarashani le shumata / Engolong'",
   "acc.title": "Ilmasaa",
   "acc.elytra": "Todoloo ilpapuk lenkaina (Elytra)",
+
   "emote.button": "Inkiguran",
   "emote.title": "Inkiguran",
   "emote.hint": "Tegeluo enkiguran arashu isiekaki ifaili ino e .json",
@@ -61,6 +67,7 @@
   "emote.error": "Meidimayu aisoma ena faili e nkiguran",
   "emote.playing": "Eiguranita: %s",
   "emote.close": "Ikeno",
+
   "bg.title": "Erangi e nkalo e siadi",
   "bg.dark": "Narok",
   "bg.light": "Naibor",
@@ -91,14 +98,18 @@
   "block.planks": "Imbaoni e olpurkel",
   "block.netherrack": "Osoit le Nether",
   "block.end_stone": "Osoit le End",
+
   "mobile.gallery": "📁 Enyorata",
   "mobile.settings": "⚙️ Inkitobirak",
+
   "modal.title": "Enkiterunoto e lomon",
   "modal.text": "Iloreren oonyor! Kila olchoni (skin) ti atua ena nyorata naa esiai nairoshi oo saai kumok. Taata enyorata ti esiai oo likae tung'ana. Impichai pooki naa eeta enkitanapata e oloshooni. Eidimayu adol, kake aiyau, aipirri arashu aitum ti biashara naa eidimayu ake tenaa eeta enkiguana e dukuya. Ashe oleng' tenkaraki enyiolou o esipata!",
   "modal.agree": "Aisoma pooki naa airuk",
   "modal.continue": "Tagolo dukuya",
+
   "error.viewer": "Enkinyala ti aiteru ilmodulini le 3D.",
   "error.json": "Meidimayu aisoma ifailini e JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Eeta enkarasha e nkomom",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Olameyu",
   "skin.name.ger_maid_skeleton": "Ger Enasuyiani-Oloito",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Oloipirri",
   "cape.name.pan": "Emukate e kikaango",
   "cape.name.15th_anniversary": "Olari le 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Olang'usani le Milioni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Aure",
   "emote.name.SPE_Ankha_Dance": "Enkiguran e Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Enkitashoto e Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Enkitashoto e Enasakutoni (Inkulupok narok)",
   "emote.name.SPE_Yandere_Pose": "Enkitashoto e Yandere (Inkulupok narok)",
   "emote.name.SPE_Zoro_Pose": "Enkitashoto e Zoro (Inkopin kumok) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsiplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Endama",
+  "bgimg.name.end": "Enkiting'oto",
+  "bgimg.name.nether": "Olmarei le nkurma",
+  "bgimg.name.night": "Kewarie",
+  "bgimg.name.snow": "Oloibor",
+  "bgimg.name.sunset": "Enkibooroto enkolong"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "زبان ءِ شوهاز...",
   "language.no_results": "هچ زبانے در نه کپت",
   "language.rtl": true,
+
   "site.title": "سیپلیاش ءِ گیلری",
   "gallery.title": "گیلری",
   "loading.text": "ویژولائزیشن ماڈیولانی لوڈ بوگ...",
+
   "sort.title": "درجه بندی",
   "sort.default": "پہ پیش فرض",
   "sort.author": "پہ جوڑ کنوک",
@@ -23,6 +25,7 @@
   "tab.skins": "اسکن",
   "tab.capes": "چادر",
   "search.placeholder": "پہ نام، گراهک، جوڑ کنوک ءَ شوهاز بہ کن ات...",
+
   "meta.customer": "گراهک",
   "meta.artist": "آرٹسٹ",
   "meta.date": "آرڈر ءِ تاریخ",
@@ -30,11 +33,13 @@
   "meta.date_unset": "نشان نہ بوتگ",
   "meta.show_orders": "چہ %s ءَ درستیں آرڈر پیش دار",
   "meta.open_author": "جوڑ کنوک ءِ تاک ءَ پچ کن (%s)",
+
   "skin.untitled": "بے نام",
   "skin.type": "وڑ: %s",
   "skin.has_variations": "دگہ وڑ ھست اَنت",
   "variation.original": "اصل",
   "cape.remove": "چادر ءَ دور کن",
+
   "controls.reset": "پدا نوک کن",
   "rotate.title": "چرخگ",
   "rotate.enable": "ماڈل ءَ بچرخین",
@@ -51,6 +56,7 @@
   "layers.body": "ڈنّی گُد / زره",
   "acc.title": "لوازمات",
   "acc.elytra": "ایلائٹرا پیش دار",
+
   "emote.button": "ایموٹ",
   "emote.title": "ایموٹ",
   "emote.hint": "ایموٹے گچین بہ کن ات یا وتی .json فائل ءَ لوڈ بہ کن ات",
@@ -60,6 +66,7 @@
   "emote.error": "اے ایموٹ فائل وانگ نہ بوت",
   "emote.playing": "چلگ ءَ اِنت: %s",
   "emote.close": "بند کن",
+
   "bg.title": "پشت ءِ رنگ",
   "bg.dark": "تھار",
   "bg.light": "روشن",
@@ -77,14 +84,18 @@
   "bg.image.empty": "هچ اکس در نہ کپت (backgrounds/ فولڈر)",
   "bg.image.error": "اے اکس پچ کنگ نہ بوت",
   "bg.image.close": "بند کن",
+
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ سیٹنگز",
+
   "modal.title": "جار",
   "modal.text": "واجهیں مہمان! اے گیلری ءِ هر اسکن بازیں ساعتانی محنت ءِ آسر اِنت۔ براہ کرم دگرانی محنت ءِ عزت ءَ بہ کن ات۔ درستیں اکس کاپی رائٹ ءِ چیر ءَ محفوظ اَنت۔ چارگ ءِ اجازت ھست، بلے ڈاؤنلوڈ کنگ، کاپی کنگ ءُ کاروباری کارمرز کنگ ایوک ءَ پیشگی اجازت ءَ گوں بوت کن اَنت۔ شمئے سرپد بوگ ءُ ایمانداری ءِ منتوار اوں!",
   "modal.agree": "من درست ونتگ اَنت ءُ راضی آں",
   "modal.continue": "برجاہ دار",
+
   "error.viewer": "3D پرزہانی شروع کنگ ءَ ردی۔",
   "error.json": "JSON کنفیگریشن فائلانی وانگ ءَ بے سوب بوت۔",
+
   "skin.name.vova_halloween26": "وووا هیلووین 2026",
   "variation.name.vova_in_mask_halloween26": "ماسک ءَ گوں",
   "skin.name.day_halloween26": "ڈے هیلووین 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "گیر گرماگ",
   "skin.name.ger_maid_skeleton": "گیر کنیز-هڈ",
   "skin.name.stars": "سٹارز",
+
   "cape.name.migrator": "لڈوک",
   "cape.name.pan": "تاپگ / پین کیک",
   "cape.name.15th_anniversary": "پانزدهمی سالروچ",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "دہ لکمی گراهک",
   "cape.name.db": "dB",
   "cape.name.prismarine": "پریسمارین",
+
   "emote.name.SPE_Get_scared": "تُرسگ",
   "emote.name.SPE_Ankha_Dance": "انکھا ءِ ناچ (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ایولین ءِ اوشتگ (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "جادوگرنی ءِ پوز (تُرسناکیں واب)",
   "emote.name.SPE_Yandere_Pose": "یاندیرے ءِ پوز (تُرسناکیں واب)",
   "emote.name.SPE_Zoro_Pose": "زورو ءِ پوز (ملٹی ورس) (One Piece)",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وایکاتو",
   "person.Виакор": "ویاکور",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "سیپلیاش",
   "person.Эппоп": "ایپاپ",
   "person.Яна": "یانا",
+
   "badge.new": "نوک",
+
   "platform.title": "پلیٹ فارم",
   "platform.enable": "کارست ءِ چیر ءَ پلیٹ فارمے ایر کن",
   "platform.block": "بلاک",
@@ -342,5 +358,12 @@
   "block.snow": "برپ ءِ بلاک",
   "block.planks": "بلوط ءِ تختگ",
   "block.netherrack": "نیدررک",
-  "block.end_stone": "اینڈ سنگ"
+  "block.end_stone": "اینڈ سنگ",
+
+  "bgimg.name.day": "روچ",
+  "bgimg.name.end": "آهری",
+  "bgimg.name.nether": "دوزخ",
+  "bgimg.name.night": "شپ",
+  "bgimg.name.snow": "برپ",
+  "bgimg.name.sunset": "روچ ایرشت"
 }

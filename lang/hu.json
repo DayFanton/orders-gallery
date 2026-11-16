@@ -8,9 +8,11 @@
   "language.search_placeholder": "Nyelv keresése...",
   "language.no_results": "Nem találhatók nyelvek",
   "language.rtl": false,
+
   "site.title": "Cipljas galériája",
   "gallery.title": "Galéria",
   "loading.text": "Vizualizációs modulok betöltése...",
+
   "sort.title": "Rendezés",
   "sort.default": "Alapértelmezett",
   "sort.author": "Szerző szerint",
@@ -23,6 +25,7 @@
   "tab.skins": "Kinézetek",
   "tab.capes": "Köpenyek",
   "search.placeholder": "Keresés név, megrendelő, szerző alapján...",
+
   "meta.customer": "Megrendelő",
   "meta.artist": "Alkotó",
   "meta.date": "Rendelés dátuma",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Nincs megadva",
   "meta.show_orders": "Összes rendelés megjelenítése tőle: %s",
   "meta.open_author": "Szerző oldalának megnyitása (%s)",
+
   "skin.untitled": "Névtelen",
   "skin.type": "Típus: %s",
   "skin.has_variations": "Vannak variációk",
   "variation.original": "Eredeti",
   "cape.remove": "Köpeny levétele",
   "badge.new": "ÚJ",
+
   "controls.reset": "Visszaállítás",
   "rotate.title": "Forgatás",
   "rotate.enable": "Modell forgatása",
@@ -52,6 +57,7 @@
   "layers.body": "Felsőruházat / Páncél",
   "acc.title": "Kiegészítők",
   "acc.elytra": "Kitinszárny megjelenítése",
+
   "emote.button": "Emote-ok",
   "emote.title": "Emote-ok",
   "emote.hint": "Válassz egy emote-ot, vagy töltsd fel a saját .json fájlodat",
@@ -61,6 +67,7 @@
   "emote.error": "Nem sikerült beolvasni ezt az emote fájlt",
   "emote.playing": "Lejátszás: %s",
   "emote.close": "Bezárás",
+
   "bg.title": "Háttérszín",
   "bg.dark": "Sötét",
   "bg.light": "Világos",
@@ -91,14 +98,18 @@
   "block.planks": "Tölgydeszka",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endkő",
+
   "mobile.gallery": "📁 Galéria",
   "mobile.settings": "⚙️ Beállítások",
+
   "modal.title": "Értesítés",
   "modal.text": "Kedves látogatók! A galériában található minden egyes kinézet sok órányi kemény munka eredménye. Kérjük, tartsátok tiszteletben mások munkáját! Minden kép szerzői jogvédelem alatt áll. A megtekintés engedélyezett, de a letöltés, másolás és kereskedelmi felhasználás kizárólag előzetes megállapodás alapján lehetséges. Köszönjük a megértést és a becsületességet!",
   "modal.agree": "Mindent elolvastam és elfogadok",
   "modal.continue": "Folytatás",
+
   "error.viewer": "Hiba a 3D összetevők inicializálásakor.",
   "error.json": "Nem sikerült beolvasni a JSON konfigurációs fájlokat.",
+
   "skin.name.vova_halloween26": "Vova Halloweeni 2026",
   "variation.name.vova_in_mask_halloween26": "Maszkban",
   "skin.name.day_halloween26": "Day Halloweeni 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Nyári",
   "skin.name.ger_maid_skeleton": "Ger Szobalány-csontváz",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migráló",
   "cape.name.pan": "Palacsinta",
   "cape.name.15th_anniversary": "15. évforduló",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Milliomodik vásárló",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Megijedés",
   "emote.name.SPE_Ankha_Dance": "Ankha tánc (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn póz (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Boszorkány póz (Rémálmok)",
   "emote.name.SPE_Yandere_Pose": "Yandere póz (Rémálmok)",
   "emote.name.SPE_Zoro_Pose": "Zoro póz (Multiverzum) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Cipljas",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Jana"
+  "person.Яна": "Jana",
+
+  "bgimg.name.day": "Nappal",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Alvilág",
+  "bgimg.name.night": "Éjszaka",
+  "bgimg.name.snow": "Hó",
+  "bgimg.name.sunset": "Naplemente"
 }

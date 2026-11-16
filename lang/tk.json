@@ -8,9 +8,11 @@
   "language.search_placeholder": "Dil gözle...",
   "language.no_results": "Dil tapylmady",
   "language.rtl": false,
+
   "site.title": "Syplýaşyň galereýasy",
   "gallery.title": "Galereýa",
   "loading.text": "Wizualizasiýa modullary ýüklenýär...",
+
   "sort.title": "Tertiplemek",
   "sort.default": "Adaty",
   "sort.author": "Awtor boýunça",
@@ -23,6 +25,7 @@
   "tab.skins": "Skinler",
   "tab.capes": "Plaşlar",
   "search.placeholder": "Ady, müşderi, awtor boýunça gözleg...",
+
   "meta.customer": "Müşderi",
   "meta.artist": "Suratkeş",
   "meta.date": "Sargyt senesi",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Görkezilmedik",
   "meta.show_orders": "%s tarapyndan edilen ähli sargytlary görkez",
   "meta.open_author": "Awtoryň sahypasyny aç (%s)",
+
   "skin.untitled": "Atsyz",
   "skin.type": "Görnüşi: %s",
   "skin.has_variations": "Wariantlary bar",
   "variation.original": "Asyl nusga",
   "cape.remove": "Plaşy aýyr",
+
   "controls.reset": "Nollamak",
   "rotate.title": "Aýlanma",
   "rotate.enable": "Modeli aýla",
@@ -51,6 +56,7 @@
   "layers.body": "Daşky eşik / Sowut",
   "acc.title": "Aksessuarlar",
   "acc.elytra": "Elitralary görkez",
+
   "emote.button": "Emosiýalar",
   "emote.title": "Emosiýalar",
   "emote.hint": "Emosiýa saýlaň ýa-da öz .json faýlyňyzy ýükläň",
@@ -60,6 +66,7 @@
   "emote.error": "Emosiýa faýlyny okap bolmady",
   "emote.playing": "Oýnalýar: %s",
   "emote.close": "Ýap",
+
   "bg.title": "Arka reňki",
   "bg.dark": "Garaňky",
   "bg.light": "Ýagty",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Surat tapylmady (backgrounds/ bukjasy)",
   "bg.image.error": "Bu suraty açyp bolmady",
   "bg.image.close": "Ýap",
+
   "mobile.gallery": "📁 Galereýa",
   "mobile.settings": "⚙️ Sazlamalar",
+
   "modal.title": "Duýduryş",
   "modal.text": "Hormatly myhmanlar! Bu galereýadaky her bir skin köp sagatlyk zähmetiň netijesidir. Haýyş edýäris, başgalaryň zähmetine hormat goýuň. Ähli suratlar awtorlyk hukugy bilen goralandyr. Görmäge rugsat berilýär, ýöne ýükläp almak, göçürmek we täjirçilik maksatly ulanmak diňe öňünden ylalaşyk esasynda mümkindir. Düşünişýändigiňiz we dogruçyllygyňyz üçin sag boluň!",
   "modal.agree": "Men hemmesini okadym we razy",
   "modal.continue": "Dowam et",
+
   "error.viewer": "3D komponentlerini başlatmakda ýalňyşlyk ýüze çykdy.",
   "error.json": "JSON konfigurasiýa faýllaryny okap bolmady.",
+
   "skin.name.vova_halloween26": "Wowa Hellowin 2026",
   "variation.name.vova_in_mask_halloween26": "Maskaly",
   "skin.name.day_halloween26": "Deý Hellowin 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger tomus",
   "skin.name.ger_maid_skeleton": "Ger hyzmatkär-skelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Çelpek",
   "cape.name.15th_anniversary": "15 ýyllygy",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Millionynjy müşderi",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Gorkmak",
   "emote.name.SPE_Ankha_Dance": "Ankhanyň tansy (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Ewelinniň durşy (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Jadygöý aýalyň pozasy (Elhenç düýşler)",
   "emote.name.SPE_Yandere_Pose": "Ýandereniň pozasy (Elhenç düýşler)",
   "emote.name.SPE_Zoro_Pose": "Zoronyň durşy (Multi-älem) (One Piece)",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Waýkatu",
   "person.Виакор": "Wiakor",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Syplýaş",
   "person.Эппоп": "Eppop",
   "person.Яна": "Ýana",
+
   "badge.new": "TÄZE",
+
   "platform.title": "Platforma",
   "platform.enable": "Gahrymanyň aşagyna platforma goý",
   "platform.block": "Blok",
@@ -342,5 +358,12 @@
   "block.snow": "Gar blogy",
   "block.planks": "Dub tagtalary",
   "block.netherrack": "Nezer daşy",
-  "block.end_stone": "End daşy"
+  "block.end_stone": "End daşy",
+
+  "bgimg.name.day": "Gündiz",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Gije",
+  "bgimg.name.snow": "Gar",
+  "bgimg.name.sunset": "Gün ýaşmagy"
 }

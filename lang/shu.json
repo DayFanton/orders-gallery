@@ -8,9 +8,11 @@
   "language.search_placeholder": "ابحث عن اللغة...",
   "language.no_results": "لم يتم العثور على لغات",
   "language.rtl": true,
+
   "site.title": "معرض صيبلياش",
   "gallery.title": "المعرض",
   "loading.text": "جاري تحميل وحدات العرض...",
+
   "sort.title": "الترتيب",
   "sort.default": "افتراضي",
   "sort.author": "حسب المؤلف",
@@ -23,6 +25,7 @@
   "tab.skins": "الجلود",
   "tab.capes": "العباءات",
   "search.placeholder": "البحث بالاسم، الزبون، المؤلف...",
+
   "meta.customer": "الزبون",
   "meta.artist": "الفنان",
   "meta.date": "تاريخ الطلب",
@@ -30,12 +33,14 @@
   "meta.date_unset": "غير محددة",
   "meta.show_orders": "عرض كل الطلبات من %s",
   "meta.open_author": "فتح صفحة المؤلف (%s)",
+
   "skin.untitled": "بدون عنوان",
   "skin.type": "النوع: %s",
   "skin.has_variations": "يحتوي على تنوعات",
   "variation.original": "الأصلي",
   "cape.remove": "إزالة العباءة",
   "badge.new": "جديد",
+
   "controls.reset": "إعادة ضبط",
   "rotate.title": "الدوران",
   "rotate.enable": "تدوير النموذج",
@@ -52,6 +57,7 @@
   "layers.body": "الملابس الخارجية / الدرع",
   "acc.title": "الإكسسوارات",
   "acc.elytra": "إظهار الإليترا",
+
   "emote.button": "المشاعر",
   "emote.title": "المشاعر",
   "emote.hint": "اختر تعبيرًا أو قم بتحميل ملف .json الخاص بك",
@@ -61,6 +67,7 @@
   "emote.error": "تعذر قراءة ملف التعبير هذا",
   "emote.playing": "قيد التشغيل: %s",
   "emote.close": "إغلاق",
+
   "bg.title": "لون الخلفية",
   "bg.dark": "داكن",
   "bg.light": "فاتح",
@@ -91,14 +98,18 @@
   "block.planks": "ألواح خشب البلوط",
   "block.netherrack": "حجر نذير",
   "block.end_stone": "حجر النهاية",
+
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
+
   "modal.title": "إشعار",
   "modal.text": "أيها الزوار الأعزاء! كل سكين في هذا المعرض هو ثمرة ساعات طويلة من العمل الشاق. يرجى احترام عمل الآخرين. جميع الصور محمية بحقوق الطبع والنشر. يُسمح بالمعاينة، ولكن التحميل والنسخ والاستخدام التجاري مسموح بها فقط بناءً على اتفاق مسبق. شكرًا لتفهمكم وصدقكم!",
   "modal.agree": "لقد قرأت كل شيء وأوافق",
   "modal.continue": "متابعة",
+
   "error.viewer": "خطأ في تهيئة مكونات ثلاثية الأبعاد.",
   "error.json": "فشل في قراءة ملفات تكوين JSON.",
+
   "skin.name.vova_halloween26": "فوفا هالوين 2026",
   "variation.name.vova_in_mask_halloween26": "بالقناع",
   "skin.name.day_halloween26": "داي هالوين 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "جير الصيف",
   "skin.name.ger_maid_skeleton": "جير خادمة هيكل عظمي",
   "skin.name.stars": "ستارز",
+
   "cape.name.migrator": "المنتقل",
   "cape.name.pan": "عباءة الكِسْرَة",
   "cape.name.15th_anniversary": "الذكرى السنوية الـ 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "الزبون المليون",
   "cape.name.db": "دي بي",
   "cape.name.prismarine": "بريسمارين",
+
   "emote.name.SPE_Get_scared": "افزع",
   "emote.name.SPE_Ankha_Dance": "رقصة أنخا (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "وقفة إيفيلين (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "وقفة الساحرة (الكوابيس)",
   "emote.name.SPE_Yandere_Pose": "وقفة يانديري (الكوابيس)",
   "emote.name.SPE_Zoro_Pose": "وقفة زورو (عالم متعدد) (One Piece)",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -342,5 +356,12 @@
   "person.Хуман": "بشري",
   "person.Цыпляш": "صيبلياش",
   "person.Эппоп": "إبوب",
-  "person.Яна": "يانا"
+  "person.Яна": "يانا",
+
+  "bgimg.name.day": "نهار",
+  "bgimg.name.end": "النهاية",
+  "bgimg.name.nether": "النذر",
+  "bgimg.name.night": "ليل",
+  "bgimg.name.snow": "ثلج",
+  "bgimg.name.sunset": "غروب الشمس"
 }

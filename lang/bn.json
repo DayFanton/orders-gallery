@@ -358,5 +358,12 @@
   "block.snow": "বরফের ব্লক",
   "block.planks": "ওক তক্তা",
   "block.netherrack": "নেদারর্যাক",
-  "block.end_stone": "এন্ড স্টোন"
+  "block.end_stone": "এন্ড স্টোন",
+
+  "bgimg.name.day": "দিন",
+  "bgimg.name.end": "এন্ড",
+  "bgimg.name.nether": "নেদার",
+  "bgimg.name.night": "রাত",
+  "bgimg.name.snow": "তুষার",
+  "bgimg.name.sunset": "সূর্যাস্ত"
 }

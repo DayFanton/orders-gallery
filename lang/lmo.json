@@ -8,9 +8,11 @@
   "language.search_placeholder": "Cerca lengua...",
   "language.no_results": "Nissuna lengua trovada",
   "language.rtl": false,
+
   "site.title": "Galeria de la Tsyplyash",
   "gallery.title": "Galeria",
   "loading.text": "Caregament di modui de visualizazzion...",
+
   "sort.title": "Ordena",
   "sort.default": "Predefinid",
   "sort.author": "Per autor",
@@ -23,6 +25,7 @@
   "tab.skins": "Skin",
   "tab.capes": "Mantei",
   "search.placeholder": "Cerca per nom, client, autor...",
+
   "meta.customer": "Client",
   "meta.artist": "Artista",
   "meta.date": "Data de l'orden",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Minga specificada",
   "meta.show_orders": "Mostra tucc i orden de %s",
   "meta.open_author": "Derva la pagina de l'autor (%s)",
+
   "skin.untitled": "Senza titol",
   "skin.type": "Tipo: %s",
   "skin.has_variations": "El gh'ha di variant",
   "variation.original": "Original",
   "cape.remove": "Tœu via el mantell",
   "badge.new": "NŒUV",
+
   "controls.reset": "Reseta",
   "rotate.title": "Rotazzion",
   "rotate.enable": "Fà girà el modell",
@@ -52,6 +57,7 @@
   "layers.body": "Vestii de sora / Armadura",
   "acc.title": "Accessori",
   "acc.elytra": "Mostra i elitre",
+
   "emote.button": "Emozzion",
   "emote.title": "Emozzion",
   "emote.hint": "Scerniss un'emozzion o carega el tò file .json",
@@ -61,6 +67,7 @@
   "emote.error": "Impossibel lensger el file de l'emozzion",
   "emote.playing": "In riproduzzion: %s",
   "emote.close": "Sara su",
+
   "bg.title": "Color del sfond",
   "bg.dark": "Scur",
   "bg.light": "Ciar",
@@ -91,14 +98,18 @@
   "block.planks": "Ass de rogora",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Preda de l'End",
+
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Impostazzion",
+
   "modal.title": "Avis",
   "modal.text": "Car visitador! Ogni skin in questa galeria l'è el risultad de tante ore de lavorà. Per piasè, rispetee el lavorà di olter. Tute i imagin inn protesgiude del dirit d'autor. La visualizazzion l'è permetuda, ma el descaregament, la copia e l'uso comercial inn permetud domà cont un acord prima. Grazzie per la comprension e l'onestà!",
   "modal.agree": "Hoo lensgiud tut e sont d'acord",
   "modal.continue": "Va inanz",
+
   "error.viewer": "Error in l'inizializazzion di component 3D.",
   "error.json": "Impossibel lensger i file de configurazzion JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Con maschera",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Estad",
   "skin.name.ger_maid_skeleton": "Ger Camerera-Scheleter",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrador",
   "cape.name.pan": "Padelin",
   "cape.name.15th_anniversary": "15m Anniversari",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Client Numer Un Milion",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Ciappà paura",
   "emote.name.SPE_Ankha_Dance": "Ball de Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Posa de Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Posa de la Stria (Incub)",
   "emote.name.SPE_Yandere_Pose": "Posa Yandere (Incub)",
   "emote.name.SPE_Zoro_Pose": "Posa de Zoro (Multivers) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Dì",
+  "bgimg.name.end": "Fin",
+  "bgimg.name.nether": "Inferna",
+  "bgimg.name.night": "Nòcc",
+  "bgimg.name.snow": "Nev",
+  "bgimg.name.sunset": "Tramont"
 }

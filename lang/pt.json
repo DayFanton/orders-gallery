@@ -358,5 +358,12 @@
   "block.snow": "Bloco de neve",
   "block.planks": "Tábuas de carvalho",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Pedra do Fim"
+  "block.end_stone": "Pedra do Fim",
+
+  "bgimg.name.day": "Dia",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noite",
+  "bgimg.name.snow": "Neve",
+  "bgimg.name.sunset": "Pôr do sol"
 }

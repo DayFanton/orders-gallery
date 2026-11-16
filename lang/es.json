@@ -358,5 +358,12 @@
   "block.snow": "Bloque de nieve",
   "block.planks": "Tablones de roble",
   "block.netherrack": "Infiedra",
-  "block.end_stone": "Piedra de End"
+  "block.end_stone": "Piedra de End",
+
+  "bgimg.name.day": "Día",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noche",
+  "bgimg.name.snow": "Nieve",
+  "bgimg.name.sunset": "Atardecer"
 }

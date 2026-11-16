@@ -8,9 +8,11 @@
   "language.search_placeholder": "Zoek taal...",
   "language.no_results": "Geen talen gevonden",
   "language.rtl": false,
+
   "site.title": "Tsyplyash's Galerij",
   "gallery.title": "Galerij",
   "loading.text": "Visualisatiemodules laden...",
+
   "sort.title": "Sorteren",
   "sort.default": "Standaard",
   "sort.author": "Op auteur",
@@ -23,6 +25,7 @@
   "tab.skins": "Skins",
   "tab.capes": "Capes",
   "search.placeholder": "Zoeken op naam, klant, auteur...",
+
   "meta.customer": "Klant",
   "meta.artist": "Artiest",
   "meta.date": "Besteldatum",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Niet gespecificeerd",
   "meta.show_orders": "Toon alle bestellingen van %s",
   "meta.open_author": "Open auteursblad (%s)",
+
   "skin.untitled": "Naamloos",
   "skin.type": "Type: %s",
   "skin.has_variations": "Heeft variaties",
   "variation.original": "Origineel",
   "cape.remove": "Cape verwijderen",
   "badge.new": "NIEUW",
+
   "controls.reset": "Resetten",
   "rotate.title": "Rotatie",
   "rotate.enable": "Model roteren",
@@ -52,6 +57,7 @@
   "layers.body": "Bovenkleding / Pantser",
   "acc.title": "Accessoires",
   "acc.elytra": "Elytra tonen",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Kies een emote of laad je eigen .json-bestand",
@@ -61,6 +67,7 @@
   "emote.error": "Kan dit emotebestand niet lezen",
   "emote.playing": "Wordt afgespeeld: %s",
   "emote.close": "Sluiten",
+
   "bg.title": "Achtergrondkleur",
   "bg.dark": "Donker",
   "bg.light": "Licht",
@@ -91,14 +98,18 @@
   "block.planks": "Eikenhouten planken",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endsteen",
+
   "mobile.gallery": "📁 Galerij",
   "mobile.settings": "⚙️ Instellingen",
+
   "modal.title": "Mededeling",
   "modal.text": "Beste bezoeker! Elke skin in deze galerij is het resultaat van vele uren hard werk. Respecteer alstublieft het werk van anderen. Alle afbeeldingen zijn auteursrechtelijk beschermd. Bekijken is toegestaan, maar downloaden, kopiëren en commercieel gebruik zijn alleen toegestaan na voorafgaande afspraak. Bedankt voor uw begrip en eerlijkheid!",
   "modal.agree": "Ik heb alles gelezen en ga akkoord",
   "modal.continue": "Doorgaan",
+
   "error.viewer": "Fout bij het initialiseren van 3D-componenten.",
   "error.json": "Kan JSON-configuratiebestanden niet lezen.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Met masker",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Zomer",
   "skin.name.ger_maid_skeleton": "Ger Huishoudsterskelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Pannenkoek",
   "cape.name.15th_anniversary": "15-jarig Jubileum",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Miljoenste Klant",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarien",
+
   "emote.name.SPE_Get_scared": "Schrikken",
   "emote.name.SPE_Ankha_Dance": "Ankha Dans (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Stance (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Heksenpose (Nachtmerries)",
   "emote.name.SPE_Yandere_Pose": "Yandere Pose (Nachtmerries)",
   "emote.name.SPE_Zoro_Pose": "Zoro Pose (Multiversum) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Dag",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Nacht",
+  "bgimg.name.snow": "Sneeuw",
+  "bgimg.name.sunset": "Zonsondergang"
 }

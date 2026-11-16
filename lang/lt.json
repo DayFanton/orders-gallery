@@ -8,9 +8,11 @@
   "language.search_placeholder": "Ieškoti kalbos...",
   "language.no_results": "Kalbų nerasta",
   "language.rtl": false,
+
   "site.title": "Cyplyash galerija",
   "gallery.title": "Galerija",
   "loading.text": "Įkeliami vizualizacijos moduliai...",
+
   "sort.title": "Rūšiavimas",
   "sort.default": "Pagal numatytuosius nustatymus",
   "sort.author": "Pagal autorių",
@@ -23,6 +25,7 @@
   "tab.skins": "Išvaizdos",
   "tab.capes": "Apsiaustai",
   "search.placeholder": "Ieškoti pagal pavadinimą, užsakovą, autorių...",
+
   "meta.customer": "Užsakovas",
   "meta.artist": "Dailininkas",
   "meta.date": "Užsakymo data",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Nenurodyta",
   "meta.show_orders": "Rodyti visus %s užsakymus",
   "meta.open_author": "Atidaryti autoriaus puslapį (%s)",
+
   "skin.untitled": "Be pavadinimo",
   "skin.type": "Tipas: %s",
   "skin.has_variations": "Turi variacijų",
   "variation.original": "Originalas",
   "cape.remove": "Nuimti apsiaustą",
+
   "controls.reset": "Atstatyti",
   "rotate.title": "Sukimas",
   "rotate.enable": "Sukti modelį",
@@ -51,6 +56,7 @@
   "layers.body": "Viršutiniai drabužiai / Šarvai",
   "acc.title": "Aksesuarai",
   "acc.elytra": "Rodyti antsparnius",
+
   "emote.button": "Emocijos",
   "emote.title": "Emocijos",
   "emote.hint": "Pasirinkite emociją arba įkelkite savo .json failą",
@@ -60,6 +66,7 @@
   "emote.error": "Nepavyko perskaityti emocijos failo",
   "emote.playing": "Grojama: %s",
   "emote.close": "Uždaryti",
+
   "bg.title": "Fono spalva",
   "bg.dark": "Tamsi",
   "bg.light": "Šviesi",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Paveikslėlių nerasta (aplankas backgrounds/)",
   "bg.image.error": "Nepavyko atidaryti šio paveikslėlio",
   "bg.image.close": "Uždaryti",
+
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Nustatymai",
+
   "modal.title": "Pranešimas",
   "modal.text": "Gerbiami svečiai! Kiekviena išvaizda šioje galerijoje yra daugelio valandų darbo rezultatas. Prašome gerbti kitų darbą. Visi vaizdai yra saugomi autorių teisių. Peržiūra leidžiama, tačiau atsisiuntimas, kopijavimas ir komercinis naudojimas galimi tik iš anksto susitarus. Dėkojame už supratingumą ir sąžiningumą!",
   "modal.agree": "Viską perskaičiau ir sutinku",
   "modal.continue": "Tęsti",
+
   "error.viewer": "Klaida inicijuojant 3D komponentus.",
   "error.json": "Nepavyko perskaityti JSON konfigūracijos failų.",
+
   "skin.name.vova_halloween26": "Vova Helovino 2026",
   "variation.name.vova_in_mask_halloween26": "Su kauke",
   "skin.name.day_halloween26": "Day Helovino 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger vasaros",
   "skin.name.ger_maid_skeleton": "Ger kambarinė-skeletas",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migratorius",
   "cape.name.pan": "Blynų",
   "cape.name.15th_anniversary": "15-osios metinės",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Milijoninis pirkėjas",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarinas",
+
   "emote.name.SPE_Get_scared": "Išsigąsti",
   "emote.name.SPE_Ankha_Dance": "Ankha šokis (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn stovėsena (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Raganos poza (Košmarai)",
   "emote.name.SPE_Yandere_Pose": "Yandere poza (Košmarai)",
   "emote.name.SPE_Zoro_Pose": "Zoro poza (Multivisata) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Cyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Jana",
+
   "badge.new": "NAUJA",
+
   "platform.title": "Platforma",
   "platform.enable": "Padėti platformą po personažu",
   "platform.block": "Blokas",
@@ -342,5 +358,12 @@
   "block.snow": "Sniego blokas",
   "block.planks": "Ąžuolo lentos",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Pabaigos akmuo"
+  "block.end_stone": "Pabaigos akmuo",
+
+  "bgimg.name.day": "Diena",
+  "bgimg.name.end": "Pabaiga",
+  "bgimg.name.nether": "Netheris",
+  "bgimg.name.night": "Naktis",
+  "bgimg.name.snow": "Sniegas",
+  "bgimg.name.sunset": "Saulėlydis"
 }

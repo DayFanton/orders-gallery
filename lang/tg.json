@@ -8,9 +8,11 @@
   "language.search_placeholder": "Ҷустуҷӯи забон...",
   "language.no_results": "Забонҳо ёфт нашуданд",
   "language.rtl": false,
+
   "site.title": "Нигористони Сипляш",
   "gallery.title": "Нигористон",
   "loading.text": "Боркунии модулҳои визуализатсия...",
+
   "sort.title": "Мураттабсозӣ",
   "sort.default": "Бо нобаёнӣ",
   "sort.author": "Аз рӯи муаллиф",
@@ -23,6 +25,7 @@
   "tab.skins": "Скинҳо",
   "tab.capes": "Ридоҳо",
   "search.placeholder": "Ҷустуҷӯ аз рӯи ном, фармоишгар, муаллиф...",
+
   "meta.customer": "Фармоишгар",
   "meta.artist": "Рассом",
   "meta.date": "Санаи фармоиш",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Нишон дода нашудааст",
   "meta.show_orders": "Намоиши ҳамаи фармоишҳо аз %s",
   "meta.open_author": "Кушодани саҳифаи муаллиф (%s)",
+
   "skin.untitled": "Бе ном",
   "skin.type": "Намуд: %s",
   "skin.has_variations": "Вариантҳо дорад",
   "variation.original": "Аслӣ",
   "cape.remove": "Гирифтани ридо",
+
   "controls.reset": "Бозсозӣ",
   "rotate.title": "Чархиш",
   "rotate.enable": "Чарх додани модел",
@@ -51,6 +56,7 @@
   "layers.body": "Либоси болоӣ / Зиреҳ",
   "acc.title": "Лавозимот",
   "acc.elytra": "Намоиши элитраҳо",
+
   "emote.button": "Эмотсияҳо",
   "emote.title": "Эмотсияҳо",
   "emote.hint": "Эмотсияеро интихоб кунед ё файли .json-и худро бор кунед",
@@ -60,6 +66,7 @@
   "emote.error": "Файли эмотсияро хондан ғайриимкон аст",
   "emote.playing": "Иҷро шуда истодааст: %s",
   "emote.close": "Пӯшидан",
+
   "bg.title": "Ранги замина",
   "bg.dark": "Торик",
   "bg.light": "Равшан",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Тасвирҳо ёфт нашуданд (ҷузвдони backgrounds/)",
   "bg.image.error": "Ин тасвирро кушодан ғайриимкон аст",
   "bg.image.close": "Пӯшидан",
+
   "mobile.gallery": "📁 Нигористон",
   "mobile.settings": "⚙️ Танзимот",
+
   "modal.title": "Огоҳинома",
   "modal.text": "Меҳмонони гиромӣ! Ҳар як скин дар ин нигористон натиҷаи соатҳои зиёди меҳнат аст. Лутфан ба меҳнати дигарон эҳтиром гузоред. Ҳамаи тасвирҳо бо ҳуқуқи муаллиф ҳифз шудаанд. Тамошо кардан иҷозат дода мешавад, аммо боргирӣ, нусхабардорӣ ва истифодаи тиҷоратӣ танҳо бо мувофиқаи пешакӣ дастрас аст. Ташаккур барои фаҳмиш ва ростқавлӣ!",
   "modal.agree": "Ман ҳамаашро хондам ва розиям",
   "modal.continue": "Идома додан",
+
   "error.viewer": "Хатогии оғозёбии ҷузъҳои 3D.",
   "error.json": "Хондани файлҳои танзимоти JSON ғайриимкон аст.",
+
   "skin.name.vova_halloween26": "Вова ҳеллоуинӣ 2026",
   "variation.name.vova_in_mask_halloween26": "Дар ниқоб",
   "skin.name.day_halloween26": "Дэй ҳеллоуинӣ 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Гэр тобистона",
   "skin.name.ger_maid_skeleton": "Гэр канизак-скелет",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Муҳоҷир",
   "cape.name.pan": "Чалпакӣ",
   "cape.name.15th_anniversary": "15-солагӣ",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Харидори миллионум",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Тарсидан",
   "emote.name.SPE_Ankha_Dance": "Рақси Анкха (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Истодани Эвелинн (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Ҳолати Ҷодугарзан (Кобусҳо)",
   "emote.name.SPE_Yandere_Pose": "Ҳолати Яндере (Кобусҳо)",
   "emote.name.SPE_Zoro_Pose": "Истодани Зоро (Мултикоинот) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Сипляш",
   "person.Эппоп": "Эппоп",
   "person.Яна": "Яна",
+
   "badge.new": "НАВ",
+
   "platform.title": "Платформа",
   "platform.enable": "Дар зери персонаж платформа гузоред",
   "platform.block": "Блок",
@@ -342,5 +358,12 @@
   "block.snow": "Блоки барф",
   "block.planks": "Тахтаҳои булут",
   "block.netherrack": "Незеррак",
-  "block.end_stone": "Санги Энд"
+  "block.end_stone": "Санги Энд",
+
+  "bgimg.name.day": "Рӯз",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Незер",
+  "bgimg.name.night": "Шаб",
+  "bgimg.name.snow": "Барф",
+  "bgimg.name.sunset": "Ғуруб"
 }

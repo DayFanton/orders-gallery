@@ -8,9 +8,11 @@
   "language.search_placeholder": "Fufuzani chilankhulo...",
   "language.no_results": "Palibe zilankhulo zomwe zapezeka",
   "language.rtl": false,
+
   "site.title": "Galale ya Tsiplyash",
   "gallery.title": "Galale",
   "loading.text": "Kukweza zida zowonetsera...",
+
   "sort.title": "Kusanja",
   "sort.default": "Mwachizolowezi",
   "sort.author": "Malinga ndi wolemba",
@@ -23,6 +25,7 @@
   "tab.skins": "Masikini",
   "tab.capes": "Zovala zakumbuyo",
   "search.placeholder": "Fufuzani ndi dzina, kasitomala, wolemba...",
+
   "meta.customer": "Kasitomala",
   "meta.artist": "Wojambula",
   "meta.date": "Tsiku la oda",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Sizinatchulidwe",
   "meta.show_orders": "Onetsani maoda onse ochokera kwa %s",
   "meta.open_author": "Tsegulani tsamba la wolemba (%s)",
+
   "skin.untitled": "Popanda dzina",
   "skin.type": "Mtundu: %s",
   "skin.has_variations": "Ili ndi mitundu ina",
   "variation.original": "Choyambirira",
   "cape.remove": "Chotsani chovala chakumbuyo",
+
   "controls.reset": "Bwezeretsani",
   "rotate.title": "Kuzungulira",
   "rotate.enable": "Zungulitsani chifaniziro",
@@ -51,6 +56,7 @@
   "layers.body": "Zovala zakunja / Zida zankhondo",
   "acc.title": "Zowonjezera",
   "acc.elytra": "Onetsani mapiko a Elytra",
+
   "emote.button": "Zochita",
   "emote.title": "Zochita",
   "emote.hint": "Sankhani chochita kapena ikani fayilo yanu ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "Sitinathe kuwerenga fayilo ya chochitachi",
   "emote.playing": "Chikusewera: %s",
   "emote.close": "Tsekani",
+
   "bg.title": "Mtundu wakumbuyo",
   "bg.dark": "Wakuda",
   "bg.light": "Wowala",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Palibe zithunzi zomwe zapezeka (foda ya backgrounds/)",
   "bg.image.error": "Sitinathe kutsegula chithunzichi",
   "bg.image.close": "Tsekani",
+
   "mobile.gallery": "📁 Galale",
   "mobile.settings": "⚙️ Zokonda",
+
   "modal.title": "Chidziwitso",
   "modal.text": "Alendo okondedwa! Sikini iliyonse mu galale ino ndi zotsatira za maola ambiri ogwira ntchito mwakhama. Chonde lemekezani ntchito ya ena. Zithunzi zonse zimatetezedwa ndi malamulo a ufulu wa eniake. Kuwona ndikololedwa, koma kutsitsa, kukopera ndi kugwiritsa ntchito pamalonda ndikololedwa pokhapokha mutagwirizana nafe pasadakhale. Zikomo chifukwa chomvetsetsa ndi kuona mtima!",
   "modal.agree": "Ndawerenga zonse ndipo ndikuvomereza",
   "modal.continue": "Pitirizani",
+
   "error.viewer": "Vuto poyambitsa zigawo za 3D.",
   "error.json": "Kulephera kuwerenga mafayilo a JSON.",
+
   "skin.name.vova_halloween26": "Vova wa Halowini 2026",
   "variation.name.vova_in_mask_halloween26": "Wovala chigoba",
   "skin.name.day_halloween26": "Day wa Halowini 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger wa Chilimwe",
   "skin.name.ger_maid_skeleton": "Ger Wantchito-Chigoba",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Wosamuka",
   "cape.name.pan": "Chitumbuwa cha pa Pani",
   "cape.name.15th_anniversary": "Chikumbutso cha Zaka 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Kasitomala wa Nambala Miliyoni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizimarini",
+
   "emote.name.SPE_Get_scared": "Kuchita mantha",
   "emote.name.SPE_Ankha_Dance": "Gule wa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Kaimidwe ka Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Kaimidwe ka Mfiti (Maloto Oipa)",
   "emote.name.SPE_Yandere_Pose": "Kaimidwe ka Yandere (Maloto Oipa)",
   "emote.name.SPE_Zoro_Pose": "Kaimidwe ka Zoro (Zilengedwe Zambiri) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsiplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "CHATSOPANO",
+
   "platform.title": "Pulatifomu",
   "platform.enable": "Ikani pulatifomu pansi pa munthu",
   "platform.block": "Buloko",
@@ -342,5 +358,12 @@
   "block.snow": "Buloko la matalala",
   "block.planks": "Matabwa a mtengo wa oku",
   "block.netherrack": "Mwala wa Nether",
-  "block.end_stone": "Mwala wa End"
+  "block.end_stone": "Mwala wa End",
+
+  "bgimg.name.day": "Masana",
+  "bgimg.name.end": "Mapeto",
+  "bgimg.name.nether": "Gehena",
+  "bgimg.name.night": "Usiku",
+  "bgimg.name.snow": "Chipale",
+  "bgimg.name.sunset": "Kulowa kwa dzuwa"
 }

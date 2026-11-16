@@ -8,9 +8,11 @@
   "language.search_placeholder": "भाषा खोज्नुहोस्...",
   "language.no_results": "कुनै भाषा फेला परेन",
   "language.rtl": false,
+
   "site.title": "त्सिप्ल्याशको ग्यालेरी",
   "gallery.title": "ग्यालेरी",
   "loading.text": "भिजुअलाइजेसन मोड्युलहरू लोड हुँदैछ...",
+
   "sort.title": "क्रमबद्ध गर्नुहोस्",
   "sort.default": "पूर्वनिर्धारित",
   "sort.author": "लेखक अनुसार",
@@ -23,6 +25,7 @@
   "tab.skins": "स्किनहरू",
   "tab.capes": "केपहरू",
   "search.placeholder": "नाम, ग्राहक, लेखक अनुसार खोज्नुहोस्...",
+
   "meta.customer": "ग्राहक",
   "meta.artist": "कलाकार",
   "meta.date": "अर्डर मिति",
@@ -30,11 +33,13 @@
   "meta.date_unset": "उल्लेख नगरिएको",
   "meta.show_orders": "%s का सबै अर्डरहरू देखाउनुहोस्",
   "meta.open_author": "लेखकको पृष्ठ खोल्नुहोस् (%s)",
+
   "skin.untitled": "शीर्षकविहीन",
   "skin.type": "प्रकार: %s",
   "skin.has_variations": "यसका भिन्नताहरू छन्",
   "variation.original": "मौलिक",
   "cape.remove": "केप हटाउनुहोस्",
+
   "controls.reset": "रिसेट",
   "rotate.title": "घुमाउने",
   "rotate.enable": "मोडेल घुमाउनुहोस्",
@@ -51,6 +56,7 @@
   "layers.body": "बाहिरी लुगा / कवच",
   "acc.title": "सहायक सामग्री",
   "acc.elytra": "एलिट्रा देखाउनुहोस्",
+
   "emote.button": "इमोटहरू",
   "emote.title": "इमोटहरू",
   "emote.hint": "इमोट छान्नुहोस् वा आफ्नै .json फाइल अपलोड गर्नुहोस्",
@@ -60,6 +66,7 @@
   "emote.error": "यो इमोट फाइल पढ्न सकिएन",
   "emote.playing": "चल्दैछ: %s",
   "emote.close": "बन्द गर्नुहोस्",
+
   "bg.title": "पृष्ठभूमिको रङ",
   "bg.dark": "गाढा",
   "bg.light": "उज्यालो",
@@ -77,14 +84,18 @@
   "bg.image.empty": "कुनै तस्बिर फेला परेन (backgrounds/ फोल्डर)",
   "bg.image.error": "यो तस्बिर खोल्न सकिएन",
   "bg.image.close": "बन्द गर्नुहोस्",
+
   "mobile.gallery": "📁 ग्यालेरी",
   "mobile.settings": "⚙️ सेटिङहरू",
+
   "modal.title": "सूचना",
   "modal.text": "प्रिय आगन्तुकहरू! यस ग्यालेरीमा रहेको प्रत्येक स्किन धेरै घण्टाको कडा मेहनतको परिणाम हो। कृपया अरूको श्रमको सम्मान गर्नुहोस्। सबै तस्बिरहरू प्रतिलिपि अधिकारद्वारा सुरक्षित छन्। हेर्न अनुमति छ, तर डाउनलोड गर्न, प्रतिलिपि गर्न र व्यावसायिक प्रयोग गर्न पूर्व सहमतिमा मात्र अनुमति दिइन्छ। तपाईँको समझदारी र इमानदारीको लागि धन्यवाद!",
   "modal.agree": "मैले सबै पढेँ र सहमत छु",
   "modal.continue": "जारी राख्नुहोस्",
+
   "error.viewer": "3D कम्पोनेन्टहरू सुरु गर्दा त्रुटि भयो।",
   "error.json": "JSON कन्फिगरेसन फाइलहरू पढ्न असफल भयो।",
+
   "skin.name.vova_halloween26": "भोभा हेलोवीन २०२६",
   "variation.name.vova_in_mask_halloween26": "मुकुन्डोमा",
   "skin.name.day_halloween26": "डे हेलोवीन २०२६",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "गेर ग्रीष्म",
   "skin.name.ger_maid_skeleton": "गेर सुसारे-कंकाल",
   "skin.name.stars": "स्टार्स",
+
   "cape.name.migrator": "माइग्रेटर",
   "cape.name.pan": "प्यानकेक",
   "cape.name.15th_anniversary": "१५औँ वार्षिकोत्सव",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "दश लाखौँ ग्राहक",
   "cape.name.db": "dB",
   "cape.name.prismarine": "प्रिज्मारिन",
+
   "emote.name.SPE_Get_scared": "डराउनुहोस्",
   "emote.name.SPE_Ankha_Dance": "आन्खा नृत्य (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "एभेलिन पोज (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "बोक्सीको पोज (दुःस्वप्नहरू)",
   "emote.name.SPE_Yandere_Pose": "यान्डेरेको पोज (दुःस्वप्नहरू)",
   "emote.name.SPE_Zoro_Pose": "जोरोको पोज (मल्टिभर्स) (One Piece)",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वाइकातु",
   "person.Виакор": "भियाकोर",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "त्सिप्ल्याश",
   "person.Эппоп": "एप्पोप",
   "person.Яна": "याना",
+
   "badge.new": "नयाँ",
+
   "platform.title": "प्लेटफर्म",
   "platform.enable": "पात्रको मुनि प्लेटफर्म राख्नुहोस्",
   "platform.block": "ब्लक",
@@ -342,5 +358,12 @@
   "block.snow": "हिउँको ब्लक",
   "block.planks": "ओकका फल्याकहरू",
   "block.netherrack": "नेदर्र्याक",
-  "block.end_stone": "एन्ड स्टोन"
+  "block.end_stone": "एन्ड स्टोन",
+
+  "bgimg.name.day": "दिन",
+  "bgimg.name.end": "एन्ड",
+  "bgimg.name.nether": "नेदर",
+  "bgimg.name.night": "रात",
+  "bgimg.name.snow": "हिउँ",
+  "bgimg.name.sunset": "सूर्यास्त"
 }

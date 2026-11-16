@@ -8,9 +8,11 @@
   "language.search_placeholder": "Hitady fiteny...",
   "language.no_results": "Tsy misy fiteny hita",
   "language.rtl": false,
+
   "site.title": "Galerian'i Tsyplyash",
   "gallery.title": "Galeria",
   "loading.text": "Mampiditra ny maodely fijerena...",
+
   "sort.title": "Fandaharana",
   "sort.default": "Tsotra",
   "sort.author": "Araka ny mpamorona",
@@ -23,6 +25,7 @@
   "tab.skins": "Endrika",
   "tab.capes": "Kapaoty",
   "search.placeholder": "Hitady araka ny anarana, mpanjifa, mpamorona...",
+
   "meta.customer": "Mpanjifa",
   "meta.artist": "Mpanakanto",
   "meta.date": "Datin'ny kaomandy",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Tsy voalaza",
   "meta.show_orders": "Asehoy ny kaomandy rehetra avy amin'i %s",
   "meta.open_author": "Sokafy ny pejin'ny mpamorona (%s)",
+
   "skin.untitled": "Tsy misy lohateny",
   "skin.type": "Karazana: %s",
   "skin.has_variations": "Misy karazany hafa",
   "variation.original": "Voalohany",
   "cape.remove": "Esory ny kapaoty",
   "badge.new": "VAOVAO",
+
   "controls.reset": "Avereno",
   "rotate.title": "Fihodinana",
   "rotate.enable": "Ahodino ny maodely",
@@ -52,6 +57,7 @@
   "layers.body": "Akanjo ivelany / Fiarovana",
   "acc.title": "Kojakoja",
   "acc.elytra": "Asehoy ny elatra",
+
   "emote.button": "Fihetseham-po",
   "emote.title": "Fihetseham-po",
   "emote.hint": "Misafidiana fihetseham-po na ampidiro ny rakitra .json anao",
@@ -61,6 +67,7 @@
   "emote.error": "Tsy afaka mamaky ity rakitra fihetseham-po ity",
   "emote.playing": "Mandeha: %s",
   "emote.close": "Hidio",
+
   "bg.title": "Lokon'ny ambadika",
   "bg.dark": "Maizina",
   "bg.light": "Mazava",
@@ -91,14 +98,18 @@
   "block.planks": "Hazo fisaka oaka",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Vaton'ny End",
+
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Fikirana",
+
   "modal.title": "Fampandrenesana",
   "modal.text": "Ry vahiny hajaina! Ny endrika tsirairay ato amin'ity galeria ity dia vokatry ny asa mafy nandritra ny ora maro. Mba hajao ny asan'ny hafa. Ny sary rehetra dia voaaro amin'ny zon'ny mpamorona. Azo jerena ihany izy ireo, fa ny fampidinana, ny fandikana ary ny fampiasana ara-barotra dia tsy azo atao raha tsy misy fifanarahana mialoha. Misaotra amin'ny fahatakarana sy ny fahitsiana!",
   "modal.agree": "Efa novakiako daholo ary manaiky aho",
   "modal.continue": "Tohizo",
+
   "error.viewer": "Nisy olana tamin'ny fanomanana ny singa 3D.",
   "error.json": "Tsy nahomby ny famakiana ny rakitra fikirakirana JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Misaron-tava",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Fahavaratra",
   "skin.name.ger_maid_skeleton": "Ger Mpanampy-Karandoha",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mpifindra monina",
   "cape.name.pan": "Mofo gasy",
   "cape.name.15th_anniversary": "Tsingerintaona faha-15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Mpanjifa faha-iray tapitrisa",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Matahotra",
   "emote.name.SPE_Ankha_Dance": "Dihin'i Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Fijoron'i Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Paozin'ny Mpamosavy (Nofy ratsy)",
   "emote.name.SPE_Yandere_Pose": "Paozin'i Yandere (Nofy ratsy)",
   "emote.name.SPE_Zoro_Pose": "Paozin'i Zoro (Tontolo maro) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Atoandro",
+  "bgimg.name.end": "Farany",
+  "bgimg.name.nether": "Afobe",
+  "bgimg.name.night": "Alina",
+  "bgimg.name.snow": "Oram-panala",
+  "bgimg.name.sunset": "Filentehan'ny masoandro"
 }

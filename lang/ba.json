@@ -356,5 +356,12 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "bgimg.name.day": "Көндөҙ",
+  "bgimg.name.end": "Аҙаҡ",
+  "bgimg.name.nether": "Тамуҡ",
+  "bgimg.name.night": "Төн",
+  "bgimg.name.snow": "Ҡар",
+  "bgimg.name.sunset": "Ҡояш байыуы"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Αναζήτηση γλώσσας...",
   "language.no_results": "Δεν βρέθηκαν γλώσσες",
   "language.rtl": false,
+
   "site.title": "Γκαλερί της Τσιπλιάς",
   "gallery.title": "Γκαλερί",
   "loading.text": "Φόρτωση μονάδων οπτικοποίησης...",
+
   "sort.title": "Ταξινόμηση",
   "sort.default": "Προεπιλογή",
   "sort.author": "Κατά δημιουργό",
@@ -23,6 +25,7 @@
   "tab.skins": "Εμφανίσεις",
   "tab.capes": "Κάπες",
   "search.placeholder": "Αναζήτηση κατά όνομα, πελάτη, δημιουργό...",
+
   "meta.customer": "Πελάτης",
   "meta.artist": "Καλλιτέχνης",
   "meta.date": "Ημερομηνία παραγγελίας",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Δεν ορίστηκε",
   "meta.show_orders": "Εμφάνιση όλων των παραγγελιών από %s",
   "meta.open_author": "Άνοιγμα σελίδας δημιουργού (%s)",
+
   "skin.untitled": "Χωρίς τίτλο",
   "skin.type": "Τύπος: %s",
   "skin.has_variations": "Έχει παραλλαγές",
   "variation.original": "Αρχικό",
   "cape.remove": "Αφαίρεση κάπας",
   "badge.new": "ΝΕΟ",
+
   "controls.reset": "Επαναφορά",
   "rotate.title": "Περιστροφή",
   "rotate.enable": "Περιστροφή μοντέλου",
@@ -52,6 +57,7 @@
   "layers.body": "Εξωτερικά ρούχα / Πανοπλία",
   "acc.title": "Αξεσουάρ",
   "acc.elytra": "Εμφάνιση ελύτρων",
+
   "emote.button": "Εκφράσεις",
   "emote.title": "Εκφράσεις",
   "emote.hint": "Επιλέξτε μια έκφραση ή ανεβάστε το δικό σας αρχείο .json",
@@ -61,6 +67,7 @@
   "emote.error": "Αδυναμία ανάγνωσης του αρχείου έκφρασης",
   "emote.playing": "Αναπαραγωγή: %s",
   "emote.close": "Κλείσιμο",
+
   "bg.title": "Χρώμα φόντου",
   "bg.dark": "Σκούρο",
   "bg.light": "Ανοιχτό",
@@ -91,14 +98,18 @@
   "block.planks": "Σανίδες βελανιδιάς",
   "block.netherrack": "Νέδερακ",
   "block.end_stone": "Πέτρα του Εντ",
+
   "mobile.gallery": "📁 Γκαλερί",
   "mobile.settings": "⚙️ Ρυθμίσεις",
+
   "modal.title": "Ειδοποίηση",
   "modal.text": "Αγαπητοί επισκέπτες! Κάθε εμφάνιση σε αυτή τη γκαλερί είναι αποτέλεσμα πολλών ωρών δουλειάς. Παρακαλούμε να σέβεστε τον κόπο των άλλων. Όλες οι εικόνες προστατεύονται από πνευματικά δικαιώματα. Η προβολή επιτρέπεται, αλλά η λήψη, η αντιγραφή και η εμπορική χρήση επιτρέπονται μόνο κατόπιν προηγούμενης συμφωνίας. Σας ευχαριστούμε για την κατανόηση και την ειλικρίνειά σας!",
   "modal.agree": "Διάβασα τα πάντα και συμφωνώ",
   "modal.continue": "Συνέχεια",
+
   "error.viewer": "Σφάλμα αρχικοποίησης των στοιχείων 3D.",
   "error.json": "Αποτυχία ανάγνωσης των αρχείων ρυθμίσεων JSON.",
+
   "skin.name.vova_halloween26": "Βόβα Χάλογουιν 2026",
   "variation.name.vova_in_mask_halloween26": "Με μάσκα",
   "skin.name.day_halloween26": "Ντέι Χάλογουιν 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Γκερ Καλοκαίρι",
   "skin.name.ger_maid_skeleton": "Γκερ Καμαριέρα-Σκελετός",
   "skin.name.stars": "Σταρς",
+
   "cape.name.migrator": "Μετανάστης",
   "cape.name.pan": "Τηγανίτα",
   "cape.name.15th_anniversary": "15η Επέτειος",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Εκατομμυριοστός Πελάτης",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Πρισμαρίνη",
+
   "emote.name.SPE_Get_scared": "Τρόμος",
   "emote.name.SPE_Ankha_Dance": "Χορός της Άνκα (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Στάση της Έβελιν (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Πόζα της Μάγισσας (Εφιάλτες)",
   "emote.name.SPE_Yandere_Pose": "Πόζα Yandere (Εφιάλτες)",
   "emote.name.SPE_Zoro_Pose": "Πόζα του Ζόρο (Πολυσύμπαν) (One Piece)",
+
   "person.Артур": "Άρθουρ",
   "person.Вайкату": "Γουαϊκάτου",
   "person.Виакор": "Βιακόρ",
@@ -342,5 +356,12 @@
   "person.Хуман": "Χιούμαν",
   "person.Цыпляш": "Τσιπλιάς",
   "person.Эппоп": "Έποπ",
-  "person.Яна": "Γιάνα"
+  "person.Яна": "Γιάνα",
+
+  "bgimg.name.day": "Μέρα",
+  "bgimg.name.end": "Τέλος",
+  "bgimg.name.nether": "Κάτω Κόσμος",
+  "bgimg.name.night": "Νύχτα",
+  "bgimg.name.snow": "Χιόνι",
+  "bgimg.name.sunset": "Ηλιοβασίλεμα"
 }

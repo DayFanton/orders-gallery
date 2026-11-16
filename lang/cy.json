@@ -8,9 +8,11 @@
   "language.search_placeholder": "Chwilio am iaith...",
   "language.no_results": "Ni chanfuwyd unrhyw ieithoedd",
   "language.rtl": false,
+
   "site.title": "Oriel Tsyplyash",
   "gallery.title": "Oriel",
   "loading.text": "Yn llwytho modiwlau delweddu...",
+
   "sort.title": "Trefnu",
   "sort.default": "Diofyn",
   "sort.author": "Yn ôl awdur",
@@ -23,6 +25,7 @@
   "tab.skins": "Crwyn",
   "tab.capes": "Clogynnau",
   "search.placeholder": "Chwilio yn ôl enw, cwsmer, awdur...",
+
   "meta.customer": "Cwsmer",
   "meta.artist": "Arlunydd",
   "meta.date": "Dyddiad archebu",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Heb ei bennu",
   "meta.show_orders": "Dangos pob archeb gan %s",
   "meta.open_author": "Agor tudalen yr awdur (%s)",
+
   "skin.untitled": "Di-deitl",
   "skin.type": "Math: %s",
   "skin.has_variations": "Mae ganddo amrywiadau",
   "variation.original": "Gwreiddiol",
   "cape.remove": "Tynnu clogyn",
+
   "controls.reset": "Ailosod",
   "rotate.title": "Cylchdroi",
   "rotate.enable": "Cylchdroi'r model",
@@ -51,6 +56,7 @@
   "layers.body": "Dillad allanol / Arfwisg",
   "acc.title": "Ategolion",
   "acc.elytra": "Dangos elytra",
+
   "emote.button": "Emotau",
   "emote.title": "Emotau",
   "emote.hint": "Dewiswch emote neu llwythwch eich ffeil .json eich hun",
@@ -60,6 +66,7 @@
   "emote.error": "Methwyd darllen y ffeil emote hon",
   "emote.playing": "Yn chwarae: %s",
   "emote.close": "Cau",
+
   "bg.title": "Lliw cefndir",
   "bg.dark": "Tywyll",
   "bg.light": "Golau",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ni chanfuwyd unrhyw ddelweddau (ffolder backgrounds/)",
   "bg.image.error": "Methwyd agor y ddelwedd hon",
   "bg.image.close": "Cau",
+
   "mobile.gallery": "📁 Oriel",
   "mobile.settings": "⚙️ Gosodiadau",
+
   "modal.title": "Hysbysiad",
   "modal.text": "Annwyl ymwelwyr! Mae pob croen yn yr oriel hon yn ganlyniad oriau lawer o waith caled. Parchwch waith pobl eraill os gwelwch yn dda. Mae pob delwedd wedi'i diogelu gan hawlfraint. Caniateir gwylio, ond dim ond drwy gytundeb ymlaen llaw y caniateir lawrlwytho, copïo a defnydd masnachol. Diolch am eich dealltwriaeth a'ch gonestrwydd!",
   "modal.agree": "Rwyf wedi darllen popeth ac yn cytuno",
   "modal.continue": "Parhau",
+
   "error.viewer": "Gwall wrth ymgychwyn cydrannau 3D.",
   "error.json": "Methwyd darllen ffeiliau ffurfweddu JSON.",
+
   "skin.name.vova_halloween26": "Vova Calan Gaeaf 2026",
   "variation.name.vova_in_mask_halloween26": "Gyda mwgwd",
   "skin.name.day_halloween26": "Day Calan Gaeaf 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Haf",
   "skin.name.ger_maid_skeleton": "Ger Morwyn-Sgerbwd",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mudwr",
   "cape.name.pan": "Padell",
   "cape.name.15th_anniversary": "Pen-blwydd 15 Oed",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Miliynfed Cwsmer",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Cael braw",
   "emote.name.SPE_Ankha_Dance": "Dawns Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Safiad Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Ystum y Wrach (Hunllefau)",
   "emote.name.SPE_Yandere_Pose": "Ystum Yandere (Hunllefau)",
   "emote.name.SPE_Zoro_Pose": "Ystum Zoro (Amlfydysawd) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NEWYDD",
+
   "platform.title": "Llwyfan",
   "platform.enable": "Gosod llwyfan o dan y cymeriad",
   "platform.block": "Bloc",
@@ -342,5 +358,12 @@
   "block.snow": "Bloc eira",
   "block.planks": "Estyll derw",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Carreg yr End"
+  "block.end_stone": "Carreg yr End",
+
+  "bgimg.name.day": "Dydd",
+  "bgimg.name.end": "Y Diwedd",
+  "bgimg.name.nether": "Y Nether",
+  "bgimg.name.night": "Nos",
+  "bgimg.name.snow": "Eira",
+  "bgimg.name.sunset": "Machlud haul"
 }

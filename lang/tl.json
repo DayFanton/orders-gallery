@@ -358,5 +358,12 @@
   "block.snow": "Bloke ng niyebe",
   "block.planks": "Mga tablones na oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End stone"
+  "block.end_stone": "End stone",
+
+  "bgimg.name.day": "Araw",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Gabi",
+  "bgimg.name.snow": "Niyebe",
+  "bgimg.name.sunset": "Takipsilim"
 }

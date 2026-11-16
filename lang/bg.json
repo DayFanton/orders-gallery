@@ -8,9 +8,11 @@
   "language.search_placeholder": "Търсене на език...",
   "language.no_results": "Няма намерени езици",
   "language.rtl": false,
+
   "site.title": "Галерията на Ципляш",
   "gallery.title": "Галерия",
   "loading.text": "Зареждане на модулите за визуализация...",
+
   "sort.title": "Сортиране",
   "sort.default": "По подразбиране",
   "sort.author": "По автор",
@@ -23,6 +25,7 @@
   "tab.skins": "Скинове",
   "tab.capes": "Наметала",
   "search.placeholder": "Търсене по име, поръчител, автор...",
+
   "meta.customer": "Поръчител",
   "meta.artist": "Художник",
   "meta.date": "Дата на поръчката",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Не е посочена",
   "meta.show_orders": "Покажи всички поръчки от %s",
   "meta.open_author": "Отвори страницата на автора (%s)",
+
   "skin.untitled": "Без заглавие",
   "skin.type": "Тип: %s",
   "skin.has_variations": "Има вариации",
   "variation.original": "Оригинал",
   "cape.remove": "Свали наметалото",
+
   "controls.reset": "Нулиране",
   "rotate.title": "Въртене",
   "rotate.enable": "Върти модела",
@@ -51,6 +56,7 @@
   "layers.body": "Връхни дрехи / Броня",
   "acc.title": "Аксесоари",
   "acc.elytra": "Покажи елитрите",
+
   "emote.button": "Емоции",
   "emote.title": "Емоции",
   "emote.hint": "Изберете емоция или качете свой .json файл",
@@ -60,6 +66,7 @@
   "emote.error": "Неуспешно прочитане на файла с емоция",
   "emote.playing": "Изпълнява се: %s",
   "emote.close": "Затвори",
+
   "bg.title": "Цвят на фона",
   "bg.dark": "Тъмен",
   "bg.light": "Светъл",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Не са намерени изображения (папка backgrounds/)",
   "bg.image.error": "Неуспешно отваряне на това изображение",
   "bg.image.close": "Затвори",
+
   "mobile.gallery": "📁 Галерия",
   "mobile.settings": "⚙️ Настройки",
+
   "modal.title": "Уведомление",
   "modal.text": "Уважаеми гости! Всеки скин в тази галерия е резултат от много часове усилен труд. Моля, уважавайте чуждата работа. Всички изображения са защитени с авторски права. Разглеждането е разрешено, но изтеглянето, копирането и търговската употреба са достъпни само след предварителна уговорка. Благодарим ви за разбирането и коректността!",
   "modal.agree": "Прочетох всичко и съм съгласен",
   "modal.continue": "Продължи",
+
   "error.viewer": "Грешка при инициализиране на 3D компонентите.",
   "error.json": "Неуспешно прочитане на конфигурационните JSON файлове.",
+
   "skin.name.vova_halloween26": "Вова хелоуински 2026",
   "variation.name.vova_in_mask_halloween26": "С маска",
   "skin.name.day_halloween26": "Дей хелоуински 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Гер лятна",
   "skin.name.ger_maid_skeleton": "Гер камериерка-скелет",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Мигратор",
   "cape.name.pan": "Палачинково",
   "cape.name.15th_anniversary": "15-а годишнина",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Милионен клиент",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Уплашване",
   "emote.name.SPE_Ankha_Dance": "Танцът на Анка (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Стойката на Евелин (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Позата на Вещицата (Кошмари)",
   "emote.name.SPE_Yandere_Pose": "Позата на Яндере (Кошмари)",
   "emote.name.SPE_Zoro_Pose": "Стойката на Зоро (Мултивселена) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Ципляш",
   "person.Эппоп": "Епоп",
   "person.Яна": "Яна",
+
   "badge.new": "НОВО",
+
   "platform.title": "Платформа",
   "platform.enable": "Постави платформа под персонажа",
   "platform.block": "Блок",
@@ -342,5 +358,12 @@
   "block.snow": "Снежен блок",
   "block.planks": "Дъбови дъски",
   "block.netherrack": "Недърак",
-  "block.end_stone": "Камък от Края"
+  "block.end_stone": "Камък от Края",
+
+  "bgimg.name.day": "Ден",
+  "bgimg.name.end": "Краят",
+  "bgimg.name.nether": "Недър",
+  "bgimg.name.night": "Нощ",
+  "bgimg.name.snow": "Сняг",
+  "bgimg.name.sunset": "Залез"
 }

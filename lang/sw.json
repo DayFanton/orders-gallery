@@ -358,5 +358,12 @@
   "block.snow": "Kizuizi cha theluji",
   "block.planks": "Mbao za mwaloni",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Jiwe la End"
+  "block.end_stone": "Jiwe la End",
+
+  "bgimg.name.day": "Mchana",
+  "bgimg.name.end": "Mwisho",
+  "bgimg.name.nether": "Kuzimu",
+  "bgimg.name.night": "Usiku",
+  "bgimg.name.snow": "Theluji",
+  "bgimg.name.sunset": "Machweo"
 }

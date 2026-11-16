@@ -8,9 +8,11 @@
   "language.search_placeholder": "Etsi kieltä...",
   "language.no_results": "Kieliä ei löytynyt",
   "language.rtl": false,
+
   "site.title": "Tsypljašin galleria",
   "gallery.title": "Galleria",
   "loading.text": "Ladataan visualisointimoduuleja...",
+
   "sort.title": "Järjestys",
   "sort.default": "Oletus",
   "sort.author": "Tekijän mukaan",
@@ -23,6 +25,7 @@
   "tab.skins": "Skinit",
   "tab.capes": "Viitat",
   "search.placeholder": "Hae nimellä, tilaajalla, tekijällä...",
+
   "meta.customer": "Tilaaja",
   "meta.artist": "Taiteilija",
   "meta.date": "Tilauspäivä",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ei määritetty",
   "meta.show_orders": "Näytä kaikki tilaukset käyttäjältä %s",
   "meta.open_author": "Avaa tekijän sivu (%s)",
+
   "skin.untitled": "Nimetön",
   "skin.type": "Tyyppi: %s",
   "skin.has_variations": "Sisältää muunnelmia",
   "variation.original": "Alkuperäinen",
   "cape.remove": "Poista viitta",
+
   "controls.reset": "Nollaa",
   "rotate.title": "Kierto",
   "rotate.enable": "Pyöritä mallia",
@@ -51,6 +56,7 @@
   "layers.body": "Päällysvaatteet / Haarniska",
   "acc.title": "Asusteet",
   "acc.elytra": "Näytä liitosiivet",
+
   "emote.button": "Eleet",
   "emote.title": "Eleet",
   "emote.hint": "Valitse ele tai lataa oma .json-tiedostosi",
@@ -60,6 +66,7 @@
   "emote.error": "Eletiedoston lukeminen epäonnistui",
   "emote.playing": "Toistetaan: %s",
   "emote.close": "Sulje",
+
   "bg.title": "Taustaväri",
   "bg.dark": "Tumma",
   "bg.light": "Vaalea",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Kuvia ei löytynyt (kansio backgrounds/)",
   "bg.image.error": "Kuvan avaaminen epäonnistui",
   "bg.image.close": "Sulje",
+
   "mobile.gallery": "📁 Galleria",
   "mobile.settings": "⚙️ Asetukset",
+
   "modal.title": "Ilmoitus",
   "modal.text": "Hyvät vieraat! Jokainen tämän gallerian skini on monien tuntien kovan työn tulos. Kunnioittakaa toisten työtä. Kaikki kuvat ovat tekijänoikeudella suojattuja. Katselu on sallittua, mutta lataaminen, kopioiminen ja kaupallinen käyttö ovat sallittuja vain etukäteen sovittaessa. Kiitos ymmärryksestä ja rehellisyydestä!",
   "modal.agree": "Olen lukenut kaiken ja hyväksyn ehdot",
   "modal.continue": "Jatka",
+
   "error.viewer": "Virhe 3D-komponenttien alustuksessa.",
   "error.json": "JSON-määritystiedostojen lukeminen epäonnistui.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Naamiossa",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Kesä",
   "skin.name.ger_maid_skeleton": "Ger Sisäkköluuranko",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Siirtyjä",
   "cape.name.pan": "Pannukakku",
   "cape.name.15th_anniversary": "15-vuotisjuhla",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Miljoonas asiakas",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismariini",
+
   "emote.name.SPE_Get_scared": "Säikähdys",
   "emote.name.SPE_Ankha_Dance": "Ankhan tanssi (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynnin asento (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Noidan poseeraus (Painajaiset)",
   "emote.name.SPE_Yandere_Pose": "Yanderen poseeraus (Painajaiset)",
   "emote.name.SPE_Zoro_Pose": "Zoron poseeraus (Multiversumi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsypljaš",
   "person.Эппоп": "Eppop",
   "person.Яна": "Jana",
+
   "badge.new": "UUSI",
+
   "platform.title": "Alusta",
   "platform.enable": "Aseta alusta hahmon alle",
   "platform.block": "Kuutio",
@@ -342,5 +358,12 @@
   "block.snow": "Lumikuutio",
   "block.planks": "Tammilankut",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End-kivi"
+  "block.end_stone": "End-kivi",
+
+  "bgimg.name.day": "Päivä",
+  "bgimg.name.end": "Ääri",
+  "bgimg.name.nether": "Hornan",
+  "bgimg.name.night": "Yö",
+  "bgimg.name.snow": "Lumi",
+  "bgimg.name.sunset": "Auringonlasku"
 }

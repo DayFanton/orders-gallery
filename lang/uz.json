@@ -358,5 +358,12 @@
   "block.snow": "Qor bloki",
   "block.planks": "Emak taxtalari",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End toshi"
+  "block.end_stone": "End toshi",
+
+  "bgimg.name.day": "Kunduz",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Tun",
+  "bgimg.name.snow": "Qor",
+  "bgimg.name.sunset": "Quyosh botishi"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Di gbe...",
   "language.no_results": "Womekpɔ gbe aɖeke o",
   "language.rtl": false,
+
   "site.title": "Tsiplyash ƒe Nukpɔƒe",
   "gallery.title": "Nukpɔƒe",
   "loading.text": "Wole nuɖeɖefia ƒe akpawo tsɔm...",
+
   "sort.title": "Ɖoɖo",
   "sort.default": "Abe alesi wòle ene",
   "sort.author": "Le wɔla nu",
@@ -23,6 +25,7 @@
   "tab.skins": "Ŋutigbalẽwo",
   "tab.capes": "Awuʋlayawo",
   "search.placeholder": "Di le ŋkɔ, dɔdela, wɔla nu...",
+
   "meta.customer": "Dɔdela",
   "meta.artist": "Nutala",
   "meta.date": "Dɔdɔ ŋkeke",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Womeɖee fia o",
   "meta.show_orders": "Fia dɔdɔ siwo katã tso %s gbɔ",
   "meta.open_author": "Ʋu wɔla ƒe axa (%s)",
+
   "skin.untitled": "Ŋkɔ manɔmee",
   "skin.type": "Ƒomevi: %s",
   "skin.has_variations": "Tɔtrɔ bubuwo li",
   "variation.original": "Gbãtɔ",
   "cape.remove": "Ɖe awuʋlaya la ɖa",
+
   "controls.reset": "Gbugbɔ ɖoe",
   "rotate.title": "Tɔtrɔ",
   "rotate.enable": "Trɔ nɔnɔmetata la",
@@ -51,6 +56,7 @@
   "layers.body": "Awudziwui / Akpoxɔnu",
   "acc.title": "Nukpɔkpɔnuwo",
   "acc.elytra": "Fia elytra",
+
   "emote.button": "Seselelãmewo",
   "emote.title": "Seselelãmewo",
   "emote.hint": "Tia seselelãme aɖe alo tsɔ wò ŋutɔ wò .json faɛl",
@@ -60,6 +66,7 @@
   "emote.error": "Womate ŋu axlẽ seselelãme faɛl sia o",
   "emote.playing": "Ele ƒom: %s",
   "emote.close": "Tu",
+
   "bg.title": "Megbe ƒe amadede",
   "bg.dark": "Viviti",
   "bg.light": "Kekeli",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Womekpɔ nɔnɔmetata aɖeke o (backgrounds/ agbalẽdzraɖoƒe)",
   "bg.image.error": "Womate ŋu aʋu nɔnɔmetata sia o",
   "bg.image.close": "Tu",
+
   "mobile.gallery": "📁 Nukpɔƒe",
   "mobile.settings": "⚙️ Ɖoɖowo",
+
   "modal.title": "Nyadzɔdzɔ",
   "modal.text": "Amedzro lɔlɔ̃awo! Ŋutigbalẽ sia ŋutigbalẽ si le nukpɔƒe sia me nye gaƒoƒo geɖe ƒe dɔwɔwɔ sesẽ ƒe emetsonu. Taflatse bu ame bubuwo ƒe dɔwɔwɔ ŋu. Nɔnɔmetatawo katã le se ƒe takpɔkpɔ te. Womeɖe mɔ na wò be nàkpɔ wo ko, gake wɔwɔ, kɔpi wɔwɔ kple asitsatsa zazã le mɔɖeɖe gbãtɔ ko me. Akpe na miaƒe gɔmesese kple anukwareɖiɖi!",
   "modal.agree": "Mexlẽ nuwo katã eye melɔ̃ ɖe edzi",
   "modal.continue": "Yi edzi",
+
   "error.viewer": "Vodada le 3D akpawo ƒe gɔmedzedze me.",
   "error.json": "Womate ŋu axlẽ JSON ɖoɖo faɛlwo o.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Kple mo-tsyɔnu",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Dzomeŋɔli",
   "skin.name.ger_maid_skeleton": "Ger Dɔla-Ƒukpo",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Tsaglãla",
   "cape.name.pan": "Tatale",
   "cape.name.15th_anniversary": "Ƒe 15-lia ƒe Ŋkeke",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Asisi Miliɔn 1-lia",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Vɔ̃",
   "emote.name.SPE_Ankha_Dance": "Ankha ƒe Ɣeɖuɖu (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn ƒe Tsitrenu (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Adzetɔ ƒe Nɔnɔme (Drɔ̃e Vɔ̃wo)",
   "emote.name.SPE_Yandere_Pose": "Yandere ƒe Nɔnɔme (Drɔ̃e Vɔ̃wo)",
   "emote.name.SPE_Zoro_Pose": "Zoro ƒe Nɔnɔme (Xexeme Geɖe) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsiplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "YEYE",
+
   "platform.title": "Akplɔ",
   "platform.enable": "Tsɔ akplɔ da ɖe ame la te",
   "platform.block": "Kpe",
@@ -342,5 +358,12 @@
   "block.snow": "Tsikpe kpe",
   "block.planks": "Ati ƒe ʋuƒo",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Nuwuwu kpe"
+  "block.end_stone": "Nuwuwu kpe",
+
+  "bgimg.name.day": "Ŋdɔ",
+  "bgimg.name.end": "Nuwuwu",
+  "bgimg.name.nether": "Dzomavɔ",
+  "bgimg.name.night": "Zã",
+  "bgimg.name.snow": "Sno",
+  "bgimg.name.sunset": "Ɣedzeƒe"
 }

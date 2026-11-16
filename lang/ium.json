@@ -8,9 +8,11 @@
   "language.search_placeholder": "Laauh waaz...",
   "language.no_results": "Maiv puangv waaz",
   "language.rtl": false,
+
   "site.title": "Tsyplyash Nyei Bua-Zingh Dauh",
   "gallery.title": "Bua-Zingh Dauh",
   "loading.text": "Dongh zongc-laangv mangc nyei fingx...",
+
   "sort.title": "Paiv Zuv",
   "sort.default": "Ziepc Taux",
   "sort.author": "Mienh-zoux",
@@ -23,6 +25,7 @@
   "tab.skins": "Dopv-hnyouv",
   "tab.capes": "Liuh-pauv",
   "search.placeholder": "Laauh mbuox, mienh-zoux, mienh-maaih...",
+
   "meta.customer": "Mienh-maaih",
   "meta.artist": "Mienh-waac",
   "meta.date": "Hnoi-nyieqc dingc",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Maiv mbuox",
   "meta.show_orders": "Bua taux %s nyei dingc-hnyouv",
   "meta.open_author": "Koi %s nyei yiepc (%s)",
+
   "skin.untitled": "Maiv maaih mbuox",
   "skin.type": "Yangh: %s",
   "skin.has_variations": "Maaih mienh-yangh",
   "variation.original": "Taux-hingh",
   "cape.remove": "Toiv liuh-pauv",
+
   "controls.reset": "Zoux nyei taux",
   "rotate.title": "Zunh",
   "rotate.enable": "Zunh yingx-xiangh",
@@ -51,6 +56,7 @@
   "layers.body": "Lui-houv / Gaapv",
   "acc.title": "Ndaauv-gaav",
   "acc.elytra": "Bua taux Elytra",
+
   "emote.button": "Zoux-sin",
   "emote.title": "Zoux-sin",
   "emote.hint": "Jienv aengx zoux-sin aeqv zoux meih nyei .json waengh-daanv",
@@ -60,6 +66,7 @@
   "emote.error": "Maiv haiz doqc naaiv zoux-sin waengh-daanv",
   "emote.playing": "Dongh zoux: %s",
   "emote.close": "Guenh",
+
   "bg.title": "Hnyouv-dauv nyei seix",
   "bg.dark": "Hmuangx",
   "bg.light": "Baac",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Maiv puangv yingx (backgrounds/ daanv-hnyouv)",
   "bg.image.error": "Maiv haiz koi naaiv yingx",
   "bg.image.close": "Guenh",
+
   "mobile.gallery": "📁 Bua-Zingh Dauh",
   "mobile.settings": "⚙️ Zoux-Dingc",
+
   "modal.title": "Hnyouv-Hnyouv",
   "modal.text": "Gouv-hnyouv nyei mienh-zoux! Naaiv bua-zingh dauh nyei zingx dopv-hnyouv seix zoux haic-laangh nyei gong. Cingv zuqc zoux-zingx mienh nyei gong. Zingh yingx maaih faat-liuz baav. Mangc seix haiz, mv baac laai, caau aeqv maaih-zoux zuqc maaih sienx-dingc. Laangh-hnyouv meih nyei hiu-hnyouv aeqv zingx-hnyouv!",
   "modal.agree": "Yie doqc zingh aeqv tongh-yie",
   "modal.continue": "Zoux taux",
+
   "error.viewer": "Koi 3D fingx maaih cuotv.",
   "error.json": "Maiv haiz doqc JSON dingc-waengh.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Daaih mbuox-gaav",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Haa-Tin",
   "skin.name.ger_maid_skeleton": "Ger Zoux-Biauv Bungx",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Biauv-Mienh",
   "cape.name.pan": "Biauv-Biaangx",
   "cape.name.15th_anniversary": "15 Hnyangx",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "1,000,000 Mienh-Maaih",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Fiev",
   "emote.name.SPE_Ankha_Dance": "Ankha Tiuv-Wuov (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Souv-Yangh (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Sai-M'sieqc Yangh (Hnyouv-Fiev)",
   "emote.name.SPE_Yandere_Pose": "Yandere Yangh (Hnyouv-Fiev)",
   "emote.name.SPE_Zoro_Pose": "Zoro Nyei Yangh (Zingh-Ndeix) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "SIANG",
+
   "platform.title": "Dauh-Baangv",
   "platform.enable": "Bongc dauh-baangv ga'ndiev mienh",
   "platform.block": "Guaix",
@@ -342,5 +358,12 @@
   "block.snow": "Biang Guaix",
   "block.planks": "Oak Ndiangx-Baangv",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End Laangx"
+  "block.end_stone": "End Laangx",
+
+  "bgimg.name.day": "Hnoi",
+  "bgimg.name.end": "Mvanc",
+  "bgimg.name.nether": "Dielc",
+  "bgimg.name.night": "Hmzangv",
+  "bgimg.name.snow": "Buv",
+  "bgimg.name.sunset": "Hnoi duqv"
 }

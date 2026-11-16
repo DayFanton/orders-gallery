@@ -8,9 +8,11 @@
   "language.search_placeholder": "زبان ڳولو...",
   "language.no_results": "کوئی زبان کائنی لبھی",
   "language.rtl": true,
+
   "site.title": "تسپلیاش دی گیلری",
   "gallery.title": "گیلری",
   "loading.text": "ویژولائزیشن ماڈیول لوڈ تھیندے پئن...",
+
   "sort.title": "ترتیب",
   "sort.default": "پہلوں آلی",
   "sort.author": "بݨاوݨ آلے دے حساب نال",
@@ -23,6 +25,7 @@
   "tab.skins": "سکِنز",
   "tab.capes": "چوغے",
   "search.placeholder": "ناں، گاہک یا بݨاوݨ آلے دے حساب نال ڳولو...",
+
   "meta.customer": "گاہک",
   "meta.artist": "آرٹسٹ",
   "meta.date": "آرڈر دی تاریخ",
@@ -30,12 +33,14 @@
   "meta.date_unset": "کائنی ݙسی ڳئی",
   "meta.show_orders": "%s دے سارے آرڈر ݙیکھاؤ",
   "meta.open_author": "بݨاوݨ آلے دا صفحہ کھولو (%s)",
+
   "skin.untitled": "بے ناں",
   "skin.type": "قسم: %s",
   "skin.has_variations": "ٻیاں شکلاں وی ہِن",
   "variation.original": "اصل",
   "cape.remove": "چوغا لاہو",
   "badge.new": "نواں",
+
   "controls.reset": "ولدا پہلے وانگوں کرو",
   "rotate.title": "گھماؤ",
   "rotate.enable": "ماڈل گھماؤ",
@@ -52,6 +57,7 @@
   "layers.body": "اُتلے کپڑے / زرہ",
   "acc.title": "واڌو شیواں",
   "acc.elytra": "ایلائٹرا ݙیکھاؤ",
+
   "emote.button": "اشارے",
   "emote.title": "اشارے",
   "emote.hint": "کوئی اشارہ چُݨو یا اپݨی .json فائل لوڈ کرو",
@@ -61,6 +67,7 @@
   "emote.error": "اشارے دی فائل کائنی پڑھی ونڄ سڳی",
   "emote.playing": "چلدا پئے: %s",
   "emote.close": "بند کرو",
+
   "bg.title": "پچھوکڑ دا رنگ",
   "bg.dark": "گھاٹا",
   "bg.light": "ہلکا",
@@ -91,14 +98,18 @@
   "block.planks": "بلوط دے تختے",
   "block.netherrack": "نیدررینک",
   "block.end_stone": "اینڈ دا پتھر",
+
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ ترتیباں",
+
   "modal.title": "اطلاع",
   "modal.text": "پیارے مہمانو! ایں گیلری دی ہر ہِک سکِن ٻہوں سارے گھنٹیاں دی محنت دا نتیجہ ہے۔ مہربانی کر تے ݙوجھیاں دی محنت دا احترام کرو۔ ساریاں تصویراں کاپی رائٹ دے تحت محفوظ ہِن۔ ݙیکھݨ دی اجازت ہے، پر ڈاؤن لوڈ کرݨ، نقل کرݨ اتے کاروباری استعمال صرف اڳوں توں اجازت گھِن تے ای کیتا ونڄ سڳدے۔ سمجھداری اتے ایمانداری دا شکریہ!",
   "modal.agree": "میں سب کُجھ پڑھ گھِدے اتے متفق ہاں",
   "modal.continue": "اڳوں ودھو",
+
   "error.viewer": "3D حصیاں کوں شروع کرݨ وِچ خرابی۔",
   "error.json": "JSON کنفیگریشن فائلاں کائنی پڑھیاں ونڄ سڳیاں۔",
+
   "skin.name.vova_halloween26": "وووا ہیلووین 2026",
   "variation.name.vova_in_mask_halloween26": "نقاب وِچ",
   "skin.name.day_halloween26": "ڈے ہیلووین 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "گیر گرمیاں",
   "skin.name.ger_maid_skeleton": "گیر نوکراݨی-پنجر",
   "skin.name.stars": "سٹارز",
+
   "cape.name.migrator": "ہجرت کرݨ آلا",
   "cape.name.pan": "توا (پین کیک)",
   "cape.name.15th_anniversary": "پندرویں سالگرہ",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "ݙہ لکھواں گاہک",
   "cape.name.db": "dB",
   "cape.name.prismarine": "پرزمارین",
+
   "emote.name.SPE_Get_scared": "ڈر ونڄݨ",
   "emote.name.SPE_Ankha_Dance": "انکھا دا ناچ (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ایولین دا انداز (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "جادوگرنی دا پوز (ڈراؤݨے خواب)",
   "emote.name.SPE_Yandere_Pose": "یانڈیرے دا پوز (ڈراؤݨے خواب)",
   "emote.name.SPE_Zoro_Pose": "زورو دا پوز (ملٹی ورس) (One Piece)",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وائیکاتو",
   "person.Виакор": "ویاکور",
@@ -342,5 +356,12 @@
   "person.Хуман": "ہیومن",
   "person.Цыпляш": "تسپلیاش",
   "person.Эппоп": "ایپوپ",
-  "person.Яна": "یانا"
+  "person.Яна": "یانا",
+
+  "bgimg.name.day": "ݙینہہ",
+  "bgimg.name.end": "انت",
+  "bgimg.name.nether": "دوزخ",
+  "bgimg.name.night": "رات",
+  "bgimg.name.snow": "برف",
+  "bgimg.name.sunset": "سج لہݨ"
 }

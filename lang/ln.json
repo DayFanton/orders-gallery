@@ -8,9 +8,11 @@
   "language.search_placeholder": "Luká lokótá...",
   "language.no_results": "Lokótá moko te emonani",
   "language.rtl": false,
+
   "site.title": "Galerí ya Tsyplyash",
   "gallery.title": "Galerí",
   "loading.text": "Kofungola biloko ya komonisa...",
+
   "sort.title": "Kobongisa",
   "sort.default": "Ndenge ezalaka",
   "sort.author": "Na mokeli",
@@ -23,6 +25,7 @@
   "tab.skins": "Baposo",
   "tab.capes": "Bakape",
   "search.placeholder": "Luká na nkómbó, mosombi, mokeli...",
+
   "meta.customer": "Mosombi",
   "meta.artist": "Moyemi",
   "meta.date": "Mokɔlɔ ya komande",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Etyami te",
   "meta.show_orders": "Lakisá bakomande nyonso ya %s",
   "meta.open_author": "Fungolá lokasa ya mokeli (%s)",
+
   "skin.untitled": "Ezangi nkómbó",
   "skin.type": "Loléngé: %s",
   "skin.has_variations": "Ezali na mitindo mosusu",
   "variation.original": "Ya libosó",
   "cape.remove": "Longolá kape",
   "badge.new": "YA SIKA",
+
   "controls.reset": "Zongisá ndenge ezalaki",
   "rotate.title": "Kobalola",
   "rotate.enable": "Balolá modɛlɛ",
@@ -52,6 +57,7 @@
   "layers.body": "Bilamba ya likoló / Bibundeli",
   "acc.title": "Biloko ya kobakisa",
   "acc.elytra": "Lakisá mapapu ya Elytra",
+
   "emote.button": "Ba-emote",
   "emote.title": "Ba-emote",
   "emote.hint": "Pɔná emote moko to tyá fisyé na yɔ ya .json",
@@ -61,6 +67,7 @@
   "emote.error": "Ekoki kotánga fisyé oyo ya emote te",
   "emote.playing": "Ezali kobɛta: %s",
   "emote.close": "Kangá",
+
   "bg.title": "Lángi ya nsima",
   "bg.dark": "Moindo",
   "bg.light": "Pole",
@@ -91,14 +98,18 @@
   "block.planks": "Mabaya ya chêne",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Libangá ya End",
+
   "mobile.gallery": "📁 Galerí",
   "mobile.settings": "⚙️ Bobongisi",
+
   "modal.title": "Liyebisi",
   "modal.text": "Bapaya ya bolingo! Poso nyonso na galerí oyo ezali mbano ya bangonga mingi ya mosala makasi. Tosɛngi bino bómemya mosala ya bato mosusu. Bililingi nyonso ebatelami na lotomo ya mokeli. Kotala epesami nzela, kasi kokitisa, kosala kopi mpe kosalela mpo na mombongo epesami nzela kaka soki boyokani ezali liboso. Matɔ́ndi mpo na bososoli mpe bosembo na bino!",
   "modal.agree": "Natángi nyonso mpe nandimi",
   "modal.continue": "Kobanda",
+
   "error.viewer": "Libunga na kofungola biteni ya 3D.",
   "error.json": "Ekoki kotánga bafisyé ya bobongisi JSON te.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Na masiki",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Eleko ya Moi",
   "skin.name.ger_maid_skeleton": "Ger Mosali-mwasi Mokuwa",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mokɛndi-mboka",
   "cape.name.pan": "Kape ya Mikate",
   "cape.name.15th_anniversary": "Mbula ya 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Mosombi ya Milio",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kobanga",
   "emote.name.SPE_Ankha_Dance": "Bobini ya Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Botɛlɛmi ya Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Pozɛ ya Ndɔki (Bandɔ́tɔ ya mabe)",
   "emote.name.SPE_Yandere_Pose": "Pozɛ ya Yandere (Bandɔ́tɔ ya mabe)",
   "emote.name.SPE_Zoro_Pose": "Pozɛ ya Zoro (Molɔ́ngɔ́ mingi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Moi",
+  "bgimg.name.end": "Suka",
+  "bgimg.name.nether": "Lifelo",
+  "bgimg.name.night": "Butu",
+  "bgimg.name.snow": "Mbula ya mpembe",
+  "bgimg.name.sunset": "Kolala ya moi"
 }

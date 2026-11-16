@@ -358,5 +358,12 @@
   "block.snow": "ಹಿಮದ ಬ್ಲಾಕ್",
   "block.planks": "ಓಕ್ ಹಲಗೆಗಳು",
   "block.netherrack": "ನೆದರ್‌ರಾಕ್",
-  "block.end_stone": "ಎಂಡ್ ಕಲ್ಲು"
+  "block.end_stone": "ಎಂಡ್ ಕಲ್ಲು",
+
+  "bgimg.name.day": "ಹಗಲು",
+  "bgimg.name.end": "ಎಂಡ್",
+  "bgimg.name.nether": "ನೆದರ್",
+  "bgimg.name.night": "ರಾತ್ರಿ",
+  "bgimg.name.snow": "ಹಿಮ",
+  "bgimg.name.sunset": "ಸೂರ್ಯಾಸ್ತ"
 }

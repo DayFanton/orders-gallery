@@ -8,9 +8,11 @@
   "language.search_placeholder": "Meklēt valodu...",
   "language.no_results": "Valodas nav atrastas",
   "language.rtl": false,
+
   "site.title": "Cipļašas galerija",
   "gallery.title": "Galerija",
   "loading.text": "Ielādē vizualizācijas moduļus...",
+
   "sort.title": "Kārtošana",
   "sort.default": "Pēc noklusējuma",
   "sort.author": "Pēc autora",
@@ -23,6 +25,7 @@
   "tab.skins": "Ādiņas",
   "tab.capes": "Apmetņi",
   "search.placeholder": "Meklēt pēc nosaukuma, pasūtītāja, autora...",
+
   "meta.customer": "Pasūtītājs",
   "meta.artist": "Mākslinieks",
   "meta.date": "Pasūtījuma datums",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Nav norādīts",
   "meta.show_orders": "Rādīt visus %s pasūtījumus",
   "meta.open_author": "Atvērt autora lapu (%s)",
+
   "skin.untitled": "Bez nosaukuma",
   "skin.type": "Tips: %s",
   "skin.has_variations": "Ir variācijas",
   "variation.original": "Oriģināls",
   "cape.remove": "Noņemt apmetni",
   "badge.new": "JAUNS",
+
   "controls.reset": "Atiestatīt",
   "rotate.title": "Rotācija",
   "rotate.enable": "Pagriezt modeli",
@@ -52,6 +57,7 @@
   "layers.body": "Virsdrēbes / Bruņas",
   "acc.title": "Aksesuāri",
   "acc.elytra": "Rādīt elitras",
+
   "emote.button": "Emocijas",
   "emote.title": "Emocijas",
   "emote.hint": "Izvēlieties emociju vai augšupielādējiet savu .json failu",
@@ -61,6 +67,7 @@
   "emote.error": "Neizdevās nolasīt šo emocijas failu",
   "emote.playing": "Atskaņo: %s",
   "emote.close": "Aizvērt",
+
   "bg.title": "Fona krāsa",
   "bg.dark": "Tumšs",
   "bg.light": "Gaišs",
@@ -91,14 +98,18 @@
   "block.planks": "Ozola dēļi",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Enda akmens",
+
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Iestatījumi",
+
   "modal.title": "Paziņojums",
   "modal.text": "Cienījamie apmeklētāji! Katra ādiņa šajā galerijā ir daudzu stundu rūpīga darba rezultāts. Lūdzu, cieniet citu darbu. Visi attēli ir aizsargāti ar autortiesībām. Apskatīšana ir atļauta, bet lejupielāde, kopēšana un komerciāla izmantošana ir atļauta tikai pēc iepriekšējas vienošanās. Paldies par sapratni un godīgumu!",
   "modal.agree": "Es visu izlasīju un piekrītu",
   "modal.continue": "Turpināt",
+
   "error.viewer": "Kļūda, inicializējot 3D komponentus.",
   "error.json": "Neizdevās nolasīt JSON konfigurācijas failus.",
+
   "skin.name.vova_halloween26": "Vova Helovīna 2026",
   "variation.name.vova_in_mask_halloween26": "Maskā",
   "skin.name.day_halloween26": "Dejs Helovīna 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Gēra vasaras",
   "skin.name.ger_maid_skeleton": "Gēra istabene-skelets",
   "skin.name.stars": "Stārss",
+
   "cape.name.migrator": "Migrētājs",
   "cape.name.pan": "Pankūka",
   "cape.name.15th_anniversary": "15. gadadiena",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Miljonais klients",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarīns",
+
   "emote.name.SPE_Get_scared": "Nobīties",
   "emote.name.SPE_Ankha_Dance": "Ankas deja (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelīnas poza (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Raganas poza (Murgi)",
   "emote.name.SPE_Yandere_Pose": "Janderes poza (Murgi)",
   "emote.name.SPE_Zoro_Pose": "Zoro poza (Multivisums) (One Piece)",
+
   "person.Артур": "Artūrs",
   "person.Вайкату": "Vaikatu",
   "person.Виакор": "Viakors",
@@ -342,5 +356,12 @@
   "person.Хуман": "Hjūmans",
   "person.Цыпляш": "Cipļaša",
   "person.Эппоп": "Epops",
-  "person.Яна": "Jana"
+  "person.Яна": "Jana",
+
+  "bgimg.name.day": "Diena",
+  "bgimg.name.end": "Beigas",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Nakts",
+  "bgimg.name.snow": "Sniegs",
+  "bgimg.name.sunset": "Saulriets"
 }

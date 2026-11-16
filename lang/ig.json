@@ -8,9 +8,11 @@
   "language.search_placeholder": "Chọọ asụsụ...",
   "language.no_results": "Enweghị asụsụ achọtara",
   "language.rtl": false,
+
   "site.title": "Ụlọ Ngosi Tsyplyash",
   "gallery.title": "Ụlọ Ngosi",
   "loading.text": "Na-ebudata ngwa nlele...",
+
   "sort.title": "Nhazi",
   "sort.default": "Nke mbụ",
   "sort.author": "Site n'onye okike",
@@ -23,6 +25,7 @@
   "tab.skins": "Akụkọ ahụ (Skins)",
   "tab.capes": "Uwe mwụda",
   "search.placeholder": "Chọọ site n'aha, onye ahịa, onye okike...",
+
   "meta.customer": "Onye ahịa",
   "meta.artist": "Onye na-ese ihe",
   "meta.date": "Ụbọchị a tụrụ ya",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Edebereghị ụbọchị",
   "meta.show_orders": "Gosi iwu niile sitere na %s",
   "meta.open_author": "Mepee ibe onye okike (%s)",
+
   "skin.untitled": "Enweghị aha",
   "skin.type": "Ụdị: %s",
   "skin.has_variations": "Nwere ụdị dị iche iche",
   "variation.original": "Nke mbụ",
   "cape.remove": "Wepụ uwe mwụda",
+
   "controls.reset": "Tọgharia",
   "rotate.title": "Ntụgharị",
   "rotate.enable": "Tụgharịa ihe nlereanya",
@@ -51,6 +56,7 @@
   "layers.body": "Uwe elu / Uwe agha",
   "acc.title": "Ngwa mgbakwunye",
   "acc.elytra": "Gosi elytra",
+
   "emote.button": "Mmetụta (Emotes)",
   "emote.title": "Mmetụta (Emotes)",
   "emote.hint": "Họrọ mmetụta ma ọ bụ bulite faịlụ .json nke gị",
@@ -60,6 +66,7 @@
   "emote.error": "Enweghị ike ịgụ faịlụ mmetụta a",
   "emote.playing": "Na-egwu: %s",
   "emote.close": "Mechie",
+
   "bg.title": "Agba azụ",
   "bg.dark": "Ojii",
   "bg.light": "Ọcha",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Enweghị foto achọtara (nchekwa backgrounds/)",
   "bg.image.error": "Enweghị ike imeghe foto a",
   "bg.image.close": "Mechie",
+
   "mobile.gallery": "📁 Ụlọ Ngosi",
   "mobile.settings": "⚙️ Ntọala",
+
   "modal.title": "Ọkwa",
   "modal.text": "Ezigbo ndị ọbịa! Skin ọ bụla dị n'ụlọ ngosi a bụ nsonaazụ nke ọtụtụ awa ọrụ siri ike. Biko kwanyere ọrụ ndị ọzọ ùgwù. Echedoro foto niile site n'ikike nwebisiinka. Ekwere ka elelee ya, mana nbudata, ịṅomi, na iji ya maka azụmahịa bụ naanị site na nkwekọrịta mbụ. Daalụ maka nghọta na eziokwu gị!",
   "modal.agree": "Agụọla m ihe niile ma kweta",
   "modal.continue": "Gaa n'ihu",
+
   "error.viewer": "Njehie na mmalite ngwa 3D.",
   "error.json": "Enweghị ike ịgụ faịlụ nhazi JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "N'ime nkpuchi",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Oge Ọkọchị",
   "skin.name.ger_maid_skeleton": "Ger Odibo Nwaanyị-Ọkpụkpụ",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Onye Mbugharị",
   "cape.name.pan": "Akara",
   "cape.name.15th_anniversary": "Ncheta Afọ 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Onye Ahịa Nke Otu Nde",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Tụọ egwu",
   "emote.name.SPE_Ankha_Dance": "Egwu Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Nguzosi Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Nguzosi Amoosu (Nrọ Ọjọọ)",
   "emote.name.SPE_Yandere_Pose": "Nguzosi Yandere (Nrọ Ọjọọ)",
   "emote.name.SPE_Zoro_Pose": "Nguzosi Zoro (Ọtụtụ Eluigwe na Ala) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "ỌHỤRỤ",
+
   "platform.title": "Ikpo okwu",
   "platform.enable": "Tinye ikpo okwu n'okpuru agwa",
   "platform.block": "Ngọngọ",
@@ -342,5 +358,12 @@
   "block.snow": "Ngọngọ snow",
   "block.planks": "Osisi oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Nkume End"
+  "block.end_stone": "Nkume End",
+
+  "bgimg.name.day": "Ehihie",
+  "bgimg.name.end": "Njikọta",
+  "bgimg.name.nether": "Ọkụ Mmụọ",
+  "bgimg.name.night": "Abalị",
+  "bgimg.name.snow": "Snow",
+  "bgimg.name.sunset": "Ọdịda anyanwụ"
 }

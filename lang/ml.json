@@ -358,5 +358,12 @@
   "block.snow": "മഞ്ഞുകട്ട",
   "block.planks": "ഓക്ക് പലകകൾ",
   "block.netherrack": "നെതർറാക്ക്",
-  "block.end_stone": "എൻഡ് കല്ല്"
+  "block.end_stone": "എൻഡ് കല്ല്",
+
+  "bgimg.name.day": "പകൽ",
+  "bgimg.name.end": "എൻഡ്",
+  "bgimg.name.nether": "നെതർ",
+  "bgimg.name.night": "രാത്രി",
+  "bgimg.name.snow": "മഞ്ഞ്",
+  "bgimg.name.sunset": "സൂര്യാസ്തമയം"
 }

@@ -358,5 +358,12 @@
   "block.snow": "Блок снега",
   "block.planks": "Дубовые доски",
   "block.netherrack": "Адский камень",
-  "block.end_stone": "Камень Края"
+  "block.end_stone": "Камень Края",
+
+  "bgimg.name.day": "День",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Незер",
+  "bgimg.name.night": "Ночь",
+  "bgimg.name.snow": "Снег",
+  "bgimg.name.sunset": "Закат"
 }

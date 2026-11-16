@@ -358,5 +358,12 @@
   "block.snow": "Snow blok",
   "block.planks": "Oak plank dem",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End ston"
+  "block.end_stone": "End ston",
+
+  "bgimg.name.day": "Day",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Night",
+  "bgimg.name.snow": "Snow",
+  "bgimg.name.sunset": "Sunset"
 }

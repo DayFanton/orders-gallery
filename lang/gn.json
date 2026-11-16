@@ -8,9 +8,11 @@
   "language.search_placeholder": "Eheka ñe'ẽ...",
   "language.no_results": "Ndojejuhúi ñe'ẽ",
   "language.rtl": false,
+
   "site.title": "Tsyplyash Jehechauka Renda",
   "gallery.title": "Jehechauka Renda",
   "loading.text": "Oñemyanyhẽ hína ta'anga jehechauka...",
+
   "sort.title": "Ñemohenda",
   "sort.default": "Ipyahu'ỹva",
   "sort.author": "Apohára rupi",
@@ -23,6 +25,7 @@
   "tab.skins": "Pire",
   "tab.capes": "Ahoja",
   "search.placeholder": "Eheka téra, ojeruréva, apohára rupi...",
+
   "meta.customer": "Ojeruréva",
   "meta.artist": "Ta'anga apohára",
   "meta.date": "Jejerure arange",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Noñemoĩri",
   "meta.show_orders": "Ehechauka opaite %s rembijerure",
   "meta.open_author": "Eipe'a apohára rogue (%s)",
+
   "skin.untitled": "Héra'ỹva",
   "skin.type": "Cháke: %s",
   "skin.has_variations": "Oguereko ambueichagua",
   "variation.original": "Ypykue",
   "cape.remove": "Eipe'a ahoja",
+
   "controls.reset": "Moĩ jey",
   "rotate.title": "Jere",
   "rotate.enable": "Embojere ta'anga",
@@ -51,6 +56,7 @@
   "layers.body": "Ao ári / Ñorairõ ao",
   "acc.title": "Jeguaka",
   "acc.elytra": "Ehechauka élitra",
+
   "emote.button": "Tembiasa",
   "emote.title": "Tembiasa",
   "emote.hint": "Eiporavo peteĩ tembiasa térã ehupi ne marandurenda .json",
@@ -60,6 +66,7 @@
   "emote.error": "Ndaikatúi oñemoñe'ẽ ko tembiasa marandurenda",
   "emote.playing": "Oñembopu hína: %s",
   "emote.close": "Emboty",
+
   "bg.title": "Tapykue sa'y",
   "bg.dark": "Pytũ",
   "bg.light": "Tesakã",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ndojejuhúi ta'anga (backgrounds/ ñongatuha)",
   "bg.image.error": "Ndaikatúi ojepe'a ko ta'anga",
   "bg.image.close": "Emboty",
+
   "mobile.gallery": "📁 Jehechauka Renda",
   "mobile.settings": "⚙️ Ñemohenda",
+
   "modal.title": "Marandu",
   "modal.text": "Mbohupakuéra pohã! Opavave pire ko jehechauka rendápe ha'e heta aravo rembiapo repy. Eñangarekóke ambue tapicha rembiapóre. Opaite ta'anga oguereko apohára derécho. Ojehecha kuaa, hákatu ñemboguejy, ñembohasarã ha ñemu rehegua ikatu ojejapo oñomongeta rire añónte. Aguyje peikũmby ha penderekojoja haguére!",
   "modal.agree": "Amoñe'ẽmbáma ha aime porã hendive",
   "modal.continue": "Eku'ejey",
+
   "error.viewer": "Jejavy oñemoñepyrũvo 3D pehẽnguekuéra.",
   "error.json": "Ndaikatúi oñemoñe'ẽ marandurenda JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Tova ra'anga reheve",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Arahaku",
   "skin.name.ger_maid_skeleton": "Ger Tembiguái Kuña-Kangue",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Ova Va'ekue",
   "cape.name.pan": "Mbeju",
   "cape.name.15th_anniversary": "15 Ary Aramboty",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Ojogua Va'ekue Peteĩ Su Suha",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarina",
+
   "emote.name.SPE_Get_scared": "Ñemondýi",
   "emote.name.SPE_Ankha_Dance": "Ankha Jeroky (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Ñembo'y (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Paje Kuña Ñembo'y (Kerai)",
   "emote.name.SPE_Yandere_Pose": "Yandere Ñembo'y (Kerai)",
   "emote.name.SPE_Zoro_Pose": "Zoro Ñembo'y (Arapyeta) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "PYAHU",
+
   "platform.title": "Yvyape",
   "platform.enable": "Emoĩ yvyape ta'anga guýpe",
   "platform.block": "Mba'e",
@@ -342,5 +358,12 @@
   "block.snow": "Yrypy'a",
   "block.planks": "Yvyra pe",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End Ita"
+  "block.end_stone": "End Ita",
+
+  "bgimg.name.day": "Ára",
+  "bgimg.name.end": "Paha",
+  "bgimg.name.nether": "Añaretã",
+  "bgimg.name.night": "Pyhare",
+  "bgimg.name.snow": "Yrypy'a",
+  "bgimg.name.sunset": "Kuarahy reike"
 }

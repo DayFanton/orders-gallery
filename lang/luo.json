@@ -8,9 +8,11 @@
   "language.search_placeholder": "Many dhok...",
   "language.no_results": "Onge dhok ma oyudore",
   "language.rtl": false,
+
   "site.title": "Kar Nyiso Piche mag Tsyplyash",
   "gallery.title": "Kar Nyiso Piche",
   "loading.text": "Keto gik manyiso piche...",
+
   "sort.title": "Chan",
   "sort.default": "Kaka okete",
   "sort.author": "Kuom jachwech",
@@ -23,6 +25,7 @@
   "tab.skins": "Piende (Skins)",
   "tab.capes": "Lewni mag ng'ey (Capes)",
   "search.placeholder": "Many kuom nying, jang'iewo, jachwech...",
+
   "meta.customer": "Jang'iewo",
   "meta.artist": "Jagoro",
   "meta.date": "Tarik mar kwayo",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ok onyis",
   "meta.show_orders": "Nyis kwayo duto moa kuom %s",
   "meta.open_author": "Yaw ite mar jachwech (%s)",
+
   "skin.untitled": "Maonge nying",
   "skin.type": "Kit: %s",
   "skin.has_variations": "Nigi kit mopogore",
   "variation.original": "Mar chakruok",
   "cape.remove": "Gol law ng'ey",
+
   "controls.reset": "Dwok kaka ne en",
   "rotate.title": "Lworo",
   "rotate.enable": "Lwor picha",
@@ -51,6 +56,7 @@
   "layers.body": "Law ma oko / Rwak mar lweny",
   "acc.title": "Gik mimedo",
   "acc.elytra": "Nyis bwombe (Elytra)",
+
   "emote.button": "Timbe",
   "emote.title": "Timbe",
   "emote.hint": "Yier tim achiel kata ket fail mari mar .json",
@@ -60,6 +66,7 @@
   "emote.error": "Ok nyal somo fail mar timni",
   "emote.playing": "Tugo: %s",
   "emote.close": "Lor",
+
   "bg.title": "Rangi mar gima ni chien",
   "bg.dark": "Marateng'",
   "bg.light": "Marachar",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Onge piche ma oyudore (folder mar backgrounds/)",
   "bg.image.error": "Ok nyal yawo pichani",
   "bg.image.close": "Lor",
+
   "mobile.gallery": "📁 Kar Nyiso Piche",
   "mobile.settings": "⚙️ Chenro",
+
   "modal.title": "Wach miyango",
   "modal.text": "Welowa mogen! Picha ka picha e kar nyiso picheni en tich matek mar seche mang'eny. Kiyie, mi tich jomoko luor. Piche duto orit gi chik mar jachwech. Neno oyier, to golo, loso machal kode, kata tiyo kode e ohala oyier mana ka ne uyie motelo. Erokamano kuom winjo kendo bedo gi adiera!",
   "modal.agree": "Asesomo duto kendo ayie",
   "modal.continue": "Dhi nyime",
+
   "error.viewer": "Ketho e chako gik manyiso piche mag 3D.",
   "error.json": "Ok nyal somo fail mag chenro mag JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Orwako kigogo e wang'",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Oro",
   "skin.name.ger_maid_skeleton": "Ger Jatich-Chogo",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Jadar",
   "cape.name.pan": "Pan (Chapati)",
   "cape.name.15th_anniversary": "Rapor mar Higni 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Jang'iewo mar Milion",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Luor",
   "emote.name.SPE_Ankha_Dance": "Miel mar Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Chung' mar Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Chung' mar Jajuok (Lek marach)",
   "emote.name.SPE_Yandere_Pose": "Chung' mar Yandere (Lek marach)",
   "emote.name.SPE_Zoro_Pose": "Chung' mar Zoro (Pinje Mang'eny) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "MANYIEN",
+
   "platform.title": "Kar chung'",
   "platform.enable": "Ket kar chung' e bwo ng'atni",
   "platform.block": "Kidi (Block)",
@@ -342,5 +358,12 @@
   "block.snow": "Kidi mar pee",
   "block.planks": "Bao mag yath",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Kidi mar End"
+  "block.end_stone": "Kidi mar End",
+
+  "bgimg.name.day": "Odiecthieng",
+  "bgimg.name.end": "Giko",
+  "bgimg.name.nether": "Mach",
+  "bgimg.name.night": "Otieno",
+  "bgimg.name.snow": "Pe",
+  "bgimg.name.sunset": "Podho chieng"
 }

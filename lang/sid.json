@@ -8,9 +8,11 @@
   "language.search_placeholder": "Afoo hasi...",
   "language.no_results": "Afoo di-afamino",
   "language.rtl": false,
+
   "site.title": "Tsipliyaash Galere",
   "gallery.title": "Galere",
   "loading.text": "Leellishate kutaate qixxeessanni no...",
+
   "sort.title": "Baxxinanni",
   "sort.default": "Umi qixxaawo",
   "sort.author": "Borreessaanchu garinni",
@@ -23,6 +25,7 @@
   "tab.skins": "Iskiinoota",
   "tab.capes": "Kappoota",
   "search.placeholder": "Su'munni, hiddaanchunni, borreessaanchunni hasi...",
+
   "meta.customer": "Hiddaancho",
   "meta.artist": "Misileessiisaancho",
   "meta.date": "Hajo barra",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Di-xawisamino",
   "meta.show_orders": "%s hajubba baala leellishi",
   "meta.open_author": "Borreessaanchu qoola fani (%s)",
+
   "skin.untitled": "Su'ma nookkiha",
   "skin.type": "Dana: %s",
   "skin.has_variations": "Babbaxxitino danubba no",
   "variation.original": "Umiha",
   "cape.remove": "Kappo huni",
+
   "controls.reset": "Qoli",
   "rotate.title": "Doyissa",
   "rotate.enable": "Modeele doyissi",
@@ -51,6 +56,7 @@
   "layers.body": "Iimi uddano / Gaachcho",
   "acc.title": "Kaa'laancho uduunne",
   "acc.elytra": "Ilitira leellishi",
+
   "emote.button": "Hedote leellisho",
   "emote.title": "Hedote leellisho",
   "emote.hint": "Hedote leellisho doori woy umi'ne .json faayile eessi",
@@ -60,6 +66,7 @@
   "emote.error": "Hedote leellishote faayile nabbawa dandiinannikki",
   "emote.playing": "Godo'lanni no: %s",
   "emote.close": "Cufi",
+
   "bg.title": "Badheenni kuula",
   "bg.dark": "Tunsicho",
   "bg.light": "Caabbicho",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Misilla di-afantino (backgrounds/ maahoyye)",
   "bg.image.error": "Tenne misile fana dandiinannikki",
   "bg.image.close": "Cufi",
+
   "mobile.gallery": "📁 Galere",
   "mobile.settings": "⚙️ Qixxaawo",
+
   "modal.title": "Egensiishsha",
   "modal.text": "Ayirrado wosinna! Konni galere giddo noo iskiini baalunku lowo saate loosi gumaati. Eeggatena wolu manni looso ayirrisse. Misilla baalanti kalaqaanchu qoossonni agarantinote. La''a fajjantinote, kayinni dirrisa, kophi assanna daddaloho horoonsi'ra dandiinannihu balaxxe sumuu yiniro callaati. Huwattinoonnihuranna ammanamme ikkitinoonnihura galanteemmo!",
   "modal.agree": "Baalankare nabbawummo hattono sumuu yeemmo",
   "modal.continue": "Albillitte ha'ri",
+
   "error.viewer": "3D kutaate hanafo so'ro.",
   "error.json": "JSON qixxaawote faayilla nabbawa dandiinannikki.",
+
   "skin.name.vova_halloween26": "Voovaa Hallowiin 2026",
   "variation.name.vova_in_mask_halloween26": "Maaskete giddo",
   "skin.name.day_halloween26": "Deey Hallowiin 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Geer Hawado",
   "skin.name.ger_maid_skeleton": "Geer Mini Loosisaancho-Mikicho",
   "skin.name.stars": "Istaars",
+
   "cape.name.migrator": "Godaancho",
   "cape.name.pan": "Bixille",
   "cape.name.15th_anniversary": "15-ki Diri Ayyaana",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Miliyoonikki Hiddaancho",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Piriizmariin",
+
   "emote.name.SPE_Get_scared": "Waajja",
   "emote.name.SPE_Ankha_Dance": "Ankaa Sirba (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Eveliin Uurrinsha (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Kiilaanchote Uurrinsha (Waajjishsha)",
   "emote.name.SPE_Yandere_Pose": "Yaandeeree Uurrinsha (Waajjishsha)",
   "emote.name.SPE_Zoro_Pose": "Zooroo Uurrinsha (Babbaxxitino Kalqe) (One Piece)",
+
   "person.Артур": "Artuur",
   "person.Вайкату": "Waaykaatu",
   "person.Виакор": "Viyaakoor",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsipliyaash",
   "person.Эппоп": "Eppoop",
   "person.Яна": "Yaanaa",
+
   "badge.new": "HAARO",
+
   "platform.title": "Diriirsha",
   "platform.enable": "Suudishshu hunda diriirsha wori",
   "platform.block": "Bulooke",
@@ -342,5 +358,12 @@
   "block.snow": "Cabbichu bulooke",
   "block.planks": "Oda'u saanka",
   "block.netherrack": "Nezerraak",
-  "block.end_stone": "Eend kincho"
+  "block.end_stone": "Eend kincho",
+
+  "bgimg.name.day": "Barrimma",
+  "bgimg.name.end": "Goofimarcho",
+  "bgimg.name.nether": "Gaannama",
+  "bgimg.name.night": "Hashsha",
+  "bgimg.name.snow": "Hawaado",
+  "bgimg.name.sunset": "Arrishsho e'a"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Hwehwɛ kasa...",
   "language.no_results": "Wɔanhu kasa biara",
   "language.rtl": false,
+
   "site.title": "Tsyplyash Mfonini Bea",
   "gallery.title": "Mfonini Bea",
   "loading.text": "Ɛregye mfonini nhyehyɛe aba...",
+
   "sort.title": "Nhyehyɛe",
   "sort.default": "Nea ɛwɔ hɔ dada",
   "sort.author": "Sɛnea ɔyɛfo te",
@@ -23,6 +25,7 @@
   "tab.skins": "Honam",
   "tab.capes": "Nkataso",
   "search.placeholder": "Hwehwɛ din, nea ɔkraa, ɔyɛfo...",
+
   "meta.customer": "Nea ɔkraa",
   "meta.artist": "Mfoniniyɛfo",
   "meta.date": "Da a wɔkraa",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Wɔankyerɛ",
   "meta.show_orders": "Kyerɛ nneɛma nyinaa a %s kraa",
   "meta.open_author": "Bue ɔyɛfo no kratafa (%s)",
+
   "skin.untitled": "Enni din",
   "skin.type": "Su: %s",
   "skin.has_variations": "Ɛwɔ nsakrae ahorow",
   "variation.original": "Nea edi kan",
   "cape.remove": "Yi nkataso no",
   "badge.new": "FOFORO",
+
   "controls.reset": "San hyɛ ase",
   "rotate.title": "Nkyinkyim",
   "rotate.enable": "Kyinkyim mfonini no",
@@ -52,6 +57,7 @@
   "layers.body": "Atade / Akode",
   "acc.title": "Nneɛma a ɛka ho",
   "acc.elytra": "Kyerɛ elytra",
+
   "emote.button": "Nneyɛe",
   "emote.title": "Nneyɛe",
   "emote.hint": "Yi adeyɛ bi anaa fa wo ara wo .json fael bra",
@@ -61,6 +67,7 @@
   "emote.error": "Wɔantumi ankan adeyɛ fael yi",
   "emote.playing": "Ɛrebɔ: %s",
   "emote.close": "To mu",
+
   "bg.title": "Akyi kɔla",
   "bg.dark": "Tuntum",
   "bg.light": "Hann",
@@ -91,14 +98,18 @@
   "block.planks": "Odum ntaabo",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End ɔbo",
+
   "mobile.gallery": "📁 Mfonini Bea",
   "mobile.settings": "⚙️ Nhyehyɛe",
+
   "modal.title": "Nkaebɔ",
   "modal.text": "Ahɔho adɔfo! Honam biara a ɛwɔ mfonini bea ha yɛ nnɔnhwerew pii adwumaden aba. Yɛsrɛ sɛ bu afoforo adwuma. Mfonini nyinaa wɔ tumi krataa a ɛbɔ ho ban. Hwɛ no kwan da hɔ, nanso sɛ wobɛtwe, ayɛ bi anaa wode bɛyɛ aguadi a, gye sɛ woadi kan agye kwan. Yɛda mo ase wɔ ntease ne nokwaredi ho!",
   "modal.agree": "Makenkan ne nyinaa na megye tom",
   "modal.continue": "Kɔ so",
+
   "error.viewer": "Mfomso bae bere a wɔrehyɛ 3D nneɛma ase.",
   "error.json": "Wɔantumi ankan JSON nhyehyɛe fael no.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Ɔhyɛ nkataso",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Ahohuru Bere",
   "skin.name.ger_maid_skeleton": "Ger Abaawa-Nnompe",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Ɔtufo",
   "cape.name.pan": "Tatale",
   "cape.name.15th_anniversary": "Afe a ɛto so 15 Afahyɛ",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Ɔdetɔfo a Ɔto so Ɔpepem",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Bɔ hu",
   "emote.name.SPE_Ankha_Dance": "Ankha Asaw (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Gyinabea (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Abayifo Gyinabea (Ahunahuna)",
   "emote.name.SPE_Yandere_Pose": "Yandere Gyinabea (Ahunahuna)",
   "emote.name.SPE_Zoro_Pose": "Zoro Gyinabea (Wiase Ahorow) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Awia",
+  "bgimg.name.end": "Awiei",
+  "bgimg.name.nether": "Asamando",
+  "bgimg.name.night": "Anadwo",
+  "bgimg.name.snow": "Sukyerɛmma",
+  "bgimg.name.sunset": "Owiatɔe"
 }

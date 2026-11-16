@@ -358,5 +358,12 @@
   "block.snow": "د واورې بلاک",
   "block.planks": "د بلوط تختې",
   "block.netherrack": "نیدرایک",
-  "block.end_stone": "د پای ډبره"
+  "block.end_stone": "د پای ډبره",
+
+  "bgimg.name.day": "ورځ",
+  "bgimg.name.end": "پای",
+  "bgimg.name.nether": "دوزخ",
+  "bgimg.name.night": "شپه",
+  "bgimg.name.snow": "واوره",
+  "bgimg.name.sunset": "لمر لوېدل"
 }

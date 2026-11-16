@@ -8,9 +8,11 @@
   "language.search_placeholder": "භාෂාව සොයන්න...",
   "language.no_results": "භාෂා කිසිවක් හමු නොවීය",
   "language.rtl": false,
+
   "site.title": "ට්සිප්ලියාෂ්ගේ ගැලරිය",
   "gallery.title": "ගැලරිය",
   "loading.text": "දෘශ්‍යකරණ මොඩියුල පූරණය වෙමින් පවතී...",
+
   "sort.title": "වර්ගීකරණය",
   "sort.default": "පෙරනිමි",
   "sort.author": "කතුවරයා අනුව",
@@ -23,6 +25,7 @@
   "tab.skins": "සම්",
   "tab.capes": "කේප්",
   "search.placeholder": "නම, පාරිභෝගිකයා, කතුවරයා අනුව සොයන්න...",
+
   "meta.customer": "පාරිභෝගිකයා",
   "meta.artist": "කලාකරු",
   "meta.date": "ඇණවුම් දිනය",
@@ -30,12 +33,14 @@
   "meta.date_unset": "නොමැත",
   "meta.show_orders": "%s වෙතින් සියලුම ඇණවුම් පෙන්වන්න",
   "meta.open_author": "කතුවරයාගේ පිටුව විවෘත කරන්න (%s)",
+
   "skin.untitled": "නමක් නොමැති",
   "skin.type": "වර්ගය: %s",
   "skin.has_variations": "වෙනස්කම් ඇත",
   "variation.original": "මුල් පිටපත",
   "cape.remove": "කේප් එක ඉවත් කරන්න",
   "badge.new": "නව",
+
   "controls.reset": "යළි පිහිටුවන්න",
   "rotate.title": "භ්‍රමණය",
   "rotate.enable": "ආකෘතිය භ්‍රමණය කරන්න",
@@ -52,6 +57,7 @@
   "layers.body": "පිටත ඇඳුම් / සන්නාහය",
   "acc.title": "උපාංග",
   "acc.elytra": "එලිට්‍රා පෙන්වන්න",
+
   "emote.button": "හැඟීම්",
   "emote.title": "හැඟීම්",
   "emote.hint": "හැඟීමක් තෝරන්න හෝ ඔබේම .json ගොනුවක් පූරණය කරන්න",
@@ -61,6 +67,7 @@
   "emote.error": "මෙම හැඟීම් ගොනුව කියවීමට නොහැකි විය",
   "emote.playing": "වාදනය වේ: %s",
   "emote.close": "වසන්න",
+
   "bg.title": "පසුබිම් වර්ණය",
   "bg.dark": "අඳුරු",
   "bg.light": "ආලෝකවත්",
@@ -91,14 +98,18 @@
   "block.planks": "ඕක් ලෑලි",
   "block.netherrack": "නෙදර්‍රැක්",
   "block.end_stone": "එන්ඩ් ගල්",
+
   "mobile.gallery": "📁 ගැලරිය",
   "mobile.settings": "⚙️ සැකසුම්",
+
   "modal.title": "දැන්වීම",
   "modal.text": "ප්‍රිය නරඹන්නනි! මෙම ගැලරියේ ඇති සෑම සමක්ම පැය ගණනක දැඩි උත්සාහයේ ප්‍රතිඵලයකි. කරුණාකර වෙනත් අයගේ වැඩවලට ගෞරව කරන්න. සියලුම පින්තූර ප්‍රකාශන හිමිකමෙන් ආරක්ෂා කර ඇත. නැරඹීමට අවසර ඇත, නමුත් බාගත කිරීම, පිටපත් කිරීම සහ වාණිජමය භාවිතය කළ හැක්කේ පූර්ව එකඟතාවයකින් පමණි. ඔබේ අවබෝධයට සහ අවංකභාවයට ස්තූතියි!",
   "modal.agree": "මම සියල්ල කියවා එකඟ වෙමි",
   "modal.continue": "දිගටම කරගෙන යන්න",
+
   "error.viewer": "3D සංරචක ආරම්භ කිරීමේ දෝෂයකි.",
   "error.json": "JSON වින්‍යාස ගොනු කියවීමට අපොහොසත් විය.",
+
   "skin.name.vova_halloween26": "වෝවා හැලොවීන් 2026",
   "variation.name.vova_in_mask_halloween26": "මුහුණු ආවරණයෙන්",
   "skin.name.day_halloween26": "ඩේ හැලොවීන් 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "ගර් ගිම්හානය",
   "skin.name.ger_maid_skeleton": "ගර් සේවිකා ඇටසැකිල්ල",
   "skin.name.stars": "ස්ටාර්ස්",
+
   "cape.name.migrator": "සංක්‍රමණික",
   "cape.name.pan": "පෑන් කේප්",
   "cape.name.15th_anniversary": "15 වන සංවත්සරය",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "මිලියන වැනි පාරිභෝගිකයා",
   "cape.name.db": "dB",
   "cape.name.prismarine": "ප්‍රිස්මරීන්",
+
   "emote.name.SPE_Get_scared": "බිය වීම",
   "emote.name.SPE_Ankha_Dance": "අංකා නාට්‍යය (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ඊව්ලින් ස්ථාවරය (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "මායාකාරියගේ ඉරියව්ව (බියකරු සිහින)",
   "emote.name.SPE_Yandere_Pose": "යැන්ඩරේ ඉරියව්ව (බියකරු සිහින)",
   "emote.name.SPE_Zoro_Pose": "සොරෝ ඉරියව්ව (බහු විශ්වය) (One Piece)",
+
   "person.Артур": "ආතර්",
   "person.Вайкату": "වයිකටු",
   "person.Виакор": "වියාකෝර්",
@@ -342,5 +356,12 @@
   "person.Хуман": "මානවයා",
   "person.Цыпляш": "ට්සිප්ලියාෂ්",
   "person.Эппоп": "එපොප්",
-  "person.Яна": "යානා"
+  "person.Яна": "යානා",
+
+  "bgimg.name.day": "දවාල",
+  "bgimg.name.end": "එන්ඩ්",
+  "bgimg.name.nether": "නෙදර්",
+  "bgimg.name.night": "රාත්‍රිය",
+  "bgimg.name.snow": "හිම",
+  "bgimg.name.sunset": "හිරු බැස යෑම"
 }

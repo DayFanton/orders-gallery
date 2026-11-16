@@ -358,5 +358,12 @@
   "block.snow": "눈 블록",
   "block.planks": "참나무 판자",
   "block.netherrack": "네더랙",
-  "block.end_stone": "엔드 돌"
+  "block.end_stone": "엔드 돌",
+
+  "bgimg.name.day": "낮",
+  "bgimg.name.end": "엔드",
+  "bgimg.name.nether": "네더",
+  "bgimg.name.night": "밤",
+  "bgimg.name.snow": "눈",
+  "bgimg.name.sunset": "일몰"
 }

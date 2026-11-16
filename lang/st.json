@@ -8,9 +8,11 @@
   "language.search_placeholder": "Batla puo...",
   "language.no_results": "Ha ho lipuo tse fumanoeng",
   "language.rtl": false,
+
   "site.title": "Galari ea Tsyplyash",
   "gallery.title": "Galari",
   "loading.text": "E kenya limmojule tsa pono...",
+
   "sort.title": "Hlophisa",
   "sort.default": "Ea kamehla",
   "sort.author": "Ka mongoli",
@@ -23,6 +25,7 @@
   "tab.skins": "Li-skin",
   "tab.capes": "Likobo",
   "search.placeholder": "Batla ka lebitso, moreki, mongoli...",
+
   "meta.customer": "Moreki",
   "meta.artist": "Moetsi oa litšoantšo",
   "meta.date": "Letsatsi la odara",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Ha lea boleloa",
   "meta.show_orders": "Bontša liodara tsohle tse tsoang ho %s",
   "meta.open_author": "Bula leqephe la mongoli (%s)",
+
   "skin.untitled": "Ha e na lebitso",
   "skin.type": "Mofuta: %s",
   "skin.has_variations": "E na le mefuta e meng",
   "variation.original": "Ea pele",
   "cape.remove": "Tlosa kobo",
   "badge.new": "E NCHA",
+
   "controls.reset": "Seta bocha",
   "rotate.title": "Ho potoloha",
   "rotate.enable": "Potolosa mohlala",
@@ -52,6 +57,7 @@
   "layers.body": "Liaparo tsa kantle / Lihlomo",
   "acc.title": "Lisebelisoa",
   "acc.elytra": "Bontša li-elytra",
+
   "emote.button": "Maikutlo",
   "emote.title": "Maikutlo",
   "emote.hint": "Khetha boitšisinyo kapa u kenye faele ea hau ea .json",
@@ -61,6 +67,7 @@
   "emote.error": "Ha ea khona ho bala faele ena ea boitšisinyo",
   "emote.playing": "E ea bapala: %s",
   "emote.close": "Kwala",
+
   "bg.title": "Mmala oa bokamorao",
   "bg.dark": "O lefifi",
   "bg.light": "O khanyang",
@@ -91,14 +98,18 @@
   "block.planks": "Mapolanka a oak",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Lejoe la End",
+
   "mobile.gallery": "📁 Galari",
   "mobile.settings": "⚙️ Litlhophiso",
+
   "modal.title": "Tsebiso",
   "modal.text": "Baeti ba ratehang! Skin e 'ngoe le e 'ngoe ka har'a galari ena ke litholoana tsa lihora tse ngata tsa mosebetsi o boima. Ka kopo hlomphang mosebetsi oa batho ba bang. Litšoantšo tsohle li sirelelitsoe ke litokelo tsa bangoli. Ho shebella ho lumelletsoe, empa ho jarolla, ho kopitsa le ho sebelisa bakeng sa khoebo ho lumelloa feela ka tumellano ea pele. Rea leboha ka kutloisiso le botšepehi ba lona!",
   "modal.agree": "Ke balile tsohle ebile kea lumela",
   "modal.continue": "Tsoela pele",
+
   "error.viewer": "Phoso ha ho qalisoa likarolo tsa 3D.",
   "error.json": "Ha ea khona ho bala lifaele tsa tlhophiso tsa JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Ka maske",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Lehlabula",
   "skin.name.ger_maid_skeleton": "Ger Lekhabunyane-Masapo",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mofalli",
   "cape.name.pan": "Panekuku",
   "cape.name.15th_anniversary": "Sehopotso sa bo-15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Moreki oa Milione",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Ho tšoha",
   "emote.name.SPE_Ankha_Dance": "Motjeko oa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Boemo ba Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Boemo ba Moloi (Litoro tse mpe)",
   "emote.name.SPE_Yandere_Pose": "Boemo ba Yandere (Litoro tse mpe)",
   "emote.name.SPE_Zoro_Pose": "Boemo ba Zoro (Multiverse) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Motshehare",
+  "bgimg.name.end": "Qetello",
+  "bgimg.name.nether": "Dihele",
+  "bgimg.name.night": "Bosiu",
+  "bgimg.name.snow": "Lehloa",
+  "bgimg.name.sunset": "Ho likela ha letsatsi"
 }

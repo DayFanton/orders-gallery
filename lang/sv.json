@@ -8,9 +8,11 @@
   "language.search_placeholder": "Sök språk...",
   "language.no_results": "Inga språk hittades",
   "language.rtl": false,
+
   "site.title": "Tsyplyashs Galleri",
   "gallery.title": "Galleri",
   "loading.text": "Laddar visualiseringsmoduler...",
+
   "sort.title": "Sortera",
   "sort.default": "Standard",
   "sort.author": "Efter författare",
@@ -23,6 +25,7 @@
   "tab.skins": "Utseenden",
   "tab.capes": "Mantlar",
   "search.placeholder": "Sök efter namn, beställare, författare...",
+
   "meta.customer": "Beställare",
   "meta.artist": "Konstnär",
   "meta.date": "Beställningsdatum",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ej angivet",
   "meta.show_orders": "Visa alla beställningar från %s",
   "meta.open_author": "Öppna författarens sida (%s)",
+
   "skin.untitled": "Namnlös",
   "skin.type": "Typ: %s",
   "skin.has_variations": "Har variationer",
   "variation.original": "Original",
   "cape.remove": "Ta av mantel",
+
   "controls.reset": "Återställ",
   "rotate.title": "Rotation",
   "rotate.enable": "Rotera modell",
@@ -51,6 +56,7 @@
   "layers.body": "Ytterkläder / Rustning",
   "acc.title": "Accessoarer",
   "acc.elytra": "Visa elytra",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Välj en emote eller ladda upp en egen .json-fil",
@@ -60,6 +66,7 @@
   "emote.error": "Kunde inte läsa denna emote-fil",
   "emote.playing": "Spelar: %s",
   "emote.close": "Stäng",
+
   "bg.title": "Bakgrundsfärg",
   "bg.dark": "Mörk",
   "bg.light": "Ljus",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Inga bilder hittades (mappen backgrounds/)",
   "bg.image.error": "Kunde inte öppna denna bild",
   "bg.image.close": "Stäng",
+
   "mobile.gallery": "📁 Galleri",
   "mobile.settings": "⚙️ Inställningar",
+
   "modal.title": "Meddelande",
   "modal.text": "Kära besökare! Varje utseende i detta galleri är resultatet av många timmars arbete. Vänligen respektera andras arbete. Alla bilder är upphovsrättsskyddade. Visning är tillåten, men nedladdning, kopiering och kommersiell användning är endast tillåten efter överenskommelse i förväg. Tack för er förståelse och ärlighet!",
   "modal.agree": "Jag har läst allt och godkänner",
   "modal.continue": "Fortsätt",
+
   "error.viewer": "Fel vid initiering av 3D-komponenter.",
   "error.json": "Kunde inte läsa JSON-konfigurationsfilerna.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "I mask",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Sommar",
   "skin.name.ger_maid_skeleton": "Ger Hembiträdesskelett",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrerare",
   "cape.name.pan": "Pannkaka",
   "cape.name.15th_anniversary": "15-årsjubileum",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Miljonte kunden",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Bli rädd",
   "emote.name.SPE_Ankha_Dance": "Ankha-dans (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn-pose (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Häxans pose (Mardrömmar)",
   "emote.name.SPE_Yandere_Pose": "Yandere-pose (Mardrömmar)",
   "emote.name.SPE_Zoro_Pose": "Zoros pose (Multiversum) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Jana",
+
   "badge.new": "NYTT",
+
   "platform.title": "Plattform",
   "platform.enable": "Placera en plattform under karaktären",
   "platform.block": "Block",
@@ -342,5 +358,12 @@
   "block.snow": "Snöblock",
   "block.planks": "Ekplankor",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Endsten"
+  "block.end_stone": "Endsten",
+
+  "bgimg.name.day": "Dag",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Natt",
+  "bgimg.name.snow": "Snö",
+  "bgimg.name.sunset": "Solnedgång"
 }

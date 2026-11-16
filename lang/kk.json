@@ -358,5 +358,12 @@
   "block.snow": "Қар блоғы",
   "block.planks": "Емен тақтайлар",
   "block.netherrack": "Тозақ тасы",
-  "block.end_stone": "Энд тасы"
+  "block.end_stone": "Энд тасы",
+
+  "bgimg.name.day": "Күн",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Незер",
+  "bgimg.name.night": "Түн",
+  "bgimg.name.snow": "Қар",
+  "bgimg.name.sunset": "Күн батуы"
 }

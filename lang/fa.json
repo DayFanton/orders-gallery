@@ -358,5 +358,12 @@
   "block.snow": "بلوک برف",
   "block.planks": "تخته‌های بلوط",
   "block.netherrack": "سنگ ندر",
-  "block.end_stone": "سنگ اند"
+  "block.end_stone": "سنگ اند",
+
+  "bgimg.name.day": "روز",
+  "bgimg.name.end": "اند",
+  "bgimg.name.nether": "ندر",
+  "bgimg.name.night": "شب",
+  "bgimg.name.snow": "برف",
+  "bgimg.name.sunset": "غروب"
 }

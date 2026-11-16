@@ -8,9 +8,11 @@
   "language.search_placeholder": "Cuardaigh teanga...",
   "language.no_results": "Níor aimsíodh aon teanga",
   "language.rtl": false,
+
   "site.title": "Gailearaí Tsyplyash",
   "gallery.title": "Gailearaí",
   "loading.text": "Modúil léirshamhlaithe á lódáil...",
+
   "sort.title": "Sórtáil",
   "sort.default": "Réamhshocrú",
   "sort.author": "De réir údair",
@@ -23,6 +25,7 @@
   "tab.skins": "Craicne",
   "tab.capes": "Clócaí",
   "search.placeholder": "Cuardaigh de réir ainm, custaiméara, údair...",
+
   "meta.customer": "Custaiméir",
   "meta.artist": "Ealaíontóir",
   "meta.date": "Dáta an ordaithe",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Gan sonrú",
   "meta.show_orders": "Taispeáin gach ordú ó %s",
   "meta.open_author": "Oscail leathanach an údair (%s)",
+
   "skin.untitled": "Gan teideal",
   "skin.type": "Cineál: %s",
   "skin.has_variations": "Tá éagsúlachtaí ann",
   "variation.original": "Bunaidh",
   "cape.remove": "Bain an clóca",
   "badge.new": "NUA",
+
   "controls.reset": "Athshocraigh",
   "rotate.title": "Rothlú",
   "rotate.enable": "Rothlaigh an tsamhail",
@@ -52,6 +57,7 @@
   "layers.body": "Éadaí seachtracha / Cathéide",
   "acc.title": "Oiriúintí",
   "acc.elytra": "Taispeáin eilitrí",
+
   "emote.button": "Mothúcháin",
   "emote.title": "Mothúcháin",
   "emote.hint": "Roghnaigh mothúchán nó lódáil do chomhad .json féin",
@@ -61,6 +67,7 @@
   "emote.error": "Níorbh fhéidir an comhad mothúcháin seo a léamh",
   "emote.playing": "Ag seinm: %s",
   "emote.close": "Dún",
+
   "bg.title": "Dath an chúlra",
   "bg.dark": "Dorcha",
   "bg.light": "Geal",
@@ -91,14 +98,18 @@
   "block.planks": "Cláir darach",
   "block.netherrack": "Neamhchloch",
   "block.end_stone": "Cloch na Críche",
+
   "mobile.gallery": "📁 Gailearaí",
   "mobile.settings": "⚙️ Socruithe",
+
   "modal.title": "Fógra",
   "modal.text": "A chuairteoirí uaisle! Is toradh ar go leor uaireanta oibre é gach craiceann sa ghailearaí seo. Tabhair meas ar obair daoine eile, le do thoil. Tá na híomhánna go léir faoi chóipcheart. Ceadaítear féachaint orthu, ach ní cheadaítear íoslódáil, cóipeáil ná úsáid tráchtála ach amháin trí chomhaontú roimh ré. Go raibh maith agaibh as bhur dtuiscint agus as bhur macántacht!",
   "modal.agree": "Tá gach rud léite agam agus aontaím leis",
   "modal.continue": "Lean ar aghaidh",
+
   "error.viewer": "Earráid agus comhpháirteanna 3D á dtúsú.",
   "error.json": "Theip ar léamh na gcomhad cumraíochta JSON.",
+
   "skin.name.vova_halloween26": "Vova Oíche Shamhna 2026",
   "variation.name.vova_in_mask_halloween26": "Faoi masc",
   "skin.name.day_halloween26": "Day Oíche Shamhna 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Samhradh",
   "skin.name.ger_maid_skeleton": "Ger Cailín Aimsire Cnámharlaigh",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Imirceach",
   "cape.name.pan": "Pancóg",
   "cape.name.15th_anniversary": "15ú Comóradh",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "An Milliúnú Custaiméir",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Priosmairín",
+
   "emote.name.SPE_Get_scared": "Eagla a chur ort",
   "emote.name.SPE_Ankha_Dance": "Damhsa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Seasamh Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Staidiúir na Caillí (Tromluithe)",
   "emote.name.SPE_Yandere_Pose": "Staidiúir Yandere (Tromluithe)",
   "emote.name.SPE_Zoro_Pose": "Staidiúir Zoro (Ilchruinne) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Lá",
+  "bgimg.name.end": "An Críoch",
+  "bgimg.name.nether": "An Íochtar",
+  "bgimg.name.night": "Oíche",
+  "bgimg.name.snow": "Sneachta",
+  "bgimg.name.sunset": "Luí na gréine"
 }

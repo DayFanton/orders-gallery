@@ -358,5 +358,12 @@
   "block.snow": "برف کا بلاک",
   "block.planks": "بلوط دے تختے",
   "block.netherrack": "نیدر ریک",
-  "block.end_stone": "اینڈ پتھر"
+  "block.end_stone": "اینڈ پتھر",
+
+  "bgimg.name.day": "دن",
+  "bgimg.name.end": "اینڈ",
+  "bgimg.name.nether": "نیدر",
+  "bgimg.name.night": "رات",
+  "bgimg.name.snow": "برف",
+  "bgimg.name.sunset": "غروب آفتاب"
 }

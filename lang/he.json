@@ -8,9 +8,11 @@
   "language.search_placeholder": "חיפוש שפה...",
   "language.no_results": "לא נמצאו שפות",
   "language.rtl": true,
+
   "site.title": "הגלריה של ציפליאש",
   "gallery.title": "גלריה",
   "loading.text": "טוען מודולי תצוגה...",
+
   "sort.title": "מיון",
   "sort.default": "ברירת מחדל",
   "sort.author": "לפי יוצר",
@@ -23,6 +25,7 @@
   "tab.skins": "סקינים",
   "tab.capes": "גלימות",
   "search.placeholder": "חיפוש לפי שם, מזמין, יוצר...",
+
   "meta.customer": "מזמין",
   "meta.artist": "אמן",
   "meta.date": "תאריך הזמנה",
@@ -30,12 +33,14 @@
   "meta.date_unset": "לא צוין",
   "meta.show_orders": "הצג את כל ההזמנות של %s",
   "meta.open_author": "פתח את עמוד היוצר (%s)",
+
   "skin.untitled": "ללא שם",
   "skin.type": "סוג: %s",
   "skin.has_variations": "יש וריאציות",
   "variation.original": "מקורי",
   "cape.remove": "הסר גלימה",
   "badge.new": "חדש",
+
   "controls.reset": "איפוס",
   "rotate.title": "סיבוב",
   "rotate.enable": "סובב מודל",
@@ -52,6 +57,7 @@
   "layers.body": "לבוש חיצוני / שריון",
   "acc.title": "אביזרים",
   "acc.elytra": "הצג כנפי אליטרה",
+
   "emote.button": "אימוטים",
   "emote.title": "אימוטים",
   "emote.hint": "בחר אימוט או העלה קובץ .json משלך",
@@ -61,6 +67,7 @@
   "emote.error": "לא ניתן לקרוא את קובץ האימוט",
   "emote.playing": "מנגן: %s",
   "emote.close": "סגור",
+
   "bg.title": "צבע רקע",
   "bg.dark": "כהה",
   "bg.light": "בהיר",
@@ -91,14 +98,18 @@
   "block.planks": "קרשי אלון",
   "block.netherrack": "נת'ראק",
   "block.end_stone": "אבן אנדר",
+
   "mobile.gallery": "📁 גלריה",
   "mobile.settings": "⚙️ הגדרות",
+
   "modal.title": "הודעה",
   "modal.text": "מבקרים יקרים! כל סקין בגלריה זו הוא תוצאה של שעות רבות של עבודה קשה. אנא כבדו את עבודתם של אחרים. כל התמונות מוגנות בזכויות יוצרים. הצפייה מותרת, אך הורדה, העתקה ושימוש מסחרי מותרים רק בתיאום מראש. תודה על ההבנה וההגינות!",
   "modal.agree": "קראתי הכל ואני מסכים/ה",
   "modal.continue": "המשך",
+
   "error.viewer": "שגיאה באתחול רכיבי תלת-ממד.",
   "error.json": "נכשלה קריאת קובצי התצורה JSON.",
+
   "skin.name.vova_halloween26": "וובה האלווין 2026",
   "variation.name.vova_in_mask_halloween26": "במסכה",
   "skin.name.day_halloween26": "דיי האלווין 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "גר קיץ",
   "skin.name.ger_maid_skeleton": "גר שלד-משרתת",
   "skin.name.stars": "סטארס",
+
   "cape.name.migrator": "מהגר",
   "cape.name.pan": "מחבת",
   "cape.name.15th_anniversary": "יום השנה ה-15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "הלקוח המיליון",
   "cape.name.db": "dB",
   "cape.name.prismarine": "פריזמרין",
+
   "emote.name.SPE_Get_scared": "להיבהל",
   "emote.name.SPE_Ankha_Dance": "הריקוד של אנקה (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "העמידה של אוולין (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "פוזת מכשפה (סיוטים)",
   "emote.name.SPE_Yandere_Pose": "פוזת יאנדרה (סיוטים)",
   "emote.name.SPE_Zoro_Pose": "העמידה של זורו (מולטיוורס) (One Piece)",
+
   "person.Артур": "ארתור",
   "person.Вайкату": "וואיקאטו",
   "person.Виакор": "ויאקור",
@@ -342,5 +356,12 @@
   "person.Хуман": "הומאן",
   "person.Цыпляш": "ציפליאש",
   "person.Эппоп": "אפופ",
-  "person.Яна": "יאנה"
+  "person.Яна": "יאנה",
+
+  "bgimg.name.day": "יום",
+  "bgimg.name.end": "האנד",
+  "bgimg.name.nether": "הנת'ר",
+  "bgimg.name.night": "לילה",
+  "bgimg.name.snow": "שלג",
+  "bgimg.name.sunset": "שקיעה"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "尋語言...",
   "language.no_results": "尋不到語言",
   "language.rtl": false,
+
   "site.title": "雌雞仔嗰畫廊",
   "gallery.title": "畫廊",
   "loading.text": "正載入三維顯示模組...",
+
   "sort.title": "排序",
   "sort.default": "默認",
   "sort.author": "按作者",
@@ -23,6 +25,7 @@
   "tab.skins": "皮膚",
   "tab.capes": "披風",
   "search.placeholder": "按名字、定做人、作者尋...",
+
   "meta.customer": "定做人",
   "meta.artist": "畫師",
   "meta.date": "定做日期",
@@ -30,12 +33,14 @@
   "meta.date_unset": "冇寫",
   "meta.show_orders": "看 %s 嗰全部定做",
   "meta.open_author": "打開作者頁面 (%s)",
+
   "skin.untitled": "冇題目",
   "skin.type": "類型：%s",
   "skin.has_variations": "有別嗰樣式",
   "variation.original": "原版",
   "cape.remove": "除吥披風",
   "badge.new": "新嗰",
+
   "controls.reset": "重置",
   "rotate.title": "旋轉",
   "rotate.enable": "轉動模型",
@@ -52,6 +57,7 @@
   "layers.body": "外套 / 盔甲",
   "acc.title": "配飾",
   "acc.elytra": "顯示鞘翅",
+
   "emote.button": "表情動作",
   "emote.title": "表情動作",
   "emote.hint": "選隻表情動作或者上傳自家嗰 .json 文件",
@@ -61,6 +67,7 @@
   "emote.error": "讀不到箇隻表情文件",
   "emote.playing": "正放：%s",
   "emote.close": "關吥",
+
   "bg.title": "背景顏色",
   "bg.dark": "深色",
   "bg.light": "淺色",
@@ -91,14 +98,18 @@
   "block.planks": "橡木木板",
   "block.netherrack": "下界岩",
   "block.end_stone": "末地石",
+
   "mobile.gallery": "📁 畫廊",
   "mobile.settings": "⚙️ 設置",
+
   "modal.title": "告示",
   "modal.text": "各位來客！畫廊裡頭每隻皮膚都係花哩好多時間做正嗰，請尊重別人嗰心血。所有圖片都有版權保護。可以看，但係下載、複製同商用一定要提前講好才做得。多謝理解同誠信！",
   "modal.agree": "我都看正哩，也同意",
   "modal.continue": "繼續",
+
   "error.viewer": "三維組件初始化出錯。",
   "error.json": "讀不到 JSON 配置文件。",
+
   "skin.name.vova_halloween26": "沃瓦 萬聖節 2026",
   "variation.name.vova_in_mask_halloween26": "戴面具",
   "skin.name.day_halloween26": "戴伊 萬聖節 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "格爾 夏季",
   "skin.name.ger_maid_skeleton": "格爾 女僕骷髏",
   "skin.name.stars": "斯塔爾斯",
+
   "cape.name.migrator": "遷移者",
   "cape.name.pan": "煎餅",
   "cape.name.15th_anniversary": "15週年",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "第一百萬名顧客",
   "cape.name.db": "dB",
   "cape.name.prismarine": "海晶石",
+
   "emote.name.SPE_Get_scared": "嚇一跳",
   "emote.name.SPE_Ankha_Dance": "豔后舞（動物森友會）",
   "emote.name.SPE_Evelynn_Stand": "伊芙琳站姿（英雄聯盟）",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "女巫姿勢（噩夢）",
   "emote.name.SPE_Yandere_Pose": "病嬌姿勢（噩夢）",
   "emote.name.SPE_Zoro_Pose": "索隆站姿（多元宇宙）（海賊王）",
+
   "person.Артур": "阿瑟",
   "person.Вайкату": "懷卡圖",
   "person.Виакор": "維亞科爾",
@@ -342,5 +356,12 @@
   "person.Хуман": "胡曼",
   "person.Цыпляш": "雌雞仔",
   "person.Эппоп": "埃波普",
-  "person.Яна": "亞娜"
+  "person.Яна": "亞娜",
+
+  "bgimg.name.day": "日上",
+  "bgimg.name.end": "末地",
+  "bgimg.name.nether": "下界",
+  "bgimg.name.night": "夜裡",
+  "bgimg.name.snow": "雪",
+  "bgimg.name.sunset": "日落"
 }

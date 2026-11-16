@@ -8,9 +8,11 @@
   "language.search_placeholder": "Mantha kĩthyomo...",
   "language.no_results": "Vai kĩthyomo kyonekie",
   "language.rtl": false,
+
   "site.title": "Nyũmba ya Mawonany'o ya Tsyplyash",
   "gallery.title": "Nyũmba ya Mawonany'o",
   "loading.text": "Kwĩkĩa syĩndũ sya kwonany'a...",
+
   "sort.title": "Kũvanga",
   "sort.default": "Ũndũ vailyĩ",
   "sort.author": "Kwĩanana na mũseũvya",
@@ -23,6 +25,7 @@
   "tab.skins": "Ngoi (Skins)",
   "tab.capes": "Nguo sya ĩtina (Capes)",
   "search.placeholder": "Mantha na syĩtwa, mũthooi, mũseũvya...",
+
   "meta.customer": "Mũthooi",
   "meta.artist": "Mũseũvya",
   "meta.date": "Matukũ ma kũĩtya",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Matukũ mayĩwetwe",
   "meta.show_orders": "Onany'a maĩtyo onthe kuma kwa %s",
   "meta.open_author": "Vingũa ĩthangũ ya mũseũvya (%s)",
+
   "skin.untitled": "Vai syĩtwa",
   "skin.type": "Mũthemba: %s",
   "skin.has_variations": "Ĩ na mĩthemba ĩngĩ",
   "variation.original": "Ya mbee",
   "cape.remove": "Umia nguo ya ĩtina",
+
   "controls.reset": "Tũngĩĩa mũthya",
   "rotate.title": "Kũthyũlũlũka",
   "rotate.enable": "Thyũlũlũkya kĩvw'anano",
@@ -51,6 +56,7 @@
   "layers.body": "Nguo ya ĩũlũ / Mavũti ma kaũ",
   "acc.title": "Syĩndũ sya kwongela",
   "acc.elytra": "Onany'a Elytra",
+
   "emote.button": "Mĩĩko",
   "emote.title": "Mĩĩko",
   "emote.hint": "Sakua mũĩko kana wĩkĩe faili yaku ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "Kũsoma faili ĩno ya mũĩko kwĩĩle",
   "emote.playing": "Kũthaũka: %s",
   "emote.close": "Vinga",
+
   "bg.title": "Langĩ wa ĩtina",
   "bg.dark": "Mũiu",
   "bg.light": "Mweũ",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Vai mavisa monekie (folder ya backgrounds/)",
   "bg.image.error": "Kũvingũa visa ũũ kwĩĩle",
   "bg.image.close": "Vinga",
+
   "mobile.gallery": "📁 Nyũmba ya Mawonany'o",
   "mobile.settings": "⚙️ Mĩvango",
+
   "modal.title": "Ũmanyĩthya",
   "modal.text": "Aeni endwa! Kĩla ngoi (skin) yĩ vaa nĩ wĩa wa masaa maingĩ. Mũkũlĩw'a mũnenge wĩa wa angĩ ndaĩa. Mavisa onthe me na ũsũvĩo wa mũseũvya. Kwĩloela nĩ kwĩtĩkĩlĩtwe, ĩndĩ kumya, kũtũmĩa ĩngĩ kana kũthooesya no nginya mwĩtĩkĩlane mbee. Mũvea nũndũ wa kũelewa na wĩanĩu!",
   "modal.agree": "Nĩnasoma onthe na nĩneetĩkĩla",
   "modal.continue": "Endeea",
+
   "error.viewer": "Vethĩiwe na thĩna wa kwambĩĩa syĩndũ sya 3D.",
   "error.json": "Kũsoma mafaili ma JSON kwĩĩle.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "E na kĩvw'ĩko kya ũthyũ",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Summer",
   "skin.name.ger_maid_skeleton": "Ger Mũthũkũmi-Ĩvĩndĩ",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mũthami",
   "cape.name.pan": "Chapati / Kĩkalango (Pan)",
   "cape.name.15th_anniversary": "Ũkũmũ wa Myaka 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Mũthooi wa Milioni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kũkĩa",
   "emote.name.SPE_Ankha_Dance": "Wathi wa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Mũũngamĩle wa Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Mũũngamĩle wa Mũndũ Mũoi (Ndoto nthũku)",
   "emote.name.SPE_Yandere_Pose": "Mũũngamĩle wa Yandere (Ndoto nthũku)",
   "emote.name.SPE_Zoro_Pose": "Mũũngamĩle wa Zoro (Nthĩ Nyingĩ) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NZEŨ",
+
   "platform.title": "Kĩvũthya",
   "platform.enable": "Ĩkĩa kĩvũthya ĩtheo wa kĩvw'anano",
   "platform.block": "Kĩĩndũ (Block)",
@@ -342,5 +358,12 @@
   "block.snow": "Kĩĩndũ kya ĩa",
   "block.planks": "Mbaũ sya mũti wa oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Ĩvia ya End"
+  "block.end_stone": "Ĩvia ya End",
+
+  "bgimg.name.day": "Mũthenya",
+  "bgimg.name.end": "Mũthya",
+  "bgimg.name.nether": "Ngai ya nthi",
+  "bgimg.name.night": "Ũtukũ",
+  "bgimg.name.snow": "Ĩia",
+  "bgimg.name.sunset": "Kũthũa kwa syũa"
 }

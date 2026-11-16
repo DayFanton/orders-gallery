@@ -358,5 +358,12 @@
   "block.snow": "Blokin dusar ƙanƙara",
   "block.planks": "Allon oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Dutsen End"
+  "block.end_stone": "Dutsen End",
+
+  "bgimg.name.day": "Rana",
+  "bgimg.name.end": "Ƙarshe",
+  "bgimg.name.nether": "Lahira",
+  "bgimg.name.night": "Dare",
+  "bgimg.name.snow": "Dusar ƙanƙara",
+  "bgimg.name.sunset": "Faɗuwar rana"
 }

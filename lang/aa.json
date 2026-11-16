@@ -8,9 +8,11 @@
   "language.search_placeholder": "Af goris...",
   "language.no_results": "Af makattiminna",
   "language.rtl": false,
+
   "site.title": "Tsyplyash Gallery",
   "gallery.title": "Gallery",
   "loading.text": "Ubullu modulaat oobisak geytima...",
+
   "sort.title": "Sooriyya",
   "sort.default": "Aslilih",
   "sort.author": "Abeynih",
@@ -23,6 +25,7 @@
   "tab.skins": "Kooraari",
   "tab.capes": "Kabaabih",
   "search.placeholder": "Migaq, xaameyna, abeynah goris...",
+
   "meta.customer": "Xaameyna",
   "meta.artist": "Missooseyna",
   "meta.date": "Farriimih ayro",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Mayaddiginna",
   "meta.show_orders": "%s farriimitte inkih uybulluy",
   "meta.open_author": "Abeynih gali fak (%s)",
+
   "skin.untitled": "Migaq mali",
   "skin.type": "Qaynat: %s",
   "skin.has_variations": "Baxsa le",
   "variation.original": "Asli",
   "cape.remove": "Kabaaba kal",
   "badge.new": "QUSBA",
+
   "controls.reset": "Qagitak",
   "rotate.title": "Korroosiyya",
   "rotate.enable": "Moodel korroos",
@@ -52,6 +57,7 @@
   "layers.body": "Sartan / Gaali",
   "acc.title": "Kibnaana",
   "acc.elytra": "Elytra uybulluy",
+
   "emote.button": "Dareemu",
   "emote.title": "Dareemu",
   "emote.hint": "Dareemu doorit hinnay isi .json faayil oobis",
@@ -61,6 +67,7 @@
   "emote.error": "Ta dareemuh faayil akriye waanam",
   "emote.playing": "Digirak geytima: %s",
   "emote.close": "Alif",
+
   "bg.title": "Derreh bisu",
   "bg.dark": "Dite",
   "bg.light": "Ifu",
@@ -91,14 +98,18 @@
   "block.planks": "Alwi xaqxaq",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End xaa",
+
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Massos",
+
   "modal.title": "Oyti",
   "modal.text": "Kacanu maraw! Ta gallery addal tan kulli kooraari maggo saaqootah taamah xalu. Kummaatah gersi marih taama konnaba. Muuqoola inkih abeynih cakkil daccarsimte. Ubullu idni le, takkay immay oobisiyya, koobiyya kee kabxah xoqoysimiyya naharsi sittin geyih takke. Garu kee nummah gadda gey!",
   "modal.agree": "Inkih akriyeeh oggole",
   "modal.continue": "Bisoh gex",
+
   "error.viewer": "3D kura qimbisiyyah hoxa.",
   "error.json": "JSON massos faayilitte akriye waanam.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Maaskih addat",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Hagay",
   "skin.name.ger_maid_skeleton": "Ger Qarhi-Abeyna-Lafle",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Guureyna",
   "cape.name.pan": "Lahoh",
   "cape.name.15th_anniversary": "15-hayto Liggiida",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Milyoon-hayto Xaameyna",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Meqsit",
   "emote.name.SPE_Ankha_Dance": "Ankha Digir (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Soolo (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Baaba-abeyna Soolo (Meqsi)",
   "emote.name.SPE_Yandere_Pose": "Yandere Soolo (Meqsi)",
   "emote.name.SPE_Zoro_Pose": "Zoro Soolo (Maggo Qalam) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Laqo",
+  "bgimg.name.end": "Ellacabó",
+  "bgimg.name.nether": "Jahannam",
+  "bgimg.name.night": "Bar",
+  "bgimg.name.snow": "Baraf",
+  "bgimg.name.sunset": "Ayró caddo"
 }

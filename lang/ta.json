@@ -358,5 +358,12 @@
   "block.snow": "பனித் தொகுதி",
   "block.planks": "ஓக் பலகைகள்",
   "block.netherrack": "நெதராக்",
-  "block.end_stone": "எண்ட் கல்"
+  "block.end_stone": "எண்ட் கல்",
+
+  "bgimg.name.day": "பகல்",
+  "bgimg.name.end": "எண்ட்",
+  "bgimg.name.nether": "நெதர்",
+  "bgimg.name.night": "இரவு",
+  "bgimg.name.snow": "பனி",
+  "bgimg.name.sunset": "சூரிய அஸ்தமனம்"
 }

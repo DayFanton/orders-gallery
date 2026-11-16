@@ -8,9 +8,11 @@
   "language.search_placeholder": "Pretraži jezik...",
   "language.no_results": "Jezici nisu pronađeni",
   "language.rtl": false,
+
   "site.title": "Galerija Cipljaš",
   "gallery.title": "Galerija",
   "loading.text": "Učitavanje modula za vizualizaciju...",
+
   "sort.title": "Sortiranje",
   "sort.default": "Zadano",
   "sort.author": "Po autoru",
@@ -23,6 +25,7 @@
   "tab.skins": "Skinovi",
   "tab.capes": "Plaštevi",
   "search.placeholder": "Pretraži po nazivu, naručitelju, autoru...",
+
   "meta.customer": "Naručitelj",
   "meta.artist": "Umjetnik",
   "meta.date": "Datum narudžbe",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Nije naveden",
   "meta.show_orders": "Prikaži sve narudžbe od %s",
   "meta.open_author": "Otvori stranicu autora (%s)",
+
   "skin.untitled": "Bez naziva",
   "skin.type": "Vrsta: %s",
   "skin.has_variations": "Ima varijacije",
   "variation.original": "Izvornik",
   "cape.remove": "Ukloni plašt",
+
   "controls.reset": "Poništi",
   "rotate.title": "Rotacija",
   "rotate.enable": "Rotiraj model",
@@ -51,6 +56,7 @@
   "layers.body": "Gornja odjeća / Oklop",
   "acc.title": "Dodatci",
   "acc.elytra": "Prikaži elitre",
+
   "emote.button": "Emocije",
   "emote.title": "Emocije",
   "emote.hint": "Odaberite emociju ili učitajte svoju .json datoteku",
@@ -60,6 +66,7 @@
   "emote.error": "Nije moguće pročitati datoteku emocije",
   "emote.playing": "Reproducira se: %s",
   "emote.close": "Zatvori",
+
   "bg.title": "Boja pozadine",
   "bg.dark": "Tamna",
   "bg.light": "Svijetla",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Slike nisu pronađene (mapa backgrounds/)",
   "bg.image.error": "Nije moguće otvoriti ovu sliku",
   "bg.image.close": "Zatvori",
+
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Postavke",
+
   "modal.title": "Obavijest",
   "modal.text": "Poštovani posjetitelji! Svaki skin u ovoj galeriji rezultat je mnogo sati rada. Molimo vas da poštujete tuđi trud. Sve su slike zaštićene autorskim pravima. Pregledavanje je dopušteno, ali preuzimanje, kopiranje i komercijalna uporaba dopušteni su samo uz prethodni dogovor. Hvala vam na razumijevanju i poštenju!",
   "modal.agree": "Sve sam pročitao/la i slažem se",
   "modal.continue": "Nastavi",
+
   "error.viewer": "Pogreška pri inicijalizaciji 3D komponenti.",
   "error.json": "Nije moguće pročitati konfiguracijske datoteke JSON.",
+
   "skin.name.vova_halloween26": "Vova Noć vještica 2026.",
   "variation.name.vova_in_mask_halloween26": "U maski",
   "skin.name.day_halloween26": "Day Noć vještica 2026.",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Ljeto",
   "skin.name.ger_maid_skeleton": "Ger Sobarica-Kostur",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Palačinka",
   "cape.name.15th_anniversary": "15. obljetnica",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Milijunti kupac",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Prestrašiti se",
   "emote.name.SPE_Ankha_Dance": "Ankhin ples (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynnin stav (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Poza Vještice (Noćne more)",
   "emote.name.SPE_Yandere_Pose": "Yandere poza (Noćne more)",
   "emote.name.SPE_Zoro_Pose": "Zorov stav (Multiverzum) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Cipljaš",
   "person.Эппоп": "Eppop",
   "person.Яна": "Jana",
+
   "badge.new": "NOVO",
+
   "platform.title": "Platforma",
   "platform.enable": "Postavi platformu ispod lika",
   "platform.block": "Blok",
@@ -342,5 +358,12 @@
   "block.snow": "Blok snijega",
   "block.planks": "Hrastove daske",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Kamen Enda"
+  "block.end_stone": "Kamen Enda",
+
+  "bgimg.name.day": "Dan",
+  "bgimg.name.end": "Kraj",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noć",
+  "bgimg.name.snow": "Snijeg",
+  "bgimg.name.sunset": "Zalazak sunca"
 }

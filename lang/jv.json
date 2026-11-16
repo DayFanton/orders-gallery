@@ -358,5 +358,12 @@
   "block.snow": "Blok salju",
   "block.planks": "Papan kayu oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Watu End"
+  "block.end_stone": "Watu End",
+
+  "bgimg.name.day": "Rina",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Bengi",
+  "bgimg.name.snow": "Salju",
+  "bgimg.name.sunset": "Surup"
 }

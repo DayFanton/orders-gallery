@@ -8,9 +8,11 @@
   "language.search_placeholder": "ენის ძიება...",
   "language.no_results": "ენები ვერ მოიძებნა",
   "language.rtl": false,
+
   "site.title": "ციპლიაშის გალერეა",
   "gallery.title": "გალერეა",
   "loading.text": "ვიზუალიზაციის მოდულების ჩატვირთვა...",
+
   "sort.title": "დალაგება",
   "sort.default": "ნაგულისხმევი",
   "sort.author": "ავტორის მიხედვით",
@@ -23,6 +25,7 @@
   "tab.skins": "სკინები",
   "tab.capes": "მოსასხამები",
   "search.placeholder": "ძიება სახელით, დამკვეთით, ავტორით...",
+
   "meta.customer": "დამკვეთი",
   "meta.artist": "მხატვარი",
   "meta.date": "შეკვეთის თარიღი",
@@ -30,12 +33,14 @@
   "meta.date_unset": "არ არის მითითებული",
   "meta.show_orders": "%s-ის ყველა შეკვეთის ჩვენება",
   "meta.open_author": "ავტორის გვერდის გახსნა (%s)",
+
   "skin.untitled": "უსათაურო",
   "skin.type": "ტიპი: %s",
   "skin.has_variations": "აქვს ვარიაციები",
   "variation.original": "ორიგინალი",
   "cape.remove": "მოსასხამის მოხსნა",
   "badge.new": "ახალი",
+
   "controls.reset": "გადატვირთვა",
   "rotate.title": "ბრუნვა",
   "rotate.enable": "მოდელის ბრუნვა",
@@ -52,6 +57,7 @@
   "layers.body": "ზედა ტანსაცმელი / აბჯარი",
   "acc.title": "აქსესუარები",
   "acc.elytra": "ელიტრების ჩვენება",
+
   "emote.button": "ემოციები",
   "emote.title": "ემოციები",
   "emote.hint": "აირჩიეთ ემოცია ან ატვირთეთ თქვენი .json ფაილი",
@@ -61,6 +67,7 @@
   "emote.error": "ემოციის ფაილის წაკითხვა ვერ მოხერხდა",
   "emote.playing": "უკრავს: %s",
   "emote.close": "დახურვა",
+
   "bg.title": "ფონის ფერი",
   "bg.dark": "მუქი",
   "bg.light": "ღია",
@@ -91,14 +98,18 @@
   "block.planks": "მუხის ფიცრები",
   "block.netherrack": "ნეზერაკი",
   "block.end_stone": "ენდის ქვა",
+
   "mobile.gallery": "📁 გალერეა",
   "mobile.settings": "⚙️ პარამეტრები",
+
   "modal.title": "შეტყობინება",
   "modal.text": "ძვირფასო სტუმრებო! ამ გალერეაში არსებული თითოეული სკინი მრავალსაათიანი შრომის შედეგია. გთხოვთ, პატივი სცეთ სხვის შრომას. ყველა გამოსახულება დაცულია საავტორო უფლებებით. დათვალიერება ნებადართულია, მაგრამ ჩამოტვირთვა, კოპირება და კომერციული გამოყენება დასაშვებია მხოლოდ წინასწარი შეთანხმებით. გმადლობთ გაგებისა და პატიოსნებისთვის!",
   "modal.agree": "ყველაფერი წავიკითხე და ვეთანხმები",
   "modal.continue": "გაგრძელება",
+
   "error.viewer": "3D კომპონენტების ინიციალიზაციის შეცდომა.",
   "error.json": "JSON კონფიგურაციის ფაილების წაკითხვა ვერ მოხერხდა.",
+
   "skin.name.vova_halloween26": "ვოვა ჰელოუინის 2026",
   "variation.name.vova_in_mask_halloween26": "ნიღაბში",
   "skin.name.day_halloween26": "დეი ჰელოუინის 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "გერი ზაფხულის",
   "skin.name.ger_maid_skeleton": "გერი მოახლე-ჩონჩხი",
   "skin.name.stars": "სტარსი",
+
   "cape.name.migrator": "მიგრატორი",
   "cape.name.pan": "ბლინის",
   "cape.name.15th_anniversary": "მე-15 იუბილე",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "მემილიონე მომხმარებელი",
   "cape.name.db": "dB",
   "cape.name.prismarine": "პრიზმარინი",
+
   "emote.name.SPE_Get_scared": "შეშინება",
   "emote.name.SPE_Ankha_Dance": "ანკჰას ცეკვა (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "ეველინის დგომა (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "ჯადოქრის პოზა (კოშმარები)",
   "emote.name.SPE_Yandere_Pose": "იანდერეს პოზა (კოშმარები)",
   "emote.name.SPE_Zoro_Pose": "ზოროს პოზა (მულტისამყარო) (One Piece)",
+
   "person.Артур": "არტური",
   "person.Вайкату": "ვაიკატუ",
   "person.Виакор": "ვიაკორი",
@@ -342,5 +356,12 @@
   "person.Хуман": "ჰუმანი",
   "person.Цыпляш": "ციპლიაში",
   "person.Эппоп": "ეპოპი",
-  "person.Яна": "იანა"
+  "person.Яна": "იანა",
+
+  "bgimg.name.day": "დღე",
+  "bgimg.name.end": "ენდი",
+  "bgimg.name.nether": "ნეზერი",
+  "bgimg.name.night": "ღამე",
+  "bgimg.name.snow": "თოვლი",
+  "bgimg.name.sunset": "მზის ჩასვლა"
 }

@@ -358,5 +358,12 @@
   "block.snow": "Blok śniegu",
   "block.planks": "Dębowe deski",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Kamień Kresu"
+  "block.end_stone": "Kamień Kresu",
+
+  "bgimg.name.day": "Dzień",
+  "bgimg.name.end": "Kres",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noc",
+  "bgimg.name.snow": "Śnieg",
+  "bgimg.name.sunset": "Zachód słońca"
 }

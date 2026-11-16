@@ -8,9 +8,11 @@
   "language.search_placeholder": "Sosa ndinga...",
   "language.no_results": "Kuvanda na ndinga ve",
   "language.rtl": false,
+
   "site.title": "Nzo ya Bifwanisu ya Tsiplyash",
   "gallery.title": "Nzo ya Bifwanisu",
   "loading.text": "Kukotisa bisadilu ya kumonisa...",
+
   "sort.title": "Kuyidika",
   "sort.default": "Ya ntete",
   "sort.author": "Na nkumbu ya nsadi",
@@ -23,6 +25,7 @@
   "tab.skins": "Binkutu ya nitu",
   "tab.capes": "Bikombo",
   "search.placeholder": "Sosa na nkumbu, nsumbi, nsadi...",
+
   "meta.customer": "Nsumbi",
   "meta.artist": "Nsadi ya bifwanisu",
   "meta.date": "Kilumbu ya kulomba",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Yasonsama ve",
   "meta.show_orders": "Monisa bilumbu yonso ya kulomba ya %s",
   "meta.open_author": "Kangula lutiti ya nsadi (%s)",
+
   "skin.untitled": "Yakondwa nkumbu",
   "skin.type": "Mutindu: %s",
   "skin.has_variations": "Yina na mitindu yankaka",
   "variation.original": "Ya kisina",
   "cape.remove": "Katula kikombo",
+
   "controls.reset": "Vutula na ntete",
   "rotate.title": "Kubalula",
   "rotate.enable": "Balula kifwanisu",
@@ -51,6 +56,7 @@
   "layers.body": "Binkutu ya zulu / Binkutu ya mvita",
   "acc.title": "Bisadilu yankaka",
   "acc.elytra": "Monisa mapapu ya Elytra",
+
   "emote.button": "Binkadilu",
   "emote.title": "Binkadilu",
   "emote.hint": "Pona nkadilu to kotisa mukanda na nge ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "Lenda tanga mukanda yayi ya nkadilu ve",
   "emote.playing": "Yina na kusala: %s",
   "emote.close": "Kanga",
+
   "bg.title": "Mukubu ya nima",
   "bg.dark": "Ya ndombe",
   "bg.light": "Ya mpembe",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Bifwanisu bimonekaka ve (mukanda backgrounds/)",
   "bg.image.error": "Lenda kangula kifwanisu yayi ve",
   "bg.image.close": "Kanga",
+
   "mobile.gallery": "📁 Nzo ya Bifwanisu",
   "mobile.settings": "⚙️ Bangidika",
+
   "modal.title": "Luzayisu",
   "modal.text": "Banzenza ya luzitu! Konso kinkutu ya nitu na nzo yayi ya bifwanisu kele mbutu ya bangunga mingi ya kisalu. Beno zitisa kisalu ya bantu yankaka. Bifwanisu yonso kele na nswa ya bansoniki. Kutala kele na nswa, kansi kubaka, kusala kifwanisu yankaka mpe kusadila sambu na mumbongo kele na nswa kaka kana beno mewakana ntete. Matondo sambu na kubakisa mpe masonga na beno!",
   "modal.agree": "Mono metanga yonso mpe mono mendima",
   "modal.continue": "Landa",
+
   "error.viewer": "Kifu na kuyantika bisadilu ya 3D.",
   "error.json": "Lenda tanga mikanda ya bangidika ya JSON ve.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Na kiziba-luse",
   "skin.name.day_halloween26": "Dey Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Nsungi ya mwini",
   "skin.name.ger_maid_skeleton": "Ger Nsadi ya nzo-Mukwa",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Nzyetolo",
   "cape.name.pan": "Kikalungu ya Mikate (Pan)",
   "cape.name.15th_anniversary": "Mvula 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Nsumbi ya milio mosi",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kuwa boma",
   "emote.name.SPE_Ankha_Dance": "Makinu ya Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Ntelama ya Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Ntelama ya Ndoki (Bandosi)",
   "emote.name.SPE_Yandere_Pose": "Ntelama ya Yandere (Bandosi)",
   "emote.name.SPE_Zoro_Pose": "Ntelama ya Zoro (Banza mingi) (One Piece)",
+
   "person.Артур": "Artur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viyakor",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsiplyash",
   "person.Эппоп": "Epop",
   "person.Яна": "Yana",
+
   "badge.new": "YA MPA",
+
   "platform.title": "Kikuku ya nsi",
   "platform.enable": "Tula kikuku na nsi ya muntu",
   "platform.block": "Kikuku",
@@ -342,5 +358,12 @@
   "block.snow": "Kikuku ya neze",
   "block.planks": "Mabaya ya nti ya chêne",
   "block.netherrack": "Ditadi ya Nether",
-  "block.end_stone": "Ditadi ya End"
+  "block.end_stone": "Ditadi ya End",
+
+  "bgimg.name.day": "Mwini",
+  "bgimg.name.end": "Nsuka",
+  "bgimg.name.nether": "Bilungi",
+  "bgimg.name.night": "Mpimpa",
+  "bgimg.name.snow": "Mvula ya mpembe",
+  "bgimg.name.sunset": "Ndinda ya ntangu"
 }

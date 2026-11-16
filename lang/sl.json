@@ -8,9 +8,11 @@
   "language.search_placeholder": "Iskanje jezika...",
   "language.no_results": "Jezikov ni mogoče najti",
   "language.rtl": false,
+
   "site.title": "Galerija Cipljaš",
   "gallery.title": "Galerija",
   "loading.text": "Nalaganje modulov za vizualizacijo...",
+
   "sort.title": "Razvrščanje",
   "sort.default": "Privzeto",
   "sort.author": "Po avtorju",
@@ -23,6 +25,7 @@
   "tab.skins": "Preobleke",
   "tab.capes": "Ogrinjala",
   "search.placeholder": "Iskanje po imenu, naročniku, avtorju...",
+
   "meta.customer": "Naročnik",
   "meta.artist": "Umetnik",
   "meta.date": "Datum naročila",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Ni naveden",
   "meta.show_orders": "Prikaži vsa naročila od %s",
   "meta.open_author": "Odpri stran avtorja (%s)",
+
   "skin.untitled": "Brez naslova",
   "skin.type": "Vrsta: %s",
   "skin.has_variations": "Ima različice",
   "variation.original": "Izvirnik",
   "cape.remove": "Odstrani ogrinjalo",
   "badge.new": "NOVO",
+
   "controls.reset": "Ponastavi",
   "rotate.title": "Vrtenje",
   "rotate.enable": "Vrti model",
@@ -52,6 +57,7 @@
   "layers.body": "Vrhnja oblačila / Oklep",
   "acc.title": "Dodatki",
   "acc.elytra": "Prikaži elitre",
+
   "emote.button": "Čustva",
   "emote.title": "Čustva",
   "emote.hint": "Izberite čustvo ali naložite svojo datoteko .json",
@@ -61,6 +67,7 @@
   "emote.error": "Te datoteke s čustvom ni bilo mogoče prebrati",
   "emote.playing": "Predvajanje: %s",
   "emote.close": "Zapri",
+
   "bg.title": "Barva ozadja",
   "bg.dark": "Temna",
   "bg.light": "Svetla",
@@ -91,14 +98,18 @@
   "block.planks": "Hrastove deske",
   "block.netherrack": "Netherrack",
   "block.end_stone": "End kamen",
+
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Nastavitve",
+
   "modal.title": "Obvestilo",
   "modal.text": "Spoštovani obiskovalci! Vsaka preobleka v tej galeriji je rezultat mnogih ur trdega dela. Prosimo, spoštujte delo drugih. Vse slike so zaščitene z avtorskimi pravicami. Ogled je dovoljen, prenos, kopiranje in komercialna uporaba pa so dovoljeni le po predhodnem dogovoru. Hvala za razumevanje in poštenost!",
   "modal.agree": "Vse sem prebral in se strinjam",
   "modal.continue": "Nadaljuj",
+
   "error.viewer": "Napaka pri inicializaciji 3D komponent.",
   "error.json": "Branje konfiguracijskih datotek JSON ni uspelo.",
+
   "skin.name.vova_halloween26": "Vova noč čarovnic 2026",
   "variation.name.vova_in_mask_halloween26": "Z masko",
   "skin.name.day_halloween26": "Day noč čarovnic 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger poletna",
   "skin.name.ger_maid_skeleton": "Ger sobarica-okostnjak",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Selivec",
   "cape.name.pan": "Palačinka",
   "cape.name.15th_anniversary": "15. obletnica",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Milijonti kupec",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizmarin",
+
   "emote.name.SPE_Get_scared": "Prestrašiti se",
   "emote.name.SPE_Ankha_Dance": "Ples Ankhe (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Drža Evelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Poza čarovnice (Nočne more)",
   "emote.name.SPE_Yandere_Pose": "Poza Yandere (Nočne more)",
   "emote.name.SPE_Zoro_Pose": "Zorova drža (Multiverzum) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Cipljaš",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Jana"
+  "person.Яна": "Jana",
+
+  "bgimg.name.day": "Dan",
+  "bgimg.name.end": "Konec",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noč",
+  "bgimg.name.snow": "Sneg",
+  "bgimg.name.sunset": "Sončni zahod"
 }

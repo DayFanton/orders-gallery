@@ -358,5 +358,12 @@
   "block.snow": "雪块",
   "block.planks": "橡木木板",
   "block.netherrack": "下界岩",
-  "block.end_stone": "末地石"
+  "block.end_stone": "末地石",
+
+  "bgimg.name.day": "白天",
+  "bgimg.name.end": "末地",
+  "bgimg.name.nether": "下界",
+  "bgimg.name.night": "夜晚",
+  "bgimg.name.snow": "雪",
+  "bgimg.name.sunset": "日落"
 }

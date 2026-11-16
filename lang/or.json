@@ -358,5 +358,12 @@
   "block.snow": "ବରଫ ବ୍ଲକ",
   "block.planks": "ଓକ୍ ପ୍ଲାଙ୍କ୍",
   "block.netherrack": "ନେଥର୍ରାକ୍",
-  "block.end_stone": "ଏଣ୍ଡ ପଥର"
+  "block.end_stone": "ଏଣ୍ଡ ପଥର",
+
+  "bgimg.name.day": "ଦିନ",
+  "bgimg.name.end": "ଏଣ୍ଡ",
+  "bgimg.name.nether": "ନେଦର",
+  "bgimg.name.night": "ରାତି",
+  "bgimg.name.snow": "ବରଫ",
+  "bgimg.name.sunset": "ସୂର୍ଯ୍ୟାସ୍ତ"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Хэл хайх...",
   "language.no_results": "Хэл олдсонгүй",
   "language.rtl": false,
+
   "site.title": "Цыпляшийн галерей",
   "gallery.title": "Галерей",
   "loading.text": "Дүрслэлийн модулиудыг ачаалж байна...",
+
   "sort.title": "Эрэмбэлэх",
   "sort.default": "Анхдагч",
   "sort.author": "Зохиогчоор",
@@ -23,6 +25,7 @@
   "tab.skins": "Арьс",
   "tab.capes": "Нөмрөг",
   "search.placeholder": "Нэр, захиалагч, зохиогчоор хайх...",
+
   "meta.customer": "Захиалагч",
   "meta.artist": "Зураач",
   "meta.date": "Захиалгын огноо",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Тодорхойгүй",
   "meta.show_orders": "%s-ийн бүх захиалгыг харуулах",
   "meta.open_author": "Зохиогчийн хуудсыг нээх (%s)",
+
   "skin.untitled": "Нэргүй",
   "skin.type": "Төрөл: %s",
   "skin.has_variations": "Хувилбаруудтай",
   "variation.original": "Эх хувь",
   "cape.remove": "Нөмрөг тайлах",
   "badge.new": "ШИНЭ",
+
   "controls.reset": "Шинэчлэх",
   "rotate.title": "Эргүүлэх",
   "rotate.enable": "Загварыг эргүүлэх",
@@ -52,6 +57,7 @@
   "layers.body": "Гадуур хувцас / Хуяг",
   "acc.title": "Гоёл чимэглэл",
   "acc.elytra": "Элитра харуулах",
+
   "emote.button": "Хөдөлгөөн",
   "emote.title": "Хөдөлгөөнүүд",
   "emote.hint": "Хөдөлгөөн сонгох эсвэл өөрийн .json файлаа оруулна уу",
@@ -61,6 +67,7 @@
   "emote.error": "Энэ хөдөлгөөний файлыг уншиж чадсангүй",
   "emote.playing": "Тоглуулж байна: %s",
   "emote.close": "Хаах",
+
   "bg.title": "Дэвсгэр өнгө",
   "bg.dark": "Бараан",
   "bg.light": "Цайвар",
@@ -91,14 +98,18 @@
   "block.planks": "Царсан банз",
   "block.netherrack": "Тамын чулуу",
   "block.end_stone": "Эндийн чулуу",
+
   "mobile.gallery": "📁 Галерей",
   "mobile.settings": "⚙️ Тохиргоо",
+
   "modal.title": "Мэдэгдэл",
   "modal.text": "Эрхэм зочид оо! Энэхүү галерей дахь арьс бүр нь олон цагийн хөдөлмөрийн үр дүн юм. Бусдын хөдөлмөрийг хүндэтгэнэ үү. Бүх зураг зохиогчийн эрхээр хамгаалагдсан болно. Үзэхийг зөвшөөрсөн боловч татаж авах, хуулах болон арилжааны зорилгоор ашиглахыг зөвхөн урьдчилсан тохиролцооны үндсэн дээр зөвшөөрнө. Ойлгож, шударга хандсанд баярлалаа!",
   "modal.agree": "Би бүгдийг уншсан бөгөөд зөвшөөрч байна",
   "modal.continue": "Үргэлжлүүлэх",
+
   "error.viewer": "3D бүрэлдэхүүн хэсгүүдийг эхлүүлэхэд алдаа гарлаа.",
   "error.json": "JSON тохиргооны файлуудыг уншиж чадсангүй.",
+
   "skin.name.vova_halloween26": "Вова Хэллоуин 2026",
   "variation.name.vova_in_mask_halloween26": "Багтай",
   "skin.name.day_halloween26": "Дэй Хэллоуин 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Гэр Зун",
   "skin.name.ger_maid_skeleton": "Гэр үйлчлэгч-араг яс",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Шилжин суурьшигч",
   "cape.name.pan": "Бин",
   "cape.name.15th_anniversary": "15 жилийн ой",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Сая дахь үйлчлүүлэгч",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Айх",
   "emote.name.SPE_Ankha_Dance": "Анхагийн бүжиг (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Эвелинний зогсолт (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Шулмын байрлал (Хар дарсан зүүд)",
   "emote.name.SPE_Yandere_Pose": "Яндэрэгийн байрлал (Хар дарсан зүүд)",
   "emote.name.SPE_Zoro_Pose": "Зорогийн байрлал (Олон ертөнц) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вайкату",
   "person.Виакор": "Виакор",
@@ -342,5 +356,12 @@
   "person.Хуман": "Хуман",
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
-  "person.Яна": "Яна"
+  "person.Яна": "Яна",
+
+  "bgimg.name.day": "Өдөр",
+  "bgimg.name.end": "Энд",
+  "bgimg.name.nether": "Недер",
+  "bgimg.name.night": "Шөнө",
+  "bgimg.name.snow": "Цас",
+  "bgimg.name.sunset": "Нар жаргах"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Ṱoḓani luambo...",
   "language.no_results": "A hu na nyambo dzo wanalaho",
   "language.rtl": false,
+
   "site.title": "Galari ya Tsyplyash",
   "gallery.title": "Galari",
   "loading.text": "I khou longela dzimodulu dza u vhona...",
+
   "sort.title": "U dzudzanya",
   "sort.default": "Zwa nzulele",
   "sort.author": "Nga muṅwali",
@@ -23,6 +25,7 @@
   "tab.skins": "Dzikhanda",
   "tab.capes": "Dzinguruvho",
   "search.placeholder": "Ṱoḓani nga dzina, murengi, muṅwali...",
+
   "meta.customer": "Murengi",
   "meta.artist": "Muoli",
   "meta.date": "Datumu ya oda",
@@ -30,11 +33,13 @@
   "meta.date_unset": "A yo ngo bulwa",
   "meta.show_orders": "Sumbedzani dziode dzoṱhe dza %s",
   "meta.open_author": "Vulani siaṱari ḽa muṅwali (%s)",
+
   "skin.untitled": "A i na dzina",
   "skin.type": "Lushaka: %s",
   "skin.has_variations": "I na phambano",
   "variation.original": "Ya u thoma",
   "cape.remove": "Bvisani nguvho",
+
   "controls.reset": "Vhumba hafhu",
   "rotate.title": "U mona",
   "rotate.enable": "Monisani modulu",
@@ -51,6 +56,7 @@
   "layers.body": "Zwiambaro zwa nga nnḓa / Zwiambaro zwa nndwa",
   "acc.title": "Zwithu zwa u khavhisa",
   "acc.elytra": "Sumbedzani elytra",
+
   "emote.button": "Maipfi a zwifanyiso",
   "emote.title": "Maipfi a zwifanyiso",
   "emote.hint": "Nangani maipfi a tshifanyiso kana ni longe faela yaṋu ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "A zwo ngo konadzea u vhala faela iyi ya maipfi a tshifanyiso",
   "emote.playing": "I khou tamba: %s",
   "emote.close": "Valani",
+
   "bg.title": "Muvhala wa murahu",
   "bg.dark": "Mutswu",
   "bg.light": "Tshena",
@@ -77,14 +84,18 @@
   "bg.image.empty": "A hu na zwifanyiso zwo wanalaho (foḽuda ya backgrounds/)",
   "bg.image.error": "A zwo ngo konadzea u vula tshifanyiso itshi",
   "bg.image.close": "Valani",
+
   "mobile.gallery": "📁 Galari",
   "mobile.settings": "⚙️ Zwiimiswa",
+
   "modal.title": "Nḓivhadzo",
   "modal.text": "Vhaeni vha funwaho! Lukanda luṅwe na luṅwe kha galari iyi ndi mvelelo ya awara nnzhi dza mushumo wa u konḓa. Ri humbela uri ni ṱhonifhe mushumo wa vhaṅwe vhathu. Zwifanyiso zwoṱhe zwo tsireledzwa nga pfanelo dza muṅwali. U vhona zwo tendelwa, fhedzi u dzhia, u kopa, na u shumisa kha zwa mabindu zwo tendelwa fhedzi nga thendelo ya u thoma. Ri a livhuwa u pfesesa na u fulufhedzea haṋu!",
   "modal.agree": "Ndo vhala zwoṱhe nahone ndi a tendelana nazwo",
   "modal.continue": "Bvelani phanḓa",
+
   "error.viewer": "Vhukhakhi kha u thoma zwipiḓa zwa 3D.",
   "error.json": "Zwo kundelwa u vhala dzifaela dza nzudzanyo dza JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "O ambara masiki",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Tshilimo",
   "skin.name.ger_maid_skeleton": "Ger Marambo a Mushumi",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mupfuluwi",
   "cape.name.pan": "Phaenikhekhe",
   "cape.name.15th_anniversary": "Muvhuso wa Miṅwaha ya 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Murengi wa Vhu-Milioni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Phirizimarini",
+
   "emote.name.SPE_Get_scared": "U tshuwa",
   "emote.name.SPE_Ankha_Dance": "Mutshino wa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "U ima ha Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Tshiimo tsha Muloi (Miloro mivhi)",
   "emote.name.SPE_Yandere_Pose": "Tshiimo tsha Yandere (Miloro mivhi)",
   "emote.name.SPE_Zoro_Pose": "Tshiimo tsha Zoro (Ḽifhasi ḽinzhi) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "ZWISWA",
+
   "platform.title": "Pulatifomo",
   "platform.enable": "Vheani pulatifomo fhasi ha mutambi",
   "platform.block": "Buloko",
@@ -342,5 +358,12 @@
   "block.snow": "Buloko ya mahaha",
   "block.planks": "Mapulanga a muoki",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Tombo ḽa End"
+  "block.end_stone": "Tombo ḽa End",
+
+  "bgimg.name.day": "Masiari",
+  "bgimg.name.end": "Magumo",
+  "bgimg.name.nether": "Hele",
+  "bgimg.name.night": "Vhusiku",
+  "bgimg.name.snow": "Mahada",
+  "bgimg.name.sunset": "U kovhela ha ḓuvha"
 }

@@ -8,9 +8,11 @@
   "language.search_placeholder": "Tafuta inang'o...",
   "language.no_results": "Paliwambone inang'o",
   "language.rtl": false,
+
   "site.title": "Nyumba ya Maimbo ya Tsiplyashi",
   "gallery.title": "Nyumba ya Maimbo",
   "loading.text": "Kukweja vipande vya maonesho...",
+
   "sort.title": "Kupanga",
   "sort.default": "Kama kawaida",
   "sort.author": "Kwa mwandishi",
@@ -23,6 +25,7 @@
   "tab.skins": "Mavazi",
   "tab.capes": "Majoho",
   "search.placeholder": "Tafuta kwa lina, mteja, mwandishi...",
+
   "meta.customer": "Mteja",
   "meta.artist": "Mchoraji",
   "meta.date": "Tarehe ya agizo",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Haikupangwa",
   "meta.show_orders": "Onesha maagizo yote kuhuma kwa %s",
   "meta.open_author": "Fungula ukurasa wa mwandishi (%s)",
+
   "skin.untitled": "Bila lina",
   "skin.type": "Aina: %s",
   "skin.has_variations": "Ina mitindo mingi",
   "variation.original": "Ya asili",
   "cape.remove": "Ondola joho",
   "badge.new": "MPYA",
+
   "controls.reset": "Anza upya",
   "rotate.title": "Kuzungusha",
   "rotate.enable": "Zungusha mfano",
@@ -52,6 +57,7 @@
   "layers.body": "Nguo ya nje / Silaha",
   "acc.title": "Mapambo",
   "acc.elytra": "Onesha elitra",
+
   "emote.button": "Hisia",
   "emote.title": "Hisia",
   "emote.hint": "Chagula hisia au pakia faili yako ya .json",
@@ -61,6 +67,7 @@
   "emote.error": "Imeshindikana kusoma faili hii ya hisia",
   "emote.playing": "Inacheza: %s",
   "emote.close": "Funga",
+
   "bg.title": "Rangi ya nyuma",
   "bg.dark": "Nyeusi",
   "bg.light": "Nyeupe",
@@ -91,14 +98,18 @@
   "block.planks": "Mbao za mwaloni",
   "block.netherrack": "Liyanga la Nether",
   "block.end_stone": "Liyanga la End",
+
   "mobile.gallery": "📁 Nyumba ya Maimbo",
   "mobile.settings": "⚙️ Mipangilio",
+
   "modal.title": "Taarifa",
   "modal.text": "Wageni wapendwa! Kila vazi katika nyumba hii ya maimbo ni matokeo ya saa nyingi za kazi ngumu. Tafadhali heshimu kazi za wengine. Picha zote zinalindwa na hakimiliki. Kutazama kunaruhusiwa, lakini kupakua, kunakili, na kutumia kibiashara kunaruhusiwa tu kwa makubaliano ya awali. Asante kwa uelewa na uaminifu wenu!",
   "modal.agree": "Nimesoma yote na ninakubali",
   "modal.continue": "Endelea",
+
   "error.viewer": "Hitilafu ya kuanzisha vipande vya 3D.",
   "error.json": "Imeshindikana kusoma faili za mipangilio za JSON.",
+
   "skin.name.vova_halloween26": "Vova Halowini 2026",
   "variation.name.vova_in_mask_halloween26": "Mwenye barakoa",
   "skin.name.day_halloween26": "Dei Halowini 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Geri Kiangazi",
   "skin.name.ger_maid_skeleton": "Geri Mifupa ya Mfanyakazi",
   "skin.name.stars": "Stazi",
+
   "cape.name.migrator": "Mhamiaji",
   "cape.name.pan": "Vitumbua",
   "cape.name.15th_anniversary": "Miaka 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Mteja wa Milioni Moja",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prizimarini",
+
   "emote.name.SPE_Get_scared": "Kuogopa",
   "emote.name.SPE_Ankha_Dance": "Ngoma ya Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Msimamo wa Evelini (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Mkao wa Mchawi (Ndoto Mbaya)",
   "emote.name.SPE_Yandere_Pose": "Mkao wa Yandere (Ndoto Mbaya)",
   "emote.name.SPE_Zoro_Pose": "Mkao wa Zoro (Ulimwengu Mwingi) (One Piece)",
+
   "person.Артур": "Aturi",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viakori",
@@ -342,5 +356,12 @@
   "person.Хуман": "Humani",
   "person.Цыпляш": "Tsiplyashi",
   "person.Эппоп": "Epopu",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Muhi",
+  "bgimg.name.end": "Mwisho",
+  "bgimg.name.nether": "Moto",
+  "bgimg.name.night": "Chilo",
+  "bgimg.name.snow": "Theluji",
+  "bgimg.name.sunset": "Kuhwa kwa liduva"
 }

@@ -358,5 +358,12 @@
   "block.snow": "บล็อกหิมะ",
   "block.planks": "ไม้โอ๊กแผ่น",
   "block.netherrack": "เนเธอร์แร็ค",
-  "block.end_stone": "หินเอนด์"
+  "block.end_stone": "หินเอนด์",
+
+  "bgimg.name.day": "กลางวัน",
+  "bgimg.name.end": "ดิเอนด์",
+  "bgimg.name.nether": "เนเธอร์",
+  "bgimg.name.night": "กลางคืน",
+  "bgimg.name.snow": "หิมะ",
+  "bgimg.name.sunset": "พระอาทิตย์ตก"
 }

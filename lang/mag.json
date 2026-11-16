@@ -8,9 +8,11 @@
   "language.search_placeholder": "भासा खोजू...",
   "language.no_results": "कोनो भासा नइ मिलल",
   "language.rtl": false,
+
   "site.title": "सिपल्याश के गैलरी",
   "gallery.title": "गैलरी",
   "loading.text": "विजुअलाइजेशन मॉड्यूल लोड हो रहल हइ...",
+
   "sort.title": "छाँटू",
   "sort.default": "डिफ़ॉल्ट",
   "sort.author": "बनावे वाला के हिसाब से",
@@ -23,6 +25,7 @@
   "tab.skins": "स्किन",
   "tab.capes": "केप",
   "search.placeholder": "नाम, ग्राहक, बनावे वाला से खोजू...",
+
   "meta.customer": "ग्राहक",
   "meta.artist": "कलाकार",
   "meta.date": "ऑर्डर के तारीख",
@@ -30,12 +33,14 @@
   "meta.date_unset": "नइ बतावल गइल हइ",
   "meta.show_orders": "%s के सब ऑर्डर देखाऊ",
   "meta.open_author": "बनावे वाला के पेज खोलू (%s)",
+
   "skin.untitled": "बिना नाम के",
   "skin.type": "किस्म: %s",
   "skin.has_variations": "अउरी रूप हइ",
   "variation.original": "असली",
   "cape.remove": "केप हटाऊ",
   "badge.new": "नया",
+
   "controls.reset": "रीसेट",
   "rotate.title": "घुमाव",
   "rotate.enable": "मॉडल घुमाऊ",
@@ -52,6 +57,7 @@
   "layers.body": "ऊपरी कपड़ा / कवच",
   "acc.title": "सामान",
   "acc.elytra": "एलाइट्रा देखाऊ",
+
   "emote.button": "इमोट",
   "emote.title": "इमोट",
   "emote.hint": "कोनो इमोट चुनू या अपन .json फ़ाइल अपलोड करू",
@@ -61,6 +67,7 @@
   "emote.error": "ई इमोट फ़ाइल नइ पढ़ल जा सकल",
   "emote.playing": "चल रहल हइ: %s",
   "emote.close": "बंद करू",
+
   "bg.title": "बैकग्राउंड के रंग",
   "bg.dark": "गहिर",
   "bg.light": "हल्का",
@@ -91,14 +98,18 @@
   "block.planks": "ओक के तख्ता",
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
+
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
+
   "modal.title": "सूचना",
   "modal.text": "प्यारे मेहमान! ई गैलरी के हर स्किन कई घंटा के मेहनत के नतीजा हइ। कृपया दोसर के मेहनत के सम्मान करू। सब फोटो कॉपीराइट से सुरक्षित हइ। देखे के इजाजत हइ, बाकिर डाउनलोड करे, कॉपी करे आ व्यावसायिक इस्तेमाल करे के अनुमति खाली पहिले से बात कइला पर ही मिलत। अहाँ के समझ आ ईमानदारी खातिर धन्यवाद!",
   "modal.agree": "हम सब पढ़ लेली आ सहमत हई",
   "modal.continue": "आगे बढ़ू",
+
   "error.viewer": "3D हिस्सा शुरू करे में गलती भइल।",
   "error.json": "JSON कॉन्फ़िगरेशन फ़ाइल पढ़े में दिक्कत भइल।",
+
   "skin.name.vova_halloween26": "वोवा हैलोवीन 2026",
   "variation.name.vova_in_mask_halloween26": "मुखौटा में",
   "skin.name.day_halloween26": "डे हैलोवीन 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "गेर गर्मी",
   "skin.name.ger_maid_skeleton": "गेर नौकरानी-कंकाल",
   "skin.name.stars": "स्टार्स",
+
   "cape.name.migrator": "माइग्रेटर",
   "cape.name.pan": "पैनकेक (मालपुआ)",
   "cape.name.15th_anniversary": "15वीं सालगिरह",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "दस लाखवाँ ग्राहक",
   "cape.name.db": "dB",
   "cape.name.prismarine": "प्रिज़्मरीन",
+
   "emote.name.SPE_Get_scared": "डराएब",
   "emote.name.SPE_Ankha_Dance": "अंखा के नाच (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "एवलिन के मुद्रा (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "डायन के पोज़ (डरावना सपना)",
   "emote.name.SPE_Yandere_Pose": "यांडेरे के पोज़ (डरावना सपना)",
   "emote.name.SPE_Zoro_Pose": "ज़ोरो के पोज़ (मल्टीवर्स) (One Piece)",
+
   "person.Артур": "आर्थर",
   "person.Вайкату": "वाइकातु",
   "person.Виакор": "वियाकोर",
@@ -342,5 +356,12 @@
   "person.Хуман": "ह्यूमन",
   "person.Цыпляш": "सिपल्याश",
   "person.Эппоп": "एप्पॉप",
-  "person.Яна": "याना"
+  "person.Яна": "याना",
+
+  "bgimg.name.day": "दिन",
+  "bgimg.name.end": "अंत",
+  "bgimg.name.nether": "नरक",
+  "bgimg.name.night": "रात",
+  "bgimg.name.snow": "बरफ",
+  "bgimg.name.sunset": "सूर्यास्त"
 }

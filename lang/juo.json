@@ -356,5 +356,12 @@
   "person.Хуман": "人类",
   "person.Цыпляш": "齐普利亚什",
   "person.Эппоп": "埃普波普",
-  "person.Яна": "亚娜"
+  "person.Яна": "亚娜",
+
+  "bgimg.name.day": "Ceng",
+  "bgimg.name.end": "Giko",
+  "bgimg.name.nether": "Mach",
+  "bgimg.name.night": "War",
+  "bgimg.name.snow": "Pe",
+  "bgimg.name.sunset": "Podho ceng"
 }

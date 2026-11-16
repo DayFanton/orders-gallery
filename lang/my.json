@@ -358,5 +358,12 @@
   "block.snow": "ဆီးနှင်းတုံး",
   "block.planks": "ဝက်သစ်ချပျဉ်ပြားများ",
   "block.netherrack": "නෙදර්‍රැක්",
-  "block.end_stone": "အန့်ကျောက်"
+  "block.end_stone": "အန့်ကျောက်",
+
+  "bgimg.name.day": "နေ့",
+  "bgimg.name.end": "အဆုံး",
+  "bgimg.name.nether": "နယ်သာ",
+  "bgimg.name.night": "ည",
+  "bgimg.name.snow": "နှင်း",
+  "bgimg.name.sunset": "နေဝင်ချိန်"
 }

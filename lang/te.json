@@ -358,5 +358,12 @@
   "block.snow": "మంచు బ్లాక్",
   "block.planks": "ఓక్ పలకలు",
   "block.netherrack": "నెదర్‌రాక్",
-  "block.end_stone": "ఎండ్ రాయి"
+  "block.end_stone": "ఎండ్ రాయి",
+
+  "bgimg.name.day": "పగలు",
+  "bgimg.name.end": "ఎండ్",
+  "bgimg.name.nether": "నెదర్",
+  "bgimg.name.night": "రాత్రి",
+  "bgimg.name.snow": "మంచు",
+  "bgimg.name.sunset": "సూర్యాస్తమయం"
 }

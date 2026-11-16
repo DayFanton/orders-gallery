@@ -358,5 +358,12 @@
   "block.snow": "Bloc de zăpadă",
   "block.planks": "Scânduri de stejar",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Piatră de End"
+  "block.end_stone": "Piatră de End",
+
+  "bgimg.name.day": "Zi",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Noapte",
+  "bgimg.name.snow": "Zăpadă",
+  "bgimg.name.sunset": "Apus"
 }

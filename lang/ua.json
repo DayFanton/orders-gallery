@@ -358,5 +358,12 @@
   "block.snow": "Сніговий блок",
   "block.planks": "Дубові дошки",
   "block.netherrack": "Незеррак",
-  "block.end_stone": "Камінь Краю"
+  "block.end_stone": "Камінь Краю",
+
+  "bgimg.name.day": "День",
+  "bgimg.name.end": "Енд",
+  "bgimg.name.nether": "Незер",
+  "bgimg.name.night": "Ніч",
+  "bgimg.name.snow": "Сніг",
+  "bgimg.name.sunset": "Захід сонця"
 }

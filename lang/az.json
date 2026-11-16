@@ -358,5 +358,12 @@
   "block.snow": "Qar bloku",
   "block.planks": "Palıd taxtaları",
   "block.netherrack": "Neterrak",
-  "block.end_stone": "End daşı"
+  "block.end_stone": "End daşı",
+
+  "bgimg.name.day": "Gündüz",
+  "bgimg.name.end": "Son",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Gecə",
+  "bgimg.name.snow": "Qar",
+  "bgimg.name.sunset": "Gün batımı"
 }

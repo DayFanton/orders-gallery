@@ -358,5 +358,12 @@
   "block.snow": "የበረዶ ብሎክ",
   "block.planks": "የبلوጥ ጽሕፈቶች",
   "block.netherrack": "ኔዘርራክ",
-  "block.end_stone": "የኢንድ ድንጋይ"
+  "block.end_stone": "የኢንድ ድንጋይ",
+
+  "bgimg.name.day": "ቀን",
+  "bgimg.name.end": "መጨረሻ",
+  "bgimg.name.nether": "ሲኦል",
+  "bgimg.name.night": "ሌሊት",
+  "bgimg.name.snow": "በረዶ",
+  "bgimg.name.sunset": "ጀምበር ስትጠልቅ"
 }

@@ -358,5 +358,12 @@
   "block.snow": "Ձյան բլոկ",
   "block.planks": "Կաղնու տախտակներ",
   "block.netherrack": "Նեդերռաք",
-  "block.end_stone": "Էնդի քար"
+  "block.end_stone": "Էնդի քար",
+
+  "bgimg.name.day": "Օր",
+  "bgimg.name.end": "Էնդ",
+  "bgimg.name.nether": "Նեզեր",
+  "bgimg.name.night": "Գիշեր",
+  "bgimg.name.snow": "Ձյուն",
+  "bgimg.name.sunset": "Մայրամուտ"
 }

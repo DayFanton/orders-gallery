@@ -8,9 +8,11 @@
   "language.search_placeholder": "Afaan barbaadi...",
   "language.no_results": "Afaan tokkollee hin argamne",
   "language.rtl": false,
+
   "site.title": "Gaalerii Tsiipliyaash",
   "gallery.title": "Gaalerii",
   "loading.text": "Mooduulota mul'isaa fe'aa jira...",
+
   "sort.title": "Tartiibessi",
   "sort.default": "Durtii",
   "sort.author": "Barreessaadhaan",
@@ -23,6 +25,7 @@
   "tab.skins": "Iskiinota",
   "tab.capes": "Kittaalee",
   "search.placeholder": "Maqaa, maamila, barreessaadhaan barbaadi...",
+
   "meta.customer": "Maamila",
   "meta.artist": "Aartistii",
   "meta.date": "Guyyaa ajajaa",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Hin ibsamne",
   "meta.show_orders": "Ajajawwan %s irraa dhufan hunda agarsiisi",
   "meta.open_author": "Fuula barreessaa bani (%s)",
+
   "skin.untitled": "Maqaa hin qabu",
   "skin.type": "Gosa: %s",
   "skin.has_variations": "Garaagarummaa qaba",
   "variation.original": "Jalqabaa",
   "cape.remove": "Kittaa baasi",
+
   "controls.reset": "Deebisi",
   "rotate.title": "Naannessuu",
   "rotate.enable": "Moodeela naannessi",
@@ -51,6 +56,7 @@
   "layers.body": "Uffata alaa / Gaachana",
   "acc.title": "Mi'oota dabalataa",
   "acc.elytra": "Eliitiraa agarsiisi",
+
   "emote.button": "Miirawwan",
   "emote.title": "Miirawwan",
   "emote.hint": "Miira filadhu ykn faayilii .json kee fe'i",
@@ -60,6 +66,7 @@
   "emote.error": "Faayilii miiraa kana dubbisuun hin danda'amne",
   "emote.playing": "Taphachaa jira: %s",
   "emote.close": "Cufi",
+
   "bg.title": "Halluu duubbee",
   "bg.dark": "Gurraacha",
   "bg.light": "Ifaa",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Suuraaleen hin argamne (kuusaa backgrounds/)",
   "bg.image.error": "Suuraa kana banuun hin danda'amne",
   "bg.image.close": "Cufi",
+
   "mobile.gallery": "📁 Gaalerii",
   "mobile.settings": "⚙️ Qindaa'ina",
+
   "modal.title": "Beeksisa",
   "modal.text": "Keessummoota kabajamoo! Iskiiniin gaalerii kana keessa jiru hundi bu'aa hojii sa'aatii hedduuti. Maaloo hojii namoota biroo kabajaa. Suuraaleen hundi mirga abbummaatiin eegamaniiru. Ilaaluun ni hayyamama, garuu buusuun, waraabuu fi faayidaa daldalaatiif oolchuun waliigaltee dursaa qofaan hayyamama. Hubannoo fi amanamummaa keessaniif galatoomaa!",
   "modal.agree": "Hunda dubbiseera, walii galeera",
   "modal.continue": "Itti fufi",
+
   "error.viewer": "Dogoggora kutaalee 3D jalqabsiisuu.",
   "error.json": "Faayiloota qindaa'ina JSON dubbisuun hin danda'amne.",
+
   "skin.name.vova_halloween26": "Voovaa Haaloowiin 2026",
   "variation.name.vova_in_mask_halloween26": "Haguuggii fuulaatiin",
   "skin.name.day_halloween26": "Deey Haaloowiin 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Geer Bonaa",
   "skin.name.ger_maid_skeleton": "Geer Lafee Hojjettuu Manaa",
   "skin.name.stars": "Istaars",
+
   "cape.name.migrator": "Godaantuu",
   "cape.name.pan": "Caccabsaa",
   "cape.name.15th_anniversary": "Waggaa 15ffaa",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Maamila Miliyoonaffaa",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Piriizmaariin",
+
   "emote.name.SPE_Get_scared": "Sodaachuu",
   "emote.name.SPE_Ankha_Dance": "Shubbisa Ankaa (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Dhaabbii Eveliin (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Dhaabbii Falfaltuu (Abjuu Sodaachisaa)",
   "emote.name.SPE_Yandere_Pose": "Dhaabbii Yaandeeree (Abjuu Sodaachisaa)",
   "emote.name.SPE_Zoro_Pose": "Dhaabbii Zooroo (Addunyaa Hedduu) (One Piece)",
+
   "person.Артур": "Artuur",
   "person.Вайкату": "Waayikaatuu",
   "person.Виакор": "Viyaakoor",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsiipliyaash",
   "person.Эппоп": "Eppoop",
   "person.Яна": "Yaanaa",
+
   "badge.new": "HAARAA",
+
   "platform.title": "Waltajjii",
   "platform.enable": "Waltajjii qaama jala kaa'i",
   "platform.block": "Bulookii",
@@ -342,5 +358,12 @@
   "block.snow": "Bulookii cabbii",
   "block.planks": "Boordii qilxuu",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Dhagaa End"
+  "block.end_stone": "Dhagaa End",
+
+  "bgimg.name.day": "Guyyaa",
+  "bgimg.name.end": "Dhuma",
+  "bgimg.name.nether": "Gahaannama",
+  "bgimg.name.night": "Halkan",
+  "bgimg.name.snow": "Cabbii",
+  "bgimg.name.sunset": "Lixa biiftuu"
 }

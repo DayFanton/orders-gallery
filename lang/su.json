@@ -358,5 +358,12 @@
   "block.snow": "Blok salju",
   "block.planks": "Papan kai sélaéh",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Batu End"
+  "block.end_stone": "Batu End",
+
+  "bgimg.name.day": "Beurang",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Peuting",
+  "bgimg.name.snow": "Salju",
+  "bgimg.name.sunset": "Panonpoé surup"
 }

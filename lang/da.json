@@ -8,9 +8,11 @@
   "language.search_placeholder": "Søg efter sprog...",
   "language.no_results": "Ingen sprog fundet",
   "language.rtl": false,
+
   "site.title": "Tsyplyashs Galleri",
   "gallery.title": "Galleri",
   "loading.text": "Indlæser visualiseringsmoduler...",
+
   "sort.title": "Sortering",
   "sort.default": "Standard",
   "sort.author": "Efter forfatter",
@@ -23,6 +25,7 @@
   "tab.skins": "Skins",
   "tab.capes": "Kapper",
   "search.placeholder": "Søg efter navn, kunde, forfatter...",
+
   "meta.customer": "Kunde",
   "meta.artist": "Kunstner",
   "meta.date": "Bestillingsdato",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ikke angivet",
   "meta.show_orders": "Vis alle bestillinger fra %s",
   "meta.open_author": "Åbn forfatterens side (%s)",
+
   "skin.untitled": "Uden titel",
   "skin.type": "Type: %s",
   "skin.has_variations": "Har variationer",
   "variation.original": "Original",
   "cape.remove": "Fjern kappe",
+
   "controls.reset": "Nulstil",
   "rotate.title": "Rotation",
   "rotate.enable": "Roter model",
@@ -51,6 +56,7 @@
   "layers.body": "Overtøj / Rustning",
   "acc.title": "Tilbehør",
   "acc.elytra": "Vis elytra",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Vælg en emote eller indlæs din egen .json-fil",
@@ -60,6 +66,7 @@
   "emote.error": "Kunne ikke læse denne emote-fil",
   "emote.playing": "Afspiller: %s",
   "emote.close": "Luk",
+
   "bg.title": "Baggrundsfarve",
   "bg.dark": "Mørk",
   "bg.light": "Lys",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ingen billeder fundet (mappen backgrounds/)",
   "bg.image.error": "Kunne ikke åbne dette billede",
   "bg.image.close": "Luk",
+
   "mobile.gallery": "📁 Galleri",
   "mobile.settings": "⚙️ Indstillinger",
+
   "modal.title": "Meddelelse",
   "modal.text": "Kære besøgende! Hvert skin i dette galleri er resultatet af mange timers hårdt arbejde. Respekter venligst andres arbejde. Alle billeder er beskyttet af ophavsret. Visning er tilladt, men download, kopiering og kommerciel brug er kun tilladt efter forudgående aftale. Tak for jeres forståelse og ærlighed!",
   "modal.agree": "Jeg har læst alt og accepterer",
   "modal.continue": "Fortsæt",
+
   "error.viewer": "Fejl ved initialisering af 3D-komponenter.",
   "error.json": "Kunne ikke læse JSON-konfigurationsfiler.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Med maske",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Sommer",
   "skin.name.ger_maid_skeleton": "Ger Stuepigeskelet",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Pandekage",
   "cape.name.15th_anniversary": "15-års jubilæum",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Kunde nummer én million",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Bliv bange",
   "emote.name.SPE_Ankha_Dance": "Ankha-dans (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynns positur (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Heksepositur (Mareridt)",
   "emote.name.SPE_Yandere_Pose": "Yandere-positur (Mareridt)",
   "emote.name.SPE_Zoro_Pose": "Zoros positur (Multivers) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NY",
+
   "platform.title": "Platform",
   "platform.enable": "Placer en platform under figuren",
   "platform.block": "Blok",
@@ -342,5 +358,12 @@
   "block.snow": "Sneblok",
   "block.planks": "Egeplanker",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End-sten"
+  "block.end_stone": "End-sten",
+
+  "bgimg.name.day": "Dag",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Nat",
+  "bgimg.name.snow": "Sne",
+  "bgimg.name.sunset": "Solnedgang"
 }

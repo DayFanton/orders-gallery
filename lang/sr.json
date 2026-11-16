@@ -8,9 +8,11 @@
   "language.search_placeholder": "Претражи језик...",
   "language.no_results": "Језици нису пронађени",
   "language.rtl": false,
+
   "site.title": "Галерија Ципљаш",
   "gallery.title": "Галерија",
   "loading.text": "Учитавање модула за визуелизацију...",
+
   "sort.title": "Сортирање",
   "sort.default": "Подразумевано",
   "sort.author": "По аутору",
@@ -23,6 +25,7 @@
   "tab.skins": "Скинови",
   "tab.capes": "Огртачи",
   "search.placeholder": "Претрага по називу, наручиоцу, аутору...",
+
   "meta.customer": "Наручилац",
   "meta.artist": "Уметник",
   "meta.date": "Датум поруџбине",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Није наведен",
   "meta.show_orders": "Прикажи све поруџбине од %s",
   "meta.open_author": "Отвори страницу аутора (%s)",
+
   "skin.untitled": "Без назива",
   "skin.type": "Тип: %s",
   "skin.has_variations": "Има варијације",
   "variation.original": "Оригинал",
   "cape.remove": "Скини огртач",
+
   "controls.reset": "Ресетуј",
   "rotate.title": "Ротација",
   "rotate.enable": "Ротирај модел",
@@ -51,6 +56,7 @@
   "layers.body": "Горња одећа / Оклоп",
   "acc.title": "Додаци",
   "acc.elytra": "Прикажи елитре",
+
   "emote.button": "Емоције",
   "emote.title": "Емоције",
   "emote.hint": "Изаберите емоцију или отпремите свој .json фајл",
@@ -60,6 +66,7 @@
   "emote.error": "Није могуће учитати фајл емоције",
   "emote.playing": "Репродукује се: %s",
   "emote.close": "Затвори",
+
   "bg.title": "Боја позадине",
   "bg.dark": "Тамна",
   "bg.light": "Светла",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Слике нису пронађене (фасцикла backgrounds/)",
   "bg.image.error": "Није могуће отворити ову слику",
   "bg.image.close": "Затвори",
+
   "mobile.gallery": "📁 Галерија",
   "mobile.settings": "⚙️ Подешавања",
+
   "modal.title": "Обавештење",
   "modal.text": "Драги посетиоци! Сваки скин у овој галерији је резултат много сати труда. Молимо вас да поштујете туђи рад. Све слике су заштићене ауторским правима. Прегледање је дозвољено, али преузимање, копирање и комерцијална употреба дозвољени су само уз претходни договор. Хвала на разумевању и искрености!",
   "modal.agree": "Све сам прочитао/ла и слажем се",
   "modal.continue": "Настави",
+
   "error.viewer": "Грешка при иницијализацији 3D компоненти.",
   "error.json": "Није могуће учитати JSON конфигурационе фајлове.",
+
   "skin.name.vova_halloween26": "Вова Ноћ вештица 2026",
   "variation.name.vova_in_mask_halloween26": "Са маском",
   "skin.name.day_halloween26": "Деј Ноћ вештица 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Гер летња",
   "skin.name.ger_maid_skeleton": "Гер собарица-костур",
   "skin.name.stars": "Старс",
+
   "cape.name.migrator": "Мигратор",
   "cape.name.pan": "Палачинка",
   "cape.name.15th_anniversary": "15. годишњица",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Милионити купац",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+
   "emote.name.SPE_Get_scared": "Уплашити се",
   "emote.name.SPE_Ankha_Dance": "Анкин плес (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Став Евелин (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Поза Вештице (Ноћне море)",
   "emote.name.SPE_Yandere_Pose": "Поза Јандере (Ноћне море)",
   "emote.name.SPE_Zoro_Pose": "Став Зороа (Мултиверзум) (One Piece)",
+
   "person.Артур": "Артур",
   "person.Вайкату": "Вајкату",
   "person.Виакор": "Виакор",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Ципљаш",
   "person.Эппоп": "Епоп",
   "person.Яна": "Јана",
+
   "badge.new": "НОВО",
+
   "platform.title": "Платформа",
   "platform.enable": "Постави платформу испод лика",
   "platform.block": "Блок",
@@ -342,5 +358,12 @@
   "block.snow": "Блок снега",
   "block.planks": "Храстове даске",
   "block.netherrack": "Недерак",
-  "block.end_stone": "Камен Енда"
+  "block.end_stone": "Камен Енда",
+
+  "bgimg.name.day": "Дан",
+  "bgimg.name.end": "Крај",
+  "bgimg.name.nether": "Недер",
+  "bgimg.name.night": "Ноћ",
+  "bgimg.name.snow": "Снег",
+  "bgimg.name.sunset": "Залазак сунца"
 }

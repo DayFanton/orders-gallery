@@ -8,9 +8,11 @@
   "language.search_placeholder": "Gado tahua...",
   "language.no_results": "Gado lasi davaria",
   "language.rtl": false,
+
   "site.title": "Tsyplyash ena Laulau Gabuna",
   "gallery.title": "Laulau Gabuna",
   "loading.text": "Laulau durua gaudia ia abia daekau noho...",
+
   "sort.title": "Atoa namonamo",
   "sort.default": "Guna hegeregerena",
   "sort.author": "Karaia tauna ena",
@@ -23,6 +25,7 @@
   "tab.skins": "Kopina",
   "tab.capes": "Dabua kapa",
   "search.placeholder": "Ladana, oda tauna, karaia tauna tahua...",
+
   "meta.customer": "Oda tauna",
   "meta.artist": "Laulau karaia tauna",
   "meta.date": "Oda dinana",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Torea lasi",
   "meta.show_orders": "%s ena oda ibounai hahedinaraia",
   "meta.open_author": "Karaia tauna ena rau kehoa (%s)",
+
   "skin.untitled": "Ladana lasi",
   "skin.type": "Idau: %s",
   "skin.has_variations": "Idau idau ia noho",
   "variation.original": "Guna gauna",
   "cape.remove": "Dabua kapa kokia",
+
   "controls.reset": "Loua",
   "rotate.title": "Giroa",
   "rotate.enable": "Laulau giroa",
@@ -51,6 +56,7 @@
   "layers.body": "Murimuri dabua / Tuari dabua",
   "acc.title": "Dabua durua gaudia",
   "acc.elytra": "Elytra hahedinaraia",
+
   "emote.button": "Laloa hahedinaraia",
   "emote.title": "Laloa hahedinaraia",
   "emote.hint": "Marere ta abia hidi o oiemu .json faila atoa daekau",
@@ -60,6 +66,7 @@
   "emote.error": "Inai marere faila duahia diba lasi",
   "emote.playing": "Ia karaia noho: %s",
   "emote.close": "Koudaia",
+
   "bg.title": "Murimuri kala",
   "bg.dark": "Dibura",
   "bg.light": "Diari",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Laulau ta davaria lasi (backgrounds/ maua)",
   "bg.image.error": "Inai laulau kehoa diba lasi",
   "bg.image.close": "Koudaia",
+
   "mobile.gallery": "📁 Laulau Gabuna",
   "mobile.settings": "⚙️ Hamaoromaoro",
+
   "modal.title": "Hadibaia hereva",
   "modal.text": "Vadivadi taudia e! Inai gabu ena kopina ibounai be hora momo ena gaukara namona. Mani emui kara haida edia gaukara do umui matauraia. Laulau ibounai be karaia taudia edia. Itaia be maoro, to abia diho, kopia karaia bona moni davaria totona gaukaraia be guna hereva henina murinai mo. Emui laloa maoro bona momokani dainai tanikiu bada!",
   "modal.agree": "Lau duahia ore vadaeni bona lau abia dae",
   "modal.continue": "Gaukaraia lao",
+
   "error.viewer": "3D gaudia matamaia kerere.",
   "error.json": "JSON faila duahia diba lasi.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Vaira koua gauna ida",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Siahu Dina",
   "skin.name.ger_maid_skeleton": "Ger Hesiai Hahine Turia",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Gabu Idau Lao Tauna",
   "cape.name.pan": "Fraipan Sagu",
   "cape.name.15th_anniversary": "Lagani 15 Helaga Dina",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Milioni Tauna",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Gari",
   "emote.name.SPE_Ankha_Dance": "Ankha ena Mavaru (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn ena Gini (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Mea Hahine ena gini (Nihi Dika)",
   "emote.name.SPE_Yandere_Pose": "Yandere ena gini (Nihi Dika)",
   "emote.name.SPE_Zoro_Pose": "Zoro ena gini (Tanobada Momo) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "MATAMATA",
+
   "platform.title": "Gini Gabuna",
   "platform.enable": "Tauna henunai gini gabuna atoa",
   "platform.block": "Blok",
@@ -342,5 +358,12 @@
   "block.snow": "Sino blok",
   "block.planks": "Au palaka",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End nadi"
+  "block.end_stone": "End nadi",
+
+  "bgimg.name.day": "Dina",
+  "bgimg.name.end": "Dokona",
+  "bgimg.name.nether": "Hade",
+  "bgimg.name.night": "Hanuaboi",
+  "bgimg.name.snow": "Sino",
+  "bgimg.name.sunset": "Dina diho"
 }

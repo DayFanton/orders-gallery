@@ -8,9 +8,11 @@
   "language.search_placeholder": "Lava ririmi...",
   "language.no_results": "Ku hava tindzimi leti kumiweke",
   "language.rtl": false,
+
   "site.title": "Galari ya Tsyplyash",
   "gallery.title": "Galari",
   "loading.text": "Ku pakeriwa timojulu ta ku vona...",
+
   "sort.title": "Hlela",
   "sort.default": "Hi ku olova",
   "sort.author": "Hi mutsari",
@@ -23,6 +25,7 @@
   "tab.skins": "Swikini",
   "tab.capes": "Tikhapa",
   "search.placeholder": "Lava hi vito, muxavi, mutsari...",
+
   "meta.customer": "Muxavi",
   "meta.artist": "Mupfapfarhuti",
   "meta.date": "Siku ra odara",
@@ -30,11 +33,13 @@
   "meta.date_unset": "A ri hlamuseriwangi",
   "meta.show_orders": "Kombisa tiodara hinkwato ku suka eka %s",
   "meta.open_author": "Pfula pheji ra mutsari (%s)",
+
   "skin.untitled": "Ku hava vito",
   "skin.type": "Muxaka: %s",
   "skin.has_variations": "Ku na tinxaka tin'wana",
   "variation.original": "Ya masungulo",
   "cape.remove": "Susa khapa",
+
   "controls.reset": "Vuyisela eku sunguleni",
   "rotate.title": "Ku rhendzeleka",
   "rotate.enable": "Rhendzelekisa xifaniso",
@@ -51,6 +56,7 @@
   "layers.body": "Swiambalo swa le handle / Switlhangu",
   "acc.title": "Swiengetelo",
   "acc.elytra": "Kombisa elytra",
+
   "emote.button": "Mintlhaveko",
   "emote.title": "Mintlhaveko",
   "emote.hint": "Hlawula ntlhaveko kumbe u paka fayili ya wena ya .json",
@@ -60,6 +66,7 @@
   "emote.error": "A swi kotekangi ku hlaya fayili leyi ya ntlhaveko",
   "emote.playing": "Ku tlanga: %s",
   "emote.close": "Pfala",
+
   "bg.title": "Muhlovo wa le ndzhaku",
   "bg.dark": "Wa ntima",
   "bg.light": "Wo vonakala",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ku hava swifaniso leswi kumiweke (foda ya backgrounds/)",
   "bg.image.error": "A swi kotekangi ku pfula xifaniso lexi",
   "bg.image.close": "Pfala",
+
   "mobile.gallery": "📁 Galari",
   "mobile.settings": "⚙️ Swiletelo",
+
   "modal.title": "Xitiviso",
   "modal.text": "Vahlayi lava rhandzekaka! Xikini xin'wana na xin'wana eka galari leyi i mbuyelo wa tiawara to tala ta ntirho wo tika. Hi kombela mi xixima ntirho wa van'wana. Swifaniso hinkwaswo swi sirheleriwile hi mfanelo ya vatsari. Ku languta swi pfumeleriwa, kambe ku kopa, ku teka na ku tirhisa eka mabindzu swi pfumeleriwa ntsena hi ku twanana ka le mahlweni. Hi khensa ku twisisa na ku tshembeka ka n'wina!",
   "modal.agree": "Ndzi hlayile hinkwaswo naswona ndza pfumela",
   "modal.continue": "Yisa emahlweni",
+
   "error.viewer": "Xihoxo eku sunguleni ka swiphemu swa 3D.",
   "error.json": "Ku tsandzekile ku hlaya tifayili ta JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "U ambale xifunengeto xa xikandza",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Ximumu",
   "skin.name.ger_maid_skeleton": "Ger Mutirhi-Rihambu",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Murhurhi",
   "cape.name.pan": "Pani",
   "cape.name.15th_anniversary": "Nkhuvo wa Malembe ya 15",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Muxavi wa Miliyoni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Chava",
   "emote.name.SPE_Ankha_Dance": "Ncino wa Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Xiyimo xa Evelynn (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Xiyimo xa Noyi (Miloto yo biha)",
   "emote.name.SPE_Yandere_Pose": "Xiyimo xa Yandere (Miloto yo biha)",
   "emote.name.SPE_Zoro_Pose": "Xiyimo xa Zoro (Swivandla swo tala) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "LEXINTSHWA",
+
   "platform.title": "Pulatifomo",
   "platform.enable": "Veka pulatifomo ehansi ka ximunhuhatwa",
   "platform.block": "Buloko",
@@ -342,5 +358,12 @@
   "block.snow": "Buloko ya gamboko",
   "block.planks": "Mapulanga ya murhi wa oak",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "Ribye ra End"
+  "block.end_stone": "Ribye ra End",
+
+  "bgimg.name.day": "Nhlikanhi",
+  "bgimg.name.end": "Makumu",
+  "bgimg.name.nether": "Tihele",
+  "bgimg.name.night": "Vusiku",
+  "bgimg.name.snow": "Gamboko",
+  "bgimg.name.sunset": "Ku pela ka dyambu"
 }

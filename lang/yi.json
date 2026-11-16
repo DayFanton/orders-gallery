@@ -8,9 +8,11 @@
   "language.search_placeholder": "זוכן אַ שפּראַך...",
   "language.no_results": "קיין שפּראַכן נישט געפֿונען",
   "language.rtl": true,
+
   "site.title": "ציפּליאַשס גאַלעריע",
   "gallery.title": "גאַלעריע",
   "loading.text": "לאָדט וויזואַליזאַציע־מאָדולן...",
+
   "sort.title": "סאָרטירן",
   "sort.default": "לויטן סטאַנדאַרט",
   "sort.author": "לויטן מחבר",
@@ -23,6 +25,7 @@
   "tab.skins": "סקינס",
   "tab.capes": "מאַנטלען",
   "search.placeholder": "זוכן לויט נאָמען, באַשטעלער, מחבר...",
+
   "meta.customer": "באַשטעלער",
   "meta.artist": "קינסטלער",
   "meta.date": "באַשטעלונג־דאַטע",
@@ -30,11 +33,13 @@
   "meta.date_unset": "נישט אָנגעגעבן",
   "meta.show_orders": "ווײַזן אַלע באַשטעלונגען פֿון %s",
   "meta.open_author": "עפֿענען דעם מחברס זײַט (%s)",
+
   "skin.untitled": "אָן אַ נאָמען",
   "skin.type": "טיפּ: %s",
   "skin.has_variations": "האָט וואַריאַציעס",
   "variation.original": "אָריגינאַל",
   "cape.remove": "אַראָפּנעמען דעם מאַנטל",
+
   "controls.reset": "צוריקשטעלן",
   "rotate.title": "דרייען",
   "rotate.enable": "דרייען דעם מאָדעל",
@@ -51,6 +56,7 @@
   "layers.body": "אויבערקליידער / פּאַנצער",
   "acc.title": "אַקסעסואַרן",
   "acc.elytra": "ווײַזן עליטרעס",
+
   "emote.button": "עמאָציעס",
   "emote.title": "עמאָציעס",
   "emote.hint": "קלייַבט אויס אַן עמאָציע אָדער לאָדט אַרויף אײַער .json טעקע",
@@ -60,6 +66,7 @@
   "emote.error": "מען האָט נישט געקענט לייענען די עמאָציע־טעקע",
   "emote.playing": "עס שפּילט: %s",
   "emote.close": "פֿאַרמאַכן",
+
   "bg.title": "הינטערגרונט־קאָליר",
   "bg.dark": "טונקל",
   "bg.light": "העל",
@@ -77,14 +84,18 @@
   "bg.image.empty": "קיין בילדער נישט געפֿונען (טעקע backgrounds/)",
   "bg.image.error": "מען האָט נישט געקענט עפֿענען דאָס בילד",
   "bg.image.close": "פֿאַרמאַכן",
+
   "mobile.gallery": "📁 גאַלעריע",
   "mobile.settings": "⚙️ אײַנשטעלונגען",
+
   "modal.title": "מעלדונג",
   "modal.text": "טײַערע געסט! יעדער סקין אין דער גאַלעריע איז דער רעזולטאַט פֿון אַ סך שעהן אַרבעט. ביטע רעספּעקטירט יענעמס מי. אַלע בילדער זענען באַשיצט מיט מחבר־רעכט. קוקן איז דערלויבט, אָבער אַראָפּלאָדן, קאָפּירן און קאָמערציעל ניצן מעג מען נאָר נאָך אַ פֿריערדיקער אָפּמאַך. אַ דאַנק פֿאַר פֿאַרשטענדעניש און ערלעכקייט!",
   "modal.agree": "איך האָב אַלץ איבערגעלייענט און איך בין מסכּים",
   "modal.continue": "ווײַטער",
+
   "error.viewer": "גרײַז בײַם איניציאַליזירן 3D־קאָמפּאָנענטן.",
   "error.json": "מען האָט נישט געקענט לייענען די JSON קאָנפֿיגוראַציע־טעקעס.",
+
   "skin.name.vova_halloween26": "וואָוואַ העלאָווין 2026",
   "variation.name.vova_in_mask_halloween26": "אין אַ מאַסקע",
   "skin.name.day_halloween26": "דיי העלאָווין 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "גער זומערדיקע",
   "skin.name.ger_maid_skeleton": "גער דינסטמיידל־סקעלעט",
   "skin.name.stars": "סטאַרס",
+
   "cape.name.migrator": "מיגראַטאָר",
   "cape.name.pan": "בלינצע־פּאַן",
   "cape.name.15th_anniversary": "15טער יוביליי",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "מיליאָנסטער קונה",
   "cape.name.db": "dB",
   "cape.name.prismarine": "פּריזמאַרין",
+
   "emote.name.SPE_Get_scared": "דערשרעקן זיך",
   "emote.name.SPE_Ankha_Dance": "אַנכאַס טאַנץ (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "עוועלינס שטעלונג (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "מכשפֿהס פּאָזע (קאָשמאַרן)",
   "emote.name.SPE_Yandere_Pose": "יאַנדערעס פּאָזע (קאָשמאַרן)",
   "emote.name.SPE_Zoro_Pose": "זאָראָס שטעלונג (מולטיוועלט) (One Piece)",
+
   "person.Артур": "אַרטור",
   "person.Вайкату": "ווײַקאַטו",
   "person.Виакор": "וויאַקאָר",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "ציפּליאַש",
   "person.Эппоп": "עפּאָפּ",
   "person.Яна": "יאַנאַ",
+
   "badge.new": "נײַ",
+
   "platform.title": "פּלאַטפֿאָרמע",
   "platform.enable": "שטעלן אַ פּלאַטפֿאָרמע אונטערן פּערסאָנאַזש",
   "platform.block": "בלאָק",
@@ -342,5 +358,12 @@
   "block.snow": "שנייבלאָק",
   "block.planks": "דעמבענע ברעטער",
   "block.netherrack": "נעזערראַק",
-  "block.end_stone": "ענדשטיין"
+  "block.end_stone": "ענדשטיין",
+
+  "bgimg.name.day": "טאָג",
+  "bgimg.name.end": "ענדע",
+  "bgimg.name.nether": "גיהנום",
+  "bgimg.name.night": "נאַכט",
+  "bgimg.name.snow": "שניי",
+  "bgimg.name.sunset": "זונאונטערגאַנג"
 }

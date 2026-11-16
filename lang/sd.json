@@ -358,5 +358,12 @@
   "block.snow": "برف جو بلاڪ",
   "block.planks": "بلوط جا تختاتا",
   "block.netherrack": "نيدرريڪ",
-  "block.end_stone": "اينڊ پٿر"
+  "block.end_stone": "اينڊ پٿر",
+
+  "bgimg.name.day": "ڏينهن",
+  "bgimg.name.end": "پڄاڻي",
+  "bgimg.name.nether": "دوزخ",
+  "bgimg.name.night": "رات",
+  "bgimg.name.snow": "برف",
+  "bgimg.name.sunset": "سج لٿو"
 }

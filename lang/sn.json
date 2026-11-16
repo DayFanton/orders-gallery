@@ -8,9 +8,11 @@
   "language.search_placeholder": "Tsvaga mutauro...",
   "language.no_results": "Hapana mitauro yawanikwa",
   "language.rtl": false,
+
   "site.title": "Garari yaTsipiryashi",
   "gallery.title": "Garari",
   "loading.text": "Kurodha mamodhyu ekuratidza...",
+
   "sort.title": "Ronga",
   "sort.default": "Zvekutanga",
   "sort.author": "Nemunyori",
@@ -23,6 +25,7 @@
   "tab.skins": "Masikini",
   "tab.capes": "Majasi",
   "search.placeholder": "Tsvaga nezita, mutengi, munyori...",
+
   "meta.customer": "Mutengi",
   "meta.artist": "Muimbi / Muvezi",
   "meta.date": "Zuva reodha",
@@ -30,12 +33,14 @@
   "meta.date_unset": "Harina kudomwa",
   "meta.show_orders": "Ratidza maodha ese kubva kuna %s",
   "meta.open_author": "Vhura peji remunyori (%s)",
+
   "skin.untitled": "Isina zita",
   "skin.type": "Mhando: %s",
   "skin.has_variations": "Ine shanduko",
   "variation.original": "Yekutanga",
   "cape.remove": "Bvisa jasi",
   "badge.new": "ITSVA",
+
   "controls.reset": "Dzosera",
   "rotate.title": "Kutenderera",
   "rotate.enable": "Tenderedza modhi",
@@ -52,6 +57,7 @@
   "layers.body": "Zvokupfeka zvekunze / Nhumbi dzehondo",
   "acc.title": "Zvishongedzo",
   "acc.elytra": "Ratidza elytra",
+
   "emote.button": "Maitiro",
   "emote.title": "Maitiro",
   "emote.hint": "Sarudza maitiro kana kuisa faira rako re.json",
@@ -61,6 +67,7 @@
   "emote.error": "Zvatadza kuverenga faira remaitiro iri",
   "emote.playing": "Kuri kutamba: %s",
   "emote.close": "Vhara",
+
   "bg.title": "Ruvara rwekumashure",
   "bg.dark": "Rima",
   "bg.light": "Chiedza",
@@ -91,14 +98,18 @@
   "block.planks": "Mapuranga emuouki",
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dombo reEnd",
+
   "mobile.gallery": "📁 Garari",
   "mobile.settings": "⚙️ Zvirongwa",
+
   "modal.title": "Chiziviso",
   "modal.text": "Vashanyi vanodiwa! Sikini rega rega riri mugarari ino mhedzisiro yemaawa mazhinji ekushanda nesimba. Ndapota remekedzai basa revamwe. Mifananidzo yese yakachengetedzwa nekodzero dzemunyori. Kuona kunobvumidzwa, asi kudhaunirodha, kutevedzera, uye kushandisa mukutengeserana zvinobvumidzwa chete nekutenderana kwepamberi. Tinotenda nekunzwisisa kwenyu uye kutendeka!",
   "modal.agree": "Ndaverenga zvese uye ndinobvuma",
   "modal.continue": "Enderera mberi",
+
   "error.viewer": "Kukanganisa pakutanga zvikamu zve3D.",
   "error.json": "Zvatadza kuverenga mafaira eJSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Akafuka chifukidzo",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -206,6 +217,7 @@
   "skin.name.ger_summer": "Ger Zhizha",
   "skin.name.ger_maid_skeleton": "Ger Musikana weBasa-Rangabvu",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Mutami",
   "cape.name.pan": "Pani (Pankeki)",
   "cape.name.15th_anniversary": "Mhemberero yeMakore 15",
@@ -252,6 +264,7 @@
   "cape.name.millionth_customer": "Mutengi weMiriyoni",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Kuvhunduka",
   "emote.name.SPE_Ankha_Dance": "Kutamba kwaAnkha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Kumira kwaEvelynn (League of Legends)",
@@ -329,6 +342,7 @@
   "emote.name.SPE_Witch_Pose": "Chimiro cheMuroyi (Zviroto Zvinotyisa)",
   "emote.name.SPE_Yandere_Pose": "Chimiro chaYandere (Zviroto Zvinotyisa)",
   "emote.name.SPE_Zoro_Pose": "Chimiro chaZoro (Zvakasikwa Zvakawanda) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -342,5 +356,12 @@
   "person.Хуман": "Human",
   "person.Цыпляш": "Tsipiryashi",
   "person.Эппоп": "Eppop",
-  "person.Яна": "Yana"
+  "person.Яна": "Yana",
+
+  "bgimg.name.day": "Masikati",
+  "bgimg.name.end": "Magumo",
+  "bgimg.name.nether": "Gehena",
+  "bgimg.name.night": "Usiku",
+  "bgimg.name.snow": "Sinou",
+  "bgimg.name.sunset": "Kuvira kwezuva"
 }

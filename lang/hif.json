@@ -8,9 +8,11 @@
   "language.search_placeholder": "Bhasa khojo...",
   "language.no_results": "Koi bhasa nahi mila",
   "language.rtl": false,
+
   "site.title": "Tsyplyash ke Gallery",
   "gallery.title": "Gallery",
   "loading.text": "Visualization module load hot hai...",
+
   "sort.title": "Chhanto",
   "sort.default": "Default",
   "sort.author": "Author ke hisab se",
@@ -23,6 +25,7 @@
   "tab.skins": "Skins",
   "tab.capes": "Capes",
   "search.placeholder": "Naam, customer, author se khojo...",
+
   "meta.customer": "Customer",
   "meta.artist": "Kalakar",
   "meta.date": "Order ke tarikh",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Nahi bataya hai",
   "meta.show_orders": "%s ke sab order dekhao",
   "meta.open_author": "Author ke page kholo (%s)",
+
   "skin.untitled": "Bina naam ke",
   "skin.type": "Kism: %s",
   "skin.has_variations": "Aur roop hai",
   "variation.original": "Asli",
   "cape.remove": "Cape hatao",
+
   "controls.reset": "Reset",
   "rotate.title": "Ghumao",
   "rotate.enable": "Model ke ghumao",
@@ -51,6 +56,7 @@
   "layers.body": "Bahari kapda / Kavach",
   "acc.title": "Samaan",
   "acc.elytra": "Elytra dekhao",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Koi emote chuno ya apan .json file upload karo",
@@ -60,6 +66,7 @@
   "emote.error": "Ii emote file nahi padha jaa saka",
   "emote.playing": "Chalat hai: %s",
   "emote.close": "Band karo",
+
   "bg.title": "Background ke rang",
   "bg.dark": "Andhera",
   "bg.light": "Ujala",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Koi tasveer nahi mila (backgrounds/ folder)",
   "bg.image.error": "Ii tasveer nahi khula",
   "bg.image.close": "Band karo",
+
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Settings",
+
   "modal.title": "Suchna",
   "modal.text": "Pyare mehman! Ii gallery ke har ek skin bahut ghanta ke mehnat ke natija hai. Meharbani karke dusre ke mehnat ke izzat karo. Sab tasveer copyright se surakshit hai. Dekhe ke ijazat hai, lekin download, copy aur vyaparik istemal sirf pehle se ijazat leke hi kar sakta hai. Samajh aur imaandari khatir dhanyavaad!",
   "modal.agree": "Hum sab padh liya aur sehmat hai",
   "modal.continue": "Aage badho",
+
   "error.viewer": "3D component shuru kare me galti bhail.",
   "error.json": "JSON configuration file nahi padha jaa saka.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Mask me",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Garmi",
   "skin.name.ger_maid_skeleton": "Ger Naukrani-Kankal",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Tawa Roti",
   "cape.name.15th_anniversary": "15vi Saalgirah",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Das Lakhva Grahak",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Dar jana",
   "emote.name.SPE_Ankha_Dance": "Ankha ke Naach (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn ke Mudra (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Dayan ke Mudra (Bura Sapna)",
   "emote.name.SPE_Yandere_Pose": "Yandere ke Mudra (Bura Sapna)",
   "emote.name.SPE_Zoro_Pose": "Zoro ke Mudra (Bahubrahmand) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NAYA",
+
   "platform.title": "Platform",
   "platform.enable": "Kirdar ke niche platform rakho",
   "platform.block": "Block",
@@ -342,5 +358,12 @@
   "block.snow": "Barf ke block",
   "block.planks": "Oak ke takhta",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End ke patthar"
+  "block.end_stone": "End ke patthar",
+
+  "bgimg.name.day": "Din",
+  "bgimg.name.end": "Ant",
+  "bgimg.name.nether": "Narak",
+  "bgimg.name.night": "Raat",
+  "bgimg.name.snow": "Baraf",
+  "bgimg.name.sunset": "Suryast"
 }

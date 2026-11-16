@@ -8,9 +8,11 @@
   "language.search_placeholder": "Søk etter språk...",
   "language.no_results": "Ingen språk funnet",
   "language.rtl": false,
+
   "site.title": "Tsyplyasjs galleri",
   "gallery.title": "Galleri",
   "loading.text": "Laster inn visualiseringsmoduler...",
+
   "sort.title": "Sortering",
   "sort.default": "Standard",
   "sort.author": "Etter forfatter",
@@ -23,6 +25,7 @@
   "tab.skins": "Skinn",
   "tab.capes": "Kapper",
   "search.placeholder": "Søk etter navn, kunde, forfatter...",
+
   "meta.customer": "Kunde",
   "meta.artist": "Kunstner",
   "meta.date": "Bestillingsdato",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Ikke angitt",
   "meta.show_orders": "Vis alle bestillinger fra %s",
   "meta.open_author": "Åpne forfatterens side (%s)",
+
   "skin.untitled": "Uten tittel",
   "skin.type": "Type: %s",
   "skin.has_variations": "Har variasjoner",
   "variation.original": "Original",
   "cape.remove": "Fjern kappe",
+
   "controls.reset": "Tilbakestill",
   "rotate.title": "Rotasjon",
   "rotate.enable": "Roter modell",
@@ -51,6 +56,7 @@
   "layers.body": "Yttertøy / Rustning",
   "acc.title": "Tilbehør",
   "acc.elytra": "Vis elytra",
+
   "emote.button": "Emoter",
   "emote.title": "Emoter",
   "emote.hint": "Velg en emote eller last opp din egen .json-fil",
@@ -60,6 +66,7 @@
   "emote.error": "Kunne ikke lese emotefilen",
   "emote.playing": "Spiller av: %s",
   "emote.close": "Lukk",
+
   "bg.title": "Bakgrunnsfarge",
   "bg.dark": "Mørk",
   "bg.light": "Lys",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Ingen bilder funnet (mappen backgrounds/)",
   "bg.image.error": "Kunne ikke åpne dette bildet",
   "bg.image.close": "Lukk",
+
   "mobile.gallery": "📁 Galleri",
   "mobile.settings": "⚙️ Innstillinger",
+
   "modal.title": "Varsel",
   "modal.text": "Kjære besøkende! Hvert skinn i dette galleriet er resultatet av mange timers arbeid. Vennligst respekter andres arbeid. Alle bilder er beskyttet av opphavsrett. Visning er tillatt, men nedlasting, kopiering og kommersiell bruk er kun tillatt etter forhåndsavtale. Takk for forståelsen og ærligheten!",
   "modal.agree": "Jeg har lest alt og godtar",
   "modal.continue": "Fortsett",
+
   "error.viewer": "Feil ved initialisering av 3D-komponenter.",
   "error.json": "Kunne ikke lese JSON-konfigurasjonsfiler.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Med maske",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Sommer",
   "skin.name.ger_maid_skeleton": "Ger Tjenestepikeskjelett",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Pannekake",
   "cape.name.15th_anniversary": "15-årsjubileum",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Kunde nummer én million",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Bli skremt",
   "emote.name.SPE_Ankha_Dance": "Ankha-dans (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynns positur (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Heksepositur (Mareritt)",
   "emote.name.SPE_Yandere_Pose": "Yandere-positur (Mareritt)",
   "emote.name.SPE_Zoro_Pose": "Zoros positur (Multivers) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsyplyasj",
   "person.Эппоп": "Eppop",
   "person.Яна": "Jana",
+
   "badge.new": "NY",
+
   "platform.title": "Plattform",
   "platform.enable": "Plasser en plattform under karakteren",
   "platform.block": "Blokk",
@@ -342,5 +358,12 @@
   "block.snow": "Snøblokk",
   "block.planks": "Eikeplanker",
   "block.netherrack": "Netherrack",
-  "block.end_stone": "End-stein"
+  "block.end_stone": "End-stein",
+
+  "bgimg.name.day": "Dag",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.night": "Natt",
+  "bgimg.name.snow": "Snø",
+  "bgimg.name.sunset": "Solnedgang"
 }

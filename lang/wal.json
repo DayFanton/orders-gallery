@@ -8,9 +8,11 @@
   "language.search_placeholder": "Doonnaa koya...",
   "language.no_results": "Doonnay beetibeenna",
   "language.rtl": false,
+
   "site.title": "Tsiplyashiya Galeriyaa",
   "gallery.title": "Galeriyaa",
   "loading.text": "Be'iya wodetaa wottaydda de'ees...",
+
   "sort.title": "Maaraa",
   "sort.default": "Koyro maaraa",
   "sort.author": "Medhidaagaa sunttan",
@@ -23,6 +25,7 @@
   "tab.skins": "Isikinetaa",
   "tab.capes": "Kootetaa",
   "search.placeholder": "Sunttan, azazidaagan, medhidaagan koya...",
+
   "meta.customer": "Azazidaagaa",
   "meta.artist": "Misile medhidaagaa",
   "meta.date": "Azazido gallassaa",
@@ -30,11 +33,13 @@
   "meta.date_unset": "Erissibeenna",
   "meta.show_orders": "%s azazido ubbataa bessa",
   "meta.open_author": "Medhidaagaa sinttaa dooya (%s)",
+
   "skin.untitled": "Sunttay baynnaagaa",
   "skin.type": "Qommuwaa: %s",
   "skin.has_variations": "Dumma dumma qommuwaa de'ees",
   "variation.original": "Koyroogaa",
   "cape.remove": "Kootiyaa qaaray",
+
   "controls.reset": "Zaaretta giigissa",
   "rotate.title": "Yuushuwaa",
   "rotate.enable": "Modeeliyaa yuushsha",
@@ -51,6 +56,7 @@
   "layers.body": "Bollaa maayuwaa / Olaa maayuwaa",
   "acc.title": "Guutta miishshataa",
   "acc.elytra": "Elitiraa bessa",
+
   "emote.button": "Qofaa bessuwaa",
   "emote.title": "Qofaa bessuwaa",
   "emote.hint": "Qofaa bessuwaa doora woy ne .json fayiliyaa gelissa",
@@ -60,6 +66,7 @@
   "emote.error": "Ha qofaa bessuwaa fayiliyaa nabbabanawu danddayibeenna",
   "emote.playing": "Kaa'aydda de'ees: %s",
   "emote.close": "Gordda",
+
   "bg.title": "Guyye baggaa meraa",
   "bg.dark": "Xumaa",
   "bg.light": "Poo'uwaa",
@@ -77,14 +84,18 @@
   "bg.image.empty": "Misileti beetibookkona (backgrounds/ karccitiyaa)",
   "bg.image.error": "Ha misiliyaa dooyanawu danddayibeenna",
   "bg.image.close": "Gordda",
+
   "mobile.gallery": "📁 Galeriyaa",
   "mobile.settings": "⚙️ Giigissuwaa",
+
   "modal.title": "Erissuwaa",
   "modal.text": "Bonchchettida imattatoo! Ha galeriyan de'iya isikinee ubbay daro saatiyawu oottido oosuwaa ayfiyaa. Hayyanintta hara asaa oosuwaa bonchchite. Misileti ubbay medhidaagaa maataa higgiyan naagettidaageeta. Be'iyoogee eenettidaagaa, shin duuqqiyoogee, qoppada ekkiyoogeenne zal'iyawu go'ettiyoogee kasetidi maayettidoogan xalla danddayettees. Intte akeekawunne ammanettiyoogawu galatoos!",
   "modal.agree": "Taani ubbabaa nabbabada maayettaas",
   "modal.continue": "Sinttawu ba",
+
   "error.viewer": "3D wodetaa doommoy balettiis.",
   "error.json": "JSON giigissuwaa fayiletaa nabbabanawu danddayibeenna.",
+
   "skin.name.vova_halloween26": "Vova Halowiiniyaa 2026",
   "variation.name.vova_in_mask_halloween26": "Som'o maayuwan",
   "skin.name.day_halloween26": "Day Halowiiniyaa 2026",
@@ -192,6 +203,7 @@
   "skin.name.ger_summer": "Ger Bonniyaa",
   "skin.name.ger_maid_skeleton": "Ger Oottiyaari Meqettaa",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Bettidaagaa",
   "cape.name.pan": "Injeeraa (Bashuwaa)",
   "cape.name.15th_anniversary": "15-tta Layttaa Baalaa",
@@ -238,6 +250,7 @@
   "cape.name.millionth_customer": "Miilooneentta Shammiyaagaa",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Pirizimariiniyaa",
+
   "emote.name.SPE_Get_scared": "Yayyiyoogaa",
   "emote.name.SPE_Ankha_Dance": "Ankha Durssaa (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn Eqquwaa (League of Legends)",
@@ -315,6 +328,7 @@
   "emote.name.SPE_Witch_Pose": "Bitaniyo Eqquwaa (Iita Aymuwaa)",
   "emote.name.SPE_Yandere_Pose": "Yandere Eqquwaa (Iita Aymuwaa)",
   "emote.name.SPE_Zoro_Pose": "Zoro Eqquwaa (Daro Salotaa) (One Piece)",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -329,7 +343,9 @@
   "person.Цыпляш": "Tsiplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "OORATTAA",
+
   "platform.title": "Oychchaa",
   "platform.enable": "Asaa garssan oychchaa wotta",
   "platform.block": "Bilookiyaa",
@@ -342,5 +358,12 @@
   "block.snow": "Shachchaa bilookiyaa",
   "block.planks": "Mittaa xaawulaa",
   "block.netherrack": "Nezerraakiyaa",
-  "block.end_stone": "End shuchchaa"
+  "block.end_stone": "End shuchchaa",
+
+  "bgimg.name.day": "Gallassa",
+  "bgimg.name.end": "Wurssetta",
+  "bgimg.name.nether": "Gaannamiya",
+  "bgimg.name.night": "Qamma",
+  "bgimg.name.snow": "Shachchaa",
+  "bgimg.name.sunset": "Awaa wulliyoogaa"
 }

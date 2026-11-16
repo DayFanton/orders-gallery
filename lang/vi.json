@@ -358,5 +358,12 @@
   "block.snow": "Khối tuyết",
   "block.planks": "Ván gỗ sồi",
   "block.netherrack": "Đá Nether",
-  "block.end_stone": "Đá End"
+  "block.end_stone": "Đá End",
+
+  "bgimg.name.day": "Ban ngày",
+  "bgimg.name.end": "The End",
+  "bgimg.name.nether": "Địa Ngục",
+  "bgimg.name.night": "Đêm",
+  "bgimg.name.snow": "Tuyết",
+  "bgimg.name.sunset": "Hoàng hôn"
 }
