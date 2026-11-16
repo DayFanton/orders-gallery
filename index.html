@@ -1128,6 +1128,19 @@
         .folder-icon-btn:hover { background: var(--accent); color: #111; }
         @media (hover: none) { .folder-del, .folder-icon-btn { opacity: 1; } }
 
+        /* Перестановка карточек (1.7.4): ручка сверху по центру всегда видна, чтобы возможность было видно и на сенсоре */
+        .folder-handle { position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 34px; height: 20px; padding: 0; display: flex; align-items: center; justify-content: center;
+            cursor: grab; touch-action: none; color: #fff; background: rgba(0, 0, 0, 0.7); border: 1px solid var(--border); border-radius: 10px;
+            opacity: 0.75; transition: opacity 0.15s ease, background 0.15s ease; }
+        .folder-handle svg { width: 14px; height: 14px; display: block; pointer-events: none; }
+        .folder-handle:hover { background: var(--accent); color: #111; }
+        .folder-card:hover .folder-handle, .folder-handle:focus-visible { opacity: 1; }
+        .folder-card.is-drag-source { opacity: 0.35; }
+        .folder-list.is-dragging, .folder-list.is-dragging * { cursor: grabbing !important; }
+        .folder-ghost { position: fixed !important; z-index: 100001; margin: 0 !important; box-sizing: border-box; pointer-events: none !important; transition: none !important;
+            opacity: 0.92; border-color: var(--accent); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6); transform: scale(1.05); }
+        .folder-ghost .folder-del, .folder-ghost .folder-icon-btn, .folder-ghost .folder-handle { display: none; }
+
         /* Эмоции: поиск и автор */
         .emote-search { flex-shrink: 0; }
         .emote-author { font-size: 0.7rem; color: var(--text-muted); }
@@ -1218,7 +1231,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.3</div>
+            <div class="site-version">v1.7.4</div>
         </div>
     </div>
 
@@ -1583,6 +1596,7 @@
             "blocks.empty": "No blocks yet - put textures into the blocks/ folder or add your own.",
             "folder.add": "Add",
             "folder.delete": "Delete",
+            "folder.reorder": "Drag to reorder (or use the ← → keys)",
             "folder.delete_confirm": "Delete \"%s\" from your folder?",
             "folder.empty": "Nothing here yet - press \"+\" to add your first file.",
             "folder.local_note": "Files are stored only in this browser.",
@@ -2792,10 +2806,14 @@
                 }));
             }
 
+            // Порядок карточек хранится в поле order; у записей, добавленных до версии 1.7.4, его нет - для них берётся id
+            const orderOf = (r) => (typeof r.order === 'number' ? r.order : r.id);
+            const byOrder = (a, b) => orderOf(a) - orderOf(b) || a.id - b.id;
+
             async function list(kind) {
-                if (!(await open())) return mem[kind].slice();
+                if (!(await open())) return mem[kind].slice().sort(byOrder);
                 const all = await request(kind, 'readonly', s => s.getAll());
-                return (all || []).sort((a, b) => a.id - b.id);
+                return (all || []).sort(byOrder);
             }
             async function get(kind, id) {
                 id = Number(id);
@@ -2805,6 +2823,7 @@
             async function add(kind, rec) {
                 rec = Object.assign({}, rec, { created: Date.now() });
                 delete rec.id;
+                rec.order = (await list(kind)).reduce((m, r) => Math.max(m, orderOf(r)), -1) + 1;      // новая запись - в конец
                 if (!(await open())) { rec.id = ++seq[kind]; mem[kind].push(rec); return rec; }
                 rec.id = await request(kind, 'readwrite', s => s.add(rec));
                 return rec;
@@ -2823,6 +2842,29 @@
                 if (!(await open())) { mem[kind] = mem[kind].filter(r => r.id !== id); return; }
                 await request(kind, 'readwrite', s => s.delete(id));
             }
+            // Сохраняет новый порядок: ids - id записей в нужной последовательности
+            async function reorder(kind, ids) {
+                const pos = new Map(ids.map((id, i) => [Number(id), i]));
+                if (!(await open())) {
+                    mem[kind].forEach(r => { if (pos.has(r.id)) r.order = pos.get(r.id); });
+                    return;
+                }
+                const db = await open();
+                await new Promise((resolve, reject) => {
+                    const tx = db.transaction(kind, 'readwrite');
+                    const req = tx.objectStore(kind).openCursor();
+                    req.onsuccess = () => {
+                        const cur = req.result;
+                        if (!cur) return;
+                        const rec = cur.value;
+                        if (pos.has(rec.id) && rec.order !== pos.get(rec.id)) { rec.order = pos.get(rec.id); cur.update(rec); }
+                        cur.continue();
+                    };
+                    tx.oncomplete = () => resolve();
+                    tx.onerror = () => reject(tx.error);
+                    tx.onabort = () => reject(tx.error);
+                });
+            }
             // Картинка фона версии 1.7.0 лежала в kv под ключом bgUpload - забираем её один раз
             async function takeLegacyBg() {
                 if (!(await open())) return null;
@@ -2832,7 +2874,7 @@
                 } catch (e) { /* нечего забирать */ }
                 return null;
             }
-            return { list, get, add, put, remove, takeLegacyBg, isPersistent: () => persistent };
+            return { list, get, add, put, remove, reorder, takeLegacyBg, isPersistent: () => persistent };
         })();
 
         /* ---------- Окно «моя папка» (одно на все разделы) ----------
@@ -2858,6 +2900,146 @@
                 if (!kind) return;
                 $('folderTitle').textContent = t(CFG[kind].title);
                 $('folderHint').textContent = t(CFG[kind].hint);
+            }
+
+            /* ---------- Перестановка карточек ----------
+               Мышь: тянуть можно за любое место карточки. Сенсор и перо: за ручку сверху (иначе список нельзя прокрутить пальцем).
+               Клавиатура: стрелки ← / → на ручке. Во время перетаскивания карточки не переносятся в DOM, а меняют CSS order -
+               так указатель не теряет захват. После отпускания DOM приводится в соответствие и порядок сохраняется в UserLib. */
+            const DRAG_THRESHOLD = 6;
+            let drag = null, suppressClick = false;
+            const isRtl = () => document.documentElement.dir === 'rtl';
+            const cardsOf = () => [...$('folderList').querySelectorAll('.folder-card')];
+            const paintOrder = (list) => list.forEach((c, i) => { c.style.order = i + 1; });    // у карточки «+» order = 0, она всегда первая
+
+            async function saveOrder(k, list) {
+                try { await UserLib.reorder(k, list.map(c => c.dataset.id)); }
+                catch (err) { console.error('[folder]', err); message(t('folder.error')); }
+            }
+
+            function moveCard(card, target, before) {
+                const list = drag.list, from = list.indexOf(card);
+                let to = list.indexOf(target) + (before ? 0 : 1);
+                if (from < to) to--;
+                if (from === to) return;
+                list.splice(from, 1);
+                list.splice(to, 0, card);
+                paintOrder(list);
+            }
+
+            // Что сейчас под указателем: карточка - ставим перед ней или после (по половине); пустое место после последней - в конец
+            function hitTest() {
+                const box = $('folderList'), el = document.elementFromPoint(drag.x, drag.y);
+                if (!el) return;
+                const target = el.closest('.folder-card');
+                if (target && target !== drag.card && box.contains(target)) {
+                    const r = target.getBoundingClientRect(), mid = r.left + r.width / 2;
+                    moveCard(drag.card, target, isRtl() ? drag.x > mid : drag.x < mid);
+                } else if (el === box) {
+                    const last = drag.list[drag.list.length - 1], r = last.getBoundingClientRect();
+                    if (drag.y > r.bottom || (drag.y >= r.top && (isRtl() ? drag.x < r.left : drag.x > r.right))) moveCard(drag.card, last, false);
+                }
+            }
+
+            // У верхнего и нижнего края списка он прокручивается сам
+            function autoScroll() {
+                if (!drag || !drag.started) return;
+                const box = $('folderList'), r = box.getBoundingClientRect(), edge = 56;
+                let dy = 0;
+                if (drag.y < r.top + edge) dy = -Math.ceil((r.top + edge - drag.y) / 4);
+                else if (drag.y > r.bottom - edge) dy = Math.ceil((drag.y - (r.bottom - edge)) / 4);
+                if (dy) { box.scrollTop += Math.max(-18, Math.min(18, dy)); hitTest(); }
+                drag.raf = requestAnimationFrame(autoScroll);
+            }
+
+            function startDrag() {
+                const box = $('folderList'), card = drag.card, r = card.getBoundingClientRect();
+                drag.started = true;
+                drag.offX = drag.x0 - r.left;
+                drag.offY = drag.y0 - r.top;
+                drag.list = cardsOf();
+                drag.orig = drag.list.slice();
+                paintOrder(drag.list);
+                const ghost = card.cloneNode(true);                 // «призрак» следует за указателем, а сама карточка остаётся на месте-заготовке
+                ghost.classList.remove('folder-card');
+                ghost.classList.add('folder-ghost');
+                ghost.style.width = r.width + 'px';
+                ghost.style.height = r.height + 'px';
+                ghost.style.left = r.left + 'px';
+                ghost.style.top = r.top + 'px';
+                box.appendChild(ghost);                              // внутри списка, чтобы работали стили превью (.folder-list ...)
+                drag.ghost = ghost;
+                card.classList.add('is-drag-source');
+                box.classList.add('is-dragging');
+                drag.raf = requestAnimationFrame(autoScroll);
+            }
+
+            function onMove(e) {
+                if (!drag || e.pointerId !== drag.pid) return;
+                drag.x = e.clientX;
+                drag.y = e.clientY;
+                if (!drag.started) {
+                    if (Math.hypot(drag.x - drag.x0, drag.y - drag.y0) < DRAG_THRESHOLD) return;
+                    startDrag();
+                }
+                drag.ghost.style.left = (drag.x - drag.offX) + 'px';
+                drag.ghost.style.top = (drag.y - drag.offY) + 'px';
+                hitTest();
+            }
+            const onUp = (e) => { if (drag && e.pointerId === drag.pid) finishDrag(e.type === 'pointercancel'); };
+
+            // cancel = true: вернуть исходный порядок (Escape, закрытие окна, прерывание браузером)
+            function finishDrag(cancel) {
+                const d = drag;
+                if (!d) return;
+                drag = null;
+                window.removeEventListener('pointermove', onMove);
+                window.removeEventListener('pointerup', onUp);
+                window.removeEventListener('pointercancel', onUp);
+                cancelAnimationFrame(d.raf);
+                if (!d.started) return;                              // движения не было - это обычный клик
+                suppressClick = true;                                // отпускание не должно ни выбрать карточку, ни закрыть окно
+                setTimeout(() => { suppressClick = false; }, 100);
+                d.ghost.remove();
+                const box = $('folderList');
+                box.classList.remove('is-dragging');
+                if (!d.card.isConnected) return;                     // список успел перерисоваться (например, при смене языка)
+                d.card.classList.remove('is-drag-source');
+                const list = cancel ? d.orig : d.list;
+                list.forEach(c => box.appendChild(c));
+                list.forEach(c => { c.style.order = ''; });
+                if (!cancel && list.some((c, i) => c !== d.orig[i])) saveOrder(d.kind, list);
+            }
+
+            function onCardDown(e, el) {
+                if (drag || e.button !== 0) return;
+                const onHandle = !!e.target.closest('.folder-handle');
+                if (!onHandle && (e.pointerType !== 'mouse' || e.target.closest('button, a'))) return;
+                drag = { kind, card: el, pid: e.pointerId, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, started: false };
+                window.addEventListener('pointermove', onMove);
+                window.addEventListener('pointerup', onUp);
+                window.addEventListener('pointercancel', onUp);
+            }
+
+            function makeHandle(el) {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'folder-handle';
+                b.title = t('folder.reorder');
+                b.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="6" r="1.8"/><circle cx="15" cy="6" r="1.8"/><circle cx="9" cy="12" r="1.8"/><circle cx="15" cy="12" r="1.8"/><circle cx="9" cy="18" r="1.8"/><circle cx="15" cy="18" r="1.8"/></svg>';
+                b.onclick = (e) => e.stopPropagation();              // клик по ручке не выбирает карточку
+                b.onkeydown = (e) => {
+                    const dir = e.key === 'ArrowLeft' ? -1 : (e.key === 'ArrowRight' ? 1 : 0);
+                    if (!dir) return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const list = cardsOf(), i = list.indexOf(el), j = i + (isRtl() ? -dir : dir);
+                    if (i < 0 || j < 0 || j >= list.length) return;
+                    $('folderList').insertBefore(el, j < i ? list[j] : list[j].nextSibling);
+                    b.focus();
+                    saveOrder(kind, cardsOf());
+                };
+                return b;
             }
 
             function makeCard(c, rec) {
@@ -2890,8 +3072,11 @@
                     if (c.onRemove) c.onRemove(rec);
                     render();
                 };
-                el.append(pic, name, del);
+                el.dataset.id = rec.id;
+                el.append(pic, name, del, makeHandle(el));
                 if (c.decorate) c.decorate(el, rec, render);
+                el.addEventListener('pointerdown', (e) => onCardDown(e, el));
+                el.addEventListener('dragstart', (e) => e.preventDefault());      // иначе браузер потащит картинку, а не карточку
                 el.onclick = () => { close(); c.pick(rec); };
                 return el;
             }
@@ -2940,6 +3125,7 @@
                 await render();
             }
             function close() {
+                finishDrag(true);
                 $('folderModal').classList.remove('show');
                 revokeAll();
                 token++;
@@ -2948,11 +3134,18 @@
 
             function init() {
                 $('folderClose').onclick = close;
+                // После перетаскивания браузер шлёт click (иногда на оверлей, если отпустили за панелью) - гасим его до остальных обработчиков
+                $('folderModal').addEventListener('click', (e) => {
+                    if (suppressClick) { suppressClick = false; e.stopImmediatePropagation(); e.preventDefault(); }
+                }, true);
                 $('folderModal').onclick = (e) => { if (e.target === $('folderModal')) close(); };
                 $('folderFile').onchange = (e) => { const files = [...e.target.files]; e.target.value = ''; onFiles(files); };
-                // Escape закрывает только верхнее окно (папку), а не всё сразу
+                // Escape закрывает только верхнее окно (папку), а не всё сразу; во время перетаскивания отменяет только его
                 window.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && isOpen()) { close(); e.stopImmediatePropagation(); }
+                    if (e.key === 'Escape' && isOpen()) {
+                        if (drag && drag.started) finishDrag(true); else close();
+                        e.stopImmediatePropagation();
+                    }
                 }, true);
             }
             init();
