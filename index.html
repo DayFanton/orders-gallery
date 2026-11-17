@@ -562,7 +562,7 @@
             font-size: 0.7rem;
             color: var(--text-muted);
             opacity: 0.4;
-            padding: 0 24px 16px 24px;
+            padding: 0 24px 4px 24px;
             background: rgba(0, 0, 0, 0.2);
             margin-top: -2px;
         }
@@ -975,7 +975,7 @@
                 background: rgba(11, 11, 13, 0.95);
             }
 
-            .site-version {
+            .site-disclaimer {
                 padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
             }
 
@@ -1315,6 +1315,13 @@
             #controls_panel .bg-selector-group { flex-shrink: 0; }
         }
 
+        /* ================= Версия 1.8.8 ================= */
+        /* Дисклеймер под версией, внизу левой панели. Тот же шрифт и цвет, что у версии, но крупнее (0.75rem) и заметнее (прозрачность 0.7 вместо 0.4).
+           Прозрачность стоит на тексте, а не на блоке, чтобы фон не светлел: фон версии 0.2 × её прозрачность 0.4 = 0.08, такой же у дисклеймера - без «ступеньки».
+           В узкой панели текст переносится на 2 строки. */
+        .site-disclaimer { flex-shrink: 0; padding: 0 24px 16px 24px; background: rgba(0, 0, 0, 0.08); }
+        .site-disclaimer > span { display: block; font-size: 0.75rem; line-height: 1.4; color: var(--text-muted); opacity: 0.7; overflow-wrap: anywhere; }
+
         /* ================= Версия 1.8.7 ================= */
         /* Телефон: во вкладке «Галерея» блок «Заказчик / Художник / Дата заказа» и версия больше не прибиты к низу панели,
            а идут в самом конце ленты: список и этот блок прокручиваются вместе. Шапка, вкладки и поиск остаются сверху. На ПК без изменений. */
@@ -1384,7 +1391,8 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.7</div>
+            <div class="site-version">v1.8.8</div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft. Не одобрен Mojang и Microsoft и не связан с ними.</span></div>
         </div>
     </div>
 
@@ -2008,7 +2016,9 @@
             "rename.style.n": "Underline",
             "rename.style.m": "Strikethrough",
             "rename.style.k": "Obfuscated",
-            "rename.style.r": "Reset"
+            "rename.style.r": "Reset",
+
+            "site.disclaimer": "Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft."
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2172,6 +2182,7 @@
             ['#blockGridHint', 'blocks.empty'],
             ['#folderEmpty', 'folder.empty'],
             ['#folderNote', 'folder.local_note'],
+            ['#siteDisclaimer', 'site.disclaimer'],
             ['#mcGuideTitle', 'rename.guide.title'],
             ['#mcGuideHow', 'rename.guide.how'],
             ['#mcGuideCodes', 'rename.guide.codes'],
