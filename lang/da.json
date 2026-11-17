@@ -441,5 +441,14 @@
 
   "credit.title": "Forfatter: %s",
 
-  "light.enable": "Belysning og skygger"
+  "light.enable": "Belysning og skygger",
+
+  "size.title": "Plantestørrelse",
+  "size.min": "Min. størrelse (blokke)",
+  "size.max": "Maks. størrelse (blokke)",
+  "size.step": "Højdetrin",
+  "size.wmin": "Vægt for min. størrelse",
+  "size.wmax": "Maksimal størrelsesvægt",
+  "size.tile": "Gentag tekstur",
+  "size.reset": "Nulstil"
 }

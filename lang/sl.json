@@ -439,5 +439,14 @@
 
   "credit.title": "Avtor: %s",
 
-  "light.enable": "Osvetlitev in sence"
+  "light.enable": "Osvetlitev in sence",
+
+  "size.title": "Velikost rastline",
+  "size.min": "Min. velikost (blokov)",
+  "size.max": "Maks. velikost (blokov)",
+  "size.step": "Korak višine",
+  "size.wmin": "Teža min. velikosti",
+  "size.wmax": "Teža največje velikosti",
+  "size.tile": "Ponavljaj teksturo",
+  "size.reset": "Ponastavi"
 }

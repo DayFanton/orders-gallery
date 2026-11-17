@@ -441,5 +441,14 @@
 
   "credit.title": "Manunulat: %s",
 
-  "light.enable": "Kasanag kag mga landong"
+  "light.enable": "Kasanag kag mga landong",
+
+  "size.title": "Kadakuon sang tanom",
+  "size.min": "Min. kadakuon (mga bloke)",
+  "size.max": "Maks. kadakuon (mga bloke)",
+  "size.step": "Tikang sang kataason",
+  "size.wmin": "Timbang sang min. kadakuon",
+  "size.wmax": "Timbang sang maximum nga kadakuon",
+  "size.tile": "Ulihona ang texture",
+  "size.reset": "I-reset"
 }

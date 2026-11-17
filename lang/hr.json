@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Osvjetljenje i sjene"
+  "light.enable": "Osvjetljenje i sjene",
+
+  "size.title": "Veličina biljke",
+  "size.min": "Min. veličina (blokovi)",
+  "size.max": "Maks. veličina (blokovi)",
+  "size.step": "Korak visine",
+  "size.wmin": "Težina min. veličine",
+  "size.wmax": "Težina maksimalne veličine",
+  "size.tile": "Ponavljaj teksturu",
+  "size.reset": "Poništi"
 }

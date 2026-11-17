@@ -441,5 +441,14 @@
 
   "credit.title": "作者：%s",
 
-  "light.enable": "光照與陰影"
+  "light.enable": "光照與陰影",
+
+  "size.title": "植物大小",
+  "size.min": "最小尺寸（方塊）",
+  "size.max": "最大尺寸（方塊）",
+  "size.step": "高度步長",
+  "size.wmin": "最小尺寸權重",
+  "size.wmax": "最大尺寸重量",
+  "size.tile": "重複紋理",
+  "size.reset": "重設"
 }

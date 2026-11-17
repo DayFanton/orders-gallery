@@ -441,5 +441,14 @@
 
   "credit.title": "Panulis: %s",
 
-  "light.enable": "Pencahayaan sareng kalangkang"
+  "light.enable": "Pencahayaan sareng kalangkang",
+
+  "size.title": "Ukuran tutuwuhan",
+  "size.min": "Ukuran min. (blok)",
+  "size.max": "Ukuran maks. (blok)",
+  "size.step": "Lengkah jangkung",
+  "size.wmin": "Beurat ukuran min.",
+  "size.wmax": "Beurat ukuran maksimal",
+  "size.tile": "Balikan tékstur",
+  "size.reset": "Setél deui"
 }

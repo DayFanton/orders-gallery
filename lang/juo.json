@@ -439,5 +439,14 @@
 
   "credit.title": "Mwandishi: %s",
 
-  "light.enable": "Ler kendo thim"
+  "light.enable": "Ler kendo thim",
+
+  "size.title": "Rem timbuli",
+  "size.min": "Rem piny (blok)",
+  "size.max": "Rem malo (blok)",
+  "size.step": "Rem malo thim",
+  "size.wmin": "Rem piny rem",
+  "size.wmax": "Mawun luru luru",
+  "size.tile": "Mawun luru luru",
+  "size.reset": "Mawun luru luru"
 }

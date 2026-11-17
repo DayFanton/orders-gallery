@@ -441,5 +441,14 @@
 
   "credit.title": "Författare: %s",
 
-  "light.enable": "Belysning och skuggor"
+  "light.enable": "Belysning och skuggor",
+
+  "size.title": "Växtstorlek",
+  "size.min": "Min. storlek (block)",
+  "size.max": "Max. storlek (block)",
+  "size.step": "Högsteg",
+  "size.wmin": "Vikt för min. storlek",
+  "size.wmax": "Maximal storleksvikt",
+  "size.tile": "Upprepa textur",
+  "size.reset": "Återställ"
 }

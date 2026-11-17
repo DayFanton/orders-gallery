@@ -439,5 +439,14 @@
 
   "credit.title": "Umbhali: %s",
 
-  "light.enable": "Kukhatsata nettfuni"
+  "light.enable": "Kukhatsata nettfuni",
+
+  "size.title": "Bubungaka besitjalwa",
+  "size.min": "Bubungaka lobuncane (emabhulokhi)",
+  "size.max": "Bubungaka lobukhulu (emabhulokhi)",
+  "size.step": "Linyathelo lebude",
+  "size.wmin": "Kusebenta kwebubungaka lobuncane",
+  "size.wmax": "Bundzima besayizi lenkhulu kakhulu",
+  "size.tile": "Phinda sakhiwo",
+  "size.reset": "Setha futsi"
 }

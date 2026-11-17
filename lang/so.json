@@ -441,5 +441,14 @@
 
   "credit.title": "Qoraaga: %s",
 
-  "light.enable": "Iftiinka iyo hoosaska"
+  "light.enable": "Iftiinka iyo hoosaska",
+
+  "size.title": "Cabirka dhirta",
+  "size.min": "Cabirka ugu yar (blocks)",
+  "size.max": "Cabirka ugu weyn (blocks)",
+  "size.step": "Tallaabada dhererka",
+  "size.wmin": "Miisaanka cabirka ugu yar",
+  "size.wmax": "Miisaanka cabbirka ugu badan",
+  "size.tile": "Ku celi habka",
+  "size.reset": "Dib u deji"
 }

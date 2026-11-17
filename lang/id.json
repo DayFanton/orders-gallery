@@ -441,5 +441,14 @@
 
   "credit.title": "Penulis: %s",
 
-  "light.enable": "Pencahayaan dan bayangan"
+  "light.enable": "Pencahayaan dan bayangan",
+
+  "size.title": "Ukuran tanaman",
+  "size.min": "Ukuran min. (blok)",
+  "size.max": "Ukuran maks. (blok)",
+  "size.step": "Langkah ketinggian",
+  "size.wmin": "Bobot ukuran min.",
+  "size.wmax": "Berat ukuran maksimal",
+  "size.tile": "Ulangi tekstur",
+  "size.reset": "Atur ulang"
 }

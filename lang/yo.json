@@ -441,5 +441,14 @@
 
   "credit.title": "Olùkọ̀wé: %s",
 
-  "light.enable": "Imọlẹ ati awọn ojiji"
+  "light.enable": "Imọlẹ ati awọn ojiji",
+
+  "size.title": "Iwọn ohun ọgbin",
+  "size.min": "Iwọn kérésí (àwọn bọ́ọ̀lù)",
+  "size.max": "Iwọn tó pọ̀ jùlọ (àwọn bọ́ọ̀lù)",
+  "size.step": "Ìgbésẹ̀ gíga",
+  "size.wmin": "Ìwọ̀n ìwọ̀n kérésí",
+  "size.wmax": "Ìwọ̀n ìwọ̀n tí o pọ̀ jùlọ",
+  "size.tile": "Tún ẹ̀rọ ṣe",
+  "size.reset": "Tún unṣe"
 }

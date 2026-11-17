@@ -439,5 +439,14 @@
 
   "credit.title": "Mannurat: %s",
 
-  "light.enable": "Lawag ken siled"
+  "light.enable": "Lawag ken siled",
+
+  "size.title": "Dakdakkel ti mula",
+  "size.min": "Min. a dakdakkel (mga bloke)",
+  "size.max": "Maks. a dakdakkel (mga bloke)",
+  "size.step": "Addang ti katayag",
+  "size.wmin": "Timbang ti min. a dakdakkel",
+  "size.wmax": "Timbang ti maximum a kadakkel",
+  "size.tile": "Ulingen ti tekstura",
+  "size.reset": "I-reset"
 }

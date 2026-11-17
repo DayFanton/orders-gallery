@@ -439,5 +439,14 @@
 
   "credit.title": "Szerző: %s",
 
-  "light.enable": "Megvilágítás és árnyékok"
+  "light.enable": "Megvilágítás és árnyékok",
+
+  "size.title": "Növényméret",
+  "size.min": "Min. méret (blokkok)",
+  "size.max": "Max. méret (blokkok)",
+  "size.step": "Magasságlépés",
+  "size.wmin": "Min. méret súlya",
+  "size.wmax": "Maximális méret súlya",
+  "size.tile": "Textúra ismétlése",
+  "size.reset": "Alaphelyzet"
 }

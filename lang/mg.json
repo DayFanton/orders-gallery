@@ -439,5 +439,14 @@
 
   "credit.title": "Mpanoratra: %s",
 
-  "light.enable": "Jiro sy aloka"
+  "light.enable": "Jiro sy aloka",
+
+  "size.title": "Haben'ny zavamaniry",
+  "size.min": "Haben'ny kely indrindra (biriky)",
+  "size.max": "Haben'ny lehibe indrindra (biriky)",
+  "size.step": "Dingana haavo",
+  "size.wmin": "Lanjan'ny habeny kely indrindra",
+  "size.wmax": "Lanja ny habeny lehibe indrindra",
+  "size.tile": "Avereno ny endrika",
+  "size.reset": "Averina"
 }

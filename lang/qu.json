@@ -439,5 +439,14 @@
 
   "credit.title": "Qillqaq: %s",
 
-  "light.enable": "K'anchaypas llanthupas"
+  "light.enable": "K'anchaypas llanthupas",
+
+  "size.title": "Sach'ap huñun",
+  "size.min": "Pisi sayay (t'uqukuna)",
+  "size.max": "Hatun sayay (t'uqukuna)",
+  "size.step": "Sayay patak",
+  "size.wmin": "Pisi sayaypa llasaynin",
+  "size.wmax": "Aswan hatun sayaypa llasaynin",
+  "size.tile": "Tukuyninta kutipay",
+  "size.reset": "Kutichiy"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Oświetlenie i cienie"
+  "light.enable": "Oświetlenie i cienie",
+
+  "size.title": "Rozmiar rośliny",
+  "size.min": "Min. rozmiar (bloki)",
+  "size.max": "Maks. rozmiar (bloki)",
+  "size.step": "Krok wysokości",
+  "size.wmin": "Waga min. rozmiaru",
+  "size.wmax": "Waga maksymalnego rozmiaru",
+  "size.tile": "Powtórz teksturaturowanie",
+  "size.reset": "Resetuj"
 }

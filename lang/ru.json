@@ -22,17 +22,20 @@
   "veg.dice": "Перемешать",
   "veg.plants": "Растения",
   "veg.tint": "Цвет растения",
+
   "block.tint": "Цвет блока",
+
   "credit.title": "Автор: %s",
+
   "folder.tint": "Цвет (белый — без оттенка)",
   "folder.weight": "Вес (как часто выпадает)",
+
   "veg.density": "Плотность",
   "veg.layers": "Где растёт растительность",
   "veg.layer1": "Верхняя платформа",
   "veg.layer2": "Средняя платформа",
   "veg.layer3": "Нижняя платформа",
   "veg.empty": "Растений пока нет — добавьте их в vegetation/vegetation.json или загрузите свои",
-
   "veg.name.grass": "Трава",
   "veg.name.tall_grass": "Высокая трава",
   "veg.name.pale_moss_carpet_side_small": "Бледный мох (низкий)",
@@ -393,16 +396,20 @@
   "badge.new": "НОВОЕ",
 
   "platform.title": "Платформа и освещение",
+
   "light.enable": "Освещение и тени",
+
   "size.title": "Размер растения",
   "size.min": "Мин. размер (блоков)",
   "size.max": "Макс. размер (блоков)",
-  "size.step": "Шаг размера",
+  "size.step": "Шаг размера по высоте",
   "size.wmin": "Вес мин. размера",
   "size.wmax": "Вес макс. размера",
   "size.tile": "Повторять текстуру",
   "size.reset": "Сбросить",
+
   "veg.weight": "Вес (как часто выпадает)",
+
   "platform.enable": "Поставь платформу под персонажа",
   "platform.block": "Блок",
   "platform.time": "Время суток",

@@ -441,5 +441,14 @@
 
   "credit.title": "Olom: %s",
 
-  "light.enable": "Udu maro"
+  "light.enable": "Udu maro",
+
+  "size.title": "Pudi kapa",
+  "size.min": "Mudi kichi (blok)",
+  "size.max": "Mudi bada (blok)",
+  "size.step": "Mudi kani isilani",
+  "size.wmin": "Mudi kichi muri",
+  "size.wmax": "Gidigidi boro",
+  "size.tile": "Nene texture",
+  "size.reset": "Nene lalo"
 }

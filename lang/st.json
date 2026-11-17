@@ -439,5 +439,14 @@
 
   "credit.title": "Mongoli: %s",
 
-  "light.enable": "Leseli le moriti"
+  "light.enable": "Leseli le moriti",
+
+  "size.title": "Boholo ba semela",
+  "size.min": "Boholo bo bnyenyane (dikotoana)",
+  "size.max": "Boholo bo boholo (dikotoana)",
+  "size.step": "Mohato wa bophahamo",
+  "size.wmin": "Boima ba boholo bo bonyenyane",
+  "size.wmax": "Boima ba boholo bo phahameng fetisisa",
+  "size.tile": "Pheta sebopeho",
+  "size.reset": "Theha botjha"
 }

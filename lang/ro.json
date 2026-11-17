@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Iluminat și umbre"
+  "light.enable": "Iluminat și umbre",
+
+  "size.title": "Dimensiunea plantei",
+  "size.min": "Dim. min. (blocuri)",
+  "size.max": "Dim. max. (blocuri)",
+  "size.step": "Pasul de înălțime",
+  "size.wmin": "Ponderea dim. min.",
+  "size.wmax": "Greutatea dimensiunii maxime",
+  "size.tile": "Repetă textura",
+  "size.reset": "Resetează"
 }

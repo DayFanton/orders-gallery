@@ -439,5 +439,14 @@
 
   "credit.title": "Mokomi: %s",
 
-  "light.enable": "Pole na molili"
+  "light.enable": "Pole na molili",
+
+  "size.title": "Monene ya eloko",
+  "size.min": "Monene moke (biloko)",
+  "size.max": "Monene mpenza (biloko)",
+  "size.step": "Etambe ya molai",
+  "size.wmin": "Bopekwani ya monene moke",
+  "size.wmax": "Kilo ya bonene ya likolo",
+  "size.tile": "Zongela lolenge",
+  "size.reset": "Bongola"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Tác giả: %s",
 
-  "light.enable": "Ánh sáng và bóng đổ"
+  "light.enable": "Ánh sáng và bóng đổ",
+
+  "size.title": "Kích thước cây",
+  "size.min": "Kích thước tối thiểu (khối)",
+  "size.max": "Kích thước tối đa (khối)",
+  "size.step": "Bước chiều cao",
+  "size.wmin": "Trọng số kích thước tối thiểu",
+  "size.wmax": "Trọng lượng kích thước tối đa",
+  "size.tile": "Lặp lại kết cấu",
+  "size.reset": "Đặt lại"
 }

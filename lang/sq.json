@@ -441,5 +441,14 @@
 
   "credit.title": "Autori: %s",
 
-  "light.enable": "Ndriçimi dhe hijet"
+  "light.enable": "Ndriçimi dhe hijet",
+
+  "size.title": "Madhësia e bimës",
+  "size.min": "Madhësia min. (blloqe)",
+  "size.max": "Madhësia maks. (blloqe)",
+  "size.step": "Hapi i lartësisë",
+  "size.wmin": "Pesha e madhësisë min.",
+  "size.wmax": "Pesha e madhësisë maksimale",
+  "size.tile": "Përsërit strukturën",
+  "size.reset": "Rivendos"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Msoniki: %s",
 
-  "light.enable": "Ntemo ti mfula"
+  "light.enable": "Ntemo ti mfula",
+
+  "size.title": "Mfunu ya nti",
+  "size.min": "Mfunu moke (bima)",
+  "size.max": "Mfunu nene (bima)",
+  "size.step": "Ntantulu ya ndai",
+  "size.wmin": "Mfunu ya mfunu moke",
+  "size.wmax": "Mbuya ya nene ya luta",
+  "size.tile": "Vutula nsadukilu",
+  "size.reset": "Vutula diaka"
 }

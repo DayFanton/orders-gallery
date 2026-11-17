@@ -439,5 +439,14 @@
 
   "credit.title": "Mlembi: %s",
 
-  "light.enable": "Kukwakanya ni misi"
+  "light.enable": "Kukwakanya ni misi",
+
+  "size.title": "Ukulu wa mtengo",
+  "size.min": "Ukulu wandende (miburoko)",
+  "size.max": "Ukulu waukulu (miburoko)",
+  "size.step": "Ndandala ya ukulu wa kulayi",
+  "size.wmin": "Ulemu wa ukulu wandende",
+  "size.wmax": "Uzito wa ukubwa mkubwa",
+  "size.tile": "Rudia muundo",
+  "size.reset": "Weka upya"
 }

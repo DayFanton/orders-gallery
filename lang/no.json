@@ -441,5 +441,14 @@
 
   "credit.title": "Forfatter: %s",
 
-  "light.enable": "Belysning og skygger"
+  "light.enable": "Belysning og skygger",
+
+  "size.title": "Plantestørrelse",
+  "size.min": "Min. størrelse (blokker)",
+  "size.max": "Maks. størrelse (blokker)",
+  "size.step": "Høydeskritt",
+  "size.wmin": "Vekt for min. størrelse",
+  "size.wmax": "Maksimal størrelsesvekt",
+  "size.tile": "Gjenta tekstur",
+  "size.reset": "Tilbakestill"
 }

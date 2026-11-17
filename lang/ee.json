@@ -441,5 +441,14 @@
 
   "credit.title": "Ŋlɔla: %s",
 
-  "light.enable": "Kekeli kple vɔvɔ"
+  "light.enable": "Kekeli kple vɔvɔ",
+
+  "size.title": "Atikplɔ̀ ƒe gãɣi",
+  "size.min": "Kpekpeme sue (blokwo)",
+  "size.max": "Kpekpeme gã (blokwo)",
+  "size.step": "Kɔ̀ ƒe nyɔƒe zɔzɔ",
+  "size.wmin": "Kpekpeme kpekpeme sue",
+  "size.wmax": "Kpekpeme gã tɔ",
+  "size.tile": "Gbugbɔ nɔnɔmetata la wɔwɔ",
+  "size.reset": "Trɔ ɖo ŋgɔ"
 }

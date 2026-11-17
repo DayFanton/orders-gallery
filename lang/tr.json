@@ -441,5 +441,14 @@
 
   "credit.title": "Yazar: %s",
 
-  "light.enable": "Işıklandırma ve gölgeler"
+  "light.enable": "Işıklandırma ve gölgeler",
+
+  "size.title": "Bitki boyutu",
+  "size.min": "Min. boyut (blok)",
+  "size.max": "Maks. boyut (blok)",
+  "size.step": "Yükseklik adımı",
+  "size.wmin": "Min. boyut ağırlığı",
+  "size.wmax": "Maksimum boyut ağırlığı",
+  "size.tile": "Dokuyu tekrarla",
+  "size.reset": "Sıfırla"
 }

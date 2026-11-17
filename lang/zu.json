@@ -439,5 +439,14 @@
 
   "credit.title": "Umbhali: %s",
 
-  "light.enable": "Ukukhanya nezithunzi"
+  "light.enable": "Ukukhanya nezithunzi",
+
+  "size.title": "Usayizi wesitshalo",
+  "size.min": "Usayizi omncane (amabhulokhi)",
+  "size.max": "Usayizi omkhulu (amabhulokhi)",
+  "size.step": "Isinyathelo sokuphakama",
+  "size.wmin": "Isisindo sosayizi omncane",
+  "size.wmax": "Isisindo sosuku esiphezulu",
+  "size.tile": "Phinda isakhiwo",
+  "size.reset": "Setha kabusha"
 }

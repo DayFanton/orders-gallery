@@ -441,5 +441,14 @@
 
   "credit.title": "Odee: %s",
 
-  "light.enable": "Ìhè na onyinyo"
+  "light.enable": "Ìhè na onyinyo",
+
+  "size.title": "Ogo osisi",
+  "size.min": "Ogo kacha nta (mgbachi)",
+  "size.max": "Ogo kacha ukwuu (mgbachi)",
+  "size.step": "Nzọụkwụ elu",
+  "size.wmin": "Ibu ogo kacha nta",
+  "size.wmax": "Ibu nke kachasị ukwuu",
+  "size.tile": "Emeghachi textures",
+  "size.reset": "Tọgharịa"
 }

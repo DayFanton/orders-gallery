@@ -441,5 +441,14 @@
 
   "credit.title": "Müəllif: %s",
 
-  "light.enable": "İşıqlandırma və kölgələr"
+  "light.enable": "İşıqlandırma və kölgələr",
+
+  "size.title": "Bitki ölçüsü",
+  "size.min": "Min. ölçü (bloklar)",
+  "size.max": "Maks. ölçü (bloklar)",
+  "size.step": "Hündürlük addımı",
+  "size.wmin": "Min. ölçü çəkisi",
+  "size.wmax": "Maksimum ölçünün çəkisi",
+  "size.tile": "Teksturanı təkrarla",
+  "size.reset": "Sıfırla"
 }

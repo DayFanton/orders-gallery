@@ -439,5 +439,14 @@
 
   "credit.title": "Umoneki: %s",
 
-  "light.enable": "Ukuvela locili"
+  "light.enable": "Ukuvela locili",
+
+  "size.title": "Unene wosila",
+  "size.min": "Unene utito (olovloke)",
+  "size.max": "Unene unene (olovloke)",
+  "size.step": "Elau liwa liokuvela",
+  "size.wmin": "Ocilemo cunene utito",
+  "size.wmax": "Ocilemo cukulu cilemo",
+  "size.tile": "Kuvelula olonene",
+  "size.reset": "Vyingula vali"
 }

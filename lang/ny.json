@@ -441,5 +441,14 @@
 
   "credit.title": "Wolemba: %s",
 
-  "light.enable": "Kuunikira ndi mthunzi"
+  "light.enable": "Kuunikira ndi mthunzi",
+
+  "size.title": "Kukula kwa chiyengedwe",
+  "size.min": "Kukula kochepa (mabulu)",
+  "size.max": "Kukula kwakukulu (mabulu)",
+  "size.step": "Gawo la kutalika",
+  "size.wmin": "Kulemera kwa kukula kochepa",
+  "size.wmax": "Kulemera kwa kukula kwakukulu",
+  "size.tile": "Bwereza mawonekedwe",
+  "size.reset": "Bwezeretsani"
 }

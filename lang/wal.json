@@ -441,5 +441,14 @@
 
   "credit.title": "Ayissiya: %s",
 
-  "light.enable": "Pacca nna shiiqqo"
+  "light.enable": "Pacca nna shiiqqo",
+
+  "size.title": "Misa gita",
+  "size.min": "Misa guuti (boolokkuwa)",
+  "size.max": "Misa gita (boolokkuwa)",
+  "size.step": "Haycho isa",
+  "size.wmin": "Misa guuti ullo",
+  "size.wmax": "Duriya gita woshsha",
+  "size.tile": "Zaare texture",
+  "size.reset": "Zaare minsha"
 }

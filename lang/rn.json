@@ -441,5 +441,14 @@
 
   "credit.title": "Umwanditsi: %s",
 
-  "light.enable": "Umuco n'ibikīri"
+  "light.enable": "Umuco n'ibikīri",
+
+  "size.title": "Ubunini bw'ikimera",
+  "size.min": "Ubunini buke (ibiblock)",
+  "size.max": "Ubunini bunini (ibiblock)",
+  "size.step": "Intambwe y'uburebure",
+  "size.wmin": "Uburemere bw'ubunini buke",
+  "size.wmax": "Uburemere bw'ingano nini",
+  "size.tile": "Subiramwo imiterere",
+  "size.reset": "Subira utangure"
 }

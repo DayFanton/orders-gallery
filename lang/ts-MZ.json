@@ -441,5 +441,14 @@
 
   "credit.title": "Mutsari: %s",
 
-  "light.enable": "Ku voninga na mimuri"
+  "light.enable": "Ku voninga na mimuri",
+
+  "size.title": "Vukulu bya ximilana",
+  "size.min": "Vukulu bya le hansi (tinhlangano)",
+  "size.max": "Vukulu bya le henhla (tinhlangano)",
+  "size.step": "Mpfato wa ku leha",
+  "size.wmin": "Vuleki bya vukulu bya le hansi",
+  "size.wmax": "Vule ra ntshontsho lowukulu",
+  "size.tile": "Pheta xiyimo",
+  "size.reset": "Riseta"
 }

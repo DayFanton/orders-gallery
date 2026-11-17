@@ -439,5 +439,14 @@
 
   "credit.title": "Umbhali: %s",
 
-  "light.enable": "Ukukhanya nezithunzi"
+  "light.enable": "Ukukhanya nezithunzi",
+
+  "size.title": "Ubungakanani besityalo",
+  "size.min": "Ubungakanani obuncinci (ebhloki)",
+  "size.max": "Ubungakanani obukhulu (ebhloki)",
+  "size.step": "Inyathelo lokuphakama",
+  "size.wmin": "Ubunzima bobungakanani obuncinci",
+  "size.wmax": "Ubunzima bobukhulu obuphezulu",
+  "size.tile": "Phinda ubume",
+  "size.reset": "Setha kwakhona"
 }

@@ -439,5 +439,14 @@
 
   "credit.title": "Kyerɛwfo: %s",
 
-  "light.enable": "Adehyɛ ne nsensanee"
+  "light.enable": "Adehyɛ ne nsensanee",
+
+  "size.title": "Nnuraba kɛse",
+  "size.min": "Nsɛse kɛse (mpɛntɛn)",
+  "size.max": "Nsɛse kɛse (mpɛntɛn)",
+  "size.step": "Tenten kwan",
+  "size.wmin": "Nsɛse kɛse mu duru",
+  "size.wmax": "Sɛ sɛbea kɛse no mu duru",
+  "size.tile": "San yɛ texture no bio",
+  "size.reset": "Sane hyɛ ase"
 }

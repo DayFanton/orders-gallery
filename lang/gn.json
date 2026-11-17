@@ -441,5 +441,14 @@
 
   "credit.title": "Tihaihára: %s",
 
-  "light.enable": "Tendyva ha tytia"
+  "light.enable": "Tendyva ha tytia",
+
+  "size.title": "Ñande ka'avo tuicha",
+  "size.min": "Tembiru miveve (bloke)",
+  "size.max": "Tembiru tuichavéva (bloke)",
+  "size.step": "Yvate reko",
+  "size.wmin": "Tembiru miveve pohýi",
+  "size.wmax": "Pyahue guasu mba'epuru",
+  "size.tile": "Mbojuepy jey",
+  "size.reset": "Mombojey"
 }

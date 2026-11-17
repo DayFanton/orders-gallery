@@ -441,5 +441,14 @@
 
   "credit.title": "作者: %s",
 
-  "light.enable": "ライティングと影"
+  "light.enable": "ライティングと影",
+
+  "size.title": "植物のサイズ",
+  "size.min": "最小サイズ（ブロック）",
+  "size.max": "最大サイズ（ブロック）",
+  "size.step": "高さステップ",
+  "size.wmin": "最小サイズの重み",
+  "size.wmax": "最大サイズの重量",
+  "size.tile": "テクスチャを繰り返す",
+  "size.reset": "リセット"
 }

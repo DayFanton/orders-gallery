@@ -441,5 +441,14 @@
 
   "credit.title": "Awdur: %s",
 
-  "light.enable": "Golau a chysgodion"
+  "light.enable": "Golau a chysgodion",
+
+  "size.title": "Maint y planhigyn",
+  "size.min": "Maint min. (blociau)",
+  "size.max": "Maint mwyaf (blociau)",
+  "size.step": "Cam uchder",
+  "size.wmin": "Pwysau'r maint lleiaf",
+  "size.wmax": "Pwysau maint mwyaf",
+  "size.tile": "Ailadrodd gwead",
+  "size.reset": "Ailosod"
 }

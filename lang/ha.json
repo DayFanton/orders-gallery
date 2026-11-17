@@ -441,5 +441,14 @@
 
   "credit.title": "Marubuci: %s",
 
-  "light.enable": "Haske da inuwa"
+  "light.enable": "Haske da inuwa",
+
+  "size.title": "Girman shuka",
+  "size.min": "Karamin girman (tubalan)",
+  "size.max": "Mafi girman girma (tubalan)",
+  "size.step": "Matakin tsayi",
+  "size.wmin": "Nauyin karamin girma",
+  "size.wmax": "Nauyin girman matsakaici",
+  "size.tile": "Maimaita laushi",
+  "size.reset": "Sake saiti"
 }

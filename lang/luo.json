@@ -441,5 +441,14 @@
 
   "credit.title": "Jawinjoga: %s",
 
-  "light.enable": "Ler gi kijuogi"
+  "light.enable": "Ler gi kijuogi",
+
+  "size.title": "Pimo mar yien",
+  "size.min": "Pimo matin (blɔk)",
+  "size.max": "Pimo maduong' (blɔk)",
+  "size.step": "Nyiego mar kor",
+  "size.wmin": "Pimo mar pimo matin",
+  "size.wmax": "Lit mar mwandu madonge",
+  "size.tile": "Dok gi nonro",
+  "size.reset": "Cheno kendo"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Author: %s",
 
-  "light.enable": "Raushni aur chhaya"
+  "light.enable": "Raushni aur chhaya",
+
+  "size.title": "Paudha ka aakar",
+  "size.min": "Sab se chhota aakar (blocks)",
+  "size.max": "Sab se bada aakar (blocks)",
+  "size.step": "Uchai ka step",
+  "size.wmin": "Sab se chhota aakar ka wajan",
+  "size.wmax": "Max size weight",
+  "size.tile": "Texture ke repeat karo",
+  "size.reset": "Reset karo"
 }

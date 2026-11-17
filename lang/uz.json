@@ -441,5 +441,14 @@
 
   "credit.title": "Muallif: %s",
 
-  "light.enable": "Yoritish va soyalar"
+  "light.enable": "Yoritish va soyalar",
+
+  "size.title": "O‘simlik o‘lchami",
+  "size.min": "Min. oʻlcham (bloklar)",
+  "size.max": "Maks. oʻlcham (bloklar)",
+  "size.step": "Balandlik qadami",
+  "size.wmin": "Min. oʻlcham vazni",
+  "size.wmax": "Maksimal o'lcham og'irligi",
+  "size.tile": "Texturani takrorlash",
+  "size.reset": "Qayta o'rnatish"
 }

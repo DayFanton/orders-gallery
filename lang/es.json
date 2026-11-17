@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Iluminación y sombras"
+  "light.enable": "Iluminación y sombras",
+
+  "size.title": "Tamaño de la planta",
+  "size.min": "Tamaño mín. (bloques)",
+  "size.max": "Tamaño máx. (bloques)",
+  "size.step": "Paso de altura",
+  "size.wmin": "Peso del tamaño mín.",
+  "size.wmax": "Peso del tamaño máximo",
+  "size.tile": "Repetir textura",
+  "size.reset": "Restablecer"
 }

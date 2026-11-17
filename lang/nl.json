@@ -439,5 +439,14 @@
 
   "credit.title": "Auteur: %s",
 
-  "light.enable": "Verlichting en schaduwen"
+  "light.enable": "Verlichting en schaduwen",
+
+  "size.title": "Plantgrootte",
+  "size.min": "Min. grootte (blokken)",
+  "size.max": "Max. grootte (blokken)",
+  "size.step": "Hoogtestap",
+  "size.wmin": "Gewicht min. grootte",
+  "size.wmax": "Gewicht van de maximale maat",
+  "size.tile": "Textuur herhalen",
+  "size.reset": "Resetten"
 }

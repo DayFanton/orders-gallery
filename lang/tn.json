@@ -441,5 +441,14 @@
 
   "credit.title": "Mokwadi: %s",
 
-  "light.enable": "Lesedi le moriti"
+  "light.enable": "Lesedi le moriti",
+
+  "size.title": "Bogolo jwa dimela",
+  "size.min": "Bogolo jo bnyenyane (ditepisi)",
+  "size.max": "Bogolo jo bogolo (ditepisi)",
+  "size.step": "Kgato ya bophara",
+  "size.wmin": "Boima jwa bogolo jo bonnye",
+  "size.wmax": "Bokete jwa bogolo jo bo kwa godimo",
+  "size.tile": "Pheta sebopeho",
+  "size.reset": "Dira gape"
 }

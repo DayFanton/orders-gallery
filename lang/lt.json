@@ -441,5 +441,14 @@
 
   "credit.title": "Autorius: %s",
 
-  "light.enable": "Apšvietimas ir šešėliai"
+  "light.enable": "Apšvietimas ir šešėliai",
+
+  "size.title": "Augalo dydis",
+  "size.min": "Min. dydis (blokai)",
+  "size.max": "Maks. dydis (blokai)",
+  "size.step": "Aukščio žingsnis",
+  "size.wmin": "Min. dydžio svoris",
+  "size.wmax": "Didžiausio dydžio svoris",
+  "size.tile": "Kartoti tekstūrą",
+  "size.reset": "Atstatīt"
 }

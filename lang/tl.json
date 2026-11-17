@@ -441,5 +441,14 @@
 
   "credit.title": "May-akda: %s",
 
-  "light.enable": "Liwanag at mga anino"
+  "light.enable": "Liwanag at mga anino",
+
+  "size.title": "Sukat ng halaman",
+  "size.min": "Min. sukat (mga bloke)",
+  "size.max": "Maks. sukat (mga bloke)",
+  "size.step": "Hakbang ng taas",
+  "size.wmin": "Timbang ng min. sukat",
+  "size.wmax": "Timbang ng maximum na sukat",
+  "size.tile": "Ulitin ang texture",
+  "size.reset": "I-reset"
 }

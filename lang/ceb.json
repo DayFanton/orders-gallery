@@ -439,5 +439,14 @@
 
   "credit.title": "Awtor: %s",
 
-  "light.enable": "Suga ug mga anino"
+  "light.enable": "Suga ug mga anino",
+
+  "size.title": "Gidak-on sa tanom",
+  "size.min": "Min. gidak-on (mga bloke)",
+  "size.max": "Maks. gidak-on (mga bloke)",
+  "size.step": "Lakang sa gitas-on",
+  "size.wmin": "Timbang sa min. gidak-on",
+  "size.wmax": "Timbang sa maximum nga gidak-on",
+  "size.tile": "Sublia ang texture",
+  "size.reset": "I-reset"
 }

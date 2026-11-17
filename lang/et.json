@@ -439,5 +439,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Valgustus ja varjud"
+  "light.enable": "Valgustus ja varjud",
+
+  "size.title": "Taimede suurus",
+  "size.min": "Min suurus (plokki)",
+  "size.max": "Maks. suurus (plokki)",
+  "size.step": "Kõrguse samm",
+  "size.wmin": "Min. suuruse kaal",
+  "size.wmax": "Maksimaalse suuruse kaal",
+  "size.tile": "Korrata tekstuuri",
+  "size.reset": "Lähtesta"
 }

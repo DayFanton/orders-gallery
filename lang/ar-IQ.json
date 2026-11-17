@@ -18,9 +18,11 @@
   "language.confirm_text": "هل أنت متأكد أنك تريد إخفاء جميع اللغات غير المحددة؟",
   "language.confirm_yes": "نعم، إخفاء",
   "language.show_in_list": "عرض اللغة في القائمة العامة",
+
   "site.title": "معرض تسيبلياش",
   "gallery.title": "المعرض",
   "loading.text": "جاري تحميل وحدات العرض...",
+
   "sort.title": "ترتيب",
   "sort.default": "حسب الافتراضي",
   "sort.author": "حسب المؤلف",
@@ -33,6 +35,7 @@
   "tab.skins": "السكينات",
   "tab.capes": "العباءات",
   "search.placeholder": "بحث بالاسم، الزبون، المؤلف...",
+
   "meta.customer": "الزبون",
   "meta.artist": "الرسام",
   "meta.date": "تاريخ الطلب",
@@ -40,11 +43,13 @@
   "meta.date_unset": "غير محدد",
   "meta.show_orders": "عرض كل الطلبات من %s",
   "meta.open_author": "فتح صفحة المؤلف (%s)",
+
   "skin.untitled": "بدون عنوان",
   "skin.type": "النوع: %s",
   "skin.has_variations": "يوجد تنوعات",
   "variation.original": "الأصلي",
   "cape.remove": "إزالة العباءة",
+
   "controls.reset": "إعادة ضبط",
   "rotate.title": "دوران",
   "rotate.enable": "تدوير النموذج",
@@ -61,6 +66,7 @@
   "layers.body": "اللباس الخارجي / الدرع",
   "acc.title": "الإكسسوارات",
   "acc.elytra": "عرض الإليترا",
+
   "emote.button": "المشاعر",
   "emote.title": "المشاعر",
   "emote.hint": "اختر حركة مشاعر أو افتح \"مشاعري\" لإضافة مشاعرك الخاصة",
@@ -70,6 +76,7 @@
   "emote.error": "تعذر قراءة ملف المشاعر هذا",
   "emote.playing": "قيد التشغيل: %s",
   "emote.close": "إغلاق",
+
   "bg.title": "لون الخلفية",
   "bg.dark": "داكن",
   "bg.light": "فاتح",
@@ -87,14 +94,18 @@
   "bg.image.empty": "لم يتم العثور على صور (مجلد backgrounds/)",
   "bg.image.error": "تعذر فتح هذه الصورة",
   "bg.image.close": "إغلاق",
+
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
+
   "modal.title": "تنبيه",
   "modal.text": "أهلاً بالضيوف الكرام! كل سكن في هذا المعرض هو نتيجة ساعات طويلة من العمل الشاق. يرجى احترام عمل الآخرين. جميع الصور محمية بحقوق الطبع والنشر. المشاهدة مسموحة، ولكن التحميل والنسخ والاستخدام التجاري متاح فقط بموجب اتفاق مسبق. شكراً لتفهمكم وأمانتكم!",
   "modal.agree": "لقد قرأت كل شيء وأوافق",
   "modal.continue": "متابعة",
+
   "error.viewer": "خطأ في تهيئة مكونات ثلاثية الأبعاد (3D).",
   "error.json": "فشل في قراءة ملفات تكوين JSON.",
+
   "skin.name.vova_halloween26": "ڤوفا هالوين 2026",
   "variation.name.vova_in_mask_halloween26": "مع قناع",
   "skin.name.day_halloween26": "داي هالوين 2026",
@@ -202,6 +213,7 @@
   "skin.name.ger_summer": "گير صيفي",
   "skin.name.ger_maid_skeleton": "گير خادمة هيكل عظمي",
   "skin.name.stars": "ستارز",
+
   "cape.name.migrator": "المهاجر",
   "cape.name.pan": "البانكيك",
   "cape.name.15th_anniversary": "الذكرى السنوية الـ 15",
@@ -248,6 +260,7 @@
   "cape.name.millionth_customer": "الزبون المليون",
   "cape.name.db": "دي بي",
   "cape.name.prismarine": "بريسمارين",
+
   "emote.name.SPE_Get_scared": "الفزع",
   "emote.name.SPE_Ankha_Dance": "رقصة أنخا (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "وقفة إيفيلين (League of Legends)",
@@ -325,9 +338,11 @@
   "emote.name.SPE_Witch_Pose": "وضعية الساحرة (كوابيس)",
   "emote.name.SPE_Yandere_Pose": "وضعية يانديري (كوابيس)",
   "emote.name.SPE_Zoro_Pose": "وضعية زورو (الكون المتعدد) (ون بيس)",
+
   "emote.by": "المؤلف: %s",
   "emote.search_placeholder": "بحث عن المشاعر...",
   "emote.no_results": "لم يتم العثور على مشاعر",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Виакор": "فياكور",
@@ -342,7 +357,9 @@
   "person.Цыпляш": "تسيبلياش",
   "person.Эппоп": "إيبوب",
   "person.Яна": "يانا",
+
   "badge.new": "جديد",
+
   "platform.title": "منصة",
   "platform.enable": "خلی منصة تحت الشخصية",
   "platform.block": "بلوك",
@@ -358,13 +375,16 @@
   "block.end_stone": "حجر النهاية",
   "block.plain": "بدون نسيج",
   "block.tint": "لون البلوك",
+
   "bgimg.name.day": "نهار",
   "bgimg.name.end": "النهاية",
   "bgimg.name.nether": "نيذر",
   "bgimg.name.night": "ليل",
   "bgimg.name.snow": "ثلج",
   "bgimg.name.sunset": "غروب الشمس",
+
   "blocks.empty": "لا توجد كتل بعد — ضع الأنسجة في مجلد blocks/ أو أضف الأنسجة الخاصة بك",
+
   "folder.add": "إضافة",
   "folder.delete": "حذف",
   "folder.delete_confirm": "هل تريد حذف \"%s\" من مجلدك؟",
@@ -390,10 +410,13 @@
   "folder.veg.error": "اختر ملف الصورة",
   "folder.tint": "اللون (أبيض — بدون صبغة)",
   "folder.weight": "الوزن (معدل الظهور)",
+
   "ui.hide": "إخفاء الواجهة (H)",
   "ui.show": "إظهار الواجهة (H)",
+
   "shot.title": "نسخ لقطة الشاشة إلى الحافظة (اضغط مع الاستمرار على Ctrl للتحميل أيضاً، أو Shift للحصول على خلفية شفافة)",
   "shot.error": "تعذر التقاط صورة الشاشة",
+
   "veg.enable": "تفعيل النباتات",
   "veg.dice": "خلط عشوائي",
   "veg.density": "الكثافة",
@@ -414,5 +437,18 @@
   "veg.name.sweet_berry_bush_stage3": "توت حلو (المرحلة 4)",
   "veg.name.sugar_cane": "قصب السكر",
   "veg.name.seagrass_32x": "عشب بحري",
-  "credit.title": "المؤلف: %s"
+  "veg.weight": "الوزن (معدل الظهور)",
+
+  "credit.title": "المؤلف: %s",
+
+  "light.enable": "الإضاءة والظلال",
+
+  "size.title": "الوزن (معدل الظهور)",
+  "size.min": "الحد الأدنى للحجم (كتل)",
+  "size.max": "الحد الأقصى للحجم (كتل)",
+  "size.step": "خطوة الارتفاع",
+  "size.wmin": "وزن الحد الأدنى للحجم",
+  "size.wmax": "وزن الحجم الأقصى",
+  "size.tile": "تكرار الملمس",
+  "size.reset": "إعادة تعيين"
 }

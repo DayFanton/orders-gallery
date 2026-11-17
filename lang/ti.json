@@ -439,5 +439,14 @@
 
   "credit.title": "מחבר: %s",
 
-  "light.enable": "ብርሃንን ጽላሎትን"
+  "light.enable": "ብርሃንን ጽላሎትን",
+
+  "size.title": "መጠን ተኽሊ",
+  "size.min": "ዝቅተኛ መጠን (ብሎክ)",
+  "size.max": "ዝለዓለ መጠን (ብሎክ)",
+  "size.step": "ደረጃ uvu",
+  "size.wmin": "ክብደት ዝቅተኛ መጠን",
+  "size.wmax": "ክብደት ናይቲ ዝለዓለ መጠን",
+  "size.tile": "ነጸብራቅ ምድብ ምድብ",
+  "size.reset": "ዳግም ጀምር"
 }

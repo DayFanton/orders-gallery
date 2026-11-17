@@ -441,5 +441,14 @@
 
   "credit.title": "Mwandishi: %s",
 
-  "light.enable": "Mwangaza na vivuli"
+  "light.enable": "Mwangaza na vivuli",
+
+  "size.title": "Ukubwa wa mmea",
+  "size.min": "Ukubwa mdogo (bloku)",
+  "size.max": "Ukubwa wa juu (bloku)",
+  "size.step": "Hatua ya urefu",
+  "size.wmin": "Uzito wa ukubwa mdogo",
+  "size.wmax": "Uzito wa saizi ya juu",
+  "size.tile": "Rududia muundo",
+  "size.reset": "Weka upya"
 }

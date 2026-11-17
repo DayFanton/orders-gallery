@@ -441,5 +441,14 @@
 
   "credit.title": "Murendami: %s",
 
-  "light.enable": "U khakhedza na mvele"
+  "light.enable": "U khakhedza na mvele",
+
+  "size.title": "Vhuhulu ha tshimela",
+  "size.min": "Vhuhulu vhutuku (mbulo)",
+  "size.max": "Vhuhulu vhuhulwane (mbulo)",
+  "size.step": "Nyato ya vhulapfu",
+  "size.wmin": "Tshilemo tsha vhuhulu vhutuku",
+  "size.wmax": "Tshilemo tsha vhuhulwane vhuhulu",
+  "size.tile": "Vhaedza vhuimo",
+  "size.reset": "Vhaedza hafhu"
 }

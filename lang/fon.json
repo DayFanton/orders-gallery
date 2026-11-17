@@ -441,5 +441,14 @@
 
   "credit.title": "Wemaŋlótọ: %s",
 
-  "light.enable": "Singanyɔ ɖo tite kpó"
+  "light.enable": "Singanyɔ ɖo tite kpó",
+
+  "size.title": "Wuzuzu ɖó gletoxo ɔ mɛ",
+  "size.min": "Wuzuzu kpòwé (blɔk ɔ lɛ)",
+  "size.max": "Wuzuzu ɖaxó (blɔk ɔ lɛ)",
+  "size.step": "Azɔ̌gbɛ̌ tɔn tɔn kɔnyixɔtɔn",
+  "size.wmin": "Wuzuzu wuzuzu kpòwé tɔn",
+  "size.wmax": "Jónɔ̀ tɔ̀n gángán tɔ̀n",
+  "size.tile": "Vɔ vɔ wɛtɛ",
+  "size.reset": "Sɔ́ ɛ ɖó te"
 }

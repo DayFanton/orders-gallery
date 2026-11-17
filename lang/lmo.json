@@ -439,5 +439,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Illuminazziun e omb"
+  "light.enable": "Illuminazziun e omb",
+
+  "size.title": "Dimension de la plantam",
+  "size.min": "Dimension minima (blocch)",
+  "size.max": "Dimension massima (blocch)",
+  "size.step": "Pass de alteza",
+  "size.wmin": "Pes de la dimension minima",
+  "size.wmax": "Pes de la dimension massima",
+  "size.tile": "Repet la texture",
+  "size.reset": "Azzer"
 }

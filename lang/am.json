@@ -441,5 +441,14 @@
 
   "credit.title": "ደራሲ፡ %s",
 
-  "light.enable": "ማብራት እና ጥላዎች"
+  "light.enable": "ማብራት እና ጥላዎች",
+
+  "size.title": "የእፅዋት መጠን",
+  "size.min": "ዝቅተኛ መጠን (ብሎኮች)",
+  "size.max": "ከፍተኛ መጠን (ብሎኮች)",
+  "size.step": "የውፍረት ደረጃ",
+  "size.wmin": "የዝቅተኛ መጠን ክብደት",
+  "size.wmax": "ከፍተኛው የመጠን ክብደት",
+  "size.tile": "ሸካራማነቱን መድገም",
+  "size.reset": "ዳግም አስጀምር"
 }

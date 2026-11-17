@@ -439,5 +439,14 @@
 
   "credit.title": "Penulis: %s",
 
-  "light.enable": "Pencahayaan dan bayang-bayang"
+  "light.enable": "Pencahayaan dan bayang-bayang",
+
+  "size.title": "Saiz tumbuhan",
+  "size.min": "Saiz min. (blok)",
+  "size.max": "Saiz maks. (blok)",
+  "size.step": "Langkah ketinggian",
+  "size.wmin": "Berat saiz min.",
+  "size.wmax": "Berat saiz maksimum",
+  "size.tile": "Ulang tekstur",
+  "size.reset": "Tetapkan semula"
 }

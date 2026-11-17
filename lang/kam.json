@@ -441,5 +441,14 @@
 
   "credit.title": "Mwandĩki: %s",
 
-  "light.enable": "Ũsenge na kĩthuku"
+  "light.enable": "Ũsenge na kĩthuku",
+
+  "size.title": "Ũasa wa mĩtĩ",
+  "size.min": "Ũito munini (mbloki)",
+  "size.max": "Ũito mũnene (mbloki)",
+  "size.step": "Ũasa wa ulaiku",
+  "size.wmin": "Ũito wa ũnene munini",
+  "size.wmax": "Ũito wa nini nene",
+  "size.tile": "Syoka mwandiko",
+  "size.reset": "Syoka mbere"
 }

@@ -439,5 +439,14 @@
 
   "credit.title": "Autors: %s",
 
-  "light.enable": "Apgaismojums un ēnas"
+  "light.enable": "Apgaismojums un ēnas",
+
+  "size.title": "Auga izmērs",
+  "size.min": "Min. izmērs (bloki)",
+  "size.max": "Maks. izmērs (bloki)",
+  "size.step": "Augstuma solis",
+  "size.wmin": "Min. izmēra svars",
+  "size.wmax": "Maksimālā izmēra svars",
+  "size.tile": "Atkārtot tekstūru",
+  "size.reset": "Atiestatīt"
 }

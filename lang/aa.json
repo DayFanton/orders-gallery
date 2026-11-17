@@ -439,5 +439,14 @@
 
   "credit.title": "Xaasa: %s",
 
-  "light.enable": "Nurii baaximah"
+  "light.enable": "Nurii baaximah",
+
+  "size.title": "Qaxar baaximah",
+  "size.min": "Qaxar gita (blokii)",
+  "size.max": "Qaxar nabam (blokii)",
+  "size.step": "Qaxar matris borow",
+  "size.wmin": "Qaxar gita qaxar",
+  "size.wmax": "Max size weight",
+  "size.tile": "Gaca texture",
+  "size.reset": "Cabbis"
 }

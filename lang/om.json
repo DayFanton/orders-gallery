@@ -441,5 +441,14 @@
 
   "credit.title": "Barreessaa: %s",
 
-  "light.enable": "Ifaa fi gaaddidduu"
+  "light.enable": "Ifaa fi gaaddidduu",
+
+  "size.title": "Guddina biqiltuu",
+  "size.min": "Guddina xiqqaa (ablookota)",
+  "size.max": "Guddina guddaa (ablookota)",
+  "size.step": "Tarkaa ol-ka'iinsa",
+  "size.wmin": "Ulfaatina guddina xiqqaa",
+  "size.wmax": "Ulfaatii safuu olaanaa",
+  "size.tile": "Irra deebi'ii agarsiisi",
+  "size.reset": "Irra deebisi"
 }

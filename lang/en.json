@@ -439,5 +439,14 @@
 
   "credit.title": "Author: %s",
 
-  "light.enable": "Lighting and shadows"
+  "light.enable": "Lighting and shadows",
+
+  "size.title": "Plant size",
+  "size.min": "Min. size (blocks)",
+  "size.max": "Max. size (blocks)",
+  "size.step": "Height step",
+  "size.wmin": "Min. size weight",
+  "size.wmax": "Max size weight",
+  "size.tile": "Repeat texture",
+  "size.reset": "Reset"
 }

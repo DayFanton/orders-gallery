@@ -439,5 +439,14 @@
 
   "credit.title": "Munyori: %s",
 
-  "light.enable": "Mwenje nemumvuri"
+  "light.enable": "Mwenje nemumvuri",
+
+  "size.title": "Kukura kwechirimwa",
+  "size.min": "Kukura kushoma (mabhuroko)",
+  "size.max": "Kukura kukuru (mabhuroko)",
+  "size.step": "Danho rekureba",
+  "size.wmin": "Kurema kwekukura kushoma",
+  "size.wmax": "Huremu hwazvinhu zvakakura",
+  "size.tile": "Dzokorora chimiro",
+  "size.reset": "Nyora patsva"
 }

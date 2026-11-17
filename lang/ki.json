@@ -441,5 +441,14 @@
 
   "credit.title": "Mwandĩki: %s",
 
-  "light.enable": "Ũtheri na iruru"
+  "light.enable": "Ũtheri na iruru",
+
+  "size.title": "Ũrai wa kĩmera",
+  "size.min": "Ũritu munini (mĩrigo)",
+  "size.max": "Ũritu munene (mĩrigo)",
+  "size.step": "Ikinya rĩa ũire",
+  "size.wmin": "Ũritu wa ũnene munini",
+  "size.wmax": "Kurito kwa mũigano mũnene",
+  "size.tile": "Gocokia mwandiko",
+  "size.reset": "Thiĩ na mbere"
 }

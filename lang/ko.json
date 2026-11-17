@@ -441,5 +441,14 @@
 
   "credit.title": "저자: %s",
 
-  "light.enable": "조명 및 그림자"
+  "light.enable": "조명 및 그림자",
+
+  "size.title": "식물 크기",
+  "size.min": "최소 크기 (블록)",
+  "size.max": "최대 크기 (블록)",
+  "size.step": "높이 간격",
+  "size.wmin": "최소 크기 가중치",
+  "size.wmax": "최대 사이즈 무게",
+  "size.tile": "텍스처 반복",
+  "size.reset": "초기화"
 }

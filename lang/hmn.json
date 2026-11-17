@@ -439,5 +439,14 @@
 
   "credit.title": "Tus sau: %s",
 
-  "light.enable": "Teeb thiab duab ntxoo"
+  "light.enable": "Teeb thiab duab ntxoo",
+
+  "size.title": "Qhov looj tsob ntoo",
+  "size.min": "Qhov me tshaj plaws (cov blocks)",
+  "size.max": "Qhov loj tshaj plaws (cov blocks)",
+  "size.step": "Kauj ruam qhov siab",
+  "size.wmin": "Qhov hnyav ntawm qhov me tshaj",
+  "size.wmax": "Qhov hnyav ntawm qhov loj tshaj plaws",
+  "size.tile": "Rov qab ua qhov zoo nkauj",
+  "size.reset": "Pib dua"
 }

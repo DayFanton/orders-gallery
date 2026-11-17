@@ -441,5 +441,14 @@
 
   "credit.title": "Awtor: %s",
 
-  "light.enable": "Yaagtandyryş we kölegeler"
+  "light.enable": "Yaagtandyryş we kölegeler",
+
+  "size.title": "Ösümligiň ölçegi",
+  "size.min": "Min. ölçeg (bloklar)",
+  "size.max": "Maks. ölçeg (bloklar)",
+  "size.step": "Beýiklik ädimi",
+  "size.wmin": "Min. ölçeg agramy",
+  "size.wmax": "Maksimal ölçegiň agramy",
+  "size.tile": "Gurluşy gaýtalamak",
+  "size.reset": "Assa düşurmek"
 }

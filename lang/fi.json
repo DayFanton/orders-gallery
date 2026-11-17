@@ -441,5 +441,14 @@
 
   "credit.title": "Tekijä: %s",
 
-  "light.enable": "Valaistus ja varjot"
+  "light.enable": "Valaistus ja varjot",
+
+  "size.title": "Kasvin koko",
+  "size.min": "Vähimmäiskoko (lohkoa)",
+  "size.max": "Enimmäiskoko (lohkoa)",
+  "size.step": "Korkeusväli",
+  "size.wmin": "Vähimmäiskoon paino",
+  "size.wmax": "Maksimikoon paino",
+  "size.tile": "Toista tekstuuri",
+  "size.reset": "Palauta"
 }

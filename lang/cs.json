@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Osvětlení a stíny"
+  "light.enable": "Osvětlení a stíny",
+
+  "size.title": "Velikost rostliny",
+  "size.min": "Min. velikost (bloky)",
+  "size.max": "Max. velikost (bloky)",
+  "size.step": "Krok výšky",
+  "size.wmin": "Váha min. velikosti",
+  "size.wmax": "Hmotnost maximální velikosti",
+  "size.tile": "Opakovat texturu",
+  "size.reset": "Obnovit"
 }

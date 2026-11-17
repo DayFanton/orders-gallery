@@ -441,5 +441,14 @@
 
   "credit.title": "Mukwa-ene: %s",
 
-  "light.enable": "Utemo ni muvizu"
+  "light.enable": "Utemo ni muvizu",
+
+  "size.title": "Ukulu w'ituxi",
+  "size.min": "Ukulu wadiwisi (mavloki)",
+  "size.max": "Ukulu wamukulu (mavloki)",
+  "size.step": "Mukoso w'ukulu ula",
+  "size.wmin": "Kulema kw'ukulu wadiwisi",
+  "size.wmax": "Kilemo kyandumba",
+  "size.tile": "Kubakana otondo",
+  "size.reset": "Kubakana"
 }

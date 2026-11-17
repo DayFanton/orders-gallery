@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Beleuchtung und Schatten"
+  "light.enable": "Beleuchtung und Schatten",
+
+  "size.title": "Plantengröße",
+  "size.min": "Mindestgröße (Blöcke)",
+  "size.max": "Maximalgröße (Blöcke)",
+  "size.step": "Höhenschritt",
+  "size.wmin": "Gewicht der Mindestgröße",
+  "size.wmax": "Gewicht der Maximalgröße",
+  "size.tile": "Textur wiederholen",
+  "size.reset": "Zurücksetzen"
 }

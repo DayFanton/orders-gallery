@@ -439,5 +439,14 @@
 
   "credit.title": "Umbhali: %s",
 
-  "light.enable": "Ukukhanya namathunzi"
+  "light.enable": "Ukukhanya namathunzi",
+
+  "size.title": "Ubukhulu besihlahla",
+  "size.min": "Ubukhulu obuncane (amabhulokhi)",
+  "size.max": "Ubukhulu obukhulu (amabhulokhi)",
+  "size.step": "Isinyathelo sokuphakama",
+  "size.wmin": "Ubunzima bobukhulu obuncane",
+  "size.wmax": "Isisindo sesayizi ephezulu",
+  "size.tile": "Phinda isimo",
+  "size.reset": "Buyisela emuva"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Boressanchicha: %s",
 
-  "light.enable": "Liphisi nna shiiqqo"
+  "light.enable": "Liphisi nna shiiqqo",
+
+  "size.title": "Gafi woro",
+  "size.min": "Gafi xiinnoo (boolokke)",
+  "size.max": "Gafi jawa (boolokke)",
+  "size.step": "Gafi qeeqe haycho",
+  "size.wmin": "Gafi xiinnoo gafi",
+  "size.wmax": "Horo katte roora",
+  "size.tile": "Maqqidi gashsho",
+  "size.reset": "Macchishi"
 }

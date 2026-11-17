@@ -439,5 +439,14 @@
 
   "credit.title": "Údar: %s",
 
-  "light.enable": "Soilsiú agus scáthanna"
+  "light.enable": "Soilsiú agus scáthanna",
+
+  "size.title": "Méid an phlanda",
+  "size.min": "Íosmhéid (blocanna)",
+  "size.max": "Uasmhéid (blocanna)",
+  "size.step": "Céim airde",
+  "size.wmin": "Meáchan na híosmhéide",
+  "size.wmax": "Meáchan an mhéid uasta",
+  "size.tile": "Déan uigeacht arís",
+  "size.reset": "Athshocraigh"
 }

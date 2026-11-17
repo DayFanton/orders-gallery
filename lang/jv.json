@@ -441,5 +441,14 @@
 
   "credit.title": "Penulis: %s",
 
-  "light.enable": "Pencahayaan lan ayang-ayang"
+  "light.enable": "Pencahayaan lan ayang-ayang",
+
+  "size.title": "Ukuran tanduran",
+  "size.min": "Ukuran min. (blok)",
+  "size.max": "Ukuran maks. (blok)",
+  "size.step": "Langkah dhuwur",
+  "size.wmin": "Bobot ukuran min.",
+  "size.wmax": "Bobot ukuran maksimal",
+  "size.tile": "Baleni tektur",
+  "size.reset": "Setel ulang"
 }

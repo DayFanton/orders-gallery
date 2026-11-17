@@ -441,5 +441,14 @@
 
   "credit.title": "Autor: %s",
 
-  "light.enable": "Il·luminació i ombres"
+  "light.enable": "Il·luminació i ombres",
+
+  "size.title": "Mida de la planta",
+  "size.min": "Mida mín. (blocs)",
+  "size.max": "Mida màx. (blocs)",
+  "size.step": "Pas d'altura",
+  "size.wmin": "Pes de la mida mín.",
+  "size.wmax": "Pes de la mida màxima",
+  "size.tile": "Repetir textura",
+  "size.reset": "Restablir"
 }

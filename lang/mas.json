@@ -439,5 +439,14 @@
 
   "credit.title": "Enkai yaisho: %s",
 
-  "light.enable": "Enkai oloshoro e nkaji"
+  "light.enable": "Enkai oloshoro e nkaji",
+
+  "size.title": "Enkai oloshoro e nkaji",
+  "size.min": "Enkai oloing'oni (amabhulokhi)",
+  "size.max": "Enkai sapuk (amabhulokhi)",
+  "size.step": "Enkai oloshoro e nkaji",
+  "size.wmin": "Enkai oloshoro oloing'oni",
+  "size.wmax": "Enkito e saizi olore",
+  "size.tile": "Enkito e nkop",
+  "size.reset": "Eriset"
 }

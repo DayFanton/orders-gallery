@@ -441,5 +441,14 @@
 
   "credit.title": "Bindkat: %s",
 
-  "light.enable": "Leer ak niwal"
+  "light.enable": "Leer ak niwal",
+
+  "size.title": "Dayo bi",
+  "size.min": "Dayo bu ndaw (bloq yi)",
+  "size.max": "Dayo bu mag (bloq yi)",
+  "size.step": "Tari bawo bi",
+  "size.wmin": "Dole dayo bu ndaw",
+  "size.wmax": "Gewicht bu maggu ba",
+  "size.tile": "Dellu defar texture",
+  "size.reset": "Defar"
 }

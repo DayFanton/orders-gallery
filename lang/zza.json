@@ -441,5 +441,14 @@
 
   "credit.title": "Nusxekar: %s",
 
-  "light.enable": "Tija u seyî"
+  "light.enable": "Tija u seyî",
+
+  "size.title": "Ebatê bımey",
+  "size.min": "Ebatê hê h Verêni (blokî)",
+  "size.max": "Ebatê tewr girs (blokî)",
+  "size.step": "Ebatê berziye",
+  "size.wmin": "Giranîya ebatê hê verênî",
+  "size.wmax": "Pêse pîvana herî mezin",
+  "size.tile": "Teksturî dubare ke",
+  "size.reset": "Ser de"
 }

@@ -441,5 +441,14 @@
 
   "credit.title": "Author: %s",
 
-  "light.enable": "Laytin ɛnd shado"
+  "light.enable": "Laytin ɛnd shado",
+
+  "size.title": "Plánt saiz",
+  "size.min": "Min saiz (blok)",
+  "size.max": "Maks saiz (blok)",
+  "size.step": "Hait step",
+  "size.wmin": "Min saiz wet",
+  "size.wmax": "Weg of di max saiz",
+  "size.tile": "Ripet tekstho",
+  "size.reset": "Riset"
 }
