@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Таттуу мөмөлөр (4-баскыч)",
   "veg.name.sugar_cane": "Кант камышы",
   "veg.name.seagrass_32x": "Деңиз чөбү",
+  "veg.weight": "Салмагы (канчалык көп түшөт)",
 
-  "credit.title": "Автор: %s"
+  "credit.title": "Автор: %s",
+
+  "light.enable": "Жарыктандыруу жана көлөкөлөр"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mihandzu yo tsokombela (xiyimo xa 4)",
   "veg.name.sugar_cane": "Nsinya wo tsokombela",
   "veg.name.seagrass_32x": "Byanyi bya lwandle",
+  "veg.weight": "Vuleki (ku fika ka nkarhi)",
 
-  "credit.title": "Mutsari: %s"
+  "credit.title": "Mutsari: %s",
+
+  "light.enable": "Ku voninga na mimuri"
 }

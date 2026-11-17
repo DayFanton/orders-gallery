@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matunda matamu (hatua ya 4)",
   "veg.name.sugar_cane": "Miwa",
   "veg.name.seagrass_32x": "Nyasi ya bahari",
+  "veg.weight": "Uzito (marudio ya kuanguka)",
 
-  "credit.title": "Mwandishi: %s"
+  "credit.title": "Mwandishi: %s",
+
+  "light.enable": "Mwangaza na vivuli"
 }

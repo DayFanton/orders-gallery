@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Swit beri (stej 4)",
   "veg.name.sugar_cane": "Suga ken",
   "veg.name.seagrass_32x": "Si gras",
+  "veg.weight": "Wét (hō frikwɛnsi e de drop)",
 
-  "credit.title": "Author: %s"
+  "credit.title": "Author: %s",
+
+  "light.enable": "Laytin ɛnd shado"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Słodkie jagody (etap 4)",
   "veg.name.sugar_cane": "Trzcina cukrowa",
   "veg.name.seagrass_32x": "Trawa morska",
+  "veg.weight": "Waga (częstotliwość wypadania)",
 
-  "credit.title": "Autor: %s"
+  "credit.title": "Autor: %s",
+
+  "light.enable": "Oświetlenie i cienie"
 }

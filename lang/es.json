@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Bayas dulces (etapa 4)",
   "veg.name.sugar_cane": "Caña de azúcar",
   "veg.name.seagrass_32x": "Hierba marina",
+  "veg.weight": "Peso (frecuencia de aparición)",
 
-  "credit.title": "Autor: %s"
+  "credit.title": "Autor: %s",
+
+  "light.enable": "Iluminación y sombras"
 }

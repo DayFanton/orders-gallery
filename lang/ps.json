@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "خوږې مېوې (څلورم پړاو)",
   "veg.name.sugar_cane": "شکر کاله",
   "veg.name.seagrass_32x": "سمندري واښه",
+  "veg.weight": "وزن (د غورځېدو شمېر)",
 
-  "credit.title": "لیکوال: %s"
+  "credit.title": "لیکوال: %s",
+
+  "light.enable": "روښنايي او سیوري"
 }

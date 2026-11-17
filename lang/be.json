@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Салодкія ягады (стадыя 4)",
   "veg.name.sugar_cane": "Цукровы трысцёг",
   "veg.name.seagrass_32x": "Марская трава",
+  "veg.weight": "Вага (як часта выпадае)",
 
-  "credit.title": "Аўтар: %s"
+  "credit.title": "Аўтар: %s",
+
+  "light.enable": "Асвятленне і цені"
 }

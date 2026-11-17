@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Aeron melys (cam 4)",
   "veg.name.sugar_cane": "Cansen siwgr",
   "veg.name.seagrass_32x": "Glaswellt môr",
+  "veg.weight": "Pwysau (amlder gollwng)",
 
-  "credit.title": "Awdur: %s"
+  "credit.title": "Awdur: %s",
+
+  "light.enable": "Golau a chysgodion"
 }

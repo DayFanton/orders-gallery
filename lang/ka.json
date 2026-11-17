@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "ტკბილი კენკრა (ეტაპი 4)",
   "veg.name.sugar_cane": "შაქრის ლერწამი",
   "veg.name.seagrass_32x": "ზღვის ბალახი",
+  "veg.weight": "წონა (დაცემის სიხშირე)",
 
-  "credit.title": "ავტორი: %s"
+  "credit.title": "ავტორი: %s",
+
+  "light.enable": "განათება და ჩრდილები"
 }

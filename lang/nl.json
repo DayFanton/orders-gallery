@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Zoete bessen (fase 4)",
   "veg.name.sugar_cane": "Suikerriet",
   "veg.name.seagrass_32x": "Zeegras",
+  "veg.weight": "Gewicht (drop frequentie)",
 
-  "credit.title": "Auteur: %s"
+  "credit.title": "Auteur: %s",
+
+  "light.enable": "Verlichting en schaduwen"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matatamis na berry (yugto 4)",
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Damo sa dagat",
+  "veg.weight": "Timbang (dalas ng pagpatak)",
 
-  "credit.title": "May-akda: %s"
+  "credit.title": "May-akda: %s",
+
+  "light.enable": "Liwanag at mga anino"
 }

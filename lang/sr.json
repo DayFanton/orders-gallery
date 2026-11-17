@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Слатке бобице (фаза 4)",
   "veg.name.sugar_cane": "Шећерна трска",
   "veg.name.seagrass_32x": "Морска трава",
+  "veg.weight": "Тежина (уučесталost испадања)",
 
-  "credit.title": "Аутор: %s"
+  "credit.title": "Аутор: %s",
+
+  "light.enable": "Осветљење и сенке"
 }

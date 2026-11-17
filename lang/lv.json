@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Saldās ogas (4. posms)",
   "veg.name.sugar_cane": "Cukurniedre",
   "veg.name.seagrass_32x": "Jūras zāle",
+  "veg.weight": "Svars (krišanas biežums)",
 
-  "credit.title": "Autors: %s"
+  "credit.title": "Autors: %s",
+
+  "light.enable": "Apgaismojums un ēnas"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "મીઠી બેરી (તબક્કો 4)",
   "veg.name.sugar_cane": "શેરડી",
   "veg.name.seagrass_32x": "દરિયાী ઘાસ",
+  "veg.weight": "વજન (ડ્રોપ આવર્તન)",
 
-  "credit.title": "લેખક: %s"
+  "credit.title": "લેખક: %s",
+
+  "light.enable": "प्रकाश અને પડछायਾ"
 }

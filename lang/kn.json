@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ಸಿಹಿ ಹಣ್ಣುಗಳು (ಹಂತ 4)",
   "veg.name.sugar_cane": "ಕಬ್ಬು",
   "veg.name.seagrass_32x": "ಸಮುದ್ರದ ಹುಲ್ಲು",
+  "veg.weight": "ತೂಕ (ಬೀಳುವ ಆವರ್ತನ)",
 
-  "credit.title": "ಲೇಖಕ: %s"
+  "credit.title": "ಲೇಖಕ: %s",
+
+  "light.enable": "ಬೆಳಕು ಮತ್ತು ನೆರಳುಗಳು"
 }

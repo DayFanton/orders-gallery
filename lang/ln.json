@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mbuma ya sukali (eteni ya 4)",
   "veg.name.sugar_cane": "Mobange",
   "veg.name.seagrass_32x": "BWA ya mbu",
+  "veg.weight": "Bopekwani (mpasi ya kokweyá)",
 
-  "credit.title": "Mokomi: %s"
+  "credit.title": "Mokomi: %s",
+
+  "light.enable": "Pole na molili"
 }

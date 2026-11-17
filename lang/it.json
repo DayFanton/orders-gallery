@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Bacche dolci (stadio 4)",
   "veg.name.sugar_cane": "Canna da zucchero",
   "veg.name.seagrass_32x": "Erba marina",
+  "veg.weight": "Peso (frequenza di drop)",
 
-  "credit.title": "Autore: %s"
+  "credit.title": "Autore: %s",
+
+  "light.enable": "Illuminazione e ombre"
 }

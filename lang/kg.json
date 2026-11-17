@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mbuma ya sukali (kitini kia 4)",
   "veg.name.sugar_cane": "Nsi ya sukali",
   "veg.name.seagrass_32x": "Bubu ya mbu",
+  "veg.weight": "Mfunu (mpova ya kubwila)",
 
-  "credit.title": "Msoniki: %s"
+  "credit.title": "Msoniki: %s",
+
+  "light.enable": "Ntemo ti mfula"
 }

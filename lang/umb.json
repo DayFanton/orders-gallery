@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Apako a pepa (onepa 4)",
   "veg.name.sugar_cane": "Ocilonga cosukali",
   "veg.name.seagrass_32x": "Ocipuka cocelamo",
+  "veg.weight": "Ocilemo (okuvela kweciwa)",
 
-  "credit.title": "Umoneki: %s"
+  "credit.title": "Umoneki: %s",
+
+  "light.enable": "Ukuvela locili"
 }

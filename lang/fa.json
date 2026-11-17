@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "توت‌های شیرین (مرحله ۴)",
   "veg.name.sugar_cane": "نیشکر",
   "veg.name.seagrass_32x": "علف دریایی",
+  "veg.weight": "وزن (فرکانس افتادن)",
 
-  "credit.title": "نویسنده: %s"
+  "credit.title": "نویسنده: %s",
+
+  "light.enable": "نورپردازی و سایه‌ها"
 }

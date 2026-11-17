@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Miro macaan (heerka 4)",
   "veg.name.sugar_cane": "Caws sonkor",
   "veg.name.seagrass_32x": "Caws badda",
+  "veg.weight": "Miisaanka (intuu soo dhacayo)",
 
-  "credit.title": "Qoraaga: %s"
+  "credit.title": "Qoraaga: %s",
+
+  "light.enable": "Iftiinka iyo hoosaska"
 }

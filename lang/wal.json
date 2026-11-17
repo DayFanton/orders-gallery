@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mal''o ayfiyaa (4-tta xaphuwaa)",
   "veg.name.sugar_cane": "Shokoriga",
   "veg.name.seagrass_32x": "Abba qora",
+  "veg.weight": "Ullo (shiiqqiyo wode)",
 
-  "credit.title": "Ayissiya: %s"
+  "credit.title": "Ayissiya: %s",
+
+  "light.enable": "Pacca nna shiiqqo"
 }

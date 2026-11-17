@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Saldžiosios uogos (4 etapas)",
   "veg.name.sugar_cane": "Cukranendrė",
   "veg.name.seagrass_32x": "Jūros žolė",
+  "veg.weight": "Svoris (kritimo dažnis)",
 
-  "credit.title": "Autorius: %s"
+  "credit.title": "Autorius: %s",
+
+  "light.enable": "Apšvietimas ir šešėliai"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Xaa'ma guma (4-ki deerrira)",
   "veg.name.sugar_cane": "Shokoriga",
   "veg.name.seagrass_32x": "Ba'ra bushshira",
+  "veg.weight": "Gafi (ha'neemmo wole)",
 
-  "credit.title": "Boressanchicha: %s"
+  "credit.title": "Boressanchicha: %s",
+
+  "light.enable": "Liphisi nna shiiqqo"
 }

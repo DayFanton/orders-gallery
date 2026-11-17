@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "පැණිරස බෙරි (අදියර 4)",
   "veg.name.sugar_cane": "උක්",
   "veg.name.seagrass_32x": "මුහුදු තණකොළ",
+  "veg.weight": "බර (පτηත්ව සංඛ්‍යාතය)",
 
-  "credit.title": "කර්තෘ: %s"
+  "credit.title": "කර්තෘ: %s",
+
+  "light.enable": "ආලෝකය සහ සෙවනැලි"
 }

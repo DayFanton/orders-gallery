@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Caora milse (céim 4)",
   "veg.name.sugar_cane": "Cána siúcra",
   "veg.name.seagrass_32x": "Féar mara",
+  "veg.weight": "Meáchan (minicíocht titim)",
 
-  "credit.title": "Údar: %s"
+  "credit.title": "Údar: %s",
+
+  "light.enable": "Soilsiú agus scáthanna"
 }

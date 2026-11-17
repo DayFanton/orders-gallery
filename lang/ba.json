@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Татлы еләктәр (4-се стадия)",
   "veg.name.sugar_cane": "Шәкәр ҡамышы",
   "veg.name.seagrass_32x": "Диңгеҙ үләне",
+  "veg.weight": "Ауырлыҡ (нисә йыш төшә)",
 
-  "credit.title": "Автор: %s"
+  "credit.title": "Автор: %s",
+
+  "light.enable": "Яҡтыртыу һәм күләгәләр"
 }

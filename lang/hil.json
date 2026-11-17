@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matam-is nga berry (halintang 4)",
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Damo sa dagat",
+  "veg.weight": "Timbang (kadlawon sang pagka hulog)",
 
-  "credit.title": "Manunulat: %s"
+  "credit.title": "Manunulat: %s",
+
+  "light.enable": "Kasanag kag mga landong"
 }

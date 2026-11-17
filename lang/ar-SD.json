@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "التوت الحلو (المرحلة 4)",
   "veg.name.sugar_cane": "قصب السكر",
   "veg.name.seagrass_32x": "عشبة البحر",
+  "veg.weight": "الوزن (معدل الظهور)",
 
-  "credit.title": "المؤلف: %s"
+  "credit.title": "المؤلف: %s",
+
+  "light.enable": "الإضاءة والظلال"
 }

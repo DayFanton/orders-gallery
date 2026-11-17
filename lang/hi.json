@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "मीठे जामुन (चरण 4)",
   "veg.name.sugar_cane": "गन्ने",
   "veg.name.seagrass_32x": "समुद्री घास",
+  "veg.weight": "वजन (ड्रॉप होने की आवृत्ति)",
 
-  "credit.title": "लेखक: %s"
+  "credit.title": "लेखक: %s",
+
+  "light.enable": "प्रकाश और छाया"
 }

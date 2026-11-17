@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Voaroy mamy (dingana 4)",
   "veg.name.sugar_cane": "Fary",
   "veg.name.seagrass_32x": "Ahitra an-dranomasina",
+  "veg.weight": "Lanja (faharetan'ny fivoahana)",
 
-  "credit.title": "Mpanoratra: %s"
+  "credit.title": "Mpanoratra: %s",
+
+  "light.enable": "Jiro sy aloka"
 }

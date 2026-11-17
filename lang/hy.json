@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Քաղցր հատապտուղներ (փուլ 4)",
   "veg.name.sugar_cane": "Շաքարեղեգ",
   "veg.name.seagrass_32x": "Ծովային խոտ",
+  "veg.weight": "Քաշ (որքան հաճախ է ընկնում)",
 
-  "credit.title": "Հեղինակ՝ %s"
+  "credit.title": "Հեղինակ՝ %s",
+
+  "light.enable": "Լուսավորություն և ստվերներ"
 }

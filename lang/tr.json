@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Tatlı orman meyveleri (aşama 4)",
   "veg.name.sugar_cane": "Şeker kamışı",
   "veg.name.seagrass_32x": "Deniz yosunu",
+  "veg.weight": "Ağırlık (düşme sıklığı)",
 
-  "credit.title": "Yazar: %s"
+  "credit.title": "Yazar: %s",
+
+  "light.enable": "Işıklandırma ve gölgeler"
 }

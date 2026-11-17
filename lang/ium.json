@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matunda matamu (hatua 4)",
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Utshani basolwandle",
+  "veg.weight": "Ulemu (ndakai sya kugwa)",
 
-  "credit.title": "Mwandiki: %s"
+  "credit.title": "Mwandiki: %s",
+
+  "light.enable": "Ukukhanya nezithunzi"
 }

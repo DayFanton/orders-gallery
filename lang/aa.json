@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Maqaan caxxa (4-hayto)",
   "veg.name.sugar_cane": "Xaasa",
   "veg.name.seagrass_32x": "Xaasa badda",
+  "veg.weight": "Qaxar (baaximah)",
 
-  "credit.title": "Xaasa: %s"
+  "credit.title": "Xaasa: %s",
+
+  "light.enable": "Nurii baaximah"
 }

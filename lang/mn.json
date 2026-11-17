@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Чихэрлэг жимсгэнэ (4-р үе)",
   "veg.name.sugar_cane": "Чихрийн нишингэ",
   "veg.name.seagrass_32x": "Далайн өвс",
+  "veg.weight": "Жин (унаж бу давтамж)",
 
-  "credit.title": "Зохиогч: %s"
+  "credit.title": "Зохиогч: %s",
+
+  "light.enable": "Гэрэлтүүлэг ба сүүдэр"
 }

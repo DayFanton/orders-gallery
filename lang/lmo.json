@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Früt de bosch dulz (fas 4)",
   "veg.name.sugar_cane": "Canna da zùcar",
   "veg.name.seagrass_32x": "Erba marina",
+  "veg.weight": "Pes (quand spess el ven fòra)",
 
-  "credit.title": "Autor: %s"
+  "credit.title": "Autor: %s",
+
+  "light.enable": "Illuminazziun e omb"
 }

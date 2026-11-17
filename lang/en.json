@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Sweet berries (stage 4)",
   "veg.name.sugar_cane": "Sugar cane",
   "veg.name.seagrass_32x": "Seagrass",
+  "veg.weight": "Weight (drop frequency)",
 
-  "credit.title": "Author: %s"
+  "credit.title": "Author: %s",
+
+  "light.enable": "Lighting and shadows"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Meyweyê şîrinî (merheleyê 4)",
   "veg.name.sugar_cane": "Qamışê şekirî",
   "veg.name.seagrass_32x": "Çayiro deryayî",
+  "veg.weight": "Giran (çend marê vecîno)",
 
-  "credit.title": "Nusxekar: %s"
+  "credit.title": "Nusxekar: %s",
+
+  "light.enable": "Tija u seyî"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Буттамеваҳои ширин (марҳилаи 4)",
   "veg.name.sugar_cane": "Намакканд",
   "veg.name.seagrass_32x": "Сабзаи баҳрӣ",
+  "veg.weight": "Вазн (басомади афтодан)",
 
-  "credit.title": "Муаллиф: %s"
+  "credit.title": "Муаллиф: %s",
+
+  "light.enable": "Рушноӣ ва сояҳо"
 }

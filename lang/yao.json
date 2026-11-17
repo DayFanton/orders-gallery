@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Yisogosi yakunong'a (gawo 4)",
   "veg.name.sugar_cane": "Nzimbe",
   "veg.name.seagrass_32x": "Lusilu lwa mnyanja",
+  "veg.weight": "Ulemu (ndakai sya kugwa)",
 
-  "credit.title": "Mlembi: %s"
+  "credit.title": "Mlembi: %s",
+
+  "light.enable": "Kukwakanya ni misi"
 }

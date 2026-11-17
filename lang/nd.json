@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Amajikijolo amnandi (isigaba 4)",
   "veg.name.sugar_cane": "Umoba",
   "veg.name.seagrass_32x": "Utshani baselwandle",
+  "veg.weight": "Ubunzima (ukuthi kuvela kangaki)",
 
-  "credit.title": "Umbhali: %s"
+  "credit.title": "Umbhali: %s",
+
+  "light.enable": "Ukukhanya namathunzi"
 }

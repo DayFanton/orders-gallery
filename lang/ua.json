@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Солодкі ягоди (стадія 4)",
   "veg.name.sugar_cane": "Цукрова тростина",
   "veg.name.seagrass_32x": "Морська трава",
+  "veg.weight": "Вага (як часто випадає)",
 
-  "credit.title": "Автор: %s"
+  "credit.title": "Автор: %s",
+
+  "light.enable": "Освітлення та тіні"
 }

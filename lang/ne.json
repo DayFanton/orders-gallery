@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "गुलियो जामुन (चरण ४)",
   "veg.name.sugar_cane": "उखु",
   "veg.name.seagrass_32x": "समुद्री घाँस",
+  "veg.weight": "तौल (झर्ने फ्रिक्वेन्सी)",
 
-  "credit.title": "लेखक: %s"
+  "credit.title": "लेखक: %s",
+
+  "light.enable": "प्रकाश र छायाहरू"
 }

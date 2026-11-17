@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Emajikijolo lamnandzi (sigaba 4)",
   "veg.name.sugar_cane": "Likhoba leswekati",
   "veg.name.seagrass_32x": "Tjani laselwandle",
+  "veg.weight": "Kusebenta (kuvela kwalesento)",
 
-  "credit.title": "Umbhali: %s"
+  "credit.title": "Umbhali: %s",
+
+  "light.enable": "Kukhatsata nettfuni"
 }

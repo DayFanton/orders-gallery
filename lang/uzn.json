@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Shirin rezavorlar (4-bosqich)",
   "veg.name.sugar_cane": "Shakarqamish",
   "veg.name.seagrass_32x": "Dengiz oʻti",
+  "veg.weight": "Ogʻirlik (tushish chastotasi)",
 
-  "credit.title": "Muallif: %s"
+  "credit.title": "Muallif: %s",
+
+  "light.enable": "Yoritish va soyalar"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "สวีทเบอร์รี (ระยะที่ 4)",
   "veg.name.sugar_cane": "อ้อย",
   "veg.name.seagrass_32x": "หญ้าทะเล",
+  "veg.weight": "น้ำหนัก (ความถี่ในการดรอป)",
 
-  "credit.title": "ผู้เขียน: %s"
+  "credit.title": "ผู้เขียน: %s",
+
+  "light.enable": "แสงและเงา"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "مٺا ٻير (مرحلو 4)",
   "veg.name.sugar_cane": "ڪمند",
   "veg.name.seagrass_32x": "سمنڊ جو گاهه",
+  "veg.weight": "وزن (ڪيترو ڌيرو پوي ٿو)",
 
-  "credit.title": "ليکڪ: %s"
+  "credit.title": "ليکڪ: %s",
+
+  "light.enable": "روشنائي ۽ پرندا"
 }

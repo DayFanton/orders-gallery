@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Γλυκά μούρα (στάδιο 4)",
   "veg.name.sugar_cane": "Ζαχαροκάλαμο",
   "veg.name.seagrass_32x": "Θαλάσσιο χόρτο",
+  "veg.weight": "Βάρος (συχνότητα εμφάνισης)",
 
-  "credit.title": "Σγγραφέας: %s"
+  "credit.title": "Σγγραφέας: %s",
+
+  "light.enable": "Φωτισμός και σκιές"
 }

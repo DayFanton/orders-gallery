@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Misk'i rurukuna (4 kaq)",
   "veg.name.sugar_cane": "Q'achu waylla",
   "veg.name.seagrass_32x": "Qucha q'achu",
+  "veg.weight": "K'uskiynin (mayk'aqchus chayamun)",
 
-  "credit.title": "Qillqaq: %s"
+  "credit.title": "Qillqaq: %s",
+
+  "light.enable": "K'anchaypas llanthupas"
 }

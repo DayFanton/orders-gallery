@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ጣፋጭ ቤሪዎች (ደረጃ 4)",
   "veg.name.sugar_cane": "የገነ ሰብል",
   "veg.name.seagrass_32x": "የባሕር ሣር",
+  "veg.weight": "ክብደት (የሚወድቅበት ድግግმოሽ)",
 
-  "credit.title": "ደራሲ፡ %s"
+  "credit.title": "ደራሲ፡ %s",
+
+  "light.enable": "ማብራት እና ጥላዎች"
 }

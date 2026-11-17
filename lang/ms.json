@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Beri manis (tahap 4)",
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Rumput laut",
+  "veg.weight": "Berat (kekerapan jatuh)",
 
-  "credit.title": "Penulis: %s"
+  "credit.title": "Penulis: %s",
+
+  "light.enable": "Pencahayaan dan bayang-bayang"
 }

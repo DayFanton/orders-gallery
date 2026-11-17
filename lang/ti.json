@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "ጥዑም ፍረታት (ደረጃ 4)",
   "veg.name.sugar_cane": "ሻንኮራ",
   "veg.name.seagrass_32x": "ባሕሪ ሳዕሪ",
+  "veg.weight": "ክብደት (ብዝሒ ግዜ ምንቍዕ)",
 
-  "credit.title": "מחבר: %s"
+  "credit.title": "מחבר: %s",
+
+  "light.enable": "ብርሃንን ጽላሎትን"
 }

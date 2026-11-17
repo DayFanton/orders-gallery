@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "മധുരമുള്ള സരസഫലങ്ങൾ (ഘട്ടം 4)",
   "veg.name.sugar_cane": "കരിമ്പ്",
   "veg.name.seagrass_32x": "കടൽപ്പുല്ല്",
+  "veg.weight": "ഭാരം (വീഴുന്ന ആവൃത്തി)",
 
-  "credit.title": "രചയിതാവ്: %s"
+  "credit.title": "രചയിതാവ്: %s",
+
+  "light.enable": "ലൈറ്റിംഗും നിഴലുകളും"
 }

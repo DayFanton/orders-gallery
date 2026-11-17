@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "తీపి బెర్రీలు (దశ 4)",
   "veg.name.sugar_cane": "చెరకు",
   "veg.name.seagrass_32x": "సముద్రపు గడ్డి",
+  "veg.weight": "బరువు (డ్రాప్ ఫ్రీక్వెన్సీ)",
 
-  "credit.title": "రచయిత: %s"
+  "credit.title": "రచయిత: %s",
+
+  "light.enable": "లైటింగ్ మరియు నీడలు"
 }

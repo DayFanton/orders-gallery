@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Txiv pos qab zib (theem 4)",
   "veg.name.sugar_cane": "Qab zib",
   "veg.name.seagrass_32x": "Cov nyom hiav txwv",
+  "veg.weight": "Qhov hnyav (tsaus zaus tso tawm)",
 
-  "credit.title": "Tus sau: %s"
+  "credit.title": "Tus sau: %s",
+
+  "light.enable": "Teeb thiab duab ntxoo"
 }

@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "مٹھے بیر (مرحلہ 4)",
   "veg.name.sugar_cane": "گنا",
   "veg.name.seagrass_32x": "سمندری گھاہ",
+  "veg.weight": "وزن (ڈراپ تھیوݨ دی شرح)",
 
-  "credit.title": "مصنف: %s"
+  "credit.title": "مصنف: %s",
+
+  "light.enable": "روشنی تے چھاواں"
 }

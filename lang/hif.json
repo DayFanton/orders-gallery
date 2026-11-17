@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Meetha berry (charan 4)",
   "veg.name.sugar_cane": "Ganna",
   "veg.name.seagrass_32x": "Samudri ghaas",
+  "veg.weight": "Wajan (kitni baar drop hota hai)",
 
-  "credit.title": "Author: %s"
+  "credit.title": "Author: %s",
+
+  "light.enable": "Raushni aur chhaya"
 }

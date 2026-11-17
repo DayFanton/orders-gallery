@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Сладки плодове (етап 4)",
   "veg.name.sugar_cane": "Захарна тръстика",
   "veg.name.seagrass_32x": "Морска трева",
+  "veg.weight": "Тегло (честота на падане)",
 
-  "credit.title": "Автор: %s"
+  "credit.title": "Автор: %s",
+
+  "light.enable": "Осветление и сенки"
 }

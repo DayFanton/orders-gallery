@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Tam-is nga berry (yugto 4)",
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Balili sa dagat",
+  "veg.weight": "Timbang (kadaghan sa pagkahulog)",
 
-  "credit.title": "Awtor: %s"
+  "credit.title": "Awtor: %s",
+
+  "light.enable": "Suga ug mga anino"
 }

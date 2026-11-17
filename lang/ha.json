@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Ya'yan itace masu zaƙi (mataki na 4)",
   "veg.name.sugar_cane": "Rake",
   "veg.name.seagrass_32x": "Ciyawar teku",
+  "veg.weight": "Nauyi (yawan sauka)",
 
-  "credit.title": "Marubuci: %s"
+  "credit.title": "Marubuci: %s",
+
+  "light.enable": "Haske da inuwa"
 }

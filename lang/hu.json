@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Édes bogyók (4. fázis)",
   "veg.name.sugar_cane": "Cukornád",
   "veg.name.seagrass_32x": "Tengeri fű",
+  "veg.weight": "Súly (ejtési gyakoriság)",
 
-  "credit.title": "Szerző: %s"
+  "credit.title": "Szerző: %s",
+
+  "light.enable": "Megvilágítás és árnyékok"
 }

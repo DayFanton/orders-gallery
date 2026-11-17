@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Imbuto ziryoshye (icyiciro cya 4)",
   "veg.name.sugar_cane": "Is sugarcane",
   "veg.name.seagrass_32x": "Ubwatsi bw'inyanja",
+  "veg.weight": "Uburemere (uko bigwa)",
 
-  "credit.title": "Umwanditsi: %s"
+  "credit.title": "Umwanditsi: %s",
+
+  "light.enable": "Umucyo n'ibiruri"
 }

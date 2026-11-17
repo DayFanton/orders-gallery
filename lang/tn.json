@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Moretlwa o o botshe (kgato ya 4)",
   "veg.name.sugar_cane": "Letlhaka la tswekiri",
   "veg.name.seagrass_32x": "Bojang jwa lewatle",
+  "veg.weight": "Boima (kgwedi ya gowa)",
 
-  "credit.title": "Mokwadi: %s"
+  "credit.title": "Mokwadi: %s",
+
+  "light.enable": "Lesedi le moriti"
 }

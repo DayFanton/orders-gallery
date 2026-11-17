@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "وشیں میوہ (پاد 4)",
   "veg.name.sugar_cane": "نیشکر",
   "veg.name.seagrass_32x": "سمندری کاه",
+  "veg.weight": "وزن (چون باز شوتگ)",
 
-  "credit.title": "نویسندہ: %s"
+  "credit.title": "نویسندہ: %s",
+
+  "light.enable": "روشنی ءِ سایگ"
 }

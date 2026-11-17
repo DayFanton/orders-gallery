@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Тәтті жидектер (4-кезең)",
   "veg.name.sugar_cane": "Қант қамысы",
   "veg.name.seagrass_32x": "Теңіз шөбі",
+  "veg.weight": "Салмағы (қаншалықты жиі түседі)",
 
-  "credit.title": "Автор: %s"
+  "credit.title": "Автор: %s",
+
+  "light.enable": "Жарықтандыру және көлеңкелер"
 }

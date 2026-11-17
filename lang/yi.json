@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "זיסע יאַגדעס (שטאַפּל 4)",
   "veg.name.sugar_cane": "צוקער־ריר",
   "veg.name.seagrass_32x": "ים־גראָז",
+  "veg.weight": "וואָג (ווי אָפט עס פֿאַלט)",
 
-  "credit.title": "מחבר: %s"
+  "credit.title": "מחבר: %s",
+
+  "light.enable": "לייטינג און שאָטן"
 }

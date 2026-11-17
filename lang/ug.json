@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "تاتلىق مېۋىلەر (4-باسقۇچ)",
   "veg.name.sugar_cane": "שש קווא (Qamish) -> قەنت قامىشى",
   "veg.name.seagrass_32x": "دېڭىز ئوت-چۆپی",
+  "veg.weight": "ئېغىرلىقى (چۈشۈش نىسبىتى)",
 
-  "credit.title": "ئاپتور: %s"
+  "credit.title": "ئاپتور: %s",
+
+  "light.enable": "يورۇتۇش ۋە سايە"
 }

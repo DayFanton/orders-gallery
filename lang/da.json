@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Søde bær (stadie 4)",
   "veg.name.sugar_cane": "Sukkerør",
   "veg.name.seagrass_32x": "Sjøgræs",
+  "veg.weight": "Vægt (drop hyppighed)",
 
-  "credit.title": "Forfatter: %s"
+  "credit.title": "Forfatter: %s",
+
+  "light.enable": "Belysning og skygger"
 }

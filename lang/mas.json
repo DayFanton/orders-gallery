@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Ilng'anayio omelok (esiana 4)",
   "veg.name.sugar_cane": "Osukari",
   "veg.name.seagrass_32x": "Oloishuro lokile",
+  "veg.weight": "Enkai (eunyet)",
 
-  "credit.title": "Enkai yaisho: %s"
+  "credit.title": "Enkai yaisho: %s",
+
+  "light.enable": "Enkai oloshoro e nkaji"
 }

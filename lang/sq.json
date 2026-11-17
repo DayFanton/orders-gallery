@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Manaferra të ëmbla (faza 4)",
   "veg.name.sugar_cane": "Kallam sheqeri",
   "veg.name.seagrass_32x": "Bari i detit",
+  "veg.weight": "Pesha (shpeshtësia e rënies)",
 
-  "credit.title": "Autori: %s"
+  "credit.title": "Autori: %s",
+
+  "light.enable": "Ndriçimi dhe hijet"
 }

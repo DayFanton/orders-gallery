@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "ផ្លែប៊ឺរីផ្អែម (ដំណាក់កាលទី ៤)",
   "veg.name.sugar_cane": "ដើមអំពៅ",
   "veg.name.seagrass_32x": "ស្មៅសមុទ្រ",
+  "veg.weight": "ទម្ងន់ (ប្រេកង់ធ្លាក់)",
 
-  "credit.title": "អ្នកនិពន្ធ៖ %s"
+  "credit.title": "អ្នកនិពន្ធ៖ %s",
+
+  "light.enable": "ពន្លឺ និងស្រមោល"
 }

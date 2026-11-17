@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Nasam-it a berry (paset 4)",
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Raborabot ti baybay",
+  "veg.weight": "Timbang (dalas ti pannakahulogna)",
 
-  "credit.title": "Mannurat: %s"
+  "credit.title": "Mannurat: %s",
+
+  "light.enable": "Lawag ken siled"
 }

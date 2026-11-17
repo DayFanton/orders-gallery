@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Michero inotapira (danho 4)",
   "veg.name.sugar_cane": "Shuga",
   "veg.name.seagrass_32x": "Uswa hwegungwa",
+  "veg.weight": "Kurema (kakawanda kwarova)",
 
-  "credit.title": "Munyori: %s"
+  "credit.title": "Munyori: %s",
+
+  "light.enable": "Mwenje nemumvuri"
 }

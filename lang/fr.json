@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Baies sucrées (stade 4)",
   "veg.name.sugar_cane": "Canne à sucre",
   "veg.name.seagrass_32x": "Herbe marine",
+  "veg.weight": "Poids (fréquence d'obtention)",
 
-  "credit.title": "Auteur : %s"
+  "credit.title": "Auteur : %s",
+
+  "light.enable": "Éclairage et ombres"
 }

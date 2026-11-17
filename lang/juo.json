@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "Ngig yath mamit (kuma 4)",
   "veg.name.sugar_cane": "Mborog",
   "veg.name.seagrass_32x": "Lango ni thim",
+  "veg.weight": "Rem (namba ma pe ni kondo)",
 
-  "credit.title": "Mwandishi: %s"
+  "credit.title": "Mwandishi: %s",
+
+  "light.enable": "Ler kendo thim"
 }

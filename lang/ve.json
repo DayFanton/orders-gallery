@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mitshelo i difhaho (luṱa lwa 4)",
   "veg.name.sugar_cane": "Luvhanda lwa tswikiri",
   "veg.name.seagrass_32x": "Vhusiku ha lwanani",
+  "veg.weight": "Tshilemo (tshikhula tsha u wa)",
 
-  "credit.title": "Murendami: %s"
+  "credit.title": "Murendami: %s",
+
+  "light.enable": "U khakhedza na mvele"
 }

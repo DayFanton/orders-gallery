@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ཤིང་འབྲས་མངར་མོ། (རིམ་པ་ ༤)",
   "veg.name.sugar_cane": "ཀ་ར་ཤིང་།",
   "veg.name.seagrass_32x": "རྒྱ་མཚོའི་རྩྭ།",
+  "veg.weight": "ལྗིད་ཚད། (ཐེངས་ཇི་ཙམ་འབབ་པ།)",
 
-  "credit.title": "རྩོམ་པ་པོ། %s"
+  "credit.title": "རྩོམ་པ་པོ། %s",
+
+  "light.enable": "འོད་དང་གྲིབ་མ།"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ချိုသောဘယ်ရီသီး (အဆင့် ၄)",
   "veg.name.sugar_cane": "ကြံ",
   "veg.name.seagrass_32x": "ပင်လယ်မြက်",
+  "veg.weight": "အလေးချိန် (ကျဆင်းသည့်အကြိမ်ရေ)",
 
-  "credit.title": "စာရေးသူ: %s"
+  "credit.title": "စာရေးသူ: %s",
+
+  "light.enable": "အလင်းရောင်နှင့် အရိပ်များ"
 }

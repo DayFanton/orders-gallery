@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Süýji miweler (4-nji tapgyr)",
   "veg.name.sugar_cane": "Şeker gamyşy",
   "veg.name.seagrass_32x": "Deňiz oty",
+  "veg.weight": "Agramy (düşme ýygylygy)",
 
-  "credit.title": "Awtor: %s"
+  "credit.title": "Awtor: %s",
+
+  "light.enable": "Yaagtandyryş we kölegeler"
 }

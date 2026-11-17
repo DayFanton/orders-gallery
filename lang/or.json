@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ମିଠା କୋଳି (ପର୍ଯ୍ୟାୟ 4)",
   "veg.name.sugar_cane": "ଆଖୁ",
   "veg.name.seagrass_32x": "ସମୁଦ୍ର ଘାସ",
+  "veg.weight": "ଓଜନ (ଡ୍ରପ୍ ଆବୃତ୍ତି)",
 
-  "credit.title": "ଲେଖକ: %s"
+  "credit.title": "ଲେଖକ: %s",
+
+  "light.enable": "ଆଲୋକ ଏବଂ ଛାୟା"
 }

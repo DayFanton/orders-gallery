@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "ໝາກເບີຣີຫວານ (ຂັ້ນຕອນ 4)",
   "veg.name.sugar_cane": "ອ້ອຍ",
   "veg.name.seagrass_32x": "ຫຍ້າທະເລ",
+  "veg.weight": "ນ້ຳໜັກ (ຄວາມຖີ່ໃນການຕົກ)",
 
-  "credit.title": "ຜູ້ຂຽນ: %s"
+  "credit.title": "ຜູ້ຂຽນ: %s",
+
+  "light.enable": "ແສງສະຫວ່າງ ແລະ ເງົາ"
 }

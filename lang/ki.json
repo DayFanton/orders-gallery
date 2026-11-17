@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matunda marĩ cama (ikinya rĩa 4)",
   "veg.name.sugar_cane": "Gakaraku",
   "veg.name.seagrass_32x": "Rũkînyo rwa iria",
+  "veg.weight": "Ũritu (rĩu rĩkonania)",
 
-  "credit.title": "Mwandĩki: %s"
+  "credit.title": "Mwandĩki: %s",
+
+  "light.enable": "Ũtheri na iruru"
 }

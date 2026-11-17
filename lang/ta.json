@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "இனிப்பு பெர்ரிகள் (நிலை 4)",
   "veg.name.sugar_cane": "கரும்பு",
   "veg.name.seagrass_32x": "கடல் புல்",
+  "veg.weight": "எடை (விழும் அதிர்வெண்)",
 
-  "credit.title": "ஆசிரியர்: %s"
+  "credit.title": "ஆசிரியர்: %s",
+
+  "light.enable": "விளக்கு மற்றும் நிழல்கள்"
 }

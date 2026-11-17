@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Woh beri legi (tahap 4)",
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Suket segara",
+  "veg.weight": "Bobot (frekuensi metu)",
 
-  "credit.title": "Penulis: %s"
+  "credit.title": "Penulis: %s",
+
+  "light.enable": "Pencahayaan lan ayang-ayang"
 }

@@ -435,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "মিঠা জামু (পৰ্যায় ৪)",
   "veg.name.sugar_cane": "কুঁহিয়াৰ",
   "veg.name.seagrass_32x": "সাগৰীয় ঘাঁহ",
+  "veg.weight": "ওজন (ড্রপ ফ্রিকোয়েন্সি)",
 
-  "credit.title": "লেখক: %s"
+  "credit.title": "লেখক: %s",
+
+  "light.enable": "পোহৰ আৰু ছাঁ"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Mkpụrụ osisi dị ụtọ (ọkwa 4)",
   "veg.name.sugar_cane": "Okpete",
   "veg.name.seagrass_32x": "Ahịhịa osimiri",
+  "veg.weight": "Ibu (ugboro ole ka o na-ada)",
 
-  "credit.title": "Odee: %s"
+  "credit.title": "Odee: %s",
+
+  "light.enable": "Ìhè na onyinyo"
 }

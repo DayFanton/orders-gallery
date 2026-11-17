@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "মিষ্টি বেরি (ধাপ ৪)",
   "veg.name.sugar_cane": "আখ",
   "veg.name.seagrass_32x": "সামুদ্রিক ঘাস",
+  "veg.weight": "ওজন (ড্রপ ফ্রিকোয়েন্সি)",
 
-  "credit.title": "লেখক: %s"
+  "credit.title": "লেখক: %s",
+
+  "light.enable": "আলো এবং ছায়া"
 }

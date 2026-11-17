@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Sladké bobule (fáza 4)",
   "veg.name.sugar_cane": "Cukrová trstina",
   "veg.name.seagrass_32x": "Morská tráva",
+  "veg.weight": "Váha (frekvencia padania)",
 
-  "credit.title": "Autor: %s"
+  "credit.title": "Autor: %s",
+
+  "light.enable": "Osvetlenie a tiene"
 }

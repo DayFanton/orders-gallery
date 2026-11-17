@@ -407,6 +407,7 @@
   "folder.veg.error": "选择图片文件",
   "folder.tint": "顏色（白色——無色調）",
   "folder.weight": "權重（掉落頻率）",
+  "folder.veg.hint": "揀隻植物个圖片（帶透明底个 .png）。高身个圖片（高度至少係闊度个 1.5 倍，比如 16×32）會變成兩格高个植物",
 
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",
@@ -434,6 +435,9 @@
   "veg.name.sweet_berry_bush_stage3": "甜漿果（階段 4）",
   "veg.name.sugar_cane": "甘蔗",
   "veg.name.seagrass_32x": "海草",
+  "veg.weight": "權重（掉落頻率）",
 
-  "credit.title": "作者：%s"
+  "credit.title": "作者：%s",
+
+  "light.enable": "光照與陰影"
 }

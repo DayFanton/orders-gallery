@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Doom yu neex (jëf 4)",
   "veg.name.sugar_cane": "Xam-xam",
   "veg.name.seagrass_32x": "Xaj bu bëj",
+  "veg.weight": "Dole (ni mu koy am)",
 
-  "credit.title": "Bindkat: %s"
+  "credit.title": "Bindkat: %s",
+
+  "light.enable": "Leer ak niwal"
 }

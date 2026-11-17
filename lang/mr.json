@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "गोड बेरी (टप्पा 4)",
   "veg.name.sugar_cane": "उस",
   "veg.name.seagrass_32x": "सागरी गवत",
+  "veg.weight": "वजन (कसे पडते)",
 
-  "credit.title": "लेखक: %s"
+  "credit.title": "लेखक: %s",
+
+  "light.enable": "प्रकाश आणि सावल्या"
 }

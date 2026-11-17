@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Olembe mamit (okang' 4)",
   "veg.name.sugar_cane": "Midhanyi",
   "veg.name.seagrass_32x": "Lum mar nam",
+  "veg.weight": "Pimo (nyalgo mar podho)",
 
-  "credit.title": "Jawinjoga: %s"
+  "credit.title": "Jawinjoga: %s",
+
+  "light.enable": "Ler gi kijuogi"
 }

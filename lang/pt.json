@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Bagas doces (estágio 4)",
   "veg.name.sugar_cane": "Cana-de-açúcar",
   "veg.name.seagrass_32x": "Erva-marinha",
+  "veg.weight": "Peso (frequência de queda)",
 
-  "credit.title": "Autor: %s"
+  "credit.title": "Autor: %s",
+
+  "light.enable": "Iluminação e sombras"
 }

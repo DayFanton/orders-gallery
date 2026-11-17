@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "달콤한 열매 (4단계)",
   "veg.name.sugar_cane": "사탕수수",
   "veg.name.seagrass_32x": "해초",
+  "veg.weight": "가중치 (드랍 빈도)",
 
-  "credit.title": "저자: %s"
+  "credit.title": "저자: %s",
+
+  "light.enable": "조명 및 그림자"
 }

@@ -437,6 +437,9 @@
   "veg.name.sweet_berry_bush_stage3": "Matunda me mũyo (kĩlungu kya 4)",
   "veg.name.sugar_cane": "Kĩkandi",
   "veg.name.seagrass_32x": "Nyasi ya ikuni",
+  "veg.weight": "Ũito (kĩla kĩvaka)",
 
-  "credit.title": "Mwandĩki: %s"
+  "credit.title": "Mwandĩki: %s",
+
+  "light.enable": "Ũsenge na kĩthuku"
 }
