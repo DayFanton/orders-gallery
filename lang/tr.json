@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Kaydetme",
   "rename.confirm_back": "Düzenlemeye devam et",
   "rename.guide.title": "Nasıl yeniden adlandırılır ve renkli biçimlendirilir (§ kodları)",
-  "rename.guide.how": "Yeniden adlandırmak için kart başlığına tıklayın, yeni bir ad girin ve herhangi bir boş alana tıklayın — kaydedilecektir. Alanın yanındaki çarpı işareti kaydetmeden önceki adı geri yükler. Boş bir alan orijinal adı geri getirecektir.",
-  "rename.guide.codes": "Başlıkta Minecraft biçimlendirme kodlarını kullanabilirsiniz: § işareti ve sonrasındaki karakter. Renkler: §0–§9 ve §a–§f. Stiller: §l — kalın, §o — italik, §n — altı çizili, §m — üstü çizili, §k — „şifreli”, §r — tümünü sıfırla. Renk kodu önceki stilleri sıfırlar, bu yüzden stilleri renkten sonra yerleştirin"
+  "rename.guide.how": "Yeniden adlandırmak için kart başlığına tıklayın, yenisini yazın ve herhangi bir boş yere tıklayın — kaydedilecektir. Alanın yanındaki çarpı işareti, kaydetmeden önceki adı geri getirecektir. Boş bir alan orijinal adı geri getirecektir",
+  "rename.guide.codes": "Başlıkta Minecraft biçimlendirme kodlarını kullanabilirsiniz: § işareti ve sonrasındaki karakter. Renkler: §0–§9 ve §a–§f. Stiller: §l — kalın, §o — italik, §n — altı çizili, §m — üstü çizili, §k — „şifreli”, §r — tümünü sıfırla. Renk kodu önceki stilleri sıfırlar, bu yüzden stilleri renkten sonra yerleştirin",
+  "rename.guide.example": "Örnek:",
+  "rename.guide.sample": "§6§lAltın §r§ablok",
+  "rename.guide.type": "§ nasıl yazılır: Windows — Alt tuşuna basılı tutarak sayısal tuş takımından 0167 tuşlayın; Mac — Option + 6 (İngilizce klavye düzeni); telefonda başlığı düzenlerken aşağıdaki koda dokunmanız yeterlidir, kendi kendine eklenecektir",
+  "rename.guide.colors": "Renkler",
+  "rename.guide.bedrock": "Bedrock Renkleri",
+  "rename.guide.styles": "Stiller",
+  "rename.guide.not_editing": "Önce kart başlığına, ardından eklemek için kodun üzerine tıklayın",
+  "rename.style.l": "Kalın",
+  "rename.style.o": "İtalik",
+  "rename.style.n": "Altı çizili",
+  "rename.style.m": "Üstü çizili",
+  "rename.style.k": "Şifre",
+  "rename.style.r": "Sıfırla"
 }

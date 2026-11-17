@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ýatda saklamaň",
   "rename.confirm_back": "Düzetmäge dowam ediň",
   "rename.guide.title": "Adyny üýtgetmek we owadanlamak (§ kodlary)",
-  "rename.guide.how": "Adyny üýtgetmek üçin kartoçkanyň adyna basyň, täzesini ýazyň we islendik boş ýere basyň — ol ýatda saklanar. Meýdanyň ýanyndaky hays ýatda saklamazdan öňki adyny gaýtaryp getirer. Boş meýdan asyl adyny dikelder.",
-  "rename.guide.codes": "Adaty adaty atda Minecraft formatlama kodlaryny ulanyp bilersiňiz: § nyşany we ondan soňky simwol. Reňkler: §0–§9 we §a–§f. Stiller: §l — ýogun, §o — gyşyk, §n — aşagy çyzykly, §m — üstünden çyzyk çyzylan, §k — \"şifrlenen\", §r — hemmesini deslapky ýagdaýyna getirmek. Reňk kody öňki stilleri deslapky ýagdaýyna getirýär, şonuň üçin stilleri reňkden soň goýuň"
+  "rename.guide.how": "Adyny üýtgetmek üçin kartoçkanyň adyna basyň, täzesini ýazyň we islendik boş ýere basyň — ol ýatda saklanar. Meýdanyň ýanyndaky hrest saklamazdan ozalky adyny yzyna getirer. Boş meýdan asyl adyny yzyna getirer",
+  "rename.guide.codes": "Adaty adaty atda Minecraft formatlama kodlaryny ulanyp bilersiňiz: § nyşany we ondan soňky simwol. Reňkler: §0–§9 we §a–§f. Stiller: §l — ýogun, §o — gyşyk, §n — aşagy çyzykly, §m — üstünden çyzyk çyzylan, §k — \"şifrlenen\", §r — hemmesini deslapky ýagdaýyna getirmek. Reňk kody öňki stilleri deslapky ýagdaýyna getirýär, şonuň üçin stilleri reňkden soň goýuň",
+  "rename.guide.example": "Mysal:",
+  "rename.guide.sample": "§6§lAltyn §r§ablok",
+  "rename.guide.type": "§ ny nädip ýazmaly: Windows — Alt düwmesini basyp saklap, san klawiaturasynda 0167 ýazyň; Mac — Option + 6 (iňlis раскladasy); telefonda adyny üýtgedip ýörkäňiz aşakdaky koda basyň, ol özbaşdak goşular",
+  "rename.guide.colors": "Reňkler",
+  "rename.guide.bedrock": "Bedrock reňkleri",
+  "rename.guide.styles": "Stiller",
+  "rename.guide.not_editing": "Ilki bilen kartyň adyna, soňra ony goşmak üçin koda basyň",
+  "rename.style.l": "Ýogyn",
+  "rename.style.o": "Kursiw",
+  "rename.style.n": "Asty çyzykly",
+  "rename.style.m": "Üsti çyzykly",
+  "rename.style.k": "Şifr",
+  "rename.style.r": "Başdan başla -> Sazlamak"
 }

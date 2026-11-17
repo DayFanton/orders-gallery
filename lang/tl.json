@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Huwag i-save",
   "rename.confirm_back": "Ipagpatuloy ang pag-edit",
   "rename.guide.title": "Paano palitan ang pangalan at pagandahin (mga § code)",
-  "rename.guide.how": "Para palitan ang pangalan, i-click ang pamagat ng card, maglagay ng bago, at i-click ang anumang blangkong espasyo — mase-save ito. Ang krus sa tabi ng field ay magbabalik sa dating pangalan nang hindi nagse-save. Ang blangkong field ay magpapanumbalik ng orihinal na pangalan.",
-  "rename.guide.codes": "Sa pamagat, maaari mong gamitin ang mga code ng pag-format ng Minecraft: ang tandang § at isang karakter pagkatapos nito. Mga Kulay: §0–§9 at §a–§f. Mga Estilo: §l — bold, §o — italic, §n — nakasalungguhit, §m — may guhit sa gitna, §k — \"naka-obfuscate\", §r — i-reset ang lahat. Ang code ng kulay ay nag-re-reset sa mga nakaraang estilo, kaya ilagay ang mga estilo pagkatapos ng kulay"
+  "rename.guide.how": "Upang palitan ang pangalan, mag-click sa pamagat ng card, i-type ang bago at mag-click sa anumang blangkong lugar — ito ay mase-save. Ang ekis sa tabi ng field ay ibabalik ang nakaraang pangalan nang hindi nagse-save. Ang blangkong field ay ibabalik ang orihinal na pangalan",
+  "rename.guide.codes": "Sa pamagat, maaari mong gamitin ang mga code ng pag-format ng Minecraft: ang tandang § at isang karakter pagkatapos nito. Mga Kulay: §0–§9 at §a–§f. Mga Estilo: §l — bold, §o — italic, §n — nakasalungguhit, §m — may guhit sa gitna, §k — \"naka-obfuscate\", §r — i-reset ang lahat. Ang code ng kulay ay nag-re-reset sa mga nakaraang estilo, kaya ilagay ang mga estilo pagkatapos ng kulay",
+  "rename.guide.example": "Halimbawa:",
+  "rename.guide.sample": "§6§lGintong §r§ablock",
+  "rename.guide.type": "Paano i-type ang §: Windows — i-hold ang Alt at i-type ang 0167 sa numeric keypad; Mac — Option + 6 (layout sa Ingles); sa telepono, i-tap lang ang code sa ibaba habang pﻳni-edit ang pamagat, at kusa itong muling mailalagay",
+  "rename.guide.colors": "Mga kulay",
+  "rename.guide.bedrock": "Mga kulay ng Bedrock",
+  "rename.guide.styles": "Mga estilo",
+  "rename.guide.not_editing": "I-click muna ang pamagat ng card, pagkatapos ay ang code upang ma-insert ito",
+  "rename.style.l": "Makapal",
+  "rename.style.o": "Italiko",
+  "rename.style.n": "May salungguhit",
+  "rename.style.m": "May guhit sa gitna",
+  "rename.style.k": "Cipre",
+  "rename.style.r": "I-reset"
 }

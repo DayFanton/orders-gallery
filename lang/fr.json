@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ne pas enregistrer",
   "rename.confirm_back": "Continuer la modification",
   "rename.guide.title": "Comment renommer et styliser (codes §)",
-  "rename.guide.how": "Pour renommer, cliquez sur le titre de la carte, saisissez-en un nouveau et cliquez n'importe où dans l'espace vide — il sera enregistré. La croix à côté du champ rétablira le nom précédent sans enregistrer. Un champ vide restaurera le nom d'origine.",
-  "rename.guide.codes": "Dans le titre, vous pouvez utiliser les codes de formatage de Minecraft : le signe § et un caractère après celui-ci. Couleurs : §0–§9 et §a–§f. Styles : §l — gras, §o — italique, §n — souligné, §m — barré, §k — « obfusqué », §r — tout réinitialiser. Le code couleur réinitialise les styles précédents, placez donc les styles après la couleur"
+  "rename.guide.how": "Pour renommer, cliquez sur le titre de la carte, tapez le nouveau et cliquez n'importe où dans le vide — il sera enregistré. La croix à côté du champ rétablira l'ancien nom sans enregistrer. Un champ vide rétablira le nom d'origine",
+  "rename.guide.codes": "Dans le titre, vous pouvez utiliser les codes de formatage de Minecraft : le signe § et un caractère après celui-ci. Couleurs : §0–§9 et §a–§f. Styles : §l — gras, §o — italique, §n — souligné, §m — barré, §k — « obfusqué », §r — tout réinitialiser. Le code couleur réinitialise les styles précédents, placez donc les styles après la couleur",
+  "rename.guide.example": "Exemple :",
+  "rename.guide.sample": "§6§lBloc §r§ad'or",
+  "rename.guide.type": "Comment taper § : Windows — maintenez Alt enfoncé et tapez 0167 sur le pavé numérique ; Mac — Option + 6 (agencement anglais) ; sur téléphone, appuyez simplement sur le code ci-dessous pendant que vous modifiez le titre, il s'insérera tout seul",
+  "rename.guide.colors": "Couleurs",
+  "rename.guide.bedrock": "Couleurs Bedrock",
+  "rename.guide.styles": "Styles",
+  "rename.guide.not_editing": "Cliquez d'abord sur le titre de la carte, puis sur le code pour l'insérer",
+  "rename.style.l": "Gras",
+  "rename.style.o": "Italique",
+  "rename.style.n": "Souligné",
+  "rename.style.m": "Barré",
+  "rename.style.k": "Chiffre",
+  "rename.style.r": "Réinitialiser"
 }

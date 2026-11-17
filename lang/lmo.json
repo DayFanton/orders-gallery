@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Salva no",
   "rename.confirm_back": "Vant a innanz con la modifica",
   "rename.guide.title": "Come cambiai el nomm e fann un bel lavur con i color (§ codes §)",
-  "rename.guide.how": "Per cambià el nomm, pucia in sul titolet de la carta, scriv un nom növ e pucia in qual seo se spazzi vuj — el se salvarà. El cruzell vesin al camp el turnarà al nomm precedent senza salvà. Un camp vuj el tornerà a met el nomm original.",
-  "rename.guide.codes": "In del titoel te piod doperà i codici de formatazion de Minecraft: el segn § e un carater dedree. Color: §0–§9 e §a–§f. Stil: §l — grasset, §o — corsiv, §n — sota-lignaa, §m — sbarraa, §k — \"oscuraa\", §r — azera tut. El codici del color el rezeta i stil prima, donca met i stil dop del color"
+  "rename.guide.how": "Per reanomenà, el clic in sul titol de la carta, scriv el növ e fa un clic in de qualsias part vöda — el sa salvarà. La cros in Vesin del camp la farà tornar indré el nòm vecc senza salvà. Un camp vöd el farà tornar indré el nòm original",
+  "rename.guide.codes": "In del titoel te piod doperà i codici de formatazion de Minecraft: el segn § e un carater dedree. Color: §0–§9 e §a–§f. Stil: §l — grasset, §o — corsiv, §n — sota-lignaa, §m — sbarraa, §k — \"oscuraa\", §r — azera tut. El codici del color el rezeta i stil prima, donca met i stil dop del color",
+  "rename.guide.example": "Esempi:",
+  "rename.guide.sample": "§6§lBloch §r§ad'or",
+  "rename.guide.type": "Come scriver §: Windows — tign a man Alt e scrif 0167 sù la tastadura numerega; Mac — Option + 6 (disposizion inglesa); sù el telefonin, tòcca el codici sota menter te modifichit el titol, el se metarà dentar da per lù",
+  "rename.guide.colors": "Colór",
+  "rename.guide.bedrock": "Colór de Bedrock",
+  "rename.guide.styles": "Stil",
+  "rename.guide.not_editing": "Prima tòcca el titol de la carta, poeu tòcca el codici per metell dentar",
+  "rename.style.l": "Grass",
+  "rename.style.o": "Corsiv",
+  "rename.style.n": "Sottolinead",
+  "rename.style.m": "Sbarrad",
+  "rename.style.k": "Cifrada",
+  "rename.style.r": "Rezzet"
 }

@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ntubike",
   "rename.confirm_back": "Bandanya guhindura",
   "rename.guide.title": "Uko wahindura izina ukaryiza (§ codes za §)",
-  "rename.guide.how": "Kugira ngo uhindure izina, kanda ku mutwe w'ikarita, wandike irishasha hanyuma ukande ahabusa hose — bizabikwa. Umusaraba uri hafi y'akarere uzasubiza izina rya kera utabikiye. Akarere k'ubusa kazasubiza izina ry'akarangiramata.",
-  "rename.guide.codes": "Mu mutwe ushobora gukoresha amakode yo gufomata ya Minecraft: ikimenyetso § n'inyuguti ikurikira. Amabara: §0–§9 na §a–§f. Imiterere: §l — y'umubyimba, §o — yunamye, §n — yanditseho munsi, §m — yanditseho hagati, §k — \"yahishwe\", §r — subiza byose kuri zeru. Kode y'ibara isubiramo imiterere ya mbere, bityo shyira imiterere nyuma y'ibara"
+  "rename.guide.how": "Kugira ngo uhindure izina, kanda ku mutwe w'ikarita, andika irindi nca uce ukande ahantu hose hatari ubutaka — bizabikwa. Umusaraba uri hafi y'akarere uzagarura izina ryahise utabikiye. Akarere katarimo kazagarura izina ry'umwimerere",
+  "rename.guide.codes": "Mu mutwe ushobora gukoresha amakode yo gufomata ya Minecraft: ikimenyetso § n'inyuguti ikurikira. Amabara: §0–§9 na §a–§f. Imiterere: §l — y'umubyimba, §o — yunamye, §n — yanditseho munsi, §m — yanditseho hagati, §k — \"yahishwe\", §r — subiza byose kuri zeru. Kode y'ibara isubiramo imiterere ya mbere, bityo shyira imiterere nyuma y'ibara",
+  "rename.guide.example": "Akarorero:",
+  "rename.guide.sample": "§6§lBlock §r§a y'zahabu",
+  "rename.guide.type": "Uko wotera §: Windows — fata Alt wandike 0167 kuri keyibodi y'imibare; Mac — Option + 6 (imiterere y'Icongereza); kuri terefone, kanda gusa kode iri hepfo mu gihe uriko urakosora umutwe, izokwinjira ubwayo",
+  "rename.guide.colors": "Amabara",
+  "rename.guide.bedrock": "Amabara ya Bedrock",
+  "rename.guide.styles": "Imiterere",
+  "rename.guide.not_editing": "Banza ukande ku mutwe w'ikarita, hanyuma ukande kuri kode kugira ngo uyishyiremo",
+  "rename.style.l": "Umuvya",
+  "rename.style.o": "Kuryama",
+  "rename.style.n": "Biri munsi y'umurongo",
+  "rename.style.m": "Biri hagati y'umurongo",
+  "rename.style.k": "Ibanga",
+  "rename.style.r": "Subira utangure"
 }

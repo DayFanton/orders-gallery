@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Mos ruaj",
   "rename.confirm_back": "Vazhdo redaktimin",
   "rename.guide.title": "Si të riemërtoni dhe stiloni (kodet §)",
-  "rename.guide.how": "Për të riemërtuar, klikoni te titulli i kartës, shkruani një të ri dhe klikoni kudo në hapësirë boshe — do të ruhet. Kryqi pranë fushës do të kthejë emrin e mëparshëm pa ruajtur. Një fushë boshe do të rivendosë emrin origjinal.",
-  "rename.guide.codes": "Në titull mund të përdorni kodet e formatimit nga Minecraft: shenjën § dhe një simbol pas saj. Ngjyrat: §0–§9 dhe §a–§f. Stilet: §l — e trashë, §o — e pjerrët, §n — e nënvizuar, §m — e shifruar/e fshirë, §k — \"kriptuar\", §r — rivendos gjithçka. Kodi i ngjyrës rivendos stilet e mëparshme, ndaj vendosni stilet pas ngjyrës"
+  "rename.guide.how": "Për ta riemërtuar, klikoni te titulli i kartës, shkruani të riun dhe klikoni diku në një hapësirë bosh — do të ruhet. Kryqi pranë fushës do të kthejë emrin e mëparshëm pa ruajtur. Një fushë bosh do të kthejë emrin origjinal",
+  "rename.guide.codes": "Në titull mund të përdorni kodet e formatimit nga Minecraft: shenjën § dhe një simbol pas saj. Ngjyrat: §0–§9 dhe §a–§f. Stilet: §l — e trashë, §o — e pjerrët, §n — e nënvizuar, §m — e shifruar/e fshirë, §k — \"kriptuar\", §r — rivendos gjithçka. Kodi i ngjyrës rivendos stilet e mëparshme, ndaj vendosni stilet pas ngjyrës",
+  "rename.guide.example": "Shembull:",
+  "rename.guide.sample": "§6§lBllok §r§ai artë",
+  "rename.guide.type": "Si të shkruani §: Windows — mbani shtypur Alt dhe shkruani 0167 në tastierën numerike; Mac — Option + 6 (skema angleze); në telefon, thjesht prekni kodin e mëposhtëm ndërsa redaktoni titullin dhe ai do të futet vetë",
+  "rename.guide.colors": "Ngjyrat",
+  "rename.guide.bedrock": "Ngjyrat e Bedrock",
+  "rename.guide.styles": "Stilet",
+  "rename.guide.not_editing": "Së pari klikoni te titulli i kartës, pastaj te kodi për ta futur atë",
+  "rename.style.l": "I trashë",
+  "rename.style.o": "Italike",
+  "rename.style.n": "I nënvizuar",
+  "rename.style.m": "I vijëzuar përmes",
+  "rename.style.k": "Shifër",
+  "rename.style.r": "Rivendos"
 }

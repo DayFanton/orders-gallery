@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ma bló gbɔ",
   "rename.confirm_back": "Zɔn kpo ɖo ɖyɔdidyɔ ɔ jí",
   "rename.guide.title": "Lee e nɔ ɖyɔ nyikɔ bo nɔ ɖó sinsɛn gbɔn tɛn mɛ ɔ (§ kɔdu lɛ)",
-  "rename.guide.how": "Bo na ɖyɔ nyikɔ ɔ, kpé nɔ nyikɔ kpɛví ɔ jí, ɖó yɔyɔ tɛn mɛ bo kpé tɛn vovo ɖebǔ mɛ — e na ɖo wè gbe. Xaali e ɖò kpɛví ɔ lɛ kpa ɔ na lɛ kɛ lɛ kɔ yi nyikɔ xoxo ɔ jí ma bló gbɔ. Tɛn vovo ɔ na lɛ kɔ yi nyikɔ tɔn mɛ.",
-  "rename.guide.codes": "To xota ɔ mɛ ɔ, a hɛn ɔ ka zɛ xɛnyɛnyɔn xóɖò tɔn Minecraft tɔn lɛ: kpo § kpo kpo nǔ e bɔ bɔ kudo ɔ kpo. Xɔnnɔ lɛ: §0–§9 kpo §a–§f kpo. Ali lɛ: §l — gbigba, §o — bɔ bɔ kudo mɛ, §n — do glɔ, §m — do tɛntin, §k — \"nu e gleta ɔ\", §r — lɛkɔ ɖó nǔ bǐ. Xɔnnɔ kɔdii lɛ nɔ lɛkɔ ali xoxo lɛ, enɛ wɛ zɔ bɔ a nɔ ɖó ali lɛ ɖò xɔnnɔ ɔ gudo"
+  "rename.guide.how": "Bo na ɖyɔ nyikɔ ɔ, kpe nɔ ɔ nu, wlan nyikɔ yɔyɔ ɔ bo kpe ɖo fiɖe vovo ɖebǔ nu — e na mɛ. Kɔnɔ e ɖo fi ɔ nu ɔ na lɛkɔ nyikɔ xoxo ɔ mɛ mɛ vɔ e ma wlan ǎ. Fi vovo ɔ na lɛkɔ nyikɔ tɔn mɛ",
+  "rename.guide.codes": "To xota ɔ mɛ ɔ, a hɛn ɔ ka zɛ xɛnyɛnyɔn xóɖò tɔn Minecraft tɔn lɛ: kpo § kpo kpo nǔ e bɔ bɔ kudo ɔ kpo. Xɔnnɔ lɛ: §0–§9 kpo §a–§f kpo. Ali lɛ: §l — gbigba, §o — bɔ bɔ kudo mɛ, §n — do glɔ, §m — do tɛntin, §k — \"nu e gleta ɔ\", §r — lɛkɔ ɖó nǔ bǐ. Xɔnnɔ kɔdii lɛ nɔ lɛkɔ ali xoxo lɛ, enɛ wɛ zɔ bɔ a nɔ ɖó ali lɛ ɖò xɔnnɔ ɔ gudo",
+  "rename.guide.example": "Kpɔ́ndéwú:",
+  "rename.guide.sample": "§6§lBlɔki §r§a sika tɔn",
+  "rename.guide.type": "Lee e na blo gbɔn §: Windows — xo Alt bo ɖɔ 0167 ɖo nɔmbu kiyibodi ji; Mac — Option + 6 (Anklisɛgbe toxo); ɖo fon ji ɔ, zɔn kpo nɔmbu e ɖo te do glɔ ɔ hwenu e ɖɔ xota ɔ, e na biɔ eɖesunɔ",
+  "rename.guide.colors": "Gbeji",
+  "rename.guide.bedrock": "Gbeji Bedrock",
+  "rename.guide.styles": "Nɔnamɛ",
+  "rename.guide.not_editing": "Flín nu ɖo xota kaati tɔn ji, bo lɛ́ flín nu ɖo nɔmbu ɔ ji bo biɔ emi",
+  "rename.style.l": "Wɛn",
+  "rename.style.o": "Zɛn",
+  "rename.style.n": "Xwitixwi",
+  "rename.style.m": "Xwitixwi ɖo tɛntin",
+  "rename.style.k": "Gbɛnɛ",
+  "rename.style.r": "Gbadja"
 }

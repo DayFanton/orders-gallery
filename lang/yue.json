@@ -469,6 +469,19 @@
   "rename.confirm_discard": "不保存",
   "rename.confirm_back": "繼續編輯",
   "rename.guide.title": "如何重命名並使用顏色美化（§ 代碼）",
-  "rename.guide.how": "要重新命名，請點擊卡片標題，輸入新名稱並點擊任何空白處 — 它將被儲存。欄位旁邊的交叉將在不儲存的情況下恢復先前的名稱。空欄位將恢復原始名稱。",
-  "rename.guide.codes": "喺標題度你可以用 Minecraft 嘅格式化代碼：§ 符號同埋佢後面嘅字元。顏色：§0–§9 同埋 §a–§f。樣式：§l — 粗體，§o — 斜體，§n — 底線，§m — 刪除線，§k — 「亂碼」，§r — 重設全部。顏色碼會重設之前嘅樣式，所以請將樣式擺喺顏色後面"
+  "rename.guide.how": "要重新命名，請點擊卡片標題，輸入新名稱並點擊任何空白處——它將會儲存。欄位旁邊嘅交叉將會唔儲存咁還原返舊名稱。空白欄位將會還原返原始名稱",
+  "rename.guide.codes": "喺標題度你可以用 Minecraft 嘅格式化代碼：§ 符號同埋佢後面嘅字元。顏色：§0–§9 同埋 §a–§f。樣式：§l — 粗體，§o — 斜體，§n — 底線，§m — 刪除線，§k — 「亂碼」，§r — 重設全部。顏色碼會重設之前嘅樣式，所以請將樣式擺喺顏色後面",
+  "rename.guide.example": "例子：",
+  "rename.guide.sample": "§6§l金 §r§a方塊",
+  "rename.guide.type": "點樣打出 §：Windows — 按住 Alt 並喺數字鍵盤輸入 0167；Mac — Option + 6（英文鍵盤佈局）；喺手機度，編輯標題時只需撳吓下面個代碼，就會自動插入",
+  "rename.guide.colors": "顏色",
+  "rename.guide.bedrock": "Bedrock 顏色",
+  "rename.guide.styles": "樣式",
+  "rename.guide.not_editing": "先click卡片標題，跟住click個代碼嚟插入",
+  "rename.style.l": "粗體",
+  "rename.style.o": "斜體",
+  "rename.style.n": "底線",
+  "rename.style.m": "刪除線",
+  "rename.style.k": "密碼",
+  "rename.style.r": "重設"
 }

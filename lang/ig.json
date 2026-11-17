@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Echekwabala ya",
   "rename.confirm_back": "Gaa n'ihu na-edezi",
   "rename.guide.title": "Otu esi ewegharị aha ma chọọ ya mma (koodu §)",
-  "rename.guide.how": "Iji nyegharịa aha, pịa isi akwụkwọ kaadị ahụ, tinye aha ọhụrụ ma pịa n'ebe ọ bụla tọgbọ chakoo — a ga-echekwa ya. Oghere obe n'akụkụ ubi ahụ ga-eweghachite aha mbụ n'echekwabala ya. Oghere tọgbọ chakoo ga-eweghachite aha mbụ ahụ.",
-  "rename.guide.codes": "N'ime aha, ị nwere ike iji koodu nhazi Minecraft: akara § na agwa sochirinji ya. Agba: §0–§9 na §a–§f. Ụdị: §l — siri ike, §o — tọrọ agbago, §n — n'okpuru akara, §m — a kpọchiri akara, §k — \"mgbagwoju anya\", §r — tọgharịa ihe niile. Koodu agba na-emeghachi ụdị mbụ, yabụ tinye ụdị mgbe agba gasịrị"
+  "rename.guide.how": "Iji gbanwee aha, pịa na aha kaadị ahụ, dee nke ọhụrụ ma pịa n'ebe ọ bụla tọgbọ chakoo — a ga-echekwa ya. Onye ọhaneze nọ n'akụkụ ubi ahụ ga-eweghachite aha mbụ na-enweghị nchekwa. Ogige efu ga-eweghachite aha izizi",
+  "rename.guide.codes": "N'ime aha, ị nwere ike iji koodu nhazi Minecraft: akara § na agwa sochirinji ya. Agba: §0–§9 na §a–§f. Ụdị: §l — siri ike, §o — tọrọ agbago, §n — n'okpuru akara, §m — a kpọchiri akara, §k — \"mgbagwoju anya\", §r — tọgharịa ihe niile. Koodu agba na-emeghachi ụdị mbụ, yabụ tinye ụdị mgbe agba gasịrị",
+  "rename.guide.example": "Nlereanya:",
+  "rename.guide.sample": "§6§lMkpọchi §r§aọlaedo",
+  "rename.guide.type": "Otu esi ede §: Windows — jide Alt wee pịnye 0167 na bọtụ nọmba; Mac — Option + 6 (Nhazi Bekee); na ekwentị, naanị kpatụ koodu dị n'okpuru ebe a ka ị na-edezi aha, ọ ga-etinye onwe ya",
+  "rename.guide.colors": "Agba",
+  "rename.guide.bedrock": "Agba Bedrock",
+  "rename.guide.styles": "Ụdị",
+  "rename.guide.not_editing": "Bu ụzọ pịa aha kaadị ahụ, wee pịa koodu iji tinye ya",
+  "rename.style.l": "Ọ̀kpọ̀rọ̀",
+  "rename.style.o": "Ịgbọọ",
+  "rename.style.n": "Nke nwere ahịrị n'okpuru",
+  "rename.style.m": "Nke nwere ahịrị n'etiti",
+  "rename.style.k": "Koodu",
+  "rename.style.r": "Tọgharịa"
 }

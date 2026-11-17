@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ungagcini",
   "rename.confirm_back": "Qhubeka nokuhlela",
   "rename.guide.title": "Indlela yokutshintsha igama nokuhombisa (§ ikhowudi)",
-  "rename.guide.how": "Ukutshintsha igama, cofa isihloko sekadi, faka entsha kwaye cofa nayiphi na indawo engenanto - iyakugcinwa. Umnqamlezo osecaleni kwentsimi uya kubuyisela igama langaphambili ngaphandle kokugcina. Intsimi engenanto iya kubuyisela igama lokuqala.",
-  "rename.guide.codes": "Isihloko unokusebenzisa iikhowudi zokufomatha zeMinecraft: uphawu § kunye nomntu olandela emva kwayo. Imibala: §0–§9 kunye §a–§f. Izitayela: §l — ngqindilili, §o — egobileyo, §n — ekrwelelwe ngaphantsi, §m — ekrwelelwe phakathi, §k — \"efihlakeleyo\", §r — setha ngokutsha konke. Ikhodi yombala isetha ngokutsha izitayela zangaphambili, ke ngoko beka izitayela emva kombala"
+  "rename.guide.how": "Ukutshintsha igama, cofa kwisihloko sekadi, chwetheza esitsha uze ucofe naphi na kwindawo engenanto — kuza kugcinwa. Umnqamlezo osecaleni kwentsimi uza kubuyisa igama langaphambili ngaphandle kokugcina. Intsimi engenanto iza kubuyisa igama lokuqala",
+  "rename.guide.codes": "Isihloko unokusebenzisa iikhowudi zokufomatha zeMinecraft: uphawu § kunye nomntu olandela emva kwayo. Imibala: §0–§9 kunye §a–§f. Izitayela: §l — ngqindilili, §o — egobileyo, §n — ekrwelelwe ngaphantsi, §m — ekrwelelwe phakathi, §k — \"efihlakeleyo\", §r — setha ngokutsha konke. Ikhodi yombala isetha ngokutsha izitayela zangaphambili, ke ngoko beka izitayela emva kombala",
+  "rename.guide.example": "Umzekelo:",
+  "rename.guide.sample": "§6§lIbhlokho §r§ayegolide",
+  "rename.guide.type": "Indlela yokuchwetheza §: Windows — bamba u-Alt uze uchwetheze u-0167 kwikhibhodi yamanani; Mac — Option + 6 (uyilo lwesiNgesi); kwifowuni, cofa ikhowudi engezansi ngelixa uhlela isihloko, iza kuzifakela yona",
+  "rename.guide.colors": "Imibala",
+  "rename.guide.bedrock": "Imibala yeBedrock",
+  "rename.guide.styles": "Izitayela",
+  "rename.guide.not_editing": "Qala ngokucofa isihloko sekadi, uze ucofe ikhowudi ukuyifaka",
+  "rename.style.l": "Ngqongqo",
+  "rename.style.o": "Okuthambile",
+  "rename.style.n": "Engaphantsi komgca",
+  "rename.style.m": "Etyikitywe phakathi",
+  "rename.style.k": "Isifihlo",
+  "rename.style.r": "Setha ngokutsha"
 }

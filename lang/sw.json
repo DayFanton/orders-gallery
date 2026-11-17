@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Usihifadhi",
   "rename.confirm_back": "Endelea kuhariri",
   "rename.guide.title": "Jinsi ya kubadili jina na kupamba (nambari za §)",
-  "rename.guide.how": "Ili kubadili jina, bonyeza kichwa cha kadi, weka jina jipya na bonyeza mahali popote palipo wazi — litahifadhiwa. Msalaba karibu na uwanja utarudisha jina la awali bila kuhifadhi. Uwanja mtupu utarejesha jina asilia.",
-  "rename.guide.codes": "Kwenye kichwa cha habari, unaweza kutumia nambari za uumbizaji za Minecraft: ishara § na herufi baada yake. Rangi: §0–§9 na §a–§f. Mitindo: §l — nene, §o — italiki, §n — mstari chini, §m — mstari katikati, §k — \"kuchanganywa\", §r — rudisha zote. Msimbo wa rangi hurudisha mitindo ya awali, kwa hiyo weka mitindo baada ya rangi"
+  "rename.guide.how": "Ili kubadili jina, bofya kichwa cha kadi, chapa jina jipya na ubofye mahali popote penye tupu — litahifadhiwa. Msalaba ulioko kando ya uwanja utarudisha jina la zamani bila kuhifadhi. Uwanja mtupu utarudisha jina la asili",
+  "rename.guide.codes": "Kwenye kichwa cha habari, unaweza kutumia nambari za uumbizaji za Minecraft: ishara § na herufi baada yake. Rangi: §0–§9 na §a–§f. Mitindo: §l — nene, §o — italiki, §n — mstari chini, §m — mstari katikati, §k — \"kuchanganywa\", §r — rudisha zote. Msimbo wa rangi hurudisha mitindo ya awali, kwa hiyo weka mitindo baada ya rangi",
+  "rename.guide.example": "Mfano:",
+  "rename.guide.sample": "§6§lKizuizi §r§acha dhahabu",
+  "rename.guide.type": "Jinsi ya kuchapa §: Windows — shikilia Alt na chapa 0167 kwenye pedi ya nambari; Mac — Option + 6 (mpangilio wa Kiingereza); kwenye simu, gusa tu nambari iliyo hapa chini wakati wa kuhariri kichwa, na itaingia yenyewe",
+  "rename.guide.colors": "Rangi",
+  "rename.guide.bedrock": "Rangi za Bedrock",
+  "rename.guide.styles": "Mitindo",
+  "rename.guide.not_editing": "Kwanza bonyeza kichwa cha kadi, kisha bonyeza nambari ili kuiingiza",
+  "rename.style.l": "Nono",
+  "rename.style.o": "Italiki",
+  "rename.style.n": "Iliyopigiwa mstari",
+  "rename.style.m": "Iliyopigwa mstari katikati",
+  "rename.style.k": "Fumbo",
+  "rename.style.r": "Weka upya"
 }

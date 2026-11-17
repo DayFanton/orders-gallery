@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ha keydin",
   "rename.confirm_back": "Sii wad tafatirka",
   "rename.guide.title": "Sida loo bedelo magaca oo loo qurxiyo (§ codes)",
-  "rename.guide.how": "Si aad u bedesho magaca, guji cinwaanka kaarka, geli mid cusub oo guji meel kasta oo madhan - waa la keydin doonaa. Iskutallaabta ku xigta goobta waxay dib u soo celin doonaa magacii hore adigoon keydin. Goob madhan waxay soo celin doonaa magacii asalka ahaa.",
-  "rename.guide.codes": "Ciwaanka, waxaad isticmaali kartaa koodhadhka qaabaynta ee Minecraft: calaamadda § iyo xaraf ka dambeeya. Midabada: §0–§9 iyo §a–§f. Hababka: §l — dhumuc leh, §o — qalloocan, §n — hoosta laga xariiqay, §m — la dhex xariiqay, §k — \"sir ah\", §r — dib u deji wax walba. Koodka midabku wuxuu dib u dejiyaa hababkii hore, markaa geli hababka midabka ka dib"
+  "rename.guide.how": "Si aad u bedesho magaca, guji cinwaanka kaarka, qor kan cusub oo guji meel kasta oo madhan - waa la keydin doonaa. Salka ku xiga goobta ayaa soo celin doona magacii hore adiga oo aan keydin. Goob madhan ayaa soo celin doonta magaca asalka ah",
+  "rename.guide.codes": "Ciwaanka, waxaad isticmaali kartaa koodhadhka qaabaynta ee Minecraft: calaamadda § iyo xaraf ka dambeeya. Midabada: §0–§9 iyo §a–§f. Hababka: §l — dhumuc leh, §o — qalloocan, §n — hoosta laga xariiqay, §m — la dhex xariiqay, §k — \"sir ah\", §r — dib u deji wax walba. Koodka midabku wuxuu dib u dejiyaa hababkii hore, markaa geli hababka midabka ka dib",
+  "rename.guide.example": "Tusaale:",
+  "rename.guide.sample": "§6§lBlok §r§adahab ah",
+  "rename.guide.type": "Sida loo qoro §: Windows — hayso Alt oo ku qor 0167 kiiboodhka nambarada; Mac — Option + 6 (habaynta Ingiriiska); taleefanka, kaliya taabo sumcadda hoose adiga oo wax ka beddelaya cinwaanka, way is-gelinaysaa",
+  "rename.guide.colors": "Midabada",
+  "rename.guide.bedrock": "Midabada Bedrock",
+  "rename.guide.styles": "Hababka",
+  "rename.guide.not_editing": "Marka hore guji cinwaanka kaarka, dabadeed guji koodka si aad u geliso",
+  "rename.style.l": "Buuran",
+  "rename.style.o": "Qalloocan",
+  "rename.style.n": "Hoose ka xarriiqan",
+  "rename.style.m": "La xarriiqay",
+  "rename.style.k": "Sire",
+  "rename.style.r": "Dib u deji"
 }

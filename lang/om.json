@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Hin kuufatin",
   "rename.confirm_back": "Gulaalu fufuu",
   "rename.guide.title": "Maqaa jijjiiruufi miidhagsuuf (§ koodii §)",
-  "rename.guide.how": "Maqaa jijjiiruuf, mataa'ewaa kaardii tuqaa, haaraa galchuun bakka duwwaa kamittuu tuqaa — ni kuufama. Fannoon dirree sana cina jiru maqaa durii osoo hin kuufatin deebisa. Dirreen duwwaan maqaa duraa deebisa.",
-  "rename.guide.codes": "Mataureecha irratti koodii uumamuu Minecraft fayyadamuu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i"
+  "rename.guide.how": "Maqaa jijjiiruuf, mata Duree kaardii irra buusi, kan haaraa barreessi bakkeewwan duwwaa ta'an kam irrattuu buusi — ni kuufama. Fannoon dirree sana cina jiru maqaa durii osoo hin kuufne deebisa. Dirreen duwwaa maqaa jalqabaa deebisa",
+  "rename.guide.codes": "Mataureecha irratti koodii uumamuu Minecraft fayyadamuu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i",
+  "rename.guide.example": "Fakkeenya:",
+  "rename.guide.sample": "§6§lBlokii §r§awarqaa",
+  "rename.guide.type": "§ akkamitti barreessuu dandeessa: Windows — Alt qabachuun kiiboodhii lakkoofsaa irraa 0167 barreessi; Mac — Option + 6 (qindaa'ina Ingliffaa); bilbila irratti, yeroo mataduree gulaaltutti koodii armaan gadii tuqaa qofa, ofumaan seenadha",
+  "rename.guide.colors": "Halluuwwan",
+  "rename.guide.bedrock": "Halluuwwan Bedrock",
+  "rename.guide.styles": "Akkaakuuwwan",
+  "rename.guide.not_editing": "Dura mataduree kaardichaa tuqi, sana booda koodii sana galchuuf tuqi",
+  "rename.style.l": "Furdaa",
+  "rename.style.o": "Jallaa",
+  "rename.style.n": "Jala-sararame",
+  "rename.style.m": "Gidduu-sararame",
+  "rename.style.k": "Iccitii",
+  "rename.style.r": "Irra deebi'i"
 }

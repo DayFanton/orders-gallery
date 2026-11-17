@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ntubike",
   "rename.confirm_back": "Komeza guhindura",
   "rename.guide.title": "Uko wahindura izina ukaryiza (§ codes za §)",
-  "rename.guide.how": "Kugira ngo uhindure izina, kanda ku mutwe w'ikarita, wandike irishya hanyuma ukande ahabusa hose — bizabikwa. Umusaraba uri hafi y'akarere uzasubiza izina rya mbere utabikiye. Akarere k'ubusa kazasubiza izina ry'umwimerere.",
-  "rename.guide.codes": "Mu mutwe ushobora gukoresha amakode yo gufomata ya Minecraft: ikimenyetso § n'inyuguti ikurikira. Amabara: §0–§9 na §a–§f. Imiterere: §l — y'umubyimba, §o — yunamye, §n — yanditseho munsi, §m — yanditseho hagati, §k — \"yahishwe\", §r — subiza byose kuri zeru. Kode y'ibara isubiramo imiterere ya mbere, bityo shyira imiterere nyuma y'ibara"
+  "rename.guide.how": "Kugirango uhindure izina, kanda ku mutwe w'ikarita, andika irishya hanyuma ukande aho hose hatari ubusa — bizabikwa. Umusaraba uri hafi y'umurima uzagarura izina rya mbere utabikiye. Umurima utariho uzagarura izina ry'umwimerere",
+  "rename.guide.codes": "Mu mutwe ushobora gukoresha amakode yo gufomata ya Minecraft: ikimenyetso § n'inyuguti ikurikira. Amabara: §0–§9 na §a–§f. Imiterere: §l — y'umubyimba, §o — yunamye, §n — yanditseho munsi, §m — yanditseho hagati, §k — \"yahishwe\", §r — subiza byose kuri zeru. Kode y'ibara isubiramo imiterere ya mbere, bityo shyira imiterere nyuma y'ibara",
+  "rename.guide.example": "Urugero:",
+  "rename.guide.sample": "§6§lBlock §r§a y'zahabu",
+  "rename.guide.type": "Uko wakwandika §: Windows — fata Alt wandike 0167 kuri keypad y'imibare; Mac — Option + 6 (imiterere y'Icyongereza); kuri telefoni, kanda gusa kode iri hepfo uriho wandika umutwe, iziwinjiriraho ubwayo",
+  "rename.guide.colors": "Amabara",
+  "rename.guide.bedrock": "Amabara ya Bedrock",
+  "rename.guide.styles": "Imitandukaniro",
+  "rename.guide.not_editing": "Banza ukande ku mutwe w'ikarita, hanyuma ukande kuri kode kugira ngo uyishyiremo",
+  "rename.style.l": "Byibushye",
+  "rename.style.o": "Italiki",
+  "rename.style.n": "Byashyizweho umurongo munsi",
+  "rename.style.m": "Byashyizweho umurongo hagati",
+  "rename.style.k": "Icyapa",
+  "rename.style.r": "Ongera usubiremo"
 }

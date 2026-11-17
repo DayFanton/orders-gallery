@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Se boloke",
   "rename.confirm_back": "Tsoela pele ho hlophisa",
   "rename.guide.title": "Mokhoa o ka fetolang lebitso le ho le khabisa (§ khoutu)",
-  "rename.guide.how": "Ho reha lebitso la bocha, tobetsa sehlooho sa karete, kenya le lecha e Mme o tebetse sebaka leha e le sefe se se nang letho - se tla bolokoa. Sefapano se haufi le lebala se tla khutlisetsa lebitso la pele ntle le ho boloka. Lebala le se nang letho le tla khutlisetsa lebitso la pele.",
-  "rename.guide.codes": "Sehloeng, o ka sebelisa likhoutu tsa ho fomata tsa Minecraft: letšoao § le tlhaku ka mor'a lona. Mebala: §0–§9 le §a–§f. Mekhoa: §l — e teteaneng, §o — e sekameng, §n — e thaletsoeng ka tlase, §m — e thaletsoeng bohareng, §k — \"e patiloeng\", §r — hlophisa bocha tsohle. Khoutu ea mmala e hlophisa bocha mekhoa e fetileng, kahoo beha mekhoa ka mor'a mmala"
+  "rename.guide.how": "Ho fetola lebitso, tobetsa sehloohong sa karete, ngola e ncha ebe u tobetsa kae kapa kae sebakeng se se nang letho — e tla bolokoa. Sefapano se haufi le lebala se tla khutlisetsa lebitso le fetileng ntle le ho boloka. Lebala le se nang letho le tla khutlisetsa lebitso la pele",
+  "rename.guide.codes": "Sehloeng, o ka sebelisa likhoutu tsa ho fomata tsa Minecraft: letšoao § le tlhaku ka mor'a lona. Mebala: §0–§9 le §a–§f. Mekhoa: §l — e teteaneng, §o — e sekameng, §n — e thaletsoeng ka tlase, §m — e thaletsoeng bohareng, §k — \"e patiloeng\", §r — hlophisa bocha tsohle. Khoutu ea mmala e hlophisa bocha mekhoa e fetileng, kahoo beha mekhoa ka mor'a mmala",
+  "rename.guide.example": "Mohlala:",
+  "rename.guide.sample": "§6§lBlock §r§ae khauta",
+  "rename.guide.type": "Mokhoa oa ho thaepa §: Windows — tšoara Alt ebe u thaepa 0167 ho sebolokelo sa linomoro; Mac — Option + 6 (moralo oa Senyesemane); fonong, tlanya feela khoutu e ka tlase ha u ntse u hlophisa sehlooho, e tla ikenya ka bo eona",
+  "rename.guide.colors": "Mebala",
+  "rename.guide.bedrock": "Mebala ea Bedrock",
+  "rename.guide.styles": "Litsela",
+  "rename.guide.not_editing": "Pele tobetsa sehlooho sa karete, ebe o tobetsa khoutu ho e kenya",
+  "rename.style.l": "E teteletseng",
+  "rename.style.o": "E sekameng",
+  "rename.style.n": "E tsepiloeng tlas'a eona",
+  "rename.style.m": "E hapiloeng hara eona",
+  "rename.style.k": "Khoutu",
+  "rename.style.r": "Theha hape"
 }

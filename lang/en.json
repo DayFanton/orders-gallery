@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Do not save",
   "rename.confirm_back": "Continue editing",
   "rename.guide.title": "How to rename and style with colors (§ codes)",
-  "rename.guide.how": "To rename, click on the card title, enter a new one, and click anywhere on empty space — it will be saved. The cross next to the field will revert to the previous name without saving. An empty field will restore the original name.",
-  "rename.guide.codes": "You can use Minecraft formatting codes in the title: the § sign and a character after it. Colors: §0–§9 and §a–§f. Styles: §l — bold, §o — italic, §n — underlined, §m — strikethrough, §k — \"obfuscated\", §r — reset all. The color code resets previous styles, so place styles after the color"
+  "rename.guide.how": "To rename, click on the card title, type the new one, and click anywhere outside—it will be saved. The cross next to the field will revert the previous name without saving. An empty field will revert the original name",
+  "rename.guide.codes": "You can use Minecraft formatting codes in the title: the § sign and a character after it. Colors: §0–§9 and §a–§f. Styles: §l — bold, §o — italic, §n — underlined, §m — strikethrough, §k — \"obfuscated\", §r — reset all. The color code resets previous styles, so place styles after the color",
+  "rename.guide.example": "Example:",
+  "rename.guide.sample": "§6§lGolden §r§ablock",
+  "rename.guide.type": "How to type §: Windows — hold Alt and type 0167 on the numeric keypad; Mac — Option + 6 (English layout); on phone, just tap the code below while editing the title, and it will insert itself",
+  "rename.guide.colors": "Colors",
+  "rename.guide.bedrock": "Bedrock Colors",
+  "rename.guide.styles": "Styles",
+  "rename.guide.not_editing": "First click on the card title, then on the code to insert it",
+  "rename.style.l": "Bold",
+  "rename.style.o": "Italic",
+  "rename.style.n": "Underlined",
+  "rename.style.m": "Strikethrough",
+  "rename.style.k": "Cipher",
+  "rename.style.r": "Reset"
 }

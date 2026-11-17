@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Nicht speichern",
   "rename.confirm_back": "Bearbeitung fortsetzen",
   "rename.guide.title": "Umbenennen und stilvoll benennen (§-Codes)",
-  "rename.guide.how": "Um den Namen zu ändern, klicken Sie auf den Kartentitel, geben Sie einen neuen ein und klicken Sie auf eine beliebige freie Stelle – er wird gespeichert. Das Kreuz neben dem Feld setzt den vorherigen Namen ohne Speichern zurück. Ein leeres Feld stellt den ursprünglichen Namen wieder her.",
-  "rename.guide.codes": "Im Titel können Sie Minecraft-Formatierungscodes verwenden: das Zeichen § und ein Zeichen danach. Farben: §0–§9 und §a–§f. Stile: §l — fett, §o — kursiv, §n — unterstrichen, §m — durchgestrichen, §k — „verschlüsselt“, §r — alles zurücksetzen. Der Farbcode setzt vorherige Stile zurück, platzieren Sie Stile daher nach der Farbe"
+  "rename.guide.how": "Zum Umbenennen auf den Kartentitel klicken, den neuen eingeben und irgendwo in den leeren Bereich klicken — er wird gespeichert. Das Kreuz neben dem Feld setzt den vorherigen Namen ohne Speichern zurück. Ein leeres Feld setzt den ursprünglichen Namen zurück",
+  "rename.guide.codes": "Im Titel können Sie Minecraft-Formatierungscodes verwenden: das Zeichen § und ein Zeichen danach. Farben: §0–§9 und §a–§f. Stile: §l — fett, §o — kursiv, §n — unterstrichen, §m — durchgestrichen, §k — „verschlüsselt“, §r — alles zurücksetzen. Der Farbcode setzt vorherige Stile zurück, platzieren Sie Stile daher nach der Farbe",
+  "rename.guide.example": "Beispiel:",
+  "rename.guide.sample": "§6§lGoldener §r§aBlock",
+  "rename.guide.type": "Wie man § eingibt: Windows — Alt gedrückt halten und 0167 auf dem Ziffernblock eingeben; Mac — Option + 6 (englisches Layout); auf dem Handy einfach den gewünschten Code unten antippen, während Sie den Titel bearbeiten, er wird sich selbst einfügen",
+  "rename.guide.colors": "Farben",
+  "rename.guide.bedrock": "Bedrock-Farben",
+  "rename.guide.styles": "Stile",
+  "rename.guide.not_editing": "Klicken Sie zuerst auf den Kartentitel und dann auf den Code, um ihn einzufügen",
+  "rename.style.l": "Fett",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Unterstrichen",
+  "rename.style.m": "Durchgestrichen",
+  "rename.style.k": "Chiffre",
+  "rename.style.r": "Zurücksetzen"
 }

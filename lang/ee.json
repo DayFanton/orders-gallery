@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Mèɖo ɖo o",
   "rename.confirm_back": "Trɔ asi le eŋu yome",
   "rename.guide.title": "Aleke nàtrɔ ŋkɔ ahado ƒomevi na ɖokuiwò (§ kɔduwo §)",
-  "rename.guide.how": "Ne nàtrɔ ŋkɔ la, nɔ ŋkɔ la dzi, nɔ yeye ɖo eye nàƒo ƒomevi ɖe teƒe si meɖale hã — woɖoe ɖo. Xaali si le teƒea ƒe aɖabaƒoƒo dzi la trɔ yi ŋkɔ xoxo la dzi manɔ manɔ me o. Teƒe si meɖale o la gbugbɔ ŋkɔ gbãtɔ va teƒe.",
-  "rename.guide.codes": "Le nyati la, èate ŋu zazã Minecraft ƒe nɔnɔmetata ƒe kɔdwo: dzesi § kple nuŋɔŋlɔ si le egbɔ.颜色: §0–§9 kple §a–§f. Nɔnɔmetatawo: §l — sesẽ, §o — tre, §n — teƒe teƒe, §m — ta ta, §k — \"bebe\", §r — gbugbɔ ɖo ɖoɖo katã. Kɔd kplẽ kɔɖa nɔnɔmetata xoxowo, eyata ɖo nɔnɔmetatawo ɖe kɔd kplẽ megbe"
+  "rename.guide.how": "Be nàtrɔ ŋkɔ la, ɖikti kadi ƒe title la, ŋlɔ yeye la ɖe eme eye nàɖe asi le teƒe si meɖo naneke le o — woaxɔ ŋkɔ la ɖe dzadzraɖo me. Xɔxɔ si le teƒe la ŋuti la gbugbɔna nɔnɔme si nɔ ŋgɔ la va nɔnɔme si nɔ ŋgɔ la me to ŋɔŋlɔ ŋuti me o. Teƒe si meɖo naneke le la gbugbɔna nɔnɔme si nɔ ŋgɔ la va nɔnɔme si nɔ ŋgɔ la me",
+  "rename.guide.codes": "Le nyati la, èate ŋu zazã Minecraft ƒe nɔnɔmetata ƒe kɔdwo: dzesi § kple nuŋɔŋlɔ si le egbɔ.颜色: §0–§9 kple §a–§f. Nɔnɔmetatawo: §l — sesẽ, §o — tre, §n — teƒe teƒe, §m — ta ta, §k — \"bebe\", §r — gbugbɔ ɖo ɖoɖo katã. Kɔd kplẽ kɔɖa nɔnɔmetata xoxowo, eyata ɖo nɔnɔmetatawo ɖe kɔd kplẽ megbe",
+  "rename.guide.example": "Kpɔndewú:",
+  "rename.guide.sample": "§6§lSika §r§aƒe blok",
+  "rename.guide.type": "Ale si wòle ŋlɔm §: Windows — lé Alt ɖe asi nàŋlɔ 0167 ɖe nɔmba kiyibodi dzi; Mac — Option + 6 (Yevugbe ŋɔŋlɔ); le telefon dzi la, nɔmba si le teƒe teƒe la tsɔ kpe ɖe enu esime nàɖɔ ŋusẽ ƒe tanyae la, àkpɔe wòayi eme",
+  "rename.guide.colors": "Aʋuwo",
+  "rename.guide.bedrock": "Bedrock ƒe aʋuwo",
+  "rename.guide.styles": "Akpawo",
+  "rename.guide.not_editing": "Do ŋgɔ nàɖe asi ɖe kaɖi ƒe tanyae ŋu, ekplɔ nɔmba la ɖo be nàtsɔ awɔ eŋu dɔ",
+  "rename.style.l": "Kekle",
+  "rename.style.o": "Kekle",
+  "rename.style.n": "Afɔtutu",
+  "rename.style.m": "Afɔtutu le titina",
+  "rename.style.k": "Nyateƒe",
+  "rename.style.r": "Trɔ ɖo ŋgɔ"
 }

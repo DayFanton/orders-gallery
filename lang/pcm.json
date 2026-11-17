@@ -469,6 +469,19 @@
   "rename.confirm_discard": "No seif am",
   "rename.confirm_back": "Kontiniu to edit",
   "rename.guide.title": "How to chenj nem andstyle am (§ kods)",
-  "rename.guide.how": "To chenj di nem, klik di nem of di kad, put nyu nem and klik any blangk pat — e go seif. Di kros wey de neneht di box go riturn di ol nem without seifing am. Blangk box go riturn di orijinal nem.",
-  "rename.guide.codes": "Insaid di taitu, yu fit yuz Minecraft formatin kod: di § sain and one leta afta am. Colours: §0–§9 and §a–§f. Stailz: §l — bold, §o — italic, §n — onda-lain, §m — kross-aut, §k — \"confused\", §r — rizet evritin. Di colour kod dey rizet di old stailz, so put di stailz afta di colour"
+  "rename.guide.how": "To chen di nem, klik on di kad taitu, taip di niu wan an klik anywia we no get notin — e go sef. Di kross we de nia di box go bring bak di old nem witot sevin. Emti box go bring bak di rili nem",
+  "rename.guide.codes": "Insaid di taitu, yu fit yuz Minecraft formatin kod: di § sain and one leta afta am. Colours: §0–§9 and §a–§f. Stailz: §l — bold, §o — italic, §n — onda-lain, §m — kross-aut, §k — \"confused\", §r — rizet evritin. Di colour kod dey rizet di old stailz, so put di stailz afta di colour",
+  "rename.guide.example": "Ekampul:",
+  "rename.guide.sample": "§6§lGold §r§ablok",
+  "rename.guide.type": "How to type §: Windows — hold Alt and type 0167 for number keypad; Mac — Option + 6 (English layout); on phone, just tap the code below as you dey edit the title, e go insert itself",
+  "rename.guide.colors": "Colors",
+  "rename.guide.bedrock": "Bedrock Colors",
+  "rename.guide.styles": "Styles",
+  "rename.guide.not_editing": "First click the card title, then click the code to insert am",
+  "rename.style.l": "Thick",
+  "rename.style.o": "Italik",
+  "rename.style.n": "Underline",
+  "rename.style.m": "StrikeThrough",
+  "rename.style.k": "Saifa",
+  "rename.style.r": "Ríset"
 }

@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Saqlamaslik",
   "rename.confirm_back": "Tahrirlashni davom ettirish",
   "rename.guide.title": "Qanday qilib qayta nomlash va chiroyli qilish (§ kodlari)",
-  "rename.guide.how": "Qayta nomlash uchun karta sarlavhasiga bosing, yangisini kiriting va istalgan boʻsh joyga bosing — u saqlanadi. Maydon yonidagi xoch saqlamasdan oldingi nomni qaytaradi. Boʻsh maydon asl nomni tiklaydi.",
-  "rename.guide.codes": "Sarlavhada Minecraft formatlash kodlaridan foydalanishingiz mumkin: § belgisi va undan keyingi belgi. Ranglar: §0–§9 va §a–§f. Uslublar: §l — qalin, §o — qiya, §n — tagiga chiziq tortilgan, §m — ustidan chiziq tortilgan, §k — \"shifrlangan\", §r — hammasini tiklash. Rang kodi oldingi uslublarni tiklaydi, shuning uchun uslublarni rangdan keyin qo'ying"
+  "rename.guide.how": "Nomini o'zgartirish uchun karta sarlavhasiga bosing, yangisini yozing va istalgan bo'sh joyga bosing — u saqlanadi. Maydon yonidagi xoch saqlamasdan oldingi nomini qaytaradi. Bo'sh maydon asl nomini qaytaradi",
+  "rename.guide.codes": "Sarlavhada Minecraft formatlash kodlaridan foydalanishingiz mumkin: § belgisi va undan keyingi belgi. Ranglar: §0–§9 va §a–§f. Uslublar: §l — qalin, §o — qiya, §n — tagiga chiziq tortilgan, §m — ustidan chiziq tortilgan, §k — \"shifrlangan\", §r — hammasini tiklash. Rang kodi oldingi uslublarni tiklaydi, shuning uchun uslublarni rangdan keyin qo'ying",
+  "rename.guide.example": "Misol:",
+  "rename.guide.sample": "§6§lOltin §r§ablok",
+  "rename.guide.type": "§ belgisini qanday yozish mumkin: Windows — Alt tugmasini bosib turib, raqamli klaviaturada 0167 tering; Mac — Option + 6 (inglizcha tartib); telefonda sarlavhani tahrirlash paytida pastdagi kodni shunchaki bosing, u o'zi qo'shiladi",
+  "rename.guide.colors": "Ranglar",
+  "rename.guide.bedrock": "Bedrock ranglari",
+  "rename.guide.styles": "Uslublar",
+  "rename.guide.not_editing": "Avval karta sarlavhasini, so'ngra uni kiritish uchun kodni bosing",
+  "rename.style.l": "Qalin",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Tagiga chizilgan",
+  "rename.style.m": "ustidan chizilgan",
+  "rename.style.k": "Shifr",
+  "rename.style.r": "Qayta o'rnatish"
 }

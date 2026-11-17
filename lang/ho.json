@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ne save",
   "rename.confirm_back": "Edit kase continue",
   "rename.guide.title": "Name maod nae gae design gae (§ codes §)",
-  "rename.guide.how": "Name maod nae gae, card title pe click gae, new name write gae, free space pe click gae — save gae. Field pa cross name back gae ne save. Blank field original name back gae.",
-  "rename.guide.codes": "Erau ai bona yu inaka Minecraft format kodu: § maumau bona mataidia una. Miri: §0–§9 bona §a–§f. Stila: §l — goeva, §o — kaukau, §n — rakana raru, §m — rakana mase, §k — \"nininini\", §r — emu bona iseda. Miri kodu ia lalo stila tauna, bona stila vada miri murinai"
+  "rename.guide.how": "Naming hono, karia namra gita hira, nawa gita likha aur khali betha gita click karo — save ho jab. Field ke side wala cross purana nam wapas la jab. Khali field original nam wapas la jab",
+  "rename.guide.codes": "Erau ai bona yu inaka Minecraft format kodu: § maumau bona mataidia una. Miri: §0–§9 bona §a–§f. Stila: §l — goeva, §o — kaukau, §n — rakana raru, §m — rakana mase, §k — \"nininini\", §r — emu bona iseda. Miri kodu ia lalo stila tauna, bona stila vada miri murinai",
+  "rename.guide.example": "Ena:",
+  "rename.guide.sample": "§6§lMiri §r§ablock",
+  "rename.guide.type": "§ doroma dalana: Windows — Alt mirina bona numerik keybodi de 0167 doroma; Mac — Option + 6 (Inglisi layout); telefon de, title edit karina bona inamo code tap karina, mo emu insed bi",
+  "rename.guide.colors": "Color",
+  "rename.guide.bedrock": "Bedrock Color",
+  "rename.guide.styles": "Style",
+  "rename.guide.not_editing": "Tete card title tap karina, mo enamo code tap karina insed bona",
+  "rename.style.l": "Bada",
+  "rename.style.o": "Kuruw",
+  "rename.style.n": "Rati bita",
+  "rename.style.m": "Rati bita lagaw",
+  "rename.style.k": "Guputa",
+  "rename.style.r": "Jibiti"
 }

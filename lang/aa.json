@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ma caysu",
   "rename.confirm_back": "Gaba abak",
   "rename.guide.title": "Aruwta caysitkeeh ma caysimta kak abtem (§ codes §)",
-  "rename.guide.how": "Aruwta caysitkeeh, card title gaba caysitkeh, ma caysimta gaba caysitkeh ma caysimta gaba caysitkeh — caysimta abta. Cross gaba caysimta kak abta ma caysima. Fari gaba caysimta gaba caysitkeh.",
-  "rename.guide.codes": "Ti xiyyaat maltoosuu, koodii qindawaa Minecraft fayyadamtu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i"
+  "rename.guide.how": "Amma taqqe marro, kaardih carra maysara, abba kaadu maykoolu inkih caddol maykoolu — abak toowak. Addat carra ayroobayti abka maara maykoolu kaafisa maysara. Addat caddol maykoolu kaafisa abba marro",
+  "rename.guide.codes": "Ti xiyyaat maltoosuu, koodii qindawaa Minecraft fayyadamtu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i",
+  "rename.guide.example": "Fakkeenya:",
+  "rename.guide.sample": "§6§lWarqaa §r§ablok",
+  "rename.guide.type": "§ gersi: Windows — Alt yaaxteeh numro kiyibodih 0167 gersita; Mac — Option + 6 (Ingliis afu kidoo); telefonih, unnaah gersi suge waqdi, takkay ku xabbuseenih baaxteeh takka",
+  "rename.guide.colors": "Xara",
+  "rename.guide.bedrock": "Bedrock Xara",
+  "rename.guide.styles": "Xara",
+  "rename.guide.not_editing": "Karta xara baaxteh kassi, toh akki koodi gersitta",
+  "rename.style.l": "Kaa",
+  "rename.style.o": "Jallaa",
+  "rename.style.n": "Qax-qax",
+  "rename.style.m": "Qax-qax giddu",
+  "rename.style.k": "Asku",
+  "rename.style.r": "Gaca"
 }

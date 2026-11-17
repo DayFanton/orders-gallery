@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ama waqaychaychu",
   "rename.confirm_back": "Llamkapuyta qatiy",
   "rename.guide.title": "¿Imaynatan sutikunata hukchayta chaymanta sumaqyachiyta atikun? (§ qillqakuna)",
-  "rename.guide.how": "Sutita hukchanaykipaq, cardpa umanpi ñitiy, musuqta qillqay hinaspa mayqin ch'usaq kaqpipas ñitiy — waqaychasqam kanqa. Fieldpa qayllanpi cruzqa mana waqaychaspa ñawpaq sutitam kutichimunqa. Ch'usaq fieldqa ñawpaq sutitam kutichimunqa.",
-  "rename.guide.codes": "Sutipaqqa Minecraft nisqa format ruwanapaq kodigokunatam akllankiman: § sanancha chaymanta huk qillqa. Llimpikuna: §0–§9 hinallataq §a–§f. Estilokuna: §l — k'aspisqa, §o — sik'isqa, §n — urinpi siqisqa, §m — chawpinpi siqisqa, §k — \"pakasqa\", §r — llapan kutichiy. Llimpi kodigoqa ñawpaq estilokunatam kutichin, chayrayku estilokunata llimpip qipanman churay"
+  "rename.guide.how": "Sutinta t'ikranapaq, k'arata sutinta ñit'iy, musuqta qillqaspa ima q'ala k'itimantapas ñit'iy — waqaychasqam kanqa. Kuchuchpi t'inkisqa ch'askaqa manataq waqaychaspalla ñawpaq sutinta kutichinqa. Q'ala k'itiqa qallariq sutintam kutichinqa",
+  "rename.guide.codes": "Sutipaqqa Minecraft nisqa format ruwanapaq kodigokunatam akllankiman: § sanancha chaymanta huk qillqa. Llimpikuna: §0–§9 hinallataq §a–§f. Estilokuna: §l — k'aspisqa, §o — sik'isqa, §n — urinpi siqisqa, §m — chawpinpi siqisqa, §k — \"pakasqa\", §r — llapan kutichiy. Llimpi kodigoqa ñawpaq estilokunatam kutichin, chayrayku estilokunata llimpip qipanman churay",
+  "rename.guide.example": "Kay hina:",
+  "rename.guide.sample": "§6§lQuri §r§ablok",
+  "rename.guide.type": "§ qillqay ñan: Windows — Alt ñitiykispa numeru tastaturapi 0167 qillqay; Mac — Option + 6 (inlish layout); karurimaypiqa, t'iskikuy uraypi kachkaq koota titulumanta rimachkaspa, kikinmanta yaykunqa",
+  "rename.guide.colors": "LLimpi",
+  "rename.guide.bedrock": "Bedrock LLimpi",
+  "rename.guide.styles": "Kikikuna",
+  "rename.guide.not_editing": "Ñawpaqtaqa unancha sutinta ñitiy, chaymanta koota ñitiy churakunanpaq",
+  "rename.style.l": "Q'allu",
+  "rename.style.o": "Q'umpu",
+  "rename.style.n": "Uranchasqa",
+  "rename.style.m": "Churasqa",
+  "rename.style.k": "Pakasqa",
+  "rename.style.r": "Kutichiy"
 }

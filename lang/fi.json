@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Älä tallenna",
   "rename.confirm_back": "Jatka muokkausta",
   "rename.guide.title": "Miten nimetä uudelleen ja tyylitellä (§-koodit)",
-  "rename.guide.how": "Nimeä napsauttamalla kortin otsikkoa, kirjoita uusi ja napsauta mitä tahansa tyhjää aluetta – se tallennetaan. Kentän vieressä oleva rasti palauttaa edellisen nimen tallentamatta. Tyhjä kenttä palauttaa alkuperäisen nimen.",
-  "rename.guide.codes": "Otsikossa voit käyttää Minecraftin muotoilukoodeja: §-merkki ja sitä seuraava merkki. Värit: §0–§9 ja §a–§f. Tyylit: §l — lihavoitu, §o — kursivoitu, §n — alleviivattu, §m — yliviivattu, §k — \"sekaisin\", §r — nollaa kaikki. Värikoodi nollaa aiemmat tyylit, joten sijoita tyylit värin jälkeen"
+  "rename.guide.how": "Nimeä uudelleen napsauttamalla kortin otsikkoa, kirjoittamalla uusi ja napsauttamalla mitä tahansa tyhjää kohtaa – se tallennetaan. Kentän vieressä oleva rasti palauttaa edellisen nimen tallentamatta. Tyhjä kenttä palauttaa alkuperäisen nimen",
+  "rename.guide.codes": "Otsikossa voit käyttää Minecraftin muotoilukoodeja: §-merkki ja sitä seuraava merkki. Värit: §0–§9 ja §a–§f. Tyylit: §l — lihavoitu, §o — kursivoitu, §n — alleviivattu, §m — yliviivattu, §k — \"sekaisin\", §r — nollaa kaikki. Värikoodi nollaa aiemmat tyylit, joten sijoita tyylit värin jälkeen",
+  "rename.guide.example": "Esimerkki:",
+  "rename.guide.sample": "§6§lKultainen §r§akuutio",
+  "rename.guide.type": "Miten § kirjoitetaan: Windows — pidä Alt pohjassa ja kirjoita 0167 numeronäppäimistöllä; Mac — Option + 6 (englanninkielinen näppäimistö); puhelimella napauta vain alla olevaa koodia otsikkoa muokatessasi, niin se lisätään itsestään",
+  "rename.guide.colors": "Värit",
+  "rename.guide.bedrock": "Bedrock-värit",
+  "rename.guide.styles": "Tyylit",
+  "rename.guide.not_editing": "Napsauta ensin kortin otsikkoa ja sitten koodia lisätäksesi sen",
+  "rename.style.l": "Lihavoitu",
+  "rename.style.o": "Kursivoitu",
+  "rename.style.n": "Alleviivattu",
+  "rename.style.m": "Yliviivattu",
+  "rename.style.k": "Salakirjoitus",
+  "rename.style.r": "Nollaa"
 }

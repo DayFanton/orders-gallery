@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Jangan simpan",
   "rename.confirm_back": "Teruskan mengedit",
   "rename.guide.title": "Cara menamakan semula dan menghiasi (kod §)",
-  "rename.guide.how": "Untuk menamakan semula, klik pada tajuk kad, masukkan yang baharu dan klik di mana-mana ruang kosong — ia akan disimpan. Tanda pangkah di sebelah medan akan mengembalikan nama asal tanpa menyimpan. Medan kosong akan memulihkan nama asal.",
-  "rename.guide.codes": "Dalam tajuk, anda boleh menggunakan kod pemformatan Minecraft: tanda § dan aksara selepasnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — condong, §n — bergaris bawah, §m — potong, §k — \"kabur\", §r — tetapkan semula semua. Kod warna menetapkan semula gaya terdahulu, jadi letakkan gaya selepas warna"
+  "rename.guide.how": "Untuk menamakan semula, klik pada tajuk kad, taip yang baharu dan klik di mana-mana ruang kosong — ia akan disimpan. Pangkah di sebelah medan akan memulihkan nama sebelumnya tanpa menyimpan. Medan kosong akan memulihkan nama asal",
+  "rename.guide.codes": "Dalam tajuk, anda boleh menggunakan kod pemformatan Minecraft: tanda § dan aksara selepasnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — condong, §n — bergaris bawah, §m — potong, §k — \"kabur\", §r — tetapkan semula semua. Kod warna menetapkan semula gaya terdahulu, jadi letakkan gaya selepas warna",
+  "rename.guide.example": "Contoh:",
+  "rename.guide.sample": "§6§lBlok §r§aemas",
+  "rename.guide.type": "Cara menaip §: Windows — tahan Alt dan taip 0167 pada papan kekunci angka; Mac — Option + 6 (susun atur Inggeris); pada telefon, ketik sahaja kod di bawah semasa menyunting tajuk, ia akan masuk sendiri",
+  "rename.guide.colors": "Warna",
+  "rename.guide.bedrock": "Warna Bedrock",
+  "rename.guide.styles": "Gaya",
+  "rename.guide.not_editing": "Klik dahulu pada tajuk kad, kemudian pada kod untuk memasukkannya",
+  "rename.style.l": "Tebal",
+  "rename.style.o": "Italik",
+  "rename.style.n": "Bergaris",
+  "rename.style.m": "Garis tengah",
+  "rename.style.k": "Sifir",
+  "rename.style.r": "Set semula"
 }

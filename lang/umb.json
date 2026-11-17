@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ka usiike",
   "rename.confirm_back": "Kuata ko okuvelako",
   "rename.guide.title": "Ukati wokukwata esina lokuciwila (§ ocindilo §)",
-  "rename.guide.how": "Okuvikeka esina, kuata kesina liokadi, soneka lipeaso lokuciata kokuosi kavi — likatiuka. Ocingandu ci kasi pesina likuata esina liosi ka usiike. Ocina kavi cika tiukila kesina liyetene.",
-  "rename.guide.codes": "Vokilonga olo tivila okuvela ovikolo vio Minecraft: ovisila § kuenda ovikolo viokunima yaye. Ovipala: §0–§9 kuenda §a–§f. Ovinyingi: §l — ocene, §o — okukoka, §n — okusako posi, §m — okusako pokati, §k — \"ociku\", §r — pindula vyosi. Ovipala viokindika ovinyingi viokunyima, omo liaco tumbika ovinyingi kesi liovipala"
+  "rename.guide.how": "Ocileko okuti okalyekela, koka ocipewa ca kadi, soneha ovisua vihuo kuenje koka kofoko yosi yi sule — ci ka liyiki. Ocipeva ceka ca kasi poku wamisa ci ka vutula ovina via kala ka ci liyiki. Ofoko yi sule ci ka vutula ovina viatete",
+  "rename.guide.codes": "Vokilonga olo tivila okuvela ovikolo vio Minecraft: ovisila § kuenda ovikolo viokunima yaye. Ovipala: §0–§9 kuenda §a–§f. Ovinyingi: §l — ocene, §o — okukoka, §n — okusako posi, §m — okusako pokati, §k — \"ociku\", §r — pindula vyosi. Ovipala viokindika ovinyingi viokunyima, omo liaco tumbika ovinyingi kesi liovipala",
+  "rename.guide.example": "Elilongiso:",
+  "rename.guide.sample": "§6§lBloko §r§a yongolo",
+  "rename.guide.type": "Kelika §: Windows — kwata Alt kuenje soneha 0167 kokatela ketiyalo; Mac — Option + 6 (onjanji yocilela); kofelo, kwata lika ocilongisi celi posi osimbu okonomba, ci iñila oco kio",
+  "rename.guide.colors": "Olukisi",
+  "rename.guide.bedrock": "Olukisi wavio Bedrock",
+  "rename.guide.styles": "Olukisi",
+  "rename.guide.not_editing": "Tete koka kovina yocipangi, ciumba koka ocilongisi oco ociñile",
+  "rename.style.l": "Ocile",
+  "rename.style.o": "Koka",
+  "rename.style.n": "Ocile pamosi",
+  "rename.style.m": "Ocile vohi",
+  "rename.style.k": "Ocilapa",
+  "rename.style.r": "Ku vingula"
 }

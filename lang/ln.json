@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Kobomba te",
   "rename.confirm_back": "Koba na mosala ya kobongisa",
   "rename.guide.title": "Ndenge ya kobongola nkombo mpe kotɛka langi (§ mikakatisi §)",
-  "rename.guide.how": "Mpo na kobongola nkombo, kanda na motó ya karte, tika ya sika mpe kanda na esika nyonso ezangi eloko — ekobomba. Ekiembo pembeni ya esika ekosongisa nkombo ya kala kozanga kobomba. Esika ezangi eloko ekobongisa nkombo ya liboso.",
-  "rename.guide.codes": "Na motó ya likambo, okoki kosalela ba kodi ya bonene ya Minecraft: elembo § mpe elembo moko na nsima na yango. Mángóla: §0–§9 mpe §a–§f. Mitindo: §l — ya monene, §o — ya ekongolo, §n — ya nse na molangi, §m — ya katikati na molangi, §k — \"ya kobombama\", §r — zongisa nyonso na ebandeli. Kodi ya molangi ezongisaka mitindo ya kala, yango wana tía mitindo na nsima ya molangi"
+  "rename.guide.how": "Po omonola nkombo, kiti na mutu ya karte, kota ya sika mpe kiti na esika nyonso ezanga eloko — ekobombama. Ekaniseli pembeni ya esika ekosala ete nkombo ya kala ezonga kozanga kobomba. Esika ezanga eloko ekosala ete nkombo ya ebandeli ezonga",
+  "rename.guide.codes": "Na motó ya likambo, okoki kosalela ba kodi ya bonene ya Minecraft: elembo § mpe elembo moko na nsima na yango. Mángóla: §0–§9 mpe §a–§f. Mitindo: §l — ya monene, §o — ya ekongolo, §n — ya nse na molangi, §m — ya katikati na molangi, §k — \"ya kobombama\", §r — zongisa nyonso na ebandeli. Kodi ya molangi ezongisaka mitindo ya kala, yango wana tía mitindo na nsima ya molangi",
+  "rename.guide.example": "Ndakisa:",
+  "rename.guide.sample": "§6§lBlock §r§a ya wolo",
+  "rename.guide.type": "Lolenge ya kokoma §: Windows — simba Alt mpe koma 0167 na keypad ya mibambo; Mac — Option + 6 (etando ya Lingelesi); na telefone, simba kaka kodi ya se tango ozali kobongola nkombo, ekokende moko",
+  "rename.guide.colors": "Boni",
+  "rename.guide.bedrock": "Boni ya Bedrock",
+  "rename.guide.styles": "Mitindo",
+  "rename.guide.not_editing": "Banza kiti na nkombo ya karta, sima kiti na kodi mpo na kotia yango",
+  "rename.style.l": "Monene",
+  "rename.style.o": "Monzɛlɛ",
+  "rename.style.n": "Etɛmaki na nse",
+  "rename.style.m": "Etɛmaki na katikati",
+  "rename.style.k": "Monse",
+  "rename.style.r": "Kozongisa"
 }

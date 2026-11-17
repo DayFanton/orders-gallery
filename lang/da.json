@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Gem ikke",
   "rename.confirm_back": "Fortsæt redigering",
   "rename.guide.title": "Sådan omdøbes og styles (§ koder)",
-  "rename.guide.how": "For at omdøbe skal du klikke på kortets titel, skrive en ny og klikke et vilkårligt sted på et tomt felt — den gemmes. Krydset ved siden af feltet gendanner det forrige navn uden at gemme. Et tomt felt gendanner det oprindelige navn.",
-  "rename.guide.codes": "I titlen kan du bruge formateringskoder fra Minecraft: tegnet § og et tegn efter det. Farver: §0–§9 og §a–§f. Stilarter: §l — fed, §o — kursiv, §n — understreget, §m — gennemstreget, §k — \"forvirret\", §r — nulstil alt. Farvekoden nulstiller tidligere stilarter, så placer stilarter efter farven"
+  "rename.guide.how": "For at omdøbe skal du klikke på kortets titel, skrive den nye og klikke et vilkårligt sted i det tomme felt – den gemmes. Krydset ved siden af feltet gendanner det forrige navn uden at gemme. Et tomt felt gendanner det oprindelige navn",
+  "rename.guide.codes": "I titlen kan du bruge formateringskoder fra Minecraft: tegnet § og et tegn efter det. Farver: §0–§9 og §a–§f. Stilarter: §l — fed, §o — kursiv, §n — understreget, §m — gennemstreget, §k — \"forvirret\", §r — nulstil alt. Farvekoden nulstiller tidligere stilarter, så placer stilarter efter farven",
+  "rename.guide.example": "Eksempel:",
+  "rename.guide.sample": "§6§lGuld §r§ablok",
+  "rename.guide.type": "Sådan indtastes §: Windows — hold Alt nede og indtast 0167 på det numeriske tastatur; Mac — Option + 6 (engelsk layout); på telefonen skal du bare trykke på koden herunder, mens du redigerer titlen, så indættes den af sig selv",
+  "rename.guide.colors": "Farver",
+  "rename.guide.bedrock": "Bedrock-farver",
+  "rename.guide.styles": "Stilarter",
+  "rename.guide.not_editing": "Klik først på kortets titel og derefter på koden for at indsætte den",
+  "rename.style.l": "Fed",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Understreget",
+  "rename.style.m": "Gennemstreget",
+  "rename.style.k": "Chifre",
+  "rename.style.r": "Nulstil"
 }

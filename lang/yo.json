@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Má fipamọ́",
   "rename.confirm_back": "Tẹ̀ síwájú sí ẹ̀ṣà",
   "rename.guide.title": "Bẹ́ẹ̀ ni lati tun orukọ ṣe ati Ṣe itọju rẹ (§ koodu)",
-  "rename.guide.how": "Lati tun orukọ ṣe, tẹ lori akọle kaadi, tẹ titun kan sii ki o tẹ si ibikibi ti ko ni ohunkohun — a o fipamọ́. Agbelebu ti o wa lẹgbẹẹ aaye naa yoo da orukọ iṣaaju pada laisi fifipamọ́. Aaye ti ko ni ohunkohun yoo da orukọ atilẹwa pada.",
-  "rename.guide.codes": "Nínú àkọlé, o le lo àwọn koodu ìṣètò ti Minecraft: àmì § àti lẹ́tà kan lẹ́yìn rẹ̀. Àwọn àwọ̀: §0–§9 àti §a–§f. Àwọn àṣà: §l — nipọn, §o — tẹ, §n — abẹ́ ìwé, §m — gígé kọjá, §k — \"tí ó rògbòdìyàn\", §r — tún ohun gbogbo ṣe sípò. Koodu àwọ̀ máa n tún àwọn àṣà àtijọ́ ṣe sípò, nitorina gbe awọn àṣà lẹ́yìn àwọ̀"
+  "rename.guide.how": "Lati tun lorukọ, tẹ lori akọle kaadi titun, tẹ tuntun si ati tẹ ni eyikeyi aaye ti o ṣofo — yoo fipamọ. Agbelebu ti o wa lẹgbẹ aaye naa yoo da orukọ iṣaaju pada laisi fipamọ. Aaye ti o ṣofo yoo da orukọ atilẹba pada",
+  "rename.guide.codes": "Nínú àkọlé, o le lo àwọn koodu ìṣètò ti Minecraft: àmì § àti lẹ́tà kan lẹ́yìn rẹ̀. Àwọn àwọ̀: §0–§9 àti §a–§f. Àwọn àṣà: §l — nipọn, §o — tẹ, §n — abẹ́ ìwé, §m — gígé kọjá, §k — \"tí ó rògbòdìyàn\", §r — tún ohun gbogbo ṣe sípò. Koodu àwọ̀ máa n tún àwọn àṣà àtijọ́ ṣe sípò, nitorina gbe awọn àṣà lẹ́yìn àwọ̀",
+  "rename.guide.example": "Àpẹẹrẹ:",
+  "rename.guide.sample": "§6§lBíríkì §r§awúrà",
+  "rename.guide.type": "Bẹ́ẹ̀ ni o ṣe lè tẹ §: Windows — di Alt mu kí o sì tẹ 0167 sori bọtini nọ́mbà; Mac — Option + 6 (ètò Gẹ̀ẹ́sì); lori foonu, kan tẹ koodu ti o wa ni isalẹ lakoko ti o n ṣatunkọ akọle naa, yoo fi ara rẹ sinu rẹ",
+  "rename.guide.colors": "Àwọn àwọ̀",
+  "rename.guide.bedrock": "Àwọn àwọ̀ Bedrock",
+  "rename.guide.styles": "Àwọn aṣa",
+  "rename.guide.not_editing": "Kọ́kọ́ tẹ lórí àkọlé káàdì náà, lẹ́yìn náà tẹ lórí koodu náà láti fi sí i",
+  "rename.style.l": "Koro",
+  "rename.style.o": "Tẹ",
+  "rename.style.n": "Labẹ́là",
+  "rename.style.m": "Latiarin",
+  "rename.style.k": "Aṣírí",
+  "rename.style.r": "Tunṣe"
 }

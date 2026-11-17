@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Mmrae",
   "rename.confirm_back": "Kɔ so sesa no",
   "rename.guide.title": "Sɛnea wubesesa din no na wode kɔla ahyehyɛ mu (§ codes §)",
-  "rename.guide.how": "Sɛ wopɛ sɛ wosesa din no a, mia din a ɛwɔ kaadi no so, kyerɛw foforo na mia baabiara a ahunu — wobesie. Asasia a ɛwɔ faako a ɛhɔ no bɛsan de din dedaw no aba na wonsie. Faako a ahunu bɛsan de din titiriw no aba.",
-  "rename.guide.codes": "Wɔ ti n’asɛm ase no, wobetumi de Minecraft nhyehyɛe nkrataa adi dwuma: nkrataa § ne nea edidi so no. Ahyase: §0–§9 ne §a–§f. Sɛnea ɛte: §l — duru, §o — koto, §n — ase hyehyɛ, §m — mfinimfini hyehyɛ, §k — \"ahyɛ\", §r — sankɔ hyɛ nyinaa. Ahyase kɔd no sankɔ hyɛ tete ahyase no, enti fa ahyase no gu ahyase kɔd no akyi"
+  "rename.guide.how": "Sɛ wopɛ sɛ wesan sesa din no a, kyekyere kard no ti so, twerɛ foforo no hyɛ mu na mia baabiara a hwee nni mu — wɔbɛkora so. Asɛndua a ɛwɔ afuw no nkyɛn no bɛsan de din kan no aba bere a wɔnkora so. Afuw a hwee nni mu no bɛsan de din a edi kan no aba",
+  "rename.guide.codes": "Wɔ ti n’asɛm ase no, wobetumi de Minecraft nhyehyɛe nkrataa adi dwuma: nkrataa § ne nea edidi so no. Ahyase: §0–§9 ne §a–§f. Sɛnea ɛte: §l — duru, §o — koto, §n — ase hyehyɛ, §m — mfinimfini hyehyɛ, §k — \"ahyɛ\", §r — sankɔ hyɛ nyinaa. Ahyase kɔd no sankɔ hyɛ tete ahyase no, enti fa ahyase no gu ahyase kɔd no akyi",
+  "rename.guide.example": "Nhwɛsoɔ:",
+  "rename.guide.sample": "§6§lSika §r§ablock",
+  "rename.guide.type": "Sɛnea wopɛ sɛ wotwerɛ §: Windows — fa Alt kɔ so twerɛ 0167 wɔ nɔmba kiyibodi so; Mac — Option + 6 (Brɔfo kwan so); fon so no, fa wo nsa ka koodu a ɛwɔ ase ha bere a wore sesa ti no, ɛbɛba mu ankasa",
+  "rename.guide.colors": "Ahyase",
+  "rename.guide.bedrock": "Bedrock Ahyase",
+  "rename.guide.styles": "Ahyase kwan",
+  "rename.guide.not_editing": "Di kan ka koodu a ɛwɔ kaati ti so no, na fa wo nsa ka koodu no ma ɛmmra mu",
+  "rename.style.l": "Kɛseɛ",
+  "rename.style.o": "Kuruw",
+  "rename.style.n": "Wɔakyerɛw ase",
+  "rename.style.m": "Wɔakyerɛw mu",
+  "rename.style.k": "Nsɛm",
+  "rename.style.r": "San yɛ"
 }

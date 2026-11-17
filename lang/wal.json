@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Qanttana eda",
   "rename.confirm_back": "Simmisa qanttana",
   "rename.guide.title": "Sunttanau qanttana qixxissana ogiya (§ codes §)",
-  "rename.guide.how": "Sunttanau qanttana, card title qanttana, haari qanttana qixxissana ogiya qanttana — qanttanau eda. Cross qanttana koyro sunttanau simmisa qanttana. Baqana qanttana koyro sunttanau simmisa qanttana.",
-  "rename.guide.codes": "Maxaafaa huuphiyee wozanaappe Minecraft qefete kowo goynna dandeeta: § malliyaa neegaappe simmiyaagaa. Kulo: §0–§9 ne §a–§f. Qefete: §l — gita, §o — geeshsha, §n — gelaappe gidiyaagaa, §m — giddoppe gidiyaagaa, §k — \"shiqiri\", §r — ubbata zaara. Kulo kodiyaappe kase qefete zaariis, yaatin qefete kulo simmin wota"
+  "rename.guide.how": "Sunttaa laammanau, kaardiya ubba miishsha shoggite, haaruu xaafite hosa shoggite — kuuyettenna. Beediya matabaa deˈiya saaxini kase sunttaa ba woossenna. Shoggida miishshi woykko beediyaa kase sunttaa haasayis",
+  "rename.guide.codes": "Maxaafaa huuphiyee wozanaappe Minecraft qefete kowo goynna dandeeta: § malliyaa neegaappe simmiyaagaa. Kulo: §0–§9 ne §a–§f. Qefete: §l — gita, §o — geeshsha, §n — gelaappe gidiyaagaa, §m — giddoppe gidiyaagaa, §k — \"shiqiri\", §r — ubbata zaara. Kulo kodiyaappe kase qefete zaariis, yaatin qefete kulo simmin wota",
+  "rename.guide.example": "Leesuwa:",
+  "rename.guide.sample": "§6§lWarqaa §r§ablokii",
+  "rename.guide.type": "§ xeerissiyo oge: Windows — Alt minni minni nambara kiyiboodiyan 0167 xeerissa; Mac — Option + 6 (Ingiliziyo oge); celulares bolli, sunni sunni qefishiyo wode giddon de'iya koduwa xoqa, ba huuphe wurso gaca",
+  "rename.guide.colors": "Kalaru",
+  "rename.guide.bedrock": "Bedrock Kalaru",
+  "rename.guide.styles": "Stiluwa",
+  "rename.guide.not_editing": "Kadi xaari qassi, guuyiyan koodi xoqi xeerissa",
+  "rename.style.l": "Guulliya",
+  "rename.style.o": "Xoogettida",
+  "rename.style.n": "Gido gidi giidida",
+  "rename.style.m": "Giddo gidi giidida",
+  "rename.style.k": "Geellota",
+  "rename.style.r": "Gaiyissa"
 }

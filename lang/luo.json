@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Kik iketo",
   "rename.confirm_back": "Med nyime gi konyo",
   "rename.guide.title": "Naka ma ijiro nyingni kendo ipako (§ kod §)",
-  "rename.guide.how": "Mondo ijiro nyingni, dhi malo kuom nying kadi, ket manyien kendo idhi kuom kama onge gimoro — biro keti. Msalaba ma ni machiegni gi kama biro choko nyingni machon kik iketo. Kama onge gimoro biro konyo nyingni mokwongo.",
-  "rename.guide.codes": "E wi wachu inyalo tiyo gi kod mag fwayo mag Minecraft: alama § kod ranyisi bang'e. Runge: §0–§9 gi §a–§f. Dhi Nyime: §l — tek, §o — oywe, §n — otiki piny, §m — otiki dier, §k — \"mofwanifu\", §r — los duto kethore. Kod mar rang'iny loso dhi nyime machon, koro ket dhi nyime bang' rang'iny"
+  "rename.guide.how": "Mondo iloki nying, di nyim kadi, chor manyien kadi kendo di kuonde ma onge gimoro amora — biro konyore. Rachni ma ni machiegni gi puoth biro konyo nying machon ma onge konyruok. Puoth ma onge gimoro amora biro konyo nying mokwongo",
+  "rename.guide.codes": "E wi wachu inyalo tiyo gi kod mag fwayo mag Minecraft: alama § kod ranyisi bang'e. Runge: §0–§9 gi §a–§f. Dhi Nyime: §l — tek, §o — oywe, §n — otiki piny, §m — otiki dier, §k — \"mofwanifu\", §r — los duto kethore. Kod mar rang'iny loso dhi nyime machon, koro ket dhi nyime bang' rang'iny",
+  "rename.guide.example": "Ranyisi:",
+  "rename.guide.sample": "§6§lBlock §r§a mar dhahabu",
+  "rename.guide.type": "Namba mag chako §: Windows — qol Alt kendo ichak 0167 e keybod mar namba; Mac — Option + 6 (ma nyalo mewo e dhok Jarumani/Joluo); e simu, nyalo mana ng’ado kodi ma piny ka ilok olar, obiro donjo owegi",
+  "rename.guide.colors": "Rangi",
+  "rename.guide.bedrock": "Rangi mag Bedrock",
+  "rename.guide.styles": "Chenro",
+  "rename.guide.not_editing": "Mok tir e wi wach mar kadi, bang'e iwinj kodi mondo ikete",
+  "rename.style.l": "Kwoyo",
+  "rename.style.o": "Giko",
+  "rename.style.n": "Motimo piny",
+  "rename.style.m": "Motimo e dier",
+  "rename.style.k": "Pinyruoth",
+  "rename.style.r": "Chengi kendo"
 }

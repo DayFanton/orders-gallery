@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ndũũkĩthe",
   "rename.confirm_back": "Thiĩ na mbere na ũvĩndũle",
   "rename.guide.title": "Ũndũ wa kũvĩndũle syĩtwa na kũsya ngũi (§ kodi syá §)",
-  "rename.guide.how": "Ũvĩndũle syĩtwa, kanda kĩtwĩ kĩa katani, vandika kingĩ na ukande vandũ o vonthe vata vata — nĩkũũkĩthwa. Ndanzi ĩla ĩvo vakuvi na vandũ ĩu nĩkũsyokalĩa syĩtwa kĩu kya tene vata ndũũkĩthe. Vandũ vata vata nĩkũsyokalĩa syĩtwa kĩa mbere.",
-  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru"
+  "rename.guide.how": "Kwandĩka ĩngĩ uvoo, teta kĩkwa kya kadi, tũndĩka kĩa vala na ũteta kĩla kĩvau kĩvau — kĩkaikiwa. Msalaba ula wĩ mbee wa kĩvau ukaũmĩsya syĩtwa ya mbee vata kũika. Kĩvau kĩvau kĩkaũmĩsya syĩtwa ya mbeelu",
+  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru",
+  "rename.guide.example": "Kĩonereria:",
+  "rename.guide.sample": "§6§lBlock §r§a ya thahabu",
+  "rename.guide.type": "Űndű wa kűandĩka §: Windows — kwatia Alt na űandĩke 0167 kĩbodi-inĩ ya namba; Mac — Option + 6 (mĩtũmĩre ya Kiungereza); thoni, taha koodi ĩrĩa yĩ ungu űkĩvanga kyongo, nĩĩkĩka yothe",
+  "rename.guide.colors": "Mavuti ma rangi",
+  "rename.guide.bedrock": "Mavuti ma rangi ma Bedrock",
+  "rename.guide.styles": "Mavuti ma nzila",
+  "rename.guide.not_editing": "Thau mbee űndű wa kĩvanga kya kaati, thuti űtara koodĩ nĩguo űtethye",
+  "rename.style.l": "Nene",
+  "rename.style.o": "Kũndwa",
+  "rename.style.n": "Ĩandĩkĩtwo vata",
+  "rename.style.m": "Ĩandĩkĩtwo vakatagati",
+  "rename.style.k": "Ũvithĩkĩo",
+  "rename.style.r": "Ĩndũka"
 }

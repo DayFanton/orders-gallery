@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Maçekerên",
   "rename.confirm_back": "Vurnayışi de dewam ke",
   "rename.guide.title": "Name sen vurnayış u rınd kerdış (§ codes §)",
-  "rename.guide.how": "Name vurnayış rê, ser nameyê karti bıkıtêni, nameyo newe binusên u cayê veng de bıkıtêni — bınıro. Xaço ke rax de yo, maçekerênnameyê khoyo bınarnayış maçekerên. Cayê veng nameyê asıl bınarnayış.",
-  "rename.guide.codes": "Sername de şima şenê kodê formatkerdışî yê Minecraftî bixebitnê: nîşaneyê § û yew karekter pey cû. Rengî: §0–§9 û §a–§f. Stîlî: §l — stûr, §o — meylkerde, §n — binxetkerde, §m — miyanxetkerde, §k — \"şîfrekerde\", §r — pêro newe ra bierzo. Kodê rengî stîlê verênî newe ra erzeno, Seba nê stîlî rengî pey de bınusnê"
+  "rename.guide.how": "Name vurnayışi rê serê karta ser de bıkıtê, yewê nû bınusê û cayê veng de bıkıtê — o bıköno. Xaçê ke bınê meydani de yo, nameyo verên bêqeydkena agêrnolo. Vengê meydani nameyo bıngehîn agêrnolo",
+  "rename.guide.codes": "Sername de şima şenê kodê formatkerdışî yê Minecraftî bixebitnê: nîşaneyê § û yew karekter pey cû. Rengî: §0–§9 û §a–§f. Stîlî: §l — stûr, §o — meylkerde, §n — binxetkerde, §m — miyanxetkerde, §k — \"şîfrekerde\", §r — pêro newe ra bierzo. Kodê rengî stîlê verênî newe ra erzeno, Seba nê stîlî rengî pey de bınusnê",
+  "rename.guide.example": "Mîsal:",
+  "rename.guide.sample": "§6§lBlokê §r§azêrî",
+  "rename.guide.type": "§ nuştışê cı: Windows — Alt bışori u serê klavyeya amaran de 0167 bınuse; Mac — Option + 6 (çineya İngılızki); telefon de sername vurneno ke tenya kodê bınên bıtıkne, o xo bıkewo",
+  "rename.guide.colors": "Rengî",
+  "rename.guide.bedrock": "Rengê Bedrock",
+  "rename.guide.styles": "Stilî",
+  "rename.guide.not_editing": "Verê serê karta de bıtıkne, dıma semedê cıkerdışi serê kod de bıtıkne",
+  "rename.style.l": "Estû",
+  "rename.style.o": "İtalîk",
+  "rename.style.n": "Bınxetın",
+  "rename.style.m": "Miyanxetın",
+  "rename.style.k": "Şîfre",
+  "rename.style.r": "Ebe raşti"
 }

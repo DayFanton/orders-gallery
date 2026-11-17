@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Hagi hayte",
   "rename.confirm_back": "Qoli qaranote",
   "rename.guide.title": "Suwote qolote qara giddote qolishi (§ codes §)",
-  "rename.guide.how": "Qara suwote qolote, card title qara qolote, qara suwote qolote - qoli qolote. Cross qara qolote hagi hayte qara suwote qolote. Qara qolote qara suwote qolote.",
-  "rename.guide.codes": "Hakiisi ikkitino roso rakiishshira Minecraft kodi gari: § malaate ikkitino nna qara qara kotti. Roru: §0–§9 nna §a–§f. Gari: §l — gobba, §o — maqqo, §n — hanni gari, §m — giddo gari, §k — \"wo'ma\", §r — qixxaa sai. Roru kodi xagga gari qixxa'anno, hakkiinni gari roru kotti agurto"
+  "rename.guide.how": "Maate massara woyte, kaardi rosichi ganyite, haaro ganyite hiikkunni kaphote bayiranni ganyite — kootu ikkitanno. Kaardi gatikki crossi kofote badde maate gatinse haaro kaassitanno. Kophote bayiri kofe kaassitanno",
+  "rename.guide.codes": "Hakiisi ikkitino roso rakiishshira Minecraft kodi gari: § malaate ikkitino nna qara qara kotti. Roru: §0–§9 nna §a–§f. Gari: §l — gobba, §o — maqqo, §n — hanni gari, §m — giddo gari, §k — \"wo'ma\", §r — qixxaa sai. Roru kodi xagga gari qixxa'anno, hakkiinni gari roru kotti agurto",
+  "rename.guide.example": "Lawishsha:",
+  "rename.guide.sample": "§6§lWarqii §r§abloki",
+  "rename.guide.type": "§ borre yannanni: Windows — Alt qollanni nambara kiyibodira 0167 borreessi; Mac — Option + 6 (Ingilizaho borreessaa); telefoona ikka, sunni qara qorishshu woyite gotti koodi xaaqqi, iibinse ka'a",
+  "rename.guide.colors": "Kulula",
+  "rename.guide.bedrock": "Bedrock Kulula",
+  "rename.guide.styles": "Stiluwa",
+  "rename.guide.not_editing": "Rosu qara afi, kayi koodi xaaqqi iibinso",
+  "rename.style.l": "Urra",
+  "rename.style.o": "Itaalikichcho",
+  "rename.style.n": "Gikki xiinxidda",
+  "rename.style.m": "Maxxuqqi xiinxidda",
+  "rename.style.k": "Dago",
+  "rename.style.r": "Hessi"
 }

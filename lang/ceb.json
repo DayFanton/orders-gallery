@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ayaw i-save",
   "rename.confirm_back": "Ipadayon ang pag-edit",
   "rename.guide.title": "Giunsa pag-ilis ang ngalan ug pagpatahom (mga § code)",
-  "rename.guide.how": "Aron mapulihan ang ngalan, i-klik ang titulo sa kard, isulat ang bag-o ug i-klik ang bisan unsang blangkong dapit — ma-save kini. Ang krus sa tupad sa field magabalik sa kaniadto nga ngalan nga dili i-save. Ang blangkong field magabalik sa orihinal nga ngalan.",
-  "rename.guide.codes": "Sa titulo, pwede nimong gamitin ang mga code sa pag-format sa Minecraft: ang timaan § ug usa ka karakter sunod niini. Mga Kolor: §0–§9 ug §a–§f. Mga Estilo: §l — bold, §o — italic, §n — linisan sa ilawom, §m — linisan sa tunga, §k — \"obfuscated\", §r — i-reset ang tanan. Ang code sa kolor nag-re-reset sa miaging mga estilo, busa ibutang ang mga estilo pagkahuman sa kolor"
+  "rename.guide.how": "Aron mapulihan ang ngalan, i-klik ang titulo sa kard, i-type ang bag-o ug i-klik bisan asa nga walay sulod nga dapit — ma-save kini. Ang ekis sa kilid sa field mag-uli sa miaging ngalan nga walay pag-save. Ang blangko nga field mag-uli sa orihinal nga ngalan",
+  "rename.guide.codes": "Sa titulo, pwede nimong gamitin ang mga code sa pag-format sa Minecraft: ang timaan § ug usa ka karakter sunod niini. Mga Kolor: §0–§9 ug §a–§f. Mga Estilo: §l — bold, §o — italic, §n — linisan sa ilawom, §m — linisan sa tunga, §k — \"obfuscated\", §r — i-reset ang tanan. Ang code sa kolor nag-re-reset sa miaging mga estilo, busa ibutang ang mga estilo pagkahuman sa kolor",
+  "rename.guide.example": "Pananglitan:",
+  "rename.guide.sample": "§6§lBulawanong §r§ablock",
+  "rename.guide.type": "Unsaon pag-type sa §: Windows — i-hold ang Alt ug i-type ang 0167 sa numeric keypad; Mac — Option + 6 (English layout); sa telepono, i-tap lang ang code sa ubos samtang nag-edit sa titulo, ug mo-insert kini sa iyang kaugalingon",
+  "rename.guide.colors": "Mga kolor",
+  "rename.guide.bedrock": "Mga kolor sa Bedrock",
+  "rename.guide.styles": "Mga estilo",
+  "rename.guide.not_editing": "Unaha pag-klik ang titulo sa kard, dayon ang code aron ma-insert kini",
+  "rename.style.l": "Mabaga",
+  "rename.style.o": "Hilig",
+  "rename.style.n": "Gisuwatan",
+  "rename.style.m": "Gibadlisang",
+  "rename.style.k": "Kodigo",
+  "rename.style.r": "I-reset"
 }

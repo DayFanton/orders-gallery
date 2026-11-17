@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Neukladať",
   "rename.confirm_back": "Pokračovať v úpravách",
   "rename.guide.title": "Ako premenovať a ošetriť farbami (§ kódy)",
-  "rename.guide.how": "Ak chcete premenovať, kliknite na názov karty, zadajte nový a kliknite kdekoľvek na prázdne miesto — uloží sa. Krížik vedľa poľa vráti predchádzajúci názov bez uloženia. Prázdne pole obnoví pôvodný názov.",
-  "rename.guide.codes": "V názve môžete používať kódy formátovania z Minecraftu: znak § a symbol za ním. Farby: §0–§9 a §a–§f. Štýly: §l — tučné, §o — kurzíva, §n — podčiarknuté, §m — prečiarknuté, §k — „šifrované“, §r — resetovať všetko. Kód farby resetuje predchádzajúce štýly, preto štýly umiestňujte za farbu"
+  "rename.guide.how": "Pre premenovanie kliknite na názov karty, zadajte nový a kliknite kamkoľvek do prázdneho miesta – uloží sa. Krížik vedľa poľa vráti predchádzajúci názov bez uloženia. Prázdne pole vráti pôvodný názov",
+  "rename.guide.codes": "V názve môžete používať kódy formátovania z Minecraftu: znak § a symbol za ním. Farby: §0–§9 a §a–§f. Štýly: §l — tučné, §o — kurzíva, §n — podčiarknuté, §m — prečiarknuté, §k — „šifrované“, §r — resetovať všetko. Kód farby resetuje predchádzajúce štýly, preto štýly umiestňujte za farbu",
+  "rename.guide.example": "Príklad:",
+  "rename.guide.sample": "§6§lZlatý §r§ablok",
+  "rename.guide.type": "Ako napísať §: Windows — podržte Alt a napíšte 0167 na numerickej klávesnici; Mac — Option + 6 (anglické rozloženie); na telefóne stačí pri úprave názvu ťuknúť na kód nižšie a sám sa vloží",
+  "rename.guide.colors": "Farby",
+  "rename.guide.bedrock": "Farby Bedrock",
+  "rename.guide.styles": "Štýly",
+  "rename.guide.not_editing": "Najprv kliknite na názov karty a potom na kód na jeho vloženie",
+  "rename.style.l": "Tučné",
+  "rename.style.o": "Kurzíva",
+  "rename.style.n": "Podčiarknuté",
+  "rename.style.m": "Prečiarknuté",
+  "rename.style.k": "Šifra",
+  "rename.style.r": "Resetovať"
 }

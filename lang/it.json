@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Non salvare",
   "rename.confirm_back": "Continua la modifica",
   "rename.guide.title": "Come rinominare e stilizzare (codici §)",
-  "rename.guide.how": "Per rinominare, fai clic sul titolo della scheda, inserisci uno nuovo e fai clic in un punto qualsiasi vuoto: verrà salvato. La crocetta accanto al campo ripristinerà il nome precedente senza salvare. Un campo vuoto ripristinerà il nome originale.",
-  "rename.guide.codes": "Nel titolo puoi usare i codici di formattazione di Minecraft: il simbolo § e un carattere successivo. Colori: §0–§9 e §a–§f. Stili: §l — grassetto, §o — corsivo, §n — sottolineato, §m — barrato, §k — «offuscato», §r — ripristina tutto. Il codice colore ripristina gli stili precedenti, quindi posiziona gli stili dopo il colore"
+  "rename.guide.how": "Per rinominare, clicca sul titolo della scheda, digita il nuovo e clicca in un punto qualsiasi vuoto: verrà salvato. La croce accanto al campo ripristinerà il nome precedente senza salvare. Un campo vuoto ripristinerà il nome originale",
+  "rename.guide.codes": "Nel titolo puoi usare i codici di formattazione di Minecraft: il simbolo § e un carattere successivo. Colori: §0–§9 e §a–§f. Stili: §l — grassetto, §o — corsivo, §n — sottolineato, §m — barrato, §k — «offuscato», §r — ripristina tutto. Il codice colore ripristina gli stili precedenti, quindi posiziona gli stili dopo il colore",
+  "rename.guide.example": "Esempio:",
+  "rename.guide.sample": "§6§lBlocco §r§adi oro",
+  "rename.guide.type": "Come digitare §: Windows — tieni premuto Alt e digita 0167 sul tastierino numerico; Mac — Option + 6 (layout inglese); sul telefono, basta toccare il codice desiderato qui sotto mentre modifichi il titolo e si inserisce da solo",
+  "rename.guide.colors": "Colori",
+  "rename.guide.bedrock": "Colori di Bedrock",
+  "rename.guide.styles": "Stili",
+  "rename.guide.not_editing": "Prima clicca sul titolo della scheda, poi sul codice per inserirlo",
+  "rename.style.l": "Grassetto",
+  "rename.style.o": "Corsivo",
+  "rename.style.n": "Sottolineato",
+  "rename.style.m": "Barrato",
+  "rename.style.k": "Cifra",
+  "rename.style.r": "Ripristina"
 }

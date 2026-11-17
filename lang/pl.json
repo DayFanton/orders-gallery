@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Nie zapisuj",
   "rename.confirm_back": "Kontynuuj edycję",
   "rename.guide.title": "Jak zmienić nazwę i ozdobić (kody §)",
-  "rename.guide.how": "Aby zmienić nazwę, kliknij tytuł karty, wpisz nową i kliknij w dowolne wolne miejsce — zostanie zapisana. Krzyżyk obok pola przywróci poprzednią nazwę bez zapisu. Puste pole przywróci oryginalną nazwę.",
-  "rename.guide.codes": "W tytule możesz używać kodów formatowania z Minecrafta: znaku § i następującego po nim znaku. Kolory: §0–§9 oraz §a–§f. Style: §l — pogrubienie, §o — kursywa, §n — podkreślenie, §m — przekreślenie, §k — „zaszyfrowany”, §r — resetuj wszystko. Kod koloru resetuje poprzednie style, więc umieszczaj style po kolorze"
+  "rename.guide.how": "Aby zmienić nazwę, kliknij tytuł karty, wpisz nową i kliknij w dowolne wolne miejsce — zostanie zapisana. Krzyżyk obok pola przywróci poprzednią nazwę bez zapisu. Puste pole przywróci pierwotną nazwę",
+  "rename.guide.codes": "W tytule możesz używać kodów formatowania z Minecrafta: znaku § i następującego po nim znaku. Kolory: §0–§9 oraz §a–§f. Style: §l — pogrubienie, §o — kursywa, §n — podkreślenie, §m — przekreślenie, §k — „zaszyfrowany”, §r — resetuj wszystko. Kod koloru resetuje poprzednie style, więc umieszczaj style po kolorze",
+  "rename.guide.example": "Przykład:",
+  "rename.guide.sample": "§6§lZłoty §r§ablok",
+  "rename.guide.type": "Jak wpisać §: Windows — przytrzymaj Alt i wpisz 0167 na klawiaturze numerycznej; Mac — Option + 6 (układ angielski); w telefonie po prostu stuknij odpowiedni kod poniżej podczas edycji tytułu, a sam się wstawi",
+  "rename.guide.colors": "Kolory",
+  "rename.guide.bedrock": "Kolory Bedrock",
+  "rename.guide.styles": "Style",
+  "rename.guide.not_editing": "Najpierw kliknij tytuł karty, a następnie kod, aby go wstawić",
+  "rename.style.l": "Pogrubiony",
+  "rename.style.o": "Kursywa",
+  "rename.style.n": "Podkreślony",
+  "rename.style.m": "Przekreślony",
+  "rename.style.k": "Szyfr",
+  "rename.style.r": "Reset"
 }

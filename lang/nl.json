@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Niet opslaan",
   "rename.confirm_back": "Bewerken hervatten",
   "rename.guide.title": "Hoe te hernoemen en mooi te maken (§ codes)",
-  "rename.guide.how": "Om te hernoemen klik je op de kaarttitel, typ je een nieuwe in en klik je ergens in de lege ruimte — deze wordt opgeslagen. Het kruisje naast het veld herstelt de vorige naam zonder op te slaan. Een leeg veld herstelt de oorspronkelijke naam.",
-  "rename.guide.codes": "In de titel kun je Minecraft-opmaakcodes gebruiken: het §-teken en een teken daarna. Kleuren: §0–§9 en §a–§f. Stijlen: §l — vet, §o — cursief, §n — onderstreept, §m — doorgehaald, §k — „verward”, §r — alles resetten. De kleurcode reset eerdere stijlen, dus plaats stijlen na de kleur"
+  "rename.guide.how": "Om te hernoemen, klik op de kaarttitel, typ de nieuwe in en klik ergens in een lege ruimte — deze wordt opgeslagen. Het kruisje naast het veld herstelt de vorige naam zonder op te slaan. Een leeg veld herstelt de oorspronkelijke naam",
+  "rename.guide.codes": "In de titel kun je Minecraft-opmaakcodes gebruiken: het §-teken en een teken daarna. Kleuren: §0–§9 en §a–§f. Stijlen: §l — vet, §o — cursief, §n — onderstreept, §m — doorgehaald, §k — „verward”, §r — alles resetten. De kleurcode reset eerdere stijlen, dus plaats stijlen na de kleur",
+  "rename.guide.example": "Voorbeeld:",
+  "rename.guide.sample": "§6§lGouden §r§ablok",
+  "rename.guide.type": "Hoe typ je §: Windows — houd Alt ingedrukt en typ 0167 op het numerieke toetsenbord; Mac — Option + 6 (Engelse indeling); tik op je telefoon gewoon op de code hieronder tijdens het bewerken van de titel, deze wordt vanzelf ingevoegd",
+  "rename.guide.colors": "Kleuren",
+  "rename.guide.bedrock": "Bedrock-kleuren",
+  "rename.guide.styles": "Stijlen",
+  "rename.guide.not_editing": "Klik eerst op de kaarttitel en daarna op de code om deze in te voegen",
+  "rename.style.l": "Vet",
+  "rename.style.o": "Cursief",
+  "rename.style.n": "Onderstreept",
+  "rename.style.m": "Doorstreept",
+  "rename.style.k": "Cijfer",
+  "rename.style.r": "Resetten"
 }

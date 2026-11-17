@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ungagcini",
   "rename.confirm_back": "Qhubeka nokuhlela",
   "rename.guide.title": "Indlela yokusetha kabusha nokuhlobisa (§ amakhodi)",
-  "rename.guide.how": "Ukushintsha igama, chofoza isihloko sekadi, faka esisha bese uchofoza noma yikuphi endaweni engenalutho — kuzogcinwa. Isiphambano esiseduze nenkambu sizobuyisela igama langaphambilini ngapung ukugcina. Inkambu engenalutho izobuyisela igama lokuqala.",
-  "rename.guide.codes": "Esihlokweni ungasebenzisa amakhodi wokufomatha we-Minecraft: uphawu § kanye nohlamvu ngemuva kwalo. Imibala: §0–§9 kanye no-§a–§f. Izitayela: §l — okugqinsi, §o — okuncike, §n — okunohlonzo ngezansi, §m — okunohlonzo phakathi, §k — \"okufihlekile\", §r — setha kabusha konke. Ikhodi yombala isetha kabusha izitayela zangaphambilini, ngakho faka izitayela ngemuva kombala"
+  "rename.guide.how": "Ukuze uqambe kabusha, chofoza isihloko sekhati, thayipha esisha bese uchofoza noma kuphi endaweni engenalutho — sizogcinwa. Isiphambano esiseduze nenkambu sizobuyisela igama elidlule ngaphandle kokugcina. Inkambu engenalutho izobuyisela igama lokuqala",
+  "rename.guide.codes": "Esihlokweni ungasebenzisa amakhodi wokufomatha we-Minecraft: uphawu § kanye nohlamvu ngemuva kwalo. Imibala: §0–§9 kanye no-§a–§f. Izitayela: §l — okugqinsi, §o — okuncike, §n — okunohlonzo ngezansi, §m — okunohlonzo phakathi, §k — \"okufihlekile\", §r — setha kabusha konke. Ikhodi yombala isetha kabusha izitayela zangaphambilini, ngakho faka izitayela ngemuva kombala",
+  "rename.guide.example": "Isibonelo:",
+  "rename.guide.sample": "§6§lIbhulokhi §r§ayegolide",
+  "rename.guide.type": "Ungayithayipha kanjani i-§: Windows — bamba u-Alt bese uthayipha u-0167 kukhibhodi yezinombolo; Mac — Option + 6 (isitayela sesiNgisi); ocingweni, vele uchofoze ikhodi engezansi ngenkathi uhlela isihloko, izofika yona yodwa",
+  "rename.guide.colors": "Imibala",
+  "rename.guide.bedrock": "Imibala ye-Bedrock",
+  "rename.guide.styles": "Izitayela",
+  "rename.guide.not_editing": "Qala uchofoze isihloko sekhadi, bese uchofoze ikhodi ukuze uyifake",
+  "rename.style.l": "Ugqinsi",
+  "rename.style.o": "I-Italic",
+  "rename.style.n": "Okugcizelelwe ngaphansi",
+  "rename.style.m": "Okucwecwezekile -> Okunqanyulwe phakathi",
+  "rename.style.k": "Ikhodi",
+  "rename.style.r": "Setha kabusha"
 }

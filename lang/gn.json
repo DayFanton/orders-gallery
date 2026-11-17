@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ani emboguapy",
   "rename.confirm_back": "Emoherakuavo ñepyrũ",
   "rename.guide.title": "Mba'éichapa emoambue ha emboporã nde réra (§ rapykuere §)",
-  "rename.guide.how": "Emoambue hag̃ua, eikutu nde réra rehe, emboguapy pyahu ha eikutu umi tenda nahani'ỹvape — oñemomba'apo porãta. Umi cruz oĩva hapykuere ojehecha haguã ojeipyso hag̃ua téra yma guare. Tenda nahani'ỹva omoingo jey téra yma guare.",
-  "rename.guide.codes": "Tysýpe ikatu rejapo Minecraft ñemichu kódigo: § techaukaha ha peteĩ taikuéra upéi. Sa'ykuéra: §0–§9 ha §a–§f. Ñemichu: §l — akãguasu, §o — chũmbypáva, §n — ijykére, §m — mbytepe, §k — \"ñemi\", §r — mbojevy opaite. Sa'y kódigo mbojevy umi ñemichu yma guare, upévare emoĩ ñemichu sa'y rire"
+  "rename.guide.how": "Momba hag̃ua héra, eñandy kárta tĩtépe, ehaipy pyahu ha eñandy peteĩ teka nandi — oñongatúta. Cruz oĩva pe tenda ykére o kutase héra yma oñongatu ỹ re. Tenda nandi o kutase héra tee",
+  "rename.guide.codes": "Tysýpe ikatu rejapo Minecraft ñemichu kódigo: § techaukaha ha peteĩ taikuéra upéi. Sa'ykuéra: §0–§9 ha §a–§f. Ñemichu: §l — akãguasu, §o — chũmbypáva, §n — ijykére, §m — mbytepe, §k — \"ñemi\", §r — mbojevy opaite. Sa'y kódigo mbojevy umi ñemichu yma guare, upévare emoĩ ñemichu sa'y rire",
+  "rename.guide.example": "Techaukaha:",
+  "rename.guide.sample": "§6§lItaju §r§ablok",
+  "rename.guide.type": "§ ñembosaraipyre: Windows — eipysu Alt ha eikoha numeroko keypad-pe 0167; Mac — Option + 6 (Ingles ñemboja); mbojereha rupi, emongu'e code oguejyva ha oikota heseve ijehegui",
+  "rename.guide.colors": "Sa'y",
+  "rename.guide.bedrock": "Bedrock Sa'y",
+  "rename.guide.styles": "Tekorã",
+  "rename.guide.not_editing": "Tenonderã eipyhy tarjeta réra, ha upéi eipyhy code emoĩ hag̃ua",
+  "rename.style.l": "Guasu",
+  "rename.style.o": "Kurundu",
+  "rename.style.n": "Kuatiapyre guypegua",
+  "rename.style.m": "Oñembováva",
+  "rename.style.k": "Ñemi",
+  "rename.style.r": "Momichĩ"
 }

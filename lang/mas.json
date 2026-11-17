@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Mikitoki",
   "rename.confirm_back": "Eibung' olaitoroki lenyiki, kitoki",
   "rename.guide.title": "Aibung' olaitoroki neibishii (§ codes e §)",
-  "rename.guide.how": "Aibung' olaitoroki neibishii olaitoroki lenyiki, mibung', eibung' eishoo olaitoroki le e lesesia — mibung'. Olaitoroki le e lesesia oibung' olaitoroki lenyiki.",
-  "rename.guide.codes": "E namba e nkop naitung'olok enkishui e Minecraft: enkishui § enjore enye. Emibala: §0–§9 enye §a–§f. Isilaili: §l — nene, §o — opuku, §n — enye enkinya olosua, §m — enye olosua lelo, §k — \"eishoo\", §r — ikweli olosua. Inkishui enye emibala eishoo isilaili e duku, olosua isilaili aing'oru emibala"
+  "rename.guide.how": "Oloishia oltung'an, emwata e nkadi, gira e nkishu ol oloishia nabo emwata e nkadi — eishoo. Oloishia e nkadi eishoo enkishu e naleng nji eishoo. Emwata e nkadi eishoo enkishu e naisoo",
+  "rename.guide.codes": "E namba e nkop naitung'olok enkishui e Minecraft: enkishui § enjore enye. Emibala: §0–§9 enye §a–§f. Isilaili: §l — nene, §o — opuku, §n — enye enkinya olosua, §m — enye olosua lelo, §k — \"eishoo\", §r — ikweli olosua. Inkishui enye emibala eishoo isilaili e duku, olosua isilaili aing'oru emibala",
+  "rename.guide.example": "Enaitobuloto:",
+  "rename.guide.sample": "§6§lBlock §r§a e ndahabu",
+  "rename.guide.type": "Erisie §: Windows — ing'wata Alt ebaiki 0167 ta kiyibodi e namba; Mac — Option + 6 (esot o Loo); ta simu, ing'wata kodi nabo e siata na eishoo te nchere, epona eya atai",
+  "rename.guide.colors": "Enkai",
+  "rename.guide.bedrock": "Enkai e Bedrock",
+  "rename.guide.styles": "Enkaina",
+  "rename.guide.not_editing": "Enkai olaitisho le kaati, peiye enkai kodi pe eishoo",
+  "rename.style.l": "Ntoki",
+  "rename.style.o": "Ete",
+  "rename.style.n": "Ete pooki",
+  "rename.style.m": "Ete tisi",
+  "rename.style.k": "Enkai",
+  "rename.style.r": "Ete sipa"
 }

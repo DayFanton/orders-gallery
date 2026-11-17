@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Kɔn ka kɛk",
   "rename.confirm_back": "Kɛk ka kɛk",
   "rename.guide.title": "Nyak ka kɛk ma kɔn ka kɛk (§ codes §)",
-  "rename.guide.how": "Nyak ka kɛk, kɛk ka card title, kɛk ka nyak nyen ma kɛk ka kɔl space — kɛk ka kɛk. Cross ka kɛk card kɔn ka kɛk nyak kɛk ma kɔn ka kɛk. Space kɛk ka kɛk nyak ka kɛk.",
-  "rename.guide.codes": "Wola kpe Minecraft format kodi: § sign ba gbe letter. Color: §0–§9 ba §a–§f. Stali: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — reset all. Color kodi reset old stali, so put stali after color"
+  "rename.guide.how": "To rename, click card title, type new one, and click empty space — saved. Cross near field reverts old name without saving. Empty field reverts original name",
+  "rename.guide.codes": "Wola kpe Minecraft format kodi: § sign ba gbe letter. Color: §0–§9 ba §a–§f. Stali: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — reset all. Color kodi reset old stali, so put stali after color",
+  "rename.guide.example": "Mfano:",
+  "rename.guide.sample": "§6§lGold §r§ablok",
+  "rename.guide.type": "§ kodi ke kifa: Windows — Alt qabda wa kitib 0167 fi namba keypad; Mac — Option + 6 (Inglish layout); mobile de, tap kodi taht winta edit title, e go enter by itself",
+  "rename.guide.colors": "Lango",
+  "rename.guide.bedrock": "Bedrock Lango",
+  "rename.guide.styles": "Style",
+  "rename.guide.not_editing": "Tete card title kiki, pata kodi tɛlɛ inɛ go insert",
+  "rename.style.l": "Ghaliz",
+  "rename.style.o": "Mail",
+  "rename.style.n": "Tahtu khat",
+  "rename.style.m": "Wasat khat",
+  "rename.style.k": "Shifir",
+  "rename.style.r": "Iadat"
 }

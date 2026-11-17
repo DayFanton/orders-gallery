@@ -469,6 +469,19 @@
   "rename.confirm_discard": "No desis",
   "rename.confirm_back": "Continuar editant",
   "rename.guide.title": "Com canviar el nom i estilitzar (codis §)",
-  "rename.guide.how": "Per canviar el nom, cliqueu al títol de la targeta, introduïu un de nou i cliqueu a qualsevol espai buit; es desarà. La creu al costat del camp tornarà al nom anterior sense desar. Un camp buit restaurarà el nom original.",
-  "rename.guide.codes": "Al títol podeu utilitzar codis de format de Minecraft: el signe § i un caràcter després. Colors: §0–§9 i §a–§f. Estils: §l — negreta, §o — cursiva, §n — subratllat, §m — tatxat, §k — «ofuscat», §r — restablir-ho tot. El codi de color restablix els estils anteriors, així que col·loqueu els estils després del color"
+  "rename.guide.how": "Per canviar el nom, cliqueu al títol de la targeta, escriviu-ne un de nou i cliqueu a qualsevol espai buit — es desarà. La creu al costat del camp retornarà el nom anterior sense desar. Un camp buit retornarà el nom original",
+  "rename.guide.codes": "Al títol podeu utilitzar codis de format de Minecraft: el signe § i un caràcter després. Colors: §0–§9 i §a–§f. Estils: §l — negreta, §o — cursiva, §n — subratllat, §m — tatxat, §k — «ofuscat», §r — restablir-ho tot. El codi de color restablix els estils anteriors, així que col·loqueu els estils després del color",
+  "rename.guide.example": "Exemple:",
+  "rename.guide.sample": "§6§lBloc §r§ade or",
+  "rename.guide.type": "Com escriure §: Windows — mantén premut Alt i escriu 0167 al teclat numèric; Mac — Option + 6 (disposició en anglès); al telèfon, només cal que toqueu el codi següent mentre editeu el títol i s'inserirà sol",
+  "rename.guide.colors": "Colors",
+  "rename.guide.bedrock": "Colors de Bedrock",
+  "rename.guide.styles": "Estils",
+  "rename.guide.not_editing": "primer clic a la títol de la targeta, després al codi per inserir-lo",
+  "rename.style.l": "Negreta",
+  "rename.style.o": "Cursiva",
+  "rename.style.n": "Subratat",
+  "rename.style.m": "Tatxat",
+  "rename.style.k": "Xifra",
+  "rename.style.r": "Restablir"
 }

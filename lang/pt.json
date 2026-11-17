@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Não salvar",
   "rename.confirm_back": "Continuar editando",
   "rename.guide.title": "Como renomear e estilizar (códigos §)",
-  "rename.guide.how": "Para renomear, clique no título do cartão, digite um novo e clique em qualquer espaço vazio — ele será salvo. O X ao lado do campo retornará ao nome anterior sem salvar. Um campo vazio restaurará o nome original.",
-  "rename.guide.codes": "No título, você pode usar códigos de formatação do Minecraft: o sinal § e um caractere após ele. Cores: §0–§9 e §a–§f. Estilos: §l — negrito, §o — itálico, §n — sublinhado, §m — tachado, §k — «ofuscado», §r — redefinir tudo. O código de cor redefine os estilos anteriores, portanto, coloque os estilos após a cor"
+  "rename.guide.how": "Para renomear, clique no título do cartão, digite o novo e clique em qualquer espaço vazio — ele será salvo. O X ao lado do campo reverterá o nome anterior sem salvar. Um campo vazio reverterá o nome original",
+  "rename.guide.codes": "No título, você pode usar códigos de formatação do Minecraft: o sinal § e um caractere após ele. Cores: §0–§9 e §a–§f. Estilos: §l — negrito, §o — itálico, §n — sublinhado, §m — tachado, §k — «ofuscado», §r — redefinir tudo. O código de cor redefine os estilos anteriores, portanto, coloque os estilos após a cor",
+  "rename.guide.example": "Exemplo:",
+  "rename.guide.sample": "§6§lBloco §r§ade ouro",
+  "rename.guide.type": "Como digitar §: Windows — segure Alt e digite 0167 no teclado numérico; Mac — Option + 6 (layout em inglês); no telefone, basta tocar no código desejado abaixo enquanto edita o título, e ele será inserido sozinho",
+  "rename.guide.colors": "Cores",
+  "rename.guide.bedrock": "Cores do Bedrock",
+  "rename.guide.styles": "Estilos",
+  "rename.guide.not_editing": "Primeiro clique no título do card e depois no código para inseri-lo",
+  "rename.style.l": "Negrito",
+  "rename.style.o": "Itálico",
+  "rename.style.n": "Sublinhado",
+  "rename.style.m": "Tachado",
+  "rename.style.k": "Cifra",
+  "rename.style.r": "Redefinir"
 }

@@ -469,6 +469,19 @@
   "rename.confirm_discard": "No guardar",
   "rename.confirm_back": "Continuar editando",
   "rename.guide.title": "Cómo renombrar y dar estilo (códigos §)",
-  "rename.guide.how": "Para renombrar, haz clic en el título de la tarjeta, escribe uno nuevo y haz clic en cualquier espacio vacío; se guardará. La cruz junto al campo volverá al nombre anterior sin guardar. Un campo vacío restaurará el nombre original.",
-  "rename.guide.codes": "En el título puedes usar códigos de formato de Minecraft: el signo § y un carácter después de él. Colores: §0–§9 y §a–§f. Estilos: §l — negrita, §o — cursiva, §n — subrayado, §m — tachado, §k — «ofuscado», §r — restablecer todo. El código de color restablece los estilos anteriores, así que coloca los estilos después del color"
+  "rename.guide.how": "Para cambiar el nombre, haz clic en el título de la tarjeta, escribe el nuevo y haz clic en cualquier espacio vacío; se guardará. La cruz al lado del campo revertirá el nombre anterior sin guardar. Un campo vacío revertirá el nombre original",
+  "rename.guide.codes": "En el título puedes usar códigos de formato de Minecraft: el signo § y un carácter después de él. Colores: §0–§9 y §a–§f. Estilos: §l — negrita, §o — cursiva, §n — subrayado, §m — tachado, §k — «ofuscado», §r — restablecer todo. El código de color restablece los estilos anteriores, así que coloca los estilos después del color",
+  "rename.guide.example": "Ejemplo:",
+  "rename.guide.sample": "§6§lBloque §r§ade oro",
+  "rename.guide.type": "Cómo escribir §: Windows — mantén presionado Alt y escribe 0167 en el teclado numérico; Mac — Option + 6 (distribución en inglés); en el teléfono, simplemente toca el código deseado a continuación mientras editas el título y se insertará solo",
+  "rename.guide.colors": "Colores",
+  "rename.guide.bedrock": "Colores de Bedrock",
+  "rename.guide.styles": "Estilos",
+  "rename.guide.not_editing": "Primero haz clic en el título de la tarjeta y luego en el código para insertarlo",
+  "rename.style.l": "Negrita",
+  "rename.style.o": "Cursiva",
+  "rename.style.n": "Subrayado",
+  "rename.style.m": "Tachado",
+  "rename.style.k": "Cifra",
+  "rename.style.r": "Restablecer"
 }

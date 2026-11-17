@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Save mat karo",
   "rename.confirm_back": "Sudhaar jaari rakho",
   "rename.guide.title": "Naam kaise badle aur sundar banaye (§ codes §)",
-  "rename.guide.how": "Naam badle khatir, card ke title pe click karo, naya naam likho aur koi bhi khali jagah pe click karo — ye save ho jaega. Field ke bagal wala cross bina save kiye purana naam wapas le aaega. Khali field asli naam wapas le aaega.",
-  "rename.guide.codes": "Title me aap Minecraft formatting codes use kar sakte hain: § sign aur uske baad ek character. Colors: §0–§9 aur §a–§f. Styles: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — sab reset karein. Color code pichle styles ko reset kar deta hai, isliye styles ko color ke baad rakhein"
+  "rename.guide.how": "Naam badle ke khatir, card ke title par click karo, nawa type karo aur koi bhi khali jagah par click karo — save ho jai. Field ke baju wala cross bina save kare purana naam wapas le aai. Khali field asli naam wapas le aai",
+  "rename.guide.codes": "Title me aap Minecraft formatting codes use kar sakte hain: § sign aur uske baad ek character. Colors: §0–§9 aur §a–§f. Styles: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — sab reset karein. Color code pichle styles ko reset kar deta hai, isliye styles ko color ke baad rakhein",
+  "rename.guide.example": "Udaharan:",
+  "rename.guide.sample": "§6§lSona ka §r§ablock",
+  "rename.guide.type": "§ kaise type kare: Windows — Alt dabake rakho aur number keypad pe 0167 type karo; Mac — Option + 6 (English layout); phone pe, title edit karte samay bas niche diye gaye code ko tap karo, woh apne aap insert ho jayega",
+  "rename.guide.colors": "Rang",
+  "rename.guide.bedrock": "Bedrock Rang",
+  "rename.guide.styles": "Style",
+  "rename.guide.not_editing": "Pehle card title pe click karo, phir code pe click karo insert karne ke liye",
+  "rename.style.l": "Mota",
+  "rename.style.o": "Tircha",
+  "rename.style.n": "Niche line kiya gaya",
+  "rename.style.m": "Beech me line kiya gaya",
+  "rename.style.k": "Code",
+  "rename.style.r": "Reset kiya gaya"
 }

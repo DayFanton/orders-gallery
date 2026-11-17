@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Kada a adana",
   "rename.confirm_back": "Cigaba da gyarawa",
   "rename.guide.title": "Yadda za a sake suna da kuma yin ado da launuka (§ lambobi)",
-  "rename.guide.how": "Don sake suna, danna kan taken katin, shigar da sabon suna sannan danna ko a wani wuri mara komai - za a adana shi. Giciye da ke kusa da filin zai dawo da tsohon suna ba tare da an adana ba. Filin mara komai zai dawo da sunan asali.",
-  "rename.guide.codes": "A cikin taken, zaka iya amfani da lambobin tsara na Minecraft: alamar § da harafi bayan ta. Launuka: §0–§9 da §a–§f. Saloli: §l — kauri, §o — lankwasa, §n — ƙarƙashin layin, §m — an yanke, §k — \"ɓoye\", §r — sake saita komai. Lambar launi tana sake saita tsoffin saloli, don haka saka saloli bayan launi"
+  "rename.guide.how": "Don sake suna, danna taken katin, buga sabon kuma danna kowane wuri mara komai — za a adana shi. Giciye da ke kusa da filin zai dawo da sunan da ya gabata ba tare da adanawa ba. Filin mara komai zai dawo da asalin suna",
+  "rename.guide.codes": "A cikin taken, zaka iya amfani da lambobin tsara na Minecraft: alamar § da harafi bayan ta. Launuka: §0–§9 da §a–§f. Saloli: §l — kauri, §o — lankwasa, §n — ƙarƙashin layin, §m — an yanke, §k — \"ɓoye\", §r — sake saita komai. Lambar launi tana sake saita tsoffin saloli, don haka saka saloli bayan launi",
+  "rename.guide.example": "Misali:",
+  "rename.guide.sample": "§6§lTubalin §r§azinari",
+  "rename.guide.type": "Yadda ake buga §: Windows — riƙe Alt sannan ka buga 0167 akan maɓallin lamba; Mac — Option + 6 (tsarin Turanci); a kan waya, kawai ka taɓa lambar da ke ƙasa yayin gyara take, kuma za ta shiga da kanta",
+  "rename.guide.colors": "Launuka",
+  "rename.guide.bedrock": "Launukan Bedrock",
+  "rename.guide.styles": "Salooji",
+  "rename.guide.not_editing": "Da farko danna kan sunan katin, sannan danna lambar don saka shi",
+  "rename.style.l": "Mai kauri",
+  "rename.style.o": "Karkatacce",
+  "rename.style.n": "Mai layi a ƙasa",
+  "rename.style.m": "Mai layi a tsakiya",
+  "rename.style.k": "Sirri",
+  "rename.style.r": "Sake saiti"
 }

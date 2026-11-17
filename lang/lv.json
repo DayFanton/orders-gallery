@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Nesaglabāt",
   "rename.confirm_back": "Turpināt rediģēšanu",
   "rename.guide.title": "Kā pārdēvēt un noformēt (§ kodi)",
-  "rename.guide.how": "Lai pārdēvētu, noklikšķiniet uz kartītes virsraksta, ievadiet jaunu un noklikšķiniet jebkurā tukšā vietā — tā tiks saglabāta. Krustiņš blakus laukam atgriezīs iepriekšējo nosaukumu bez saglabāšanas. Tukšs lauks atjaunos oriģinālo nosaukumu.",
-  "rename.guide.codes": "Nosaukumā varat izmantot Minecraft formatēšanas kodus: zīmi § un simbolu pēc tās. Krāsas: §0–§9 un §a–§f. Stili: §l — treknraksts, §o — slīpraksts, §n — pasvītrots, §m — pārsvītrots, §k — „šifrēts“, §r — atiestatīt visu. Krāsas kods atiestata iepriekšējos stilus, tāpēc stilus novietojiet pēc krāsas"
+  "rename.guide.how": "Lai pārdēvētu, noklikšķiniet uz kartītes virsraksta, ierakstiet jauno un noklikšķiniet jebkurā tukšā vietā — tā tiks saglabāta. Krustiņš blakus laukam atjaunos iepriekšējo nosaukumu bez saglabāšanas. Tukšs lauks atjaunos sākotnējo nosaukumu",
+  "rename.guide.codes": "Nosaukumā varat izmantot Minecraft formatēšanas kodus: zīmi § un simbolu pēc tās. Krāsas: §0–§9 un §a–§f. Stili: §l — treknraksts, §o — slīpraksts, §n — pasvītrots, §m — pārsvītrots, §k — „šifrēts“, §r — atiestatīt visu. Krāsas kods atiestata iepriekšējos stilus, tāpēc stilus novietojiet pēc krāsas",
+  "rename.guide.example": "Piemērs:",
+  "rename.guide.sample": "§6§lZelta §r§abloks",
+  "rename.guide.type": "Kā uzrakstīt §: Windows — turiet nospiestu Alt un tastatūras ciparu blokā ierakstiet 0167; Mac — Option + 6 (angļu izkārtojums); tālrunī vienkārši pieskarieties vajadzīgajam kodam zemāk, rediģējot nosaukumu, un tas pats ievietosies",
+  "rename.guide.colors": "Krāsas",
+  "rename.guide.bedrock": "Bedrock krāsas",
+  "rename.guide.styles": "Stili",
+  "rename.guide.not_editing": "Vispirms noklikšķiniet uz kartītes nosaukuma, pēc tam uz koda, lai to ievietotu",
+  "rename.style.l": "Treknraksts",
+  "rename.style.o": "Slīpraksts",
+  "rename.style.n": "Pasvītrots",
+  "rename.style.m": "Pārsvītrots",
+  "rename.style.k": "Šifrs",
+  "rename.style.r": "Atiestatīt"
 }

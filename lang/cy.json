@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Peidiwch â chadw",
   "rename.confirm_back": "Parhau i olygu",
   "rename.guide.title": "Sut i ail-enwi a'i steilio (codau §)",
-  "rename.guide.how": "I ail-enwi, cliciwch ar deitl y cerdyn, nodwch un newydd a cliciwch unrhyw le ar le gwag — bydd yn cael ei gadw. Bydd y groes wrth ymyl y maes yn dychwelyd i'r enw blaenorol heb ei gadw. Bydd maes gwag yn adfer yr enw gwreiddiol.",
-  "rename.guide.codes": "Yn y teitl, gallwch ddefnyddio codau fformatio o Minecraft: yr arwydd § a nod ar ôl hynny. Lliwiau: §0–§9 a §a–§f. Arddulliau: §l — trwchus, §o — italig, §n — dan linell, §m — trwodd, §k — \"aneglur\", §r — ailosod popeth. Mae'r cod lliw yn ailosod arddulliau blaenorol, felly rhowch arddulliau ar ôl y lliw"
+  "rename.guide.how": "I ail-enw, cliciwch ar deitl y cerdyn, teipwch yr un newydd a cliciwch unrhyw le gwag — caiff ei gadw. Bydd y groes wrth ymyl y maes yn dychwelyd yr enw blaenorol heb ei gadw. Bydd maes gwag yn dychwelyd yr enw gwreiddiol",
+  "rename.guide.codes": "Yn y teitl, gallwch ddefnyddio codau fformatio o Minecraft: yr arwydd § a nod ar ôl hynny. Lliwiau: §0–§9 a §a–§f. Arddulliau: §l — trwchus, §o — italig, §n — dan linell, §m — trwodd, §k — \"aneglur\", §r — ailosod popeth. Mae'r cod lliw yn ailosod arddulliau blaenorol, felly rhowch arddulliau ar ôl y lliw",
+  "rename.guide.example": "Enghraifft:",
+  "rename.guide.sample": "§6§lBloc §r§aaur",
+  "rename.guide.type": "Sut i deipio §: Windows — dalwch Alt a theipiwch 0167 ar y pad rhifol; Mac — Option + 6 (cynllun Saesneg); ar y ffôn, tapiwch y cod isod wrth olygu'r teitl, a bydd yn mewnosod ei hun",
+  "rename.guide.colors": "Lliwiau",
+  "rename.guide.bedrock": "Lliwiau Bedrock",
+  "rename.guide.styles": "Arddistiau",
+  "rename.guide.not_editing": "Cliciwch ar deitl y cerdyn yn gyntaf, yna ar y cod i'w fewnosod",
+  "rename.style.l": "Bras",
+  "rename.style.o": "Ehedydd",
+  "rename.style.n": "Tanlinellog",
+  "rename.style.m": "Llain-drwodd",
+  "rename.style.k": "Seifir",
+  "rename.style.r": "Ailosod"
 }

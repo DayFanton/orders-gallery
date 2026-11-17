@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ne mentse",
   "rename.confirm_back": "Szerkesztés folytatása",
   "rename.guide.title": "Hogyan kell átnevezni és díszíteni (§ kódok)",
-  "rename.guide.how": "Az átnevezéshez kattintson a kártya címére, írjon be egy újat, és kattintson bárhová az üres helyen – el lesz mentve. A mező melletti kereszt mentés nélkül visszaállítja az előző nevet. Az üres mező visszaállítja az eredeti nevet.",
-  "rename.guide.codes": "A címben használhatod a Minecraft formázási kódjait: a § jelet és az utána lévő karaktert. Színek: §0–§9 és §a–§f. Stílusok: §l — félkövér, §o — dőlt, §n — aláhúzott, §m — áthúzott, §k — „rejtjelezett”, §r — mindent visszaállít. A színkód visszaállítja az előző stílusokat, ezért a stílusokat a szín után helyezd el"
+  "rename.guide.how": "Az átnevezéshez kattintson a kártya címére, írja be az újat, és kattintson bárhová az üres helyre – el lesz mentve. A mező melletti kereszt mentés nélkül visszaállítja az előző nevet. Az üres mező visszaállítja az eredeti nevet",
+  "rename.guide.codes": "A címben használhatod a Minecraft formázási kódjait: a § jelet és az utána lévő karaktert. Színek: §0–§9 és §a–§f. Stílusok: §l — félkövér, §o — dőlt, §n — aláhúzott, §m — áthúzott, §k — „rejtjelezett”, §r — mindent visszaállít. A színkód visszaállítja az előző stílusokat, ezért a stílusokat a szín után helyezd el",
+  "rename.guide.example": "Példa:",
+  "rename.guide.sample": "§6§lArany §r§ablokk",
+  "rename.guide.type": "Hogyan kell beírni a § jelet: Windows — tartsd lenyomva az Alt billentyűt, és írd be a 0167-et a számbillentyűzeten; Mac — Option + 6 (angol elrendezés); telefonon szerkesztés közben csak koppints az alábbi kódra, és magától bekerül",
+  "rename.guide.colors": "Színek",
+  "rename.guide.bedrock": "Bedrock színek",
+  "rename.guide.styles": "Stílusok",
+  "rename.guide.not_editing": "Először kattints a kártya nevére, majd a kódra a beillesztéshez",
+  "rename.style.l": "Félkövér",
+  "rename.style.o": "Dőlt",
+  "rename.style.n": "Aláhúzott",
+  "rename.style.m": "Áthúzott",
+  "rename.style.k": "Titkosírás",
+  "rename.style.r": "Visszaállítás"
 }

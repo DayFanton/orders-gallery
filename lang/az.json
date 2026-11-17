@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Saxlama",
   "rename.confirm_back": "Düzəlişə davam et",
   "rename.guide.title": "Necə yenidən adlandırmaq və rəngləndirmək (§ kodları)",
-  "rename.guide.how": "Yenidən adlandırmaq üçün kartın başlığına klikləyin, yenisini daxil edin və istənilən boş yerə klikləyin — o, yadda saxlanılacaq. Sahənin yanında olan xaç işarəsi yadda saxlamadan əvvəlki adı qaytaracaq. Boş sahə orijinal adı bərpa edəcək.",
-  "rename.guide.codes": "Başlıqda Minecraft formatlaşdırma kodlarından istifadə edə bilərsiniz: § işarəsi və ondan sonrakı simvol. Rənglər: §0–§9 və §a–§f. Üslublar: §l — qalın, §o — kursiv, §n — altı xətt çəkilmiş, §m — üstü xətt çəkilmiş, §k — „şifrələnmiş“, §r — hər şeyi sıfırla. Rəng kodu əvvəlki üslubları sıfırlayır, ona görə də üslubları rəngdən sonra qoyun"
+  "rename.guide.how": "Yenidən adlandırmaq üçün kartın başlığına klikləyin, yenisini yazın və istənilən boş yerə klikləyin — o, yadda saxlanılacaq. Sahənin yanında yerləşən xaç yadda saxlamadan əvvəlki adı qaytaracaq. Boş sahə orijinal adı qaytaracaq",
+  "rename.guide.codes": "Başlıqda Minecraft formatlaşdırma kodlarından istifadə edə bilərsiniz: § işarəsi və ondan sonrakı simvol. Rənglər: §0–§9 və §a–§f. Üslublar: §l — qalın, §o — kursiv, §n — altı xətt çəkilmiş, §m — üstü xətt çəkilmiş, §k — „şifrələnmiş“, §r — hər şeyi sıfırla. Rəng kodu əvvəlki üslubları sıfırlayır, ona görə də üslubları rəngdən sonra qoyun",
+  "rename.guide.example": "Nümunə:",
+  "rename.guide.sample": "§6§lQızıl §r§ablok",
+  "rename.guide.type": "§ işarəsini necə yazmaq olar: Windows — Alt düyməsini basıb saxlayaraq rəqəm klaviaturasında 0167 yığın; Mac — Option + 6 (ingilis dili düzülüşü); telefonda başlığı redaktə edərkən aşağıdakı kodun üzərinə sadəcə toxunun, o özü daxil olacaq",
+  "rename.guide.colors": "Rənglər",
+  "rename.guide.bedrock": "Bedrock rəngləri",
+  "rename.guide.styles": "İslüblər",
+  "rename.guide.not_editing": "Əvvəlcə kartın başlığına, sonra onu daxil etmək üçün koda klikləyin",
+  "rename.style.l": "Qalın",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Alt xəttli",
+  "rename.style.m": "Üstü xəttli",
+  "rename.style.k": "Şifr",
+  "rename.style.r": "Sıfırlama"
 }

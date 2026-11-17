@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Musasunge",
   "rename.confirm_back": "Pitirizani kusintha",
   "rename.guide.title": "Momwe mungasinthire dzina ndikuwoneka bwino (§ codes)",
-  "rename.guide.how": "Kuti musinthe dzina, dinani mutu wa khadi, lowetsani latsopano ndipo dinani paliponse popanda kanthu — lisungika. Mtanda womwe uli pafupi ndi malo amenewa udzabweretsa dzina lakale popanda kusunga. Malo opanda kanthu adzabweretsa dzina loyamba.",
-  "rename.guide.codes": "M'mutu mungagwiritse ntchito ma code a kulembetsa a Minecraft: chizindikiro § ndi chilembo chake pambuyo pake. Mitundu: §0–§9 ndi §a–§f. Mawonedwe: §l — yolimba, §o — yopendekera, §n — yotsika pansi, §m — yodutsa pakati, §k — \"yobisika\", §r — bwezeretsani zonse. Code yamtundu imabwezeretsani mawonedwe akale, chifukwa chake ikani mawonedwe pambuyo pamtundu"
+  "rename.guide.how": "Kuti musinthe dzina, dinani mutu wa khadiyi, lembaninji latsopano ndipo mudine pamalo palionse opanda kanthu — zidzasungidwa. Mtanda uli pafupi ndi malo adzabwezeretsa dzina lakale popanda kusunga. Malo opanda kanthu adzabwezeretsa dzina loyambirira",
+  "rename.guide.codes": "M'mutu mungagwiritse ntchito ma code a kulembetsa a Minecraft: chizindikiro § ndi chilembo chake pambuyo pake. Mitundu: §0–§9 ndi §a–§f. Mawonedwe: §l — yolimba, §o — yopendekera, §n — yotsika pansi, §m — yodutsa pakati, §k — \"yobisika\", §r — bwezeretsani zonse. Code yamtundu imabwezeretsani mawonedwe akale, chifukwa chake ikani mawonedwe pambuyo pamtundu",
+  "rename.guide.example": "Chitsanzo:",
+  "rename.guide.sample": "§6§lBlock §r§a la golide",
+  "rename.guide.type": "Momwe mungolechere §: Windows — gwirani Alt ndipo mulembe 0167 pa keypad ya nambala; Mac — Option + 6 (kapangidwe ka Chingerezi); pa foni, ingodinani code ili pansipa pamene mukusintha mutu wakuti, idzadzilowetsa yokha",
+  "rename.guide.colors": "Mitundu",
+  "rename.guide.bedrock": "Mitundu ya Bedrock",
+  "rename.guide.styles": "Masitayelo",
+  "rename.guide.not_editing": "Choyamba dinani mutu wa khadi, kenako dinani code kuti muyikethe",
+  "rename.style.l": "Wokwanira",
+  "rename.style.o": "KOPYALA -> Kochepera",
+  "rename.style.n": "Wolemba pansi",
+  "rename.style.m": "Wolemba pakati",
+  "rename.style.k": "Chinsinsi",
+  "rename.style.r": "Bwezeretsani"
 }

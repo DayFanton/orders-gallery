@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ma tsajjil",
   "rename.confirm_back": "Kamel et-ta'dil",
   "rename.guide.title": "Kif tbedd el-ism w tezbaqou (§ codes §)",
-  "rename.guide.how": "La-tbedil el-ism, dagh al-عنوان el-card, uktub ism jdid u dagh fi ay makan fari — has-sajjil. El-cross elli gamb el-field haj-rajeu el-ism el-qodim min gher tasjil. El-field el-fari haj-rajeu el-ism el-asli.",
-  "rename.guide.codes": "Fi ism int taqdar tistakhdim rumuz tansiq Minecraft: al-rumuz § wa harf ba'adaha. Al-alwan: §0–§9 wa §a–§f. Al-namat: §l — 'arid, §o — ma'il, §n — tahtahu khat, §m — mashtub, §k — \"mushafif\", §r — i'adat ta'yin al-kul. Ramz al-lawn yu'id ta'yin al-namat al-sabiqa, lidhalik da' al-namat ba'ad al-lawn"
+  "rename.guide.how": "Bash naddal al-ism, idrak 'ala 'unwan al-karta, uktub al-jadid wa idrak fi ay makan fadi — sayathafaz. Al-salib bi-janib al-hagl sayu'id al-ism al-qadim bi-dun hifz. Al-hagl al-fadi sayu'id al-ism al-asli",
+  "rename.guide.codes": "Fi ism int taqdar tistakhdim rumuz tansiq Minecraft: al-rumuz § wa harf ba'adaha. Al-alwan: §0–§9 wa §a–§f. Al-namat: §l — 'arid, §o — ma'il, §n — tahtahu khat, §m — mashtub, §k — \"mushafif\", §r — i'adat ta'yin al-kul. Ramz al-lawn yu'id ta'yin al-namat al-sabiqa, lidhalik da' al-namat ba'ad al-lawn",
+  "rename.guide.example": "Mithal:",
+  "rename.guide.sample": "§6§lMukha'ab §r§aDhahab",
+  "rename.guide.type": "§ kaddab kifa: Windows — ḍaga Alt wa kitib 0167 fi l-gawwal; Mac — Option + 6 (tartib ingilizi); fi l-mobile, daqqas bas l-code lli taht winta tghayir l-unwan, hu byinzil lahalu",
+  "rename.guide.colors": "Lawn",
+  "rename.guide.bedrock": "Lawn Bedrock",
+  "rename.guide.styles": "Aslub",
+  "rename.guide.not_editing": "Iftah unwan al-card awal, ba'ad daqqas al-code lli tadhaltu",
+  "rename.style.l": "Ghaliz",
+  "rename.style.o": "Mail",
+  "rename.style.n": "Tahtu khat",
+  "rename.style.m": "Wasat khat",
+  "rename.style.k": "Shifir",
+  "rename.style.r": "Iadat"
 }

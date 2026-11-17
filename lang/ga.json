@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ná sábháil",
   "rename.confirm_back": "Lean den eagarthóireacht",
   "rename.guide.title": "Conas ainm a athrú agus a mhaisiú (cóid §)",
-  "rename.guide.how": "Chun ainm a athrú, cliceáil ar theideal an chárta, cuir ceann nua isteach agus cliceáil áit ar bith ar spás bán — sábhálfar é. Cuirfidh an cros in aice leis an réimse an t-ainm roimhe seo ar ais gan é a shábháil. Cuirfidh réimse bán an t-ainm bunúsach ar ais.",
-  "rename.guide.codes": "San teideal, is féidir leat cóid formáidithe Minecraft a úsáid: an comhartha § agus carachtar ina dhiaidh. Dathanna: §0–§9 agus §a–§f. Stíleanna: §l — trom, §o — iodálach, §n — faoi líne, §m — línithe tríd, §k — \"doiléir\", §r — athshocrú gach rud. Athshocraíonn an cód datha na stíleanna roimhe seo, mar sin cuir na stíleanna tar éis an datha"
+  "rename.guide.how": "Chun an t-ainm a athrú, cliceáil ar theideal an chárta, clóscríobh an ceann nua agus cliceáil áit ar bith folamh — sábhálfar é. Cuirfidh an cros in aice leis an réimse an t-ainm roimhe seo ar ais gan shábháil. Cuirfidh réimse folamh an t-ainm bunaidh ar ais",
+  "rename.guide.codes": "San teideal, is féidir leat cóid formáidithe Minecraft a úsáid: an comhartha § agus carachtar ina dhiaidh. Dathanna: §0–§9 agus §a–§f. Stíleanna: §l — trom, §o — iodálach, §n — faoi líne, §m — línithe tríd, §k — \"doiléir\", §r — athshocrú gach rud. Athshocraíonn an cód datha na stíleanna roimhe seo, mar sin cuir na stíleanna tar éis an datha",
+  "rename.guide.example": "Sampla:",
+  "rename.guide.sample": "§6§lBloc §r§aór",
+  "rename.guide.type": "Conas § a chlóscríobh: Windows — coinnigh síos Alt agus clóscríobh 0167 ar an gcóimhéadán uimhriúil; Mac — Option + 6 (leagan amach Béarla); ar an nguthán, brúigh an cód thíos agus tú ag cur an teidil in eagar, agus cuirfear isteach é",
+  "rename.guide.colors": "Dathanna",
+  "rename.guide.bedrock": "Dathanna Bedrock",
+  "rename.guide.styles": "Stíleanna",
+  "rename.guide.not_editing": "Cliceáil ar theideal an chárta ar dtús, ansin ar an gcód chun é a chur isteach",
+  "rename.style.l": "Trom",
+  "rename.style.o": "Iodálach",
+  "rename.style.n": "Faoi líne",
+  "rename.style.m": "Trílíneach -> Srianta",
+  "rename.style.k": "Sifir",
+  "rename.style.r": "Athshocraigh"
 }

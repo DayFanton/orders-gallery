@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Kika tumbula te",
   "rename.confirm_back": "Landula kusoba",
   "rename.guide.title": "Mutindu ya kusoba nkumbu mpi kutula minduki (§ bisalu §)",
-  "rename.guide.how": "Sambu na kusoba nkumbu, finika ntu ya kadi, sonika ya mpa mpi finika kisika mpidi ya mpamba — yo ta kumbuka. Nsalufu na lweka ya kisika ta vutula nkumbu ya ntama kukenda kumbuka ve. Kisika ya mpamba ta vutula nkumbu ya ntete.",
-  "rename.guide.codes": "Na ntu ya mambu, nge lenda sadila ba kodi ya kutula ntondolo ya Minecraft: bidimbu § mpe kisoni na nima na yo. Mitinu: §0–§9 mpe §a–§f. Mitindo: §l — ya ngolo, §o — ya kukulumuka, §n — ya kufuluka na nsi, §m — ya kufuluka na kati, §k — \"ya kubumbana\", §r — vutula yonso na ebandilu. Kodi ya mitindo ke vutulaka mitindo ya ntama, yo yina tula mitindo na nima ya kisoni"
+  "rename.guide.how": "Mu kusoba zina, kanda na ntu ya kati, sonika ya mpa mpe kanda na kisika yonso yina kele na ve mambu — yo ta bumba. Nsalu yina kele pene na kisika ta vutula zina ya ntama kukonda kubumba. Kisika ya mpamba ta vutula zina ya luyantiku",
+  "rename.guide.codes": "Na ntu ya mambu, nge lenda sadila ba kodi ya kutula ntondolo ya Minecraft: bidimbu § mpe kisoni na nima na yo. Mitinu: §0–§9 mpe §a–§f. Mitindo: §l — ya ngolo, §o — ya kukulumuka, §n — ya kufuluka na nsi, §m — ya kufuluka na kati, §k — \"ya kubumbana\", §r — vutula yonso na ebandilu. Kodi ya mitindo ke vutulaka mitindo ya ntama, yo yina tula mitindo na nima ya kisoni",
+  "rename.guide.example": "Mbandu:",
+  "rename.guide.sample": "§6§lBlock §r§a ya wolo",
+  "rename.guide.type": "Mutindu ya sonika §: Windows — simba Alt mpe sonika 0167 na keypad ya nimero; Mac — Option + 6 (lolenge ya Kingelesi); na telefone, simba kaka kodi ya nsi ntangu nge ke sonika zina, yo ta kota yandi mosi",
+  "rename.guide.colors": "Bula",
+  "rename.guide.bedrock": "Bula ya Bedrock",
+  "rename.guide.styles": "Mitindu",
+  "rename.guide.not_editing": "Ntete kanda na zina ya karte, msimu kanda na kodi mpona kotisa yo",
+  "rename.style.l": "Nene",
+  "rename.style.o": "Miringu",
+  "rename.style.n": "Kusonama na nsi",
+  "rename.style.m": "Kusonama na katikati",
+  "rename.style.k": "Nsundula",
+  "rename.style.r": "Vutula"
 }

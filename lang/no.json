@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ikke lagre",
   "rename.confirm_back": "Fortsett redigering",
   "rename.guide.title": "Hvordan gi nytt navn og style (§-koder)",
-  "rename.guide.how": "For å gi nytt navn, klikk på korttittelen, skriv inn et nytt og klikk hvor som helst på et tomt felt — det vil bli lagret. Krysser ved siden av feltet vil tilbakestille til det forrige navnet uten å lagre. Et tomt felt vil gjenopprette det opprinnelige navnet.",
-  "rename.guide.codes": "I tittelen kan du bruke formateringskoder fra Minecraft: tegnet § og et tegn etter det. Farger: §0–§9 og §a–§f. Stiler: §l — fet, §o — kursiv, §n — understreket, §m — gjennomstreket, §k — «forvirret», §r — tilbakestill alt. Fargekoden tilbakestiller tidligere stiler, så plasser stiler etter fargen"
+  "rename.guide.how": "For å endre navn, klikk på korttittelen, skrive inn den nye og klikk hvor som helst på et tomt sted – den lagres. Kryssmerket ved siden av feltet vil tilbakestille det forrige navnet uten å lagre. Et tomt felt vil tilbakestille det opprinnelige navnet",
+  "rename.guide.codes": "I tittelen kan du bruke formateringskoder fra Minecraft: tegnet § og et tegn etter det. Farger: §0–§9 og §a–§f. Stiler: §l — fet, §o — kursiv, §n — understreket, §m — gjennomstreket, §k — «forvirret», §r — tilbakestill alt. Fargekoden tilbakestiller tidligere stiler, så plasser stiler etter fargen",
+  "rename.guide.example": "Eksempel:",
+  "rename.guide.sample": "§6§lGull §r§ablokk",
+  "rename.guide.type": "Slik skriver du §: Windows — hold inne Alt og skriv 0167 på det numeriske tastaturet; Mac — Option + 6 (engelsk oppsett); på telefonen trykker du bare på koden nedenfor mens du redigerer tittel, så settes den inn automatisk",
+  "rename.guide.colors": "Farger",
+  "rename.guide.bedrock": "Bedrock-farger",
+  "rename.guide.styles": "Stiler",
+  "rename.guide.not_editing": "Klikk først på korttittelen, deretter på koden for å sette den inn",
+  "rename.style.l": "Fet",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Understreket",
+  "rename.style.m": "Gjennomstreket",
+  "rename.style.k": "Chiffer",
+  "rename.style.r": "Nullstill"
 }

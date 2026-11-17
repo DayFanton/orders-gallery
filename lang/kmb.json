@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ndala kukatela",
   "rename.confirm_back": "Kuata ko okubandulula",
   "rename.guide.title": "Mukua okutula dijina ni kubandulula (§ mikango §)",
-  "rename.guide.how": "Okuandulula dijina, kanda ku mutué uadi dijina, soneka diowapela kanda ku madiadia moso ma kaxi — diakutela. Kanda diakatalama ku madiadia diakutela dijina dia kuala mena kukatela. Madiadia ma kaxi diakutela dijina diandi dianga.",
-  "rename.guide.codes": "Mu ntu ya milongi, nenda sadila macodi ma kufomata ma Minecraft: kidimbu § ni kidimbu kia nima yandi. Mibala: §0–§9 ni §a–§f. Mitindo: §l — ya nene, §o — ya kukulumuka, §n — ya kusonama kunsi, §m — ya kusonama mukati, §k — \"ya kubumbama\", §r — vutula yonso. Kodi ya mibala ivutulaka mitindo ya ntama, yandumba mitindo kunima ya mibala"
+  "rename.guide.how": "Ku sobela jina, kanda ku mutwe wa kaadi, soneka jina jipya mpe kanda ku mufulu woso ulemba monana — ji ka bumba. Umpanzi we mukubu u ka vutula jina ja kala ka ji bumba. Mufulu ulemba monana u ka vutula jina ja ku teta",
+  "rename.guide.codes": "Mu ntu ya milongi, nenda sadila macodi ma kufomata ma Minecraft: kidimbu § ni kidimbu kia nima yandi. Mibala: §0–§9 ni §a–§f. Mitindo: §l — ya nene, §o — ya kukulumuka, §n — ya kusonama kunsi, §m — ya kusonama mukati, §k — \"ya kubumbama\", §r — vutula yonso. Kodi ya mibala ivutulaka mitindo ya ntama, yandumba mitindo kunima ya mibala",
+  "rename.guide.example": "Ntendula:",
+  "rename.guide.sample": "§6§lBlock §r§a ya wolo",
+  "rename.guide.type": "Kwandika §: Windows — kwata Alt wivwila 0167 mu kitadi kya nimero; Mac — Option + 6 (mukanda wa Kingelesi); mu telefone, kwata lika kode ya mwene wosi wene wonga, ija kuzela yaye",
+  "rename.guide.colors": "Makolo",
+  "rename.guide.bedrock": "Makolo ma Bedrock",
+  "rename.guide.styles": "Makolo",
+  "rename.guide.not_editing": "Teta mu njila ya dikatilu, nshiki koka mu kode oco uja kuzela",
+  "rename.style.l": "Ocile",
+  "rename.style.o": "Koka",
+  "rename.style.n": "Ocile pamosi",
+  "rename.style.m": "Ocile vohi",
+  "rename.style.k": "Ocilapa",
+  "rename.style.r": "Ku vingula"
 }

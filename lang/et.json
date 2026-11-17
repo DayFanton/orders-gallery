@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ära salvesta",
   "rename.confirm_back": "Jätka muutmist",
   "rename.guide.title": "Kuidas ümber nimetada ja kujundada (§ koodid)",
-  "rename.guide.how": "Ümbernimetamiseks klõpsake kaardi pealkirjal, sisestage uus ja klõpsake suvalises tühjas kohas — see salvestatakse. Välja kõrval olev rist taastab eelmise nime ilma salvestamiseta. Tühi väli taastab algse nime.",
-  "rename.guide.codes": "Pealkirjas saate kasutada Minecrafti vorminduskoode: märki § ja sellele järgnevat sümbolit. Värvid: §0–§9 ja §a–§f. Stiilid: §l — paks, §o — kaldkiri, §n — allajoonitud, §m — läbikriipsutatud, §k — „šifreeritud“, §r — lähtesta kõik. Värvikood lähtestab varasemad stiilid, seega pange stiilid pärast värvi"
+  "rename.guide.how": "Ümbernimetamiseks klõpsake kaardi pealkirjal, sisestage uus ja klõpsake ükskõik millisel tühjal kohal – see salvestatakse. Välja kõrval olev rist taastab eelmise nime ilma salvestamata. Tühi väli taastab algse nime",
+  "rename.guide.codes": "Pealkirjas saate kasutada Minecrafti vorminduskoode: märki § ja sellele järgnevat sümbolit. Värvid: §0–§9 ja §a–§f. Stiilid: §l — paks, §o — kaldkiri, §n — allajoonitud, §m — läbikriipsutatud, §k — „šifreeritud“, §r — lähtesta kõik. Värvikood lähtestab varasemad stiilid, seega pange stiilid pärast värvi",
+  "rename.guide.example": "Näide:",
+  "rename.guide.sample": "§6§lKuldne §r§aplok",
+  "rename.guide.type": "Kuidas kirjutada §: Windows — hoidke all Alt ja tippige numbrilaualt 0167; Mac — Option + 6 (inglise paigutus); telefonis puudutage pealkirja muutes lihtsalt allolevat koodi ja see sisestatakse automaatselt",
+  "rename.guide.colors": "Värvid",
+  "rename.guide.bedrock": "Bedrocki värvid",
+  "rename.guide.styles": "Stiilid",
+  "rename.guide.not_editing": "Klõpsake esmalt kaardi pealkirjal ja seejärel koodil selle sisestamiseks",
+  "rename.style.l": "Paks",
+  "rename.style.o": "Kursiiv",
+  "rename.style.n": "Allajoonitud",
+  "rename.style.m": "Läbijoonitud",
+  "rename.style.k": "Šifr",
+  "rename.style.r": "Lähtesta"
 }

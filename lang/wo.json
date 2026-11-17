@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Bul aar",
   "rename.confirm_back": "Wooyal coppite bi",
   "rename.guide.title": "Naka nga faytu tur wi te def ci bànqas (§ codes §)",
-  "rename.guide.how": "Ngir coppite tur wi, bësal ci turu kart bi, bindal benn bu bees bësal ci benn barab bu amul dara — dina am njariñ. Xaali bi nekk ci wetu barab bi dina dellusi ci tur wi wessu te aaroo ko. Barab bu amul dara dina dellusi ci tur wi njëkk.",
-  "rename.guide.codes": "Ci tiktal bi, mën nga jëfandikoo kodi yu sotti yu Minecraft: maandax § ak benn bokk ca ginnaawam. Ronkaay yi: §0–§9 ak §a–§f. Melosuuf yi: §l — mën, §o — wëñ, §n — am rënq ci suuf, §m — am rënq ci digg bi, §k — \"bëtu\", §r — dellu ci lépp. Kodi ronkaay bi dafa dellu ci melosuuf yu yàlla yi, kon tekkil melosuuf yi ci ginnaaw ronkaay bi"
+  "rename.guide.how": "Ngir soppi tur wi, bëcël ci turu kaat bi, bind beneen te bëcël ci beneen barab bu amul dara — dina delu. Paas bi nekk ci wet barab bi dina deltu tur wi ca ginnaaw te du defar. Barab bu amul dara dina deltu tur wi ca sosoo",
+  "rename.guide.codes": "Ci tiktal bi, mën nga jëfandikoo kodi yu sotti yu Minecraft: maandax § ak benn bokk ca ginnaawam. Ronkaay yi: §0–§9 ak §a–§f. Melosuuf yi: §l — mën, §o — wëñ, §n — am rënq ci suuf, §m — am rënq ci digg bi, §k — \"bëtu\", §r — dellu ci lépp. Kodi ronkaay bi dafa dellu ci melosuuf yu yàlla yi, kon tekkil melosuuf yi ci ginnaaw ronkaay bi",
+  "rename.guide.example": "Misal:",
+  "rename.guide.sample": "§6§lBala §r§a wurus",
+  "rename.guide.type": "Naka nga fay §: Windows — tëkk Alt te bind 0167 ci kay bu nit ñi; Mac — Option + 6 (fariŋ bu Tubab); ci telefon bi, boy jël li nga bëgg ci ron, dina dugg ci boppam",
+  "rename.guide.colors": "Ron",
+  "rename.guide.bedrock": "Ron Bedrock",
+  "rename.guide.styles": "Melokaan",
+  "rename.guide.not_editing": "Jëkkël ci turu kaat bi, ba pare nga bëgg code bi ngir dugal ko",
+  "rename.style.l": "Buur",
+  "rename.style.o": "Dëng",
+  "rename.style.n": "Ñaw suuf",
+  "rename.style.m": "Ñaw ci digg bi",
+  "rename.style.k": "Mbuum",
+  "rename.style.r": "Dellusi"
 }

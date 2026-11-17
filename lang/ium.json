@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Norh mbuov hnyangv",
   "rename.confirm_back": "Mbuov zoux hnyangv",
   "rename.guide.title": "Hnyangv hnoqv zoux niouv mbuov mingv (§ codes §)",
-  "rename.guide.how": "Hnyangv hnoqv zoux niouv mbuov, hnyangv hnoqv zoux niouv mbuov, hnyangv hnoqv zoux niouv mbuov — hnyangv mbuov. Hnyangv hnoqv zoux niouv mbuov hnyangv hnoqv. Hnyangv hnoqv zoux niouv mbuov hnyangv hnoqv zoux.",
-  "rename.guide.codes": "Nyung yiet nqong mbuo Minecraft mbunh yiet ngong: § kluom hnyang yiet ngong. Mbunh: §0–§9 ngh §a–§f. Hnyang: §l — hnyang nqong, §o — hnyang zang, §n — hnyang long zang, §m — hnyang long tɔt, §k — \"nyien\", §r — yiet mbuo. Mbunh kodi hnyang mbuo lɔ, kung nyang yiet ngong mbunh kodi mbuo"
+  "rename.guide.how": "To renem, klik long kat titol, taip niu wan mo klik long eni empti ples — i save savim. Kros we stap klosap long fiël i save tekem bak old nem i no savim. Empti fiël i save tekem bak orijenel nem",
+  "rename.guide.codes": "Nyung yiet nqong mbuo Minecraft mbunh yiet ngong: § kluom hnyang yiet ngong. Mbunh: §0–§9 ngh §a–§f. Hnyang: §l — hnyang nqong, §o — hnyang zang, §n — hnyang long zang, §m — hnyang long tɔt, §k — \"nyien\", §r — yiet mbuo. Mbunh kodi hnyang mbuo lɔ, kung nyang yiet ngong mbunh kodi mbuo",
+  "rename.guide.example": "Hnyang:",
+  "rename.guide.sample": "§6§lBlock §r§a gold",
+  "rename.guide.type": "Ei-nyih §: Windows — zong Alt mien nyih 0167 mien kiyibodi nɔmbu; Mac — Option + 6 (Inglaix daiv maic); tefon, zong zunghvunh kodi aen mien fai nqa, yuengh mien dai zung",
+  "rename.guide.colors": "Mien",
+  "rename.guide.bedrock": "Bedrock Mien",
+  "rename.guide.styles": "Mien",
+  "rename.guide.not_editing": "Zong nyih kadi mien fai, zong zunghvunh kodi aen mien fai nqa",
+  "rename.style.l": "Nene",
+  "rename.style.o": "Koko",
+  "rename.style.n": "Akwete pasi",
+  "rename.style.m": "Akwete pakati",
+  "rename.style.k": "Chisamba",
+  "rename.style.r": "Akunda"
 }

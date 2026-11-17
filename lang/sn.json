@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Usachengeta",
   "rename.confirm_back": "Ramba uchichinja",
   "rename.guide.title": "Maitiro ekuchinja zita uye kurishongedza (§ makodhi)",
-  "rename.guide.how": "Kuti uchinje zita, tinya pane musoro wekadhi, isa idzva wozo tinya chero panzvimbo isina chinhu — richachengetwa. Muchinjikwa uri pedyo nenzvimbo iyi uchadzorera zita rekare usina kuchengeta. Nzvimbo isina chinhu ichadzorera zita rekutanga.",
-  "rename.guide.codes": "Mumusoro unogona kushandisa makodhi ekufomata eMinecraft: chiratidzo § nechinyorwa chiri pashure pacho. Mavara: §0–§9 ne §a–§f. Masitaera: §l — akakora, §o — akakombama, §n — ane mutsetse pasi, §m — ane mutsetse pakati, §k — \"akavanzika\", §r — dzosera zvese pakutanga. Khodhi yemavara inodzosera masitaera ekare, saka isa masitaera pashure pemavara"
+  "rename.guide.how": "Kuti uchinje zita, tinya pane musoro wekadhi, nyora idzva wobva watinya chero panzvimbo isina chinhu — ichachengetwa. Muchinjikwa uri pedyo nenzvimbo uchadzorera zita rekare pasina kuchengeta. Nzvimbo isina chinhu ichadzorera zita rekutanga",
+  "rename.guide.codes": "Mumusoro unogona kushandisa makodhi ekufomata eMinecraft: chiratidzo § nechinyorwa chiri pashure pacho. Mavara: §0–§9 ne §a–§f. Masitaera: §l — akakora, §o — akakombama, §n — ane mutsetse pasi, §m — ane mutsetse pakati, §k — \"akavanzika\", §r — dzosera zvese pakutanga. Khodhi yemavara inodzosera masitaera ekare, saka isa masitaera pashure pemavara",
+  "rename.guide.example": "Muenzaniso:",
+  "rename.guide.sample": "§6§lBlock §r§arendarama",
+  "rename.guide.type": "Maitiro ekunyora §: Windows — bata Alt wobva wanyora 0167 pane keypad yenhamba; Mac — Option + 6 (marongero echiRungu); pafoni, ingo bata kodhi iri pasi apa uchiedza kugadzirisa musoro wenyaya, ichazvipinza yega",
+  "rename.guide.colors": "Mavara",
+  "rename.guide.bedrock": "Mavara eBedrock",
+  "rename.guide.styles": "Masitaera",
+  "rename.guide.not_editing": "Tanga nekudzvanya musoro wekadhi, wobva wadzvanya kodhi yacho kuti uise mukati",
+  "rename.style.l": "Ukobvu",
+  "rename.style.o": "Rereka",
+  "rename.style.n": "Rakanyigwa pasi",
+  "rename.style.m": "Rakanyigwa pakati",
+  "rename.style.k": "Chivande",
+  "rename.style.r": "Nyora patsva"
 }

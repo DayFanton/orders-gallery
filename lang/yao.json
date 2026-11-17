@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Mkasungila",
   "rename.confirm_back": "Jitikele kusuma",
   "rename.guide.title": "Mwasichile kwayiche kucheleta zina lyawo (§ codes §)",
-  "rename.guide.how": "Kuti mwasindile zina, galamani pa zina lya card, lembani lyalisasu ni kugalamani pa malo galilichabe — lisungike. Chiphale chili pafupi ni malo aga tichilolele zina lyakusa ngasimnile. Malo gachabe tichilolele zina lyandanda.",
-  "rename.guide.codes": "Pa mutwe wenu mpaka mkamseka makodi ga kamanyilo ga Minecraft: chimanyilo § ni lilemba lilikuyako. Mitundu: §0–§9 ni §a–§f. Mitela: §l — jikulile, §o — jakupinda, §n — jakulembedwa pasi, §m — jakulembedwa pakati, §k — \"jakuisiwa\", §r — wubula syosope. Kodi ja mtundu jikusawubula mitela jandanda, ntiŵika mitela pakati pa mtundu"
+  "rename.guide.how": "Kuti msimbe lina, tinya pa mutu wa kadi, lemba lina lyeleko ni tinya pa malo palilose — lichembwe. Mtanda uli pafupi ni malo uciwujisya lina lyeleko kwendeleka. Malo galilose uciwujisya lina lyandanda",
+  "rename.guide.codes": "Pa mutwe wenu mpaka mkamseka makodi ga kamanyilo ga Minecraft: chimanyilo § ni lilemba lilikuyako. Mitundu: §0–§9 ni §a–§f. Mitela: §l — jikulile, §o — jakupinda, §n — jakulembedwa pasi, §m — jakulembedwa pakati, §k — \"jakuisiwa\", §r — wubula syosope. Kodi ja mtundu jikusawubula mitela jandanda, ntiŵika mitela pakati pa mtundu",
+  "rename.guide.example": "Chakulolela:",
+  "rename.guide.sample": "§6§lBlock §r§a sya golide",
+  "rename.guide.type": "M'mweleŵa §: Windows — kwata Alt ni muleŵa 0167 pa kiyibodi ja nambala; Mac — Option + 6 (maandiko ga Chingelezi); pa foni, katani code ja pasi apa muli mkulemba mutwe, cijinjile cekwekwe",
+  "rename.guide.colors": "Mitundu",
+  "rename.guide.bedrock": "Mitundu ya Bedrock",
+  "rename.guide.styles": "Masitayelo",
+  "rename.guide.not_editing": "Nkupelele ni mutwe wa kadhi, nkupelele ni code kuti mijinjile",
+  "rename.style.l": "Nene",
+  "rename.style.o": "Koko",
+  "rename.style.n": "Akwete pasi",
+  "rename.style.m": "Akwete pakati",
+  "rename.style.k": "Chisamba",
+  "rename.style.r": "Akunda"
 }

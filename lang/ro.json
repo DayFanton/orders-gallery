@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Nu salvați",
   "rename.confirm_back": "Continuați editarea",
   "rename.guide.title": "Cum se redenumește și se personalizează cu culori (coduri §)",
-  "rename.guide.how": "Pentru a redenumi, faceți clic pe titlul cardului, introduceți unul nou și faceți clic oriunde în spațiul gol — acesta va fi salvat. Crucea de lângă câmp va reveni la numele anterior fără a salva. Un câmp gol va restaura numele original.",
-  "rename.guide.codes": "În titlu puteți folosi coduri de formatare din Minecraft: semnul § și un caracter după acesta. Culori: §0–§9 și §a–§f. Stiluri: §l — aldin, §o — cursiv, §n — subrayat, §m — tăiat, §k — „cifrat”, §r — resetează tot. Codul de culoare resetează stilurile anterioare, așa că plasați stilurile după culoare"
+  "rename.guide.how": "Pentru a redenumi, faceți clic pe titlul cardului, tastați-l pe cel nou și faceți clic oriunde în gol — va fi salvat. Crucea de lângă câmp va reveni la numele anterior fără a salva. Un câmp gol va reveni la numele inițial",
+  "rename.guide.codes": "În titlu puteți folosi coduri de formatare din Minecraft: semnul § și un caracter după acesta. Culori: §0–§9 și §a–§f. Stiluri: §l — aldin, §o — cursiv, §n — subrayat, §m — tăiat, §k — „cifrat”, §r — resetează tot. Codul de culoare resetează stilurile anterioare, așa că plasați stilurile după culoare",
+  "rename.guide.example": "Exemplu:",
+  "rename.guide.sample": "§6§lBloc §r§ade aur",
+  "rename.guide.type": "Cum se tastează §: Windows — țineți apăsat Alt și tastați 0167 pe tastatura numerică; Mac — Option + 6 (dispunerea în limba engleză); pe telefon, pur și simplu apăsați codul dorit de mai jos în timp ce editați titlul, și se va insera singur",
+  "rename.guide.colors": "Culori",
+  "rename.guide.bedrock": "Culori Bedrock",
+  "rename.guide.styles": "Stiluri",
+  "rename.guide.not_editing": "Mai întâi faceți clic pe titlul cardului, apoi pe cod pentru a-l insera",
+  "rename.style.l": "Aldin",
+  "rename.style.o": "Cursiv",
+  "rename.style.n": "Subliniat",
+  "rename.style.m": "Tăiat",
+  "rename.style.k": "Cifru",
+  "rename.style.r": "Resetare"
 }

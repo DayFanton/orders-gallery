@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Jhâ' èsimpen",
   "rename.confirm_back": "Terrosaghi ny alow",
   "rename.guide.title": "Cara ngobah nyama ban aghâbây bhâghus (kode §)",
-  "rename.guide.how": "Ka'angghuy ngobah nyama, klik judhul kartla, maso'aghi sè anyar bân klik è kennengan sè kosong — bhkal èsimpen. Tandhâ silang è seddhi'na kolom bhkal abâli' nyama sè sabellâ ta' èsimpen. Kolom sè kosong bhkal abâli' nyama aslina.",
-  "rename.guide.codes": "E ḍâlem judul, sampeyan bisa ngangghuy kode format Minecraft: tanda § bân aksara samarèna. Warna: §0–§9 bân §a–§f. Gaya: §l — kandel, §o — miring, §n — garis bâbâ, §m — ècoret, §k — \"samar\", §r — reset sadhâjâ. Kode warna ngèbâsaghi gaya sabelluna, daddi pasang gaya samarèna warna"
+  "rename.guide.how": "Kanggo ngowahi jeneng, klik judhul kertu, ketik sing anyar ban klik ing endi wae panggonan kosong — bakal disimpen. Tandha silang ing sanding kolom bakal mbalekake jeneng sadurunge tanpa nyimpen. Kolom kosong bakal mbalekake jeneng asli",
+  "rename.guide.codes": "E ḍâlem judul, sampeyan bisa ngangghuy kode format Minecraft: tanda § bân aksara samarèna. Warna: §0–§9 bân §a–§f. Gaya: §l — kandel, §o — miring, §n — garis bâbâ, §m — ècoret, §k — \"samar\", §r — reset sadhâjâ. Kode warna ngèbâsaghi gaya sabelluna, daddi pasang gaya samarèna warna",
+  "rename.guide.example": "Conto:",
+  "rename.guide.sample": "§6§lBlok §r§aemaz",
+  "rename.guide.type": "Cara ngetik §: Windows — tahan Alt torus ketik 0167 èng keypad numerik; Mac — Option + 6 (tata letak Inggris); èng HP, cokop ketok kode èng bâbâ nalèka ngobâ judhul, tor kode rowa bhkal masok dhibi",
+  "rename.guide.colors": "Warna",
+  "rename.guide.bedrock": "Warna Bedrock",
+  "rename.guide.styles": "Gaya",
+  "rename.guide.not_editing": "Molana ketok judhul kertu, saterrossa ketok kode ka'angguy masokaghi",
+  "rename.style.l": "Kandel",
+  "rename.style.o": "Miring",
+  "rename.style.n": "Garis bab",
+  "rename.style.m": "Dicoret",
+  "rename.style.k": "Sandi",
+  "rename.style.r": "Setel ulang"
 }

@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ne shrani",
   "rename.confirm_back": "Nadaljuj urejanje",
   "rename.guide.title": "Kako preimenovati in okrasiti (§ kode)",
-  "rename.guide.how": "Za preimenovanje kliknite naslov kartice, vnesite novega in kliknite kjer koli na prazno mesto — shranilo se bo. Križec poleg polja vrne prejšnje ime brez shranjenja. Prazno polje obnovi izvirno ime.",
-  "rename.guide.codes": "V naslovu lahko uporabljate kode za oblikovanje iz Minecrafta: znak § in simbol za njim. Barve: §0–§9 in §a–§f. Slogi: §l — krepko, §o — ležeče, §n — podčrtano, §m — prečrtano, §k — „šifrirano“, §r — ponastavi vse. Koda barve ponastavi prejšnje sloge, zato sloge postavite za barvo"
+  "rename.guide.how": "Za preimenovanje kliknite naslov kartice, vpišite novo in kliknite kamor koli v prazno mesto – shranilo se bo. Križec poleg polja bo vrnil prejšnje ime brez shranjevanja. Prazno polje bo vrnilo izvirno ime",
+  "rename.guide.codes": "V naslovu lahko uporabljate kode za oblikovanje iz Minecrafta: znak § in simbol za njim. Barve: §0–§9 in §a–§f. Slogi: §l — krepko, §o — ležeče, §n — podčrtano, §m — prečrtano, §k — „šifrirano“, §r — ponastavi vse. Koda barve ponastavi prejšnje sloge, zato sloge postavite za barvo",
+  "rename.guide.example": "Primer:",
+  "rename.guide.sample": "§6§lZlati §r§ablok",
+  "rename.guide.type": "Kako vnesti §: Windows — pridržite Alt in na številčni tipkovnici vnesite 0167; Mac — Option + 6 (angleška postavitev); na telefonu med urejanjem naslova samo tapnite spodnjo kodo in se bo sama vstavila",
+  "rename.guide.colors": "Barve",
+  "rename.guide.bedrock": "Barve Bedrock",
+  "rename.guide.styles": "Slogi",
+  "rename.guide.not_editing": "najprej kliknite naslov kartice, nato kodo, da jo vstavite",
+  "rename.style.l": "Krepko",
+  "rename.style.o": "Ležeče",
+  "rename.style.n": "Podčrtano",
+  "rename.style.m": "Prečrtano",
+  "rename.style.k": "Šifra",
+  "rename.style.r": "Ponastavi"
 }

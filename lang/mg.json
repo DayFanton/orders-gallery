@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Aza tehirizina",
   "rename.confirm_back": "Tohizo ny fanovana",
   "rename.guide.title": "Ahoana no fanovana anarana sy fanaingoana (§ kaody §)",
-  "rename.guide.how": "Raha hanova anarana, tsindrio ny lohatenin'ny karatra, soraty ny vaovao ary tsindrio amin'ny toerana banga rehetra — ho voatahiry izany. Ny lakroa eo akaikin'ny saha dia hamerina ilay anarana teo aloha tsy mitahiry azy. Ny saha banga dia hamerina ilay anarana tany am-boalohany.",
-  "rename.guide.codes": "Amin'ny lohateny dia azonao ampiasaina ireo kaody fandrafetana avy amin'ny Minecraft: ny famantarana § sy ny litera manaraka azy. Loko: §0–§9 ary §a–§f. Fomba: §l — matevina, §o — mitongotra, §n — misy tsipika ambany, §m — misy tsipika afovoany, §k — \"miafina\", §r — avereno ny zava-drehetra. Ny kaody loko dia mamerina ny fomba taloha, ka apetraho aorian'ny loko ny fomba"
+  "rename.guide.how": "Raha hanova anarana, tsindrio ny lohatenin'ny karatra, soraty ny vaovao ary tsindrio amin'ny toerana banga rehetra — ho voatahiry izany. Ny hazo fijaliana eo akaikin'ny saha dia hamerina ny anarana teo aloha tsy mitahiry. Ny saha banga dia hamerina ny anarana tany am-boalohany",
+  "rename.guide.codes": "Amin'ny lohateny dia azonao ampiasaina ireo kaody fandrafetana avy amin'ny Minecraft: ny famantarana § sy ny litera manaraka azy. Loko: §0–§9 ary §a–§f. Fomba: §l — matevina, §o — mitongotra, §n — misy tsipika ambany, §m — misy tsipika afovoany, §k — \"miafina\", §r — avereno ny zava-drehetra. Ny kaody loko dia mamerina ny fomba taloha, ka apetraho aorian'ny loko ny fomba",
+  "rename.guide.example": "Ohatra:",
+  "rename.guide.sample": "§6§lBlôka §r§avolamena",
+  "rename.guide.type": "Ahoana ny fanoratana §: Windows — tanoho ny Alt ary soraty ny 0167 eo amin'ny fitendry nomerao; Mac — Option + 6 (endrika anglisy); amin'ny telefaona, tsindrio fotsiny ilay kaody eo ambany rehefa manova ny lohateny izy io dia hiditra ho azy",
+  "rename.guide.colors": "Loko",
+  "rename.guide.bedrock": "Loko Bedrock",
+  "rename.guide.styles": "Fomba",
+  "rename.guide.not_editing": "Tsindrio aloha ny lohatenin'ny karatra, dia tsindrio ny kaody mba hampidirana azy",
+  "rename.style.l": "Matevina",
+  "rename.style.o": "Mitaratra",
+  "rename.style.n": "Voasoritra ambany",
+  "rename.style.m": "Voasoritra eo afovoany",
+  "rename.style.k": "Fehetra",
+  "rename.style.r": "Averina"
 }

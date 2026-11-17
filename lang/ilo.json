@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Saan a i-save",
   "rename.confirm_back": "Ituloy ti ag-edit",
   "rename.guide.title": "Kasano ti agbaliw iti nagan ken agpinta (§ code)",
-  "rename.guide.how": "Tapno palamiaten ti nagan, i-klik ti titulo ti kard, iyis-is a baro ken i-klik ti aniaman a awan nagan — ma-save daytoy. Ti krus iti abay ti field ket isublina ti dati a nagan nga awan a-save-na. Ti awan nagan a field ket isublina ti nagtaudan.",
-  "rename.guide.codes": "Iti titulo, mabalinmo nga úsaren Dagiti code ti panag-format ti Minecraft: ti pagdakamat § ken maysa a karakter iti likudna. Dagiti Kulay: §0–§9 ken §a–§f. Dagiti Estilo: §l — napuskol, §o — nakairing, §n — addaanulay iti baba, §m — addaanulay iti tengnga, §k — \"makarلطib\", §r — i-reset amin. Ti code ti kulay ket i-resetna dagiti dati nga estilo, isu nga ipaspektum dagiti estilo kalpasan ti kulay"
+  "rename.guide.how": "Tapno panaganan manen, i-click ti titulo ti kard, i-type ti baro ken i-click ania man a blanko a lugar — maisagana daytoy. Ti krus iti abay ti field ket isublina ti dati a nagan nga awan panag-save. Ti blanko a field ket isublina ti nagan a nagtaudan",
+  "rename.guide.codes": "Iti titulo, mabalinmo nga úsaren Dagiti code ti panag-format ti Minecraft: ti pagdakamat § ken maysa a karakter iti likudna. Dagiti Kulay: §0–§9 ken §a–§f. Dagiti Estilo: §l — napuskol, §o — nakairing, §n — addaanulay iti baba, §m — addaanulay iti tengnga, §k — \"makarلطib\", §r — i-reset amin. Ti code ti kulay ket i-resetna dagiti dati nga estilo, isu nga ipaspektum dagiti estilo kalpasan ti kulay",
+  "rename.guide.example": "Pagarup:",
+  "rename.guide.sample": "§6§lBalitok §r§ablock",
+  "rename.guide.type": "Panangserrek iti §: Windows — idulin ti Alt ket i-type ti 0167 iti numeric keypad; Mac — Option + 6 (layout ti Ingles); iti telepono, i-tap laeng ti code iti baba bayat nga urnosen ti titulo, ket bukod a mairaman",
+  "rename.guide.colors": "Dagiti kulay",
+  "rename.guide.bedrock": "Dagiti kulay ti Bedrock",
+  "rename.guide.styles": "Dagiti estilo",
+  "rename.guide.not_editing": "Umuna a i-click ti titulo ti kard, ket kalpasanna ti code tapno mairaman",
+  "rename.style.l": "Makapal",
+  "rename.style.o": "Nakairing",
+  "rename.style.n": "Nasirkan",
+  "rename.style.m": "Naikkaten -> Nayudian",
+  "rename.style.k": "Sifir",
+  "rename.style.r": "I-reset"
 }

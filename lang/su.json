@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Teu disimpen",
   "rename.confirm_back": "Teraskeun ngédit",
   "rename.guide.title": "Kumaha cara ngarobih nami tur ngahias (kode §)",
-  "rename.guide.how": "Pikeun ngarobih nami, klik judul kartu, ketik nami anyar teras klik di mana waé tempat kosong — bakal disimpen. Tanda silang gigireun kolom bakal mulihkeun nami sateuacanna tanpa disimpen. Kolom kosong bakal mulihkeun nami asal.",
-  "rename.guide.codes": "Dina judul, anjeun tiasa nganggo kode pormat Minecraft: tanda § sareng aksara saatosna. Warna: §0–§9 sareng §a–§f. Gaya: §l — kandel, §o — miring, §n — garis handap, §m — dicoret, §k — \"samar\", §r — setel ulang sadayana. Kode warna nyetel ulang gaya sateuacanna, janten pasang gaya saatos warna"
+  "rename.guide.how": "Pikeun ngarobah nami, klik dina judul kartu, ketik nu anyar tur klik di mana wae tempat kosong — bakal disimpen. Tanda silang gigireun kolom bakal mulangkeun nami sateuacanna tanpa disimpen. Kolom kosong bakal mulangkeun nami asal",
+  "rename.guide.codes": "Dina judul, anjeun tiasa nganggo kode pormat Minecraft: tanda § sareng aksara saatosna. Warna: §0–§9 sareng §a–§f. Gaya: §l — kandel, §o — miring, §n — garis handap, §m — dicoret, §k — \"samar\", §r — setel ulang sadayana. Kode warna nyetel ulang gaya sateuacanna, janten pasang gaya saatos warna",
+  "rename.guide.example": "Conto:",
+  "rename.guide.sample": "§6§lBlok §r§aemas",
+  "rename.guide.type": "Cara ngetik §: Windows — tahan Alt tuluy ketik 0167 dina keypad numerik; Mac — Option + 6 (tata letak Inggris); dina telepon, cukup ketok kode di handap ieu bari ngédit judul, jeung bakal diasupkeun sorangan",
+  "rename.guide.colors": "Warna",
+  "rename.guide.bedrock": "Warna Bedrock",
+  "rename.guide.styles": "Gaya",
+  "rename.guide.not_editing": "Mimitina klik judul kartu, teras klik kode pikeun ngalebetkeunana",
+  "rename.style.l": "Kandel",
+  "rename.style.o": "Miring",
+  "rename.style.n": "Garis handap",
+  "rename.style.m": "Dicoret",
+  "rename.style.k": "Sandi",
+  "rename.style.r": "Setél ulang"
 }

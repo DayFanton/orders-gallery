@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Ungawongci",
   "rename.confirm_back": "Qhubeka uhlela",
   "rename.guide.title": "Indlela yekushintsha ligama kanye nekuhlobisa (§ makhodi)",
-  "rename.guide.how": "Kantsi kute u-shintsha ligama, chofoza sitsite selikhadi, faka lelusha bese uchofoza noma yiphi indawo engenalutho — izowongcwa. Siphambano lesiseceleni kwendzawo sizobuyisela ligama langaphambili ngaphandle kokungcwaba. Indzawo engenalutho izobuyisela ligama lekucala.",
-  "rename.guide.codes": "Esihlokweni ungasebentisa emakhodi ekufomatha e-Minecraft: uphawu § kanye nelibala ngemuva kwalo. Imibala: §0–§9 kanye ne-§a–§f. Titayela: §l — lokugqinsi, §o — lokuncike, §n — lokunemugqa ngaphansi, §m — lokunemugqa phakatsi, §k — \"lokufihliwe\", §r — setha kabusha konkhe. Ikhodi yemibala iseta kabusha titayela tangaphambili, ngakho beka titayela ngemuva kwemibala"
+  "rename.guide.how": "Kuftfula igama, chofoza etihlokweni telikhadi, bhala lolusha bese uchofoza noma kuphi endzaweni lengekho lutho — kutawulondvolotwa. Siphambano lesiseceleni kwenkambu sitawubuyisa igama langaphambili ngaphandle kwekugcina. Inkambu lengekho lutho sitawubuyisa igama lekucala",
+  "rename.guide.codes": "Esihlokweni ungasebentisa emakhodi ekufomatha e-Minecraft: uphawu § kanye nelibala ngemuva kwalo. Imibala: §0–§9 kanye ne-§a–§f. Titayela: §l — lokugqinsi, §o — lokuncike, §n — lokunemugqa ngaphansi, §m — lokunemugqa phakatsi, §k — \"lokufihliwe\", §r — setha kabusha konkhe. Ikhodi yemibala iseta kabusha titayela tangaphambili, ngakho beka titayela ngemuva kwemibala",
+  "rename.guide.example": "Sibonelo:",
+  "rename.guide.sample": "§6§lIbhulokhi §r§ayegolide",
+  "rename.guide.type": "Ungayibhala kanjani §: Windows — bamba Alt bese uthayipha 0167 kukhibhodi yezinombolo; Mac — Option + 6 (uhlelo lwesiNgisi); ocingweni, vele uthephe ikhodi engezansi ngenkathi uhlela isihloko, izofika yona yodwa",
+  "rename.guide.colors": "Imibala",
+  "rename.guide.bedrock": "Imibala ye-Bedrock",
+  "rename.guide.styles": "Titayela",
+  "rename.guide.not_editing": "Kucala tfopha sitifiketi sesihloko sekhethelo, bese utfopha ikhodi kuze uyifake",
+  "rename.style.l": "Letfuli",
+  "rename.style.o": "Sekamile",
+  "rename.style.n": "Letfuli laphansi",
+  "rename.style.m": "Letfuli laphakatsi",
+  "rename.style.k": "Sifiri",
+  "rename.style.r": "Seta kabusha"
 }

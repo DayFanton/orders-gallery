@@ -469,6 +469,19 @@
   "rename.confirm_discard": "不保存",
   "rename.confirm_back": "继续编辑",
   "rename.guide.title": "如何重命名并使用颜色美化（§ 代码）",
-  "rename.guide.how": "要重命名，请点击卡片标题，输入新标题并点击任意空白处 — 它将被保存。字段旁边的叉号将在不保存的情况下恢复先前的名称。空字段将恢复原始名称。",
-  "rename.guide.codes": "在标题中，您可以使用 Minecraft 格式代码：§ 符号及其后的字符。颜色：§0–§9 和 §a–§f。样式：§l — 粗体，§o — 斜体，§n — 下划线，§m — 删除线，§k — “混淆”，§r — 重置所有。颜色代码会重置之前的样式，因此请将样式放在颜色之后"
+  "rename.guide.how": "要重命名，请点击卡片标题，输入新标题并点击任意空白处——它将保存。字段旁边的叉号将在不保存的情况下恢复原名称。空字段将恢复初始名称",
+  "rename.guide.codes": "在标题中，您可以使用 Minecraft 格式代码：§ 符号及其后的字符。颜色：§0–§9 和 §a–§f。样式：§l — 粗体，§o — 斜体，§n — 下划线，§m — 删除线，§k — “混淆”，§r — 重置所有。颜色代码会重置之前的样式，因此请将样式放在颜色之后",
+  "rename.guide.example": "示例：",
+  "rename.guide.sample": "§6§l金 §r§a方块",
+  "rename.guide.type": "如何输入 §：Windows — 按住 Alt 并通过数字小键盘输入 0167；Mac — Option + 6（英文键盘布局）；在手机上，编辑标题时只需点击下方的代码，它便会自动插入",
+  "rename.guide.colors": "颜色",
+  "rename.guide.bedrock": "Bedrock 颜色",
+  "rename.guide.styles": "样式",
+  "rename.guide.not_editing": "请先点击卡片标题，然后点击代码进行插入",
+  "rename.style.l": "粗体",
+  "rename.style.o": "斜体",
+  "rename.style.n": "下划线",
+  "rename.style.m": "删除线",
+  "rename.style.k": "密码",
+  "rename.style.r": "重置"
 }

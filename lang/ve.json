@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ni songo vhulunga",
   "rename.confirm_back": "Bvela phandḽa u lulamisa",
   "rename.guide.title": "Vha nga shandula hani dzina na u ḽi khavhisa (§ khodo)",
-  "rename.guide.how": "U shandula dzina, ni kwama thiramu ya kada, ni dzhenise ḽiswa ni kwama hune ha vha na tshithu — ḽi do vhulungwa. Murobo u re tsini na shango u do vhuyedzani dzina ḽaho fhiraho hu songo vhulungwa. Shango ḽi songo vha na tshithu ḽi do vhuyedzani dzina ḽa u thoma.",
-  "rename.guide.codes": "Hu tshi itwa thero, ni nga shumisa khodoro ya u fomata ya Minecraft: tshiga § na maṅwalo nga murahu hayo. Mivhala: §0–§9 na §a–§f. Mitaila: §l — ya nṱha, §o — ya u sekama, §n — yo olwaho fhasi, §m — yo olwaho vhukati, §k — \"yo dzumba\", §r — vhuyedzedzani zwoṱhe. Khodoro ya muvhala i vhuyedzedza mitaila ya kale, nga zwenezwo vhekani mitaila nga murahu ha muvhala"
+  "rename.guide.how": "Uri u shandukise dzina, kòvheláni kha thiria ya khadi, ṅwalani liswa nahone ni kòvhelé kha fhethu hu si na tshithu — zwi do vhulungwa. Tshifhinga tsho fanaho na tshifhaṱuṋe tshine tsha vha tsini na mupo tshi do vhuisa dzina ḽa kale hu sa vhulungwi. Fhethu hu si na tshithu tshi do vhuisa dzina ḽa u thoma",
+  "rename.guide.codes": "Hu tshi itwa thero, ni nga shumisa khodoro ya u fomata ya Minecraft: tshiga § na maṅwalo nga murahu hayo. Mivhala: §0–§9 na §a–§f. Mitaila: §l — ya nṱha, §o — ya u sekama, §n — yo olwaho fhasi, §m — yo olwaho vhukati, §k — \"yo dzumba\", §r — vhuyedzedzani zwoṱhe. Khodoro ya muvhala i vhuyedzedza mitaila ya kale, nga zwenezwo vhekani mitaila nga murahu ha muvhala",
+  "rename.guide.example": "Tsumbo:",
+  "rename.guide.sample": "§6§lBuloko §r§a ya goloi",
+  "rename.guide.type": "Nḓila ya u ṅwala §: Windows — fara Alt na u ṅwala 0167 kha kibodo ya nomboro; Mac — Option + 6 (tshalelo ya Shingo); kha lutingo, tangana fhedzi na khothe ya fhasi musi ni tshi khou lulamisa thero, i ḓo ḓi dzhena yothe",
+  "rename.guide.colors": "Mivhala",
+  "rename.guide.bedrock": "Mivhala ya Bedrock",
+  "rename.guide.styles": "Tshitayelo",
+  "rename.guide.not_editing": "Thoma u pfa thero ya khadi, ni dovhe ni pfa khothe uri ni i dzhenise",
+  "rename.style.l": "Tshivhu",
+  "rename.style.o": "Vha khombama",
+  "rename.style.n": "Zwo tou sedzuluswa fhasi",
+  "rename.style.m": "Zwo tou sedzuluswa vhukati",
+  "rename.style.k": "Tshifiro",
+  "rename.style.r": "Vha vhea hafhu"
 }

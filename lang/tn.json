@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Se boloke",
   "rename.confirm_back": "Tswelela pele go rulaganya",
   "rename.guide.title": "Ka fao o ka fetolang lebitso le go le kgabisa (§ khoutu)",
-  "rename.guide.how": "Go fetola lebitso, tobetsa setlhogo sa karata, tsenya le lešha mme o tlhabelle lefelo lepe fela le le senang sepe — le tla bolokwa. Sefapaano se se gaufi le lebala se tla busetsa lebitso la pele ntle le go boloka. Lebala le le senang sepe le tla busetsa leina la pele.",
-  "rename.guide.codes": "Mo setlhong, o ka dirisa dikhoutu tsa go fomata tsa Minecraft: letshwao § le tlhaku morago ga lone. Mebala: §0–§9 le §a–§f. Ditsela: §l — e e nonneng, §o — e e sekameng, §n — e e thaletsweng kwa tlase, §m — e e thaletsweng mo gare, §k — \"e e fitlhilweng\", §r — boela gantsi tsotlhe. Khhoutu ya mmala e busetsa ditsela tsa pele, ka jalo baya ditsela morago ga mmala"
+  "rename.guide.how": "Go fetola lebitso, tobetsa mo setlhogong sa karata, kwala se gompieno mme o tobetse mo lefelong lepe le le sa nang sepe — le tla bolokwa. Sefapaano se se gaufi le lefelo se tla busa lebitso le le fetileng kwantle ga go boloka. Lefelo le le sa nang sepe le tla busa lebitso la ntlha",
+  "rename.guide.codes": "Mo setlhong, o ka dirisa dikhoutu tsa go fomata tsa Minecraft: letshwao § le tlhaku morago ga lone. Mebala: §0–§9 le §a–§f. Ditsela: §l — e e nonneng, §o — e e sekameng, §n — e e thaletsweng kwa tlase, §m — e e thaletsweng mo gare, §k — \"e e fitlhilweng\", §r — boela gantsi tsotlhe. Khhoutu ya mmala e busetsa ditsela tsa pele, ka jalo baya ditsela morago ga mmala",
+  "rename.guide.example": "Sekai:",
+  "rename.guide.sample": "§6§lBlock §r§aYa Gauta",
+  "rename.guide.type": "Mokgwa wa go tsenya §: Windows — tshwara Alt o bo o tlanya 0167 mo khibotong ya dipalo; Mac — Option + 6 (peakanyo ya Sekgoa); mo mogala, fela thapa khoutu e e fa tlase fa o ntse o baakanya setlhogo, e tla ipeela ka yosi",
+  "rename.guide.colors": "Mmala",
+  "rename.guide.bedrock": "Mmala wa Bedrock",
+  "rename.guide.styles": "Ditsela",
+  "rename.guide.not_editing": "Sa tlhaga mo setlhogo sa karata, mme morago o tlhae khoutu gore o e tsenye",
+  "rename.style.l": "Nonohu",
+  "rename.style.o": "Sekameng",
+  "rename.style.n": "E tlhagisitsweng ka fa tlase",
+  "rename.style.m": "E thailweng fa gare",
+  "rename.style.k": "Khoutu",
+  "rename.style.r": "Reset"
 }

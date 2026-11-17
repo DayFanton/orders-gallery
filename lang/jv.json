@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Aja disimpen",
   "rename.confirm_back": "Terusake ngowahi",
   "rename.guide.title": "Kepiye carane ngganti jeneng lan menehi hiasan (kode §)",
-  "rename.guide.how": "Kanggo ngganti jeneng, klik judhul kertu, ketik jeneng anyar banjur klik ing panggonan kosong apa wae — bakal disimpen. Tandha silang ing sebelah kolom bakal mbalekake jeneng sadurunge tanpa nyimpen. Kolom sing kosong bakal mulihake jeneng asli.",
-  "rename.guide.codes": "Ing irah-irah, sampeyan bisa nggunakake kode format Minecraft: tandha § lan aksara ing mburine. Werna: §0–§9 lan §a–§f. Gaya: §l — kandel, §o — miring, §n — garis ngisor, §m — dicoret, §k — \"samar\", §r — reset kabeh. Kode werna ngganti gaya sadurunge, mula pasang gaya ing mburine werna"
+  "rename.guide.how": "Kanggo ngganti jeneng, klik judhul kertu, ketik sing anyar lan klik ing endi wae panggonan kosong — bakal disimpen. Tandha silang ing sebelah kolom bakal mbalekake jeneng sadurunge tanpa nyimpen. Kolom kosong bakal mbalekake jeneng asli",
+  "rename.guide.codes": "Ing irah-irah, sampeyan bisa nggunakake kode format Minecraft: tandha § lan aksara ing mburine. Werna: §0–§9 lan §a–§f. Gaya: §l — kandel, §o — miring, §n — garis ngisor, §m — dicoret, §k — \"samar\", §r — reset kabeh. Kode werna ngganti gaya sadurunge, mula pasang gaya ing mburine werna",
+  "rename.guide.example": "Conto:",
+  "rename.guide.sample": "§6§lBlok §r§aemas",
+  "rename.guide.type": "Cara ngetik §: Windows — tahan Alt banjur ketik 0167 ing keypad numerik; Mac — Option + 6 (tata letak Inggris); ing telpon, cukup ketuk kode ing ngisor iki nalika ngowahi judhul, lan kode kasebut bakal mlebu dhewe",
+  "rename.guide.colors": "Werna",
+  "rename.guide.bedrock": "Werna Bedrock",
+  "rename.guide.styles": "Gaya",
+  "rename.guide.not_editing": "Pisanan klik judhul kertu, banjur klik kode kanggo masangake",
+  "rename.style.l": "Kandel",
+  "rename.style.o": "Miring",
+  "rename.style.n": "Garis ngisor",
+  "rename.style.m": "Dicoret",
+  "rename.style.k": "Sandi",
+  "rename.style.r": "Setel ulang"
 }

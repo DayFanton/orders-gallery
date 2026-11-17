@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Ndigithie",
   "rename.confirm_back": "Thii na mbere na githimi",
   "rename.guide.title": "Ũrĩa woka kũhuria ririina na kũritha (§ kodi cia §)",
-  "rename.guide.how": "Ndirire kũhuria ririina, thika ririina ria ikaratasi, wandike riria njeru na uthike handũ o hothe harĩ hĩa — rĩgĩgithio. Gicigo kĩrĩ hakuhĩ na handũ hau nĩkĩgacokia ririina riria rĩahĩte to ndwathie. Handũ harĩ hĩa nĩkĩgacokia ririina ria mbere.",
-  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru"
+  "rename.guide.how": "Kũgũrũria rĩtwa, thii kũrĩ rĩtwa rĩa karati, handĩka rĩega na ũthiihande kũrĩ kũndũ guothe gwa tũgũrũ — nĩ gũkaiga. Gathĩ kĩa hakuhĩ na kĩhumo gĩgũcioka rĩtwa rĩa tene ũtarĩ gũkaiga. Gũthiihande gũtagĩrĩ rĩa mbere gũgũcioka rĩtwa rĩa mbere",
+  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru",
+  "rename.guide.example": "Kĩonereria:",
+  "rename.guide.sample": "§6§lBlock §r§a ya thahabu",
+  "rename.guide.type": "Ũrĩa waandĩka §: Windows — nyita Alt wandĩke 0167 kĩbodi-inĩ ya namba; Mac — Option + 6 (mĩtharire ya Gĩthungu); thibituni, taha koodi ĩrĩa rungu rwa ũndũ ũcio ũkĩandĩka mutwe, nĩĩgwikĩra yothe",
+  "rename.guide.colors": "Rũru rwa rangi",
+  "rename.guide.bedrock": "Rũru rwa rangi rwa Bedrock",
+  "rename.guide.styles": "Mitugo",
+  "rename.guide.not_editing": "Tamba mbere mũtu wa karita, thuti ũtara koodĩ nĩguo ũiyũmbie",
+  "rename.style.l": "Nene",
+  "rename.style.o": "Gĩthege",
+  "rename.style.n": "Ĩandĩkĩrĩtwo rungu",
+  "rename.style.m": "Ĩandĩkĩrĩtwo gatagatĩ",
+  "rename.style.k": "Kũhithĩka",
+  "rename.style.r": "Thondeka rĩngĩ"
 }

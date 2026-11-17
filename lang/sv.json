@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Spara inte",
   "rename.confirm_back": "Fortsätt redigera",
   "rename.guide.title": "Hur man byter namn och snyggar till (§-koder)",
-  "rename.guide.how": "För att byta namn, klicka på kortets titel, skriv in ett nytt och klicka på valfri tom yta – det sparas. Kryssmärket bredvid fältet återställer det föregående namnet utan att spara. Ett tomt fält återställer det ursprungliga namnet.",
-  "rename.guide.codes": "I titeln kan du använda formateringskoder från Minecraft: tecknet § och ett tecken efter det. Färger: §0–§9 och §a–§f. Stilar: §l — fetstil, §o — kursiv, §n — understruken, §m — genomstruken, §k — \"förvirrad\", §r — återställ allt. Färgkoden återställer tidigare stilar, så placera stilar efter färgen"
+  "rename.guide.how": "För att byta namn, klicka på kortets titel, skriv in den nya och klicka på valfri tom plats – den sparas. Kryssmärket bredvid fältet återställer det tidigare namnet utan att spara. Ett tomt fält återställer det ursprungliga namnet",
+  "rename.guide.codes": "I titeln kan du använda formateringskoder från Minecraft: tecknet § och ett tecken efter det. Färger: §0–§9 och §a–§f. Stilar: §l — fetstil, §o — kursiv, §n — understruken, §m — genomstruken, §k — \"förvirrad\", §r — återställ allt. Färgkoden återställer tidigare stilar, så placera stilar efter färgen",
+  "rename.guide.example": "Exempel:",
+  "rename.guide.sample": "§6§lGult §r§ablok",
+  "rename.guide.type": "Hur man skriver §: Windows — håll in Alt och skriv 0167 på det numeriska tangentbordet; Mac — Option + 6 (engelsk layout); på telefonen trycker du bara på koden nedan när du redigerar titeln så sätts den in av sig själv",
+  "rename.guide.colors": "Färger",
+  "rename.guide.bedrock": "Bedrock-färger",
+  "rename.guide.styles": "Stilar",
+  "rename.guide.not_editing": "Klicka först på kortets titel och sedan på koden för att infoga den",
+  "rename.style.l": "Fet",
+  "rename.style.o": "Kursiv",
+  "rename.style.n": "Understruken",
+  "rename.style.m": "Genomstruken",
+  "rename.style.k": "Chiffrering",
+  "rename.style.r": "Återställ"
 }

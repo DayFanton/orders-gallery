@@ -467,6 +467,19 @@
   "rename.confirm_discard": "Tsis txhob ceev",
   "rename.confirm_back": "Txuas ntxiv kho",
   "rename.guide.title": "Yuav ua li cas thiaj hloov lub npe thiab zoo nkauj (§ codes)",
-  "rename.guide.how": "Yuav hloov lub npe, nyem rau daim npav lub npe, sau ib tug tshiab thiab nyem rau txhua qhov chaw dawb — nws yuav khaws cia. Tus ntoo khaub lig nyob ib sab ntawm lub teb yuav rov qab los rau lub npe qub yam tsis tau khaws. Ib lub teb dawb yuav rov qab los rau lub npe qub.",
-  "rename.guide.codes": "Hauv lub npe, koj tuaj yeem siv Minecraft cov cai qauv: lub cim § thiab ib tug cwj pwm tom qab nws. Xim: §0–§9 thiab §a–§f. Cov qauv: §l — tuab, §o — ncaj, §n — hauv qab kos, §m — hauv nruab nrab kos, §k — \"nyob nraim\", §r — rov pib dua txhua yam. Cov xim code rov pib dua cov qauv qub, yog li muaj cov qauv tom qab xim"
+  "rename.guide.how": "Yog xav hloov npe, nyem rau daim npav lub npe, sau tus tshiab thiab nyem rau ntawm qhov chaw qus twg los xij — nws yuav txuag tau. Tus ntoo khaub lig uas nyob ze ntawm daim teb yuav rov qab los ua lub npe qub tsis pub txuag. Daim teb qus yuav rov qab los ua lub npe thawj zaug",
+  "rename.guide.codes": "Hauv lub npe, koj tuaj yeem siv Minecraft cov cai qauv: lub cim § thiab ib tug cwj pwm tom qab nws. Xim: §0–§9 thiab §a–§f. Cov qauv: §l — tuab, §o — ncaj, §n — hauv qab kos, §m — hauv nruab nrab kos, §k — \"nyob nraim\", §r — rov pib dua txhua yam. Cov xim code rov pib dua cov qauv qub, yog li muaj cov qauv tom qab xim",
+  "rename.guide.example": "Piv txwv:",
+  "rename.guide.sample": "§6§lBlock §r§a kub",
+  "rename.guide.type": "Yuav sau § li cas: Windows — tuav Alt thiab sau 0167 rau ntawm tus lej keyboard; Mac — Option + 6 (Askiv hom ntawv); ntawm xov tooj, tsuas yog coj mus rhaub cov code hauv qab no thaum kho cov npe, nws yuav ntxiv nws tus kheej",
+  "rename.guide.colors": "Xim",
+  "rename.guide.bedrock": "Bedrock Xim",
+  "rename.guide.styles": "Qauv",
+  "rename.guide.not_editing": "Ua ntej nyem rau daim npav lub npe, ces nyem rau ntawm code kom ntxiv nws",
+  "rename.style.l": "Tuab",
+  "rename.style.o": "Qai",
+  "rename.style.n": "Qab",
+  "rename.style.m": "Qab nruab nrab",
+  "rename.style.k": "Npav",
+  "rename.style.r": "Pib"
 }

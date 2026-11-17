@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Không lưu",
   "rename.confirm_back": "Tiếp tục chỉnh sửa",
   "rename.guide.title": "Cách đổi tên và tạo kiểu (mã §)",
-  "rename.guide.how": "Để đổi tên, hãy nhấp vào tiêu đề thẻ, nhập tên mới và nhấp vào bất kỳ khoảng trống nào — tên đó sẽ được lưu. Dấu nhân bên cạnh trường sẽ quay lại tên trước đó mà không lưu. Trường trống sẽ khôi phục tên ban đầu.",
-  "rename.guide.codes": "Trong tiêu đề, bạn có thể sử dụng các mã định dạng của Minecraft: dấu § và một ký tự theo sau. Màu sắc: §0–§9 và §a–§f. Kiểu chữ: §l — đậm, §o — nghiêng, §n — gạch chân, §m — gạch ngang, §k — \"làm rối\", §r — đặt lại tất cả. Mã màu sẽ đặt lại các kiểu trước đó, vì vậy hãy đặt kiểu sau màu"
+  "rename.guide.how": "Để đổi tên, hãy nhấp vào tiêu đề thẻ, nhập tên mới và nhấp vào bất kỳ khoảng trống nào — tên đó sẽ được lưu. Dấu nhân bên cạnh trường sẽ khôi phục tên trước đó mà không cần lưu. Trạng thái trống sẽ khôi phục tên ban đầu",
+  "rename.guide.codes": "Trong tiêu đề, bạn có thể sử dụng các mã định dạng của Minecraft: dấu § và một ký tự theo sau. Màu sắc: §0–§9 và §a–§f. Kiểu chữ: §l — đậm, §o — nghiêng, §n — gạch chân, §m — gạch ngang, §k — \"làm rối\", §r — đặt lại tất cả. Mã màu sẽ đặt lại các kiểu trước đó, vì vậy hãy đặt kiểu sau màu",
+  "rename.guide.example": "Ví dụ:",
+  "rename.guide.sample": "§6§lKhối §r§avàng",
+  "rename.guide.type": "Cách gõ §: Windows — giữ phím Alt và gõ 0167 trên bàn phím số; Mac — Option + 6 (bố cục tiếng Anh); trên điện thoại, chỉ cần chạm vào mã bên dưới trong lúc chỉnh sửa tiêu đề, mã sẽ tự động chèn vào",
+  "rename.guide.colors": "Màu sắc",
+  "rename.guide.bedrock": "Màu sắc Bedrock",
+  "rename.guide.styles": "Kiểu",
+  "rename.guide.not_editing": "Đầu tiên hãy nhấp vào tiêu đề thẻ, sau đó nhấp vào mã để chèn",
+  "rename.style.l": "Đậm",
+  "rename.style.o": "Nghiêng",
+  "rename.style.n": "Gạch chân",
+  "rename.style.m": "Gạch ngang",
+  "rename.style.k": "Mật mã",
+  "rename.style.r": "Đặt lại"
 }

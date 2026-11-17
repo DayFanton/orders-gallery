@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Jangan simpan",
   "rename.confirm_back": "Lanjutkan mengedit",
   "rename.guide.title": "Cara mengganti nama dan mempercantik (kode §)",
-  "rename.guide.how": "Untuk mengganti nama, klik judul kartu, masukkan nama baru dan klik di sembarang tempat kosong — nama tersebut akan disimpan. Tombol silang di sebelah bidang akan mengembalikan nama sebelumnya tanpa menyimpan. Bidang kosong akan memulihkan nama asli.",
-  "rename.guide.codes": "Di judul, Anda dapat menggunakan kode pemformatan Minecraft: tanda § dan karakter setelahnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — miring, §n — garis bawah, §m — coret, §k — \"tersamarkan\", §r — reset semua. Kode warna mengatur ulang gaya sebelumnya, jadi letakkan gaya setelah warna"
+  "rename.guide.how": "Untuk mengganti nama, klik pada judul kartu, ketik yang baru dan klik di sembarang tempat kosong — itu akan disimpan. Tanda silang di sebelah kolom akan mengembalikan nama sebelumnya tanpa menyimpan. Kolom kosong akan mengembalikan nama asli",
+  "rename.guide.codes": "Di judul, Anda dapat menggunakan kode pemformatan Minecraft: tanda § dan karakter setelahnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — miring, §n — garis bawah, §m — coret, §k — \"tersamarkan\", §r — reset semua. Kode warna mengatur ulang gaya sebelumnya, jadi letakkan gaya setelah warna",
+  "rename.guide.example": "Contoh:",
+  "rename.guide.sample": "§6§lBlok §r§aemas",
+  "rename.guide.type": "Cara mengetik §: Windows — tahan Alt dan ketik 0167 pada keypad numerik; Mac — Option + 6 (tata letak Inggris); di ponsel, cukup ketuk kode di bawah ini saat mengedit judul, dan kode tersebut akan masuk dengan sendirinya",
+  "rename.guide.colors": "Warna",
+  "rename.guide.bedrock": "Warna Bedrock",
+  "rename.guide.styles": "Gaya",
+  "rename.guide.not_editing": "Ketuk judul kartu terlebih dahulu, lalu ketuk kode untuk menyisipkannya",
+  "rename.style.l": "Tebal",
+  "rename.style.o": "Miring",
+  "rename.style.n": "Garis bawah",
+  "rename.style.m": "Coret",
+  "rename.style.k": "Sandi",
+  "rename.style.r": "Reset ulang"
 }

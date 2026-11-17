@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Neišsaugoti",
   "rename.confirm_back": "Tęsti redagavimą",
   "rename.guide.title": "Kaip pervardyti ir papuošti (§ kodai)",
-  "rename.guide.how": "Norėdami pervardyti, spustelėkite kortelės pavadinimą, įveskite naują ir spustelėkite bet kurioje tuščioje vietoje – jis bus išsaugotas. Kryžius šalia lauko grąžins ankstesnį pavadinimą neišsaugant. Tuščias laukas grąžins originalų pavadinimą.",
-  "rename.guide.codes": "Pavadinime galite naudoti „Minecraft“ formatavimo kodus: ženklą § ir simbolį po jo. Spalvos: §0–§9 ir §a–§f. Stiliai: §l — pusjuodis, §o — kursyvas, §n — pabrauktas, §m — perbrauktas, §k — „šifruotas“, §r — iš naujo nustatyti viską. Spalvos kodas iš naujo nustato ankstesnius stilius, todėl stilius dėkite po spalvos"
+  "rename.guide.how": "Norėdami pervardinti, spustelėkite kortelės pavadinimą, įveskite naują ir spustelėkite bet kurioje tuščioje vietoje – ji bus išsaugota. Kryžius šalia lauko sugrąžins ankstesnį pavadinimą neišsaugant. Tuščias laukas sugrąžins pradinį pavadinimą",
+  "rename.guide.codes": "Pavadinime galite naudoti „Minecraft“ formatavimo kodus: ženklą § ir simbolį po jo. Spalvos: §0–§9 ir §a–§f. Stiliai: §l — pusjuodis, §o — kursyvas, §n — pabrauktas, §m — perbrauktas, §k — „šifruotas“, §r — iš naujo nustatyti viską. Spalvos kodas iš naujo nustato ankstesnius stilius, todėl stilius dėkite po spalvos",
+  "rename.guide.example": "Pavyzdys:",
+  "rename.guide.sample": "§6§lAuksinis §r§ablokas",
+  "rename.guide.type": "Kaip parašyti §: Windows — palaikykite „Alt“ ir skaitmeninėje klaviatūroje įveskite 0167; Mac — „Option + 6“ (anglų kalbos išdėstymas); telefone tiesiog palieskite norimą kodą apačioje redaguodami pavadinimą – jis įsikels pats",
+  "rename.guide.colors": "Spalvos",
+  "rename.guide.bedrock": "Bedrock spalvos",
+  "rename.guide.styles": "Stiliai",
+  "rename.guide.not_editing": "Pirmiausia spustelėkite kortelės pavadinimą, tada kodą, kad jį įterptumėte",
+  "rename.style.l": "Pusjuodis",
+  "rename.style.o": "Kursyvas",
+  "rename.style.n": "Pabrauktas",
+  "rename.style.m": "Perbrauktas",
+  "rename.style.k": "Šifras",
+  "rename.style.r": "Atstatyti"
 }

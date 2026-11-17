@@ -469,6 +469,19 @@
   "rename.confirm_discard": "Indi pag-save",
   "rename.confirm_back": "Ipadayon ang pag-edit",
   "rename.guide.title": "Paano pag-ilis sang ngalan kag pagpatahom (mga § code)",
-  "rename.guide.how": "Para mapulihan ang ngalan, i-klik ang titulo sang kard, isulat ang bag-o kag i-klik ang bisan diin nga wala sang sulod — ma-save ini. Ang krus sa tupad sang field magabalik sa una nga ngalan nga indi pag-tipigan. Ang wala sang sulod nga field magabalik sang original nga ngalan.",
-  "rename.guide.codes": "Sa titulo, sarang mo gamiton ang mga code sang pag-format sang Minecraft: ang tanda § kag isa ka karakter sa likod sini. Mga Kolor: §0–§9 kag §a–§f. Mga Estilo: §l — bold, §o — italic, §n — may linya sa ubos, §m — may linya sa tunga, §k — \"gin-obscure\", §r — i-reset ang tanan. Ang code sang kolor nag-re-reset sang mga na una nga estilo, gani ibutang ang mga estilo sa likod sang kolor"
+  "rename.guide.how": "Para mabulubdan ang ngalan, i-click ang titulo sang kard, i-type ang bag-o kag i-click bisan diin nga wala sang sulod nga lugar — ma-save ini. Ang ekis sa kilid sang field mag-uli sang nagligad nga ngalan nga wala nag-save. Ang blangko nga field mag-uli sang orihinal nga ngalan",
+  "rename.guide.codes": "Sa titulo, sarang mo gamiton ang mga code sang pag-format sang Minecraft: ang tanda § kag isa ka karakter sa likod sini. Mga Kolor: §0–§9 kag §a–§f. Mga Estilo: §l — bold, §o — italic, §n — may linya sa ubos, §m — may linya sa tunga, §k — \"gin-obscure\", §r — i-reset ang tanan. Ang code sang kolor nag-re-reset sang mga na una nga estilo, gani ibutang ang mga estilo sa likod sang kolor",
+  "rename.guide.example": "Halimbawa:",
+  "rename.guide.sample": "§6§lBulawanon §r§ang block",
+  "rename.guide.type": "Paano mag-type sang §: Windows — i-hold ang Alt kag i-type ang 0167 sa numeric keypad; Mac — Option + 6 (layout sang Ingles); sa telepono, i-tap lang ang code sa idalom samtang nag-edit sang titulo, kag mangin-insert ini sa iya kaugalingon",
+  "rename.guide.colors": "Mga kulay",
+  "rename.guide.bedrock": "Mga kulay sang Bedrock",
+  "rename.guide.styles": "Mga estilo",
+  "rename.guide.not_editing": "Una nga i-click ang titulo sang kard, dayon ang code agud ma-insert ini",
+  "rename.style.l": "Mabaga",
+  "rename.style.o": "Nagakiling",
+  "rename.style.n": "Ginbadbad",
+  "rename.style.m": "Gin-ulian -> Gin-guhitan",
+  "rename.style.k": "Kodigo",
+  "rename.style.r": "I-reset"
 }
