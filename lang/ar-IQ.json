@@ -6,8 +6,18 @@
   "language.auto": "تلقائي",
   "language.search": "иракский арабский, iraqi arabic, иракский",
   "language.search_placeholder": "البحث عن لغة...",
-  "language.rtl": true,
   "language.no_results": "لم يتم العثور على لغات",
+  "language.hide_btn": "إخفاء لغات معينة",
+  "language.hidden_tab": "اللغات المخفية",
+  "language.back": "رجوع",
+  "language.select_hint": "قم بإلغاء تحديد اللغات غير المرغوب فيها",
+  "language.save": "حفظ",
+  "language.cancel": "إلغاء",
+  "language.confirm_title": "إخفاء اللغات",
+  "language.confirm_text": "هل أنت متأكد أنك تريد إخفاء جميع اللغات غير المحددة؟",
+  "language.confirm_yes": "نعم، إخفاء",
+  "language.show_in_list": "عرض اللغة في القائمة العامة",
+  "language.rtl": true,
 
   "site.title": "معرض تسيبلياش",
   "gallery.title": "المعرض",
@@ -59,7 +69,7 @@
 
   "emote.button": "المشاعر",
   "emote.title": "المشاعر",
-  "emote.hint": "اختر حركة مشاعر أو حمّل ملف .json الخاص بك",
+  "emote.hint": "اختر حركة مشاعر أو افتح \"مشاعري\" لإضافة مشاعرك الخاصة",
   "emote.stop": "إيقاف المشاعر",
   "emote.test": "اختبار مشاعرك الخاصّة",
   "emote.empty": "لم يتم العثور على مشاعر (مجلد emotes/)",
@@ -329,6 +339,10 @@
   "emote.name.SPE_Yandere_Pose": "وضعية يانديري (كوابيس)",
   "emote.name.SPE_Zoro_Pose": "وضعية زورو (الكون المتعدد) (ون بيس)",
 
+  "emote.by": "المؤلف: %s",
+  "emote.search_placeholder": "بحث عن المشاعر...",
+  "emote.no_results": "لم يتم العثور على مشاعر",
+
   "person.Артур": "آرثر",
   "person.Вайкату": "وايكاتو",
   "person.Вова": "ڤوفا",
@@ -341,7 +355,7 @@
   "person.Хуман": "هيومان",
   "person.Цыпляш": "تسيبلياش",
   "person.Эппоп": "إيبوب",
-  "person.Яна": "يانا",
+  "person.Яنا": "يانا",
   "person.Виакор": "فياكور",
 
   "badge.new": "جديد",
@@ -358,5 +372,41 @@
   "block.snow": "كتلة ثلج",
   "block.planks": "ألواح خشب البلوط",
   "block.netherrack": "نذراكت",
-  "block.end_stone": "حجر النهاية"
+  "block.end_stone": "حجر النهاية",
+  "block.plain": "بدون نسيج",
+
+  "bgimg.name.day": "نهار",
+  "bgimg.name.end": "النهاية",
+  "bgimg.name.nether": "نيذر",
+  "bgimg.name.night": "ليل",
+  "bgimg.name.snow": "ثلج",
+  "bgimg.name.sunset": "غروب الشمس",
+
+  "blocks.empty": "لا توجد كتل بعد — ضع الأنسجة في مجلد blocks/ أو أضف الأنسجة الخاصة بك",
+
+  "folder.add": "إضافة",
+  "folder.delete": "حذف",
+  "folder.delete_confirm": "هل تريد حذف \"%s\" من مجلدك؟",
+  "folder.empty": "لا يوجد شيء هنا حتى الآن — اضغط على \"+\" لإضافة الملف الأول",
+  "folder.local_note": "يتم تخزين الملفات في هذا المتصفح فقط",
+  "folder.memory_only": "التخزين المؤقت للمتصفح غير متاح — ستختفي الملفات عند إغلاق علامة التبويب",
+  "folder.error": "تعذر إضافة هذا الملف",
+  "folder.bg.open": "صور الخاصة",
+  "folder.bg.title": "صور الخاصة",
+  "folder.bg.hint": "الصور التي قام برفعها. اضغط على \"+\" لإضافة صورة جديدة",
+  "folder.block.open": "كتلي الخاصّة",
+  "folder.block.title": "كتلي الخاصّة",
+  "folder.block.hint": "يتم استخدام صورة واحدة لجميع الوجوه. أو اختر ثلاثة ملفات تحمل الأسماء ..._top، و..._side، و..._bottom",
+  "folder.block.error": "اختر صورة واحدة أو ملفات تنتهي بـ _top أو _side أو _bottom",
+  "folder.emote.open": "مشاعري",
+  "folder.emote.title": "مشاعري",
+  "folder.emote.hint": "اختر ملف تعبيري .json، وإذا أردت، ملف أيقونة (.png) في نفس نافذة الحوار",
+  "folder.emote.icon": "تغيير الأيقونة",
+  "folder.reorder": "اسحب لإعادة الترتيب (أو الأسهم ← →)",
+
+  "ui.hide": "إخفاء الواجهة (H)",
+  "ui.show": "إظهار الواجهة (H)",
+
+  "shot.title": "نسخ لقطة الشاشة إلى الحافظة (اضغط مع الاستمرار على Ctrl للتحميل أيضاً، أو Shift للحصول على خلفية شفافة)",
+  "shot.error": "تعذر التقاط صورة الشاشة"
 }
