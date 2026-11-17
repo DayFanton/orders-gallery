@@ -42,7 +42,8 @@
     "height": 1,
     "weight": 10,
     "author": "Braytonks",
-    "url": "https://modrinth.com/user/Braytonks"
+    "url": "https://modrinth.com/user/Braytonks",
+    "enabled": false
   },
   {
     "file": "sweet_berry_bush_stage2.png",
@@ -56,7 +57,8 @@
     "height": 1,
     "weight": 10,
     "author": "Braytonks",
-    "url": "https://modrinth.com/user/Braytonks"
+    "url": "https://modrinth.com/user/Braytonks",
+    "enabled": false
   },
   {
     "file": "sugar_cane.png",
@@ -70,13 +72,15 @@
       "step": 1
     },
     "author": "Braytonks",
-    "url": "https://modrinth.com/user/Braytonks"
+    "url": "https://modrinth.com/user/Braytonks",
+    "enabled": false
   },
   {
     "file": "seagrass_32x.png",
     "height": 1,
     "weight": 4,
     "author": "Braytonks",
-    "url": "https://modrinth.com/user/Braytonks"
+    "url": "https://modrinth.com/user/Braytonks",
+    "enabled": false
   }
 ]
