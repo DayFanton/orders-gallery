@@ -31,6 +31,7 @@
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             height: 100vh;
+            height: 100dvh;
             overflow: hidden;
             user-select: none;
         }
@@ -878,20 +879,24 @@
                 left: 0;
                 width: 100%;
                 height: 100vh;
+                height: 100dvh;
                 z-index: 1;
                 transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             #viewer_zone.mobile-shrunk {
                 height: 40vh;
+                height: 40dvh;
             }
 
             #sidebar, #controls_panel {
                 position: fixed;
-                top: 40vh; 
+                top: 40vh;
+                top: 40dvh;
                 left: 0;
                 width: 100% !important;
-                height: 60vh !important; 
+                height: 60vh !important;
+                height: 60dvh !important;
                 z-index: 100;
                 transform: translateY(150%); 
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1259,6 +1264,56 @@
         .folder-tools-wrap { width: 100%; }
         .folder-tools-wrap .size-ed { margin: 6px 0 0; }
         .folder-tools { display: flex; gap: 6px; align-items: center; justify-content: center; }
+
+        /* ================= Версия 1.8.4 ================= */
+        /* Переименование своих файлов в личной папке + мини-гайд по кодам § */
+        .folder-name { display: block; max-width: 100%; min-width: 0; overflow-wrap: anywhere; cursor: text; border-radius: 4px; padding: 1px 4px; margin: -1px -4px; transition: background 0.15s ease; }
+        .folder-name:hover, .folder-name:focus-visible { background: rgba(255, 255, 255, 0.08); outline: none; }
+        .folder-name::after { content: ' \270E'; font-size: 0.75em; color: var(--accent); opacity: 0; transition: opacity 0.15s ease; }
+        .folder-card:hover .folder-name::after, .folder-name:focus-visible::after { opacity: 0.85; }
+        @media (hover: none) { .folder-name::after { opacity: 0.6; } }
+        .rename-box { display: flex; flex-direction: column; gap: 4px; width: 100%; cursor: default; }
+        .rename-row { display: flex; align-items: center; gap: 4px; }
+        .rename-input { flex: 1 1 auto; min-width: 0; box-sizing: border-box; padding: 6px 8px; font-size: 0.8rem; color: var(--text-main); background: var(--bg-main);
+            border: 1px solid var(--accent); border-radius: 6px; outline: none; box-shadow: 0 0 0 2px rgba(255, 240, 1, 0.15); -webkit-user-select: text; user-select: text; }
+        .rename-cancel { flex: 0 0 auto; width: 28px; height: 28px; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; line-height: 1; cursor: pointer;
+            color: #ff6b6b; background: transparent; border: 1px solid #ff6b6b; border-radius: 6px; transition: all 0.15s ease; }
+        .rename-cancel:hover, .rename-cancel:focus-visible { background: #ff6b6b; color: #111; outline: none; }
+        .rename-preview { min-height: 1.2em; font-size: 0.78rem; text-align: center; overflow-wrap: anywhere; }
+        .rename-confirm { z-index: 100002; }
+        .rename-confirm .emote-panel { max-width: 380px; }
+        .rename-confirm .lang-actions { flex-wrap: wrap; }
+        .rename-confirm .lang-actions button { flex: 1 1 110px; }
+
+        .mc-guide { flex-shrink: 0; font-size: 0.8rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; }
+        .mc-guide > summary { display: flex; align-items: center; gap: 8px; padding: 9px 12px; font-weight: 600; color: var(--text-main); cursor: pointer; list-style: none; }
+        .mc-guide > summary::-webkit-details-marker { display: none; }
+        .mc-guide > summary::before { content: '\25B8'; flex: none; color: var(--accent); transition: transform 0.15s ease; }
+        .mc-guide[open] > summary::before { transform: rotate(90deg); }
+        .mc-guide-body { display: flex; flex-direction: column; gap: 10px; max-height: min(36vh, 300px); overflow-y: auto; padding: 0 12px 12px; line-height: 1.45; -webkit-user-select: text; user-select: text; }
+        .mc-guide-body p { margin: 0; }
+        .mc-guide-body code { padding: 1px 5px; font-family: ui-monospace, Consolas, monospace; color: var(--text-main); background: var(--bg-main); border: 1px solid var(--border); border-radius: 4px; overflow-wrap: anywhere; }
+        .mc-guide-sample { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+        .mc-chips-label { margin-bottom: 4px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+        .mc-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+        .mc-chip { min-width: 34px; height: 28px; padding: 0 7px; font-family: ui-monospace, Consolas, monospace; font-size: 0.75rem; font-weight: 700; cursor: pointer;
+            color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 5px; transition: transform 0.1s ease, border-color 0.15s ease; touch-action: manipulation; }
+        .mc-chip:hover { border-color: #fff; transform: translateY(-1px); }
+        .mc-chip:active { transform: scale(0.96); }
+        .mc-chip-style { font-family: inherit; }
+        [dir="rtl"] .mc-chips-label { letter-spacing: 0; }
+
+        /* ================= Версия 1.8.5 ================= */
+        /* Поворот экрана: на время смены размера отключаем анимации панелей, иначе вьюер успевает измерить «промежуточную» высоту и остаётся с ней */
+        html.is-resizing #viewer_zone, html.is-resizing #sidebar, html.is-resizing #controls_panel, html.is-resizing #mobile_nav { transition: none !important; }
+
+        /* ================= Версия 1.8.6 ================= */
+        /* Телефон: блок «Цвет фона» больше не прибит к низу панели настроек, а идёт в конце общей ленты и прокручивается вместе с ней */
+        @media (max-width: 900px) {
+            #controls_panel { display: block; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+            #controls_panel .controls-scroll { overflow: visible; }
+            #controls_panel .bg-selector-group { flex-shrink: 0; }
+        }
             </style>
 </head>
 <body class="i18n-pending">
@@ -1320,7 +1375,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.3</div>
+            <div class="site-version">v1.8.6</div>
         </div>
     </div>
 
@@ -1564,12 +1619,35 @@
                 <button id="folderClose" class="emote-close" type="button" title="Закрыть">&times;</button>
             </div>
             <div id="folderHint" class="emote-hint"></div>
+            <details id="mcGuide" class="mc-guide">
+                <summary id="mcGuideTitle">Как переименовать и красиво назвать (коды §)</summary>
+                <div class="mc-guide-body">
+                    <div class="mc-guide-sample"><span id="mcGuideSampleLbl">Пример:</span><code id="mcGuideSampleCode"></code><span>→</span><span id="mcGuideSampleView"></span></div>
+                    <div><div class="mc-chips-label" id="mcGuideColorsLbl">Цвета</div><div class="mc-chips" id="mcChipsColors"></div></div>
+                    <div><div class="mc-chips-label" id="mcGuideBedrockLbl">Цвета Bedrock</div><div class="mc-chips" id="mcChipsBedrock"></div></div>
+                    <div><div class="mc-chips-label" id="mcGuideStylesLbl">Стили</div><div class="mc-chips" id="mcChipsStyles"></div></div>
+                    <p id="mcGuideHow">Чтобы переименовать, нажмите на название карточки, впишите новое и нажмите в любое пустое место — оно сохранится. Крестик рядом с полем вернёт прежнее название без сохранения. Пустое поле вернёт исходное название.</p>
+                    <p id="mcGuideCodes">В названии можно использовать коды форматирования из Minecraft: знак § и символ после него. Цвета: §0–§9 и §a–§f. Стили: §l — жирный, §o — курсив, §n — подчёркнутый, §m — зачёркнутый, §k — «шифр», §r — сбросить всё. Код цвета сбрасывает прежние стили, поэтому стили ставьте после цвета.</p>
+                    <p id="mcGuideType">Как набрать §: Windows — зажмите Alt и наберите 0167 на цифровой клавиатуре; Mac — Option + 6 (английская раскладка); на телефоне просто нажмите нужный код ниже, пока правите название, — он вставится сам.</p>
+                </div>
+            </details>
             <div id="folderList" class="emote-list folder-list"></div>
             <div id="folderEmpty" class="emote-hint" style="display:none;">Здесь пока пусто — нажмите «+», чтобы добавить первый файл.</div>
             <div id="folderMsg" class="emote-msg"></div>
             <div id="folderNote" class="emote-hint">Файлы хранятся только в этом браузере.</div>
             <input type="file" id="folderFile" style="display:none">
             <input type="file" id="folderIconFile" accept="image/*" style="display:none">
+        </div>
+    </div>
+
+    <div id="renameConfirm" class="emote-overlay rename-confirm">
+        <div class="emote-panel">
+            <div id="renameConfirmText" class="lang-confirm-text"></div>
+            <div class="lang-actions">
+                <button id="renameConfirmSave" type="button" class="primary">Сохранить</button>
+                <button id="renameConfirmDiscard" type="button">Не сохранять</button>
+                <button id="renameConfirmBack" type="button">Продолжить правку</button>
+            </div>
         </div>
     </div>
 
@@ -1896,7 +1974,32 @@
             "veg.tpl.prompt": "Template name:",
             "veg.tpl.default": "Template %s",
             "veg.tpl.saved": "Saved",
-            "veg.tpl.card": "Vegetation template - click to apply"
+            "veg.tpl.card": "Vegetation template - click to apply",
+
+            "rename.title": "Click to rename",
+            "rename.cancel": "Restore the previous name (don't save)",
+            "rename.placeholder": "Name (empty = original)",
+            "rename.error": "Could not save the new name",
+            "rename.confirm_text": "You changed the name but haven't saved it. Keep \"%s\"?",
+            "rename.confirm_save": "Save",
+            "rename.confirm_discard": "Don't save",
+            "rename.confirm_back": "Keep editing",
+            "rename.guide.title": "How to rename and style names (\u00a7 codes)",
+            "rename.guide.how": "To rename, click a card's name, type a new one and click any empty spot - it saves. The × next to the field restores the previous name without saving. An empty field brings back the original name.",
+            "rename.guide.codes": "Names can use Minecraft formatting codes: the \u00a7 sign followed by a character. Colors: \u00a70-\u00a79 and \u00a7a-\u00a7f. Styles: \u00a7l bold, \u00a7o italic, \u00a7n underline, \u00a7m strikethrough, \u00a7k obfuscated, \u00a7r reset all. A color code resets earlier styles, so put styles after the color.",
+            "rename.guide.example": "Example:",
+            "rename.guide.sample": "\u00a76\u00a7lGolden \u00a7r\u00a7ablock",
+            "rename.guide.type": "How to type \u00a7: Windows - hold Alt and type 0167 on the numpad; Mac - Option + 6 (US layout); on a phone just tap a code below while you are editing a name - it will be inserted for you.",
+            "rename.guide.colors": "Colors",
+            "rename.guide.bedrock": "Bedrock colors",
+            "rename.guide.styles": "Styles",
+            "rename.guide.not_editing": "First click a card's name, then tap a code to insert it",
+            "rename.style.l": "Bold",
+            "rename.style.o": "Italic",
+            "rename.style.n": "Underline",
+            "rename.style.m": "Strikethrough",
+            "rename.style.k": "Obfuscated",
+            "rename.style.r": "Reset"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2060,6 +2163,17 @@
             ['#blockGridHint', 'blocks.empty'],
             ['#folderEmpty', 'folder.empty'],
             ['#folderNote', 'folder.local_note'],
+            ['#mcGuideTitle', 'rename.guide.title'],
+            ['#mcGuideHow', 'rename.guide.how'],
+            ['#mcGuideCodes', 'rename.guide.codes'],
+            ['#mcGuideSampleLbl', 'rename.guide.example'],
+            ['#mcGuideType', 'rename.guide.type'],
+            ['#mcGuideColorsLbl', 'rename.guide.colors'],
+            ['#mcGuideBedrockLbl', 'rename.guide.bedrock'],
+            ['#mcGuideStylesLbl', 'rename.guide.styles'],
+            ['#renameConfirmSave', 'rename.confirm_save'],
+            ['#renameConfirmDiscard', 'rename.confirm_discard'],
+            ['#renameConfirmBack', 'rename.confirm_back'],
             ['#folderClose', 'emote.close', 'title'],
             ['#btnEmoteClose', 'emote.close', 'title'],
             ['#btnBgImage .bg-image-label', 'bg.image.button'],
@@ -2856,9 +2970,7 @@
                 container.style.background = bgPresets[0].value;
                 document.getElementById('loading').style.display = 'none';
 
-                window.addEventListener('resize', () => {
-                    updateViewerSize();
-                });
+                watchViewerSize(container);
 
                 initControlListeners();
                 buildBackgroundSelector();
@@ -2872,8 +2984,47 @@
         function updateViewerSize() {
             if (!skinViewer) return;
             const container = document.getElementById('viewer_zone');
-            skinViewer.width = container.clientWidth;
-            skinViewer.height = container.clientHeight;
+            const w = container.clientWidth, h = container.clientHeight;
+            if (!w || !h) return;                       // зона ещё не разложена (например, в момент смены ориентации) - не подгоняем под нули
+            skinViewer.width = w;
+            skinViewer.height = h;
+        }
+
+        /* 1.8.5: размер 3D-вьюера = размер #viewer_zone в КАЖДЫЙ момент, а не только по событию resize.
+           Раньше при повороте телефона resize приходил раньше, чем браузер пересчитывал высоту зоны (она к тому же меняется с анимацией),
+           вьюер мерил «старую» высоту и оставался с ней - после возврата в исходное положение картинка была сжата и сдвинута.
+           Теперь: ResizeObserver следит за самой зоной, поворот и visualViewport перемеряют ещё несколько раз по таймеру,
+           а на время смены размера у панелей отключаются анимации (класс is-resizing). */
+        let viewerSizeFrame = 0, viewerCalmTimer = 0;
+        function scheduleViewerSize() {
+            if (viewerSizeFrame) return;
+            viewerSizeFrame = requestAnimationFrame(() => { viewerSizeFrame = 0; updateViewerSize(); });
+        }
+        function onViewportChange() {
+            const root = document.documentElement;
+            root.classList.add('is-resizing');
+            clearTimeout(viewerCalmTimer);
+            viewerCalmTimer = setTimeout(() => { root.classList.remove('is-resizing'); scheduleViewerSize(); }, 300);
+            scheduleViewerSize();
+        }
+        function onOrientationChange() {
+            onViewportChange();
+            window.scrollTo(0, 0);
+            const nav = document.getElementById('mobile_nav');
+            if (nav) nav.classList.remove('hidden');     // после поворота нижняя панель всегда видна
+            [100, 300, 700, 1200].forEach(ms => setTimeout(scheduleViewerSize, ms));   // браузеры досчитывают размеры уже после события
+        }
+        function watchViewerSize(zone) {
+            window.addEventListener('resize', onViewportChange);
+            window.addEventListener('orientationchange', onOrientationChange);
+            window.addEventListener('pageshow', scheduleViewerSize);
+            if (window.visualViewport) window.visualViewport.addEventListener('resize', scheduleViewerSize);
+            if (window.matchMedia) {
+                const mq = window.matchMedia('(orientation: portrait)');
+                if (mq.addEventListener) mq.addEventListener('change', onOrientationChange);
+                else if (mq.addListener) mq.addListener(onOrientationChange);
+            }
+            if (typeof ResizeObserver === 'function') new ResizeObserver(scheduleViewerSize).observe(zone);
         }
         
         const GL_RENDER_OFFSETS = [
@@ -3474,11 +3625,13 @@
              label(rec)    - название на карточке (по умолчанию rec.name); цветовые коды § показываются цветом
              thumb(rec, track) - адрес картинки-превью (track создаёт object URL, который сам уберётся) или null
              thumbClass, placeholder - вид превью
-             isActive(rec), pick(rec), onRemove(rec), decorate(el, rec, rerender) */
+             isActive(rec), pick(rec), onRemove(rec), decorate(el, rec, rerender)
+             onRename(rec) - название изменили (1.8.4); autoName(rec) - исходное название, если оно не лежит в rec.name (у эмоций оно считается из самого файла) */
         const Folder = (() => {
             const $ = (id) => document.getElementById(id);
             const CFG = {};
             let kind = null, urls = [], token = 0;
+            let editing = null, pendingClose = false;     // 1.8.4: правка названия
 
             const message = (text) => { $('folderMsg').textContent = text || ''; };
             const revokeAll = () => { urls.forEach(u => URL.revokeObjectURL(u)); urls = []; };
@@ -3490,6 +3643,176 @@
                 if (!kind) return;
                 $('folderTitle').textContent = t(CFG[kind].title);
                 $('folderHint').textContent = t(CFG[kind].hint);
+            }
+
+            /* ---------- Переименование (1.8.4) ----------
+               Нажатие на название карточки превращает его в поле. Сохраняют: Enter, нажатие в любое другое место окна, переход к другой карточке.
+               × рядом с полем возвращает прежнее название без сохранения; пустое поле при сохранении = вернуть исходное название.
+               Выход из окна (×, затемнение, Esc) с несохранённой правкой спрашивает: сохранить / не сохранять / продолжить.
+               Название лежит в rec.name (rec.renamed = true, исходное - rec.origName). Одинаково работает для всех разделов. */
+            const NAME_MAX = 120, SECTION = '\u00a7';
+            const labelOf = (c, rec) => String(c.label ? c.label(rec) : (rec.name == null ? '' : rec.name));
+            const isDirty = () => !!editing && editing.input.value !== editing.start;
+            const confirmShown = () => $('renameConfirm').classList.contains('show');
+            function hideConfirm() { $('renameConfirm').classList.remove('show'); }
+
+            function startEdit(card, c, rec, nameEl) {
+                if (editing && editing.card === card) { editing.input.focus(); return; }
+                commitEdit();                                        // правилось другое название - сохраняем его
+                message('');
+                const box = document.createElement('div'), row = document.createElement('div'), input = document.createElement('input'),
+                    cancel = document.createElement('button'), preview = document.createElement('div');
+                const start = labelOf(c, rec);
+                box.className = 'rename-box';
+                row.className = 'rename-row';
+                preview.className = 'rename-preview';
+                input.type = 'text';
+                input.className = 'rename-input';
+                input.maxLength = NAME_MAX;
+                input.autocomplete = 'off';
+                input.spellcheck = false;
+                input.placeholder = t('rename.placeholder');
+                input.value = start;
+                cancel.type = 'button';
+                cancel.className = 'rename-cancel';
+                cancel.textContent = '\u00d7';
+                cancel.title = t('rename.cancel');
+                cancel.onclick = () => cancelEdit();
+                input.addEventListener('input', () => MC.render(preview, input.value));
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); commitEdit(); }
+                    e.stopPropagation();                             // стрелки, пробел и т.п. не должны попадать в горячие клавиши страницы
+                });
+                // Нажатия внутри поля не выбирают карточку и не тянут её
+                ['pointerdown', 'click', 'dblclick'].forEach(ev => box.addEventListener(ev, (e) => e.stopPropagation()));
+                row.append(input, cancel);
+                box.append(row, preview);
+                nameEl.replaceWith(box);
+                MC.render(preview, start);
+                editing = { card, c, rec, kind, box, input, nameEl, start };
+                input.focus();
+                input.select();
+            }
+
+            // Сохраняет правку (или, если ничего не поменялось, просто возвращает название на место)
+            async function commitEdit() {
+                const ed = editing;
+                if (!ed) return;
+                editing = null;
+                pendingClose = false;
+                hideConfirm();
+                const { c, rec, box, nameEl, start } = ed;
+                const show = (text) => { MC.render(nameEl, text); if (box.isConnected) box.replaceWith(nameEl); };
+                let typed = ed.input.value.trim().replace(/\u00a7+$/, '').trim();
+                if (!MC.strip(typed).trim()) typed = '';             // одни коды без текста - название осталось бы невидимым
+                const original = c.autoName ? c.autoName(rec) : (typeof rec.origName === 'string' ? rec.origName : rec.name);
+                const target = typed || original;
+                if (!target || target === start) { show(start); return; }
+                const before = { name: rec.name, renamed: rec.renamed, origName: rec.origName };
+                if (typed) {
+                    if (!rec.renamed && rec.origName === undefined) rec.origName = rec.name;
+                    rec.renamed = true;
+                } else {
+                    rec.renamed = false;
+                    delete rec.origName;
+                }
+                rec.name = target;
+                show(target);
+                try {
+                    await UserLib.put(ed.kind, rec);
+                } catch (err) {
+                    console.error('[folder]', err);
+                    rec.name = before.name;
+                    ['renamed', 'origName'].forEach(k => { if (before[k] === undefined) delete rec[k]; else rec[k] = before[k]; });
+                    show(start);
+                    message(t('rename.error'));
+                    return;
+                }
+                if (c.onRename) c.onRename(rec);
+            }
+
+            // Отмена: прежнее название возвращается, ничего не сохраняется
+            function cancelEdit() {
+                const ed = editing;
+                if (!ed) return;
+                editing = null;
+                pendingClose = false;
+                hideConfirm();
+                if (ed.box.isConnected) ed.box.replaceWith(ed.nameEl);
+            }
+
+            // Выход с несохранённой правкой: thenClose - закрыть окно папки после ответа
+            function askSave(thenClose) {
+                if (!editing) return;
+                pendingClose = !!thenClose;
+                $('renameConfirmText').textContent = t('rename.confirm_text', MC.strip(editing.input.value).trim() || '\u2026');
+                $('renameConfirm').classList.add('show');
+                $('renameConfirmSave').focus();
+            }
+            function keepEditing() {
+                hideConfirm();
+                pendingClose = false;
+                if (editing) editing.input.focus();
+            }
+            // Выход из окна пользователем (×, затемнение): с несохранённой правкой сначала спросим
+            function tryClose() {
+                if (editing && isDirty()) { askSave(true); return; }
+                close();
+            }
+
+            /* Мини-гайд по кодам §: кнопки вставляют код в редактируемое название (на телефоне § не набрать) */
+            const colorText = (hex) => {
+                const n = parseInt(hex.slice(1), 16);
+                return ((n >> 16) * 299 + ((n >> 8) & 255) * 587 + (n & 255) * 114) / 1000 > 140 ? '#111' : '#fff';
+            };
+            function insertCode(code) {
+                if (!editing) { message(t('rename.guide.not_editing')); return; }
+                message('');
+                const inp = editing.input, a = inp.selectionStart == null ? inp.value.length : inp.selectionStart, b = inp.selectionEnd == null ? a : inp.selectionEnd;
+                if (inp.value.length - (b - a) + code.length > NAME_MAX) return;
+                inp.value = inp.value.slice(0, a) + code + inp.value.slice(b);
+                inp.focus();
+                inp.setSelectionRange(a + code.length, a + code.length);
+                inp.dispatchEvent(new Event('input'));
+            }
+            function buildGuide() {
+                const colors = $('mcChipsColors');
+                if (!colors) return;
+                const chip = (code, extra) => {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'mc-chip' + (extra ? ' ' + extra : '');
+                    b.textContent = SECTION + code;
+                    b.onmousedown = (e) => e.preventDefault();       // кнопка не отнимает фокус у поля
+                    b.onclick = () => insertCode(SECTION + code);
+                    return b;
+                };
+                const fillColors = (box, codes) => {
+                    box.textContent = '';
+                    [...codes].forEach(code => {
+                        const b = chip(code), hex = MC.COLORS[code];
+                        if (!hex) return;
+                        b.style.background = hex;
+                        b.style.color = colorText(hex);
+                        box.appendChild(b);
+                    });
+                };
+                fillColors(colors, '0123456789abcdef');
+                fillColors($('mcChipsBedrock'), 'ghijpqstu');
+                const styles = $('mcChipsStyles');
+                styles.textContent = '';
+                [['l', 'font-weight:800'], ['o', 'font-style:italic'], ['n', 'text-decoration:underline'], ['m', 'text-decoration:line-through'], ['k', 'font-family:ui-monospace,Consolas,monospace'], ['r', '']].forEach(([code, css]) => {
+                    const b = chip(code, 'mc-chip-style');
+                    const word = document.createElement('span');
+                    word.style.cssText = css;
+                    word.textContent = ' ' + t('rename.style.' + code);
+                    b.appendChild(word);
+                    b.title = SECTION + code + ' - ' + t('rename.style.' + code);
+                    styles.appendChild(b);
+                });
+                const sample = t('rename.guide.sample');
+                $('mcGuideSampleCode').textContent = sample;
+                MC.render($('mcGuideSampleView'), sample);
             }
 
             /* ---------- Перестановка карточек ----------
@@ -3604,7 +3927,7 @@
             function onCardDown(e, el) {
                 if (drag || e.button !== 0) return;
                 const onHandle = !!e.target.closest('.folder-handle');
-                if (!onHandle && (e.pointerType !== 'mouse' || e.target.closest('button, a'))) return;
+                if (!onHandle && (e.pointerType !== 'mouse' || e.target.closest('button, a, input'))) return;
                 drag = { kind, card: el, pid: e.pointerId, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, started: false };
                 window.addEventListener('pointermove', onMove);
                 window.addEventListener('pointerup', onUp);
@@ -3648,9 +3971,14 @@
                     pic.className = 'folder-thumb-empty ' + (c.thumbClass || '');
                     pic.textContent = c.placeholder || '📄';
                 }
-                const label = c.label ? c.label(rec) : rec.name;           // название может содержать цветовые коды (§)
+                const label = labelOf(c, rec);                              // название может содержать цветовые коды (§)
                 const name = document.createElement('span');
+                name.className = 'folder-name';
+                name.tabIndex = 0;
+                name.title = t('rename.title');
                 MC.render(name, label);
+                name.onclick = (e) => { e.stopPropagation(); startEdit(el, c, rec, name); };      // нажатие на название - правка, а не выбор карточки
+                name.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); startEdit(el, c, rec, name); } };
                 const del = document.createElement('button');
                 del.type = 'button';
                 del.className = 'folder-del';
@@ -3658,7 +3986,7 @@
                 del.title = t('folder.delete');
                 del.onclick = async (e) => {
                     e.stopPropagation();
-                    if (!window.confirm(t('folder.delete_confirm', MC.strip(label)))) return;
+                    if (!window.confirm(t('folder.delete_confirm', MC.strip(labelOf(c, rec))))) return;
                     try { await UserLib.remove(kind, rec.id); } catch (err) { console.error('[folder]', err); message(t('folder.error')); return; }
                     if (c.onRemove) c.onRemove(rec);
                     render();
@@ -3674,6 +4002,7 @@
 
             async function render() {
                 if (!kind) return;
+                if (editing) await commitEdit();                     // список пересобирается - правку не теряем
                 const c = CFG[kind], my = ++token;
                 const items = await UserLib.list(kind);
                 if (my !== token) return;
@@ -3717,27 +4046,53 @@
             }
             function close() {
                 finishDrag(true);
+                if (editing) commitEdit();                           // сюда доходят только после выбора карточки (правка уже сохранена) или после ответа в окне подтверждения
+                hideConfirm();
                 $('folderModal').classList.remove('show');
                 revokeAll();
                 token++;
             }
-            function refresh() { applyTexts(); if (isOpen()) render(); }      // после смены языка
+            function refresh() { buildGuide(); applyTexts(); if (isOpen()) render(); }      // после смены языка
 
             function init() {
-                $('folderClose').onclick = close;
+                $('folderClose').onclick = tryClose;
                 // После перетаскивания браузер шлёт click (иногда на оверлей, если отпустили за панелью) - гасим его до остальных обработчиков
                 $('folderModal').addEventListener('click', (e) => {
                     if (suppressClick) { suppressClick = false; e.stopImmediatePropagation(); e.preventDefault(); }
                 }, true);
-                $('folderModal').onclick = (e) => { if (e.target === $('folderModal')) close(); };
+                $('folderModal').onclick = (e) => { if (e.target === $('folderModal')) tryClose(); };
                 $('folderFile').onchange = (e) => { const files = [...e.target.files]; e.target.value = ''; onFiles(files); };
                 // Escape закрывает только верхнее окно (папку), а не всё сразу; во время перетаскивания отменяет только его
                 window.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape' && isOpen()) {
-                        if (drag && drag.started) finishDrag(true); else close();
+                        if (confirmShown()) keepEditing();
+                        else if (editing) { if (isDirty()) askSave(false); else cancelEdit(); }      // Esc во время правки: выходит из правки, а не закрывает окно
+                        else if (drag && drag.started) finishDrag(true);
+                        else close();
                         e.stopImmediatePropagation();
                     }
                 }, true);
+
+                // Любое нажатие мимо поля правки сохраняет название. Не считаются: само поле, гайд с кодами (оттуда вставляют коды),
+                // окно подтверждения и выход из окна (он спросит про несохранённое сам).
+                // Сохраняем по click, а не по pointerdown: при сохранении поле сжимается в строку, карточки сдвигаются,
+                // и нажатие на название соседней карточки «промахивалось» бы - отпускание попадало уже на другое место.
+                // pressInside запоминает, где нажатие НАЧАЛОСЬ: выделение текста мышью, начатое в поле и законченное снаружи, правку не прерывает.
+                let pressInside = false;
+                const inEditZone = (el) => el === $('folderModal') || !!(el && el.closest && el.closest('.rename-box, .mc-guide, #renameConfirm, #folderClose'));
+                document.addEventListener('pointerdown', (e) => { pressInside = inEditZone(e.target); }, true);
+                document.addEventListener('click', (e) => {
+                    const inside = pressInside || inEditZone(e.target);
+                    pressInside = false;
+                    if (editing && !inside) commitEdit();
+                }, true);
+                window.addEventListener('beforeunload', (e) => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+
+                $('renameConfirmSave').onclick = async () => { const thenClose = pendingClose; await commitEdit(); if (thenClose) close(); };
+                $('renameConfirmDiscard').onclick = () => { const thenClose = pendingClose; cancelEdit(); if (thenClose) close(); };
+                $('renameConfirmBack').onclick = keepEditing;
+                $('renameConfirm').onclick = (e) => { e.stopPropagation(); if (e.target === $('renameConfirm')) keepEditing(); };
+                buildGuide();
             }
             init();
             return { register, open, close, refresh, isOpen };
@@ -4831,7 +5186,7 @@
                     cb.onchange = () => vegToggle(e.id, cb.checked);
                     cv.width = cv.height = 24;
                     nm.className = 'veg-name';
-                    nm.textContent = e.user ? e.name : vegTitle(e.id);
+                    if (e.user) MC.render(nm, e.name); else nm.textContent = vegTitle(e.id);
                     lab.append(cb, cv, nm);
                     row.appendChild(lab);
                     const icon = () => Veg.textures(e, veg.tint[e.id]).then(tx => {
@@ -5199,6 +5554,7 @@
                         await buildVegList();
                         if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false);
                     },
+                    onRename: (rec) => { if (!rec.template) buildVegList(); },
                     onRemove: (rec) => {
                         if (rec.template) return;
                         const pid = 'u-' + rec.id;
@@ -6070,7 +6426,7 @@ const EmoteCore = (() => {
    Под эмоцией показывается автор (имя - ссылка на authorUrl). Имя автора переводится так же, как у скинов: person.<Имя>.
    Названия для перевода: emote.name.<id>. Поиск по эмоциям смотрит в названия на ВСЕХ языках из lang/ (+ id и автора). */
 const EmoteUI = (() => {
-    let manifest = null, index = null, nowTitleFn = () => '', query = '', iconTarget = null;
+    let manifest = null, index = null, nowTitleFn = () => '', query = '', iconTarget = null, nowUserId = null;
     const $ = (id) => document.getElementById(id);
     const prettify = (b) => b.replace(/_/g, ' ').trim();
     const titleFor = (base, fallback) => nameFor('emote.name.' + base, fallback || prettify(base));
@@ -6193,6 +6549,7 @@ const EmoteUI = (() => {
             const r = await fetch('emotes/' + encodeURIComponent(base) + '.json', { cache: 'no-cache' });
             if (!r.ok) throw new Error('HTTP ' + r.status);
             const json = await r.json();
+            nowUserId = null;
             begin(json, () => titleFor(base, jsonTitle(json, base)));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
@@ -6215,6 +6572,7 @@ const EmoteUI = (() => {
     // Название эмоции из личной папки. Считается по самому файлу, поэтому подхватываются и эмоции, добавленные раньше (когда в name писалось имя файла)
     const userTitles = new Map();              // id записи -> { json, title }
     function userTitle(rec) {
+        if (rec.renamed && typeof rec.name === 'string' && rec.name.trim()) return rec.name;      // 1.8.4: человек переименовал эмоцию сам
         const c = userTitles.get(rec.id);
         if (c && c.json === rec.json) return c.title;
         let title;
@@ -6226,6 +6584,7 @@ const EmoteUI = (() => {
     function playUser(rec) {
         try {
             const json = JSON.parse(rec.json);
+            nowUserId = rec.id;
             begin(json, () => userTitle(rec));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
@@ -6290,6 +6649,11 @@ const EmoteUI = (() => {
                 return { name: title || file, file, json: text, icon };
             },
             label: userTitle,
+            // исходное название эмоции (из самого файла) - к нему возвращает пустое поле при переименовании
+            autoName: (rec) => {
+                try { return jsonTitle(JSON.parse(rec.json), rec.file || rec.name).slice(0, 120).replace(/\u00a7$/, ''); } catch (e) { return rec.file || rec.name; }
+            },
+            onRename: (rec) => { if (nowUserId === rec.id) { nowTitleFn = () => userTitle(rec); refresh(); } },
             thumb: (rec, track) => (rec.icon ? track(rec.icon) : null),
             decorate(el, rec, rerender) {
                 const b = document.createElement('button');
@@ -6781,7 +7145,8 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 }
             });
 
-            const scrollContainers = [document.querySelector('.controls-scroll'), document.getElementById('skinList')];
+            // На телефоне настройки (вместе с блоком «Цвет фона») прокручивает сама панель, на ПК - .controls-scroll
+            const scrollContainers = [document.querySelector('.controls-scroll'), controls, document.getElementById('skinList')];
             
             scrollContainers.forEach(container => {
                 if (!container) return;
