@@ -406,7 +406,7 @@
   "folder.reorder": "Qindeessuu deebi'anii jijjiiruuf harkisi (ykn xiyyoowwan ← → fayyadami)",
   "folder.veg.open": "Biqiltuu koo",
   "folder.veg.title": "Biqiltuu koo",
-  "folder.veg.hint": "Suuraa biqiltuu filadhu (.png ifaa qabu). Suuraan dheeraa (dheereen bal'ina irraa yoo xiqqaate si'a 1.5 kan caalu, fakkeenyaaf 16×32) biqiltuu bulookii 2 ta'a",
+  "folder.veg.hint": "Suuraa biqiltuu filadhu (.png ifaa qabu). Biqiltuu bulookii 2-f, faayiliwwan lamaan _bottom fi _top-n xumuraman filadhu. Animeeshiniif, faayilii .mcmeta dabali. Halluun, ulfaatinni fi guddinni (qabduu ⇕) kaardii irratti kallattiin qindeeffamu. Teempileetoonni qabduu \"Teempileetii olkaa'i\" tiin olkaa'amanis asuma jiru — fayyadamuuf teempileetii sana irra tuqaa",
   "folder.veg.error": "Faayilii suuraa filadhu",
   "folder.tint": "Halluu (adii — dhandhammii malee)",
   "folder.weight": "Ulfaatina (haala bu'insa)",

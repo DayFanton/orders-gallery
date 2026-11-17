@@ -406,7 +406,7 @@
   "folder.reorder": "Kéo để sắp xếp lại (hoặc dùng mũi tên ← →)",
   "folder.veg.open": "Cây của tôi",
   "folder.veg.title": "Cây của tôi",
-  "folder.veg.hint": "Chọn hình ảnh thực vật (.png có độ trong suốt). Hình ảnh cao (chiều cao lớn hơn chiều rộng ít nhất 1,5 lần, ví dụ 16×32) sẽ trở thành cây cao 2 khối",
+  "folder.veg.hint": "Chọn hình ảnh thực vật (.png có độ trong suốt). Đối với cây cao 2 khối, hãy chọn hai tệp kết thúc bằng _bottom và _top. Để tạo hoạt ảnh, hãy thêm tệp .mcmeta. Màu sắc, trọng lượng và kích thước (nút ⇕) được cấu hình ngay trên thẻ. Các mẫu được lưu bằng nút \"Lưu mẫu\" cũng nằm ở đây — nhấp vào một mẫu để áp dụng",
   "folder.veg.error": "Chọn tệp hình ảnh",
   "folder.tint": "Màu sắc (trắng — không có sắc độ)",
   "folder.weight": "Trọng số (tần suất xuất hiện)",

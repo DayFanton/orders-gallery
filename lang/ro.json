@@ -406,7 +406,7 @@
   "folder.reorder": "Trageți pentru a reordona (sau săgețile ← →)",
   "folder.veg.open": "Plantele mele",
   "folder.veg.title": "Plantele mele",
-  "folder.veg.hint": "Alegeți o imagine de plantă (.png cu transparență). O imagine înaltă (înălțimea de cel puțin 1,5 ori mai mare decât lățimea, de exemplu 16×32) va deveni o plantă de 2 blocuri",
+  "folder.veg.hint": "Alegeți o imagine de plantă (.png cu transparență). Pentru o plantă de 2 blocuri, selectați două fișiere care se termină în _bottom și _top. Pentru animație, adăugați un fișier .mcmeta. Culoarea, greutatea și dimensiunea (butonul ⇕) sunt configurate direct pe card. Șabloanele salvate cu butonul „Salvați șablonul” se află, de asemenea, aici — faceți clic pe un șablon pentru a-l aplica",
   "folder.veg.error": "Alegeți fișierul imagine",
   "folder.tint": "Culoare (alb — fără nuanță)",
   "folder.weight": "Pondere (cât de des pică)",

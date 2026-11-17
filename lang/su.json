@@ -406,7 +406,7 @@
   "folder.reorder": "Seret pikeun ngarobah susunan (atawa panah ← →)",
   "folder.veg.open": "Tutuwuhan kuring",
   "folder.veg.title": "Tutuwuhan kuring",
-  "folder.veg.hint": "Pilih gambar tutuwuhan (.png transparan). Gambar jangkung (luhur sahenteuna 1,5 kali leuwih badag tibatan rubak, contona 16×32) bakal jadi tutuwuhan 2 blok",
+  "folder.veg.hint": "Pilih gambar tutuwuhan (.png transparan). Pikeun tutuwuhan 2 blok, pilih dua file anu mungkas ku _bottom jeung _top. Pikeun animasi, tambahkeun file .mcmeta. Warna, beurat, jeung ukuran (tombol ⇕) dikonfigurasi langsung dina kartu. Témplat anu disimpen ku tombol \"Simpen témplat\" ogé aya di dieu — klik dina témplat pikeun nerapkeunana",
   "folder.veg.error": "Pilih polder gambar",
   "folder.tint": "Warna (bodas — tanpa warna)",
   "folder.weight": "Beurat (frékuénsi bijil)",

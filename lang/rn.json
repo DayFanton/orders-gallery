@@ -406,7 +406,7 @@
   "folder.reorder": "Kurura kugira uhindure urutonde (canke ukoreshe imice ← →)",
   "folder.veg.open": "Ibiterwa vyanje",
   "folder.veg.title": "Ibiterwa vyanje",
-  "folder.veg.hint": "Hitamo ishusho y'igiterwa (.png ifite ubwerabwera). Ishusho ndende (uburebure nibura incuro 1.5 kuruta ubugari, urugero 16×32) izaba igiterwa gifite amatafari abiri",
+  "folder.veg.hint": "Hitamo ishusho y'igiterwa (.png ifite ubwerabwera). Ku giterwa gifite amatafari abiri, hitamo dosiye ebyiri ziseruka na _bottom na _top. Kuri animation, yongera dosiye ya .mcmeta. Ibara, uburemere n'ingano (akabuto ⇕) bigenewe ku ikarita. Inyandikorugero zabitswe n'akabuto \"Bika inyandikorugero\" ziri hano kandi — kanda ku nyandikorugero kugira ngo uyikoreshe",
   "folder.veg.error": "Hitamo dosiye y'igiterwa",
   "folder.tint": "Ibara (umweru — ata nta ibara)",
   "folder.weight": "Uburemere (uko bigwa)",

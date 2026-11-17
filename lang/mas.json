@@ -404,7 +404,7 @@
   "folder.reorder": "Eish, olasho le olpiron (ama intare ← →)",
   "folder.veg.open": "Miti yakwa",
   "folder.veg.title": "Miti yakwa",
-  "folder.veg.hint": "Pura osisi le miti (.png eishoo obo). Osisi le nabo (oisho le enkishon e 1.5 ebo, aike 16×32) eka olosisi le boloki tosin",
+  "folder.veg.hint": "Pura osisi le miti (.png eishoo obo). Eka olosisi le boloki tosin, pura dosie adunya na _bottom na _top. Eka animation, engeta dosie ya .mcmeta. Olaitet, esisinto na esai (boon ⇕) etiki ekaadi. Template te nabo \"Save template\" eka etie nabo — tonye template eka etum",
   "folder.veg.error": "Pura osisi le faili",
   "folder.tint": "Enkai (naibor — oshin)",
   "folder.weight": "Enkai (eunyet)",

@@ -404,7 +404,7 @@
   "folder.reorder": "Trà via per cambià l'ordin (o doprè i flècc ← →)",
   "folder.veg.open": "I mè piant",
   "folder.veg.title": "I mè piant",
-  "folder.veg.hint": "Scegl un imaj de pianta (.png con trasparenza). Un imaj alta (altèssa almanch 1.5 vòlt püs granda de la larghezza, per esempi 16×32) la vegnarà a vèss una pianta de 2 bloch",
+  "folder.veg.hint": "Scegl un imaj de pianta (.png con trasparenza). Per una pianta de 2 bloch, scerniss du file che finissen con _bottom e _top. Per l'animazion, gionta un file .mcmeta. Colur, pès e dimension (botun ⇕) hinn configurà diretament in su la carta. I model salvà con el botun \"Salva model\" hinn anca chi — figa un clic in su un model per doperal",
   "folder.veg.error": "Scegl el file de l'imaj",
   "folder.tint": "Colur (bianch — sena scümatüra)",
   "folder.weight": "Pes (quand spess el ven fòra)",

@@ -404,7 +404,7 @@
   "folder.reorder": "Drag to reorder (afa arrow ← →)",
   "folder.veg.open": "Abalay koo",
   "folder.veg.title": "Abalay koo",
-  "folder.veg.hint": "Abalay kaxxa doori (.png cissi kaxxa). Xaawo xagi (xagi sidi 1.5 gaba cabbi kaxxa, ama 16×32) labba blokih abalay yibbiro",
+  "folder.veg.hint": "Abalay kaxxa doori (.png cissi kaxxa). Labba blokih abalaykih, labba fayla _bottom fi _top leh doori. Animationkih, .mcmeta fayla hayi. Rangi, miiro fi gaba (badhaana ⇕) kaaddah kallat taabanta. \"Template gadi\" badhaanah gadiime templateh woh akah tan — templateh sugse faatah",
   "folder.veg.error": "Kaxxa doori fayli",
   "folder.tint": "Xaasa (daaba — abba kaalah)",
   "folder.weight": "Qaxar (baaximah)",

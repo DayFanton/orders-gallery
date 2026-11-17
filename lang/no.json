@@ -406,7 +406,7 @@
   "folder.reorder": "Dra for å endre rekkefølge (eller bruk pilene ← →)",
   "folder.veg.open": "Mine planter",
   "folder.veg.title": "Mine planter",
-  "folder.veg.hint": "Velg et planteoversiktbilde (.png med gjennomsiktighet). Et høyt bilde (høyde minst 1,5 ganger større enn bredde, f.eks. 16×32) blir en 2 blokkers høy plante",
+  "folder.veg.hint": "Velg et planteoversiktbilde (.png med gjennomsiktighet). For en 2-blokkers høy plante, velg to filer som slutter på _bottom og _top. For animasjon, legg til en .mcmeta-fil. Farge, vekt og størrelse (knapp ⇕) konfigureres direkte på kortet. Maler lagret med «Lagre mal»-knappen ligger også her — klikk på en mal for å bruke den",
   "folder.veg.error": "Velg bildefil",
   "folder.tint": "Farge (hvit — uten fargetone)",
   "folder.weight": "Vekt (droppfrekvens)",

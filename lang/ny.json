@@ -406,7 +406,7 @@
   "folder.reorder": "Kokani kuti musinthe dongosolo (kapena gwiritsani ntchito mivi ← →)",
   "folder.veg.open": "Zomera zanga",
   "folder.veg.title": "Zomera zanga",
-  "folder.veg.hint": "Sankhani chithunzi cha chomera (.png chowoneka bwino). Chithunzi chitali (kutalika kwake koposa 1.5 kuposa m'lifupi, mwachitsanzo 16×32) chidzakhala chomera cha midadada iwiri",
+  "folder.veg.hint": "Sankhani chithunzi cha chomera (.png chowoneka bwino). Pa chomera cha midadada iwiri, sankhani mafayilo awiri omatha ndi _bottom ndi _top. Pa animation, onjezani fayilo ya .mcmeta. Mtundu, kulemera, ndi kukula (batani ⇕) zimatheka pa khadi lomwe. Zithunzi zosungidwa ndi batani la \"Sungani chithunzi\" zili pano — dinani pa chithunzi kuti mutsirize",
   "folder.veg.error": "Sankhani fayilo ya chithunzi",
   "folder.tint": "Mtundu (woyera — wopanda utoto)",
   "folder.weight": "Kulemera (kuti zimatuluka kangati)",

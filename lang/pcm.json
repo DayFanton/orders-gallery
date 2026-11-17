@@ -406,7 +406,7 @@
   "folder.reorder": "Drag to arrange again (or use arrow ← →)",
   "folder.veg.open": "My vegetation",
   "folder.veg.title": "My vegetation",
-  "folder.veg.hint": "Choze plant imaj (.png with transparency). High imaj (height at least 1.5 times pass width, e.g. 16×32) go turn to 2 block plant",
+  "folder.veg.hint": "Choze plant imaj (.png with transparency). For 2 block plant, choze two files wey dey end with _bottom and _top. For animation, add .mcmeta file. Color, weight, and size (button ⇕) dey configured straight on the card. Templates wey dem save with \"Save template\" button dey here too — click on template to use am",
   "folder.veg.error": "Choze imaj fail",
   "folder.tint": "Kolor (wayt — witot shades)",
   "folder.weight": "Wét (hō frikwɛnsi e de drop)",

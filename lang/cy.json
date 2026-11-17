@@ -406,7 +406,7 @@
   "folder.reorder": "Llusgo i ail-drefnu (neu ddefnyddio'r saethau ← →)",
   "folder.veg.open": "Fy llystyfiant i",
   "folder.veg.title": "Fy llystyfiant i",
-  "folder.veg.hint": "Dewiswch ddelwedd planhigyn (.png gyda thryloywder). Bydd delwedd uchel (uchder o leiaf 1.5 gwaith yn fwy na'r lled, e.e. 16×32) yn dod yn blanhigyn 2 floc",
+  "folder.veg.hint": "Dewiswch ddelwedd planhigyn (.png gyda thryloywder). Ar gyfer planhigyn 2 floc, dewiswch ddau ffeil sy'n gorffen gyda _bottom a _top. Ar gyfer animeiddio, ychwanegwch ffeil .mcmeta. Mae lliw, pwysau a maint (botwm ⇕) wedi'u ffurfweddu'n uniongyrchol ar y cerdyn. Mae templedi a gadwyd gyda'r botwm \"Cadw templed\" yma hefyd — cliciwch ar dempled i'n ei gymhwyso",
   "folder.veg.error": "Dewis ffeil ddelwedd",
   "folder.tint": "Lliw (gwyn — heb arliw)",
   "folder.weight": "Pwysau (amlder gollwng)",

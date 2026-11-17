@@ -406,7 +406,7 @@
   "folder.reorder": "Tata phangi o kusinana (nda kusonduka ← →)",
   "folder.veg.open": "Mitiyi yami",
   "folder.veg.title": "Mitiyi yami",
-  "folder.veg.hint": "Sola kifwanisu kia miti (.png ia kieleka). Kifwanisu kia thandu (thandu ja kala kukila 1.5 ia buleke, mbandu 16×32) ikala miti ia mabulu ayole",
+  "folder.veg.hint": "Sola kifwanisu kia miti (.png ia kieleka). Ku miti ia mabulu ayole, sola mafayile ayole a sulila la _bottom ne _top. Ku animation, tumbika faile ya .mcmeta. Langi, ulemba ni ukulu (kibuta ⇕) kiedika mu kadi. Templates ja kumbidilu ni kibuta \"Kumbidila template\" jidi m'omu — kota ku template ki wiza kukitula",
   "folder.veg.error": "Sola faile ya kifwanisu",
   "folder.tint": "Lwang'i (mutu — phamba)",
   "folder.weight": "Kulema (kuvota kw'etshiki)",

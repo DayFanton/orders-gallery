@@ -406,7 +406,7 @@
   "folder.reorder": "I-drag para bag-uhon ang han-ay (o gamita ang mga arrow ← →)",
   "folder.veg.open": "Ang akon mga tanom",
   "folder.veg.title": "Ang akon mga tanom",
-  "folder.veg.hint": "Pilia ang hulagway sang tanom (.png nga may transparency). Ang mataas nga hulagway (ang kataason indi magnubo sa 1.5 ka beses sang kangidad, halimbawa 16×32) mangin tanom nga 2 ka bloke ang kataason",
+  "folder.veg.hint": "Pilia ang hulagway sang tanom (.png nga may transparency). Para sa tanom nga 2 ka bloke, pili isa ka duha ka file nga nagakatapos sb _bottom kag _top. Para sa animation, magdugang sang .mcmeta file. Ang kulay, kabug-aton, kag kadaku (pindutan nga ⇕) gin-configure direkta sa kard. Ang mga template nga gin-save gamit ang \"I-save ang template\" nga buton ara man diri — i-klik ang template agud i-apply ini",
   "folder.veg.error": "Pilia ang file sang hulagway",
   "folder.tint": "Kolor (puti — wala sang color)",
   "folder.weight": "Timbang (kadlawon sang pagka hulog)",

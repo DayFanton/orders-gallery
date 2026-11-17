@@ -406,7 +406,7 @@
   "folder.reorder": "Seret kanggo ngganti urutan (utawa panah ← →)",
   "folder.veg.open": "Tanduranku",
   "folder.veg.title": "Tanduranku",
-  "folder.veg.hint": "Pilih gambar tanduran (.png kanthi transparansi). Gambar dhuwur (dhuwur minimal kaping 1,5 luwih gedhe tinimbang jembar, contone 16×32) bakal dadi tanduran 2 blok",
+  "folder.veg.hint": "Pilih gambar tanduran (.png kanthi transparansi). Kanggo tanduran 2 blok, pilih loro file sing nganggo pungkasan _bottom lan _top. Kanggo animasi, tambahake file .mcmeta. Werna, bobot lan ukuran (tombol ⇕) dikonfigurasi langsung ing kertu. Cithakan sing disimpen nganggo tombol \"Simpen cithakan\" uga ana ing kene — klik cithakan kanggo nggunakake",
   "folder.veg.error": "Pilih berkas gambar",
   "folder.tint": "Werna (putih — tanpa rona)",
   "folder.weight": "Bobot (frekuensi metu)",

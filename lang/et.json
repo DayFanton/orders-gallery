@@ -404,7 +404,7 @@
   "folder.reorder": "Lohistage ümberpaigutamiseks (või kasutage nooli ← →)",
   "folder.veg.open": "Minu taimed",
   "folder.veg.title": "Minu taimed",
-  "folder.veg.hint": "Valige taime pilt (.png läbipaistvusega). Kõrge pilt (kõrgus vähemalt 1,5 korda suurem kui laius, nt 16×32) muutub 2 ploki kõrguseks taimeks",
+  "folder.veg.hint": "Valige taime pilt (.png läbipaistvusega). 2 ploki kõrguse taime jaoks valige kaks faili, mis lõpevad _bottom ja _top. Animatsiooni lisamiseks lisage .mcmeta fail. Värv, kaal ja suurus (nupp ⇕) konfigureeritakse otse kaardil. Nupuga „Salva mall” salvestatud mallid asuvad samuti siin — malli rakendamiseks klõpsake sellel",
   "folder.veg.error": "Valige pildifail",
   "folder.tint": "Värv (valge — varjundita)",
   "folder.weight": "Kaal (kukkumissagedus)",

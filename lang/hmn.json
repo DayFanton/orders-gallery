@@ -404,7 +404,7 @@
   "folder.reorder": "Luag rub los txhawm rau rov teeb tsa (los yog siv xub ← →)",
   "folder.veg.open": "Kuv tsob ntoo",
   "folder.veg.title": "Kuv tsob ntoo",
-  "folder.veg.hint": "Xaiv tsob ntoo duab (.png uas pom tseeb). Cov duab siab (qhov siab tsawg kawg 1.5 zaug ntau tshaj qhov dav, piv txwv li 16×32) yuav ua tsob ntoo 2 thaiv siab",
+  "folder.veg.hint": "Xaiv tsob ntoo duab (.png uas pom tseeb). Rau tsob ntoo 2 thaiv, xaiv ob daim ntawv uas xaus rau _bottom thiab _top. Rau animation, ntxiv ib daim ntawv .mcmeta. Xim, hnyav, thiab loj (lub pob ⇕) raug teeb tsa ncaj qha rau ntawm daim npav. Cov qauv uas tau txais kev cawm los ntawm \"Txuag qauv\" pob khoom kuj nyob ntawm no — nias rau ntawm tus qauv los siv nws",
   "folder.veg.error": "Xaiv duab ntawv",
   "folder.tint": "Xim (daw — tsis muaj xim ntxiv)",
   "folder.weight": "Qhov hnyav (tsaus zaus tso tawm)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Yenidən sıralamaq üçün sürükləyin (və ya ← → oxlarından istifadə edin)",
   "folder.veg.open": "Mənim bitkilərim",
   "folder.veg.title": "Mənim bitkilərim",
-  "folder.veg.hint": "Bitki şəkli seçin (.png şəffaflıqla). Hündür şəkil (hündürlüyü enindən ən azı 1,5 dəfə çox olan, məsələn 16×32) 2 blok hündürlüyündə bitki olacaq",
+  "folder.veg.hint": "Bitki şəkli seçin (.png şəffaflıqla). 2 bloklu bitki üçün _bottom və _top ilə bitən iki fayl seçin. Animasiya üçün .mcmeta faylı əlavə edin. Rəng, çəki və ölçü (⇕ düyməsi) birbaşa kartda tənzimlənir. \"Şablonu saxla\" düyməsi ilə yadda saxlanılan şablonlar da buradadır — tətbiq etmək üçün şablona klikləyin",
   "folder.veg.error": "Şəkil faylını seçin",
   "folder.tint": "Rəng (ağ — çalarsız)",
   "folder.weight": "Çəki (düşmə tezliyi)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Jawo domin sake tsarawa (ko amfani da kibiyoyi ← →)",
   "folder.veg.open": "Ciyayina",
   "folder.veg.title": "Ciyayina",
-  "folder.veg.hint": "Zaɓi hoton shuka (.png tare da nuna gaskiya). Hoton mai tsayi (tsawon aƙalla sau 1.5 fiye da faɗi, misali 16×32) zai zama shuka mai bulo 2",
+  "folder.veg.hint": "Zaɓi hoton shuka (.png tare da nuna gaskiya). Don shuka mai bulo 2, zaɓi fayiloli biyu masu ƙarewa da _bottom da _top. Don motsi, ƙara fayil ɗin .mcmeta. Launi, nauyi, da girma (maɓalli ⇕) an saita su kai tsaye akan katin. Samfuran da aka adana tare da maɓallin \"Ajiye samfuri\" suma suna nan — danna kan samfuri don amfani da shi",
   "folder.veg.error": "Zaɓi fayil ɗin hoto",
   "folder.tint": "Launi (fari — ba tare da launi ba)",
   "folder.weight": "Nauyi (yawan sauka)",

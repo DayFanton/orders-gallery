@@ -404,7 +404,7 @@
   "folder.reorder": "Tsala ukuze utshintshe ucwangco (okanye usebenzise iintolo ← →)",
   "folder.veg.open": "Izityalo zam",
   "folder.veg.title": "Izityalo zam",
-  "folder.veg.hint": "Khetha umfanekiso wesityalo (.png onokucaca). Umfanekiso omade (ukuphakama ubuncinane kuphindwe 1.5 ngobubanzi, umz. 16×32) uya kuba sityalo esineebhloko ezi-2",
+  "folder.veg.hint": "Khetha umfanekiso wesityalo (.png onokucaca). Kwisityalo seenqanaba ezi-2, khetha iifayile ezimbini eziphela ngo-_bottom no-_top. Ukuze wenze oopopayi, yongeza ifayela .mcmeta. Umbala, ubunzima, kunye nobungakanani (iqhosha ⇕) ziqwalaselwa ngqo kwikhadi. Iitemplate ezigcinwe ngeqhosha elithi \"Gcina itemplate\" zikho apha — cofa kwitemplate ukuze uyisebenzise",
   "folder.veg.error": "Khetha ifayile yomfanekiso",
   "folder.tint": "Umbala (omhlophe — ngaphandle kombala)",
   "folder.weight": "Ubunzima (ukuhla rhoo)",

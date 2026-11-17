@@ -406,7 +406,7 @@
   "folder.reorder": "Traga hetsike nɔnɔmetata tsɔ tsɔ tsɔtsɔ (alo zã mɔ̃kpui ← →)",
   "folder.veg.open": "Ŋutilafa nyenyewo",
   "folder.veg.title": "Ŋutilafa nyenyewo",
-  "folder.veg.hint": "Tia ŋutilafa ƒe nɔnɔme (.png si le ʋuʋum). Nɔnɔme kɔkɔ (kɔkɔ kple kekeme sɔ kple zi 1.5, elabena 16×32) azuzu ŋutilafa si le blɔk eve kɔkɔme",
+  "folder.veg.hint": "Tia ŋutilafa ƒe nɔnɔme (.png si le ʋuʋum). Le blɔk eve ƒe nɔnɔme la, tia nuŋlɔɖi eve siwo nuwuwu nye _bottom kple _top. Ne èdi dɔwɔwɔ la, tsɔ nuŋlɔɖi .mcmeta kpe ɖe eŋu. Amadede, kpekpeme kple lolome (bɔtu ⇕) le nɔnɔmewo ƒe kpɔɖeŋu dzi tututu. Nɔnɔmewo siwo woɖo ɖe dɔ me kple \"Dzra nɔnɔme ɖo\" bɔtɔ la le afii hã — zã nɔnɔme la le eŋu",
   "folder.veg.error": "Tia nɔnɔme ƒe fiile",
   "folder.tint": "Amadede (wit — evɔ meli o)",
   "folder.weight": "Kpekpeme (ale si wòdzena zi gbɔ zi gbɔ)",

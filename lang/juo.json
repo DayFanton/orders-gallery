@@ -404,7 +404,7 @@
   "folder.reorder": "Lwok luwo kendo (koso tic gi mogo ← →)",
   "folder.veg.open": "Miti amata anga",
   "folder.veg.title": "Miti amata anga",
-  "folder.veg.hint": "Miti amata fita (.png ma'a shafafiyya). Miti ma lamba (lamba min 1.5 marrat min width, jaisey 16×32) kibanna miti ma block biya la",
+  "folder.veg.hint": "Miti amata fita (.png ma'a shafafiyya). Miti ma block biya, file lamu ma end bi _bottom fi _top fita. Animation mana, .mcmeta file add fita. Color, weight, fi size (⇕ button) card latan set fita. Template ma save by \"Save template\" button fita loia — click fita template latan use fita",
   "folder.veg.error": "Miti amata file fita",
   "folder.tint": "Rangi (ler — pe ni rangi mbele)",
   "folder.weight": "Rem (namba ma pe ni kondo)",

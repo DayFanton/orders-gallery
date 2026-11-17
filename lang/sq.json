@@ -406,7 +406,7 @@
   "folder.reorder": "Tërhiq për të rirenditur (ose shigjetat ← →)",
   "folder.veg.open": "Bimët e mia",
   "folder.veg.title": "Bimët e mia",
-  "folder.veg.hint": "Zgjidhni një imazh bime (.png me transparencë). Një imazh i lartë (lartësia të paktën 1.5 herë më e madhe se gjerësia, p.sh. 16×32) do të bëhet një bimë me 2 blloqe",
+  "folder.veg.hint": "Zgjidhni një imazh bime (.png me transparencë). Për një bimë me 2 blloqe, zgjidhni dy skedarë që mbarojnë me _bottom dhe _top. Për animacion, shtoni një skedar .mcmeta. Ngjyra, pesha dhe madhësia (butoni ⇕) konfigurohen direkt në kartë. Shabllonet e ruajtura me butonin \"Ruaj shabllonin\" gjenden gjithashtu këtu — klikoni mbi një shabllon për ta aplikuar atë",
   "folder.veg.error": "Zgjidhni skedarin e imazhit",
   "folder.tint": "Ngjyra (e bardhë — pa nuancë)",
   "folder.weight": "Pesha (shpeshtësia e rënies)",

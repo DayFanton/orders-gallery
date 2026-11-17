@@ -406,7 +406,7 @@
   "folder.reorder": "Buruta ili kupanga upya (au tumumia mishale ← →)",
   "folder.veg.open": "Mimea yangu",
   "folder.veg.title": "Mimea yangu",
-  "folder.veg.hint": "Chagua picha ya mimea (.png yenye uwazi). Picha ndefu (urefu angalau mara 1.5 kuliko upana, mfano 16×32) itakuwa mmea wa bloki 2",
+  "folder.veg.hint": "Chagua picha ya mimea (.png yenye uwazi). Kwa mmea wa bloki 2, chagua faili mbili zinazoisha kwa _bottom na _top. Kwa uhuishaji, ongeza faili ya .mcmeta. Rangi, uzito, na saizi (kifungo ⇕) vimewekwa moja kwa moja kwenye kadi. Templates zilizohifadhiwa kwa kitufe cha \"Hifadhi template\" ziko pia hapa — bonyeza kwenye template ili kuitumia",
   "folder.veg.error": "Chagua faili la picha",
   "folder.tint": "Rangi (nyeupe — bila kivuli)",
   "folder.weight": "Uzito (marudio ya kuanguka)",

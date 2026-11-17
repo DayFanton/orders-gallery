@@ -404,7 +404,7 @@
   "folder.reorder": "Velciet, lai mainītu secību (vai izmantojiet bultiņas ← →)",
   "folder.veg.open": "Mani augi",
   "folder.veg.title": "Mani augi",
-  "folder.veg.hint": "Izvēlieties auga attēlu (.png ar caurspīdīgumu). Augsts attēls (augstums vismaz 1,5 reizes lielāks par platumu, piemēram, 16×32) kļūs par 2 bloku augu",
+  "folder.veg.hint": "Izvēlieties auga attēlu (.png ar caurspīdīgumu). Augam ar 2 blokiem izvēlieties divus failus, kas beidzas ar _bottom un _top. Animācijai pievienojiet .mcmeta failu. Krāsa, svars un izmērs (poga ⇕) tiek konfigurēti tieši kartītē. Veidnes, kas saglabātas ar pogu \"Saglabāt veidni\", arī atrodas šeit — noklikšķiniet uz veidnes, lai to lietotu",
   "folder.veg.error": "Izvēlieties attēla failu",
   "folder.tint": "Krāsa (balta — bez nokrāsas)",
   "folder.weight": "Svars (krišanas biežums)",

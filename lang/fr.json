@@ -406,7 +406,7 @@
   "folder.reorder": "Glisser pour réordonner (ou flèches ← →)",
   "folder.veg.open": "Mes plantes",
   "folder.veg.title": "Mes plantes",
-  "folder.veg.hint": "Choisissez une image de plante (.png avec transparence). Une image haute (hauteur au moins 1,5 fois supérieure à la largeur, par exemple 16×32) deviendra une plante de 2 blocs",
+  "folder.veg.hint": "Choisissez une image de plante (.png avec transparence). Pour une plante à 2 blocs, sélectionnez deux fichiers se terminant par _bottom et _top. Pour l'animation, ajoutez un fichier .mcmeta. La couleur, le poids et la taille (bouton ⇕) sont configurés directement sur la carte. Les modèles enregistrés avec le bouton « Enregistrer le modèle » se trouvent également ici — cliquez sur un modèle pour l'appliquer",
   "folder.veg.error": "Choisir le fichier image",
   "folder.tint": "Couleur (blanc — sans nuance)",
   "folder.weight": "Poids (fréquence d'obtention)",

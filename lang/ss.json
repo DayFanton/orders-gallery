@@ -404,7 +404,7 @@
   "folder.reorder": "Hudvula kute ushintshe kulandzelana (noma usebentise micibisholo ← →)",
   "folder.veg.open": "Titjalo tami",
   "folder.veg.title": "Titjalo tami",
-  "folder.veg.hint": "Khetha sitsandzwa setitjalo (.png lesikhanya). Sitfombe lesidze (kuphakama lokungenani kuphindvwe kani 1.5 kububanti, sib. 16×32) kutawuba sitjalo semabhuloki lamabili",
+  "folder.veg.hint": "Khetha sitsandzwa setitjalo (.png lesikhanya). Esitjalo semabhuloki lamabili, khetha amafayela lamabili alaphela nga-_bottom na-_top. Kute wente umdvwebo longcile, engetela ifayela .mcmeta. Umbala, budisi kanye nebukhulu (inkinobho ⇕) kutfolakala ngalokucondzile ekhadini. Emathempuleti lofake nga \"Gcina ithempuleti\" akhona lapha — chofoza ithempuleti kute uyisebentise",
   "folder.veg.error": "Khetha ifayela lesitfombe",
   "folder.tint": "Umbala (lomhlophe — ngaphandle kwembala)",
   "folder.weight": "Kusebenta (kuvela kwalesento)",

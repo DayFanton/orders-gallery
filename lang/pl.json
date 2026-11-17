@@ -406,7 +406,7 @@
   "folder.reorder": "Przeciągnij, aby zmienić kolejność (lub strzałki ← →)",
   "folder.veg.open": "Moje rośliny",
   "folder.veg.title": "Moje rośliny",
-  "folder.veg.hint": "Wybierz obraz rośliny (.png z przezroczystością). Wysoki obraz (wysokość co najmniej 1,5 raza większa niż szerokość, np. 16×32) stanie się rośliną o wysokości 2 bloków",
+  "folder.veg.hint": "Wybierz obraz rośliny (.png z przezroczystością). Dla rośliny o wysokości 2 bloków wybierz dwa pliki z końcówkami _bottom i _top. Do animacji dodaj plik .mcmeta. Kolor, waga i rozmiar (przycisk ⇕) są konfigurowane bezpośrednio na karcie. Szablony zapisane za pomocą przycisku „Zapisz szablon” również znajdują się tutaj — kliknij szablon, aby go zastosować",
   "folder.veg.error": "Wybierz plik obrazu",
   "folder.tint": "Kolor (biały — bez odcienia)",
   "folder.weight": "Waga (częstotliwość wypadania)",

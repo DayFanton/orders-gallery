@@ -406,7 +406,7 @@
   "folder.reorder": "Drag to reorder (o arrow ← →)",
   "folder.veg.open": "Nabo angu",
   "folder.veg.title": "Nabo angu",
-  "folder.veg.hint": "Nabo photo thabena (.png transparency ena). Lamba photo (unai width taru 1.5 guna jada, jaisey 16×32) 2 block lamba nabo hobena",
+  "folder.veg.hint": "Nabo photo thabena (.png transparency ena). 2 block nabo bona, _bottom bona _top dani file rua thabena. Animation bona, .mcmeta file apana. Color, weight, bona size (⇕ button) card latan set hobena. \"Template save\" button dani save hobena template tauna loia — template tauna click hobena",
   "folder.veg.error": "Photo file thabena",
   "folder.tint": "Rongo (kuro — maro mara)",
   "folder.weight": "Muri (doko arora)",

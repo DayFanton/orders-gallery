@@ -406,7 +406,7 @@
   "folder.reorder": "Gula go fetola thulaganyo (kgotsa dirisa metsu ← →)",
   "folder.veg.open": "Dimela tsa me",
   "folder.veg.title": "Dimela tsa me",
-  "folder.veg.hint": "Alola setshwantsho sa semela (.png e e bonalang). Setshwantsho se seleele (bophahamo bonyane makhetlo a 1.5 go feta bophara, sekai 16×32) e tla nna semela sa dibloko tse 2",
+  "folder.veg.hint": "Alola setshwantsho sa semela (.png e e bonalang). Fa e le semela sa dibloko tse 2, tlhopha mela e miiri e e felelang ka _bottom le _top. Go dira animeshini, tsenya faele ya .mcmeta. Mmala, boima le bogolo (konopo ⇕) di rulagantswe ka tlhamalo mo kareteng. Dithempleiti tse di bolokilweng ka konopo ya \"Boloka thempleiti\" di teng fano gape — tobetsa mo thempleiting go e dirisa",
   "folder.veg.error": "Alola faele ya setshwantsho",
   "folder.tint": "Mmala (o mosweu — ntle le mmala)",
   "folder.weight": "Boima (kgwedi ya gowa)",

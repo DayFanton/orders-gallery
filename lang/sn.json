@@ -404,7 +404,7 @@
   "folder.reorder": "Dhonai kuti uchinje kurongeka (kana shandisa miseve ← →)",
   "folder.veg.open": "Zvirimwa zvangu",
   "folder.veg.title": "Zvirimwa zvangu",
-  "folder.veg.hint": "Sarudza mufananidzo wechirimwa (.png ine pachena). Mufananidzo murefu (kureba kanenge ka 1.5 kakakura kudarika hupamhi, semuenzaniso 16×32) uchange uita chirimwa chemabhuroko maviri",
+  "folder.veg.hint": "Sarudza mufananidzo wechirimwa (.png ine pachena). Kune chirimwa chemabhuroko maviri, sarudza mafaera maviri anopera ne _bottom ne _top. Kuti uve ne animation, wedzera faira re .mcmeta. Ruvara, huremu, uye saizi (bhatani ⇕) zvinogadzirwa zvakananga pakadhi. Matembleti akachengetwa nebhatani re \"Chengeta tem pleti\" ari pano zvakare — tinya pa tem pleti kuti uzvishandise",
   "folder.veg.error": "Sarudza faira remufananidzo",
   "folder.tint": "Ruvara (chena — pasina zvimwe)",
   "folder.weight": "Kurema (kakawanda kwarova)",

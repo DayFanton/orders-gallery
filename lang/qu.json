@@ -404,7 +404,7 @@
   "folder.reorder": "Pantallamanta fototaqa mana hap'iyta atikurqanchu",
   "folder.veg.open": "Sach'akunay",
   "folder.veg.title": "Sach'akunay",
-  "folder.veg.hint": "Sach'aq rikch'anta akllay (.png transparentniyuq). Hatun rikch'acha (altunninqa ancha aswan 1.5 kiti sayayniyuq, ahinataq 16×32) iskay blockniyuq sach'aman tukunqa",
+  "folder.veg.hint": "Sach'aq rikch'anta akllay (.png transparentniyuq). Iskay blockniyuq sach'apaqqa, _bottom wan _top nisqawan t'aqasqa iskay archivota akllay. Animationpaqqa .mcmeta archivota yapay. Llimphi, llasay, sayayninpas (⇕ button) tarjatamanta qatichisqam kachkan. \"Template waqaychay\" buttonwan waqaychasqa templatekunapas kaypim kachkan — t'inkiy template nisqaman llamk'achinaykipaq",
   "folder.veg.error": "Rikch'a archivota akllay",
   "folder.tint": "Llimpi (yuraq — mana huk llimpiyuq)",
   "folder.weight": "K'uskiynin (mayk'aqchus chayamun)",

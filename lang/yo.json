@@ -406,7 +406,7 @@
   "folder.reorder": "Fa lati tunto (tabi lo awọn ọfa ← →)",
   "folder.veg.open": "Awọn ohun ọgbin mi",
   "folder.veg.title": "Awọn ohun ọgbin mi",
-  "folder.veg.hint": "Yan aworan ohun ọgbin (.png pẹlu gbangba). Aworan giga (giga o kere ju igba 1.5 tobi ju iwọn lọ, fun apẹẹrẹ 16×32) yoo di ohun ọgbin bulọọki 2",
+  "folder.veg.hint": "Yan aworan ohun ọgbin (.png pẹlu gbangba). Fun ohun ọgbin bulọọki 2, yan awọn faili meji ti o pari pẹlu _bottom ati _top. Fun ere idaraya, fi faili .mcmeta kun. Awọ, iwuwo, ati iwọn (bọtini ⇕) ti tunto taara lori kaadi naa. Awọn awoṣe ti o fipamọ pẹlu bọtini \"Fipamọ awoṣe\" wa nibi pẹlu — tẹ lori awoṣe lati lo",
   "folder.veg.error": "Yan aṣayan aworan",
   "folder.tint": "Àwọ̀ (funfun — láìsí àwọ̀ yòówù)",
   "folder.weight": "Ìwọ̀n (igbohunsafẹfẹ ìṣubu)",

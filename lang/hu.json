@@ -404,7 +404,7 @@
   "folder.reorder": "Húzza az átrendezéshez (vagy használja a ← → nyilakat)",
   "folder.veg.open": "Növényeim",
   "folder.veg.title": "Növényeim",
-  "folder.veg.hint": "Válasszon ki egy növényképet (.png áttetszőséggel). A magas kép (a magasság legalább 1,5-szer nagyobb, mint a szélesség, pl. 16×32) 2 blokk magas növénnyé válik",
+  "folder.veg.hint": "Válasszon ki egy növényképet (.png áttetszőséggel). 2 blokk magas növénnyel kapcsolatban válasszon ki két fájlt, amelyek _bottom és _top végződésűek. Az animációhoz adja hozzá a .mcmeta fájlt. A szín, a súly és a méret (⇕ gomb) közvetlenül a kártyán állítható be. A „Sablon mentése” gombbal mentett sablonok szintén itt találhatók – kattintson egy sablonra annak alkalmazásához",
   "folder.veg.error": "Képfájl kiválasztása",
   "folder.tint": "Szín (fehér — árnyalat nélkül)",
   "folder.weight": "Súly (ejtési gyakoriság)",

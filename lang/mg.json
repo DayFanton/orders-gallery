@@ -404,7 +404,7 @@
   "folder.reorder": "Teteho mba hanovana ny filaharana (na ampiasao ireo zana-tsipìka ← →)",
   "folder.veg.open": "Ny zavamaniry eto amiko",
   "folder.veg.title": "Ny zavamaniry eto amiko",
-  "folder.veg.hint": "Safidio ny sarin-javamaniry (.png misy mangarahara). Ny sary lava (ny haavony farafahakeliny 1.5 henyan'ny sakany, ohatra 16×32) dia ho zavamaniry misy sakana roa",
+  "folder.veg.hint": "Safidio ny sarin-javamaniry (.png misy mangarahara). Ho an'ny zavamaniry misy sakana roa, safidio ny rakitra roa mifarana amin'ny _bottom sy _top. Ho an'ny fihetsiketsehana, ampio ny rakitra .mcmeta. Ny loko, lanja ary habeny (bokotra ⇕) dia voalamitra mivantana ao amin'ny karatra. Ny lamina voatahiry tamin'ny bokotra \"Tehirizo ny lamina\" dia eto koa — kitiho ny lamina iray raha hampihatra izany",
   "folder.veg.error": "Safidio ny rakitra sary",
   "folder.tint": "Loko (fotsy — tsy misy loko)",
   "folder.weight": "Lanja (faharetan'ny fivoahana)",

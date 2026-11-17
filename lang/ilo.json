@@ -404,7 +404,7 @@
   "folder.reorder": "I-drag tapno sukatan ti urnos (wenno usaren dagiti pana ← →)",
   "folder.veg.open": "Dagiti mulak",
   "folder.veg.title": "Dagiti mulak",
-  "folder.veg.hint": "Piliin ti ladawan ti mula (.png nga adda transparency). Ti nangato a ladawan (katayag a di lessay ngem 1.5 a daras a dakdakkel ngem ti lakapad, kas iti 16×32) ket agbalin a mula nga 2 a bloke ti katayagna",
+  "folder.veg.hint": "Piliin ti ladawan ti mula (.png nga adda transparency). Para iti mula nga 2 a bloke, piliin ti dua a file nga agpatingga iti _bottom ken _top. Para iti animation, mangrnagnad iti .mcmeta file. Ti maris, gatad ken kadakkel (botonda nga ⇕) ket nakaconfigure a direkta iti kard. Dagiti template a naisalakan babaen ti \"Isalakan ti template\" a botonda ket adda met ditoy — i-click ti template tapno maaramat",
   "folder.veg.error": "Piliin ti file ti ladawan",
   "folder.tint": "Kulay (ti napudaw — awan ti kulayna)",
   "folder.weight": "Timbang (dalas ti pannakahulogna)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Træk for at ændre rækkefølge (eller brug pilene ← →)",
   "folder.veg.open": "Mine planter",
   "folder.veg.title": "Mine planter",
-  "folder.veg.hint": "Vælg et plantebillede (.png med gennemsigtighed). Et højt billede (højde mindst 1,5 gange større end bredde, f.eks. 16×32) bliver en 2 blokke høj plante",
+  "folder.veg.hint": "Vælg et plantebillede (.png med gennemsigtighed). For en 2-blokke høj plante skal du vælge to filer, der ender på _bottom og _top. Til animation skal du tilføje en .mcmeta-fil. Farve, vægt og størrelse (knap ⇕) konfigureres direkte på kortet. Skabeloner gemt med knappen \"Gem skabelon\" er også her — klik på en skabelon for at anvende den",
   "folder.veg.error": "Vælg billedfil",
   "folder.tint": "Farve (hvid — uden nuance)",
   "folder.weight": "Vægt (drop hyppighed)",

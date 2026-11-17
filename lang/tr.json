@@ -406,7 +406,7 @@
   "folder.reorder": "Yeniden sıralamak için sürükleyin (veya ← → okları)",
   "folder.veg.open": "Bitkilerim",
   "folder.veg.title": "Bitkilerim",
-  "folder.veg.hint": "Bir bitki görseli seçin (şeffaflıklı .png). Uzun bir görsel (yüksekliği genişliğin en az 1,5 katı, örneğin 16x32), 2 blok yüksekliğinde bir bitki olacaktır",
+  "folder.veg.hint": "Bir bitki görseli seçin (şeffaflıklı .png). 2 blokluk bir bitki için _bottom ve _top ile biten iki dosya seçin. Animasyon için .mcmeta dosyası ekleyin. Renk, ağırlık ve boyut (⇕ düğmesi) doğrudan kart üzerinde yapılandırılır. \"Şablonu kaydet\" düğmesiyle kaydedilen şablonlar da burada bulunur — uygulamak için bir şablona tıklayın",
   "folder.veg.error": "Görsel dosyası seç",
   "folder.tint": "Renk (beyaz — tonda değil)",
   "folder.weight": "Ağırlık (düşme sıklığı)",

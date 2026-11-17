@@ -406,7 +406,7 @@
   "folder.reorder": "Přetažením změňte pořadí (nebo použijte šipky ← →)",
   "folder.veg.open": "Moje rostliny",
   "folder.veg.title": "Moje rostliny",
-  "folder.veg.hint": "Vyberte obrázek rostliny (.png s průhledností). Vysoký obrázek (výška alespoň 1,5krát větší než šířka, např. 16×32) se stane rostlinou vysokou 2 bloky",
+  "folder.veg.hint": "Vyberte obrázek rostliny (.png s průhledností). Pro rostlinu vysokou 2 bloky vyberte dva soubory končící na _bottom a _top. Pro animaci přidejte soubor .mcmeta. Barva, váha a velikost (tlačítko ⇕) se nastavují přímo na kartě. Šablony uložené tlačítkem „Uložit šablonu“ jsou také zde — kliknutím na šablonu ji použijete",
   "folder.veg.error": "Vybrat soubor obrázku",
   "folder.tint": "Barva (bílá — bez odstínu)",
   "folder.weight": "Váha (frekvence padání)",

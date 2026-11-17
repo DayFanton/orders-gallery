@@ -404,7 +404,7 @@
   "folder.reorder": "Tapa oco okuhandula vali (ileka omuve ← →)",
   "folder.veg.open": "Olosisi viange",
   "folder.veg.title": "Olosisi viange",
-  "folder.veg.hint": "Nanga efwaniso lolosisi (.png ya talamena). Efwaniso yalaba (ulaba wa kala okila 1.5 yebalaka, nduti 16×32) ikala olosisi yolovulu yivali",
+  "folder.veg.hint": "Nanga efwaniso lolosisi (.png ya talamena). Kuli olosisi yolovulu yivali, nanga olofaile iviali via sulila la _bottom la _top. Kuli animation, tumbika ofaile ya .mcmeta. Olala, ocilepesi kuenda ukulu (olutumu ⇕) viwa viwa kokatilika. Olofaile via sanduliwa la olutumu \"Sandula templete\" vi kasi vo loku — tata templete oco o yilukise",
   "folder.veg.error": "Nanga faile yefwaniso",
   "folder.tint": "Ocilonga (ocela — ka kuli onepa)",
   "folder.weight": "Ocilemo (okuvela kweciwa)",

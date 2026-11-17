@@ -406,7 +406,7 @@
   "folder.reorder": "Sered ka'ngnga' ganti' urutan (atawa panah ← →)",
   "folder.veg.open": "Tanaman ka",
   "folder.veg.title": "Tanaman ka",
-  "folder.veg.hint": "Pilih gambar tanaman (.png kalawan transparan). Gambar dhuwur (dhuwur minimal 1,5 kalè lebbi rajâ èbandingaghi lebbar, contona 16×32) bakal dhaddi tanaman 2 blok",
+  "folder.veg.hint": "Pilih gambar tanaman (.png kalawan transparan). Kanggo tanduran 2 blok, pilih duwâ file sè ètutup kalawan _bottom ban _top. Kanggo animasi, tamba'aghi file .mcmeta. Warnana, berbe'na, ban okoran (tombol ⇕) èkonfigurasi langsung è kartu. Témplat sè èsimpen kalawan tombol \"Simpen témplat\" bâdâ kèya è bun — klik témplat ka'angguy ngèbat",
   "folder.veg.error": "Pilih berkas gambar",
   "folder.tint": "Loko (fotsy — tsy misy loko)",
   "folder.weight": "Bobot (kalandefan fivoahana)",

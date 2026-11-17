@@ -404,7 +404,7 @@
   "folder.reorder": "Tartibini o'zgartirish uchun sudrab olib boring (yoki ← → strelkalaridan foydalaning)",
   "folder.veg.open": "Mening o'simliklarim",
   "folder.veg.title": "Mening o'simliklarim",
-  "folder.veg.hint": "O'simlik rasmini tanlang (.png shaffoflik bilan). Baland rasm (balandligi enidan kamida 1,5 barobar katta, masalan 16×32) 2 blokli o'simlikka aylanadi",
+  "folder.veg.hint": "O'simlik rasmini tanlang (.png shaffoflik bilan). 2 blokli o'simlik uchun _bottom va _top bilan tugaydigan ikkita faylni tanlang. Animatsiya uchun .mcmeta faylini qo'shing. Rang, vazn va o'lcham (⇕ tugmasi) to'g'ridan-to'g'ri kartada sozlangan. \"Andunani saqlash\" tugmasi bilan saqlangan andunalar ham shu yerda — uni qo'llash uchun andunani bosing",
   "folder.veg.error": "Rasm faylini tanlash",
   "folder.tint": "Rang (oq — tusiz)",
   "folder.weight": "Ogʻirlik (tushish chastotasi)",

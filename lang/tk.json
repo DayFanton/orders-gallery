@@ -406,7 +406,7 @@
   "folder.reorder": "Tertibini üýtgetmek üçin süýräň (ýa-da ← → oklaryny ulanyň)",
   "folder.veg.open": "Meniň ösümliklerim",
   "folder.veg.title": "Meniň ösümliklerim",
-  "folder.veg.hint": "Ösümlik suratyny saýlaň (.png açyklyk bilen). Belent surat (beýikligi iniňden azyndan 1,5 esse uly, mysal üçin 16×32) 2 blokly ösümlik bolar",
+  "folder.veg.hint": "Ösümlik suratyny saýlaň (.png açyklyk bilen). 2 blokly ösümlik üçin _bottom we _top bilen gutarýan iki faýly saýlaň. Animasiýa üçin .mcmeta faýlyny goşuň. Reňk, agram we ölçeg (⇕ düwmäsi) göni kartada sazlanýar. \"Şablony ýatda sakla\" düwmäsi bilen ýatda saklanan şablonlar hem şu ýerdedir — ony ulanmak üçin şablona basyň",
   "folder.veg.error": "Surat faýlyny saýlaň",
   "folder.tint": "Reňk (ak — reňksiz)",
   "folder.weight": "Agramy (düşme ýygylygy)",

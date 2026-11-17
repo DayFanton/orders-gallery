@@ -404,7 +404,7 @@
   "folder.reorder": "Tarraing chun ord a athrú (nó na saigheada ← →)",
   "folder.veg.open": "Mo phlandaí",
   "folder.veg.title": "Mo phlandaí",
-  "folder.veg.hint": "Roghnaigh íomhá planda (.png le trédhearcacht). Beidh íomhá ard (airde ar a laghad 1.5 uair níos mó ná leithead, e.g. 16×32) ina phlanda 2 bhloc",
+  "folder.veg.hint": "Roghnaigh íomhá planda (.png le trédhearcacht). Le haghaidh planda 2 bhloc, roghnaigh dhá chomhad a chríochnaíonn le _bottom agus _top. Le haghaidh beochana, cuir comhad .mcmeta leis. Cumraítear dath, meáchan agus méid (cnaipe ⇕) go díreach ar an gcárta. Tá teimpléid a shábháiltear leis an gcnaipe \"Sábháil teimpléad\" anseo freisin — cliceáil ar theimpléad chun é a chur i bhfeidhm",
   "folder.veg.error": "Roghnaigh comhad íomhá",
   "folder.tint": "Dath (bán — gan dath breise)",
   "folder.weight": "Meáchan (minicíocht titim)",

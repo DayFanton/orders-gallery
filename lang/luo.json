@@ -406,7 +406,7 @@
   "folder.reorder": "Guru mondo iji gi chenro (koso ti gi yadh ← →)",
   "folder.veg.open": "Yathedhe",
   "folder.veg.title": "Yathedhe",
-  "folder.veg.hint": "Yied kido mar yath (.png mar ler). Kido ma bor (bor mar kwan ma romo 1.5 ma romo chal ni 16×32) biro bedo yath mar bok adek",
+  "folder.veg.hint": "Yied kido mar yath (.png mar ler). Ne yath mar bok adek, yied dosie ariyo mako e _bottom gi _top. Ne animation, mako dosie .mcmeta. Rang, pek kod pek (baton ⇕) igero e kadi. Template ma ochan gi baton \"Chako template\" ni bende nitie ka — ny'ind template mondo itum",
   "folder.veg.error": "Yied fail mar kido",
   "folder.tint": "Rang (makachiel — onge rang mar achiel)",
   "folder.weight": "Pimo (nyalgo mar podho)",

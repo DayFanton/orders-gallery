@@ -406,7 +406,7 @@
   "folder.reorder": "Zum Neuanordnen ziehen (oder Pfeile ← → verwenden)",
   "folder.veg.open": "Meine Pflanzen",
   "folder.veg.title": "Meine Pflanzen",
-  "folder.veg.hint": "Wählen Sie ein Pflanzenbild (.png mit Transparenz). Ein hohes Bild (Höhe mindestens 1,5-mal größer als die Breite, z. B. 16×32) wird zu einer 2 Blöcke hohen Pflanze",
+  "folder.veg.hint": "Wählen Sie ein Pflanzenbild (.png mit Transparenz). Wählen Sie für eine 2 Blöcke hohe Pflanze zwei Dateien mit den Endungen _bottom und _top aus. Fügen Sie für Animationen eine .mcmeta-Datei hinzu. Farbe, Gewicht und Größe (Schaltfläche ⇕) werden direkt auf der Karte konfiguriert. Mit der Schaltfläche „Vorlage speichern“ gespeicherte Vorlagen befinden sich ebenfalls hier – klicken Sie auf eine Vorlage, um sie anzuwenden",
   "folder.veg.error": "Bilddatei auswählen",
   "folder.tint": "Farbe (weiß — ohne Farbton)",
   "folder.weight": "Gewicht (Drop-Häufigkeit)",

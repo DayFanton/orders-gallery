@@ -404,7 +404,7 @@
   "folder.reorder": "Hudula ukushintsha uhlelo (noma sebenzisa imicibisholo ← →)",
   "folder.veg.open": "Izitshalo zami",
   "folder.veg.title": "Izitshalo zami",
-  "folder.veg.hint": "Khetha isithombe sesitshalo (.png esinokubonakala). Isithombe eside (ukuphakama okungenani kuphindwe 1.5 ububanzi, isb. 16×32) sizoba isitshalo samabhulokhi angu-2",
+  "folder.veg.hint": "Khetha isithombe sesitshalo (.png esinokubonakala). Esitshalweni samabhulokhi angu-2, khetha amafayela amabili aphela ngo-_bottom no-_top. Ukuze uthole opopayi, engeza ifayela .mcmeta. Umbala, isisindo, kanye nosayizi (inkinobho ⇕) kulungiselelwa ngqo ekhadini. Amasampula alondolozwe ngenkinobho ethi \"Gcina isampula\" nawo akhona lapha — chofoza isampula ukuze ulyisebenzise",
   "folder.veg.error": "Khetha ifayela lesithombe",
   "folder.tint": "Umbala (omhlophe — ngaphandle kombala)",
   "folder.weight": "Isisindo (ukuba khona kokuwa)",

@@ -404,7 +404,7 @@
   "folder.reorder": "Hula ho fetola tatellano (kapa sebelisa metsu ← →)",
   "folder.veg.open": "Dimela tsa ka",
   "folder.veg.title": "Dimela tsa ka",
-  "folder.veg.hint": "Khetha setšoantšo sa semela (.png e bonahalang). Setšoantšo se selele (bophahamo bonyane makhetlo a 1.5 ho feta bophara, mohlala 16×32) e tla ba semela sa li-block tse 2",
+  "folder.veg.hint": "Khetha setšoantšo sa semela (.png e bonahalang). Bakeng sa semela sa li-block tse 2, khetha faele tse peli tse felang ka _bottom le _top. Bakeng sa animation, eketsa faele ea .mcmeta. 'Mala, boima le boholo (konopo ⇕) li hlophisitsoe ka ho тола kareteng. Litemplate tse bolokiloeng ka konopo ea \"Boloka template\" le tsona li teng mona — tobetsa ho template ho e sebelisa",
   "folder.veg.error": "Khetha faele ea setšoantšo",
   "folder.tint": "Mmala (oe tšoeu — ntle le moriti)",
   "folder.weight": "Boima (maqhubu a ho oela)",

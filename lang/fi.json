@@ -406,7 +406,7 @@
   "folder.reorder": "Vedä järjestääksesi uudelleen (tai käytä nuolia ← →)",
   "folder.veg.open": "Omat kasvini",
   "folder.veg.title": "Omat kasvini",
-  "folder.veg.hint": "Valitse kasvikuva (.png läpinäkyvyydellä). Korkea kuva (korkeus vähintään 1,5 kertaa leveyttä suurempi, esim. 16×32) muuttuu 2 lohkon korkuiseksi kasviksi",
+  "folder.veg.hint": "Valitse kasvikuva (.png läpinäkyvyydellä). Valitse 2 lohkon korkuiselle kasville kaksi tiedostoa, joiden päätteet ovat _bottom ja _top. Lisää animaatiota varten .mcmeta-tiedosto. Väri, paino ja koko (⇕-painike) määritetään suoraan kortissa. \"Tallenna malli\" -painikkeella tallennetut mallit ovat myös täällä – napsauta mallia ottaaksesi sen käyttöön",
   "folder.veg.error": "Valitse kuvatiedosto",
   "folder.tint": "Väri (valkoinen — ilman sävyä)",
   "folder.weight": "Paino (pudotustaajuus)",

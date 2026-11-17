@@ -406,7 +406,7 @@
   "folder.reorder": "Kokela ku cinca landelelano (kumbe u tirhisa mintsu ← →)",
   "folder.veg.open": "Swimila swa mina",
   "folder.veg.title": "Swimila swa mina",
-  "folder.veg.hint": "Hlawula xifaniso xa swimila (.png leyi vonikelaka). Xifaniso lexi lehaheke (ku leha ka kona ku ringana minkarhi leyi nga ni 1.5 ku tlula vuanu, xikombiso 16×32) xi ta va ximila xa tiboko timbirhi",
+  "folder.veg.hint": "Hlawula xifaniso xa swimila (.png leyi vonikelaka). Eka ximila xa tiboko timbirhi, hlawula tifayile timbirhi leti helaka hi _bottom na _top. Eka animation, engetefa fayile ya .mcmeta. Muhlovo, ntiko na vukulu (bokisi ⇕) swi lulamisiwile hi ku kongoma eka khadi. Ti-template leti hlayisiwaka hi bokisi ra \"Hlayisa ti-template\" ti kona laha — tinya eka ti-template leswaku u ti tirhisa",
   "folder.veg.error": "Hlawula fayili ya xifaniso",
   "folder.tint": "Mbala (ku basa — handle ka mbala)",
   "folder.weight": "Vuleki (ku fika ka nkarhi)",

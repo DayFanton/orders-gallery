@@ -406,7 +406,7 @@
   "folder.reorder": "Terbiyayışi vurnenayîşî bikiş (ya zi tîran ← → bixebitîne)",
   "folder.veg.open": "Tebiya mi",
   "folder.veg.title": "Tebiya mi",
-  "folder.veg.hint": "Yewê tebia binusne (.png ke şevefiyayo). Yewê berze (berziya xo ke en tay 1.5 gırdê ra 16×32) bibe tebia dı blokan",
+  "folder.veg.hint": "Yewê tebia binusne (.png ke şevefiyayo). Qandê tebia 2 blokan, dı fêlê ke bı _bottom u _top qediyenê bıvinê. Qandê animasyonî fêlê .mcmeta bınusne. Reng, giranî u pîse (düymê ⇕) raşt ser karta de yena ayar kerdene. Templateyê ke bı düymê \"Template bınuse\" ameyê qayt kerdene zî uca derê — qandê tetbiq kerdene ser template ke.",
   "folder.veg.error": "Yewê dosya binusne",
   "folder.tint": "Reng (se sıpê — bê reng)",
   "folder.weight": "Giran (çend marê vecîno)",

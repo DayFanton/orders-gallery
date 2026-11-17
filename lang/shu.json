@@ -404,7 +404,7 @@
   "folder.reorder": "Jur ila tabdil al-tartiib (aw ista'mil al-asham ← →)",
   "folder.veg.open": "Nabatati",
   "folder.veg.title": "Nabatati",
-  "folder.veg.hint": "Ikhtir surat nabat (.png ma'a shafafiyya). Surat tawila (al-irtifaq 'ala al-aqall 1.5 marrat min al-'ard, mithl 16×32) satusbih nabatan min balukayn",
+  "folder.veg.hint": "Ikhtir surat nabat (.png ma'a shafafiyya). Lil-nabat min balukayn, ikhtir milafayn yuntahiyan bi _bottom wa _top. Lil-tahrik, adif milaf .mcmeta. Al-lawn, al-wazn, wal-hajm (zir ⇕) tutabaq mubasharatan 'ala al-bitaqa. Al-qawalib allati tumma hifzuha bi zir \"Hifz al-qalib\" mawjudat hunayda aydan — unqur 'ala qalib li tatbiqihi",
   "folder.veg.error": "Ikhtir milaf as-surat",
   "folder.tint": "اللون (أبيض — بدون تدرج)",
   "folder.weight": "الوزن (معدل السقوط)",

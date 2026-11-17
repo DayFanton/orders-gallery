@@ -404,7 +404,7 @@
   "folder.reorder": "Slepen om te herschikken (of gebruik de pijlen ← →)",
   "folder.veg.open": "Mijn planten",
   "folder.veg.title": "Mijn planten",
-  "folder.veg.hint": "Kies een plantafbeelding (.png met transparantie). Een hoge afbeelding (hoogte minstens 1,5 keer groter dan breedte, bijv. 16×32) wordt een plant van 2 blokken hoog",
+  "folder.veg.hint": "Kies een plantafbeelding (.png met transparantie). Kies voor een plant van 2 blokken twee bestanden die eindigen op _bottom en _top. Voeg voor animatie een .mcmeta-bestand toe. Kleur, gewicht en grootte (knop ⇕) worden direct op de kaart geconfigureerd. Sjablonen die zijn opgeslagen met de knop \"Sjabloon opslaan\" staan ​​hier ook — klik op een sjabloon om deze toe te passen",
   "folder.veg.error": "Afbeeldingsbestand kiezen",
   "folder.tint": "Kleur (wit — zonder tint)",
   "folder.weight": "Gewicht (drop frequentie)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Trascina per riordinare (o usa le frecce ← →)",
   "folder.veg.open": "Le mie piante",
   "folder.veg.title": "Le mie piante",
-  "folder.veg.hint": "Scegli un'immagine di pianta (.png con trasparenza). Un'immagine alta (altezza almeno 1,5 volte superiore alla larghezza, ad esempio 16×32) diventerà una pianta alta 2 blocchi",
+  "folder.veg.hint": "Scegli un'immagine di pianta (.png con trasparenza). Per una pianta alta 2 blocchi, seleziona due file che terminano con _bottom e _top. Per l'animazione, aggiungi un file .mcmeta. Colore, peso e dimensione (pulsante ⇕) si configurano direttamente sulla scheda. I modelli salvati con il pulsante \"Salva modello\" si trovano anche qui: fai clic su un modello per applicarlo",
   "folder.veg.error": "Scegli file immagine",
   "folder.tint": "Colore (bianco — senza tonalità)",
   "folder.weight": "Peso (frequenza di drop)",

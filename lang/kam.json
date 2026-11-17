@@ -406,7 +406,7 @@
   "folder.reorder": "Thama nĩguo ũvĩndũie mbandĩ (kana ũtumĩe mĩguĩ ← →)",
   "folder.veg.open": "Miti yakwa",
   "folder.veg.title": "Miti yakwa",
-  "folder.veg.hint": "Thuranĩa mũhianano wa miti (.png ĩĩ na ũtheri). Mũhianano mũlaiku (ũlaiku mbee wa mĩiganjo 1.5 kwi ũene, ta 16×32) ũkaĩkĩa mti wa mavaluki meerĩ",
+  "folder.veg.hint": "Thuranĩa mũhianano wa miti (.png ĩĩ na ũtheri). Mti wa mavaluki meerĩ, thurania dosiye ili ikathira na _bottom na _top. Kuri animation, yongera dosiye ya .mcmeta. Rangi, uito na nene (gataburu ⇕) ni mĩango yĩ kaatini. Template ila nasywa na gataburu \"Asya template\" ni syĩ vandũ va — dunda template nĩguo ũtumĩre",
   "folder.veg.error": "Thuranĩa faili ya mĩhianano",
   "folder.tint": "Rangi (njeru — na kĩtĩ)",
   "folder.weight": "Ũito (kĩla kĩvaka)",

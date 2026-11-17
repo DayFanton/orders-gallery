@@ -406,7 +406,7 @@
   "folder.reorder": "Drag karo badle ke liye (ya arrows ← → use karo)",
   "folder.veg.open": "Mor banaspati",
   "folder.veg.title": "Mor banaspati",
-  "folder.veg.hint": "Banaspati ka photo chuno (.png transparency ke sath). Lamba photo (unchai chaurai se kam se kam 1.5 guna zyada, jaise 16×32) 2 block lamba banaspati ban jaiga",
+  "folder.veg.hint": "Banaspati ka photo chuno (.png transparency ke sath). 2 block banaspati ke liye, _bottom aur _top se khatam hone wali do file chuno. Animation ke liye, .mcmeta file joro. Rang, wajan aur size (⇕ button) seedhe card par set kiye jate hain. \"Template save karo\" button se save kiye gaye template bhi yahin hain — isko use karne ke liye template par click karo",
   "folder.veg.error": "Photo file chuno",
   "folder.tint": "Rang (safeed — bina rang ke)",
   "folder.weight": "Wajan (kitni baar drop hota hai)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Povucite za promjenu redoslijeda (ili strelice ← →)",
   "folder.veg.open": "Moje biljke",
   "folder.veg.title": "Moje biljke",
-  "folder.veg.hint": "Odaberite sliku biljke (.png s prozirnošću). Visoka slika (visina najmanje 1,5 puta veća od širine, npr. 16×32) postat će biljka visoka 2 bloka",
+  "folder.veg.hint": "Odaberite sliku biljke (.png s prozirnošću). Za biljku visoku 2 bloka odaberite dvije datoteke koje završavaju s _bottom i _top. Za animaciju dodajte datoteku .mcmeta. Boja, težina i veličina (gumb ⇕) konfiguriraju se izravno na kartici. Predlošci spremljeni gumbom „Spremi predložak” također se nalaze ovdje — kliknite na predložak da biste ga primijenili",
   "folder.veg.error": "Odaberite datoteku slike",
   "folder.tint": "Boja (bijela — bez nijanse)",
   "folder.weight": "Težina (učestalost ispadanja)",

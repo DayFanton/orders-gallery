@@ -406,7 +406,7 @@
   "folder.reorder": "拖動以重新排序（或使用 ← → 箭頭）",
   "folder.veg.open": "我的植物",
   "folder.veg.title": "我的植物",
-  "folder.veg.hint": "選擇植物圖片（帶透明度的 .png）。高圖（高度至少為寬度的 1.5 倍，例如 16×32）將變成 2 個方塊高的植物",
+  "folder.veg.hint": "選擇植物圖片（帶透明度的 .png）。對於 2 個方塊高的植物，請選擇以 _bottom 和 _top 結尾嘅兩個文件。如需動畫，請添加 .mcmeta 文件。顏色、重量同尺寸（⇕ 按鈕）直接在卡片上進行配置。通過“保存模板”按鈕保存嘅模板都喺度——點擊模板即可應用",
   "folder.veg.error": "選擇圖片文件",
   "folder.tint": "顏色（白色——無色調）",
   "folder.weight": "權重（掉落頻率）",

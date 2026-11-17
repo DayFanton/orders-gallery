@@ -404,7 +404,7 @@
   "folder.reorder": "Seret untuk susun semula (atau anak panah ← →)",
   "folder.veg.open": "Tanaman saya",
   "folder.veg.title": "Tanaman saya",
-  "folder.veg.hint": "Pilih imej tumbuhan (.png dengan ketelusan). Imej tinggi (ketinggian sekurang-kurangnya 1.5 kali ganda daripada lebar, contohnya 16×32) akan menjadi tumbuhan 2 blok",
+  "folder.veg.hint": "Pilih imej tumbuhan (.png dengan ketelusan). Untuk tumbuhan 2 blok, pilih dua fail yang berakhir dengan _bottom dan _top. Untuk animasi, tambahkan fail .mcmeta. Warna, berat dan saiz (butang ⇕) dikonfigurasikan terus pada kad. Templat yang disimpan dengan butang \"Simpan templat\" juga berada di sini — klik pada templat untuk gunakannya",
   "folder.veg.error": "Pilih fail imej",
   "folder.tint": "Warna (putih — tanpa rona)",
   "folder.weight": "Berat (kekerapan jatuh)",

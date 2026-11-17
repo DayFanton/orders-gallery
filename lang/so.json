@@ -406,7 +406,7 @@
   "folder.reorder": "Jiid si aad dib ugu habayso (ama isticmaal fallaadhaha ← →)",
   "folder.veg.open": "Dhirtayda",
   "folder.veg.title": "Dhirtayda",
-  "folder.veg.hint": "Dooro sawirka dhirta (.png oo daahfuran). Sawir dheer (dhererku ugu yaraan 1.5 jeer ka weyn yahay balaca, tusaale 16×32) wuxuu noqon doonaa dhir laba baloog ah",
+  "folder.veg.hint": "Dooro sawirka dhirta (.png oo daahfuran). Dhirta laba baloog ah, dooro laba fayl oo ku dhammaada _bottom iyo _top. Animations-ka, ku dar faylka .mcmeta. Midabka, miisaanka, iyo cabbirka (badhanka ⇕) waxaa lagu habeeyaa si toos ah kaarka. Template-yada lagu keydiyay badhanka \"Save template\" ayaa iyaguna halkaan jooga — guji template si aad u isticmaasho",
   "folder.veg.error": "Dooro faylka sawirka",
   "folder.tint": "Midab (cad — aan lahayn midab kale)",
   "folder.weight": "Miisaanka (intuu soo dhacayo)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Drag to reorder (mata arrows ← →)",
   "folder.veg.open": "Xaawowuwa koo",
   "folder.veg.title": "Xaawowuwa koo",
-  "folder.veg.hint": "Xaawo qixxisiri qixxi (.png qixxite). Qixxite xaawo (xaawo xagi 1.5 kowu gatamote, lawishshaho 16×32) 2 boloqote xaawo ikkitanno",
+  "folder.veg.hint": "Xaawo qixxisiri qixxi (.png qixxite). 2 boloqote xaawo ikkitanno wote, _bottom fi _top qixxite gakatanno lama fayile qixxi. Animeshinete, .mcmeta fayile amadi. Kalaru, miiro fi gade (badhanete ⇕) kaardichu qixxitekka gakatanno. \"Template gata\" badhanete qixxisiri template gani wolu kiro no — templete qixxi hige gata",
   "folder.veg.error": "Qixxite fayli qixxi",
   "folder.tint": "Qocolo (boora — illame male)",
   "folder.weight": "Gafi (ha'neemmo wole)",

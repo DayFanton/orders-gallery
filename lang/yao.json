@@ -406,7 +406,7 @@
   "folder.reorder": "Kokani kuti musinthe dongosolo (kapena mkatale mivi ← →)",
   "folder.veg.open": "Miti yangu",
   "folder.veg.title": "Miti yangu",
-  "folder.veg.hint": "Kusanya chitepo cha miti (.png chakuwoneka). Chitepo chitala (kutalika kwake kuŵe ka 1.5 kuposa m'lifupi mwachitsanzo 16×32) chichata chitepo cha miti chiŵiri",
+  "folder.veg.hint": "Kusanya chitepo cha miti (.png chakuwoneka). Pa chitepo cha miti chiwiri, sankhani mafayili gaŵiri gagumila ni _bottom ni _top. Pa animation, wajani fayilo ya .mcmeta. Mtundu, kulemera ni ukulu (batani ⇕) wukonjekedwa pa kadi mwachindunji. Mawuni gakuchedwa ni batani \"Sungani mawuni\" gali pano — dinani pa mawuni kuti mugwiriske ntchito",
   "folder.veg.error": "Kusanya chitepo cha faili",
   "folder.tint": "Mtundu (wera — ngagwera mtundu)",
   "folder.weight": "Ulemu (ndakai sya kugwa)",

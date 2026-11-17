@@ -404,7 +404,7 @@
   "folder.reorder": "Kokaka po na kobongola molongo (to kosalela milolo ← →)",
   "folder.veg.open": "Nzeté na ngai",
   "folder.veg.title": "Nzeté na ngai",
-  "folder.veg.hint": "Pona elilingi ya nzeté (.png na pole). Elilingi ya molayi (bolayi koleka 1.5 ya bonene, na ndakisa 16×32) ekomaka nzeté ya mabulu mibale",
+  "folder.veg.hint": "Pona elilingi ya nzeté (.png na pole). Mpona nzeté ya mabulu mibale, pona mafayile mibale oyo esilisaka na _bottom mpe _top. Mpona animation, bakisa fayile ya .mcmeta. Lángi, kilo mpe bonene (kofele ⇕) ezali na kati ya karati. Template oyo ebombami na kofele \"Bomba template\" ezali mpe awa — kiti na template mpo na kosalela yango",
   "folder.veg.error": "Pona faili ya elilingi",
   "folder.tint": "Langi (pembe — ezangi langi ya boye)",
   "folder.weight": "Bopekwani (mpasi ya kokweyá)",

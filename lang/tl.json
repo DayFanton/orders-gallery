@@ -406,7 +406,7 @@
   "folder.reorder": "I-drag para palitan ang pagkakasunod-sunod (o gamitin ang mga arrow ← →)",
   "folder.veg.open": "Ang aking mga halaman",
   "folder.veg.title": "Ang aking mga halaman",
-  "folder.veg.hint": "Pumili ng larawan ng halaman (.png na may transparency). Ang isang matangkad na larawan (ang taas ay hindi bababa sa 1.5 beses na mas malaki kaysa sa lapad, halimbawa 16×32) ay magiging halaman na may 2 bloke",
+  "folder.veg.hint": "Pumili ng larawan ng halaman (.png na may transparency). Para sa isang halaman na may 2 bloke, pumili ng dalawang file na nagtatapos sa _bottom at _top. Para sa animation, magdagdag ng .mcmeta file. Ang kulay, timbang, at laki (button ⇕) ay naka-configure nang direktang sa card. Ang mga template na naka-save gamit ang button na \"I-save ang template\" ay naririto rin — mag-click sa isang template para ilapat ito",
   "folder.veg.error": "Piliin ang file ng imahe",
   "folder.tint": "Kulay (puti — walang kulay-tov)",
   "folder.weight": "Timbang (dalas ng pagpatak)",

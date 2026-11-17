@@ -406,7 +406,7 @@
   "folder.reorder": "Tempkite norėdami pakeisti tvarką (arba rodykles ← →)",
   "folder.veg.open": "Mano augalai",
   "folder.veg.title": "Mano augalai",
-  "folder.veg.hint": "Pasirinkite augalo paveikslėlį (.png su permatomumu). Aukštas paveikslėlis (aukštis bent 1,5 karto didesnis už plotį, pvz., 16×32) taps 2 blokų augalu",
+  "folder.veg.hint": "Pasirinkite augalo paveikslėlį (.png su permatomumu). 2 blokų augalui pasirinkite du failus, pasibaigiančius _bottom ir _top. Animacijai pridėkite .mcmeta failą. Spalva, svoris ir dydis (mygtukas ⇕) konfigūruojami tiesiai kortelėje. Šablonai, išsaugoti mygtuku „Išsaugoti šabloną“, taip pat yra čia – spustelėkite šabloną, kad jį pritaikytumėte",
   "folder.veg.error": "Pasirinkti paveikslėlio failą",
   "folder.tint": "Spalva (balta — be atspalvio)",
   "folder.weight": "Svoris (kritimo dažnis)",

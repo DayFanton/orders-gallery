@@ -406,7 +406,7 @@
   "folder.reorder": "Gungudani u shandula mbekanyano (kana ni shumise mifura ← →)",
   "folder.veg.open": "Zwimela zwanga",
   "folder.veg.title": "Zwimela zwanga",
-  "folder.veg.hint": "Nangani tshifanyiso tsha zwimela (.png ya vha ya vhonala). Tshifanyiso tsha u lela (vulele la vha u fhirisa vhuphara nga maraga ya 1.5, tsumbo 16×32) i do vha tshimela tsha zwibula zwivhili",
+  "folder.veg.hint": "Nangani tshifanyiso tsha zwimela (.png ya vha ya vhonala). Kha tshimela tsha zwibula zwivhili, nangani mafayile mavhili a fhelaho nga _bottom na _top. Kha animation, engedzani fayile ya .mcmeta. Mbala, urembe na vhukulu (butumu ⇕) zwo dzudzanywa nga u Kongoma kha khadi. Themureiti dzo vhulungwaho nga butumu vha \"Vhulunga themureiti\" dzi hone hafha — vha kandedze themureiti u itela u i shumisa",
   "folder.veg.error": "Nangani faele ya tshifanyiso",
   "folder.tint": "Mbala (ya luvhala — i si na mbala)",
   "folder.weight": "Tshilemo (tshikhula tsha u wa)",

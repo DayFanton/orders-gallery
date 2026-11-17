@@ -406,7 +406,7 @@
   "folder.reorder": "Bëtu ngir coppti (walla jëfandikoo mbalit yi ← →)",
   "folder.veg.open": "Suuf si ma am",
   "folder.veg.title": "Suuf si ma am",
-  "folder.veg.hint": "Tànnal nataalu suuf (.png bu leer). Nataal bu kawe (kawe bi raw na yaatu bi 1.5 yoon, mel ni 16×32) dina nekk suuf bu am ñaari bët",
+  "folder.veg.hint": "Tànnal nataalu suuf (.png bu leer). Ngir suuf bu am ñaari bët, tànnal ñaari dossier yi ñu jeexale ak _bottom ak _top. Ngir animation, yokkal dossier .mcmeta. Melokaan, deret ak tolluwaay (bouton ⇕) dañu leen di defar ci carte bi. Modèle yi ñu denc ak bouton \"Denc modèle\" nekk nañ fi tamit — bësal ci modèle bi ngir jëfandiko ko",
   "folder.veg.error": "Tànnal nataalu file bi",
   "folder.tint": "Melokani (weex — amul benn melo)",
   "folder.weight": "Dole (ni mu koy am)",

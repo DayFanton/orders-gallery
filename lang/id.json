@@ -406,7 +406,7 @@
   "folder.reorder": "Seret untuk mengubah urutan (atau panah ← →)",
   "folder.veg.open": "Tanaman saya",
   "folder.veg.title": "Tanaman saya",
-  "folder.veg.hint": "Pilih gambar tanaman (.png dengan transparansi). Gambar tinggi (tinggi setidaknya 1,5 kali lebih besar dari lebar, misalnya 16×32) akan menjadi tanaman setinggi 2 blok",
+  "folder.veg.hint": "Pilih gambar tanaman (.png dengan transparansi). Untuk tanaman setinggi 2 blok, pilih dua file yang berakhiran _bottom dan _top. Untuk animasi, tambahkan file .mcmeta. Warna, berat, dan ukuran (tombol ⇕) dikonfigurasi langsung di kartu. Templat yang disimpan dengan tombol \"Simpan templat\" juga ada di sini — klik templat untuk menerapkannya",
   "folder.veg.error": "Pilih berkas gambar",
   "folder.tint": "Warna (putih — tanpa rona)",
   "folder.weight": "Bobot (frekuensi kemunculan)",

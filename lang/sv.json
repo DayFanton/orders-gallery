@@ -406,7 +406,7 @@
   "folder.reorder": "Dra för att ändra ordning (eller använd pilarna ← →)",
   "folder.veg.open": "Mina växter",
   "folder.veg.title": "Mina växter",
-  "folder.veg.hint": "Välj en växtbild (.png med transparens). En hög bild (höjd minst 1,5 gånger större än bredd, t.ex. 16×32) blir en 2 block hög växt",
+  "folder.veg.hint": "Välj en växtbild (.png med transparens). För en 2-block hög växt, välj två filer som slutar på _bottom och _top. För animation, lägg till en .mcmeta-fil. Färg, vikt och storlek (knapp ⇕) konfigureras direkt på kortet. Mallar som sparats med knappen \"Spara mall\" också finns här — klicka på en mall för att använda den",
   "folder.veg.error": "Välj bildfil",
   "folder.tint": "Färg (vit — utan nyans)",
   "folder.weight": "Vikt (droppfrekvens)",

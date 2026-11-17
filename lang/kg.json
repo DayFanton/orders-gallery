@@ -406,7 +406,7 @@
   "folder.reorder": "Kwenda sambu na kubumba diaka (to sadila miba ← →)",
   "folder.veg.open": "Nti na mono",
   "folder.veg.title": "Nti na mono",
-  "folder.veg.hint": "Solula kifwanisu ya nti (.png ya kemonaka). Kifwanisu ya ndai (ndai mingi kuluta nene na 1.5, mbandu 16×32) ta kituka nti ya mabulu zole",
+  "folder.veg.hint": "Solula kifwanisu ya nti (.png ya kemonaka). Sambu na nti ya mabulu zole, solula ba faye zole ya me manisaka na _bottom mpe _top. Sambu na animation, yika faye .mcmeta. Langi, kilo mpe nene (kinono ⇕) kele na karte mosi. Template ya me lombwa na kinono \"Bomba template\" kele mpe awa — fita na template sambu na sadila yo",
   "folder.veg.error": "Solula afile ya kifwanisu",
   "folder.tint": "Langi (mpembe — kukonda luvila)",
   "folder.weight": "Mfunu (mpova ya kubwila)",

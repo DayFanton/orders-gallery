@@ -406,7 +406,7 @@
   "folder.reorder": "Arrossega per reordenar (o utilitza les fletxes ← →)",
   "folder.veg.open": "Les meves plantes",
   "folder.veg.title": "Les meves plantes",
-  "folder.veg.hint": "Trieu una imatge de planta (.png amb transparència). Una imatge alta (alçada almenys 1,5 vegades més gran que l'amplada, per exemple 16×32) es convertirà en una planta de 2 blocs",
+  "folder.veg.hint": "Trieu una imatge de planta (.png amb transparència). Per a una planta de 2 blocs, seleccioneu dos fitxers que acabin en _bottom i _top. Per a l'animació, afegiu un fitxer .mcmeta. El color, el pes i la mida (botó ⇕) es configuren directament a la targeta. Les plantilles desades amb el botó «Desa la plantilla» també es troben aquí — feu clic a una plantilla per aplicar-la",
   "folder.veg.error": "Trieu el fitxer d'imatge",
   "folder.tint": "Color (blanc — sense tonalitat)",
   "folder.weight": "Pes (freqüència de caiguda)",

@@ -406,7 +406,7 @@
   "folder.reorder": "Emonguevi hag̃ua jey (tereojopy takamburu ← →)",
   "folder.veg.open": "Che ñanduti",
   "folder.veg.title": "Che ñanduti",
-  "folder.veg.hint": "Eiporavo ñanduti ra'ãnga (.png transparency rehegua). Ra'ãnga yvate (yvateve asy mbo'y 1.5 mbo'y mbytegua, techapyrã 16×32) oiko va'erã peteĩ ñanduti mokõi block rehegua",
+  "folder.veg.hint": "Eiporavo ñanduti ra'ãnga (.png transparency rehegua). Mokõi block ñanduti rehegua, eiporavo mokõi ñanduti omoherakuãva _bottom ha _top. Animation rehegua, embojuapy .mcmeta ra'ãnga. Hova, puku ha tuicha (⇕ button) oñemba'apo ko'ãva card ári. Template oñongatupyre \"Template moingatu\" button rupive oĩ avei ko'ápe — eikutu template ári eipuru hag̃ua",
   "folder.veg.error": "Eiporavo ra'ãnga mbohape",
   "folder.tint": "Sa'y (morotĩ — ndaikovéva sa'y)",
   "folder.weight": "Peteĩva (mbovýpa ojehecha)",

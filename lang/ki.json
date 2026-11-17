@@ -406,7 +406,7 @@
   "folder.reorder": "Thurania niguo ũgarũre mwandiko (kana ũhũthĩre mĩguĩ ← →)",
   "folder.veg.open": "Miti yakwa",
   "folder.veg.title": "Miti yakwa",
-  "folder.veg.hint": "Thurania mũhianano wa miti (.png ĩrĩ na ũtheri). Mũhianano mũire (ũire mũiganjo wa 1.5 kana makiria ya ũtheri, ta 16×32) ũgakorwo ũrĩ mti wa mabatiri meerĩ",
+  "folder.veg.hint": "Thurania mũhianano wa miti (.png ĩrĩ na ũtheri). Kuri mti wa mabatiri meerĩ, thurania dosiye igiri irĩ na gĩthuri gĩa _bottom na _top. Kuri animation, yongera dosiye ya .mcmeta. Rangi, uito na ũnene (gataburu ⇕) biheanwo na njĩra ya ĩkaro. Template iria irigithĩtio na gataburu \"Igithia template\" irĩ haha nacio — hinya template niguo ũtumĩre",
   "folder.veg.error": "Thurania faili ya mĩhianano",
   "folder.tint": "Rangi (njeru — hatari rangi ingĩ)",
   "folder.weight": "Ũritu (rĩu rĩkonania)",

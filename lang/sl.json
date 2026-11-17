@@ -404,7 +404,7 @@
   "folder.reorder": "Povlecite za spremembo vrstnega reda (ali uporabite puščice ← →)",
   "folder.veg.open": "Moje rastline",
   "folder.veg.title": "Moje rastline",
-  "folder.veg.hint": "Izberite sliko rastline (.png s prosojnostjo). Visoka slika (višina vsaj 1,5-krat večja od širine, npr. 16×32) bo postala 2 bloka visoka rastlina",
+  "folder.veg.hint": "Izberite sliko rastline (.png s prosojnostjo). Za 2 bloka visoko rastlino izberite dve datoteki s končnicama _bottom in _top. Za animacijo dodajte datoteko .mcmeta. Barva, teža in velikost (gumb ⇕) se nastavijo neposredno na kartici. Predloge, shranjene z gumbom »Shrani predlogo«, prav tako ležijo tukaj — kliknite na predlogo, da jo uporabite",
   "folder.veg.error": "Izberite slikovno datoteko",
   "folder.tint": "Barva (bela — brez odtenka)",
   "folder.weight": "Teža (pogostnost padanja)",

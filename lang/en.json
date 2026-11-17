@@ -404,7 +404,7 @@
   "folder.reorder": "Drag to reorder (or arrows ← →)",
   "folder.veg.open": "My plants",
   "folder.veg.title": "My plants",
-  "folder.veg.hint": "Choose a plant image (.png with transparency). A tall image (height at least 1.5 times greater than width, e.g. 16×32) will become a 2-block-tall plant",
+  "folder.veg.hint": "Choose a plant image (.png with transparency). For a 2-block plant, select two files ending in _bottom and _top. For animation, add a .mcmeta file. Color, weight, and size (button ⇕) are configured right on the card. Templates saved with the \"Save template\" button are also stored here — click on a template to apply it.",
   "folder.veg.error": "Choose image file",
   "folder.tint": "Color (white — without tint)",
   "folder.weight": "Weight (drop frequency)",
