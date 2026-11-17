@@ -1210,6 +1210,17 @@
         .lang-foot { display: none; padding: 8px 2px 2px; }
         .lang-menu[data-mode="select"] .lang-foot { display: flex; }
         .lang-confirm-text { font-size: 0.95rem; line-height: 1.5; color: var(--text-main); }
+    
+        /* ================= Версия 1.7.9 ================= */
+        /* Растительность на платформе */
+        .veg-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; }
+        .veg-head .checkbox-label { margin-bottom: 0; }
+        .veg-dice { display: none; flex: 0 0 auto; width: 34px; height: 30px; padding: 0; font-size: 1rem; line-height: 1; cursor: pointer;
+            color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
+        .veg-dice:hover { border-color: var(--accent); background: var(--bg-hover); }
+        #vegOptions { margin-top: 4px; }
+        .veg-layers { display: flex; flex-direction: column; gap: 2px; }
+        .veg-layers .checkbox-label { margin-bottom: 0; }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1271,7 +1282,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.8</div>
+            <div class="site-version">v1.7.9</div>
         </div>
     </div>
 
@@ -1391,6 +1402,26 @@
                     <div class="block-grid" id="blockGrid"></div>
                     <div class="emote-hint" id="blockGridHint" style="display:none; margin-top:6px;">Блоков пока нет — положите текстуры в папку blocks/ или добавьте свои.</div>
                     <button id="btnBlockFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои блоки</span></button>
+                    <div class="veg-head">
+                        <label class="checkbox-label"><input type="checkbox" id="veg_toggle"><span id="lbl_veg">Включить растительность</span></label>
+                        <button id="btnVegDice" class="veg-dice" type="button" title="Перемешать">🎲</button>
+                    </div>
+                    <div id="vegOptions" style="display:none;">
+                        <div class="platform-label" id="lbl_vegset">Набор растительности</div>
+                        <div class="block-grid" id="vegGrid"></div>
+                        <div class="emote-hint" id="vegGridHint" style="display:none; margin-top:6px;">Растений пока нет — положите текстуры в папку vegetation/ или добавьте свои.</div>
+                        <button id="btnVegFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои растения</span></button>
+                        <div class="slider-container">
+                            <div class="slider-header"><span id="lbl_vegdens">Плотность</span><span id="veg_dens_val">60%</span></div>
+                            <input type="range" id="veg_dens" class="time-slider" min="0" max="100" step="5" value="60">
+                        </div>
+                        <div class="platform-label" id="lbl_veglayers">Где растёт растительность</div>
+                        <div class="veg-layers">
+                            <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="0" checked><span id="lbl_vl0">Верхняя платформа</span></label>
+                            <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="1" checked><span id="lbl_vl1">Средняя платформа</span></label>
+                            <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="2" checked><span id="lbl_vl2">Нижняя платформа</span></label>
+                        </div>
+                    </div>
                     <div class="slider-container">
                         <div class="slider-header">
                             <span id="lbl_time">Время суток</span>
@@ -1780,7 +1811,20 @@
             "language.confirm_title": "Hide languages",
             "language.confirm_text": "Are you sure you want to hide all languages without a checkmark?",
             "language.confirm_yes": "Yes, hide",
-            "language.show_in_list": "Show language in the main list"
+            "language.show_in_list": "Show language in the main list",
+            "veg.enable": "Enable vegetation",
+            "veg.dice": "Shuffle",
+            "veg.set": "Vegetation set",
+            "veg.density": "Density",
+            "veg.layers": "Where plants grow",
+            "veg.layer1": "Top platform",
+            "veg.layer2": "Middle platform",
+            "veg.layer3": "Bottom platform",
+            "veg.empty": "No plants yet - put textures into the vegetation/ folder or add your own.",
+            "folder.veg.open": "My plants",
+            "folder.veg.title": "My plants",
+            "folder.veg.hint": "Pick a plant image (.png with transparency). A tall image (height at least 1.5 x width, e.g. 16x32) becomes a 2-block plant.",
+            "folder.veg.error": "Pick an image file"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -1956,6 +2000,16 @@
             ['#lbl_time', 'platform.time'],
             ['#mobileBtnSidebar', 'mobile.gallery'],
             ['#mobileBtnControls', 'mobile.settings'],
+            ['#lbl_veg', 'veg.enable'],
+            ['#btnVegDice', 'veg.dice', 'title'],
+            ['#lbl_vegset', 'veg.set'],
+            ['#btnVegFolder .folder-lbl', 'folder.veg.open'],
+            ['#vegGridHint', 'veg.empty'],
+            ['#lbl_vegdens', 'veg.density'],
+            ['#lbl_veglayers', 'veg.layers'],
+            ['#lbl_vl0', 'veg.layer1'],
+            ['#lbl_vl1', 'veg.layer2'],
+            ['#lbl_vl2', 'veg.layer3'],
             ['#agreementModal h3', 'modal.title'],
             ['#agreementModal p', 'modal.text'],
             ['#agreementModal .checkbox-label span', 'modal.agree'],
@@ -2539,6 +2593,12 @@
             if (pl.on) {
                 p.set('plat', pl.block);
                 if (Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
+                if (pl.veg.on) {
+                    p.set('veg', String(pl.veg.seed));
+                    if (pl.veg.set) p.set('vset', pl.veg.set);
+                    if (pl.veg.density !== 60) p.set('vd', String(pl.veg.density));
+                    if (pl.veg.mask !== 7) p.set('vl', String(pl.veg.mask));
+                }
             }
             const q = p.toString();
             return window.location.pathname + (q ? '?' + q : '');
@@ -3085,8 +3145,8 @@
              emote - эмоции:              { id, name, json: текст .json, icon: Blob | null }
            Если IndexedDB недоступна (приватный режим и т.п.), всё работает в памяти до закрытия вкладки. */
         const UserLib = (() => {
-            const DB_NAME = 'tsyplyash-gallery', DB_VERSION = 2, KINDS = ['bg', 'block', 'emote'];
-            const mem = { bg: [], block: [], emote: [] }, seq = { bg: 0, block: 0, emote: 0 };
+            const DB_NAME = 'tsyplyash-gallery', DB_VERSION = 3, KINDS = ['bg', 'block', 'emote', 'plant'];
+            const mem = { bg: [], block: [], emote: [], plant: [] }, seq = { bg: 0, block: 0, emote: 0, plant: 0 };
             let dbPromise = null, persistent = true;
 
             function open() {
@@ -3861,7 +3921,7 @@
                     return manifest.some(b => b.id === id);
                 }
                 return {
-                    load, get, exists,
+                    load, get, exists, composeSpec,
                     defaultId: () => (manifest && manifest.length ? manifest[0].id : PLAIN),
                     forgetUser: (n) => cache.delete('u-' + n)
                 };
@@ -4094,6 +4154,8 @@
             /* ---------- Включение / выключение ---------- */
             function teardown() {
                 disposeMesh();
+                disposeVeg();
+                vegReq++;
                 if (sun) {
                     if (sun.parent) sun.parent.remove(sun);
                     if (typeof sun.dispose === 'function') sun.dispose();
@@ -4108,6 +4170,182 @@
                 if (skinViewer && skinViewer.playerObject) {
                     skinViewer.playerObject.traverse(o => { if (o.isMesh) o.castShadow = false; });
                 }
+            }
+
+
+            /* ---------- Растительность (1.7.9) ----------
+               Растения - крест из двух прозрачных плоскостей (как в Minecraft) на верхних гранях блоков холмика; под персонажем и внутри блоков не ставятся.
+               Расклад целиком определяется числом-зерном: veg=<зерно> в ссылке. Остальное в ссылке: vset=<набор>, vd=<плотность 0-100>, vl=<маска ярусов 1-7>.
+               Наборы лежат в vegetation/vegetation.json:
+                 [ { "id": "meadow", "plants": [ "grass", { "file": "tall_grass.png", "height": 2, "weight": 3, "tint": "#91bd59" } ] } ]
+               grass = vegetation/grass.png; height - высота в блоках (1 или 2; не указана - 2, если картинка выше ширины минимум в 1,5 раза);
+               weight - как часто выпадает (по умолчанию 1); tint - окраска серой текстуры. Свои растения игроков - набор «mine» (личная папка, вид 'plant'). */
+            const veg = { on: false, seed: 0, set: '', density: 60, layers: [true, true, true] };
+            let vegMesh = null, vegReq = 0, vegTimer = 0;
+            const vegTitle = (id) => (id === 'mine' ? t('folder.veg.open') : MC.strip(nameFor('veg.name.' + id, prettify(id))));
+            const randSeed = () => 1 + Math.floor(Math.random() * 999999);
+
+            const Veg = (() => {
+                let manifest = null, loading = null;
+                const cache = new Map();
+                function load() {
+                    if (!loading) loading = (async () => {
+                        let raw = [];
+                        try { const r = await fetch('vegetation/vegetation.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет наборов */ }
+                        manifest = (Array.isArray(raw) ? raw : []).map(st => {
+                            if (!st || typeof st.id !== 'string' || !ID_OK.test(st.id) || !Array.isArray(st.plants)) return null;
+                            const plants = st.plants.map(x => (typeof x === 'string' ? { file: /\.[A-Za-z0-9]+$/.test(x) ? x : x + '.png' } : x))
+                                .filter(x => x && typeof x.file === 'string' && SAFE_FILE.test(x.file))
+                                .map(x => ({ file: x.file, tint: HEX.test(x.tint || '') ? x.tint : null, height: x.height === 1 ? 1 : (x.height === 2 ? 2 : 0), weight: x.weight > 0 ? Math.min(100, +x.weight) : 1 }));
+                            return plants.length ? { id: st.id, plants } : null;
+                        }).filter(Boolean);
+                        return manifest;
+                    })();
+                    return loading;
+                }
+                const canvasOf = async (src, tint) => (await Blocks.composeSpec({ all: [{ src, tint }] })).top;
+                const heightOf = (cv, h) => h || (cv.height >= cv.width * 1.5 ? 2 : 1);
+                function plantsOf(id) {
+                    if (id !== 'mine' && cache.has(id)) return cache.get(id);
+                    const p = (async () => {
+                        const out = [];
+                        if (id === 'mine') {
+                            for (const rec of await UserLib.list('plant')) {
+                                if (!rec.image) continue;
+                                const u = URL.createObjectURL(rec.image);
+                                try { const cv = await canvasOf(u, null); out.push({ canvas: cv, height: heightOf(cv, 0), weight: 1 }); }
+                                catch (e) { console.warn('[veg]', e); } finally { URL.revokeObjectURL(u); }
+                            }
+                        } else {
+                            await load();
+                            const st = manifest.find(x => x.id === id);
+                            for (const pl of (st ? st.plants : [])) {
+                                try { const cv = await canvasOf('vegetation/' + encodeURIComponent(pl.file), pl.tint); out.push({ canvas: cv, height: heightOf(cv, pl.height), weight: pl.weight }); }
+                                catch (e) { console.warn('[veg]', pl.file, e); }
+                            }
+                        }
+                        return out;
+                    })();
+                    if (id !== 'mine') cache.set(id, p);       // свои растения не кэшируем - список меняется
+                    return p;
+                }
+                const mineCount = async () => { try { return (await UserLib.list('plant')).length; } catch (e) { return 0; } };
+                async function exists(id) { if (!id) return false; if (id === 'mine') return (await mineCount()) > 0; await load(); return manifest.some(x => x.id === id); }
+                async function defaultSet() { await load(); return manifest.length ? manifest[0].id : ((await mineCount()) ? 'mine' : ''); }
+                return { load, plantsOf, exists, defaultSet };
+            })();
+
+            function rngOf(seed) {      // mulberry32: одно зерно - одна и та же последовательность
+                let a = seed >>> 0;
+                return () => { a = (a + 0x6D2B79F5) >>> 0; let x = a; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
+            }
+
+            function vegArrays(plants, feetY) {
+                const S = CFG.block, rnd = rngOf(veg.seed), dens = veg.density / 100;
+                const total = plants.reduce((sum, p) => sum + p.weight, 0);
+                const quads = plants.map(() => []);
+                for (let l = 0; l < LAYERS.length; l++) for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) {
+                    const r = [rnd(), rnd(), rnd(), rnd(), rnd()];     // на каждую клетку всегда одинаковое число бросков: плотность и ярусы не перемешивают остальное
+                    if (!veg.layers[l] || !LAYERS[l](x, z) || (l > 0 && LAYERS[l - 1](x, z)) || (x === 0 && z === 0) || r[0] >= dens) continue;
+                    let w = r[1] * total, pi = 0;
+                    while (pi < plants.length - 1 && w >= plants[pi].weight) { w -= plants[pi].weight; pi++; }
+                    const sc = 0.85 + 0.3 * r[4], half = S * 0.6 * sc, H = S * plants[pi].height * sc;
+                    const px = x * S + (r[2] - 0.5) * S * 0.4, pz = z * S + (r[3] - 0.5) * S * 0.4, y0 = feetY - l * S;
+                    for (const d of [[0.7071, 0.7071], [0.7071, -0.7071]]) quads[pi].push([px - d[0] * half, pz - d[1] * half, px + d[0] * half, pz + d[1] * half, y0, y0 + H]);
+                }
+                const pos = [], nrm = [], uv = [], index = [], groups = [];
+                quads.forEach((qs, mi) => {
+                    if (!qs.length) return;
+                    const start = index.length;
+                    qs.forEach(q => {
+                        const b = pos.length / 3;
+                        pos.push(q[0], q[4], q[1], q[2], q[4], q[3], q[2], q[5], q[3], q[0], q[5], q[1]);
+                        for (let i = 0; i < 4; i++) nrm.push(0, 1, 0);
+                        uv.push(0, 0, 1, 0, 1, 1, 0, 1);
+                        index.push(b, b + 1, b + 2, b, b + 2, b + 3);
+                    });
+                    groups.push([start, index.length - start, mi]);
+                });
+                return { pos, nrm, uv, index, groups };
+            }
+
+            function disposeVeg() {
+                if (!vegMesh) return;
+                if (vegMesh.parent) vegMesh.parent.remove(vegMesh);
+                if (vegMesh.geometry && vegMesh.geometry.dispose) vegMesh.geometry.dispose();
+                vegMesh.material.forEach(m => { if (m.map && m.map.dispose) m.map.dispose(); if (m.dispose) m.dispose(); });
+                vegMesh = null;
+            }
+
+            async function buildVeg() {
+                const my = ++vegReq;
+                disposeVeg();
+                if (!veg.on || !state.on || !kit) return;
+                try {
+                    if (!(await Veg.exists(veg.set))) { veg.set = await Veg.defaultSet(); syncUrlStateSoon(); }
+                    const plants = veg.set ? await Veg.plantsOf(veg.set) : [];
+                    if (my !== vegReq || !veg.on || !state.on) return;
+                    vegUi();
+                    if (!plants.length) return;
+                    const a = vegArrays(plants, measureFeetY());
+                    if (!a.index.length) return;
+                    const g = new kit.Geometry();
+                    g.setAttribute('position', new kit.Attr(new Float32Array(a.pos), 3));
+                    g.setAttribute('normal', new kit.Attr(new Float32Array(a.nrm), 3));
+                    g.setAttribute('uv', new kit.Attr(new Float32Array(a.uv), 2));
+                    g.setIndex(a.index);
+                    a.groups.forEach(([start, count, mi]) => g.addGroup(start, count, mi));
+                    const mats = plants.map(p => new kit.Material({ map: makeTexture(p.canvas), transparent: true, alphaTest: 0.5, side: 2 }));
+                    vegMesh = new kit.Mesh(g, mats);
+                    vegMesh.name = 'gallery-vegetation';
+                    vegMesh.frustumCulled = false;
+                    vegMesh.castShadow = false;
+                    vegMesh.receiveShadow = true;
+                    skinViewer.scene.add(vegMesh);
+                    markMaterialsDirty();
+                    refreshCasters();
+                } catch (e) { console.warn('[veg]', e); }
+            }
+
+            function vegMask() { return (veg.layers[0] ? 1 : 0) | (veg.layers[1] ? 2 : 0) | (veg.layers[2] ? 4 : 0); }
+
+            function vegUi() {
+                $('veg_toggle').checked = veg.on;
+                $('vegOptions').style.display = veg.on ? '' : 'none';
+                $('btnVegDice').style.display = veg.on ? 'block' : 'none';
+                $('veg_dens').value = veg.density;
+                $('veg_dens_val').textContent = veg.density + '%';
+                document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; });
+                document.querySelectorAll('#vegGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.vset === veg.set));
+                $('btnVegFolder').classList.toggle('active', veg.set === 'mine');
+            }
+
+            function vegChanged(soon) {
+                vegUi();
+                clearTimeout(vegTimer);
+                vegTimer = setTimeout(buildVeg, soon ? 80 : 0);
+                if (soon) syncUrlStateSoon(); else syncUrlState();
+            }
+
+            async function buildVegGrid() {
+                const list = await Veg.load();
+                const grid = $('vegGrid');
+                grid.innerHTML = '';
+                $('vegGridHint').style.display = list.length ? 'none' : 'block';
+                list.forEach(st => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'block-btn';
+                    btn.dataset.vset = st.id;
+                    btn.title = vegTitle(st.id);
+                    const cv = document.createElement('canvas');
+                    cv.width = cv.height = 16;
+                    btn.appendChild(cv);
+                    Veg.plantsOf(st.id).then(ps => { if (ps[0]) { const c = cv.getContext('2d'); c.imageSmoothingEnabled = false; c.drawImage(ps[0].canvas, 0, 0, 16, 16); } });
+                    btn.onclick = () => { veg.set = st.id; vegChanged(false); };
+                    grid.appendChild(btn);
+                });
+                vegUi();
             }
 
             function setUi(on) {
@@ -4140,6 +4378,7 @@
                         applyLighting();
                         markMaterialsDirty();
                         refreshCasters();
+                        buildVeg();
                         if (first) {
                             savedView = currentView();
                             moveCamera(CFG.view, animate);
@@ -4193,6 +4432,14 @@
                 state.hour = isFinite(parsed) ? Math.min(24, Math.max(0, parsed)) : CFG.defaultHour;
                 $('time_slider').value = state.hour;
                 $('time_val').textContent = timeText(state.hour);
+                const q = new URLSearchParams(window.location.search), seed = parseInt(q.get('veg'), 10), dn = parseInt(q.get('vd'), 10);
+                const mask = q.get('vl') === null ? 7 : (parseInt(q.get('vl'), 10) & 7);
+                veg.on = !!id && isFinite(seed) && seed > 0;
+                if (veg.on) veg.seed = seed;
+                veg.set = q.get('vset') || veg.set;
+                veg.density = isFinite(dn) ? Math.min(100, Math.max(0, dn)) : 60;
+                veg.layers = [!!(mask & 1), !!(mask & 2), !!(mask & 4)];
+                vegUi();
                 await setEnabled(!!id, { sync: false, animate: opts.animate !== false });
             }
 
@@ -4243,6 +4490,27 @@
                 $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
                 $('btnBlockFolder').onclick = () => Folder.open('block');
 
+                $('veg_toggle').onchange = (e) => { veg.on = e.target.checked; if (veg.on && !veg.seed) veg.seed = randSeed(); vegChanged(false); };
+                $('btnVegDice').onclick = () => { veg.seed = randSeed(); vegChanged(false); };
+                $('veg_dens').oninput = (e) => { veg.density = +e.target.value; vegChanged(true); };
+                document.querySelectorAll('.veg-layer').forEach(c => { c.onchange = () => { veg.layers[+c.dataset.layer] = c.checked; vegChanged(false); }; });
+                $('btnVegFolder').onclick = () => Folder.open('plant');
+                // Своё растение: одна картинка (.png с прозрачностью). Высота картинки минимум в 1,5 раза больше ширины - растение в 2 блока
+                Folder.register('plant', {
+                    title: 'folder.veg.title', hint: 'folder.veg.hint', accept: 'image/*', multiple: false, thumbClass: 'folder-thumb-pixel', placeholder: '🌿',
+                    async build(files) {
+                        const f = files[0];
+                        if (!f || !/^image\//.test(f.type)) throw new FolderError('folder.veg.error');
+                        try { await probeImage(f); } catch (e) { throw new FolderError('folder.veg.error'); }
+                        return { name: (f.name.replace(/\.[^.]+$/, '') || 'plant').slice(0, 60), image: f };
+                    },
+                    thumb: (rec, track) => (rec.image ? track(rec.image) : null),
+                    isActive: () => veg.set === 'mine',
+                    pick: () => { veg.set = 'mine'; vegChanged(false); },
+                    onRemove: () => { if (veg.set === 'mine') vegChanged(false); }
+                });
+                buildVegGrid();
+
                 // Свой блок: один файл на все грани или до трёх файлов с окончаниями _top / _side / _bottom
                 Folder.register('block', {
                     title: 'folder.block.title', hint: 'folder.block.hint', accept: 'image/*', multiple: true, thumbClass: 'folder-thumb-pixel', placeholder: '🧱',
@@ -4279,7 +4547,7 @@
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
-                state: () => ({ on: state.on, block: state.block, hour: state.hour }),
+                state: () => ({ on: state.on, block: state.block, hour: state.hour, veg: { on: veg.on, seed: veg.seed, set: veg.set, density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
