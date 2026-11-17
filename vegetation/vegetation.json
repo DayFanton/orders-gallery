@@ -1,0 +1,63 @@
+[
+  {
+    "id": "meadow",
+    "plants": [
+      "grass",
+      {
+        "file": "tall_grass.png",
+        "height": 2,
+        "weight": 3,
+        "tint": "#91bd59"
+      },
+      {
+        "file": "tall_grass_bottom.png",
+        "height": 1,
+        "weight": 3,
+        "tint": "#91bd59"
+      },
+      {
+        "file": "tall_grass_top.png",
+        "height": 2,
+        "weight": 3,
+        "tint": "#91bd59"
+      },
+      {
+        "file": "pale_moss_carpet_side_small.png",
+        "height": 1,
+        "weight": 6,
+        "tint": "#95a48a"
+      },
+      {
+        "file": "pale_moss_carpet_side_tall.png",
+        "height": 2,
+        "weight": 6,
+        "tint": "#95a48a"
+      },
+      {
+        "file": "sweet_berry_bush_stage0.png",
+        "height": 1,
+        "weight": 10
+      },
+      {
+        "file": "sweet_berry_bush_stage1.png",
+        "height": 1,
+        "weight": 10
+      },
+      {
+        "file": "sweet_berry_bush_stage2.png",
+        "height": 1,
+        "weight": 10
+      },
+      {
+        "file": "sweet_berry_bush_stage3.png",
+        "height": 1,
+        "weight": 10
+      },
+      {
+        "file": "sugar_cane.png",
+        "height": 2,
+        "weight": 4
+      }
+    ]
+  }
+]
