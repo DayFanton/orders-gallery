@@ -1233,9 +1233,15 @@
         .block-cell .credit { margin-top: 2px; text-align: center; }
         input[type=color].tint { width: 28px; height: 22px; padding: 0; flex: none; cursor: pointer; background: none; border: 1px solid #555; border-radius: 4px; }
         #blockTintRow { margin-top: 6px; justify-content: space-between; font-size: 0.85rem; }
+        .veg-w { display: flex; align-items: center; gap: 2px; flex: none; font-size: 0.72rem; opacity: 0.9; }
+        .veg-w input, .folder-tools input[type=number] { width: 46px; padding: 1px 3px; font-size: 0.72rem; color: #ddd; background: var(--bg-card); border: 1px solid #555; border-radius: 4px; }
+        /* Ползунок плотности: зелёная заливка до значения, насечки каждые 10% и квадратная «пиксельная» ручка */
+        .dens-slider { -webkit-appearance: none; appearance: none; direction: ltr; width: 100%; height: 10px; border-radius: 2px; outline: none; cursor: pointer; --p: 50%;
+            background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 2px), rgba(0,0,0,0.4) calc(10% - 2px) 10%), linear-gradient(90deg, #6fbf4a var(--p), #3a4036 var(--p)); }
+        .dens-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 10px; height: 20px; border-radius: 2px; background: #d7f0c8; border: 2px solid #1d2a17; box-shadow: inset 0 -4px 0 #8fcf70; }
+        .dens-slider::-moz-range-thumb { width: 6px; height: 16px; border-radius: 2px; background: #d7f0c8; border: 2px solid #1d2a17; }
         .folder-tools { display: flex; gap: 6px; align-items: center; justify-content: center; }
-        .folder-tools input[type=number] { width: 48px; padding: 1px 3px; font-size: 0.72rem; color: #ddd; background: var(--bg-card); border: 1px solid #555; border-radius: 4px; }
-    </style>
+            </style>
 </head>
 <body class="i18n-pending">
 
@@ -1296,7 +1302,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.0</div>
+            <div class="site-version">v1.8.1</div>
         </div>
     </div>
 
@@ -1411,6 +1417,19 @@
                     <input type="checkbox" id="platform_toggle">
                     <span>Поставить платформу под персонажем</span>
                 </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="light_toggle">
+                    <span id="lbl_light">Освещение и тени</span>
+                </label>
+                <div id="lightOptions" style="display:none;">
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <span id="lbl_time">Время суток</span>
+                            <span id="time_val">12:00</span>
+                        </div>
+                        <input type="range" id="time_slider" class="time-slider" min="0" max="24" step="0.25" value="12">
+                    </div>
+                </div>
                 <div id="platformOptions" style="display:none;">
                     <div class="platform-label" id="lbl_block">Блок</div>
                     <div class="block-grid" id="blockGrid"></div>
@@ -1428,7 +1447,7 @@
                         <button id="btnVegFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои растения</span></button>
                         <div class="slider-container">
                             <div class="slider-header"><span id="lbl_vegdens">Плотность</span><span id="veg_dens_val">60%</span></div>
-                            <input type="range" id="veg_dens" class="time-slider" min="0" max="100" step="5" value="60">
+                            <input type="range" id="veg_dens" class="dens-slider" min="0" max="100" step="5" value="60">
                         </div>
                         <div class="platform-label" id="lbl_veglayers">Где растёт растительность</div>
                         <div class="veg-layers">
@@ -1436,13 +1455,6 @@
                             <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="1" checked><span id="lbl_vl1">Средняя платформа</span></label>
                             <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="2" checked><span id="lbl_vl2">Нижняя платформа</span></label>
                         </div>
-                    </div>
-                    <div class="slider-container">
-                        <div class="slider-header">
-                            <span id="lbl_time">Время суток</span>
-                            <span id="time_val">12:00</span>
-                        </div>
-                        <input type="range" id="time_slider" class="time-slider" min="0" max="24" step="0.25" value="12">
                     </div>
                 </div>
             </div>
@@ -1776,7 +1788,7 @@
             "bg.image.empty": "No images found (folder backgrounds/)",
             "bg.image.error": "Could not open this image",
             "bg.image.close": "Close",
-            "platform.title": "Platform",
+            "platform.title": "Platform and lighting",
             "platform.enable": "Place a platform under the character",
             "platform.block": "Block",
             "platform.time": "Time of day",
@@ -1833,6 +1845,8 @@
             "veg.tint": "Plant color",
             "block.tint": "Block color",
             "credit.title": "Author: %s",
+            "light.enable": "Lighting and shadows",
+            "veg.weight": "Spawn weight (how often it appears)",
             "folder.tint": "Color (white = no tint)",
             "folder.weight": "Spawn weight",
             "veg.density": "Density",
@@ -2024,6 +2038,7 @@
             ['#btnVegDice', 'veg.dice', 'title'],
             ['#lbl_vegset', 'veg.plants'],
             ['#lbl_blocktint', 'block.tint'],
+            ['#lbl_light', 'light.enable'],
             ['#btnVegFolder .folder-lbl', 'folder.veg.open'],
             ['#vegGridHint', 'veg.empty'],
             ['#lbl_vegdens', 'veg.density'],
@@ -2611,14 +2626,16 @@
             if (currentBgKey && currentBgKey !== 'dark') p.set('bg', currentBgKey);
             if (elytraEnabled) p.set('elytra', '1');
             const pl = Scene3D.state();
+            if (pl.light !== null) p.set('lt', pl.light ? '1' : '0');
+            if (pl.lit && Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
             if (pl.on) {
                 p.set('plat', pl.block);
                 if (pl.tint) p.set('bt', pl.tint.slice(1));
-                if (Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
                 if (pl.veg.on) {
                     p.set('veg', String(pl.veg.seed));
                     if (pl.veg.sel !== null) p.set('vp', pl.veg.sel);
                     if (pl.veg.tints) p.set('vc', pl.veg.tints);
+                    if (pl.veg.weights) p.set('vw', pl.veg.weights);
                     if (pl.veg.density !== 60) p.set('vd', String(pl.veg.density));
                     if (pl.veg.mask !== 7) p.set('vl', String(pl.veg.mask));
                 }
@@ -3788,8 +3805,8 @@
             ];
 
             const PLAIN = 'plain';          // «блок без текстуры» - только пока в blocks/ ничего нет
-            const state = { on: false, block: '', hour: CFG.defaultHour, tint: null };
-            let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null, reqId = 0;
+            const state = { on: false, block: '', hour: CFG.defaultHour, tint: null, light: null };    // light: null - как платформа (вкл. с ней), true / false - выбор пользователя
+            let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null, reqId = 0, lit = false;
 
             /* ---------- Блоки: текстуры из папки blocks/ (blocks.json) и свои из личной папки ----------
                Запись в blocks.json - строка "stone" (файл blocks/stone.png на всех гранях) или объект
@@ -4145,7 +4162,7 @@
             }
 
             function applyLighting() {
-                if (!skinViewer || !state.on) return;
+                if (!skinViewer || !lit) return;
                 const L = lightingAt(state.hour), K = lightScale(), a = skinViewer.globalLight;
                 if (sun) {
                     sun.position.set(L.dir[0] * CFG.sunDistance, L.dir[1] * CFG.sunDistance, L.dir[2] * CFG.sunDistance);
@@ -4161,7 +4178,7 @@
             // Персонаж отбрасывает тень (в том числе меши эмоций, которые создаются позже - их вызывает EmoteRuntime)
             function refreshCasters() {
                 if (!skinViewer || !skinViewer.playerObject) return;
-                const on = state.on && !!sun;
+                const on = lit && !!sun;
                 skinViewer.playerObject.traverse(o => { if (o.isMesh) o.castShadow = on; });
             }
 
@@ -4202,6 +4219,12 @@
                 disposeMesh();
                 disposeVeg();
                 vegReq++;
+            }
+
+            /* ---------- Освещение: солнце, тени и смена времени суток. Работает с платформой и без неё ---------- */
+            const lightOn = () => (state.light === null ? state.on : state.light);
+
+            function unlight() {
                 if (sun) {
                     if (sun.parent) sun.parent.remove(sun);
                     if (typeof sun.dispose === 'function') sun.dispose();
@@ -4218,8 +4241,39 @@
                 }
             }
 
+            function lightUi() {
+                const on = lightOn();
+                $('light_toggle').checked = on;
+                $('lightOptions').style.display = on ? '' : 'none';
+            }
 
-            /* ---------- Растительность (1.8.0) ----------
+            // Приводит свет в соответствие с выбором (платформа / галочка)
+            function syncLight() {
+                try {
+                    const want = lightOn();
+                    if (want && !lit) {
+                        kit = kit || getKit();
+                        const a = skinViewer.globalLight;
+                        savedAmbient = a ? { color: [a.color.r, a.color.g, a.color.b], intensity: a.intensity } : null;
+                        if (skinViewer.renderer && skinViewer.renderer.shadowMap) {
+                            skinViewer.renderer.shadowMap.enabled = true;
+                            skinViewer.renderer.shadowMap.type = 1;       // PCFShadowMap
+                        }
+                        ensureSun();
+                        lit = true;
+                    } else if (!want && lit) {
+                        unlight();
+                        lit = false;
+                    }
+                    applyLighting();
+                    refreshCasters();
+                    markMaterialsDirty();
+                } catch (e) { console.warn('[light]', e); }
+                lightUi();
+            }
+
+
+            /* ---------- Растительность (1.8.1) ----------
                Растения - крест из двух прозрачных плоскостей (как в Minecraft) на верхних гранях блоков холмика; под персонажем не ставятся.
                Расклад определяется зерном veg=<зерно>. В ссылке: vp=<список включённых растений> (пишется, только если отличается от json),
                vc=<id:цвет,...> - свои цвета, vd=<плотность 0-100>, vl=<маска ярусов 1-7>, bt=<цвет блока>.
@@ -4228,8 +4282,12 @@
                              "author": "Имя", "url": "https://...", "animation": { "frametime": 2 } }
                  Высокое растение из двух текстур: { "id": "tall_grass", "bottom": "tall_grass_bottom.png", "top": "tall_grass_top.png" }
                  Анимация (лента кадров) - файл x.png.mcmeta рядом с картинкой (читается и x_png.mcmeta) или поле animation.
+                 size - разброс размеров растения (в блоках): { "min": 1, "max": 3, "minWeight": 6, "maxWeight": 1, "step": 1 }.
+                   Возможные размеры идут от min до max с шагом step (по умолчанию 1; можно 0.5), а вес плавно меняется от minWeight до maxWeight,
+                   поэтому выпадают и промежуточные размеры. Текстура по высоте повторяется (как стебли тростника); "tile": false - растягивать.
+                 Вес можно менять и на сайте (число справа от растения; в ссылке vw=id:вес).
                  enabled: false - галочка по умолчанию снята. Свои растения игрока (вид 'plant') показываются в том же списке (id u-N). */
-            const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {} };   // sel: Set включённых id или null (= как в json)
+            const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {}, weight: {} };   // sel: Set включённых id или null (= как в json)
             let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [];
             const vegTitle = (id) => MC.strip(nameFor('veg.name.' + id, prettify(id)));
             const randSeed = () => 1 + Math.floor(Math.random() * 999999);
@@ -4249,6 +4307,14 @@
                     const file = /\.[A-Za-z0-9]+$/.test(o.file) ? o.file : o.file + '.png';
                     return SAFE_FILE.test(file) ? { src: 'vegetation/' + encodeURIComponent(file), file, tint: HEX.test(o.tint || '') ? o.tint : null } : null;
                 };
+                function sizesOf(s) {
+                    if (!s || typeof s !== 'object') return null;
+                    const min = Math.min(8, Math.max(0.25, +s.min || 1)), max = Math.min(8, Math.max(min, +s.max || min));
+                    const step = Math.max(0.25, +s.step || 1), n = Math.min(64, Math.floor((max - min) / step + 1e-9));
+                    const w0 = s.minWeight >= 0 ? +s.minWeight : 1, w1 = s.maxWeight >= 0 ? +s.maxWeight : w0, out = [];
+                    for (let i = 0; i <= n; i++) out.push({ h: min + i * step, w: w0 + (w1 - w0) * (n ? i / n : 0) });
+                    return out.some(o => o.w > 0) ? out : out.map(o => ({ h: o.h, w: 1 }));
+                }
                 function norm(x, seen, out) {
                     if (!x || (typeof x !== 'string' && typeof x !== 'object')) return;
                     if (Array.isArray(x.plants)) { x.plants.forEach(y => norm(y, seen, out)); return; }
@@ -4263,7 +4329,7 @@
                     out.push({
                         id, parts, tint: HEX.test(o.tint || '') ? o.tint : null,
                         height: o.height === 1 ? 1 : (o.height === 2 ? 2 : 0), weight: o.weight > 0 ? Math.min(100, +o.weight) : 1,
-                        on: o.enabled !== false, anim: o.animation && typeof o.animation === 'object' ? o.animation : null,
+                        on: o.enabled !== false, sizes: sizesOf(o.size), tile: o.tile !== false, anim: o.animation && typeof o.animation === 'object' ? o.animation : null,
                         author: typeof o.author === 'string' ? o.author.slice(0, 60) : '', url: /^https?:\/\//i.test(o.url || '') ? o.url : ''
                     });
                 }
@@ -4285,7 +4351,7 @@
                         id: 'u-' + rec.id, user: true, name: rec.name, on: true,
                         parts: (rec.bottom && rec.top ? [rec.bottom, rec.top] : [rec.image]).filter(Boolean).map(b => ({ blob: b, tint: null })),
                         tint: HEX.test(rec.tint || '') ? rec.tint : null, weight: rec.weight > 0 ? Math.min(100, +rec.weight) : 1,
-                        height: 0, anim: rec.anim || null, author: '', url: ''
+                        height: 0, sizes: null, anim: rec.anim || null, author: '', url: ''
                     })).filter(e => e.parts.length);
                 }
                 const entries = async () => [...(await load()), ...(await users())];
@@ -4347,15 +4413,25 @@
             function vegArrays(plants, feetY) {
                 const S = CFG.block, rnd = rngOf(veg.seed), dens = veg.density / 100;
                 const total = plants.reduce((sum, p) => sum + p.weight, 0);
+                plants.forEach(p => { if (p.sizes) p.sizeTotal = p.sizes.reduce((s, o) => s + o.w, 0); });
                 const quads = plants.map(() => []);
                 for (let l = 0; l < LAYERS.length; l++) for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) {
                     const r = [rnd(), rnd(), rnd(), rnd(), rnd()];     // на каждую клетку всегда одинаковое число бросков: плотность и ярусы не перемешивают остальное
                     if (!veg.layers[l] || !LAYERS[l](x, z) || (l > 0 && LAYERS[l - 1](x, z)) || (x === 0 && z === 0) || r[0] >= dens) continue;
                     let w = r[1] * total, pi = 0;
                     while (pi < plants.length - 1 && w >= plants[pi].weight) { w -= plants[pi].weight; pi++; }
-                    const sc = 0.85 + 0.3 * r[4], half = S * 0.6 * sc, H = S * plants[pi].height * sc;
+                    const P = plants[pi];
+                    let sc = 0.85 + 0.3 * r[4], hb = P.height, v = 1;
+                    if (P.sizes) {      // размер из разброса: остаток w / вес растения - ещё одно равномерное число, расклад по зерну не сдвигается
+                        let k = (w / P.weight) * P.sizeTotal, si = 0;
+                        while (si < P.sizes.length - 1 && k >= P.sizes[si].w) { k -= P.sizes[si].w; si++; }
+                        sc = 1;
+                        hb = P.sizes[si].h;
+                        if (P.tile) v = hb / P.height;
+                    }
+                    const half = S * 0.6 * sc, H = S * hb * sc;
                     const px = x * S + (r[2] - 0.5) * S * 0.4, pz = z * S + (r[3] - 0.5) * S * 0.4, y0 = feetY - l * S;
-                    for (const d of [[0.7071, 0.7071], [0.7071, -0.7071]]) quads[pi].push([px - d[0] * half, pz - d[1] * half, px + d[0] * half, pz + d[1] * half, y0, y0 + H]);
+                    for (const d of [[0.7071, 0.7071], [0.7071, -0.7071]]) quads[pi].push([px - d[0] * half, pz - d[1] * half, px + d[0] * half, pz + d[1] * half, y0, y0 + H, v]);
                 }
                 const pos = [], nrm = [], uv = [], index = [], groups = [];
                 quads.forEach((qs, mi) => {
@@ -4365,7 +4441,7 @@
                         const b = pos.length / 3;
                         pos.push(q[0], q[4], q[1], q[2], q[4], q[3], q[2], q[5], q[3], q[0], q[5], q[1]);
                         for (let i = 0; i < 4; i++) nrm.push(0, 1, 0);
-                        uv.push(0, 0, 1, 0, 1, 1, 0, 1);
+                        uv.push(0, 0, 1, 0, 1, q[6], 0, q[6]);
                         index.push(b, b + 1, b + 2, b, b + 2, b + 3);
                     });
                     groups.push([start, index.length - start, mi]);
@@ -4382,6 +4458,7 @@
                 vegMesh = null;
             }
 
+            const vegWeight = (e) => (veg.weight[e.id] > 0 ? veg.weight[e.id] : e.weight);
             const vegIsOn = (e) => (veg.sel ? veg.sel.has(e.id) : e.on !== false);
 
             async function buildVeg() {
@@ -4393,7 +4470,7 @@
                     const plants = (await Promise.all(list.map(async e => {
                         try {
                             const tx = await Veg.textures(e, veg.tint[e.id]), cv = tx.frames[0];
-                            return { canvas: cv, frames: tx.frames, times: tx.times, weight: e.weight, height: e.height || (cv.height >= cv.width * 1.5 ? 2 : 1) };
+                            return { canvas: cv, frames: tx.frames, times: tx.times, weight: vegWeight(e), sizes: e.sizes, tile: !!e.sizes && e.tile !== false, height: e.height || (cv.height >= cv.width * 1.5 ? 2 : 1) };
                         } catch (err) { console.warn('[veg]', e.id, err); return null; }
                     }))).filter(Boolean);
                     if (my !== vegReq || !veg.on || !state.on || !plants.length) return;
@@ -4405,7 +4482,7 @@
                     g.setAttribute('uv', new kit.Attr(new Float32Array(a.uv), 2));
                     g.setIndex(a.index);
                     a.groups.forEach(([start, count, mi]) => g.addGroup(start, count, mi));
-                    const mats = plants.map(p => new kit.Material({ map: makeTexture(p.canvas), transparent: true, alphaTest: 0.5, side: 2 }));
+                    const mats = plants.map(p => { const tx = makeTexture(p.canvas); if (p.tile) tx.wrapT = 1000; return new kit.Material({ map: tx, transparent: true, alphaTest: 0.5, side: 2 }); });      // 1000 = RepeatWrapping
                     vegMesh = new kit.Mesh(g, mats);
                     vegMesh.name = 'gallery-vegetation';
                     vegMesh.frustumCulled = false;
@@ -4438,6 +4515,7 @@
                 $('btnVegDice').style.display = veg.on ? 'block' : 'none';
                 $('veg_dens').value = veg.density;
                 $('veg_dens_val').textContent = veg.density + '%';
+                $('veg_dens').style.setProperty('--p', 'calc(5px + (100% - 10px) * ' + veg.density / 100 + ')');
                 document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; });
                 document.querySelectorAll('#vegList input[data-vid]').forEach(c => { c.checked = vegIsOn({ id: c.dataset.vid, on: c.dataset.def === '1' }); });
             }
@@ -4496,6 +4574,21 @@
                         ci.oninput = () => { veg.tint[e.id] = ci.value; icon(); vegChanged(true); };
                         row.appendChild(ci);
                     }
+                    const wl = document.createElement('label'), wi = document.createElement('input');
+                    wl.className = 'veg-w';
+                    wl.title = t('veg.weight');
+                    wi.type = 'number';
+                    wi.min = 1;
+                    wi.max = 100;
+                    wi.value = vegWeight(e);
+                    wi.onchange = () => {
+                        const n = Math.min(100, Math.max(1, Math.round(+wi.value) || e.weight));
+                        wi.value = n;
+                        if (n === e.weight) delete veg.weight[e.id]; else veg.weight[e.id] = n;
+                        vegChanged(false);
+                    };
+                    wl.append('×', wi);
+                    row.appendChild(wl);
                     item.appendChild(row);
                     const cr = credit(e.author, e.url);
                     if (cr) item.appendChild(cr);
@@ -4555,20 +4648,9 @@
                         const faces = await Blocks.get(state.block, state.tint);
                         if (my !== reqId) return;                    // пока грузились текстуры, пользователь передумал
                         const first = !state.on;
-                        if (first) {
-                            const a = skinViewer.globalLight;
-                            savedAmbient = a ? { color: [a.color.r, a.color.g, a.color.b], intensity: a.intensity } : null;
-                            if (skinViewer.renderer && skinViewer.renderer.shadowMap) {
-                                skinViewer.renderer.shadowMap.enabled = true;
-                                skinViewer.renderer.shadowMap.type = 1;       // PCFShadowMap
-                            }
-                        }
                         buildMesh(faces);
-                        ensureSun();
                         state.on = true;
-                        applyLighting();
-                        markMaterialsDirty();
-                        refreshCasters();
+                        syncLight();
                         buildVeg();
                         if (first) {
                             savedView = currentView();
@@ -4577,17 +4659,18 @@
                     } else if (state.on) {
                         state.on = false;
                         teardown();
-                        markMaterialsDirty();
+                        syncLight();
                         moveCamera(savedView || CFG.homeView, animate);
                         savedView = null;
                     }
                 } catch (e) {
                     console.error('[platform]', e);
                     state.on = false;
-                    try { teardown(); } catch (e2) { /* ничего */ }
+                    try { teardown(); syncLight(); } catch (e2) { /* ничего */ }
                 }
                 if (my !== reqId) return;
                 setUi(state.on);
+                lightUi();
                 tintUi();
                 syncGridActive();
                 if (sync) syncUrlState();
@@ -4633,13 +4716,18 @@
                 const vp = q.get('vp'), bt = q.get('bt');
                 veg.sel = vp === null ? null : new Set(vp.split(',').filter(s => ID_OK.test(s)));
                 veg.tint = {};
+                veg.weight = {};
+                (q.get('vw') || '').split(',').forEach(s => { const m = /^([A-Za-z0-9_\-]{1,40}):(\d{1,3})$/.exec(s); if (m && +m[2] > 0) veg.weight[m[1]] = Math.min(100, +m[2]); });
                 (q.get('vc') || '').split(',').forEach(s => { const m = /^([A-Za-z0-9_\-]{1,40}):([0-9a-f]{6})$/i.exec(s); if (m) veg.tint[m[1]] = '#' + m[2]; });
                 state.tint = /^[0-9a-f]{6}$/i.test(bt || '') ? '#' + bt : null;
                 tintUi();
                 veg.density = isFinite(dn) ? Math.min(100, Math.max(0, dn)) : 60;
                 veg.layers = [!!(mask & 1), !!(mask & 2), !!(mask & 4)];
                 vegUi();
+                const lt = q.get('lt');
+                state.light = lt === '1' ? true : (lt === '0' ? false : null);
                 await setEnabled(!!id, { sync: false, animate: opts.animate !== false });
+                syncLight();
             }
 
             function syncGridActive() {
@@ -4694,6 +4782,7 @@
                 $('platform_toggle').onchange = (e) => setEnabled(e.target.checked);
                 $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
                 $('btnBlockFolder').onclick = () => Folder.open('block');
+                $('light_toggle').onchange = (e) => { state.light = e.target.checked === state.on ? null : e.target.checked; syncLight(); syncUrlState(); };
                 let tintTimer = 0;
                 $('block_tint').oninput = (e) => {
                     state.tint = e.target.value;
@@ -4734,7 +4823,7 @@
                     isActive: (rec) => vegIsOn({ id: 'u-' + rec.id, on: true }),
                     pick: async (rec) => { await buildVegList(); if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false); },
                     onRemove: () => { buildVegList().then(() => vegChanged(false)); },
-                    decorate: (el, rec) => el.append(folderTools('plant', rec, true, () => { buildVegList().then(() => vegChanged(false)); }))
+                    decorate: (el, rec) => el.append(folderTools('plant', rec, true, () => { delete veg.weight['u-' + rec.id]; buildVegList().then(() => vegChanged(false)); }))
                 });
                 buildVegList();
 
@@ -4775,7 +4864,7 @@
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
-                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), density: veg.density, mask: vegMask() } }),
+                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
