@@ -1240,6 +1240,14 @@
             background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 2px), rgba(0,0,0,0.4) calc(10% - 2px) 10%), linear-gradient(90deg, #6fbf4a var(--p), #3a4036 var(--p)); }
         .dens-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 10px; height: 20px; border-radius: 2px; background: #d7f0c8; border: 2px solid #1d2a17; box-shadow: inset 0 -4px 0 #8fcf70; }
         .dens-slider::-moz-range-thumb { width: 6px; height: 16px; border-radius: 2px; background: #d7f0c8; border: 2px solid #1d2a17; }
+        .size-btn { flex: none; height: 22px; padding: 0 6px; font-size: 0.78rem; color: inherit; cursor: pointer; background: var(--bg-card); border: 1px solid #555; border-radius: 4px; }
+        .size-btn:hover, .size-btn.on { border-color: var(--accent); }
+        .size-ed { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px; margin: 4px 0 6px 26px; font-size: 0.72rem; text-align: start; }
+        .size-ed label { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+        .size-ed input[type=number] { width: 100%; padding: 1px 3px; font-size: 0.72rem; color: #ddd; background: var(--bg-card); border: 1px solid #555; border-radius: 4px; }
+        .size-ed .size-row { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; gap: 6px; }
+        .folder-tools-wrap { width: 100%; }
+        .folder-tools-wrap .size-ed { margin: 6px 0 0; }
         .folder-tools { display: flex; gap: 6px; align-items: center; justify-content: center; }
             </style>
 </head>
@@ -1302,7 +1310,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.1</div>
+            <div class="site-version">v1.8.2</div>
         </div>
     </div>
 
@@ -1846,6 +1854,14 @@
             "block.tint": "Block color",
             "credit.title": "Author: %s",
             "light.enable": "Lighting and shadows",
+            "size.title": "Plant size",
+            "size.min": "Min size (blocks)",
+            "size.max": "Max size (blocks)",
+            "size.step": "Size step",
+            "size.wmin": "Weight of min size",
+            "size.wmax": "Weight of max size",
+            "size.tile": "Repeat texture",
+            "size.reset": "Reset",
             "veg.weight": "Spawn weight (how often it appears)",
             "folder.tint": "Color (white = no tint)",
             "folder.weight": "Spawn weight",
@@ -1857,7 +1873,7 @@
             "veg.empty": "No plants yet - put textures into the vegetation/ folder or add your own.",
             "folder.veg.open": "My plants",
             "folder.veg.title": "My plants",
-            "folder.veg.hint": "Pick a plant image (.png with transparency). For a 2-block plant pick two files ending in _bottom and _top. Add a .mcmeta file for animation. Color and weight are set right on the card.",
+            "folder.veg.hint": "Pick a plant image (.png with transparency). For a 2-block plant pick two files ending in _bottom and _top. Add a .mcmeta file for animation. Color, weight and size (the ⇕ button) are set right on the card.",
             "folder.veg.error": "Pick an image file"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
@@ -2636,6 +2652,7 @@
                     if (pl.veg.sel !== null) p.set('vp', pl.veg.sel);
                     if (pl.veg.tints) p.set('vc', pl.veg.tints);
                     if (pl.veg.weights) p.set('vw', pl.veg.weights);
+                    if (pl.veg.sizes) p.set('vs', pl.veg.sizes);
                     if (pl.veg.density !== 60) p.set('vd', String(pl.veg.density));
                     if (pl.veg.mask !== 7) p.set('vl', String(pl.veg.mask));
                 }
@@ -4273,7 +4290,7 @@
             }
 
 
-            /* ---------- Растительность (1.8.1) ----------
+            /* ---------- Растительность (1.8.2) ----------
                Растения - крест из двух прозрачных плоскостей (как в Minecraft) на верхних гранях блоков холмика; под персонажем не ставятся.
                Расклад определяется зерном veg=<зерно>. В ссылке: vp=<список включённых растений> (пишется, только если отличается от json),
                vc=<id:цвет,...> - свои цвета, vd=<плотность 0-100>, vl=<маска ярусов 1-7>, bt=<цвет блока>.
@@ -4285,10 +4302,11 @@
                  size - разброс размеров растения (в блоках): { "min": 1, "max": 3, "minWeight": 6, "maxWeight": 1, "step": 1 }.
                    Возможные размеры идут от min до max с шагом step (по умолчанию 1; можно 0.5), а вес плавно меняется от minWeight до maxWeight,
                    поэтому выпадают и промежуточные размеры. Текстура по высоте повторяется (как стебли тростника); "tile": false - растягивать.
-                 Вес можно менять и на сайте (число справа от растения; в ссылке vw=id:вес).
+                 Вес и размер можно менять и на сайте (число и кнопка ⇕ справа от растения; в ссылке vw=id:вес и vs=id:min~max~шаг~вес мин~вес макс~повтор).
+                   У своих растений размер хранится в записи папки (rec.size) и правится на карточке в «Мои растения».
                  enabled: false - галочка по умолчанию снята. Свои растения игрока (вид 'plant') показываются в том же списке (id u-N). */
-            const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {}, weight: {} };   // sel: Set включённых id или null (= как в json)
-            let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [];
+            const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {}, weight: {}, size: {} };   // sel: Set включённых id или null (= как в json)
+            let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [], natH = {};
             const vegTitle = (id) => MC.strip(nameFor('veg.name.' + id, prettify(id)));
             const randSeed = () => 1 + Math.floor(Math.random() * 999999);
             const tintOfEntry = (e) => e.tint || (e.parts.find(p => p.tint) || {}).tint || null;
@@ -4307,12 +4325,17 @@
                     const file = /\.[A-Za-z0-9]+$/.test(o.file) ? o.file : o.file + '.png';
                     return SAFE_FILE.test(file) ? { src: 'vegetation/' + encodeURIComponent(file), file, tint: HEX.test(o.tint || '') ? o.tint : null } : null;
                 };
-                function sizesOf(s) {
+                // Разброс размеров: чистый вид { min, max, step, minWeight, maxWeight, tile } или null
+                function specOf(s, tile) {
                     if (!s || typeof s !== 'object') return null;
-                    const min = Math.min(8, Math.max(0.25, +s.min || 1)), max = Math.min(8, Math.max(min, +s.max || min));
-                    const step = Math.max(0.25, +s.step || 1), n = Math.min(64, Math.floor((max - min) / step + 1e-9));
-                    const w0 = s.minWeight >= 0 ? +s.minWeight : 1, w1 = s.maxWeight >= 0 ? +s.maxWeight : w0, out = [];
-                    for (let i = 0; i <= n; i++) out.push({ h: min + i * step, w: w0 + (w1 - w0) * (n ? i / n : 0) });
+                    const num = (v, d, lo, hi) => (v === null || v === undefined || v === '' || !isFinite(+v) ? d : Math.min(hi, Math.max(lo, +v)));
+                    const min = num(s.min, 1, 0.25, 8), max = num(s.max, min, min, 8), w0 = num(s.minWeight, 1, 0, 100);
+                    return { min, max, step: num(s.step, 1, 0.25, 8), minWeight: w0, maxWeight: num(s.maxWeight, w0, 0, 100), tile: (s.tile !== undefined ? s.tile : tile) !== false };
+                }
+                // Из разброса - список возможных размеров с весами (вес плавно меняется от minWeight к maxWeight)
+                function sizesOf(sp) {
+                    const n = Math.min(64, Math.floor((sp.max - sp.min) / sp.step + 1e-9)), out = [];
+                    for (let i = 0; i <= n; i++) out.push({ h: sp.min + i * sp.step, w: sp.minWeight + (sp.maxWeight - sp.minWeight) * (n ? i / n : 0) });
                     return out.some(o => o.w > 0) ? out : out.map(o => ({ h: o.h, w: 1 }));
                 }
                 function norm(x, seen, out) {
@@ -4329,7 +4352,7 @@
                     out.push({
                         id, parts, tint: HEX.test(o.tint || '') ? o.tint : null,
                         height: o.height === 1 ? 1 : (o.height === 2 ? 2 : 0), weight: o.weight > 0 ? Math.min(100, +o.weight) : 1,
-                        on: o.enabled !== false, sizes: sizesOf(o.size), tile: o.tile !== false, anim: o.animation && typeof o.animation === 'object' ? o.animation : null,
+                        on: o.enabled !== false, size: specOf(o.size, o.tile), anim: o.animation && typeof o.animation === 'object' ? o.animation : null,
                         author: typeof o.author === 'string' ? o.author.slice(0, 60) : '', url: /^https?:\/\//i.test(o.url || '') ? o.url : ''
                     });
                 }
@@ -4351,7 +4374,7 @@
                         id: 'u-' + rec.id, user: true, name: rec.name, on: true,
                         parts: (rec.bottom && rec.top ? [rec.bottom, rec.top] : [rec.image]).filter(Boolean).map(b => ({ blob: b, tint: null })),
                         tint: HEX.test(rec.tint || '') ? rec.tint : null, weight: rec.weight > 0 ? Math.min(100, +rec.weight) : 1,
-                        height: 0, sizes: null, anim: rec.anim || null, author: '', url: ''
+                        height: 0, size: specOf(rec.size), rec, anim: rec.anim || null, author: '', url: ''
                     })).filter(e => e.parts.length);
                 }
                 const entries = async () => [...(await load()), ...(await users())];
@@ -4402,7 +4425,7 @@
                     const memo = new Map();
                     return { frames: seq.map(o => { if (!memo.has(o.i)) memo.set(o.i, paint(im, o.i * fh, w, fh, tn(0))); return memo.get(o.i); }), times: seq.map(o => o.t * 50) };
                 }
-                return { load, entries, textures };
+                return { load, entries, textures, specOf, sizesOf };
             })();
 
             function rngOf(seed) {      // mulberry32: одно зерно - одна и та же последовательность
@@ -4458,6 +4481,7 @@
                 vegMesh = null;
             }
 
+            const vegSpec = (e) => (!e.user && veg.size[e.id]) || e.size;      // свои растения хранят размер в записи папки, остальные - переопределение в ссылке
             const vegWeight = (e) => (veg.weight[e.id] > 0 ? veg.weight[e.id] : e.weight);
             const vegIsOn = (e) => (veg.sel ? veg.sel.has(e.id) : e.on !== false);
 
@@ -4470,7 +4494,7 @@
                     const plants = (await Promise.all(list.map(async e => {
                         try {
                             const tx = await Veg.textures(e, veg.tint[e.id]), cv = tx.frames[0];
-                            return { canvas: cv, frames: tx.frames, times: tx.times, weight: vegWeight(e), sizes: e.sizes, tile: !!e.sizes && e.tile !== false, height: e.height || (cv.height >= cv.width * 1.5 ? 2 : 1) };
+                            return { canvas: cv, frames: tx.frames, times: tx.times, weight: vegWeight(e), sizes: vegSpec(e) ? Veg.sizesOf(vegSpec(e)) : null, tile: !!vegSpec(e) && vegSpec(e).tile, height: e.height || (cv.height >= cv.width * 1.5 ? 2 : 1) };
                         } catch (err) { console.warn('[veg]', e.id, err); return null; }
                     }))).filter(Boolean);
                     if (my !== vegReq || !veg.on || !state.on || !plants.length) return;
@@ -4559,6 +4583,7 @@
                     row.appendChild(lab);
                     const icon = () => Veg.textures(e, veg.tint[e.id]).then(tx => {
                         const f = tx.frames[0], s = 24 / Math.max(f.width, f.height), c = cv.getContext('2d');
+                        natH[e.id] = f.height >= f.width * 1.5 ? 2 : 1;
                         c.clearRect(0, 0, 24, 24);
                         c.imageSmoothingEnabled = false;
                         c.drawImage(f, (24 - f.width * s) / 2, 24 - f.height * s, f.width * s, f.height * s);
@@ -4574,6 +4599,25 @@
                         ci.oninput = () => { veg.tint[e.id] = ci.value; icon(); vegChanged(true); };
                         row.appendChild(ci);
                     }
+                    const sb = document.createElement('button');
+                    let panel = null;
+                    const mark = () => sb.classList.toggle('on', !!vegSpec(e));
+                    sb.type = 'button';
+                    sb.className = 'size-btn';
+                    sb.textContent = '⇕';
+                    sb.title = t('size.title');
+                    mark();
+                    sb.onclick = () => {
+                        if (panel) { panel.remove(); panel = null; return; }
+                        panel = sizeEditor(() => vegSpec(e), () => (e.user ? null : e.size), async (spec) => {
+                            if (e.user) { e.rec.size = spec; e.size = spec; try { await UserLib.put('plant', e.rec); } catch (err) { console.error('[folder]', err); } }
+                            else if (spec) veg.size[e.id] = spec; else delete veg.size[e.id];
+                            mark();
+                            vegChanged(false);
+                        }, () => e.height || (e.parts.length === 2 ? 2 : natH[e.id] || 1));
+                        row.after(panel);
+                    };
+                    row.appendChild(sb);
                     const wl = document.createElement('label'), wi = document.createElement('input');
                     wl.className = 'veg-w';
                     wl.title = t('veg.weight');
@@ -4604,6 +4648,46 @@
                 if (d) $('block_tint').value = hex6(state.tint || d);
             }
 
+            // Редактор разброса размера: cur() - действующие значения (или null), base() - исходные (для «Сбросить»),
+            // save(spec | null) - сохранить, nat() - размер текстуры в блоках (1 или 2) для значений по умолчанию
+            function sizeEditor(cur, base, save, nat) {
+                const box = document.createElement('div'), inputs = {}, sp = {}, KEYS = ['min', 'max', 'step', 'minWeight', 'maxWeight'];
+                box.className = 'size-ed';
+                ['pointerdown', 'click'].forEach(ev => box.addEventListener(ev, (e) => e.stopPropagation()));      // в окне папки клик по карточке выбирает её
+                const fill = (s) => {
+                    Object.assign(sp, { min: nat(), max: nat(), step: 1, minWeight: 1, maxWeight: 1, tile: true }, s || {});
+                    KEYS.forEach(k => { inputs[k].value = sp[k]; });
+                    inputs.tile.checked = !!sp.tile;
+                };
+                const commit = () => { const s = Veg.specOf(sp); fill(s); save(s); };
+                [['min', 'size.min', 0.25, 8, 0.25], ['max', 'size.max', 0.25, 8, 0.25], ['step', 'size.step', 0.25, 8, 0.25], ['minWeight', 'size.wmin', 0, 100, 1], ['maxWeight', 'size.wmax', 0, 100, 1]].forEach(([k, key, lo, hi, st]) => {
+                    const l = document.createElement('label'), i = document.createElement('input');
+                    i.type = 'number';
+                    i.min = lo;
+                    i.max = hi;
+                    i.step = st;
+                    i.onchange = () => { const n = +i.value; sp[k] = Math.min(hi, Math.max(lo, isFinite(n) ? n : lo)); commit(); };
+                    inputs[k] = i;
+                    l.append(t(key), i);
+                    box.appendChild(l);
+                });
+                const row = document.createElement('label'), tc = document.createElement('input'), rb = document.createElement('button');
+                row.className = 'size-row';
+                tc.type = 'checkbox';
+                inputs.tile = tc;
+                tc.onchange = () => { sp.tile = tc.checked; commit(); };
+                const span = document.createElement('span');
+                span.append(tc, ' ' + t('size.tile'));
+                rb.type = 'button';
+                rb.className = 'size-btn';
+                rb.textContent = t('size.reset');
+                rb.onclick = (e) => { e.preventDefault(); save(null); fill(base()); };
+                row.append(span, rb);
+                box.appendChild(row);
+                fill(cur());
+                return box;
+            }
+
             // Цвет (и вес для растений) прямо на карточке в окне «моя папка»; белый цвет = без оттенка
             function folderTools(kind, rec, withWeight, after) {
                 const row = document.createElement('div');
@@ -4629,7 +4713,25 @@
                     stop(wi);
                     row.appendChild(wi);
                 }
-                return row;
+                const wrap = document.createElement('div');
+                wrap.className = 'folder-tools-wrap';
+                wrap.appendChild(row);
+                if (kind === 'plant') {
+                    const sb = document.createElement('button');
+                    let panel = null;
+                    sb.type = 'button';
+                    sb.className = 'size-btn';
+                    sb.textContent = '⇕';
+                    sb.title = t('size.title');
+                    ['pointerdown', 'click'].forEach(ev => sb.addEventListener(ev, (e) => e.stopPropagation()));
+                    sb.onclick = () => {
+                        if (panel) { panel.remove(); panel = null; return; }
+                        panel = sizeEditor(() => Veg.specOf(rec.size), () => null, (s) => save({ size: s }), () => (rec.bottom && rec.top ? 2 : 1));
+                        wrap.appendChild(panel);
+                    };
+                    row.appendChild(sb);
+                }
+                return wrap;
             }
 
             function setUi(on) {
@@ -4718,6 +4820,11 @@
                 veg.tint = {};
                 veg.weight = {};
                 (q.get('vw') || '').split(',').forEach(s => { const m = /^([A-Za-z0-9_\-]{1,40}):(\d{1,3})$/.exec(s); if (m && +m[2] > 0) veg.weight[m[1]] = Math.min(100, +m[2]); });
+                veg.size = {};
+                (q.get('vs') || '').split(',').forEach(s => {
+                    const m = /^([A-Za-z0-9_\-]{1,40}):([\d.]+)~([\d.]+)~([\d.]+)~(\d{1,3})~(\d{1,3})~([01])$/.exec(s);
+                    if (m) veg.size[m[1]] = Veg.specOf({ min: m[2], max: m[3], step: m[4], minWeight: m[5], maxWeight: m[6], tile: m[7] === '1' });
+                });
                 (q.get('vc') || '').split(',').forEach(s => { const m = /^([A-Za-z0-9_\-]{1,40}):([0-9a-f]{6})$/i.exec(s); if (m) veg.tint[m[1]] = '#' + m[2]; });
                 state.tint = /^[0-9a-f]{6}$/i.test(bt || '') ? '#' + bt : null;
                 tintUi();
@@ -4864,7 +4971,7 @@
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
-                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), density: veg.density, mask: vegMask() } }),
+                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), sizes: Object.entries(veg.size).map(([k, s]) => k + ':' + [s.min, s.max, s.step, s.minWeight, s.maxWeight, s.tile ? 1 : 0].join('~')).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
