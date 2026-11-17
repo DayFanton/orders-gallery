@@ -401,10 +401,24 @@
   "folder.emote.hint": "Khetha ifayile ye-.json ye-emote kwaye, ukuba uyafuna, umfanekiso we-icon (.png) kwingxoxo enye",
   "folder.emote.icon": "Tshintsha i-icon",
   "folder.reorder": "Tsala ukuze utshintshe ucwangco (okanye usebenzise iintolo ← →)",
+  "folder.veg.open": "Izityalo zam",
+  "folder.veg.title": "Izityalo zam",
+  "folder.veg.hint": "Khetha umfanekiso wesityalo (.png onokucaca). Umfanekiso omade (ukuphakama ubuncinane kuphindwe 1.5 ngobubanzi, umz. 16×32) uya kuba sityalo esineebhloko ezi-2",
+  "folder.veg.error": "Khetha ifayile yomfanekiso",
 
   "ui.hide": "Fihla ujongano (H)",
   "ui.show": "Bonisa ujongano (H)",
 
   "shot.title": "Kopa umfanekiso weskrini kwibhodi eqokelelwayo (bamba u-Ctrl ukuze ukhuphele kwakhona, u-Shift ngasemva okucacileyo)",
-  "shot.error": "Ayiphumelelanga ukuthatha umfanekiso weskrini"
+  "shot.error": "Ayiphumelelanga ukuthatha umfanekiso weskrini",
+
+  "veg.enable": "Vula izityalo",
+  "veg.dice": "Xuba",
+  "veg.set": "Iseti yezityalo",
+  "veg.density": "Uxinano",
+  "veg.layers": "Apho zityalo zikhula khona",
+  "veg.layer1": "Iqonga elingasentla",
+  "veg.layer2": "Iqonga eliphakathi",
+  "veg.layer3": "Iqonga elingezantsi",
+  "veg.empty": "Akukho zityalo okwangoku — faka izithuba kwifolda ye-vegetation/ okanye ufake eyakho"
 }

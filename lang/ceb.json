@@ -401,10 +401,24 @@
   "folder.emote.hint": "Pagpili og emote .json file ug, kung gusto nimo, usa ka icon image (.png) sa parehong dialog",
   "folder.emote.icon": "Usba ang icon",
   "folder.reorder": "I-drag aron mahipos ang han-ay (o gamita ang mga arrow ← →)",
+  "folder.veg.open": "Akong mga tanom",
+  "folder.veg.title": "Akong mga tanom",
+  "folder.veg.hint": "Pilia ang hulagway sa tanom (.png nga naay transparency). Ang taas nga hulagway (ang gitas-on labing minus 1.5 ka pilo nga mas dako kaysa sa gilapdon, pananglitan 16×32) mahimong tanom nga 2 ka bloke ang gitas-on",
+  "folder.veg.error": "Pilia ang file sa hulagway",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
 
   "shot.title": "Kopyaha ang screenshot sa clipboard (i-hold ang Ctrl aron ma-download usab, Shift para sa transparent nga background)",
-  "shot.error": "Napakyas sa pagkuha sa screenshot"
+  "shot.error": "Napakyas sa pagkuha sa screenshot",
+
+  "veg.enable": "I-on ang tanom",
+  "veg.dice": "Sagol-sagol",
+  "veg.set": "Set sa tanom",
+  "veg.density": "Kahuot",
+  "veg.layers": "Hain motubo ang tanom",
+  "veg.layer1": "Ibabaw nga plataporma",
+  "veg.layer2": "Tunga-tunga nga plataporma",
+  "veg.layer3": "Ubos nga plataporma",
+  "veg.empty": "Wala pay tanom — ibutang ang mga tekstura sa folder nga vegetation/ o iapil ang imoha"
 }

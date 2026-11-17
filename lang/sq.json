@@ -403,10 +403,24 @@
   "folder.emote.hint": "Zgjidhni një skedar .json të emote dhe, nëse dëshironi, një imazh ikone (.png) në të njëjtin dialog",
   "folder.emote.icon": "Ndrysho ikonën",
   "folder.reorder": "Tërhiq për të rirenditur (ose shigjetat ← →)",
+  "folder.veg.open": "Bimët e mia",
+  "folder.veg.title": "Bimët e mia",
+  "folder.veg.hint": "Zgjidhni një imazh bime (.png me transparencë). Një imazh i lartë (lartësia të paktën 1.5 herë më e madhe se gjerësia, p.sh. 16×32) do të bëhet një bimë me 2 blloqe",
+  "folder.veg.error": "Zgjidhni skedarin e imazhit",
 
   "ui.hide": "Fshih ndërfaqen (H)",
   "ui.show": "Shfaq ndërfaqen (H)",
 
   "shot.title": "Kopjo pametjen e ekranit në kujtesë (mbaj shtypur Ctrl për ta shkarkuar gjithashtu, Shift për sfond transparent)",
-  "shot.error": "Nuk u arrit të bëhej pamja e ekranit"
+  "shot.error": "Nuk u arrit të bëhej pamja e ekranit",
+
+  "veg.enable": "Aktivizo bimësinë",
+  "veg.dice": "Përziej",
+  "veg.set": "Komplekti i bimësisë",
+  "veg.density": "Dendësia",
+  "veg.layers": "Ku rritet bimësia",
+  "veg.layer1": "Platforma e sipërme",
+  "veg.layer2": "Platforma e mesme",
+  "veg.layer3": "Platforma e poshtme",
+  "veg.empty": "Nuk ka ende bimë — vendosni teksturat në dosjen vegetation/ ose shtoni tuajat"
 }

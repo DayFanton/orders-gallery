@@ -403,10 +403,24 @@
   "folder.emote.hint": "Vyberte soubor .json emotikonu a, pokud chcete, i obrázek ikony (.png) ve stejném dialogovém okně",
   "folder.emote.icon": "Změnit ikonu",
   "folder.reorder": "Přetažením změňte pořadí (nebo použijte šipky ← →)",
+  "folder.veg.open": "Moje rostliny",
+  "folder.veg.title": "Moje rostliny",
+  "folder.veg.hint": "Vyberte obrázek rostliny (.png s průhledností). Vysoký obrázek (výška alespoň 1,5krát větší než šířka, např. 16×32) se stane rostlinou vysokou 2 bloky",
+  "folder.veg.error": "Vybrat soubor obrázku",
 
   "ui.hide": "Skrýt rozhraní (H)",
   "ui.show": "Zobrazit rozhraní (H)",
 
   "shot.title": "Zkopírovat snímek obrazovky do schránky (podržte Ctrl pro stažení, Shift pro průhledné pozadí)",
-  "shot.error": "Nepodařilo se pořídit snímek obrazovky"
+  "shot.error": "Nepodařilo se pořídit snímek obrazovky",
+
+  "veg.enable": "Zapnout vegetaci",
+  "veg.dice": "Zamíchat",
+  "veg.set": "Sada vegetace",
+  "veg.density": "Hustota",
+  "veg.layers": "Kde roste vegetace",
+  "veg.layer1": "Horní plošina",
+  "veg.layer2": "Střední plošina",
+  "veg.layer3": "Dolní plošina",
+  "veg.empty": "Zatím žádné rostliny — vložte textury do složky vegetation/ nebo přidejte své vlastní"
 }

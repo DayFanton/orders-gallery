@@ -403,10 +403,24 @@
   "folder.emote.hint": "Mbica ya emote .json na, twĩ kũenda, mbica ya icon (.png) thĩinĩ wa mbica ĩmwe",
   "folder.emote.icon": "Ũvũndũla icon",
   "folder.reorder": "Thama nĩguo ũvĩndũie mbandĩ (kana ũtumĩe mĩguĩ ← →)",
+  "folder.veg.open": "Miti yakwa",
+  "folder.veg.title": "Miti yakwa",
+  "folder.veg.hint": "Thuranĩa mũhianano wa miti (.png ĩĩ na ũtheri). Mũhianano mũlaiku (ũlaiku mbee wa mĩiganjo 1.5 kwi ũene, ta 16×32) ũkaĩkĩa mti wa mavaluki meerĩ",
+  "folder.veg.error": "Thuranĩa faili ya mĩhianano",
 
   "ui.hide": "Ĩtheka mbica (H)",
   "ui.show": "Tharia mbica (H)",
 
   "shot.title": "Kopi screenshot kuri clipboard (kwata Ctrl niguo uthĩe, Shift niguo ugethe background ya kiaria)",
-  "shot.error": "Ndwaĩ kũtw'a screenshot"
+  "shot.error": "Ndwaĩ kũtw'a screenshot",
+
+  "veg.enable": "Vumba miti",
+  "veg.dice": "Kũvangĩa",
+  "veg.set": "Kĩsũngo kĩa miti",
+  "veg.density": "Ũnyinyi",
+  "veg.layers": "Handu ha miti ĩkũa",
+  "veg.layer1": "Kĩvĩla kya ĩũlũ",
+  "veg.layer2": "Kĩvĩla kya vatic nze",
+  "veg.layer3": "Kĩvĩla kya nthĩ",
+  "veg.empty": "Ti mĩti ĩvĩ — ikia mĩhianano folda-ini ya vegetation/ kana wongeya yaku"
 }

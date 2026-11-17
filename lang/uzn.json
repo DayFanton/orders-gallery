@@ -401,10 +401,24 @@
   "folder.emote.hint": "Emot .json faylini va xohlasangiz, ikonka rasmini (.png) bir xil muloqot oynasida tanlang",
   "folder.emote.icon": "Ikonkani o'zgartirish",
   "folder.reorder": "Tartibini o'zgartirish uchun sudrab olib boring (yoki ← → strelkalaridan foydalaning)",
+  "folder.veg.open": "Mening o'simliklarim",
+  "folder.veg.title": "Mening o'simliklarim",
+  "folder.veg.hint": "O'simlik rasmini tanlang (.png shaffoflik bilan). Baland rasm (balandligi enidan kamida 1,5 barobar katta, masalan 16×32) 2 blokli o'simlikka aylanadi",
+  "folder.veg.error": "Rasm faylini tanlash",
 
   "ui.hide": "Interfeysni yashirish (H)",
   "ui.show": "Interfeysni ko'rsatish (H)",
 
   "shot.title": "Skrinshotni buferga nusxalash (shuningdek yuklab olish uchun Ctrl-ni, shaffof fon uchun Shift-ni bosib turing)",
-  "shot.error": "Skrinshotga olib boʻlmadi"
+  "shot.error": "Skrinshotga olib boʻlmadi",
+
+  "veg.enable": "O'simliklarni yoqish",
+  "veg.dice": "Aralashtirish",
+  "veg.set": "O'simliklar to'plami",
+  "veg.density": "Zichlik",
+  "veg.layers": "O'simliklar o'sadigan joy",
+  "veg.layer1": "Yuqori platforma",
+  "veg.layer2": "O'rta platforma",
+  "veg.layer3": "Pastki platforma",
+  "veg.empty": "Hozircha o'simliklar yo'q — teksturalarni vegetation/ papkasiga joylashtiring yoki o'zingiznikini qo'shing"
 }

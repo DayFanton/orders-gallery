@@ -401,10 +401,24 @@
   "folder.emote.hint": "Emote .json file kee, woyite addisaysu woyite, icon image (.png) dialog koo kee addisaysu",
   "folder.emote.icon": "Icon koo cissa",
   "folder.reorder": "Drag to reorder (afa arrow ← →)",
+  "folder.veg.open": "Abalay koo",
+  "folder.veg.title": "Abalay koo",
+  "folder.veg.hint": "Abalay kaxxa doori (.png cissi kaxxa). Xaawo xagi (xagi sidi 1.5 gaba cabbi kaxxa, ama 16×32) labba blokih abalay yibbiro",
+  "folder.veg.error": "Kaxxa doori fayli",
 
   "ui.hide": "Interface maggana (H)",
   "ui.show": "Interface takki (H)",
 
   "shot.title": "Copy screenshot clipboard kee (Ctrl abenih, Shift transparent background kee)",
-  "shot.error": "Screen-a akakoloh maana"
+  "shot.error": "Screen-a akakoloh maana",
+
+  "veg.enable": "Abalay",
+  "veg.dice": "Qaxix",
+  "veg.set": "Abalay kaxxa",
+  "veg.density": "Cufna",
+  "veg.layers": "Qaxix gaxa",
+  "veg.layer1": "Iro gaba",
+  "veg.layer2": "Gidda gaba",
+  "veg.layer3": "Guba gaba",
+  "veg.empty": "Abalay mali — vegetation/ xiyowtah gaba cissi kaxxa"
 }

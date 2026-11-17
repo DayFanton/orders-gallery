@@ -403,10 +403,24 @@
   "folder.emote.hint": "Scegli un file .json per l'emote e, se desideri, un'immagine icona (.png) nella stessa finestra di dialogo",
   "folder.emote.icon": "Cambia icona",
   "folder.reorder": "Trascina per riordinare (o usa le frecce ← →)",
+  "folder.veg.open": "Le mie piante",
+  "folder.veg.title": "Le mie piante",
+  "folder.veg.hint": "Scegli un'immagine di pianta (.png con trasparenza). Un'immagine alta (altezza almeno 1,5 volte superiore alla larghezza, ad esempio 16×32) diventerà una pianta alta 2 blocchi",
+  "folder.veg.error": "Scegli file immagine",
 
   "ui.hide": "Nascondi interfaccia (H)",
   "ui.show": "Mostra interfaccia (H)",
 
   "shot.title": "Copia screenshot negli appunti (tieni premuto Ctrl per scaricare anche, Shift per lo sfondo trasparente)",
-  "shot.error": "Impossibile acquisire la schermata"
+  "shot.error": "Impossibile acquisire la schermata",
+
+  "veg.enable": "Attiva vegetazione",
+  "veg.dice": "Mescola",
+  "veg.set": "Set di vegetazione",
+  "veg.density": "Densità",
+  "veg.layers": "Dove cresce la vegetazione",
+  "veg.layer1": "Piattaforma superiore",
+  "veg.layer2": "Piattaforma intermedia",
+  "veg.layer3": "Piattaforma inferiore",
+  "veg.empty": "Nessuna pianta ancora — posiziona le trame nella cartella vegetation/ o aggiungi le tue"
 }

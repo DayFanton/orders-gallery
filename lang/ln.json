@@ -401,10 +401,24 @@
   "folder.emote.hint": "Poná file .json ya emote mpe, soki olingi, bililingi ya icon (.png) na dialog moko",
   "folder.emote.icon": "Bóngola icon",
   "folder.reorder": "Kokaka po na kobongola molongo (to kosalela milolo ← →)",
+  "folder.veg.open": "Nzeté na ngai",
+  "folder.veg.title": "Nzeté na ngai",
+  "folder.veg.hint": "Pona elilingi ya nzeté (.png na pole). Elilingi ya molayi (bolayi koleka 1.5 ya bonene, na ndakisa 16×32) ekomaka nzeté ya mabulu mibale",
+  "folder.veg.error": "Pona faili ya elilingi",
 
   "ui.hide": "Bomba interface (H)",
   "ui.show": "Monisa interface (H)",
 
   "shot.title": "Kópi screenshot na clipboard (simba Ctrl mpo na kokitola mpe, Shift mpo na background ya pɛtɛpɛtɛ)",
-  "shot.error": "Ekoki te kozwa kopona ya écran"
+  "shot.error": "Ekoki te kozwa kopona ya écran",
+
+  "veg.enable": "Kóka nzeté",
+  "veg.dice": "Kokabisa",
+  "veg.set": "Mwa nzeté",
+  "veg.density": "Bokasi",
+  "veg.layers": "Esika nzeté ekoli",
+  "veg.layer1": "Eteni ya likolo",
+  "veg.layer2": "Eteni ya katikati",
+  "veg.layer3": "Eteni ya nse",
+  "veg.empty": "Ezali na nzeté te — tyá bilembo na folda vegetation/ to bakisa ya yo moko"
 }

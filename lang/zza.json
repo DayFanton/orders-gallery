@@ -403,10 +403,24 @@
   "folder.emote.hint": "Yew fıli .jsoni yê emoti u eke to wazeno, yew resmê iconi (.png) ebe yew dialog de bıvake",
   "folder.emote.icon": "Icon bıvurnê",
   "folder.reorder": "Terbiyayışi vurnenayîşî bikiş (ya zi tîran ← → bixebitîne)",
+  "folder.veg.open": "Tebiya mi",
+  "folder.veg.title": "Tebiya mi",
+  "folder.veg.hint": "Yewê tebia binusne (.png ke şevefiyayo). Yewê berze (berziya xo ke en tay 1.5 gırdê ra 16×32) bibe tebia dı blokan",
+  "folder.veg.error": "Yewê dosya binusne",
 
   "ui.hide": "Enterfeyi bınusne (H)",
   "ui.show": "Enterfeyi bımocne (H)",
 
   "shot.title": "Screenshot bıkle clipboard (qele Ctrl bıkle, qele Shift background rındek)",
-  "shot.error": "Ekran ra nêgrewiya"
+  "shot.error": "Ekran ra nêgrewiya",
+
+  "veg.enable": "Tebia akerne",
+  "veg.dice": "Tede arê dayene",
+  "veg.set": "Setê tebia",
+  "veg.density": "Tîrbîyayîş",
+  "veg.layers": "Uca ke tebia tede roni",
+  "veg.layer1": "Platformo corên",
+  "veg.layer2": "Platformo miyanêne",
+  "veg.layer3": "Platformo cêrên",
+  "veg.empty": "Tebia nîst — teksturan bende pîya bınê vegetation/ ya ziê xo bınusne"
 }

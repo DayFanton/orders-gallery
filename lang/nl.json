@@ -401,10 +401,24 @@
   "folder.emote.hint": "Kies een emote-.json-bestand en, indien gewenst, een pictogramafbeelding (.png) in hetzelfde dialoogvenster",
   "folder.emote.icon": "Pictogram wijzigen",
   "folder.reorder": "Slepen om te herschikken (of gebruik de pijlen ← →)",
+  "folder.veg.open": "Mijn planten",
+  "folder.veg.title": "Mijn planten",
+  "folder.veg.hint": "Kies een plantafbeelding (.png met transparantie). Een hoge afbeelding (hoogte minstens 1,5 keer groter dan breedte, bijv. 16×32) wordt een plant van 2 blokken hoog",
+  "folder.veg.error": "Afbeeldingsbestand kiezen",
 
   "ui.hide": "Verberg interface (H)",
   "ui.show": "Toon interface (H)",
 
   "shot.title": "Screenshot naar klembord kopiëren (houd Ctrl ingedrukt om ook te downloaden, Shift voor een transparante achtergrond)",
-  "shot.error": "Kan geen schermafbeelding maken"
+  "shot.error": "Kan geen schermafbeelding maken",
+
+  "veg.enable": "Vegetatie inschakelen",
+  "veg.dice": "Schudden",
+  "veg.set": "Vegetatieset",
+  "veg.density": "Dichtheid",
+  "veg.layers": "Waar vegetatie groeit",
+  "veg.layer1": "Bovenste platform",
+  "veg.layer2": "Middelste platform",
+  "veg.layer3": "Onderste platform",
+  "veg.empty": "Nog geen planten — plaats texturen in de map vegetation/ of voeg je eigen toe"
 }

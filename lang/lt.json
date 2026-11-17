@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pasirinkite emociuko .json failą ir, jei norite, piktogramos paveikslėlį (.png) tame pačiame dialogo lange",
   "folder.emote.icon": "Pakeisti piktogramą",
   "folder.reorder": "Tempkite norėdami pakeisti tvarką (arba rodykles ← →)",
+  "folder.veg.open": "Mano augalai",
+  "folder.veg.title": "Mano augalai",
+  "folder.veg.hint": "Pasirinkite augalo paveikslėlį (.png su permatomumu). Aukštas paveikslėlis (aukštis bent 1,5 karto didesnis už plotį, pvz., 16×32) taps 2 blokų augalu",
+  "folder.veg.error": "Pasirinkti paveikslėlio failą",
 
   "ui.hide": "Slėpti sąsają (H)",
   "ui.show": "Rodyti sąsają (H)",
 
   "shot.title": "Kopijuoti ekrano kopiją į iškarpinę (laikykite nuspaudę „Ctrl“, kad ir atsisiųstumėte, „Shift“ – permatomam fonui)",
-  "shot.error": "Nepavyko padaryti ekrano kopijos"
+  "shot.error": "Nepavyko padaryti ekrano kopijos",
+
+  "veg.enable": "Įjungti augmeniją",
+  "veg.dice": "Maišyti",
+  "veg.set": "Augmenijos rinkinys",
+  "veg.density": "Tankis",
+  "veg.layers": "Kur auga augmenija",
+  "veg.layer1": "Viršutinė platforma",
+  "veg.layer2": "Vidurinė platforma",
+  "veg.layer3": "Apatinė platforma",
+  "veg.empty": "Augalų dar nėra — įdėkite tekstūras į vegetation/ aplanką arba pridėkite savo"
 }

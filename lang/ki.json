@@ -403,10 +403,24 @@
   "folder.emote.hint": "Thano ya emote .json na, angĩkorwo nĩ ũrenda, thano ya icon (.png) thĩinĩ wa mbica ĩmwe",
   "folder.emote.icon": "Guũruria icon",
   "folder.reorder": "Thurania niguo ũgarũre mwandiko (kana ũhũthĩre mĩguĩ ← →)",
+  "folder.veg.open": "Miti yakwa",
+  "folder.veg.title": "Miti yakwa",
+  "folder.veg.hint": "Thurania mũhianano wa miti (.png ĩrĩ na ũtheri). Mũhianano mũire (ũire mũiganjo wa 1.5 kana makiria ya ũtheri, ta 16×32) ũgakorwo ũrĩ mti wa mabatiri meerĩ",
+  "folder.veg.error": "Thurania faili ya mĩhianano",
 
   "ui.hide": "Thweka kĩhumo (H)",
   "ui.show": "Cionia kĩhumo (H)",
 
   "shot.title": "Kopi screenshot kuri clipboard (batira Ctrl niguo uthĩe, Shift niguo ugethe background ya kiaria)",
-  "shot.error": "Gũtiagĩka gũtunyia thirimũ"
+  "shot.error": "Gũtiagĩka gũtunyia thirimũ",
+
+  "veg.enable": "Guakia miti",
+  "veg.dice": "Kūrira",
+  "veg.set": "Kĩũngo kĩa miti",
+  "veg.density": "Ũritũ",
+  "veg.layers": "Harĩa miti ĩkũra",
+  "veg.layer1": "Gĩtĩ kĩa igũrũ",
+  "veg.layer2": "Gĩtĩ kĩa gatagatĩ",
+  "veg.layer3": "Gĩtĩ kĩa thĩ",
+  "veg.empty": "Gũtirĩ miti o na ĩmwe — ikia mĩhianano folda-ini ya vegetation/ kana wongere yaku"
 }

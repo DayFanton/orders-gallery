@@ -403,10 +403,24 @@
   "folder.emote.hint": "Emote .json file qixxite, woygiintta cayya gidoon icon image (.png) dialoge mittu giddro qixxite",
   "folder.emote.icon": "Icon qixxite",
   "folder.reorder": "Drag to reorder (o arrows ← →)",
+  "folder.veg.open": "Ta kawoosho",
+  "folder.veg.title": "Ta kawoosho",
+  "folder.veg.hint": "Kawoosho qashshoo doorite (.png paydanchchira). Guquqquwa qashshoo (qashshooga keeshshaturgge 1.5 gita, leemisu 16×32) 2 blokki kawoosho gidana",
+  "folder.veg.error": "Oychchaa fayile doorite",
 
   "ui.hide": "Interface qixxa (H)",
   "ui.show": "Interface bescite (H)",
 
   "shot.title": "Screenshot clipboard qolishi (Ctrl minca, Shift transparent background)",
-  "shot.error": "Screen-a oykki ba danda"
+  "shot.error": "Screen-a oykki ba danda",
+
+  "veg.enable": "Kawoosho",
+  "veg.dice": "Xoossa",
+  "veg.set": "Kawoosho qashsho",
+  "veg.density": "Orddaa",
+  "veg.layers": "Kawoosho kayiyaas yannay",
+  "veg.layer1": "Bollaa oychchaa",
+  "veg.layer2": "Giddichcha oychchaa",
+  "veg.layer3": "Garssa oychchaa",
+  "veg.empty": "Kawoosho baawa — vegetation/ oychchan shiraashsha woy naha godo"
 }

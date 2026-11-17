@@ -403,10 +403,24 @@
   "folder.emote.hint": "Wählen Sie eine Emote-.json-Datei und optional ein Vorschaubild (.png) im selben Dialogfeld aus",
   "folder.emote.icon": "Symbol ändern",
   "folder.reorder": "Zum Neuanordnen ziehen (oder Pfeile ← → verwenden)",
+  "folder.veg.open": "Meine Pflanzen",
+  "folder.veg.title": "Meine Pflanzen",
+  "folder.veg.hint": "Wählen Sie ein Pflanzenbild (.png mit Transparenz). Ein hohes Bild (Höhe mindestens 1,5-mal größer als die Breite, z. B. 16×32) wird zu einer 2 Blöcke hohen Pflanze",
+  "folder.veg.error": "Bilddatei auswählen",
 
   "ui.hide": "Interface ausblenden (H)",
   "ui.show": "Interface anzeigen (H)",
 
   "shot.title": "Screenshot in die Zwischenablage kopieren (halten Sie Strg gedrückt, um ihn auch herunterzuladen, Shift für transparenten Hintergrund)",
-  "shot.error": "Screenshot konnte nicht aufgenommen werden"
+  "shot.error": "Screenshot konnte nicht aufgenommen werden",
+
+  "veg.enable": "Vegetation aktivieren",
+  "veg.dice": "Mischen",
+  "veg.set": "Vegetationsset",
+  "veg.density": "Dichte",
+  "veg.layers": "Wo Vegetation wächst",
+  "veg.layer1": "Obere Plattform",
+  "veg.layer2": "Mittlere Plattform",
+  "veg.layer3": "Untere Plattform",
+  "veg.empty": "Noch keine Pflanzen — platziere Texturen im Ordner vegetation/ oder füge deine eigenen hinzu"
 }

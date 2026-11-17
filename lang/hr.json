@@ -403,10 +403,24 @@
   "folder.emote.hint": "Odaberite .json datoteku emota i, ako želite, sliku ikone (.png) u istom dijaloškom okviru",
   "folder.emote.icon": "Promijeni ikonu",
   "folder.reorder": "Povucite za promjenu redoslijeda (ili strelice ← →)",
+  "folder.veg.open": "Moje biljke",
+  "folder.veg.title": "Moje biljke",
+  "folder.veg.hint": "Odaberite sliku biljke (.png s prozirnošću). Visoka slika (visina najmanje 1,5 puta veća od širine, npr. 16×32) postat će biljka visoka 2 bloka",
+  "folder.veg.error": "Odaberite datoteku slike",
 
   "ui.hide": "Sakrij sučelje (H)",
   "ui.show": "Prikaži sučelje (H)",
 
   "shot.title": "Kopiraj snimku zaslona u međuspremnik (držite Ctrl za preuzimanje, Shift za prozirnu pozadinu)",
-  "shot.error": "Nije uspjelo snimanje zaslona"
+  "shot.error": "Nije uspjelo snimanje zaslona",
+
+  "veg.enable": "Uključi vegetaciju",
+  "veg.dice": "Promiješaj",
+  "veg.set": "Skup vegetacije",
+  "veg.density": "Gustoća",
+  "veg.layers": "Gdje raste vegetacija",
+  "veg.layer1": "Gornja platforma",
+  "veg.layer2": "Srednja platforma",
+  "veg.layer3": "Donja platforma",
+  "veg.empty": "Još nema biljaka — postavite teksture u mapu vegetation/ ili dodajte svoje"
 }

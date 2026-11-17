@@ -401,10 +401,24 @@
   "folder.emote.hint": "Khetfa lifayela le-.json lelemothi, futsi uma ufuna, sitfombe sesitfombe (.png) kulencociswano lefanako",
   "folder.emote.icon": "Shintsha sitfombe",
   "folder.reorder": "Hudvula kute ushintshe kulandzelana (noma usebentise micibisholo ← →)",
+  "folder.veg.open": "Titjalo tami",
+  "folder.veg.title": "Titjalo tami",
+  "folder.veg.hint": "Khetha sitsandzwa setitjalo (.png lesikhanya). Sitfombe lesidze (kuphakama lokungenani kuphindvwe kani 1.5 kububanti, sib. 16×32) kutawuba sitjalo semabhuloki lamabili",
+  "folder.veg.error": "Khetha ifayela lesitfombe",
 
   "ui.hide": "Fihla isikhombandlela (H)",
   "ui.show": "Khombisa isikhombandlela (H)",
 
   "shot.title": "Kopa sitfombe seskrini ku-clipboard (bamba u-Ctrl kute ulande futsi, u-Shift kwendzawo lebhonakalako)",
-  "shot.error": "Kuhlulekile kutfatha sitfombe sesikrini"
+  "shot.error": "Kuhlulekile kutfatha sitfombe sesikrini",
+
+  "veg.enable": "Vula titjalo",
+  "veg.dice": "Hlanganisa",
+  "veg.set": "Sete yetitjalo",
+  "veg.density": "Kucinana",
+  "veg.layers": "Lapho titjalo tikhula khona",
+  "veg.layer1": "Siteji lesisetulu",
+  "veg.layer2": "Siteji lesisemkhatsini",
+  "veg.layer3": "Siteji lesingephansi",
+  "veg.empty": "Kute titjalo kanyene — beka titjalo kufolda ye vegetation/ noma engetela takho"
 }

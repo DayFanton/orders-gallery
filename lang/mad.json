@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pèlè berkas .json emote otabâ, mon terro, gambar ikon (.png) è ḍâlem dialog sè padhâ",
   "folder.emote.icon": "Ghântè' ikon",
   "folder.reorder": "Sered ka'ngnga' ganti' urutan (atawa panah ← →)",
+  "folder.veg.open": "Tanaman ka",
+  "folder.veg.title": "Tanaman ka",
+  "folder.veg.hint": "Pilih gambar tanaman (.png kalawan transparan). Gambar dhuwur (dhuwur minimal 1,5 kalè lebbi rajâ èbandingaghi lebbar, contona 16×32) bakal dhaddi tanaman 2 blok",
+  "folder.veg.error": "Pilih berkas gambar",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
 
   "shot.title": "Salin tangkapan layar ka papan klip (tahan Ctrl ka'ng unduh jugha, Shift ka'ng latar transparan)",
-  "shot.error": "Gagal ngala' tangkapan layar"
+  "shot.error": "Gagal ngala' tangkapan layar",
+
+  "veg.enable": "Aktifake vegetasi",
+  "veg.dice": "Acak",
+  "veg.set": "Set vegetasi",
+  "veg.density": "Kapadhetan",
+  "veg.layers": "Kenneng tuwuh vegetasi",
+  "veg.layer1": "Platform attas",
+  "veg.layer2": "Platform tengnga",
+  "veg.layer3": "Platform baba",
+  "veg.empty": "Belum ada tanaman — pasang tekstur e dalam folder vegetation/ o tambaha tang"
 }

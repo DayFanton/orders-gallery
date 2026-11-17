@@ -403,10 +403,24 @@
   "folder.emote.hint": "Nangani faela ya .json ya emote nahone, arali na toda, tshifanyiso tsha icon (.png) kha Dayalogo yo fanaho",
   "folder.emote.icon": "Shandukisa icon",
   "folder.reorder": "Gungudani u shandula mbekanyano (kana ni shumise mifura ← →)",
+  "folder.veg.open": "Zwimela zwanga",
+  "folder.veg.title": "Zwimela zwanga",
+  "folder.veg.hint": "Nangani tshifanyiso tsha zwimela (.png ya vha ya vhonala). Tshifanyiso tsha u lela (vulele la vha u fhirisa vhuphara nga maraga ya 1.5, tsumbo 16×32) i do vha tshimela tsha zwibula zwivhili",
+  "folder.veg.error": "Nangani faele ya tshifanyiso",
 
   "ui.hide": "Vhaedza zwiga (H)",
   "ui.show": "Luvhadza zwiga (H)",
 
   "shot.title": "Kopa tshifanyiso tsha skrini kha clipboard (fara Ctrl u uri u ḓowunilude hafhu, Shift ya vhualo vhu leluwaho)",
-  "shot.error": "Zwo vha zwi sa konadziwi u dzhia tshikirini"
+  "shot.error": "Zwo vha zwi sa konadziwi u dzhia tshikirini",
+
+  "veg.enable": "Vula zwimela",
+  "veg.dice": "Vuvhela",
+  "veg.set": "Setshedzo tsha zwimela",
+  "veg.density": "U tsitsikana",
+  "veg.layers": "Hune zwimela zwa mela hone",
+  "veg.layer1": "Tshiimo tsha nṱha",
+  "veg.layer2": "Tshiimo tsha vhukati",
+  "veg.layer3": "Tshiimo tsha fhasi",
+  "veg.empty": "A hu na zwimela zwino — vheani zwishumiswa kha folda ya vegetation/ kana u engedza zwanyu"
 }

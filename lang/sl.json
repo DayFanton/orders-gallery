@@ -401,10 +401,24 @@
   "folder.emote.hint": "Izberite .json datoteko emota in, če želite, sliko ikone (.png) v istem pogovornem oknu",
   "folder.emote.icon": "Spremeni ikono",
   "folder.reorder": "Povlecite za spremembo vrstnega reda (ali uporabite puščice ← →)",
+  "folder.veg.open": "Moje rastline",
+  "folder.veg.title": "Moje rastline",
+  "folder.veg.hint": "Izberite sliko rastline (.png s prosojnostjo). Visoka slika (višina vsaj 1,5-krat večja od širine, npr. 16×32) bo postala 2 bloka visoka rastlina",
+  "folder.veg.error": "Izberite slikovno datoteko",
 
   "ui.hide": "Skrij vmesnik (H)",
   "ui.show": "Prikaži vmesnik (H)",
 
   "shot.title": "Kopiraj posnetek zaslona v odložišče (pridržite Ctrl za prenos, Shift za prosojno ozadje)",
-  "shot.error": "Posnetka zaslona ni bilo mogoče narediti"
+  "shot.error": "Posnetka zaslona ni bilo mogoče narediti",
+
+  "veg.enable": "Vklopi vegetacijo",
+  "veg.dice": "Premešaj",
+  "veg.set": "Set vegetacije",
+  "veg.density": "Gostota",
+  "veg.layers": "Kje raste vegetacija",
+  "veg.layer1": "Zgornja ploščad",
+  "veg.layer2": "Srednja ploščad",
+  "veg.layer3": "Spodnja ploščad",
+  "veg.empty": "Ni še rastlin — postavite teksture v mapo vegetation/ ali dodajte svoje"
 }

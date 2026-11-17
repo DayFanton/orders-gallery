@@ -401,10 +401,24 @@
   "folder.emote.hint": "Válasszon ki egy emote .json fájlt, és ha szeretné, egy ikonképet (.png) ugyanabban a párbeszédablakban",
   "folder.emote.icon": "Ikon módosítása",
   "folder.reorder": "Húzza az átrendezéshez (vagy használja a ← → nyilakat)",
+  "folder.veg.open": "Növényeim",
+  "folder.veg.title": "Növényeim",
+  "folder.veg.hint": "Válasszon ki egy növényképet (.png áttetszőséggel). A magas kép (a magasság legalább 1,5-szer nagyobb, mint a szélesség, pl. 16×32) 2 blokk magas növénnyé válik",
+  "folder.veg.error": "Képfájl kiválasztása",
 
   "ui.hide": "Felület elrejtése (H)",
   "ui.show": "Felület megjelenítése (H)",
 
   "shot.title": "Képernyőkép másolása a vágólapra (tartsd lenyomva a Ctrl-t a letöltéshez is, Shift az átlátszó háttérért)",
-  "shot.error": "Nem sikerült képernyőképet készíteni"
+  "shot.error": "Nem sikerült képernyőképet készíteni",
+
+  "veg.enable": "Növényzet bekapcsolása",
+  "veg.dice": "Keverés",
+  "veg.set": "Növényzet készlet",
+  "veg.density": "Sűrűség",
+  "veg.layers": "Ahol a növényzet nő",
+  "veg.layer1": "Felső platform",
+  "veg.layer2": "Középső platform",
+  "veg.layer3": "Alsó platform",
+  "veg.empty": "Még nincsenek növények — tegye a textúrákat a vegetation/ mappába, vagy adja hozzá a sajátjait"
 }

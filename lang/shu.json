@@ -401,10 +401,24 @@
   "folder.emote.hint": "Ikhtar file .json ta emote, wala baddak, sura ta icon (.png) fi nafs dialogue da",
   "folder.emote.icon": "Giyir icon",
   "folder.reorder": "Jur ila tabdil al-tartiib (aw ista'mil al-asham ← →)",
+  "folder.veg.open": "Nabatati",
+  "folder.veg.title": "Nabatati",
+  "folder.veg.hint": "Ikhtir surat nabat (.png ma'a shafafiyya). Surat tawila (al-irtifaq 'ala al-aqall 1.5 marrat min al-'ard, mithl 16×32) satusbih nabatan min balukayn",
+  "folder.veg.error": "Ikhtir milaf as-surat",
 
   "ui.hide": "Ikhfi interface (H)",
   "ui.show": "Zahhir interface (H)",
 
   "shot.title": "نسخ لقطة الشاشة في الحافظة (اضغط Ctrl عشان تحمل تاني، Shift للخلفية الشفافة)",
-  "shot.error": "Ma mkin nsuwru al-shasha"
+  "shot.error": "Ma mkin nsuwru al-shasha",
+
+  "veg.enable": "Wajid an-nabatat",
+  "veg.dice": "Khaltat",
+  "veg.set": "Set an-nabatat",
+  "veg.density": "Kathafa",
+  "veg.layers": "Mahalat an-nabatat namu",
+  "veg.layer1": "Al-minassa al-ulya",
+  "veg.layer2": "Al-minassa al-wusta",
+  "veg.layer3": "Al-minassa as-sufla",
+  "veg.empty": "Ma fi nabatat — ahtut al-ansija fi mujallad vegetation/ aw zid khassatuk"
 }

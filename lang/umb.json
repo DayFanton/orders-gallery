@@ -401,10 +401,24 @@
   "folder.emote.hint": "Pita ovinyiko vi .json via emote kuenda, nda wati, ovifeva vi icon (.png) volukayi olu rumue",
   "folder.emote.icon": "Sakula icon",
   "folder.reorder": "Tapa oco okuhandula vali (ileka omuve ← →)",
+  "folder.veg.open": "Olosisi viange",
+  "folder.veg.title": "Olosisi viange",
+  "folder.veg.hint": "Nanga efwaniso lolosisi (.png ya talamena). Efwaniso yalaba (ulaba wa kala okila 1.5 yebalaka, nduti 16×32) ikala olosisi yolovulu yivali",
+  "folder.veg.error": "Nanga faile yefwaniso",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
 
   "shot.title": "Kopa osikrini kofele (kapa Ctrl oco o koke lioyo, Shift kocipandekiso co ndondo)",
-  "shot.error": "Ka caile okutambula ositekeso"
+  "shot.error": "Ka caile okutambula ositekeso",
+
+  "veg.enable": "Kuanyisa olosisi",
+  "veg.dice": "Sokola",
+  "veg.set": "Etimba lyolosisi",
+  "veg.density": "Okuenda",
+  "veg.layers": "Koku kasi olosisi",
+  "veg.layer1": "Ocikango co kilu",
+  "veg.layer2": "Ocikango co vokalaka",
+  "veg.layer3": "Ocikango co posi",
+  "veg.empty": "Ka kuli olosisi — tula olosisi volofoda vegetation/ ale tumbula yove"
 }

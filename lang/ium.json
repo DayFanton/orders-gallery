@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pick an emote .json file and, if you want, an icon image (.png) in the same dialog",
   "folder.emote.icon": "Change icon",
   "folder.reorder": "Drag to reorder (na arrows ← →)",
+  "folder.veg.open": "Kuv tsob ntoo",
+  "folder.veg.title": "Kuv tsob ntoo",
+  "folder.veg.hint": "Xaiv tsob ntoo duab (.png uas pom tseeb). Cov duab siab (qhov siab tsawg kawg 1.5 zaug ntau tshaj qhov dav, piv txwv li 16×32) yuav ua tsob ntoo 2 thaiv siab",
+  "folder.veg.error": "Xaiv duab ntawv",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
 
   "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download, Shift for transparent background)",
-  "shot.error": "Impossibile prendere screenshot"
+  "shot.error": "Impossibile prendere screenshot",
+
+  "veg.enable": "Qhib tsob ntoo",
+  "veg.dice": "Sib",
+  "veg.set": "Qhib tsob ntoo",
+  "veg.density": "Tuab",
+  "veg.layers": "Qhib tsob ntoo",
+  "veg.layer1": "Qaum lub platform",
+  "veg.layer2": "Qhib nruab nrab platform",
+  "veg.layer3": "Qhib hauv qab platform",
+  "veg.empty": "Tsis muaj tsob ntoo — tso cov duab tso rau hauv vegetation/ folder lossis ntxiv koj tus kheej"
 }

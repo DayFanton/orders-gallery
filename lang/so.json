@@ -403,10 +403,24 @@
   "folder.emote.hint": "Dooro faylka .json ee emote-ka iyo, haddii aad rabto, sawirka astaanta (.png) ee isla wadahadalkaas",
   "folder.emote.icon": "Beddel astaamaha",
   "folder.reorder": "Jiid si aad dib ugu habayso (ama isticmaal fallaadhaha ← →)",
+  "folder.veg.open": "Dhirtayda",
+  "folder.veg.title": "Dhirtayda",
+  "folder.veg.hint": "Dooro sawirka dhirta (.png oo daahfuran). Sawir dheer (dhererku ugu yaraan 1.5 jeer ka weyn yahay balaca, tusaale 16×32) wuxuu noqon doonaa dhir laba baloog ah",
+  "folder.veg.error": "Dooro faylka sawirka",
 
   "ui.hide": "Qari is dhexgalka (H)",
   "ui.show": "Muuji is dhexgalka (H)",
 
   "shot.title": "Koobiyo sawirka shaashadda oo geli sabuuradda (qabo Ctrl si aad u soo dejiso sidoo kale, Shift oo ah asalka hufan)",
-  "shot.error": "Waa lagu guuldarraystay in la qaado sawirka shaashadda"
+  "shot.error": "Waa lagu guuldarraystay in la qaado sawirka shaashadda",
+
+  "veg.enable": "Daar dhirta",
+  "veg.dice": "Isku dar",
+  "veg.set": "Qalabka dhirta",
+  "veg.density": "Cufnaanta",
+  "veg.layers": "Meesha ay dhirta ka baxdo",
+  "veg.layer1": "Barxadda sare",
+  "veg.layer2": "Barxadda dhexe",
+  "veg.layer3": "Barxadda hoose",
+  "veg.empty": "Wali ma jiraan dhir — dhig qaab-dhismeedka galka vegetation/ ama ku dar adiga kuu gaar ah"
 }

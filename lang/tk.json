@@ -403,10 +403,24 @@
   "folder.emote.hint": "Emot .json faýlyny we isleseňiz, nyşan suratyny (.png) şol bir dialog penjiresinde saýlaň",
   "folder.emote.icon": "Nyşany üýtgetmek",
   "folder.reorder": "Tertibini üýtgetmek üçin süýräň (ýa-da ← → oklaryny ulanyň)",
+  "folder.veg.open": "Meniň ösümliklerim",
+  "folder.veg.title": "Meniň ösümliklerim",
+  "folder.veg.hint": "Ösümlik suratyny saýlaň (.png açyklyk bilen). Belent surat (beýikligi iniňden azyndan 1,5 esse uly, mysal üçin 16×32) 2 blokly ösümlik bolar",
+  "folder.veg.error": "Surat faýlyny saýlaň",
 
   "ui.hide": "Interfeýsi gizlemek (H)",
   "ui.show": "Interfeýsi görkezmek (H)",
 
   "shot.title": "Ekran suraty buferine göçürmek (hem-de ýüklemek üçin Ctrl düwmesine basyň, aç-açan fon üçin Shift)",
-  "shot.error": "Ekran suratyny alyp bolmady"
+  "shot.error": "Ekran suratyny alyp bolmady",
+
+  "veg.enable": "Ösümlikleri açmak",
+  "veg.dice": "Garyşdyrmak",
+  "veg.set": "Ösümlük toplumy",
+  "veg.density": "Dykyzlyk",
+  "veg.layers": "Ösümlikleriň ösýän ýeri",
+  "veg.layer1": "Ýokarky platforma",
+  "veg.layer2": "Orta platforma",
+  "veg.layer3": "Aşaky platforma",
+  "veg.empty": "Henäm ösümlük ýok — teksturalary vegetation/ bukjagyna goýuň ýa-da özüňizinkini goşuň"
 }

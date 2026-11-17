@@ -401,10 +401,24 @@
   "folder.emote.hint": "Agpili iti maysa a file nga emote .json ken, no kayatmo, maysa a ladawan ti icon (.png) iti isu met laeng a dialog",
   "folder.emote.icon": "Sukatan ti icon",
   "folder.reorder": "I-drag tapno sukatan ti urnos (wenno usaren dagiti pana ← →)",
+  "folder.veg.open": "Dagiti mulak",
+  "folder.veg.title": "Dagiti mulak",
+  "folder.veg.hint": "Piliin ti ladawan ti mula (.png nga adda transparency). Ti nangato a ladawan (katayag a di lessay ngem 1.5 a daras a dakdakkel ngem ti lakapad, kas iti 16×32) ket agbalin a mula nga 2 a bloke ti katayagna",
+  "folder.veg.error": "Piliin ti file ti ladawan",
 
   "ui.hide": "Ilemmeng ti interface (H)",
   "ui.show": "Ipakita ti interface (H)",
 
   "shot.title": "Kopiaen ti screenshot iti clipboard (idengnget ti Ctrl tapno ma-download pay, Shift para iti transparent a background)",
-  "shot.error": "Nabigo a mangala iti screenshot"
+  "shot.error": "Nabigo a mangala iti screenshot",
+
+  "veg.enable": "I-on ti mula",
+  "veg.dice": "Agsep",
+  "veg.set": "Set ti mula",
+  "veg.density": "Kasedsed",
+  "veg.layers": "Pagtubo ti mula",
+  "veg.layer1": "Akinngato a plataporma",
+  "veg.layer2": "Kennga a plataporma",
+  "veg.layer3": "Makinkukuna a plataporma",
+  "veg.empty": "Awan pay ti mula — ikabil dagiti tekstura iti folder a vegetation/ wenno iraman ti kuam"
 }

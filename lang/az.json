@@ -403,10 +403,24 @@
   "folder.emote.hint": "Emot .json faylını və istəsinizsə, ikon şəklini (.png) eyni dialoq pəncərəsində seçin",
   "folder.emote.icon": "İkonu dəyiş",
   "folder.reorder": "Yenidən sıralamaq üçün sürükləyin (və ya ← → oxlarından istifadə edin)",
+  "folder.veg.open": "Mənim bitkilərim",
+  "folder.veg.title": "Mənim bitkilərim",
+  "folder.veg.hint": "Bitki şəkli seçin (.png şəffaflıqla). Hündür şəkil (hündürlüyü enindən ən azı 1,5 dəfə çox olan, məsələn 16×32) 2 blok hündürlüyündə bitki olacaq",
+  "folder.veg.error": "Şəkil faylını seçin",
 
   "ui.hide": "İnterfeysi gizlət (H)",
   "ui.show": "İnterfeysi göstər (H)",
 
   "shot.title": "Ekran görüntüsünü mübadilə buferinə kopyalayın (həmçinin yükləmək üçün Ctrl, şəffaf fon üçün Shift düyməsini saxlayın)",
-  "shot.error": "Ekran görüntüsü çəkmək mümkün olmadı"
+  "shot.error": "Ekran görüntüsü çəkmək mümkün olmadı",
+
+  "veg.enable": "Bitki örtüyünü aktivləşdir",
+  "veg.dice": "Qarışdır",
+  "veg.set": "Bitki örtüsü dəsti",
+  "veg.density": "Sıxlıq",
+  "veg.layers": "Bitki örtüyünün böyüdüyü yer",
+  "veg.layer1": "Yuxarı platforma",
+  "veg.layer2": "Orta platforma",
+  "veg.layer3": "Aşağı platforma",
+  "veg.empty": "Hələ bitki yoxdur — teksturaları vegetation/ qovluğuna qoyun və ya özünüz əlavə edin"
 }

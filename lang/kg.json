@@ -403,10 +403,24 @@
   "folder.emote.hint": "Baka file .json ya emote mpe, kana nge ke zola, kifwani ya icon (.png) na dialog mosi",
   "folder.emote.icon": "Baka icon ya sika",
   "folder.reorder": "Kwenda sambu na kubumba diaka (to sadila miba ← →)",
+  "folder.veg.open": "Nti na mono",
+  "folder.veg.title": "Nti na mono",
+  "folder.veg.hint": "Solula kifwanisu ya nti (.png ya kemonaka). Kifwanisu ya ndai (ndai mingi kuluta nene na 1.5, mbandu 16×32) ta kituka nti ya mabulu zole",
+  "folder.veg.error": "Solula afile ya kifwanisu",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
 
   "shot.title": "Kopa screenshot na clipboard (simba Ctrl mpo na kukitula mpe, Shift mpo na background ya pɛtɛ)",
-  "shot.error": "Lenda ve kubaka kifwanisu ya screen"
+  "shot.error": "Lenda ve kubaka kifwanisu ya screen",
+
+  "veg.enable": "Kuwa nti",
+  "veg.dice": "Kuvanga",
+  "veg.set": "Nkubulu ya nti",
+  "veg.density": "Mbalu",
+  "veg.layers": "Kuna nti ke nsunguka",
+  "veg.layer1": "Kifulu kia zulu",
+  "veg.layer2": "Kifulu kia katikati",
+  "veg.layer3": "Kifulu kia nsi",
+  "veg.empty": "Mvimba ya nti ve — tula matiti na folda vegetation/ to vana ya nge"
 }

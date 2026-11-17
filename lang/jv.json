@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pilih berkas .json emote lan, yen pengin, gambar ikon (.png) ing dialog sing padha",
   "folder.emote.icon": "Ganti ikon",
   "folder.reorder": "Seret kanggo ngganti urutan (utawa panah ← →)",
+  "folder.veg.open": "Tanduranku",
+  "folder.veg.title": "Tanduranku",
+  "folder.veg.hint": "Pilih gambar tanduran (.png kanthi transparansi). Gambar dhuwur (dhuwur minimal kaping 1,5 luwih gedhe tinimbang jembar, contone 16×32) bakal dadi tanduran 2 blok",
+  "folder.veg.error": "Pilih berkas gambar",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
 
   "shot.title": "Salin tangkapan layar menyang papan klip (tahan Ctrl kanggo ngundhuh uga, Shift kanggo latar mburi transparan)",
-  "shot.error": "Gagal njupuk tangkapan layar"
+  "shot.error": "Gagal njupuk tangkapan layar",
+
+  "veg.enable": "Aktifake vegetasi",
+  "veg.dice": "Acak",
+  "veg.set": "Set vegetasi",
+  "veg.density": "Kapadhetan",
+  "veg.layers": "Panggonan tuwuh vegetasi",
+  "veg.layer1": "Platform ndhuwur",
+  "veg.layer2": "Platform tengah",
+  "veg.layer3": "Platform ngisor",
+  "veg.empty": "Durung ana tanduran — pasang tekstur ing folder vegetation/ utawa tambahkan dhewe"
 }

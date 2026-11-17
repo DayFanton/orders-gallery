@@ -401,10 +401,24 @@
   "folder.emote.hint": "Sarudzafaira re .json re emote uye, kana uchida, mufananidzo we icon (.png) mune imwecheteyo dialog",
   "folder.emote.icon": "Chinja icon",
   "folder.reorder": "Dhonai kuti uchinje kurongeka (kana shandisa miseve ← →)",
+  "folder.veg.open": "Zvirimwa zvangu",
+  "folder.veg.title": "Zvirimwa zvangu",
+  "folder.veg.hint": "Sarudza mufananidzo wechirimwa (.png ine pachena). Mufananidzo murefu (kureba kanenge ka 1.5 kakakura kudarika hupamhi, semuenzaniso 16×32) uchange uita chirimwa chemabhuroko maviri",
+  "folder.veg.error": "Sarudza faira remufananidzo",
 
   "ui.hide": "Vanza interface (H)",
   "ui.show": "Ratidza interface (H)",
 
   "shot.title": "Kopa skrini kuclipboard (bata Ctrl kuitira kurodhawo zvakare, Shift kuitira background yakajeka)",
-  "shot.error": "Zvakundikana kutora mufananidzo wechidzitiro"
+  "shot.error": "Zvakundikana kutora mufananidzo wechidzitiro",
+
+  "veg.enable": "Batidza zvirimwa",
+  "veg.dice": "Vhenganisa",
+  "veg.set": "Chitsva chezvirimwa",
+  "veg.density": "Kuwanda",
+  "veg.layers": "Kunoera zvirimwa",
+  "veg.layer1": "Chikuva chepamusoro",
+  "veg.layer2": "Chikuva chepakati",
+  "veg.layer3": "Chikuva chepasi",
+  "veg.empty": "Hapana zvirimwa parizvino — isa zvigadzirwa muhovha ye vegetation/ kana wedzera zvako"
 }

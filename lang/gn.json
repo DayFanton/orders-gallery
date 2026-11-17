@@ -403,10 +403,24 @@
   "folder.emote.hint": "Eiporavo peteĩ emote .json file ha, reipotárõ, peteĩ icon image (.png) pe dialog peteĩvape",
   "folder.emote.icon": "Emboguejy icon",
   "folder.reorder": "Emonguevi hag̃ua jey (tereojopy takamburu ← →)",
+  "folder.veg.open": "Che ñanduti",
+  "folder.veg.title": "Che ñanduti",
+  "folder.veg.hint": "Eiporavo ñanduti ra'ãnga (.png transparency rehegua). Ra'ãnga yvate (yvateve asy mbo'y 1.5 mbo'y mbytegua, techapyrã 16×32) oiko va'erã peteĩ ñanduti mokõi block rehegua",
+  "folder.veg.error": "Eiporavo ra'ãnga mbohape",
 
   "ui.hide": "Emonguete interface (H)",
   "ui.show": "Hechauka interface (H)",
 
   "shot.title": "Emohesakuaa ta'ãnga clipboard-pe (ejopy Ctrl emboguejy hag̃ua avei, Shift fondo transparentéva rehegua)",
-  "shot.error": "Ndoikatumái oñemboguejy ta'ãnga screen pegua"
+  "shot.error": "Ndoikatumái oñemboguejy ta'ãnga screen pegua",
+
+  "veg.enable": "Ñanduti mboja",
+  "veg.dice": "Mbojue",
+  "veg.set": "Ñanduti apyte",
+  "veg.density": "Ñembyaty",
+  "veg.layers": "Mba'eichapa ñanduti okakuaa",
+  "veg.layer1": "Yvate guive",
+  "veg.layer2": "Mbytegua guive",
+  "veg.layer3": "Yvy guive",
+  "veg.empty": "Ñanduti ndaikatúi — eñoty ne ñanduti vegetation/ térã emoî ne mba'éva"
 }

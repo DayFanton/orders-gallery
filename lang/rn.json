@@ -403,10 +403,24 @@
   "folder.emote.hint": "Hitamo dosi ya .json y'emote kandi, niba ubishaka, ishusho y'ikoni (.png) muri iyo dialogu",
   "folder.emote.icon": "Hindura ikoni",
   "folder.reorder": "Kurura kugira uhindure urutonde (canke ukoreshe imice ← →)",
+  "folder.veg.open": "Ibiterwa vyanje",
+  "folder.veg.title": "Ibiterwa vyanje",
+  "folder.veg.hint": "Hitamo ishusho y'igiterwa (.png ifite ubwerabwera). Ishusho ndende (uburebure nibura incuro 1.5 kuruta ubugari, urugero 16×32) izaba igiterwa gifite amatafari abiri",
+  "folder.veg.error": "Hitamo dosiye y'igiterwa",
 
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",
 
   "shot.title": "Kopiye screenshot kuri clipboard (fata Ctrl kugira ngo unayikure, Shift kugira ngo ugire inyuma irabona)",
-  "shot.error": "Vyanka gufata screenshot"
+  "shot.error": "Vyanka gufata screenshot",
+
+  "veg.enable": "Gukora ibiterwa",
+  "veg.dice": "Kuvanga",
+  "veg.set": "Urutonde rw'ibiterwa",
+  "veg.density": "Ubwiganze",
+  "veg.layers": "Aho ibiterwa bikura",
+  "veg.layer1": "Urubuga rwo hejuru",
+  "veg.layer2": "Urubuga rwo hagati",
+  "veg.layer3": "Urubuga rwo hasi",
+  "veg.empty": "Nta biterwa bihari — shyira ibiterwa mu bubiko bwa vegetation/ cyangwa wongere ibyawe"
 }

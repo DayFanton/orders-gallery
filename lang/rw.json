@@ -401,10 +401,24 @@
   "folder.emote.hint": "Hitamo dosi ya .json y'emote kandi, niba ubishaka, ishusho y'ikoni (.png) muri iyo dialogu",
   "folder.emote.icon": "Hindura ikoni",
   "folder.reorder": "Kurura kugira ngo uhindure gahunda (cyangwa ukoreshe imyambi ← →)",
+  "folder.veg.open": "Ibimera byanjye",
+  "folder.veg.title": "Ibimera byanjye",
+  "folder.veg.hint": "Hitamo ishusho y'igimera (.png ifite ubwerabwera). Ishusho ndende (uburebure nibura incuro 1.5 kuruta ubugari, urugero 16×32) izaba igimera gifite amatafari abiri",
+  "folder.veg.error": "Hitamo dosiye y'ishusho",
 
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",
 
   "shot.title": "Kopiye screenshot kuri clipboard (fata Ctrl kugira ngo unayikure, Shift kugira ngo ushiremo inyuma hagaragara)",
-  "shot.error": "Byanze gufata ifoto ya screen"
+  "shot.error": "Byanze gufata ifoto ya screen",
+
+  "veg.enable": "Gushyira mu bikorwa ibimera",
+  "veg.dice": "Kuvanga",
+  "veg.set": "Urutonde rw'ibimera",
+  "veg.density": "Ubucucike",
+  "veg.layers": "Aho ibimera bikura",
+  "veg.layer1": "Urubuga rwo hejuru",
+  "veg.layer2": "Urubuga rwo hagati",
+  "veg.layer3": "Urubuga rwo hasi",
+  "veg.empty": "Nta bimera bihari — shyira imiterere mu bubiko bwa vegetation/ cyangwa wongere ibyawe"
 }

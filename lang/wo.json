@@ -403,10 +403,24 @@
   "folder.emote.hint": "Tann benn faayil .jsonu emote walla, su ko nee ko bëggée, benn natal u icon (.png) ci biir dialog bi rekk",
   "folder.emote.icon": "Wayli icon bi",
   "folder.reorder": "Bëtu ngir coppti (walla jëfandikoo mbalit yi ← →)",
+  "folder.veg.open": "Suuf si ma am",
+  "folder.veg.title": "Suuf si ma am",
+  "folder.veg.hint": "Tànnal nataalu suuf (.png bu leer). Nataal bu kawe (kawe bi raw na yaatu bi 1.5 yoon, mel ni 16×32) dina nekk suuf bu am ñaari bët",
+  "folder.veg.error": "Tànnal nataalu file bi",
 
   "ui.hide": "Dollikul interface bi (H)",
   "ui.show": "Wone interface bi (H)",
 
   "shot.title": "Copier screenshot bi ci clipboard bi (muñlal Ctrl ngir téléchargé ite, Shift ngir arrier-plan bu leer)",
-  "shot.error": "Mënulul a jël foto ekran bi"
+  "shot.error": "Mënulul a jël foto ekran bi",
+
+  "veg.enable": "Dugalal suuf",
+  "veg.dice": "Jàppale",
+  "veg.set": "Waxtaanu suuf",
+  "veg.density": "Dëgër",
+  "veg.layers": "Fi suuf gi di sax",
+  "veg.layer1": "Ndigal bu kawe",
+  "veg.layer2": "Ndigal bu digg",
+  "veg.layer3": "Ndigal bu suuf",
+  "veg.empty": "Amul suuf benn — dugal xibaar yi ci dossier vegetation/ wala nga yokk sa bopp"
 }

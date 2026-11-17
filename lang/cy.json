@@ -403,10 +403,24 @@
   "folder.emote.hint": "Dewiswch ffeil .json emote ac, os dymunwch, ddelwedd eicon (.png) yn yr un ddeialog",
   "folder.emote.icon": "Newid eicon",
   "folder.reorder": "Llusgo i ail-drefnu (neu ddefnyddio'r saethau ← →)",
+  "folder.veg.open": "Fy llystyfiant i",
+  "folder.veg.title": "Fy llystyfiant i",
+  "folder.veg.hint": "Dewiswch ddelwedd planhigyn (.png gyda thryloywder). Bydd delwedd uchel (uchder o leiaf 1.5 gwaith yn fwy na'r lled, e.e. 16×32) yn dod yn blanhigyn 2 floc",
+  "folder.veg.error": "Dewis ffeil ddelwedd",
 
   "ui.hide": "Cuddio'r rhyngwyneb (H)",
   "ui.show": "Dangos y rhyngwyneb (H)",
 
   "shot.title": "Copio'r sgrin-gip i'r clipfwrdd (dal Ctrl i lawr i lwytho i lawr hefyd, Shift ar gyfer cefndir tryloyw)",
-  "shot.error": "Methwyd â chael sgrinlun"
+  "shot.error": "Methwyd â chael sgrinlun",
+
+  "veg.enable": "Galluogi llystyfiant",
+  "veg.dice": "Cymysgu",
+  "veg.set": "Set llystyfiant",
+  "veg.density": "Dwysedd",
+  "veg.layers": "Lle mae llystyfiant yn tyfu",
+  "veg.layer1": "Llwyfan uchaf",
+  "veg.layer2": "Llwyfan canol",
+  "veg.layer3": "Llwyfan isaf",
+  "veg.empty": "Dim llystyfiant eto — rhowch weadau yn y ffolder vegetation/ neu ychwanegwch eich rhai eich hun"
 }

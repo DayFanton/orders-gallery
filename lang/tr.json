@@ -403,10 +403,24 @@
   "folder.emote.hint": "Bir ifade .json dosyası ve isterseniz aynı iletişim penceresinde bir simge görseli (.png) seçin",
   "folder.emote.icon": "Simgeyi değiştir",
   "folder.reorder": "Yeniden sıralamak için sürükleyin (veya ← → okları)",
+  "folder.veg.open": "Bitkilerim",
+  "folder.veg.title": "Bitkilerim",
+  "folder.veg.hint": "Bir bitki görseli seçin (şeffaflıklı .png). Uzun bir görsel (yüksekliği genişliğin en az 1,5 katı, örneğin 16x32), 2 blok yüksekliğinde bir bitki olacaktır",
+  "folder.veg.error": "Görsel dosyası seç",
 
   "ui.hide": "Arayüzü gizle (H)",
   "ui.show": "Arayüzü göster (H)",
 
   "shot.title": "Ekran görüntüsünü panoya kopyala (indirmek için Ctrl'yi basılı tutun, şeffaf arka plan için Shift)",
-  "shot.error": "Ekran görüntüsü alınamadı"
+  "shot.error": "Ekran görüntüsü alınamadı",
+
+  "veg.enable": "Bitki örtüsünü aç",
+  "veg.dice": "Karıştır",
+  "veg.set": "Bitki örtüsü seti",
+  "veg.density": "Yoğunluk",
+  "veg.layers": "Bitki örtüsünün büyüdüğü yer",
+  "veg.layer1": "Üst platform",
+  "veg.layer2": "Orta platform",
+  "veg.layer3": "Alt platform",
+  "veg.empty": "Henüz bitki yok — dokuları vegetation/ klasörüne yerleştirin veya kendi dokularınızı ekleyin"
 }

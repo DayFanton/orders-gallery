@@ -403,10 +403,24 @@
   "folder.emote.hint": "Yier file mar emote .json kata, ka dwaro, picha mar icon (.png) e dialog achiel",
   "folder.emote.icon": "Lok icon",
   "folder.reorder": "Guru mondo iji gi chenro (koso ti gi yadh ← →)",
+  "folder.veg.open": "Yathedhe",
+  "folder.veg.title": "Yathedhe",
+  "folder.veg.hint": "Yied kido mar yath (.png mar ler). Kido ma bor (bor mar kwan ma romo 1.5 ma romo chal ni 16×32) biro bedo yath mar bok adek",
+  "folder.veg.error": "Yied fail mar kido",
 
   "ui.hide": "Mon gima (H)",
   "ui.show": "Nyis gima (H)",
 
   "shot.title": "Kopi screenshot e clipboard (qab Ctrl mondo ior bende, Shift mondo obed gi background maywany)",
-  "shot.error": "Ok nyalo kawo screenshot"
+  "shot.error": "Ok nyalo kawo screenshot",
+
+  "veg.enable": "Nyiego yath",
+  "veg.dice": "Nyango",
+  "veg.set": "Giko mar yath",
+  "veg.density": "Dinyo",
+  "veg.layers": "Kama yath oyudo",
+  "veg.layer1": "Kar chung' ma malo",
+  "veg.layer2": "Kar chung' ma dier",
+  "veg.layer3": "Kar chung' ma piny",
+  "veg.empty": "Onge yath moro amora — kiti kido e foya mar vegetation/ kendo miy iwuon"
 }

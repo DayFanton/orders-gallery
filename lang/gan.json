@@ -401,10 +401,23 @@
   "folder.emote.hint": "选一个表情 .json 文件，若果你想，亦都可以在同一对话框中选图标 (.png)",
   "folder.emote.icon": "更改图标",
   "folder.reorder": "拖动以重新排序（或使用 ← → 箭头）",
+  "folder.veg.open": "我的植物",
+  "folder.veg.title": "我的植物",
+  "folder.veg.error": "选择图片文件",
 
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",
 
   "shot.title": "复制截图到剪贴板 (按住 Ctrl 可同时下载，Shift 设为透明背景)",
-  "shot.error": "无法截屏"
+  "shot.error": "无法截屏",
+
+  "veg.enable": "启用植被",
+  "veg.dice": "随机打乱",
+  "veg.set": "植被预设",
+  "veg.density": "密度",
+  "veg.layers": "植被生长嘅地方",
+  "veg.layer1": "上层平台",
+  "veg.layer2": "中层平台",
+  "veg.layer3": "下层平台",
+  "veg.empty": "暂无植物 — 请将纹理放入 vegetation/ 文件夹或添加您自己的"
 }

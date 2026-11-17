@@ -403,10 +403,24 @@
   "folder.emote.hint": "Kusaka masengo gakesi ga .json ga emote ni, naga mwangala, masengo ga icon (.png) mu browser ajino jili jemu",
   "folder.emote.icon": "Kushintsha icon",
   "folder.reorder": "Kokani kuti musinthe dongosolo (kapena mkatale mivi ← →)",
+  "folder.veg.open": "Miti yangu",
+  "folder.veg.title": "Miti yangu",
+  "folder.veg.hint": "Kusanya chitepo cha miti (.png chakuwoneka). Chitepo chitala (kutalika kwake kuŵe ka 1.5 kuposa m'lifupi mwachitsanzo 16×32) chichata chitepo cha miti chiŵiri",
+  "folder.veg.error": "Kusanya chitepo cha faili",
 
   "ui.hide": "Chisisi interface (H)",
   "ui.show": "Langanya interface (H)",
 
   "shot.title": "Kopesya screenshot ku clipboard (kama Ctrl kuti jige so, Shift pa background jwakuloleka)",
-  "shot.error": "Ngakwanila kutola chithunzi cha pa skrini"
+  "shot.error": "Ngakwanila kutola chithunzi cha pa skrini",
+
+  "veg.enable": "Jula miti",
+  "veg.dice": "Kusanya",
+  "veg.set": "Chalo cha miti",
+  "veg.density": "Kuwanda",
+  "veg.layers": "Kuna kuli miti",
+  "veg.layer1": "Chitepo cha penani",
+  "veg.layer2": "Chitepo cha pakati",
+  "veg.layer3": "Chitepo cha pasi",
+  "veg.empty": "Ali miti — ikani matiti m'chitepo cha vegetation/ kapena mtende wenu"
 }

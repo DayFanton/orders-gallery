@@ -403,10 +403,24 @@
   "folder.emote.hint": "Faayilii .json ispoortii fi, yoo barbaadde, suuraa ayikoonii (.png) diraamaa tokko keessatti filadhu",
   "folder.emote.icon": "Ayikoonii jijjiiri",
   "folder.reorder": "Qindeessuu deebi'anii jijjiiruuf harkisi (ykn xiyyoowwan ← → fayyadami)",
+  "folder.veg.open": "Biqiltuu koo",
+  "folder.veg.title": "Biqiltuu koo",
+  "folder.veg.hint": "Suuraa biqiltuu filadhu (.png ifaa qabu). Suuraan dheeraa (dheereen bal'ina irraa yoo xiqqaate si'a 1.5 kan caalu, fakkeenyaaf 16×32) biqiltuu bulookii 2 ta'a",
+  "folder.veg.error": "Faayilii suuraa filadhu",
 
   "ui.hide": "Fuula dhoqqee dhoksuu (H)",
   "ui.show": "Fuula dhoqqee agarsiisuu (H)",
 
   "shot.title": "Suuraan iskiriinii gara gabatee qabachuutti kooppii godhi (buufachuufis Ctrl qabadhu, Shift duubbee qulqulluuf)",
-  "shot.error": "Suuraan iskiriinii fudhatamuu hin dandeenye"
+  "shot.error": "Suuraan iskiriinii fudhatamuu hin dandeenye",
+
+  "veg.enable": "Biqiltuu dandeessisi",
+  "veg.dice": "Makaasuu",
+  "veg.set": "Walitti qabaa biqiltuu",
+  "veg.density": "Rukkina",
+  "veg.layers": "Bakki biqiltuun itti guddatu",
+  "veg.layer1": "Waltajjii olii",
+  "veg.layer2": "Waltajjii gidduu",
+  "veg.layer3": "Waltajjii gadii",
+  "veg.empty": "Biqiltuun hin jiru — teekischaarii gubbaa vegetation/ kaa'i ykn kan kee dabaluuf"
 }

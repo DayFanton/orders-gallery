@@ -401,10 +401,24 @@
   "folder.emote.hint": "Pick an emote .json file and, if you want, an icon image (.png) in the same dialog",
   "folder.emote.icon": "Change icon",
   "folder.reorder": "Drag to reorder (or arrows ← →)",
+  "folder.veg.open": "My plants",
+  "folder.veg.title": "My plants",
+  "folder.veg.hint": "Choose a plant image (.png with transparency). A tall image (height at least 1.5 times greater than width, e.g. 16×32) will become a 2-block-tall plant",
+  "folder.veg.error": "Choose image file",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
 
   "shot.title": "Copy screenshot to clipboard (hold Ctrl to also download, Shift for transparent background)",
-  "shot.error": "Failed to take screenshot"
+  "shot.error": "Failed to take screenshot",
+
+  "veg.enable": "Enable vegetation",
+  "veg.dice": "Shuffle",
+  "veg.set": "Vegetation preset",
+  "veg.density": "Density",
+  "veg.layers": "Where vegetation grows",
+  "veg.layer1": "Upper platform",
+  "veg.layer2": "Middle platform",
+  "veg.layer3": "Lower platform",
+  "veg.empty": "No plants yet — place textures in the vegetation/ folder or add your own"
 }

@@ -403,10 +403,24 @@
   "folder.emote.hint": "Välj en .json-fil för emoten och, om du vill, en ikonbild (.png) i samma dialogruta",
   "folder.emote.icon": "Byt ikon",
   "folder.reorder": "Dra för att ändra ordning (eller använd pilarna ← →)",
+  "folder.veg.open": "Mina växter",
+  "folder.veg.title": "Mina växter",
+  "folder.veg.hint": "Välj en växtbild (.png med transparens). En hög bild (höjd minst 1,5 gånger större än bredd, t.ex. 16×32) blir en 2 block hög växt",
+  "folder.veg.error": "Välj bildfil",
 
   "ui.hide": "Dölj gränssnitt (H)",
   "ui.show": "Visa gränssnitt (H)",
 
   "shot.title": "Kopiera skärmdump till urklipp (håll ned Ctrl för att ladda ner också, Shift för transparent bakgrund)",
-  "shot.error": "Det gick inte att ta en skärmdump"
+  "shot.error": "Det gick inte att ta en skärmdump",
+
+  "veg.enable": "Aktivera växtlighet",
+  "veg.dice": "Blanda",
+  "veg.set": "Vegetationstyp",
+  "veg.density": "Täthet",
+  "veg.layers": "Var vegetation växer",
+  "veg.layer1": "Övre plattform",
+  "veg.layer2": "Mellersta plattform",
+  "veg.layer3": "Nedre plattform",
+  "veg.empty": "Inga växter ännu — placera texturer i mappen vegetation/ eller lägg till dina egna"
 }

@@ -401,10 +401,24 @@
   "folder.emote.hint": "Khetha ifayela ye-.json ye-emote, kanti uma ufuna, umfanekiso wesithonjana (.png) kwingxoxo leyo",
   "folder.emote.icon": "Shintsha isithonjana",
   "folder.reorder": "Hudula ukuguqula ukulandelana (noma sebenzisa imicibisholo ← →)",
+  "folder.veg.open": "Izitshalo zami",
+  "folder.veg.title": "Izitshalo zami",
+  "folder.veg.hint": "Khetha isithombe sesitshalo (.png esikhanyayo). Isithombe eside (ukuphakama okungenani kuphindwe kayi-1.5 ububanzi, isb. 16×32) sizoba sitshalo samabhuloko amabili",
+  "folder.veg.error": "Khetha ifayela lesithombe",
 
   "ui.hide": "Fihla isikhombimsebenzisi (H)",
   "ui.show": "Khombisa isikhombimsebenzisi (H)",
 
   "shot.title": "Kopa umfanekiso wesikrini ku-clipboard (bamba u-Ctrl ukuze ulandisele njalo, u-Shift kwengemuva elicacileyo)",
-  "shot.error": "Kuhlulekile ukuthatha isithombe sesikrini"
+  "shot.error": "Kuhlulekile ukuthatha isithombe sesikrini",
+
+  "veg.enable": "Vula izitshalo",
+  "veg.dice": "Hlanganisa",
+  "veg.set": "Iseti yezitshalo",
+  "veg.density": "Ukuminyana",
+  "veg.layers": "Lapho izitshalo zikhula khona",
+  "veg.layer1": "Inkundla ephezulu",
+  "veg.layer2": "Inkundla phakathi",
+  "veg.layer3": "Inkundla engezansi",
+  "veg.empty": "Kakho zitshalo okwamanje — faka izithombe kufolda ye-vegetation/ kumbe ufake ezakho"
 }

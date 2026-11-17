@@ -403,10 +403,24 @@
   "folder.emote.hint": "Sɔ wema .json emoti tɔn ɖokpo kpodo yɔtɔ icon tɔn (.png) kpo ɖo fláta ɖokpo ɔ mɛ",
   "folder.emote.icon": "Trɔ icon ɔ",
   "folder.reorder": "Kpé ɖò xókpɔ́ ɔ́ mɛ (alo zán nǔwlanwlan ← →)",
+  "folder.veg.open": "Gbɛtɔ́ ce lɛ",
+  "folder.veg.title": "Gbɛtɔ́ ce lɛ",
+  "folder.veg.hint": "Ze gbɛtɔ́ e ɖò kpɔ́ é ɖè (.png e hɛn ɔ e mɛ nɔ mɔ nu é). Gbɛtɔ́ kɔ zǎn e kɔ tɔn sín mɛ dɩtɛ kɛn 1.5 bɔ è nɔ mɔ é, ɖɔhun 16×32, na huzu gbɛtɔ́ kpɛví wè",
+  "folder.veg.error": "Ze tɔn e ɖò nu e ɖò kpɔ́ é fayi",
 
   "ui.hide": "Xò nɔ wiwlé tɔn (H)",
   "ui.show": "Xò nɔ wiwlé tɔn xlɛ (H)",
 
   "shot.title": "Copier screenshot ɔ ɖo clipboard ji (sɔ Ctrl bo wà download daa, Shift nú background wéwé)",
-  "shot.error": "E ma sɔ́ nɔ̀ wǎn kpɔ́ndówú ɖò screen jí ǎ"
+  "shot.error": "E ma sɔ́ nɔ̀ wǎn kpɔ́ndówú ɖò screen jí ǎ",
+
+  "veg.enable": "Kɔ zǎn gbè",
+  "veg.dice": "Kɔ́n",
+  "veg.set": "Gbɛtɔ́ kɔ zǎn",
+  "veg.density": "Sùsù",
+  "veg.layers": "Fi e gbɛtɔ́ kɔ zǎn ɖè",
+  "veg.layer1": "Kpɔ́ e ɖò aga é",
+  "veg.layer2": "Kpɔ́ e ɖò tɛntin é",
+  "veg.layer3": "Kpɔ́ e ɖò dò é",
+  "veg.empty": "Gbɛtɔ́ ɖě ká ɖě ǎ — ze nu e ɖò vegetation/ mɛ lɛ alo yǐ tɔn gbe"
 }

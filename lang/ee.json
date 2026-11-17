@@ -403,10 +403,24 @@
   "folder.emote.hint": "Tia emote .json nuŋlɔɖi ɖeka eye ne èdi la, nɔnɔmetata icon (.png) le nɔnɔmɛ ɖeka ma ko me",
   "folder.emote.icon": "Trɔ icon la",
   "folder.reorder": "Traga hetsike nɔnɔmetata tsɔ tsɔ tsɔtsɔ (alo zã mɔ̃kpui ← →)",
+  "folder.veg.open": "Ŋutilafa nyenyewo",
+  "folder.veg.title": "Ŋutilafa nyenyewo",
+  "folder.veg.hint": "Tia ŋutilafa ƒe nɔnɔme (.png si le ʋuʋum). Nɔnɔme kɔkɔ (kɔkɔ kple kekeme sɔ kple zi 1.5, elabena 16×32) azuzu ŋutilafa si le blɔk eve kɔkɔme",
+  "folder.veg.error": "Tia nɔnɔme ƒe fiile",
 
   "ui.hide": "Ɓla nɔnɔmɛ la (H)",
   "ui.show": "Fia nɔnɔmɛ la (H)",
 
   "shot.title": "Wɔ screenshot la kopi ɖe clipboard dzi (lé Ctrl ɖe asi be nàda hã, Shift na gɔmeɖeɖe si le gaglaga)",
-  "shot.error": "Menɔ te ɖe nɔnɔmetata dzidzedzefia o"
+  "shot.error": "Menɔ te ɖe nɔnɔmetata dzidzedzefia o",
+
+  "veg.enable": "Tsɔ ŋutilafa ɖe edzi",
+  "veg.dice": "Tsɔ tsɔe",
+  "veg.set": "Ŋutilafa ƒe ɖoɖo",
+  "veg.density": "Titri",
+  "veg.layers": "Afiɖe ŋutilafa si le",
+  "veg.layer1": "Kplɔ̃ si le dzi",
+  "veg.layer2": "Kplɔ̃ si le titina",
+  "veg.layer3": "Kplɔ̃ si le anyime",
+  "veg.empty": "Nutilafa aɖeke meli o — da nutilafanuwo ɖe vegetation/ fe akɔnta me alo tsɔ wò ŋutɔ tɔ ɖe edzi"
 }

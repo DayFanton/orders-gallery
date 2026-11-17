@@ -403,10 +403,24 @@
   "folder.emote.hint": "Wybierz plik .json emotki i, jeśli chcesz, obraz ikony (.png) w tym samym oknie dialogowym",
   "folder.emote.icon": "Zmień ikonę",
   "folder.reorder": "Przeciągnij, aby zmienić kolejność (lub strzałki ← →)",
+  "folder.veg.open": "Moje rośliny",
+  "folder.veg.title": "Moje rośliny",
+  "folder.veg.hint": "Wybierz obraz rośliny (.png z przezroczystością). Wysoki obraz (wysokość co najmniej 1,5 raza większa niż szerokość, np. 16×32) stanie się rośliną o wysokości 2 bloków",
+  "folder.veg.error": "Wybierz plik obrazu",
 
   "ui.hide": "Ukryj interfejs (H)",
   "ui.show": "Pokaż interfejs (H)",
 
   "shot.title": "Skopiuj zrzut ekranu do schowka (przytrzymaj Ctrl, aby także pobrać, Shift — dla przezroczystego tła)",
-  "shot.error": "Nie udało się zrobić zrzutu ekranu"
+  "shot.error": "Nie udało się zrobić zrzutu ekranu",
+
+  "veg.enable": "Włącz roślinność",
+  "veg.dice": "Pomieszaj",
+  "veg.set": "Zestaw roślinności",
+  "veg.density": "Gęstość",
+  "veg.layers": "Gdzie rośnie roślinność",
+  "veg.layer1": "Górna platforma",
+  "veg.layer2": "Środkowa platforma",
+  "veg.layer3": "Dolna platforma",
+  "veg.empty": "Brak roślin — umieść tekstury w folderze vegetation/ lub dodaj własne"
 }

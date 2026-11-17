@@ -401,10 +401,24 @@
   "folder.emote.hint": "Valige emotsiooni .json-fail ja soovi korral ikoonipilt (.png) samas dialoogiaknas",
   "folder.emote.icon": "Muuda ikooni",
   "folder.reorder": "Lohistage ümberpaigutamiseks (või kasutage nooli ← →)",
+  "folder.veg.open": "Minu taimed",
+  "folder.veg.title": "Minu taimed",
+  "folder.veg.hint": "Valige taime pilt (.png läbipaistvusega). Kõrge pilt (kõrgus vähemalt 1,5 korda suurem kui laius, nt 16×32) muutub 2 ploki kõrguseks taimeks",
+  "folder.veg.error": "Valige pildifail",
 
   "ui.hide": "Peida liides (H)",
   "ui.show": "Näita liidest (H)",
 
   "shot.title": "Kopeeri ekraanipilt lõikelauale (allalaadimiseks hoia all Ctrl, läbipaistva tausta jaoks Shift)",
-  "shot.error": "Ekraanitõmmise tegemine ebaõnnestus"
+  "shot.error": "Ekraanitõmmise tegemine ebaõnnestus",
+
+  "veg.enable": "Lülita taimestik sisse",
+  "veg.dice": "Segamini",
+  "veg.set": "Taimestiku komplekt",
+  "veg.density": "Tihedus",
+  "veg.layers": "Kus taimestik kasvab",
+  "veg.layer1": "Ülemine platvorm",
+  "veg.layer2": "Keskmine platvorm",
+  "veg.layer3": "Alumine platvorm",
+  "veg.empty": "Taimi pole veel — paigutage tekstuurid kausta vegetation/ või lisage oma"
 }

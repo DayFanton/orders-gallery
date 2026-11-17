@@ -401,10 +401,24 @@
   "folder.emote.hint": "Paw emote .json nkrataa baako anaasɛ sɛ wopɛ a, icon mfonini (.png) wɔ dialog koro no ara mu",
   "folder.emote.icon": "Sesɛ icon no",
   "folder.reorder": "Drag to reorder (ana se arrows ← →)",
+  "folder.veg.open": "Me nnua",
+  "folder.veg.title": "Me nnua",
+  "folder.veg.hint": "Pawu nnua mfonini (.png a ɛkyerɛ yiye). Mfonini tenten (tenten no yɛ bɛyɛ mprenmpren 1.5 sene tɛtrɛtrɛ, sɛ 16×32) bɛyɛ dua a ɛwɔ blɔk abien",
+  "folder.veg.error": "Pawu mfonini file",
 
   "ui.hide": "Fa interface no sie (H)",
   "ui.show": "Kyerɛ interface no (H)",
 
   "shot.title": "Kɔ pɛɛsɛn screenshot kɔ clipboard so (fa Ctrl kyere sɛ wopɛ sɛ wode to hɔ nso, Shift ma background a ɛda hɔ)",
-  "shot.error": "Entumi nfa screenshot no"
+  "shot.error": "Entumi nfa screenshot no",
+
+  "veg.enable": "Fa nnua gu so",
+  "veg.dice": "Hyew",
+  "veg.set": "Nnua nhyehyɛe",
+  "veg.density": "Dɔɔso",
+  "veg.layers": "Baabi a nnua nyin",
+  "veg.layer1": "Sorɔnsorɔn so",
+  "veg.layer2": "Mfinimfini so",
+  "veg.layer3": "Aseɛ so",
+  "veg.empty": "Nnua nni hɔ bio — fa nnoɔma gu vegetation/ adaka mu anaasɛ fa wo dea ka ho"
 }

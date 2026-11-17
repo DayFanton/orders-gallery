@@ -403,10 +403,24 @@
   "folder.emote.hint": "Emote .json file qixxa, woyite qixxattoro, icon image (.png) dialoge mittu giddro qixxa",
   "folder.emote.icon": "Icon qixxa",
   "folder.reorder": "Drag to reorder (mata arrows ← →)",
+  "folder.veg.open": "Xaawowuwa koo",
+  "folder.veg.title": "Xaawowuwa koo",
+  "folder.veg.hint": "Xaawo qixxisiri qixxi (.png qixxite). Qixxite xaawo (xaawo xagi 1.5 kowu gatamote, lawishshaho 16×32) 2 boloqote xaawo ikkitanno",
+  "folder.veg.error": "Qixxite fayli qixxi",
 
   "ui.hide": "Interface qorqora (H)",
   "ui.show": "Interface leellishshu (H)",
 
   "shot.title": "Screenshot clipboard e qoli (Ctrl minci, Shift transparent background)",
-  "shot.error": "Screen-a xummo afiidi"
+  "shot.error": "Screen-a xummo afiidi",
+
+  "veg.enable": "Gashshishi xaawo",
+  "veg.dice": "Fata",
+  "veg.set": "Xaawo qixxisiri",
+  "veg.density": "Rukkina",
+  "veg.layers": "Xaawo shini yanna",
+  "veg.layer1": "Aliidi baatto",
+  "veg.layer2": "Giddichshu baatto",
+  "veg.layer3": "Woroonni baatto",
+  "veg.empty": "Xaawo dino — vegetation/ foldere qixxi woy kuwwi"
 }

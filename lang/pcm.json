@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pick one emote .json file and, if you like, icon image (.png) inside di same dialog",
   "folder.emote.icon": "Change icon",
   "folder.reorder": "Drag to arrange again (or use arrow ← →)",
+  "folder.veg.open": "My vegetation",
+  "folder.veg.title": "My vegetation",
+  "folder.veg.hint": "Choze plant imaj (.png with transparency). High imaj (height at least 1.5 times pass width, e.g. 16×32) go turn to 2 block plant",
+  "folder.veg.error": "Choze imaj fail",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
 
   "shot.title": "Kop screenshot go insaid clipboard (hold Ctrl to download join-join, Shift for transparent background)",
-  "shot.error": "E fail to take screenshot"
+  "shot.error": "E fail to take screenshot",
+
+  "veg.enable": "Tɔn on vegeteshɔn",
+  "veg.dice": "Mks am",
+  "veg.set": "Vegetation sɛt",
+  "veg.density": "Densiti",
+  "veg.layers": "Where di vegetation dey grow",
+  "veg.layer1": "Up platform",
+  "veg.layer2": "Middle platform",
+  "veg.layer3": "Down platform",
+  "veg.empty": "No vegetation yet — put textures inside vegetation/ folda abi add your own"
 }

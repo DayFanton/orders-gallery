@@ -403,10 +403,24 @@
   "folder.emote.hint": "Emote .json file select me, ota wati, icon image (.png) dialog samo lalon",
   "folder.emote.icon": "Icon change me",
   "folder.reorder": "Drag to reorder (o arrow ← →)",
+  "folder.veg.open": "Nabo angu",
+  "folder.veg.title": "Nabo angu",
+  "folder.veg.hint": "Nabo photo thabena (.png transparency ena). Lamba photo (unai width taru 1.5 guna jada, jaisey 16×32) 2 block lamba nabo hobena",
+  "folder.veg.error": "Photo file thabena",
 
   "ui.hide": "Interface amo lalon (H)",
   "ui.show": "Interface amo nene (H)",
 
   "shot.title": "Screenshot clipboard lalon (Ctrl dabam, Shift transparent background)",
-  "shot.error": "Screenshot lasi na gau"
+  "shot.error": "Screenshot lasi na gau",
+
+  "veg.enable": "Nabo bano",
+  "veg.dice": "Tamona",
+  "veg.set": "Nabo set",
+  "veg.density": "Uduna",
+  "veg.layers": "Nabo bano bansa",
+  "veg.layer1": "Atai ena platform",
+  "veg.layer2": "Gidara ena platform",
+  "veg.layer3": "Henunai ena platform",
+  "veg.empty": "Nabo tawa mela — texture da vegetation/ folder men thabena"
 }

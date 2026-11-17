@@ -403,10 +403,24 @@
   "folder.emote.hint": "Họrọ faịlụ .json emote na, ọ bụrụ na chọrọ, onyonyo akara (.png) n'otu mkparịta ụka ahụ",
   "folder.emote.icon": "Gbanwee akara",
   "folder.reorder": "Dọpụta ka ị hazie ọzọ (ma ọ bụ akụ ← →)",
+  "folder.veg.open": "Osisi m",
+  "folder.veg.title": "Osisi m",
+  "folder.veg.hint": "Họrọ foto osisi (.png nwere pụtara ihe). Foto dị elu (ogologo opekata mpe 1.5 ugboro karịa obosara, dị ka 16×32) ga-abụ osisi nwere ngọngọ 2",
+  "folder.veg.error": "Họrọ faịlụ onyonyo",
 
   "ui.hide": "Zonwe interface ahụ (H)",
   "ui.show": "Gosi interface ahụ (H)",
 
   "shot.title": "Detuo nsetụ ihuenyo na clipboard (jikọta Ctrl iji budatakwa, Shift maka ndabere doro anya)",
-  "shot.error": "E nweghị ike iwere nseta ihuenyo"
+  "shot.error": "E nweghị ike iwere nseta ihuenyo",
+
+  "veg.enable": "Gbanye osisi",
+  "veg.dice": "Gwuo",
+  "veg.set": "Nhazi osisi",
+  "veg.density": "Njupụta",
+  "veg.layers": "Ebe osisi na-eto",
+  "veg.layer1": "Ikpo okwu dị n'elu",
+  "veg.layer2": "Ikpo okwu n'etiti",
+  "veg.layer3": "Ikpo okwu dị n'ala",
+  "veg.empty": "Enweghị osisi ugbu a — tinye akwụkwọ nri n'ime folda vegetation/ ma ọ bụ tinye nke gị"
 }

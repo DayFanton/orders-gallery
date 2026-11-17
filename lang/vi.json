@@ -403,10 +403,24 @@
   "folder.emote.hint": "Chọn một tệp .json biểu cảm và, nếu muốn, một hình ảnh biểu tượng (.png) trong cùng một hộp thoại",
   "folder.emote.icon": "Thay đổi biểu tượng",
   "folder.reorder": "Kéo để sắp xếp lại (hoặc dùng mũi tên ← →)",
+  "folder.veg.open": "Cây của tôi",
+  "folder.veg.title": "Cây của tôi",
+  "folder.veg.hint": "Chọn hình ảnh thực vật (.png có độ trong suốt). Hình ảnh cao (chiều cao lớn hơn chiều rộng ít nhất 1,5 lần, ví dụ 16×32) sẽ trở thành cây cao 2 khối",
+  "folder.veg.error": "Chọn tệp hình ảnh",
 
   "ui.hide": "ẩn giao diện (H)",
   "ui.show": "Hiện giao diện (H)",
 
   "shot.title": "Sao chép ảnh chụp màn hình vào khâu tạm (giữ Ctrl để tải xuống thêm, Shift để có nền trong suốt)",
-  "shot.error": "Không thể chụp màn hình"
+  "shot.error": "Không thể chụp màn hình",
+
+  "veg.enable": "Bật thảm thực vật",
+  "veg.dice": "Xáo trộn",
+  "veg.set": "Bộ thảm thực vật",
+  "veg.density": "Mật độ",
+  "veg.layers": "Nơi thảm thực vật phát triển",
+  "veg.layer1": "Nền tảng trên",
+  "veg.layer2": "Nền tảng giữa",
+  "veg.layer3": "Nền tảng dưới",
+  "veg.empty": "Chưa có thảm thực vật — hãy đặt kết cấu vào thư mục vegetation/ hoặc thêm của riêng bạn"
 }

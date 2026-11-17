@@ -403,10 +403,24 @@
   "folder.emote.hint": "Sankhani fayilo ya .json ya emote ndipo, ngati mukufuna, chithunzi cha icon (.png) mu zokambirana zomweyo",
   "folder.emote.icon": "Sintha icon",
   "folder.reorder": "Kokani kuti musinthe dongosolo (kapena gwiritsani ntchito mivi ← →)",
+  "folder.veg.open": "Zomera zanga",
+  "folder.veg.title": "Zomera zanga",
+  "folder.veg.hint": "Sankhani chithunzi cha chomera (.png chowoneka bwino). Chithunzi chitali (kutalika kwake koposa 1.5 kuposa m'lifupi, mwachitsanzo 16×32) chidzakhala chomera cha midadada iwiri",
+  "folder.veg.error": "Sankhani fayilo ya chithunzi",
 
   "ui.hide": "Bisani mawonekedwe (H)",
   "ui.show": "Sonyezani mawonekedwe (H)",
 
   "shot.title": "Koperani chithunzi cha pazenera ku clipboard (gwirani Ctrl kuti mutitsitsenso, Shift yambuyo yowonekera)",
-  "shot.error": "Zalephera kutenga chithunzi cha pazenera"
+  "shot.error": "Zalephera kutenga chithunzi cha pazenera",
+
+  "veg.enable": "Kuyatsa zomera",
+  "veg.dice": "Sakaniza",
+  "veg.set": "Zida za zomera",
+  "veg.density": "Kuchulukana",
+  "veg.layers": "Kumene kumamera zomera",
+  "veg.layer1": "Pulatifomu yapamwamba",
+  "veg.layer2": "Pulatifomu yapakati",
+  "veg.layer3": "Pulatifomu yapansi",
+  "veg.empty": "Palibe zomera pano — ikani zithunzi m'foda ya vegetation/ kapena wonjezera zanu"
 }

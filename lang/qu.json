@@ -401,10 +401,24 @@
   "folder.emote.hint": "Huk emote .json willakuyta akllay, munanktataq chayqa, huk icon rikrakachatapas (.png) kikin rimanakunallapim",
   "folder.emote.icon": "Iconta t'ikray",
   "folder.reorder": "Pantallamanta fototaqa mana hap'iyta atikurqanchu",
+  "folder.veg.open": "Sach'akunay",
+  "folder.veg.title": "Sach'akunay",
+  "folder.veg.hint": "Sach'aq rikch'anta akllay (.png transparentniyuq). Hatun rikch'acha (altunninqa ancha aswan 1.5 kiti sayayniyuq, ahinataq 16×32) iskay blockniyuq sach'aman tukunqa",
+  "folder.veg.error": "Rikch'a archivota akllay",
 
   "ui.hide": "Rikchayta pakay (H)",
   "ui.show": "Rikchayta qawachiy (H)",
 
   "shot.title": "Pantallamanta fotota clipboardman kopiyay (Ctrl-ta hap'iy apaykachamunaykipaqpis, Shift-ta t'inkisqa qhipaman)",
-  "shot.error": "Pantallamanta fototaqa mana hap'iyta atikurqanchu"
+  "shot.error": "Pantallamanta fototaqa mana hap'iyta atikurqanchu",
+
+  "veg.enable": "Sach'akunata kichay",
+  "veg.dice": "T'aqay",
+  "veg.set": "Sach'akuna huñu",
+  "veg.density": "Ch'iqchi",
+  "veg.layers": "Maypi sach'akuna wiñan",
+  "veg.layer1": "Hawa patapata",
+  "veg.layer2": "Chawpi patapata",
+  "veg.layer3": "Uray patapata",
+  "veg.empty": "Manaraq sach'akuna kanchu — texturekunata vegetation/ q'ipichaman churay otaq kikinpaq yapay"
 }

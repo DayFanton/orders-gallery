@@ -401,10 +401,24 @@
   "folder.emote.hint": "Pilih fail .json emote dan, jika mahu, imej ikon (.png) dalam dialog yang sama",
   "folder.emote.icon": "Tukar ikon",
   "folder.reorder": "Seret untuk susun semula (atau anak panah ← →)",
+  "folder.veg.open": "Tanaman saya",
+  "folder.veg.title": "Tanaman saya",
+  "folder.veg.hint": "Pilih imej tumbuhan (.png dengan ketelusan). Imej tinggi (ketinggian sekurang-kurangnya 1.5 kali ganda daripada lebar, contohnya 16×32) akan menjadi tumbuhan 2 blok",
+  "folder.veg.error": "Pilih fail imej",
 
   "ui.hide": "Sembunyikan antara muka (H)",
   "ui.show": "Tunjukkan antara muka (H)",
 
   "shot.title": "Salin tangkapan skrin ke papan klip (tahan Ctrl untuk turut memuat turun, Shift untuk latar belakang telus)",
-  "shot.error": "Gagal mengambil tangkapan skrin"
+  "shot.error": "Gagal mengambil tangkapan skrin",
+
+  "veg.enable": "Aktifkan vegetasi",
+  "veg.dice": "Rawak",
+  "veg.set": "Set vegetasi",
+  "veg.density": "Ketumpatan",
+  "veg.layers": "Di mana vegetasi tumbuh",
+  "veg.layer1": "Platform atas",
+  "veg.layer2": "Platform tengah",
+  "veg.layer3": "Platform bawah",
+  "veg.empty": "Belum ada tanaman — letakkan tekstur dalam folder vegetation/ atau tambahkan sendiri"
 }

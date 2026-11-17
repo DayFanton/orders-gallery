@@ -403,10 +403,24 @@
   "folder.emote.hint": "Trieu un fitxer .json d'emote i, si voleu, una imatge d'icona (.png) en el mateix diàleg",
   "folder.emote.icon": "Canviar icona",
   "folder.reorder": "Arrossega per reordenar (o utilitza les fletxes ← →)",
+  "folder.veg.open": "Les meves plantes",
+  "folder.veg.title": "Les meves plantes",
+  "folder.veg.hint": "Trieu una imatge de planta (.png amb transparència). Una imatge alta (alçada almenys 1,5 vegades més gran que l'amplada, per exemple 16×32) es convertirà en una planta de 2 blocs",
+  "folder.veg.error": "Trieu el fitxer d'imatge",
 
   "ui.hide": "Ocultar la interfície (H)",
   "ui.show": "Mostrar la interfície (H)",
 
   "shot.title": "Copia la captura de pantalla al porta-retalls (mantén premut Ctrl per descarregar-la també, Shift per a fons transparent)",
-  "shot.error": "No s'ha pogut fer la captura de pantalla"
+  "shot.error": "No s'ha pogut fer la captura de pantalla",
+
+  "veg.enable": "Activar vegetació",
+  "veg.dice": "Barrejar",
+  "veg.set": "Conjunt de vegetació",
+  "veg.density": "Densitat",
+  "veg.layers": "On creix la vegetació",
+  "veg.layer1": "Plataforma superior",
+  "veg.layer2": "Plataforma intermèdia",
+  "veg.layer3": "Plataforma inferior",
+  "veg.empty": "Encara no hi ha plantes — col·loca les textures a la carpeta vegetation/ o afegeix les teves"
 }

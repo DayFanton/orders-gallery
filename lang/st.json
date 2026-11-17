@@ -401,10 +401,24 @@
   "folder.emote.hint": "Khetha faele ea .json ea emote le, haeba u batla, setšoantšo sa Letšoao (.png) moqoqong o tšoanang",
   "folder.emote.icon": "Fetola letšoao",
   "folder.reorder": "Hula ho fetola tatellano (kapa sebelisa metsu ← →)",
+  "folder.veg.open": "Dimela tsa ka",
+  "folder.veg.title": "Dimela tsa ka",
+  "folder.veg.hint": "Khetha setšoantšo sa semela (.png e bonahalang). Setšoantšo se selele (bophahamo bonyane makhetlo a 1.5 ho feta bophara, mohlala 16×32) e tla ba semela sa li-block tse 2",
+  "folder.veg.error": "Khetha faele ea setšoantšo",
 
   "ui.hide": "Patla sebopeho (H)",
   "ui.show": "Bontša sebopeho (H)",
 
   "shot.title": "Kopa skrini ho clipboard (tšoara Ctrl ho khoasolla hape, Shift bakeng sa bokantle bo hlakileng)",
-  "shot.error": "Ho hlolehile ho nka setšoantšo sa skrineng"
+  "shot.error": "Ho hlolehile ho nka setšoantšo sa skrineng",
+
+  "veg.enable": "Bula dimela",
+  "veg.dice": "Kopanya",
+  "veg.set": "Sete ya dimela",
+  "veg.density": "Motenya",
+  "veg.layers": "Moo dimela di hōlang teng",
+  "veg.layer1": "Sethala se ka hodimo",
+  "veg.layer2": "Sethala se mahareng",
+  "veg.layer3": "Sethala se ka tlase",
+  "veg.empty": "Ha ho dimela hajoale — kenya litlolo foldeng ea vegetation/ kapa u kenye tsa hau"
 }

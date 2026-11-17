@@ -403,10 +403,24 @@
   "folder.emote.hint": "Valitse emote .json -tiedosto ja halutessasi kuvakekuva (.png) samassa ikkunassa",
   "folder.emote.icon": "Vaihda kuvake",
   "folder.reorder": "Vedä järjestääksesi uudelleen (tai käytä nuolia ← →)",
+  "folder.veg.open": "Omat kasvini",
+  "folder.veg.title": "Omat kasvini",
+  "folder.veg.hint": "Valitse kasvikuva (.png läpinäkyvyydellä). Korkea kuva (korkeus vähintään 1,5 kertaa leveyttä suurempi, esim. 16×32) muuttuu 2 lohkon korkuiseksi kasviksi",
+  "folder.veg.error": "Valitse kuvatiedosto",
 
   "ui.hide": "Piilota käyttöliittymä (H)",
   "ui.show": "Näytä käyttöliittymä (H)",
 
   "shot.title": "Kopioi kuvakaappaus leikepöydälle (pidä Ctrl painettuna ladataksesi myös, Shift läpinäkyvää taustaa varten)",
-  "shot.error": "Kuvakaappauksen ottaminen epäonnistui"
+  "shot.error": "Kuvakaappauksen ottaminen epäonnistui",
+
+  "veg.enable": "Ota kasvillisuus käyttöön",
+  "veg.dice": "Sekoita",
+  "veg.set": "Kasvillisuussarja",
+  "veg.density": "Tiheys",
+  "veg.layers": "Missä kasvillisuus kasvaa",
+  "veg.layer1": "Ylätaso",
+  "veg.layer2": "Keskialusta",
+  "veg.layer3": "Alataso",
+  "veg.empty": "Ei vielä kasveja — sijoita tekstuurit vegetation/-kansioon tai lisää omasi"
 }

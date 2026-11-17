@@ -401,10 +401,24 @@
   "folder.emote.hint": "Safidio ny rakitra .json an'ny emote ary, raha tianao, ny sarin'ny kisary (.png) ao amin'ny resaka iray ihany",
   "folder.emote.icon": "Ovay ny kisary",
   "folder.reorder": "Teteho mba hanovana ny filaharana (na ampiasao ireo zana-tsipìka ← →)",
+  "folder.veg.open": "Ny zavamaniry eto amiko",
+  "folder.veg.title": "Ny zavamaniry eto amiko",
+  "folder.veg.hint": "Safidio ny sarin-javamaniry (.png misy mangarahara). Ny sary lava (ny haavony farafahakeliny 1.5 henyan'ny sakany, ohatra 16×32) dia ho zavamaniry misy sakana roa",
+  "folder.veg.error": "Safidio ny rakitra sary",
 
   "ui.hide": "Afeno ny endrika (H)",
   "ui.show": "Asehoy ny endrika (H)",
 
   "shot.title": "Adikao ny pikantsary ao amin'ny clipboard (hazòny ny Ctrl raha te-hampidina koa, Shift ho an'ny ambadika mangarahara)",
-  "shot.error": "Tsy nahomby tamin'ny fakana sary ny efijery"
+  "shot.error": "Tsy nahomby tamin'ny fakana sary ny efijery",
+
+  "veg.enable": "Alefaso ny zavamaniry",
+  "veg.dice": "Afangaro",
+  "veg.set": "Vondron-javamaniry",
+  "veg.density": "Hakitroka",
+  "veg.layers": "Toerana maniry ny zavamaniry",
+  "veg.layer1": "Sehatra ambony",
+  "veg.layer2": "Sehatra afovoany",
+  "veg.layer3": "Sehatra ambany",
+  "veg.empty": "Tsy misy zavamaniry aloha — apetraho ao amin'ny lahatahiry vegetation/ ny soratra na ampio ny anao"
 }

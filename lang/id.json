@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pilih file .json emote dan, jika mau, gambar ikon (.png) dalam dialog yang sama",
   "folder.emote.icon": "Ubah ikon",
   "folder.reorder": "Seret untuk mengubah urutan (atau panah ← →)",
+  "folder.veg.open": "Tanaman saya",
+  "folder.veg.title": "Tanaman saya",
+  "folder.veg.hint": "Pilih gambar tanaman (.png dengan transparansi). Gambar tinggi (tinggi setidaknya 1,5 kali lebih besar dari lebar, misalnya 16×32) akan menjadi tanaman setinggi 2 blok",
+  "folder.veg.error": "Pilih berkas gambar",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
 
   "shot.title": "Salin tangkapan layar ke papan klip (tahan Ctrl untuk juga mengunduh, Shift untuk latar belakang transparan)",
-  "shot.error": "Gagal mengambil tangkapan layar"
+  "shot.error": "Gagal mengambil tangkapan layar",
+
+  "veg.enable": "Aktifkan vegetasi",
+  "veg.dice": "Acak",
+  "veg.set": "Set vegetasi",
+  "veg.density": "Kepadatan",
+  "veg.layers": "Di mana vegetasi tumbuh",
+  "veg.layer1": "Platform atas",
+  "veg.layer2": "Platform tengah",
+  "veg.layer3": "Platform bawah",
+  "veg.empty": "Belum ada tanaman — letakkan tekstur di folder vegetation/ atau tambahkan milik Anda sendiri"
 }

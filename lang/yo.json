@@ -403,10 +403,24 @@
   "folder.emote.hint": "Yan faili .json emote kan, ti o ba fẹ, aworan aami (.png) ninu ijiroro kan naa",
   "folder.emote.icon": "Yi aami pada",
   "folder.reorder": "Fa lati tunto (tabi lo awọn ọfa ← →)",
+  "folder.veg.open": "Awọn ohun ọgbin mi",
+  "folder.veg.title": "Awọn ohun ọgbin mi",
+  "folder.veg.hint": "Yan aworan ohun ọgbin (.png pẹlu gbangba). Aworan giga (giga o kere ju igba 1.5 tobi ju iwọn lọ, fun apẹẹrẹ 16×32) yoo di ohun ọgbin bulọọki 2",
+  "folder.veg.error": "Yan aṣayan aworan",
 
   "ui.hide": "Tọ ko oju aṣayan (H)",
   "ui.show": "Fi oju aṣayan han (H)",
 
   "shot.title": "Da ẹ̀ka iboju si pátáká àbójútó (di Ctrl mu lati ṣe igbasilẹ pẹlu, Shift fun abẹlẹ ti o han gbangba)",
-  "shot.error": "O le lati ya aworan iboju"
+  "shot.error": "O le lati ya aworan iboju",
+
+  "veg.enable": "Mú ohun ọgbin ṣiṣẹ",
+  "veg.dice": "Darapọ̀",
+  "veg.set": "Eto ohun ọgbin",
+  "veg.density": "Ìwọ̀n ìkójọpọ̀",
+  "veg.layers": "Ibiti ohun ọgbin ti n dagba",
+  "veg.layer1": "Pẹpẹ òkè",
+  "veg.layer2": "Pẹpẹ aarin",
+  "veg.layer3": "Pẹpẹ ìsàlẹ̀",
+  "veg.empty": "Kò si ohun ọgbin kankan sibẹsibẹ — gbe awọn awoara sinu folda vegetation/ tabi fi tirẹ kun"
 }

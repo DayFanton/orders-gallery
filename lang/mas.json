@@ -401,10 +401,24 @@
   "folder.emote.hint": "Enget file oong .json eka ɛmɔɔti enye tosh oloshisho olong .png e dialog eni",
   "folder.emote.icon": "Enget oloshisho",
   "folder.reorder": "Eish, olasho le olpiron (ama intare ← →)",
+  "folder.veg.open": "Miti yakwa",
+  "folder.veg.title": "Miti yakwa",
+  "folder.veg.hint": "Pura osisi le miti (.png eishoo obo). Osisi le nabo (oisho le enkishon e 1.5 ebo, aike 16×32) eka olosisi le boloki tosin",
+  "folder.veg.error": "Pura osisi le faili",
 
   "ui.hide": "Erisie interface (H)",
   "ui.show": "Erisie interface (H)",
 
   "shot.title": "Kopi screenshot e clipboard (taa Ctrl pee ior oloshoroi, Shift pee elo background e sidai)",
-  "shot.error": "Eish, meleu olasho le screenshot"
+  "shot.error": "Eish, meleu olasho le screenshot",
+
+  "veg.enable": "Washa miti",
+  "veg.dice": "Enkai",
+  "veg.set": "Seti ya miti",
+  "veg.density": "Enkinyata",
+  "veg.layers": "Ore naitie miti",
+  "veg.layer1": "Oldoinyo le shomata",
+  "veg.layer2": "Oldoinyo le tapany",
+  "veg.layer3": "Oldoinyo le abori",
+  "veg.empty": "Erisiani miti — taa matasi olofolda la vegetation/ ama eji olé"
 }

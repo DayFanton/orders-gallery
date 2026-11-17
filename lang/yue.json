@@ -403,10 +403,24 @@
   "folder.emote.hint": "选择一个表情 .json 文件，如果你想嘅话，还可以在同一对话框中选择图标图片 (.png)",
   "folder.emote.icon": "更改图标",
   "folder.reorder": "拖動以重新排序（或使用 ← → 箭頭）",
+  "folder.veg.open": "我的植物",
+  "folder.veg.title": "我的植物",
+  "folder.veg.hint": "選擇植物圖片（帶透明度的 .png）。高圖（高度至少為寬度的 1.5 倍，例如 16×32）將變成 2 個方塊高的植物",
+  "folder.veg.error": "選擇圖片文件",
 
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",
 
   "shot.title": "複製截圖到剪貼簿 (按住 Ctrl 可同時下載，Shift 設為透明背景)",
-  "shot.error": "截屏失敗"
+  "shot.error": "截屏失敗",
+
+  "veg.enable": "啟用植被",
+  "veg.dice": "隨機打亂",
+  "veg.set": "植被預設",
+  "veg.density": "密度",
+  "veg.layers": "植被生長嘅地方",
+  "veg.layer1": "上層平台",
+  "veg.layer2": "中層平台",
+  "veg.layer3": "下層平台",
+  "veg.empty": "仲未有植物 — 將紋理放入 vegetation/ 文件夾或者加入你自己的"
 }

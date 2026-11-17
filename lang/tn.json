@@ -403,10 +403,24 @@
   "folder.emote.hint": "Kgetha faele ya emote ya .json mme, fa o batla, setshwantsho sa letshwao (.png) mo motlotlong o le mongwe",
   "folder.emote.icon": "Fetola letshwao",
   "folder.reorder": "Gula go fetola thulaganyo (kgotsa dirisa metsu ← →)",
+  "folder.veg.open": "Dimela tsa me",
+  "folder.veg.title": "Dimela tsa me",
+  "folder.veg.hint": "Alola setshwantsho sa semela (.png e e bonalang). Setshwantsho se seleele (bophahamo bonyane makhetlo a 1.5 go feta bophara, sekai 16×32) e tla nna semela sa dibloko tse 2",
+  "folder.veg.error": "Alola faele ya setshwantsho",
 
   "ui.hide": "Fitlha sebopego (H)",
   "ui.show": "Bontsha sebopego (H)",
 
   "shot.title": "Kopa setshwantsho sa skrini mo clipboard (tshwara Ctrl go laolola gape, Shift ya bokantle jo bo bonalang)",
-  "shot.error": "Go paletswe go tsaya setshwantsho sa sekirini"
+  "shot.error": "Go paletswe go tsaya setshwantsho sa sekirini",
+
+  "veg.enable": "Bula dimela",
+  "veg.dice": "Tswakanya",
+  "veg.set": "Sete ya dimela",
+  "veg.density": "Bokete",
+  "veg.layers": "Mo dimela di gologang teng",
+  "veg.layer1": "Serala se se kwa godimo",
+  "veg.layer2": "Serala se se fa gare",
+  "veg.layer3": "Serala se se kwa tlase",
+  "veg.empty": "Ga go na dimela ga jaana — baya ditlolo mo foldeng ya vegetation/ kgotsa o tsenye tsa gago"
 }

@@ -403,10 +403,24 @@
   "folder.emote.hint": "Chagua faili ya .json ya emote na, ukitaka, picha ya ikoni (.png) kwenye kidirisha kimoja",
   "folder.emote.icon": "Badilisha ikoni",
   "folder.reorder": "Buruta ili kupanga upya (au tumumia mishale ← →)",
+  "folder.veg.open": "Mimea yangu",
+  "folder.veg.title": "Mimea yangu",
+  "folder.veg.hint": "Chagua picha ya mimea (.png yenye uwazi). Picha ndefu (urefu angalau mara 1.5 kuliko upana, mfano 16×32) itakuwa mmea wa bloki 2",
+  "folder.veg.error": "Chagua faili la picha",
 
   "ui.hide": "Ficha kiolesura (H)",
   "ui.show": "Onyesha kiolesura (H)",
 
   "shot.title": "Nakili picha ya skrini kwenye ubao klipu (shikilia Ctrl ili kupakua pia, Shift kwa mandhari ya wazi)",
-  "shot.error": "Imeshindikana kuchukua picha ya skrini"
+  "shot.error": "Imeshindikana kuchukua picha ya skrini",
+
+  "veg.enable": "Washa mimea",
+  "veg.dice": "Changanya",
+  "veg.set": "Seti ya mimea",
+  "veg.density": "Msongamano",
+  "veg.layers": "Mahali ambapo mimea inakua",
+  "veg.layer1": "Jukwaa la juu",
+  "veg.layer2": "Jukwaa la kati",
+  "veg.layer3": "Jukwaa la chini",
+  "veg.empty": "Hakuna mimea bado — weka maumbo katika folda ya vegetation/ au ongeza yako mwenyewe"
 }

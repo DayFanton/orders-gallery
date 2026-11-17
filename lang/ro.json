@@ -403,10 +403,24 @@
   "folder.emote.hint": "Alegeți un fișier .json pentru emote și, opțional, o imagine pictogramă (.png) în aceeași fereastră de dialog",
   "folder.emote.icon": "Schimbați pictograma",
   "folder.reorder": "Trageți pentru a reordona (sau săgețile ← →)",
+  "folder.veg.open": "Plantele mele",
+  "folder.veg.title": "Plantele mele",
+  "folder.veg.hint": "Alegeți o imagine de plantă (.png cu transparență). O imagine înaltă (înălțimea de cel puțin 1,5 ori mai mare decât lățimea, de exemplu 16×32) va deveni o plantă de 2 blocuri",
+  "folder.veg.error": "Alegeți fișierul imagine",
 
   "ui.hide": "Ascunde interfața (H)",
   "ui.show": "Afișează interfața (H)",
 
   "shot.title": "Copiați captura de ecran în clipboard (țineți apăsat Ctrl pentru a descărca și, Shift pentru fundal transparent)",
-  "shot.error": "Nu s-a putut face captură de ecran"
+  "shot.error": "Nu s-a putut face captură de ecran",
+
+  "veg.enable": "Activează vegetația",
+  "veg.dice": "Amestecă",
+  "veg.set": "Set de vegetație",
+  "veg.density": "Densitate",
+  "veg.layers": "Unde crește vegetația",
+  "veg.layer1": "Platforma superioară",
+  "veg.layer2": "Platforma mijlocie",
+  "veg.layer3": "Platforma inferioară",
+  "veg.empty": "Nu există plante încă — plasați texturile în folderul vegetation/ sau adăugați propriile texturi"
 }

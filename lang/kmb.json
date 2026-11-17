@@ -403,10 +403,24 @@
   "folder.emote.hint": "Pita ovinyiko vi .json via emote kuenda, nda wati, ovifeva vi icon (.png) volukayi olu rumue",
   "folder.emote.icon": "Sakula icon",
   "folder.reorder": "Tata phangi o kusinana (nda kusonduka ← →)",
+  "folder.veg.open": "Mitiyi yami",
+  "folder.veg.title": "Mitiyi yami",
+  "folder.veg.hint": "Sola kifwanisu kia miti (.png ia kieleka). Kifwanisu kia thandu (thandu ja kala kukila 1.5 ia buleke, mbandu 16×32) ikala miti ia mabulu ayole",
+  "folder.veg.error": "Sola faile ya kifwanisu",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
 
   "shot.title": "Kopa osikrini kofele (kapa Ctrl oco o koke lioyo, Shift kocipandekiso co ndondo)",
-  "shot.error": "Kua lembe kutambula okusakula o kisonde"
+  "shot.error": "Kua lembe kutambula okusakula o kisonde",
+
+  "veg.enable": "Kubandula miti",
+  "veg.dice": "Kubakana",
+  "veg.set": "Kitendelu kia miti",
+  "veg.density": "Kuenda",
+  "veg.layers": "Handu hakukula miti",
+  "veg.layer1": "Kididi kia thandu",
+  "veg.layer2": "Kididi kia mukati",
+  "veg.layer3": "Kididi kia boxi",
+  "veg.empty": "Kene mididi ya miti — tula matiti mu folda vegetation/ kana kutulako ya yove"
 }

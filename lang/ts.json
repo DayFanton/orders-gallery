@@ -403,10 +403,24 @@
   "folder.emote.hint": "Hlawula fayimi ya .json ya emote naswino, loko u lava, xifaniso xa icon (.png) eka bokisi rin’we",
   "folder.emote.icon": "Cinca icon",
   "folder.reorder": "Kokela ku cinca landelelano (kumbe u tirhisa mintsu ← →)",
+  "folder.veg.open": "Swimila swa mina",
+  "folder.veg.title": "Swimila swa mina",
+  "folder.veg.hint": "Hlawula xifaniso xa swimila (.png leyi vonikelaka). Xifaniso lexi lehaheke (ku leha ka kona ku ringana minkarhi leyi nga ni 1.5 ku tlula vuanu, xikombiso 16×32) xi ta va ximila xa tiboko timbirhi",
+  "folder.veg.error": "Hlawula fayili ya xifaniso",
 
   "ui.hide": "Tumika mahlo (H)",
   "ui.show": "Kombisa mahlo (H)",
 
   "shot.title": "Kopa xifaniso xa screen eka clipboard (khoma Ctrl ku landzula na swona, Shift ku va ni background leyi vonakaka)",
-  "shot.error": "Swi tsandzekile ku teka xifaniso xa screen"
+  "shot.error": "Swi tsandzekile ku teka xifaniso xa screen",
+
+  "veg.enable": "Pfula swimila",
+  "veg.dice": "Phatakatela",
+  "veg.set": "Seti ya swimila",
+  "veg.density": "Ku tlhuma",
+  "veg.layers": "La swimila swi kulaka kona",
+  "veg.layer1": "Xiteji xa le henhla",
+  "veg.layer2": "Xiteji xa le xikarhi",
+  "veg.layer3": "Xiteji xa le hansi",
+  "veg.empty": "Ku hava swimila sweswi — veka swifaniso eka foldara ya vegetation/ kumbe u engetela swa wena"
 }

@@ -403,10 +403,24 @@
   "folder.emote.hint": "Zaɓi fayil ɗin .json na emote kuma, idan kuna so, hoton gunkin (.png) a cikin tattaunawa guda ɗaya",
   "folder.emote.icon": "Canza alamar",
   "folder.reorder": "Jawo domin sake tsarawa (ko amfani da kibiyoyi ← →)",
+  "folder.veg.open": "Ciyayina",
+  "folder.veg.title": "Ciyayina",
+  "folder.veg.hint": "Zaɓi hoton shuka (.png tare da nuna gaskiya). Hoton mai tsayi (tsawon aƙalla sau 1.5 fiye da faɗi, misali 16×32) zai zama shuka mai bulo 2",
+  "folder.veg.error": "Zaɓi fayil ɗin hoto",
 
   "ui.hide": "Ɓoye mai amfani (H)",
   "ui.show": "Nuna mai amfani (H)",
 
   "shot.title": "Kwafi hoton allo zuwa allon clipboard (riƙe Ctrl don saukewa ma, Shift don bango mai nuna gaskiya)",
-  "shot.error": "Ba a iya daukar hoton ekran ba"
+  "shot.error": "Ba a iya daukar hoton ekran ba",
+
+  "veg.enable": "Kunna ciyayi",
+  "veg.dice": "Juya",
+  "veg.set": "Saitin ciyayi",
+  "veg.density": "Yawa",
+  "veg.layers": "Inda ciyayi ke girma",
+  "veg.layer1": "Dandamali na sama",
+  "veg.layer2": "Dandamali na tsakiya",
+  "veg.layer3": "Dandamali na ƙasa",
+  "veg.empty": "Babu ciyayi tukuna — sanya hotunan a cikin babban fayil na vegetation/ ko ƙara naku"
 }

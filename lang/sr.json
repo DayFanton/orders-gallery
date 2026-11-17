@@ -403,10 +403,24 @@
   "folder.emote.hint": "Изаберите .json фајл емота и, ако желите, слику иконице (.png) у истом дијалогу",
   "folder.emote.icon": "Промени иконицу",
   "folder.reorder": "Prevucite da promenite redosled (ili strelice ← →)",
+  "folder.veg.open": "Моје биљке",
+  "folder.veg.title": "Моје биљке",
+  "folder.veg.hint": "Изаберите слику биљке (.png са провидношћу). Висока слика (висина најмање 1,5 пута већа од ширине, нпр. 16×32) постаће биљка висока 2 блока",
+  "folder.veg.error": "Изаберите датотеку слике",
 
   "ui.hide": "Сакриј интерфејс (H)",
   "ui.show": "Прикажи интерфејс (H)",
 
   "shot.title": "Копирај снимак екрана у клипборд (држите Ctrl за преузимање такође, Shift за провидну позадину)",
-  "shot.error": "Nije uspelo pravljenje snimka ekrana"
+  "shot.error": "Nije uspelo pravljenje snimka ekrana",
+
+  "veg.enable": "Укључи вегетацију",
+  "veg.dice": "Промешај",
+  "veg.set": "Сет вегетације",
+  "veg.density": "Густина",
+  "veg.layers": "Где расте вегетација",
+  "veg.layer1": "Горња платформа",
+  "veg.layer2": "Средња платформа",
+  "veg.layer3": "Доња платформа",
+  "veg.empty": "Још нема биљака — поставите текстуре у vegetation/ фасциклу или додајте своје"
 }

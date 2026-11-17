@@ -401,10 +401,24 @@
   "folder.emote.hint": "Roghnaigh comhad .json emote agus, más mian leat, íomhá deilbhín (.png) sa chείν diyailog céanna",
   "folder.emote.icon": "Athraigh deilbhín",
   "folder.reorder": "Tarraing chun ord a athrú (nó na saigheada ← →)",
+  "folder.veg.open": "Mo phlandaí",
+  "folder.veg.title": "Mo phlandaí",
+  "folder.veg.hint": "Roghnaigh íomhá planda (.png le trédhearcacht). Beidh íomhá ard (airde ar a laghad 1.5 uair níos mó ná leithead, e.g. 16×32) ina phlanda 2 bhloc",
+  "folder.veg.error": "Roghnaigh comhad íomhá",
 
   "ui.hide": "Folaigh an comhéadan (H)",
   "ui.show": "Taispeáin an comhéadan (H)",
 
   "shot.title": "Cóipeáil an seat scáinean go dtí an ngearrthaisce (coinnigh síos Ctrl chun íoslódáil freisin, Shift le haghaidh cúlra trédhearcach)",
-  "shot.error": "Níorbh fhéidir gabháil scáileáin a thógáil"
+  "shot.error": "Níorbh fhéidir gabháil scáileáin a thógáil",
+
+  "veg.enable": "Cumasaigh fásra",
+  "veg.dice": "Sracadh",
+  "veg.set": "Tac fásra",
+  "veg.density": "Dlús",
+  "veg.layers": "Cá bhfásann fásra",
+  "veg.layer1": "Ardán uachtarach",
+  "veg.layer2": "Ardán meánach",
+  "veg.layer3": "Ardán íochtarach",
+  "veg.empty": "Níl aon fásra fós — cuir uigeachtaí sa fhillteán vegetation/ nó cuir do chuid féin leis"
 }

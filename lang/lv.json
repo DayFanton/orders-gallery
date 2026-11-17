@@ -401,10 +401,24 @@
   "folder.emote.hint": "Izvēlieties emota .json failu un, ja vēlaties, ikonas attēlu (.png) tajā pašā dialoglodziņā",
   "folder.emote.icon": "Mainīt ikonu",
   "folder.reorder": "Velciet, lai mainītu secību (vai izmantojiet bultiņas ← →)",
+  "folder.veg.open": "Mani augi",
+  "folder.veg.title": "Mani augi",
+  "folder.veg.hint": "Izvēlieties auga attēlu (.png ar caurspīdīgumu). Augsts attēls (augstums vismaz 1,5 reizes lielāks par platumu, piemēram, 16×32) kļūs par 2 bloku augu",
+  "folder.veg.error": "Izvēlieties attēla failu",
 
   "ui.hide": "Slēpt interfeisu (H)",
   "ui.show": "Rādīt interfeisu (H)",
 
   "shot.title": "Kopēt ekrānuzņēmumu starplaikuvē (turiet nospiestu Ctrl, lai arī lejupielādētu, Shift — caurspīdīgam fonam)",
-  "shot.error": "Neizdevās uzņemt ekrānuzņēmumu"
+  "shot.error": "Neizdevās uzņemt ekrānuzņēmumu",
+
+  "veg.enable": "Iespējot veģetāciju",
+  "veg.dice": "Sajaukt",
+  "veg.set": "Veģetācijas komplekts",
+  "veg.density": "Blīvums",
+  "veg.layers": "Kur aug veģetācija",
+  "veg.layer1": "Augšējā platforma",
+  "veg.layer2": "Vidējā platforma",
+  "veg.layer3": "Apakšējā platforma",
+  "veg.empty": "Vēl nav augu — ievietojiet tekstūras mapē vegetation/ vai pievienojiet savas"
 }

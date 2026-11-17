@@ -403,10 +403,24 @@
   "folder.emote.hint": "Escolha um arquivo .json de emote e, se quiser, uma imagem de ícone (.png) na mesma caixa de diálogo",
   "folder.emote.icon": "Alterar ícone",
   "folder.reorder": "Arraste para reordenar (ou use as setas ← →)",
+  "folder.veg.open": "Minhas plantas",
+  "folder.veg.title": "Minhas plantas",
+  "folder.veg.hint": "Escolha uma imagem de planta (.png com transparência). Uma imagem alta (altura pelo menos 1,5 vezes maior que a largura, por exemplo 16×32) se tornará uma planta de 2 blocos",
+  "folder.veg.error": "Escolher arquivo de imagem",
 
   "ui.hide": "Ocultar interface (H)",
   "ui.show": "Mostrar interface (H)",
 
   "shot.title": "Copiar captura de ecrã para a área de transferência (mantenha Ctrl para descarregar também, Shift para fundo transparente)",
-  "shot.error": "Não foi possível tirar a captura de tela"
+  "shot.error": "Não foi possível tirar a captura de tela",
+
+  "veg.enable": "Ativar vegetação",
+  "veg.dice": "Embaralhar",
+  "veg.set": "Conjunto de vegetação",
+  "veg.density": "Densidade",
+  "veg.layers": "Onde a vegetação cresce",
+  "veg.layer1": "Plataforma superior",
+  "veg.layer2": "Plataforma intermediária",
+  "veg.layer3": "Plataforma inferior",
+  "veg.empty": "Ainda não há plantas — coloque as texturas na pasta vegetation/ ou adicione as suas"
 }

@@ -403,10 +403,24 @@
   "folder.emote.hint": "Ek emote .json file chuno aur, agar chaho, ek icon image (.png) wahi dialog me",
   "folder.emote.icon": "Icon badlo",
   "folder.reorder": "Drag karo badle ke liye (ya arrows ← → use karo)",
+  "folder.veg.open": "Mor banaspati",
+  "folder.veg.title": "Mor banaspati",
+  "folder.veg.hint": "Banaspati ka photo chuno (.png transparency ke sath). Lamba photo (unchai chaurai se kam se kam 1.5 guna zyada, jaise 16×32) 2 block lamba banaspati ban jaiga",
+  "folder.veg.error": "Photo file chuno",
 
   "ui.hide": "Interface chupao (H)",
   "ui.show": "Interface dikhao (H)",
 
   "shot.title": "Screenshot ke clipboard pe copy karo (download karne ke liye Ctrl dabaye rakho, transparent background ke liye Shift)",
-  "shot.error": "Screenshot nai liwa gais"
+  "shot.error": "Screenshot nai liwa gais",
+
+  "veg.enable": "Banaspati chalu karo",
+  "veg.dice": "Mix karo",
+  "veg.set": "Banaspati set",
+  "veg.density": "Ghanaapan",
+  "veg.layers": "Jaba banaspati ugta hai",
+  "veg.layer1": "Upar wala platform",
+  "veg.layer2": "Bichla wala platform",
+  "veg.layer3": "Niche wala platform",
+  "veg.empty": "Koi banaspati nahi hai — texture ko vegetation/ folder me rakho ya apna jodo"
 }

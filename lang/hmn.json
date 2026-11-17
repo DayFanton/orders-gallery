@@ -401,10 +401,24 @@
   "folder.emote.hint": "Xaiv ib daim ntaub ntawv emote .json thiab, yog koj xav tau, ib daim duab icon (.png) nyob rau hauv tib lub dialog",
   "folder.emote.icon": "Hloov icon",
   "folder.reorder": "Luag rub los txhawm rau rov teeb tsa (los yog siv xub ← →)",
+  "folder.veg.open": "Kuv tsob ntoo",
+  "folder.veg.title": "Kuv tsob ntoo",
+  "folder.veg.hint": "Xaiv tsob ntoo duab (.png uas pom tseeb). Cov duab siab (qhov siab tsawg kawg 1.5 zaug ntau tshaj qhov dav, piv txwv li 16×32) yuav ua tsob ntoo 2 thaiv siab",
+  "folder.veg.error": "Xaiv duab ntawv",
 
   "ui.hide": "Nkaum qhov screen (H)",
   "ui.show": "Qhia qhov screen (H)",
 
   "shot.title": "Luam duab screen rau clipboard (tuav Ctrl txhawm rau rub tawm thiab, Shift rau keeb kwm yav dhau los)",
-  "shot.error": "Tsis tuaj yeem ntes cov duab tshuaj ntsuam"
+  "shot.error": "Tsis tuaj yeem ntes cov duab tshuaj ntsuam",
+
+  "veg.enable": "Qhib tsob ntoo",
+  "veg.dice": "Sib",
+  "veg.set": "Qhib tsob ntoo",
+  "veg.density": "Tuab",
+  "veg.layers": "Qhib tsob ntoo",
+  "veg.layer1": "Sab saud platform",
+  "veg.layer2": "Sab nruab nrab platform",
+  "veg.layer3": "Sab hauv qab platform",
+  "veg.empty": "Tsis muaj tsob ntoo — tso cov duab tso rau hauv vegetation/ folder lossis ntxiv koj tus kheej"
 }

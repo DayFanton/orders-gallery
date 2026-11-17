@@ -403,10 +403,24 @@
   "folder.emote.hint": "Vælg en emote .json-fil og, hvis du vil, et ikonbillede (.png) i den samme dialogboks",
   "folder.emote.icon": "Skift ikon",
   "folder.reorder": "Træk for at ændre rækkefølge (eller brug pilene ← →)",
+  "folder.veg.open": "Mine planter",
+  "folder.veg.title": "Mine planter",
+  "folder.veg.hint": "Vælg et plantebillede (.png med gennemsigtighed). Et højt billede (højde mindst 1,5 gange større end bredde, f.eks. 16×32) bliver en 2 blokke høj plante",
+  "folder.veg.error": "Vælg billedfil",
 
   "ui.hide": "Skjul grænseflade (H)",
   "ui.show": "Vis grænseflade (H)",
 
   "shot.title": "Kopier skærmbillede til udklipsholder (hold Ctrl nede for også at downloade, Shift for gennemsigtig baggrund)",
-  "shot.error": "Kunne ikke tage skærmbillede"
+  "shot.error": "Kunne ikke tage skærmbillede",
+
+  "veg.enable": "Slå vegetation til",
+  "veg.dice": "Bland",
+  "veg.set": "Vegetationssæt",
+  "veg.density": "Tæthed",
+  "veg.layers": "Hvor vegetationen vokser",
+  "veg.layer1": "Øverste platform",
+  "veg.layer2": "Mellemste platform",
+  "veg.layer3": "Nederste platform",
+  "veg.empty": "Ingen planter endnu — placer teksturer i mappen vegetation/ eller tilføj dine egne"
 }
