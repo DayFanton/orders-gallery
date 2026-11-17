@@ -1221,6 +1221,20 @@
         #vegOptions { margin-top: 4px; }
         .veg-layers { display: flex; flex-direction: column; gap: 2px; }
         .veg-layers .checkbox-label { margin-bottom: 0; }
+        .veg-list { display: flex; flex-direction: column; gap: 4px; margin: 6px 0; }
+        .veg-row { display: flex; align-items: center; gap: 8px; }
+        .veg-row canvas { width: 24px; height: 24px; flex: none; image-rendering: pixelated; background: var(--bg-card); border-radius: 4px; }
+        .veg-name { overflow: hidden; text-overflow: ellipsis; }
+        .credit { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.62rem; line-height: 1.2; color: inherit; opacity: 0.55; text-decoration: none; }
+        a.credit:hover { opacity: 1; text-decoration: underline; }
+        .veg-item .credit { margin-inline-start: 62px; }
+        .block-cell { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+        .block-cell .block-btn { width: 100%; }
+        .block-cell .credit { margin-top: 2px; text-align: center; }
+        input[type=color].tint { width: 28px; height: 22px; padding: 0; flex: none; cursor: pointer; background: none; border: 1px solid #555; border-radius: 4px; }
+        #blockTintRow { margin-top: 6px; justify-content: space-between; font-size: 0.85rem; }
+        .folder-tools { display: flex; gap: 6px; align-items: center; justify-content: center; }
+        .folder-tools input[type=number] { width: 48px; padding: 1px 3px; font-size: 0.72rem; color: #ddd; background: var(--bg-card); border: 1px solid #555; border-radius: 4px; }
     </style>
 </head>
 <body class="i18n-pending">
@@ -1282,7 +1296,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.9</div>
+            <div class="site-version">v1.8.0</div>
         </div>
     </div>
 
@@ -1401,14 +1415,15 @@
                     <div class="platform-label" id="lbl_block">Блок</div>
                     <div class="block-grid" id="blockGrid"></div>
                     <div class="emote-hint" id="blockGridHint" style="display:none; margin-top:6px;">Блоков пока нет — положите текстуры в папку blocks/ или добавьте свои.</div>
+                    <div class="veg-row" id="blockTintRow" style="display:none;"><span id="lbl_blocktint">Цвет блока</span><input type="color" id="block_tint" class="tint"></div>
                     <button id="btnBlockFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои блоки</span></button>
                     <div class="veg-head">
                         <label class="checkbox-label"><input type="checkbox" id="veg_toggle"><span id="lbl_veg">Включить растительность</span></label>
                         <button id="btnVegDice" class="veg-dice" type="button" title="Перемешать">🎲</button>
                     </div>
                     <div id="vegOptions" style="display:none;">
-                        <div class="platform-label" id="lbl_vegset">Набор растительности</div>
-                        <div class="block-grid" id="vegGrid"></div>
+                        <div class="platform-label" id="lbl_vegset">Растения</div>
+                        <div class="veg-list" id="vegList"></div>
                         <div class="emote-hint" id="vegGridHint" style="display:none; margin-top:6px;">Растений пока нет — положите текстуры в папку vegetation/ или добавьте свои.</div>
                         <button id="btnVegFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои растения</span></button>
                         <div class="slider-container">
@@ -1814,7 +1829,12 @@
             "language.show_in_list": "Show language in the main list",
             "veg.enable": "Enable vegetation",
             "veg.dice": "Shuffle",
-            "veg.set": "Vegetation set",
+            "veg.plants": "Plants",
+            "veg.tint": "Plant color",
+            "block.tint": "Block color",
+            "credit.title": "Author: %s",
+            "folder.tint": "Color (white = no tint)",
+            "folder.weight": "Spawn weight",
             "veg.density": "Density",
             "veg.layers": "Where plants grow",
             "veg.layer1": "Top platform",
@@ -1823,7 +1843,7 @@
             "veg.empty": "No plants yet - put textures into the vegetation/ folder or add your own.",
             "folder.veg.open": "My plants",
             "folder.veg.title": "My plants",
-            "folder.veg.hint": "Pick a plant image (.png with transparency). A tall image (height at least 1.5 x width, e.g. 16x32) becomes a 2-block plant.",
+            "folder.veg.hint": "Pick a plant image (.png with transparency). For a 2-block plant pick two files ending in _bottom and _top. Add a .mcmeta file for animation. Color and weight are set right on the card.",
             "folder.veg.error": "Pick an image file"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
@@ -2002,7 +2022,8 @@
             ['#mobileBtnControls', 'mobile.settings'],
             ['#lbl_veg', 'veg.enable'],
             ['#btnVegDice', 'veg.dice', 'title'],
-            ['#lbl_vegset', 'veg.set'],
+            ['#lbl_vegset', 'veg.plants'],
+            ['#lbl_blocktint', 'block.tint'],
             ['#btnVegFolder .folder-lbl', 'folder.veg.open'],
             ['#vegGridHint', 'veg.empty'],
             ['#lbl_vegdens', 'veg.density'],
@@ -2592,10 +2613,12 @@
             const pl = Scene3D.state();
             if (pl.on) {
                 p.set('plat', pl.block);
+                if (pl.tint) p.set('bt', pl.tint.slice(1));
                 if (Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
                 if (pl.veg.on) {
                     p.set('veg', String(pl.veg.seed));
-                    if (pl.veg.set) p.set('vset', pl.veg.set);
+                    if (pl.veg.sel !== null) p.set('vp', pl.veg.sel);
+                    if (pl.veg.tints) p.set('vc', pl.veg.tints);
                     if (pl.veg.density !== 60) p.set('vd', String(pl.veg.density));
                     if (pl.veg.mask !== 7) p.set('vl', String(pl.veg.mask));
                 }
@@ -3765,7 +3788,7 @@
             ];
 
             const PLAIN = 'plain';          // «блок без текстуры» - только пока в blocks/ ничего нет
-            const state = { on: false, block: '', hour: CFG.defaultHour };
+            const state = { on: false, block: '', hour: CFG.defaultHour, tint: null };
             let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null, reqId = 0;
 
             /* ---------- Блоки: текстуры из папки blocks/ (blocks.json) и свои из личной папки ----------
@@ -3776,6 +3799,17 @@
             const SAFE_FILE = /^[A-Za-z0-9][A-Za-z0-9_.\- ]{0,119}$/;
             const ID_OK = /^[A-Za-z0-9_\-]{1,40}$/;
             const HEX = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
+            const hex6 = (h) => { h = String(h || '').replace('#', ''); if (h.length === 3) h = h.replace(/./g, m => m + m); return '#' + h.toLowerCase(); };
+            // Ссылка на автора под иконкой (для соблюдения лицензии): автор и url берутся из json
+            const credit = (author, url) => {
+                if (!author) return null;
+                const el = document.createElement(url ? 'a' : 'span');
+                el.className = 'credit';
+                el.textContent = '© ' + author;
+                el.title = t('credit.title', author);
+                if (url) { el.href = url; el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+                return el;
+            };
             const prettify = (id) => String(id).replace(/[_\-]+/g, ' ').trim();
             const blockTitle = (id) => (id === PLAIN ? t('block.plain') : MC.strip(nameFor('block.' + id, prettify(id))));
 
@@ -3798,7 +3832,7 @@
                     const spec = {};
                     ['all', 'top', 'side', 'bottom'].forEach(k => { if (e[k]) { const l = layersOf(e[k]); if (l.length) spec[k] = l; } });
                     if (!Object.keys(spec).length) spec.all = layersOf(e.id + '.png');
-                    return { id: e.id, spec };
+                    return { id: e.id, spec, author: typeof e.author === 'string' ? e.author.slice(0, 60) : '', url: /^https?:\/\//i.test(e.url || '') ? e.url : '' };
                 }
 
                 function load() {
@@ -3876,7 +3910,7 @@
                     return { top: cv, side: cv, bottom: cv };
                 }
 
-                async function userFaces(n) {
+                async function userFaces(n, ov) {
                     const rec = await UserLib.get('block', n);
                     if (!rec || !rec.faces) return plainFaces();
                     const urls = [], spec = {};
@@ -3884,31 +3918,32 @@
                         for (const k of Object.keys(rec.faces)) {
                             const u = URL.createObjectURL(rec.faces[k]);
                             urls.push(u);
-                            spec[k] = [{ src: u, tint: null }];
+                            spec[k] = [{ src: u, tint: ov || rec.tint || null }];
                         }
                         return await composeSpec(spec);
                     } finally { urls.forEach(u => URL.revokeObjectURL(u)); }
                 }
 
-                function get(id) {
-                    if (cache.has(id)) return cache.get(id);
+                function get(id, tint) {
+                    const ck = id + '|' + (tint || '');
+                    if (cache.has(ck)) return cache.get(ck);
                     const p = (async () => {
                         try {
                             if (id === PLAIN) return plainFaces();
                             const um = /^u-(\d+)$/.exec(id);
-                            if (um) return await userFaces(Number(um[1]));
+                            if (um) return await userFaces(Number(um[1]), tint);
                             await load();
                             const b = manifest.find(x => x.id === id);
                             if (!b) return plainFaces();
                             const spec = {};
-                            for (const k of Object.keys(b.spec)) spec[k] = b.spec[k].map(l => ({ src: 'blocks/' + encodeURIComponent(l.file), tint: l.tint }));
+                            for (const k of Object.keys(b.spec)) spec[k] = b.spec[k].map(l => ({ src: 'blocks/' + encodeURIComponent(l.file), tint: l.tint && tint ? tint : l.tint }));
                             return await composeSpec(spec);
                         } catch (e) {
                             console.warn('[block]', id, e);
                             return plainFaces();
                         }
                     })();
-                    cache.set(id, p);
+                    cache.set(ck, p);
                     return p;
                 }
 
@@ -3923,7 +3958,18 @@
                 return {
                     load, get, exists, composeSpec,
                     defaultId: () => (manifest && manifest.length ? manifest[0].id : PLAIN),
-                    forgetUser: (n) => cache.delete('u-' + n)
+                    forgetUser: (n) => { for (const k of [...cache.keys()]) if (k.startsWith('u-' + n + '|')) cache.delete(k); },
+                    infoOf: (id) => { const b = manifest && manifest.find(x => x.id === id); return b ? { author: b.author, url: b.url } : {}; },
+                    // Исходный оттенок блока (у травы - цвет биома) или null, если менять нечего
+                    tintOf: async (id) => {
+                        const um = /^u-(\d+)$/.exec(id);
+                        if (um) { const r = await UserLib.get('block', Number(um[1])); return (r && r.tint) || null; }
+                        await load();
+                        const b = manifest.find(x => x.id === id);
+                        if (!b) return null;
+                        for (const k of Object.keys(b.spec)) { const l = b.spec[k].find(x => x.tint); if (l) return l.tint; }
+                        return null;
+                    }
                 };
             })();
 
@@ -4173,66 +4219,124 @@
             }
 
 
-            /* ---------- Растительность (1.7.9) ----------
-               Растения - крест из двух прозрачных плоскостей (как в Minecraft) на верхних гранях блоков холмика; под персонажем и внутри блоков не ставятся.
-               Расклад целиком определяется числом-зерном: veg=<зерно> в ссылке. Остальное в ссылке: vset=<набор>, vd=<плотность 0-100>, vl=<маска ярусов 1-7>.
-               Наборы лежат в vegetation/vegetation.json:
-                 [ { "id": "meadow", "plants": [ "grass", { "file": "tall_grass.png", "height": 2, "weight": 3, "tint": "#91bd59" } ] } ]
-               grass = vegetation/grass.png; height - высота в блоках (1 или 2; не указана - 2, если картинка выше ширины минимум в 1,5 раза);
-               weight - как часто выпадает (по умолчанию 1); tint - окраска серой текстуры. Свои растения игроков - набор «mine» (личная папка, вид 'plant'). */
-            const veg = { on: false, seed: 0, set: '', density: 60, layers: [true, true, true] };
-            let vegMesh = null, vegReq = 0, vegTimer = 0;
-            const vegTitle = (id) => (id === 'mine' ? t('folder.veg.open') : MC.strip(nameFor('veg.name.' + id, prettify(id))));
+            /* ---------- Растительность (1.8.0) ----------
+               Растения - крест из двух прозрачных плоскостей (как в Minecraft) на верхних гранях блоков холмика; под персонажем не ставятся.
+               Расклад определяется зерном veg=<зерно>. В ссылке: vp=<список включённых растений> (пишется, только если отличается от json),
+               vc=<id:цвет,...> - свои цвета, vd=<плотность 0-100>, vl=<маска ярусов 1-7>, bt=<цвет блока>.
+               vegetation/vegetation.json - плоский список растений (старые наборы { "id", "plants": [...] } тоже читаются, но склеиваются в один список):
+                 "grass" | { "file": "x.png", "id": "...", "height": 1|2, "weight": 3, "tint": "#91bd59", "enabled": true,
+                             "author": "Имя", "url": "https://...", "animation": { "frametime": 2 } }
+                 Высокое растение из двух текстур: { "id": "tall_grass", "bottom": "tall_grass_bottom.png", "top": "tall_grass_top.png" }
+                 Анимация (лента кадров) - файл x.png.mcmeta рядом с картинкой (читается и x_png.mcmeta) или поле animation.
+                 enabled: false - галочка по умолчанию снята. Свои растения игрока (вид 'plant') показываются в том же списке (id u-N). */
+            const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {} };   // sel: Set включённых id или null (= как в json)
+            let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [];
+            const vegTitle = (id) => MC.strip(nameFor('veg.name.' + id, prettify(id)));
             const randSeed = () => 1 + Math.floor(Math.random() * 999999);
+            const tintOfEntry = (e) => e.tint || (e.parts.find(p => p.tint) || {}).tint || null;
 
             const Veg = (() => {
                 let manifest = null, loading = null;
-                const cache = new Map();
+                const imgs = new Map();
+                const loadImg = (src) => {
+                    if (!imgs.has(src)) imgs.set(src, new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => no(new Error('cannot load ' + src)); i.src = src; }));
+                    return imgs.get(src);
+                };
+                const imgOf = (p) => (p.blob ? probeImage(p.blob) : loadImg(p.src));
+                const fix = (v) => {
+                    const o = typeof v === 'string' ? { file: v } : v;
+                    if (!o || typeof o.file !== 'string') return null;
+                    const file = /\.[A-Za-z0-9]+$/.test(o.file) ? o.file : o.file + '.png';
+                    return SAFE_FILE.test(file) ? { src: 'vegetation/' + encodeURIComponent(file), file, tint: HEX.test(o.tint || '') ? o.tint : null } : null;
+                };
+                function norm(x, seen, out) {
+                    if (!x || (typeof x !== 'string' && typeof x !== 'object')) return;
+                    if (Array.isArray(x.plants)) { x.plants.forEach(y => norm(y, seen, out)); return; }
+                    const o = typeof x === 'string' ? { file: x } : x;
+                    const bot = o.bottom && fix(o.bottom), top = o.top && fix(o.top), one = o.file && fix(o);
+                    const parts = bot && top ? [bot, top] : [one || bot || top].filter(Boolean);
+                    if (!parts.length) return;
+                    const id = typeof o.id === 'string' && ID_OK.test(o.id) ? o.id
+                        : parts[0].file.replace(/\.[A-Za-z0-9]+$/, '').replace(/_(bottom|top)$/i, '').replace(/[^A-Za-z0-9_\-]/g, '_').slice(0, 40);
+                    if (seen.has(id)) return;
+                    seen.add(id);
+                    out.push({
+                        id, parts, tint: HEX.test(o.tint || '') ? o.tint : null,
+                        height: o.height === 1 ? 1 : (o.height === 2 ? 2 : 0), weight: o.weight > 0 ? Math.min(100, +o.weight) : 1,
+                        on: o.enabled !== false, anim: o.animation && typeof o.animation === 'object' ? o.animation : null,
+                        author: typeof o.author === 'string' ? o.author.slice(0, 60) : '', url: /^https?:\/\//i.test(o.url || '') ? o.url : ''
+                    });
+                }
                 function load() {
                     if (!loading) loading = (async () => {
                         let raw = [];
-                        try { const r = await fetch('vegetation/vegetation.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет наборов */ }
-                        manifest = (Array.isArray(raw) ? raw : []).map(st => {
-                            if (!st || typeof st.id !== 'string' || !ID_OK.test(st.id) || !Array.isArray(st.plants)) return null;
-                            const plants = st.plants.map(x => (typeof x === 'string' ? { file: /\.[A-Za-z0-9]+$/.test(x) ? x : x + '.png' } : x))
-                                .filter(x => x && typeof x.file === 'string' && SAFE_FILE.test(x.file))
-                                .map(x => ({ file: x.file, tint: HEX.test(x.tint || '') ? x.tint : null, height: x.height === 1 ? 1 : (x.height === 2 ? 2 : 0), weight: x.weight > 0 ? Math.min(100, +x.weight) : 1 }));
-                            return plants.length ? { id: st.id, plants } : null;
-                        }).filter(Boolean);
+                        try { const r = await fetch('vegetation/vegetation.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет растений */ }
+                        manifest = [];
+                        const seen = new Set();
+                        (Array.isArray(raw) ? raw : []).forEach(x => norm(x, seen, manifest));
                         return manifest;
                     })();
                     return loading;
                 }
-                const canvasOf = async (src, tint) => (await Blocks.composeSpec({ all: [{ src, tint }] })).top;
-                const heightOf = (cv, h) => h || (cv.height >= cv.width * 1.5 ? 2 : 1);
-                function plantsOf(id) {
-                    if (id !== 'mine' && cache.has(id)) return cache.get(id);
-                    const p = (async () => {
-                        const out = [];
-                        if (id === 'mine') {
-                            for (const rec of await UserLib.list('plant')) {
-                                if (!rec.image) continue;
-                                const u = URL.createObjectURL(rec.image);
-                                try { const cv = await canvasOf(u, null); out.push({ canvas: cv, height: heightOf(cv, 0), weight: 1 }); }
-                                catch (e) { console.warn('[veg]', e); } finally { URL.revokeObjectURL(u); }
-                            }
-                        } else {
-                            await load();
-                            const st = manifest.find(x => x.id === id);
-                            for (const pl of (st ? st.plants : [])) {
-                                try { const cv = await canvasOf('vegetation/' + encodeURIComponent(pl.file), pl.tint); out.push({ canvas: cv, height: heightOf(cv, pl.height), weight: pl.weight }); }
-                                catch (e) { console.warn('[veg]', pl.file, e); }
-                            }
-                        }
-                        return out;
-                    })();
-                    if (id !== 'mine') cache.set(id, p);       // свои растения не кэшируем - список меняется
-                    return p;
+                async function users() {
+                    let list = [];
+                    try { list = await UserLib.list('plant'); } catch (e) { /* личной папки нет */ }
+                    return list.map(rec => ({
+                        id: 'u-' + rec.id, user: true, name: rec.name, on: true,
+                        parts: (rec.bottom && rec.top ? [rec.bottom, rec.top] : [rec.image]).filter(Boolean).map(b => ({ blob: b, tint: null })),
+                        tint: HEX.test(rec.tint || '') ? rec.tint : null, weight: rec.weight > 0 ? Math.min(100, +rec.weight) : 1,
+                        height: 0, anim: rec.anim || null, author: '', url: ''
+                    })).filter(e => e.parts.length);
                 }
-                const mineCount = async () => { try { return (await UserLib.list('plant')).length; } catch (e) { return 0; } };
-                async function exists(id) { if (!id) return false; if (id === 'mine') return (await mineCount()) > 0; await load(); return manifest.some(x => x.id === id); }
-                async function defaultSet() { await load(); return manifest.length ? manifest[0].id : ((await mineCount()) ? 'mine' : ''); }
-                return { load, plantsOf, exists, defaultSet };
+                const entries = async () => [...(await load()), ...(await users())];
+
+                async function mcmeta(src) {
+                    for (const u of [src + '.mcmeta', src.replace(/\.[A-Za-z0-9]+$/, '_png') + '.mcmeta']) {
+                        try { const r = await fetch(u); if (r.ok) { const j = await r.json(); if (j && typeof j.animation === 'object') return j.animation; } } catch (e) { /* файла нет */ }
+                    }
+                    return null;
+                }
+                function paint(im, sy, w, h, tint) {      // кусок картинки -> канвас; tint умножается на цвет, прозрачность сохраняется
+                    const cv = document.createElement('canvas');
+                    cv.width = w; cv.height = h;
+                    const c = cv.getContext('2d');
+                    c.imageSmoothingEnabled = false;
+                    c.drawImage(im, 0, sy, w, h, 0, 0, w, h);
+                    if (tint) {
+                        c.globalCompositeOperation = 'multiply';
+                        c.fillStyle = tint;
+                        c.fillRect(0, 0, w, h);
+                        c.globalCompositeOperation = 'destination-in';
+                        c.drawImage(im, 0, sy, w, h, 0, 0, w, h);
+                    }
+                    return cv;
+                }
+                // -> { frames: [канвас], times: [мс] }. Две текстуры (bottom + top) склеиваются в одну высотой в 2 блока; лента анимации режется на кадры
+                async function textures(e, ov) {
+                    const ims = await Promise.all(e.parts.map(imgOf));
+                    const tn = (i) => (ov && tintOfEntry(e) ? ov : null) || e.parts[i].tint || e.tint || null;
+                    if (ims.length === 2) {
+                        const [b, tp] = ims, cv = document.createElement('canvas');
+                        cv.width = Math.max(b.naturalWidth, tp.naturalWidth);
+                        cv.height = b.naturalHeight + tp.naturalHeight;
+                        const c = cv.getContext('2d');
+                        c.imageSmoothingEnabled = false;
+                        c.drawImage(paint(tp, 0, tp.naturalWidth, tp.naturalHeight, tn(1)), 0, 0);
+                        c.drawImage(paint(b, 0, b.naturalWidth, b.naturalHeight, tn(0)), 0, tp.naturalHeight);
+                        return { frames: [cv], times: [0] };
+                    }
+                    const im = ims[0], w = im.naturalWidth, h = im.naturalHeight;
+                    let a = e.anim;
+                    if (!a && e.parts[0].src && h > w && h % w === 0) a = await mcmeta(e.parts[0].src);    // высокая картинка: растение в 2 блока или лента анимации
+                    if (!a || h < w) return { frames: [paint(im, 0, w, h, tn(0))], times: [0] };
+                    const fh = a.height > 0 ? a.height : w, n = Math.max(1, Math.floor(h / fh)), ft = a.frametime > 0 ? a.frametime : 1;
+                    const seq = (Array.isArray(a.frames) && a.frames.length ? a.frames.map(f => (typeof f === 'number' ? { i: f, t: ft } : { i: f.index, t: f.time || ft })) : [...Array(n).keys()].map(i => ({ i, t: ft })))
+                        .filter(o => o.i >= 0 && o.i < n);
+                    if (!seq.length) seq.push({ i: 0, t: ft });
+                    const memo = new Map();
+                    return { frames: seq.map(o => { if (!memo.has(o.i)) memo.set(o.i, paint(im, o.i * fh, w, fh, tn(0))); return memo.get(o.i); }), times: seq.map(o => o.t * 50) };
+                }
+                return { load, entries, textures };
             })();
 
             function rngOf(seed) {      // mulberry32: одно зерно - одна и та же последовательность
@@ -4270,6 +4374,7 @@
             }
 
             function disposeVeg() {
+                clearInterval(vegAnim);
                 if (!vegMesh) return;
                 if (vegMesh.parent) vegMesh.parent.remove(vegMesh);
                 if (vegMesh.geometry && vegMesh.geometry.dispose) vegMesh.geometry.dispose();
@@ -4277,16 +4382,21 @@
                 vegMesh = null;
             }
 
+            const vegIsOn = (e) => (veg.sel ? veg.sel.has(e.id) : e.on !== false);
+
             async function buildVeg() {
                 const my = ++vegReq;
                 disposeVeg();
                 if (!veg.on || !state.on || !kit) return;
                 try {
-                    if (!(await Veg.exists(veg.set))) { veg.set = await Veg.defaultSet(); syncUrlStateSoon(); }
-                    const plants = veg.set ? await Veg.plantsOf(veg.set) : [];
-                    if (my !== vegReq || !veg.on || !state.on) return;
-                    vegUi();
-                    if (!plants.length) return;
+                    const list = (await Veg.entries()).filter(vegIsOn);
+                    const plants = (await Promise.all(list.map(async e => {
+                        try {
+                            const tx = await Veg.textures(e, veg.tint[e.id]), cv = tx.frames[0];
+                            return { canvas: cv, frames: tx.frames, times: tx.times, weight: e.weight, height: e.height || (cv.height >= cv.width * 1.5 ? 2 : 1) };
+                        } catch (err) { console.warn('[veg]', e.id, err); return null; }
+                    }))).filter(Boolean);
+                    if (my !== vegReq || !veg.on || !state.on || !plants.length) return;
                     const a = vegArrays(plants, measureFeetY());
                     if (!a.index.length) return;
                     const g = new kit.Geometry();
@@ -4302,6 +4412,19 @@
                     vegMesh.castShadow = false;
                     vegMesh.receiveShadow = true;
                     skinViewer.scene.add(vegMesh);
+                    // анимированные растения: раз в 40 мс подменяем кадр текстуры
+                    const anims = plants.map((p, i) => (p.frames.length > 1 ? { tx: mats[i].map, p, cur: 0, total: p.times.reduce((s, x) => s + x, 0) || 1 } : null)).filter(Boolean);
+                    if (anims.length) {
+                        const t0 = performance.now();
+                        vegAnim = setInterval(() => {
+                            const now = performance.now() - t0;
+                            anims.forEach(an => {
+                                let m = now % an.total, i = 0;
+                                while (i < an.p.times.length - 1 && m >= an.p.times[i]) { m -= an.p.times[i]; i++; }
+                                if (i !== an.cur) { an.cur = i; an.tx.image = an.p.frames[i]; an.tx.needsUpdate = true; }
+                            });
+                        }, 40);
+                    }
                     markMaterialsDirty();
                     refreshCasters();
                 } catch (e) { console.warn('[veg]', e); }
@@ -4316,8 +4439,7 @@
                 $('veg_dens').value = veg.density;
                 $('veg_dens_val').textContent = veg.density + '%';
                 document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; });
-                document.querySelectorAll('#vegGrid .block-btn').forEach(b => b.classList.toggle('active', b.dataset.vset === veg.set));
-                $('btnVegFolder').classList.toggle('active', veg.set === 'mine');
+                document.querySelectorAll('#vegList input[data-vid]').forEach(c => { c.checked = vegIsOn({ id: c.dataset.vid, on: c.dataset.def === '1' }); });
             }
 
             function vegChanged(soon) {
@@ -4327,25 +4449,94 @@
                 if (soon) syncUrlStateSoon(); else syncUrlState();
             }
 
-            async function buildVegGrid() {
-                const list = await Veg.load();
-                const grid = $('vegGrid');
-                grid.innerHTML = '';
-                $('vegGridHint').style.display = list.length ? 'none' : 'block';
-                list.forEach(st => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = 'block-btn';
-                    btn.dataset.vset = st.id;
-                    btn.title = vegTitle(st.id);
-                    const cv = document.createElement('canvas');
-                    cv.width = cv.height = 16;
-                    btn.appendChild(cv);
-                    Veg.plantsOf(st.id).then(ps => { if (ps[0]) { const c = cv.getContext('2d'); c.imageSmoothingEnabled = false; c.drawImage(ps[0].canvas, 0, 0, 16, 16); } });
-                    btn.onclick = () => { veg.set = st.id; vegChanged(false); };
-                    grid.appendChild(btn);
+            // Галочка растения. Если набор совпал с заданным в json - в ссылку ничего не пишем
+            function vegToggle(id, on) {
+                const def = new Set(vegEntries.filter(e => e.on !== false).map(e => e.id)), cur = new Set(veg.sel || def);
+                if (on) cur.add(id); else cur.delete(id);
+                veg.sel = (cur.size === def.size && [...cur].every(x => def.has(x))) ? null : cur;
+                vegChanged(false);
+            }
+
+            // Весь список растений галочками: из vegetation.json + свои из папки
+            async function buildVegList() {
+                vegEntries = await Veg.entries();
+                const box = $('vegList');
+                box.innerHTML = '';
+                $('vegGridHint').style.display = vegEntries.length ? 'none' : 'block';
+                vegEntries.forEach(e => {
+                    const item = document.createElement('div'), row = document.createElement('div'), lab = document.createElement('label');
+                    item.className = 'veg-item';
+                    row.className = 'veg-row';
+                    lab.className = 'checkbox-label';
+                    lab.style.cssText = 'flex:1;min-width:0;margin-bottom:0';
+                    const cb = document.createElement('input'), cv = document.createElement('canvas'), nm = document.createElement('span');
+                    cb.type = 'checkbox';
+                    cb.dataset.vid = e.id;
+                    cb.dataset.def = e.on !== false ? '1' : '0';
+                    cb.onchange = () => vegToggle(e.id, cb.checked);
+                    cv.width = cv.height = 24;
+                    nm.className = 'veg-name';
+                    nm.textContent = e.user ? e.name : vegTitle(e.id);
+                    lab.append(cb, cv, nm);
+                    row.appendChild(lab);
+                    const icon = () => Veg.textures(e, veg.tint[e.id]).then(tx => {
+                        const f = tx.frames[0], s = 24 / Math.max(f.width, f.height), c = cv.getContext('2d');
+                        c.clearRect(0, 0, 24, 24);
+                        c.imageSmoothingEnabled = false;
+                        c.drawImage(f, (24 - f.width * s) / 2, 24 - f.height * s, f.width * s, f.height * s);
+                    }).catch(() => { });
+                    icon();
+                    const base = tintOfEntry(e);
+                    if (base) {
+                        const ci = document.createElement('input');
+                        ci.type = 'color';
+                        ci.className = 'tint';
+                        ci.title = t('veg.tint');
+                        ci.value = hex6(veg.tint[e.id] || base);
+                        ci.oninput = () => { veg.tint[e.id] = ci.value; icon(); vegChanged(true); };
+                        row.appendChild(ci);
+                    }
+                    item.appendChild(row);
+                    const cr = credit(e.author, e.url);
+                    if (cr) item.appendChild(cr);
+                    box.appendChild(item);
                 });
                 vegUi();
+            }
+
+            // Цвет блока (у травы - цвет биома), если у него есть оттенок
+            async function tintUi() {
+                const d = await Blocks.tintOf(state.block), row = $('blockTintRow');
+                row.style.display = d ? '' : 'none';
+                if (d) $('block_tint').value = hex6(state.tint || d);
+            }
+
+            // Цвет (и вес для растений) прямо на карточке в окне «моя папка»; белый цвет = без оттенка
+            function folderTools(kind, rec, withWeight, after) {
+                const row = document.createElement('div');
+                row.className = 'folder-tools';
+                const save = async (patch) => { Object.assign(rec, patch); try { await UserLib.put(kind, rec); } catch (err) { console.error('[folder]', err); } after(); };
+                const stop = (i) => ['pointerdown', 'click'].forEach(ev => i.addEventListener(ev, (e) => e.stopPropagation()));
+                const ci = document.createElement('input');
+                ci.type = 'color';
+                ci.className = 'tint';
+                ci.value = hex6(rec.tint || '#ffffff');
+                ci.title = t('folder.tint');
+                ci.onchange = () => save({ tint: ci.value === '#ffffff' ? null : ci.value });
+                stop(ci);
+                row.appendChild(ci);
+                if (withWeight) {
+                    const wi = document.createElement('input');
+                    wi.type = 'number';
+                    wi.min = 1;
+                    wi.max = 100;
+                    wi.value = rec.weight || 1;
+                    wi.title = t('folder.weight');
+                    wi.onchange = () => { wi.value = Math.min(100, Math.max(1, Math.round(+wi.value) || 1)); save({ weight: +wi.value }); };
+                    stop(wi);
+                    row.appendChild(wi);
+                }
+                return row;
             }
 
             function setUi(on) {
@@ -4361,7 +4552,7 @@
                         kit = getKit();
                         await Blocks.load();
                         if (!state.block || !(await Blocks.exists(state.block))) state.block = Blocks.defaultId();
-                        const faces = await Blocks.get(state.block);
+                        const faces = await Blocks.get(state.block, state.tint);
                         if (my !== reqId) return;                    // пока грузились текстуры, пользователь передумал
                         const first = !state.on;
                         if (first) {
@@ -4397,13 +4588,16 @@
                 }
                 if (my !== reqId) return;
                 setUi(state.on);
+                tintUi();
                 syncGridActive();
                 if (sync) syncUrlState();
             }
 
             async function setBlock(id, sync = true) {
                 if (!(await Blocks.exists(id))) return;
+                if (id !== state.block) state.tint = null;
                 state.block = id;
+                tintUi();
                 syncGridActive();
                 if (state.on) await setEnabled(true, { sync: false, animate: false });
                 if (sync) syncUrlState();
@@ -4436,7 +4630,12 @@
                 const mask = q.get('vl') === null ? 7 : (parseInt(q.get('vl'), 10) & 7);
                 veg.on = !!id && isFinite(seed) && seed > 0;
                 if (veg.on) veg.seed = seed;
-                veg.set = q.get('vset') || veg.set;
+                const vp = q.get('vp'), bt = q.get('bt');
+                veg.sel = vp === null ? null : new Set(vp.split(',').filter(s => ID_OK.test(s)));
+                veg.tint = {};
+                (q.get('vc') || '').split(',').forEach(s => { const m = /^([A-Za-z0-9_\-]{1,40}):([0-9a-f]{6})$/i.exec(s); if (m) veg.tint[m[1]] = '#' + m[2]; });
+                state.tint = /^[0-9a-f]{6}$/i.test(bt || '') ? '#' + bt : null;
+                tintUi();
                 veg.density = isFinite(dn) ? Math.min(100, Math.max(0, dn)) : 60;
                 veg.layers = [!!(mask & 1), !!(mask & 2), !!(mask & 4)];
                 vegUi();
@@ -4473,13 +4672,19 @@
                     btn.appendChild(cv);
                     Blocks.get(b.id).then(f => paintSwatch(cv, f));
                     btn.onclick = () => setBlock(b.id);
-                    grid.appendChild(btn);
+                    const cell = document.createElement('div');
+                    cell.className = 'block-cell';
+                    cell.appendChild(btn);
+                    const cr = credit(b.author, b.url);
+                    if (cr) cell.appendChild(cr);
+                    grid.appendChild(cell);
                 });
                 syncGridActive();
             }
 
             function refreshUi() {
                 document.querySelectorAll('#blockGrid .block-btn').forEach(b => { b.title = blockTitle(b.dataset.block); });
+                buildVegList();
             }
 
             function resetCamera() { if (state.on) moveCamera(CFG.view, false); }
@@ -4489,27 +4694,49 @@
                 $('platform_toggle').onchange = (e) => setEnabled(e.target.checked);
                 $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
                 $('btnBlockFolder').onclick = () => Folder.open('block');
+                let tintTimer = 0;
+                $('block_tint').oninput = (e) => {
+                    state.tint = e.target.value;
+                    clearTimeout(tintTimer);
+                    tintTimer = setTimeout(() => { if (state.on) setEnabled(true, { sync: false, animate: false }); }, 60);
+                    syncUrlStateSoon();
+                };
 
                 $('veg_toggle').onchange = (e) => { veg.on = e.target.checked; if (veg.on && !veg.seed) veg.seed = randSeed(); vegChanged(false); };
                 $('btnVegDice').onclick = () => { veg.seed = randSeed(); vegChanged(false); };
                 $('veg_dens').oninput = (e) => { veg.density = +e.target.value; vegChanged(true); };
                 document.querySelectorAll('.veg-layer').forEach(c => { c.onchange = () => { veg.layers[+c.dataset.layer] = c.checked; vegChanged(false); }; });
                 $('btnVegFolder').onclick = () => Folder.open('plant');
-                // Своё растение: одна картинка (.png с прозрачностью). Высота картинки минимум в 1,5 раза больше ширины - растение в 2 блока
+                // Своё растение: одна картинка или две (..._bottom и ..._top для растения в 2 блока) + по желанию .mcmeta с анимацией
                 Folder.register('plant', {
-                    title: 'folder.veg.title', hint: 'folder.veg.hint', accept: 'image/*', multiple: false, thumbClass: 'folder-thumb-pixel', placeholder: '🌿',
+                    title: 'folder.veg.title', hint: 'folder.veg.hint', accept: 'image/*,.mcmeta', multiple: true, thumbClass: 'folder-thumb-pixel', placeholder: '🌿',
                     async build(files) {
-                        const f = files[0];
-                        if (!f || !/^image\//.test(f.type)) throw new FolderError('folder.veg.error');
-                        try { await probeImage(f); } catch (e) { throw new FolderError('folder.veg.error'); }
-                        return { name: (f.name.replace(/\.[^.]+$/, '') || 'plant').slice(0, 60), image: f };
+                        const meta = files.find(f => /\.mcmeta$/i.test(f.name)), pics = files.filter(f => f !== meta);
+                        if (!pics.length || pics.length > 2 || pics.some(f => !/^image\//.test(f.type))) throw new FolderError('folder.veg.error');
+                        for (const f of pics) { try { await probeImage(f); } catch (e) { throw new FolderError('folder.veg.error'); } }
+                        const rec = { tint: null, weight: 1 };
+                        if (pics.length === 2) {
+                            const ms = pics.map(f => /^(.*?)[_\-. ]?(top|bottom)$/i.exec(f.name.replace(/\.[^.]+$/, '')));
+                            const bi = ms.findIndex(m => m && m[2].toLowerCase() === 'bottom'), ti = ms.findIndex(m => m && m[2].toLowerCase() === 'top');
+                            if (bi < 0 || ti < 0) throw new FolderError('folder.veg.error');
+                            rec.bottom = pics[bi];
+                            rec.top = pics[ti];
+                            rec.name = ms[bi][1] || 'plant';
+                        } else {
+                            rec.image = pics[0];
+                            rec.name = pics[0].name.replace(/\.[^.]+$/, '') || 'plant';
+                        }
+                        rec.name = rec.name.slice(0, 60);
+                        if (meta) { try { const j = JSON.parse(await meta.text()); if (j && typeof j.animation === 'object') rec.anim = j.animation; } catch (e) { /* без анимации */ } }
+                        return rec;
                     },
-                    thumb: (rec, track) => (rec.image ? track(rec.image) : null),
-                    isActive: () => veg.set === 'mine',
-                    pick: () => { veg.set = 'mine'; vegChanged(false); },
-                    onRemove: () => { if (veg.set === 'mine') vegChanged(false); }
+                    thumb: (rec, track) => { const f = rec.image || rec.bottom || rec.top; return f ? track(f) : null; },
+                    isActive: (rec) => vegIsOn({ id: 'u-' + rec.id, on: true }),
+                    pick: async (rec) => { await buildVegList(); if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false); },
+                    onRemove: () => { buildVegList().then(() => vegChanged(false)); },
+                    decorate: (el, rec) => el.append(folderTools('plant', rec, true, () => { buildVegList().then(() => vegChanged(false)); }))
                 });
-                buildVegGrid();
+                buildVegList();
 
                 // Свой блок: один файл на все грани или до трёх файлов с окончаниями _top / _side / _bottom
                 Folder.register('block', {
@@ -4539,7 +4766,8 @@
                     thumb: (rec, track) => { const f = rec.faces.side || rec.faces.all || rec.faces.top || rec.faces.bottom; return f ? track(f) : null; },
                     isActive: (rec) => state.block === 'u-' + rec.id,
                     pick: (rec) => setBlock('u-' + rec.id),
-                    onRemove: (rec) => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(Blocks.defaultId()); }
+                    onRemove: (rec) => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(Blocks.defaultId()); },
+                    decorate: (el, rec) => el.append(folderTools('block', rec, false, () => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(state.block); }))
                 });
                 buildBlockGrid();
             }
@@ -4547,7 +4775,7 @@
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
-                state: () => ({ on: state.on, block: state.block, hour: state.hour, veg: { on: veg.on, seed: veg.seed, set: veg.set, density: veg.density, mask: vegMask() } }),
+                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
