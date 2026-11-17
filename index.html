@@ -1218,6 +1218,16 @@
         .veg-dice { display: none; flex: 0 0 auto; width: 34px; height: 30px; padding: 0; font-size: 1rem; line-height: 1; cursor: pointer;
             color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
         .veg-dice:hover { border-color: var(--accent); background: var(--bg-hover); }
+        /* ================= Версия 1.8.3 ================= */
+        /* Сброс и шаблоны растительности */
+        .veg-actions { display: flex; gap: 8px; margin-top: 12px; }
+        .veg-act-btn { flex: 1 1 0; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 8px; font-size: 0.78rem; font-weight: 600; line-height: 1.2;
+            text-align: center; cursor: pointer; color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
+        .veg-act-btn:hover { border-color: var(--accent); background: var(--bg-hover); }
+        .veg-act-ico { flex: none; }
+        .veg-act-lbl { min-width: 0; overflow-wrap: anywhere; }
+        .folder-card.folder-tpl { border-style: dashed; }
+        .folder-card.folder-tpl .folder-thumb-empty { font-size: 2.4rem; }
         #vegOptions { margin-top: 4px; }
         .veg-layers { display: flex; flex-direction: column; gap: 2px; }
         .veg-layers .checkbox-label { margin-bottom: 0; }
@@ -1310,7 +1320,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.2</div>
+            <div class="site-version">v1.8.3</div>
         </div>
     </div>
 
@@ -1462,6 +1472,10 @@
                             <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="0" checked><span id="lbl_vl0">Верхняя платформа</span></label>
                             <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="1" checked><span id="lbl_vl1">Средняя платформа</span></label>
                             <label class="checkbox-label"><input type="checkbox" class="veg-layer" data-layer="2" checked><span id="lbl_vl2">Нижняя платформа</span></label>
+                        </div>
+                        <div class="veg-actions">
+                            <button id="btnVegReset" class="veg-act-btn" type="button" title="Вернуть настройки растительности по умолчанию"><span class="veg-act-ico">↺</span><span class="veg-act-lbl">Сбросить</span></button>
+                            <button id="btnVegSaveTpl" class="veg-act-btn" type="button" title="Сохранить настройки растительности как шаблон в «Мои растения»"><span class="veg-act-ico">💾</span><span class="veg-act-lbl">Сохранить шаблон</span></button>
                         </div>
                     </div>
                 </div>
@@ -1703,7 +1717,7 @@
 
         /* ---------- Локализация (файлы в папке lang/) ---------- */
         const BG_KEYS = ['bg.dark', 'bg.light', 'bg.purple', 'bg.red', 'bg.pink', 'bg.yellow', 'bg.blue'];
-        let i18nLangs = [];   // [{ code, data, name, flag, codes }]
+        let i18nLangs = [];   // [{ code, data, name, flag, codes, search, rtl }]; data = null, пока файл языка не загружен (1.8.3)
         let i18nDict = {};    // выбранный язык
         let i18nBase = {};    // английский - запасной
         let currentLang = 'en';
@@ -1873,8 +1887,16 @@
             "veg.empty": "No plants yet - put textures into the vegetation/ folder or add your own.",
             "folder.veg.open": "My plants",
             "folder.veg.title": "My plants",
-            "folder.veg.hint": "Pick a plant image (.png with transparency). For a 2-block plant pick two files ending in _bottom and _top. Add a .mcmeta file for animation. Color, weight and size (the ⇕ button) are set right on the card.",
-            "folder.veg.error": "Pick an image file"
+            "folder.veg.hint": "Pick a plant image (.png with transparency). For a 2-block plant pick two files ending in _bottom and _top. Add a .mcmeta file for animation. Color, weight and size (the ⇕ button) are set right on the card. Templates saved with the \"Save template\" button appear here too: click one to apply it.",
+            "folder.veg.error": "Pick an image file",
+            "veg.reset": "Reset",
+            "veg.reset.title": "Restore the default vegetation settings (your own plants are kept, but unchecked)",
+            "veg.tpl.save": "Save template",
+            "veg.tpl.title": "Save the vegetation settings as a template in \"My plants\"",
+            "veg.tpl.prompt": "Template name:",
+            "veg.tpl.default": "Template %s",
+            "veg.tpl.saved": "Saved",
+            "veg.tpl.card": "Vegetation template - click to apply"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2057,6 +2079,10 @@
             ['#lbl_light', 'light.enable'],
             ['#btnVegFolder .folder-lbl', 'folder.veg.open'],
             ['#vegGridHint', 'veg.empty'],
+            ['#btnVegReset .veg-act-lbl', 'veg.reset'],
+            ['#btnVegReset', 'veg.reset.title', 'title'],
+            ['#btnVegSaveTpl .veg-act-lbl', 'veg.tpl.save'],
+            ['#btnVegSaveTpl', 'veg.tpl.title', 'title'],
             ['#lbl_vegdens', 'veg.density'],
             ['#lbl_veglayers', 'veg.layers'],
             ['#lbl_vl0', 'veg.layer1'],
@@ -2086,13 +2112,73 @@
             el.appendChild(document.createTextNode(text));
         }
 
+        // cache: 'no-cache' - файл всегда актуальный, но если он не менялся, сервер отвечает 304 без тела (раньше '?v=случайное число' качало всё заново)
         async function fetchJson(url) {
             try {
-                const r = await fetch(url + '?v=' + Math.random());
+                const r = await fetch(url, { cache: 'no-cache' });
                 return r.ok ? await r.json() : null;
             } catch (e) {
                 return null;
             }
+        }
+
+        /* ---------- Индекс языков (1.8.3) ----------
+           lang/index.json - лёгкий список: [{ "code": "ru", "name": "Русский", "flag": "🇷🇺", "codes": "ru", "search": "русский, russian...", "rtl": false }, ...].
+           По нему строится меню языков и определяется язык, а сам файл lang/<код>.json качается только для выбранного языка (+ en как запасной).
+           Папка lang/ и файлы языков не меняются. Нет индекса или в нём нет какого-то языка из lang/languages.json - такие языки читаются из файлов целиком, как раньше.
+           Собрать индекс: открыть сайт, в консоли браузера вызвать exportLangIndex() и положить скачанный index.json в папку lang/. */
+        function metaFromData(code, d) {
+            return {
+                code,
+                name: d['language.name'] || code,
+                flag: d['language.flag'] || '🌐',
+                codes: String(d['language.codes'] || ''),
+                search: String(d['language.search'] || ''),
+                rtl: langIsRtl(d)
+            };
+        }
+        function entryFromMeta(m, data) {
+            return {
+                code: m.code,
+                data: data || null,
+                name: m.name || m.code,
+                flag: m.flag || '🌐',
+                codes: [m.code, ...String(m.codes || '').split(',')].map(c => c.trim().toLowerCase()).filter(Boolean),
+                search: String(m.search || ''),
+                rtl: m.rtl === true || String(m.rtl).trim().toLowerCase() === 'true'
+            };
+        }
+        // Файл языка подгружается один раз; параллельные вызовы ждут один и тот же запрос
+        function ensureLangData(l) {
+            if (!l) return Promise.resolve(null);
+            if (l.data) return Promise.resolve(l.data);
+            if (!l.loading) {
+                l.loading = fetchJson(`lang/${l.code}.json`).then(d => {
+                    l.loading = null;
+                    if (d && typeof d === 'object') l.data = d;
+                    return l.data;
+                });
+            }
+            return l.loading;
+        }
+        // Собирает lang/index.json из всех файлов языков (вызов из консоли браузера) - скачается index.json (и вернётся массив)
+        async function exportLangIndex() {
+            const list = await fetchJson('lang/languages.json');
+            const codes = Array.isArray(list) ? list.map(c => String(c).trim()).filter(Boolean) : [];
+            if (!codes.includes('en')) codes.unshift('en');
+            const out = [];
+            for (const code of codes) {
+                const d = await fetchJson(`lang/${code}.json`);
+                if (d && typeof d === 'object') out.push(metaFromData(code, d));
+                else console.warn('[i18n] lang/' + code + '.json не найден или не читается - в индекс не попал');
+            }
+            const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'index.json';
+            a.click();
+            setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+            return out;
         }
 
         // Как выбирается язык при первом заходе (если в ссылке нет ?lang=):
@@ -2155,36 +2241,41 @@
 
         async function initI18n() {
             try {
+                // Индекс и список кодов - два маленьких файла, качаются одновременно
+                const [index, list] = await Promise.all([fetchJson('lang/index.json'), fetchJson('lang/languages.json')]);
+                const metas = new Map((Array.isArray(index) ? index : []).filter(m => m && typeof m.code === 'string' && m.code).map(m => [m.code.trim(), m]));
                 let codes = ['en'];
-                const list = await fetchJson('lang/languages.json');
                 if (Array.isArray(list) && list.length) codes = list.map(c => String(c).trim()).filter(Boolean);
+                else if (metas.size) codes = [...metas.keys()];
                 if (!codes.includes('en')) codes.unshift('en');
 
-                const loaded = await Promise.all(codes.map(async code => ({ code, data: await fetchJson(`lang/${code}.json`) })));
-                i18nLangs = loaded.filter(l => l.data && typeof l.data === 'object').map(l => ({
-                    code: l.code,
-                    data: l.data,
-                    name: l.data['language.name'] || l.code,
-                    flag: l.data['language.flag'] || '🌐',
-                    codes: [l.code, ...String(l.data['language.codes'] || '').split(',')].map(c => c.trim().toLowerCase()).filter(Boolean)
+                // Язык есть в индексе - файл не трогаем; нет - читаем целиком (так же, как работал сайт до 1.8.3)
+                const loaded = await Promise.all(codes.map(async code => {
+                    if (metas.has(code)) return entryFromMeta(Object.assign({}, metas.get(code), { code }), null);
+                    const data = await fetchJson(`lang/${code}.json`);
+                    return data && typeof data === 'object' ? entryFromMeta(metaFromData(code, data), data) : null;
                 }));
+                i18nLangs = loaded.filter(Boolean);
                 i18nLangs.forEach(l => { l.aliases = buildLangAliases(l); });
                 i18nFilesMissing = i18nLangs.length === 0;
+                if (!metas.size && i18nLangs.length > 1) console.info('[i18n] Нет lang/index.json - загружены все языки сразу. Чтобы сайт открывался быстрее, вызовите в консоли exportLangIndex() и положите скачанный index.json в папку lang/.');
 
                 let en = i18nLangs.find(l => l.code === 'en');
                 if (!en) {
                     console.warn('Не найден lang/en.json - используется встроенный английский. Папка lang должна лежать рядом с index.html.');
-                    en = { code: 'en', data: I18N_BUILTIN, name: 'English', flag: '🇬🇧', codes: ['en'] };
+                    en = entryFromMeta(metaFromData('en', I18N_BUILTIN), I18N_BUILTIN);
                     en.aliases = buildLangAliases(en);
                     i18nLangs.unshift(en);
                 }
-                i18nBase = en.data;
 
                 // Приоритет: ?lang= в ссылке -> автоопределение по языкам браузера -> английский
                 const r = resolveLanguage(new URLSearchParams(window.location.search).get('lang'));
                 langExplicit = r.explicit;
                 currentLang = r.lang.code;
-                i18nDict = r.lang.data;
+                // Качаем только выбранный язык и английский (запасной для строк, которых нет в выбранном)
+                await Promise.all([ensureLangData(en), ensureLangData(r.lang)]);
+                i18nBase = en.data || I18N_BUILTIN;
+                i18nDict = r.lang.data || {};
                 console.info('[i18n] ' + getLangSignalsText() + ' | режим: ' + AUTO_LANG_MODE + ' =>', currentLang, langExplicit ? '(из ссылки)' : '(авто)');
 
                 // раньше выбор языка запоминался в localStorage и мешал автоопределению
@@ -2210,7 +2301,7 @@
                 .replace(/\s+/g, ' ').trim();
         }
         function buildLangAliases(l) {
-            const extra = String((l.data && l.data['language.search']) || '').split(/[,;\n|]+/);
+            const extra = String(l.search || '').split(/[,;\n|]+/);
             return [...new Set([l.code, ...l.codes, l.name, ...extra].map(normSearch).filter(Boolean))];
         }
         // 0 - точное совпадение, 1 - начало, 2 - начало слова, 3 - где-то внутри; null - не подходит
@@ -2259,11 +2350,14 @@
         }
 
         // explicitTag = null - вернуть автоопределение
-        function setLanguage(explicitTag, sync = true) {
-            const r = resolveLanguage(explicitTag);
+        let langReq = 0;
+        async function setLanguage(explicitTag, sync = true) {
+            const r = resolveLanguage(explicitTag), my = ++langReq;
+            await ensureLangData(r.lang);          // файл языка качается при первом выборе (потом он уже в памяти)
+            if (my !== langReq) return;            // пока качался, выбрали другой язык
             langExplicit = r.explicit;
             currentLang = r.lang.code;
-            i18nDict = r.lang.data;
+            i18nDict = r.lang.data || {};
             applyI18n(true);
             if (sync) syncUrlState();
         }
@@ -2789,7 +2883,19 @@
             { fov: 70, bias: 0.9, token: "TridsatDva" }
         ];
 
-        async function applyMeshTextureTransform(bufferType, assetId) {
+        // 1.8.3: результат запоминается - список скинов/плащей и 3D-вьюер больше не расшифровывают один и тот же файл заново при каждой перерисовке
+        const textureMemo = new Map();
+        function applyMeshTextureTransform(bufferType, assetId) {
+            const key = bufferType + '/' + assetId;
+            if (!textureMemo.has(key)) {
+                const pr = decodeMeshTexture(bufferType, assetId);
+                textureMemo.set(key, pr);
+                pr.catch(() => { if (textureMemo.get(key) === pr) textureMemo.delete(key); });   // ошибку не запоминаем - можно попробовать ещё раз
+            }
+            return textureMemo.get(key);
+        }
+
+        async function decodeMeshTexture(bufferType, assetId) {
             const cleanId = assetId.replace(/\.(png|PNG)$/, "");
             const targetFolder = bufferType === 'capes' ? 'capes_enc' : 'skins_enc'; 
             const response = await fetch(`${targetFolder}/${cleanId}.png.txt`);
@@ -3155,20 +3261,75 @@
 
         function buildBackgroundSelector() { Backdrop.buildGrid(); }
 
-        async function drawSkinAvatar(filename, canvasElement) {
-            try {
-                const textureDataUrl = await applyMeshTextureTransform('skins', filename);
-                const img = new Image();
-                img.src = textureDataUrl;
-                img.onload = () => {
-                    const ctx = canvasElement.getContext('2d');
-                    ctx.imageSmoothingEnabled = false; 
-                    ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
-                    ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
-                };
-            } catch (e) {
-                console.log("Не удалось загрузить миниатюру");
+        // 1.8.3: готовая миниатюра (канвас 64x64) запоминается, поэтому перерисовка списка при поиске и сортировке мгновенная.
+        // В списке миниатюра рисуется, когда карточка подъезжает к экрану; остальные дорисовываются в фоне (warmAvatars).
+        const avatarCache = new Map();      // имя файла -> канвас 64x64
+        const avatarJobs = new Map();       // имя файла -> Promise (чтобы один скин не обрабатывался дважды одновременно)
+        const avatarWaiting = new Map();    // имя файла -> канвасы карточек, которые ждут свою миниатюру
+
+        function avatarOf(filename) {
+            if (avatarCache.has(filename)) return Promise.resolve(avatarCache.get(filename));
+            if (!avatarJobs.has(filename)) {
+                avatarJobs.set(filename, (async () => {
+                    try {
+                        const textureDataUrl = await applyMeshTextureTransform('skins', filename);
+                        const img = await new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = textureDataUrl; });
+                        const cv = document.createElement('canvas');
+                        cv.width = cv.height = 64;
+                        const ctx = cv.getContext('2d');
+                        ctx.imageSmoothingEnabled = false;
+                        ctx.drawImage(img, 8, 8, 8, 8, 0, 0, 64, 64);
+                        ctx.drawImage(img, 40, 8, 8, 8, 0, 0, 64, 64);
+                        avatarCache.set(filename, cv);
+                        const waiting = avatarWaiting.get(filename);        // миниатюра готова - рисуем её во всех карточках, которые её ждут
+                        if (waiting) { waiting.forEach(c => c.getContext('2d').drawImage(cv, 0, 0)); avatarWaiting.delete(filename); }
+                        return cv;
+                    } catch (e) {
+                        console.log("Не удалось загрузить миниатюру");
+                        return null;
+                    } finally {
+                        avatarJobs.delete(filename);
+                    }
+                })());
             }
+            return avatarJobs.get(filename);
+        }
+
+        async function drawSkinAvatar(filename, canvasElement) {
+            const cv = await avatarOf(filename);
+            if (cv) canvasElement.getContext('2d').drawImage(cv, 0, 0);
+        }
+
+        const avatarObserver = ('IntersectionObserver' in window) ? new IntersectionObserver((entries) => {
+            entries.forEach(en => {
+                if (!en.isIntersecting) return;
+                avatarObserver.unobserve(en.target);
+                if (en.target.dataset.skin) avatarOf(en.target.dataset.skin);
+            });
+        }, { rootMargin: '300px 0px' }) : null;
+
+        // Миниатюра для карточки: из памяти - сразу, иначе когда карточка станет видна
+        function placeAvatar(filename, canvas) {
+            if (avatarCache.has(filename)) { canvas.getContext('2d').drawImage(avatarCache.get(filename), 0, 0); return; }
+            if (!avatarWaiting.has(filename)) avatarWaiting.set(filename, new Set());
+            avatarWaiting.get(filename).add(canvas);
+            if (!avatarObserver) { avatarOf(filename); return; }
+            canvas.dataset.skin = filename;
+            avatarObserver.observe(canvas);
+        }
+
+        // Фоновая подготовка всех миниатюр небольшими порциями (чтобы открытый позже список или мобильное меню были уже готовы)
+        let warmStarted = false;
+        function warmAvatars() {
+            if (warmStarted) return;
+            warmStarted = true;
+            const queue = globalSkins.map(sk => sk.filename).filter(f => f && !avatarCache.has(f));
+            const idle = window.requestIdleCallback ? (fn) => window.requestIdleCallback(fn, { timeout: 1500 }) : (fn) => setTimeout(fn, 60);
+            const step = () => {
+                if (!queue.length) return;
+                Promise.all(queue.splice(0, 3).map(avatarOf)).then(() => idle(step));
+            };
+            idle(step);
         }
 
         /* ---------- Общие помощники ---------- */
@@ -3720,7 +3881,7 @@
             async function loadManifest() {
                 if (manifest) return manifest;
                 try {
-                    const r = await fetch('backgrounds/backgrounds.json?v=' + Math.random());
+                    const r = await fetch('backgrounds/backgrounds.json', { cache: 'no-cache' });
                     const j = r.ok ? await r.json() : [];
                     manifest = (Array.isArray(j) ? j : []).map(String).filter(f => SAFE_FILE.test(f));
                 } catch (e) { manifest = []; }
@@ -3873,7 +4034,7 @@
                     if (!loading) {
                         loading = (async () => {
                             let raw = [];
-                            try { const r = await fetch('blocks/blocks.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет блоков */ }
+                            try { const r = await fetch('blocks/blocks.json', { cache: 'no-cache' }); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет блоков */ }
                             const seen = new Set();
                             manifest = (Array.isArray(raw) ? raw : []).map(normEntry).filter(b => {
                                 if (!b || !ID_OK.test(b.id) || b.id === PLAIN || /^u-\d+$/.test(b.id) || seen.has(b.id)) return false;
@@ -4359,7 +4520,7 @@
                 function load() {
                     if (!loading) loading = (async () => {
                         let raw = [];
-                        try { const r = await fetch('vegetation/vegetation.json?v=' + Math.random()); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет растений */ }
+                        try { const r = await fetch('vegetation/vegetation.json', { cache: 'no-cache' }); if (r.ok) raw = await r.json(); } catch (e) { /* нет файла - нет растений */ }
                         manifest = [];
                         const seen = new Set();
                         (Array.isArray(raw) ? raw : []).forEach(x => norm(x, seen, manifest));
@@ -4370,7 +4531,7 @@
                 async function users() {
                     let list = [];
                     try { list = await UserLib.list('plant'); } catch (e) { /* личной папки нет */ }
-                    return list.map(rec => ({
+                    return list.filter(rec => !rec.template).map(rec => ({      // записи-шаблоны (1.8.3) лежат в той же папке, но растениями не являются
                         id: 'u-' + rec.id, user: true, name: rec.name, on: true,
                         parts: (rec.bottom && rec.top ? [rec.bottom, rec.top] : [rec.image]).filter(Boolean).map(b => ({ blob: b, tint: null })),
                         tint: HEX.test(rec.tint || '') ? rec.tint : null, weight: rec.weight > 0 ? Math.min(100, +rec.weight) : 1,
@@ -4551,12 +4712,104 @@
                 if (soon) syncUrlStateSoon(); else syncUrlState();
             }
 
-            // Галочка растения. Если набор совпал с заданным в json - в ссылку ничего не пишем
+            // Набор галочек. Если он совпал с заданным в json - вместо него null, и в ссылку ничего не пишется
+            function normSel(set) {
+                const def = new Set(vegEntries.filter(e => e.on !== false).map(e => e.id));
+                return (set.size === def.size && [...set].every(x => def.has(x))) ? null : set;
+            }
+            // Галочка растения
             function vegToggle(id, on) {
                 const def = new Set(vegEntries.filter(e => e.on !== false).map(e => e.id)), cur = new Set(veg.sel || def);
                 if (on) cur.add(id); else cur.delete(id);
-                veg.sel = (cur.size === def.size && [...cur].every(x => def.has(x))) ? null : cur;
+                veg.sel = normSel(cur);
                 vegChanged(false);
+            }
+
+            /* ---------- Сброс и шаблоны растительности (1.8.3) ----------
+               Сброс: галочки как в vegetation.json, цвета / вес / размер из списка, плотность 60%, все ярусы. Свои растения не удаляются
+               (их цвет, вес и размер на карточках папки тоже остаются), но галочки с них снимаются. Раскладка («Перемешать») не меняется.
+               Шаблон: запись в папке «Мои растения» вида { template: true, name, data: { sel, tint, weight, size, density, layers } }.
+               Клик по карточке шаблона применяет его. Удалённое своё растение убирается и из всех шаблонов (purgeFromTemplates). */
+            async function vegReset() {
+                veg.tint = {};
+                veg.weight = {};
+                veg.size = {};
+                veg.density = 60;
+                veg.layers = [true, true, true];
+                await buildVegList();               // заново читает список (в том числе свои растения) и закрывает открытые редакторы размера
+                veg.sel = normSel(new Set(vegEntries.filter(e => !e.user && e.on !== false).map(e => e.id)));
+                vegChanged(false);
+            }
+
+            // Приводит данные шаблона к чистому виду: только существующие растения, допустимые значения (шаблон мог быть сохранён давно)
+            function cleanTpl(d) {
+                d = d && typeof d === 'object' ? d : {};
+                const ids = new Set(vegEntries.map(e => e.id)), dn = +d.density;
+                const pairs = (o) => (o && typeof o === 'object' && !Array.isArray(o) ? Object.entries(o).filter(([k]) => ids.has(k)) : []);
+                return {
+                    sel: Array.isArray(d.sel) ? d.sel.filter(x => ids.has(x)) : [],
+                    tint: Object.fromEntries(pairs(d.tint).filter(([, v]) => HEX.test(v))),
+                    weight: Object.fromEntries(pairs(d.weight).filter(([, v]) => +v > 0).map(([k, v]) => [k, Math.min(100, Math.round(+v))])),
+                    size: Object.fromEntries(pairs(d.size).map(([k, v]) => [k, Veg.specOf(v)]).filter(([, v]) => v)),
+                    density: isFinite(dn) && d.density !== null && d.density !== '' ? Math.min(100, Math.max(0, dn)) : 60,
+                    layers: Array.isArray(d.layers) && d.layers.length === 3 ? d.layers.map(Boolean) : [true, true, true]
+                };
+            }
+            const vegSnapshot = () => cleanTpl({ sel: vegEntries.filter(vegIsOn).map(e => e.id), tint: veg.tint, weight: veg.weight, size: veg.size, density: veg.density, layers: veg.layers });
+            // Ключ для сравнения: подсвечивает в папке шаблон, совпадающий с текущими настройками
+            function tplKey(d) {
+                d = cleanTpl(d);
+                const so = (o) => Object.fromEntries(Object.entries(o).sort(([a], [b]) => (a < b ? -1 : (a > b ? 1 : 0))));
+                return JSON.stringify({ sel: d.sel.slice().sort(), tint: so(d.tint), weight: so(d.weight), size: so(d.size), density: d.density, layers: d.layers });
+            }
+
+            async function vegApplyTemplate(rec) {
+                await buildVegList();               // свежий список растений: шаблон применяется только к тем, что есть сейчас
+                const d = cleanTpl(rec.data);
+                veg.sel = normSel(new Set(d.sel));
+                veg.tint = d.tint;
+                veg.weight = d.weight;
+                veg.size = d.size;
+                veg.density = d.density;
+                veg.layers = d.layers;
+                await buildVegList();
+                vegChanged(false);
+            }
+
+            async function vegSaveTemplate() {
+                if (!vegEntries.length) await buildVegList();
+                const data = vegSnapshot();
+                let count = 0;
+                try { count = (await UserLib.list('plant')).filter(r => r.template).length; } catch (e) { /* личной папки нет */ }
+                const def = t('veg.tpl.default', count + 1);
+                const raw = window.prompt(t('veg.tpl.prompt'), def);
+                if (raw === null) return;
+                try {
+                    await UserLib.add('plant', { template: true, name: (raw.trim() || def).slice(0, 60), data });
+                } catch (err) {
+                    console.error('[veg]', err);
+                    window.alert(t('folder.error'));
+                    return;
+                }
+                const lbl = document.querySelector('#btnVegSaveTpl .veg-act-lbl');
+                if (lbl) {
+                    lbl.textContent = '✓ ' + t('veg.tpl.saved');
+                    setTimeout(() => { lbl.textContent = t('veg.tpl.save'); }, 1600);
+                }
+            }
+
+            // Удалённое своё растение исчезает из всех сохранённых шаблонов
+            async function purgeFromTemplates(pid) {
+                try {
+                    for (const r of await UserLib.list('plant')) {
+                        const d = r.template && r.data;
+                        if (!d) continue;
+                        const before = JSON.stringify(d);
+                        if (Array.isArray(d.sel)) d.sel = d.sel.filter(x => x !== pid);
+                        ['tint', 'weight', 'size'].forEach(k => { if (d[k] && typeof d[k] === 'object') delete d[k][pid]; });
+                        if (JSON.stringify(d) !== before) await UserLib.put('plant', r);
+                    }
+                } catch (err) { console.error('[veg]', err); }
             }
 
             // Весь список растений галочками: из vegetation.json + свои из папки
@@ -4744,6 +4997,7 @@
                 on = !!on;
                 try {
                     if (on) {
+                        ensureUi();
                         kit = getKit();
                         await Blocks.load();
                         if (!state.block || !(await Blocks.exists(state.block))) state.block = Blocks.defaultId();
@@ -4877,7 +5131,17 @@
                 syncGridActive();
             }
 
+            // 1.8.3: списки блоков и растений (они тянут десятки картинок) собираются при первом включении платформы, а не при открытии сайта
+            let uiBuilt = false;
+            function ensureUi() {
+                if (uiBuilt) return;
+                uiBuilt = true;
+                buildBlockGrid();
+                buildVegList();
+            }
+
             function refreshUi() {
+                if (!uiBuilt) return;
                 document.querySelectorAll('#blockGrid .block-btn').forEach(b => { b.title = blockTitle(b.dataset.block); });
                 buildVegList();
             }
@@ -4900,6 +5164,8 @@
 
                 $('veg_toggle').onchange = (e) => { veg.on = e.target.checked; if (veg.on && !veg.seed) veg.seed = randSeed(); vegChanged(false); };
                 $('btnVegDice').onclick = () => { veg.seed = randSeed(); vegChanged(false); };
+                $('btnVegReset').onclick = vegReset;
+                $('btnVegSaveTpl').onclick = vegSaveTemplate;
                 $('veg_dens').oninput = (e) => { veg.density = +e.target.value; vegChanged(true); };
                 document.querySelectorAll('.veg-layer').forEach(c => { c.onchange = () => { veg.layers[+c.dataset.layer] = c.checked; vegChanged(false); }; });
                 $('btnVegFolder').onclick = () => Folder.open('plant');
@@ -4926,13 +5192,34 @@
                         if (meta) { try { const j = JSON.parse(await meta.text()); if (j && typeof j.animation === 'object') rec.anim = j.animation; } catch (e) { /* без анимации */ } }
                         return rec;
                     },
-                    thumb: (rec, track) => { const f = rec.image || rec.bottom || rec.top; return f ? track(f) : null; },
-                    isActive: (rec) => vegIsOn({ id: 'u-' + rec.id, on: true }),
-                    pick: async (rec) => { await buildVegList(); if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false); },
-                    onRemove: () => { buildVegList().then(() => vegChanged(false)); },
-                    decorate: (el, rec) => el.append(folderTools('plant', rec, true, () => { delete veg.weight['u-' + rec.id]; buildVegList().then(() => vegChanged(false)); }))
+                    thumb: (rec, track) => { if (rec.template) return null; const f = rec.image || rec.bottom || rec.top; return f ? track(f) : null; },
+                    isActive: (rec) => (rec.template ? veg.on && tplKey(rec.data) === tplKey(vegSnapshot()) : vegIsOn({ id: 'u-' + rec.id, on: true })),
+                    pick: async (rec) => {
+                        if (rec.template) { await vegApplyTemplate(rec); return; }
+                        await buildVegList();
+                        if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false);
+                    },
+                    onRemove: (rec) => {
+                        if (rec.template) return;
+                        const pid = 'u-' + rec.id;
+                        delete veg.tint[pid];
+                        delete veg.weight[pid];
+                        delete veg.size[pid];
+                        if (veg.sel) veg.sel.delete(pid);
+                        purgeFromTemplates(pid);
+                        buildVegList().then(() => { if (veg.sel) veg.sel = normSel(veg.sel); vegChanged(false); });
+                    },
+                    decorate: (el, rec) => {
+                        if (rec.template) {         // шаблон: вместо картинки значок, без цвета / веса / размера
+                            const ph = el.querySelector('.folder-thumb-empty');
+                            if (ph) ph.textContent = '📋';
+                            el.classList.add('folder-tpl');
+                            el.title = t('veg.tpl.card');
+                            return;
+                        }
+                        el.append(folderTools('plant', rec, true, () => { delete veg.weight['u-' + rec.id]; buildVegList().then(() => vegChanged(false)); }));
+                    }
                 });
-                buildVegList();
 
                 // Свой блок: один файл на все грани или до трёх файлов с окончаниями _top / _side / _bottom
                 Folder.register('block', {
@@ -4965,7 +5252,6 @@
                     onRemove: (rec) => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(Blocks.defaultId()); },
                     decorate: (el, rec) => el.append(folderTools('block', rec, false, () => { Blocks.forgetUser(rec.id); if (state.block === 'u-' + rec.id) setBlock(state.block); }))
                 });
-                buildBlockGrid();
             }
             init();
 
@@ -5793,7 +6079,7 @@ const EmoteUI = (() => {
     async function loadManifest() {
         if (manifest) return manifest;
         try {
-            const r = await fetch('emotes/emotes.json?v=' + Math.random());
+            const r = await fetch('emotes/emotes.json', { cache: 'no-cache' });
             const j = r.ok ? await r.json() : [];
             manifest = (Array.isArray(j) ? j : []).map(x => {
                 if (typeof x === 'string') return { id: x.replace(/\.json$/i, ''), author: '', authorUrl: null };
@@ -5807,6 +6093,14 @@ const EmoteUI = (() => {
     function message(text) { $('emoteMsg').textContent = text || ''; }
 
     // Что искать у каждой эмоции: id, название и имя автора на всех языках сразу
+    // Названия на остальных языках не качаются при старте - только когда человек начинает искать эмоцию
+    let langsLoaded = false, langsLoading = null;
+    function loadAllLangs() {
+        if (langsLoaded) return Promise.resolve(false);
+        if (!langsLoading) langsLoading = Promise.all(i18nLangs.map(ensureLangData)).then(() => { langsLoaded = true; index = null; return true; });
+        return langsLoading;
+    }
+
     function buildIndex() {
         index = new Map();
         for (const e of manifest) {
@@ -5896,7 +6190,7 @@ const EmoteUI = (() => {
     }
     async function playBase(base) {
         try {
-            const r = await fetch('emotes/' + encodeURIComponent(base) + '.json?v=' + Math.random());
+            const r = await fetch('emotes/' + encodeURIComponent(base) + '.json', { cache: 'no-cache' });
             if (!r.ok) throw new Error('HTTP ' + r.status);
             const json = await r.json();
             begin(json, () => titleFor(base, jsonTitle(json, base)));
@@ -5958,7 +6252,11 @@ const EmoteUI = (() => {
         $('emoteModal').onclick = (e) => { if (e.target === $('emoteModal')) close(); };
         $('btnEmoteStop').onclick = () => EmoteRuntime.stopSmooth();
         $('btnEmoteTest').onclick = () => Folder.open('emote');
-        $('emoteSearch').addEventListener('input', (e) => { query = e.target.value; renderList(); });
+        $('emoteSearch').addEventListener('input', (e) => {
+        query = e.target.value;
+        renderList();
+        if (query.trim()) loadAllLangs().then(changed => { if (changed && $('emoteModal').classList.contains('show')) renderList(); });
+    });
         $('emoteSearch').addEventListener('keydown', (e) => {
             if (e.key === 'Enter') { e.preventDefault(); const first = $('emoteList').querySelector('.emote-card'); if (first) first.click(); }
         });
@@ -6158,7 +6456,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 list.appendChild(item);
                 
                 const canvas = item.querySelector('.canvas-avatar');
-                drawSkinAvatar(skin.filename, canvas);
+                placeAvatar(skin.filename, canvas);
 
                 item.onclick = (e) => {
                     if (e.target.classList.contains('model-badge')) return;
@@ -6535,15 +6833,17 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
         }
 
         async function loadAllJSONData() {
+            // 1.8.3: скины и плащи качаются одновременно с языком, а не после него; cache: 'no-cache' вместо случайной приставки (см. fetchJson)
+            const getJson = (url) => fetch(url, { cache: 'no-cache' }).then(r => r.json());
+            const skinsReq = getJson('skins.json'), capesReq = getJson('capes.json');
+            skinsReq.catch(() => {}); capesReq.catch(() => {});      // ошибки разберём ниже, когда дойдём до await
             await initI18n();
             try {
-                const responseSkins = await fetch('skins.json?v=' + Math.random());
-                globalSkins = await responseSkins.json();
+                globalSkins = await skinsReq;
                 globalSkins.forEach((skin, idx) => skin.originalIndex = idx);
 
                 try {
-                    const responseCapes = await fetch('capes.json?v=' + Math.random());
-                    globalCapes = await responseCapes.json();
+                    globalCapes = await capesReq;
                     globalCapes.forEach((cape, idx) => cape.originalIndex = idx);
                 } catch(e) {
                     console.warn("Не удалось прочесть capes.json.");
@@ -6583,13 +6883,16 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     await selectSkin(currentActiveSkinFilename, false);
                 }
                 await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
+                warmAvatars();                                                               // остальные миниатюры - в фоне, когда всё главное уже показано
 
             } catch (err) {
                 document.getElementById('loading').textContent = t('error.json');
             }
         }
 
-        window.onload = loadAllJSONData;
+        // 1.8.3: не ждём window.onload - он ждёт и шрифт флагов, и всё остальное внешнее. Скрипт стоит в конце body: страница и оба 3D-скрипта уже готовы
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadAllJSONData);
+        else loadAllJSONData();
     </script>
 </body>
 </html>
