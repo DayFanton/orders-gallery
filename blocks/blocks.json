@@ -3,14 +3,16 @@
     "id": "grass",
     "top": { "file": "grass_block_top.png", "tint": "#91bd59" },
     "side": [ "grass_block_side.png", { "file": "grass_block_side_overlay.png", "tint": "#91bd59" } ],
-    "bottom": "dirt.png"
+    "bottom": "dirt.png",
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
-  "dirt",
-  "stone",
-  "cobblestone",
-  "sand",
-  "snow",
-  { "id": "planks", "all": "oak_planks.png" },
-  "netherrack",
-  "end_stone"
+  { "id": "dirt", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "stone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "cobblestone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "sand", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "snow", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "planks", "all": "oak_planks.png", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "netherrack", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "end_stone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" }
 ]
