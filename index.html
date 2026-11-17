@@ -1271,7 +1271,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.7.7</div>
+            <div class="site-version">v1.7.8</div>
         </div>
     </div>
 
@@ -4800,7 +4800,7 @@ const EmoteCore = (() => {
     }
 
     // Поза эмоции через elapsed тиков после старта. finished = true, когда эмоцию пора завершить
-    function evaluate(em, elapsed) {
+    function evaluate(em, elapsed, fade = 1) {   // fade: 1 - обычная поза, 0 - стартовая (плавное затухание при остановке кнопкой)
         let t = elapsed, w = 1, finished = false;
         if (em.loop) {
             if (em.endTick > em.returnTick && t >= em.endTick) t = em.returnTick + ((t - em.returnTick) % (em.endTick - em.returnTick));
@@ -4814,6 +4814,7 @@ const EmoteCore = (() => {
             w *= SINE_IN_OUT(Math.max(0, elapsed) / em.beginTick);
             t = em.beginTick;
         }
+        w *= fade;
         const pose = sampleAll(em, t, w);
         pose.applyBend = em.applyBend;
         return { pose, finished };
@@ -4877,6 +4878,8 @@ const EmoteCore = (() => {
     const ALL_PARTS = ['head', 'body', 'rightArm', 'leftArm', 'rightLeg', 'leftLeg'];
     const BONE = { head: 'head', body: 'torso', rightArm: 'rightArm', leftArm: 'leftArm', rightLeg: 'rightLeg', leftLeg: 'leftLeg' };
     let emote = null, elapsed = 0, active = false, entries = null, slimState = false, saved = null, pivots = null;
+    let fadeT = -1;                 // >= 0 - идёт плавное завершение (секунды с момента нажатия «Прервать эмоцию»)
+    const FADE_SECONDS = 0.55;      // длительность плавного завершения
 
     // Объект анимации для skinview3d: движок зовёт update(player, dt) каждый кадр
     const anim = { paused: false, speed: 1, progress: 0, animate() {}, update(player, dt) { onFrame(dt); } };
@@ -4974,7 +4977,14 @@ const EmoteCore = (() => {
             const skin = getSkin();
             if (!skin) return;
             if (!anim.paused) elapsed += (dt || 0) * EmoteCore.TICKS_PER_SECOND * (anim.speed || 1);
-            const { pose, finished } = EmoteCore.evaluate(emote, elapsed);
+            let fade = 1, fadeDone = false;
+            if (fadeT >= 0) {               // эмоция продолжает играть, но её вес плавно уходит в ноль (косинус - мягкий старт и мягкий финиш)
+                fadeT += dt || 0;
+                const p = Math.min(1, fadeT / FADE_SECONDS);
+                fade = 0.5 + 0.5 * Math.cos(Math.PI * p);
+                fadeDone = p >= 1;
+            }
+            const { pose, finished } = EmoteCore.evaluate(emote, elapsed, fade);
             const slim = detectSlim(skin);
             if (slim !== slimState) {            // скин сменил тип модели (Steve <-> Alex): пересобираем кубоиды
                 unmountEntries(skin, entries);
@@ -5003,7 +5013,7 @@ const EmoteCore = (() => {
                 e.origObj.visible = false;                      // оригиналы скрыты, пока идёт эмоция (их мог показать refreshLayers)
                 e.mesh.visible = e.layer === 'inner' ? true : bodyOuter;
             }
-            if (finished) stop(true);
+            if (finished || fadeDone) stop(true);
         } catch (err) {
             console.error('[emote] ошибка кадра, эмоция остановлена:', err);
             stop(true);
@@ -5029,6 +5039,7 @@ const EmoteCore = (() => {
             }
             emote = parsed;
             elapsed = 0;
+            fadeT = -1;
             entries.forEach(e => { e.last = NaN; });
             anim.paused = document.getElementById('pause_animation').checked;
             anim.speed = currentAnimationSpeed;
@@ -5045,6 +5056,7 @@ const EmoteCore = (() => {
     function stop(restoreMovement = true) {
         const wasActive = active;
         active = false;
+        fadeT = -1;
         emote = null;
         const skin = getSkin();
         if (skin && entries) {
@@ -5066,7 +5078,13 @@ const EmoteCore = (() => {
         if (typeof EmoteUI !== 'undefined') EmoteUI.refresh();
     }
 
-    return { start, stop, isActive: () => active };
+    // Плавная остановка (кнопка «Прервать эмоцию»). Повторное нажатие во время затухания - остановить сразу
+    function stopSmooth() {
+        if (!active || fadeT >= 0) { stop(true); return; }
+        fadeT = 0;
+    }
+
+    return { start, stop, stopSmooth, isActive: () => active };
 })();
 
 /* Эмоции в интерфейсе.
@@ -5246,7 +5264,7 @@ const EmoteUI = (() => {
         $('btnEmotes').onclick = open;
         $('btnEmoteClose').onclick = close;
         $('emoteModal').onclick = (e) => { if (e.target === $('emoteModal')) close(); };
-        $('btnEmoteStop').onclick = () => EmoteRuntime.stop(true);
+        $('btnEmoteStop').onclick = () => EmoteRuntime.stopSmooth();
         $('btnEmoteTest').onclick = () => Folder.open('emote');
         $('emoteSearch').addEventListener('input', (e) => { query = e.target.value; renderList(); });
         $('emoteSearch').addEventListener('keydown', (e) => {
