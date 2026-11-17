@@ -456,5 +456,17 @@
   "size.wmin": "Lanjan'ny habeny kely indrindra",
   "size.wmax": "Lanja ny habeny lehibe indrindra",
   "size.tile": "Avereno ny endrika",
-  "size.reset": "Averina"
+  "size.reset": "Averina",
+
+  "rename.title": "Tsindrio raha hanova anarana",
+  "rename.cancel": "Avereno amin'ilay anarana teo aloha (aza tehirizina)",
+  "rename.placeholder": "Anarana (foana — tany am-boalohany)",
+  "rename.error": "Tsy nahomby tamin'ny fitahirizana ilay anarana vaovao",
+  "rename.confirm_text": "Nanova ilay anarana ianao saingy tsy nitahiry izany. Tehirizina ve ny \"%s\"?",
+  "rename.confirm_save": "Tehirizina",
+  "rename.confirm_discard": "Aza tehirizina",
+  "rename.confirm_back": "Tohizo ny fanovana",
+  "rename.guide.title": "Ahoana no fanovana anarana sy fanaingoana (§ kaody §)",
+  "rename.guide.how": "Raha hanova anarana, tsindrio ny lohatenin'ny karatra, soraty ny vaovao ary tsindrio amin'ny toerana banga rehetra — ho voatahiry izany. Ny lakroa eo akaikin'ny saha dia hamerina ilay anarana teo aloha tsy mitahiry azy. Ny saha banga dia hamerina ilay anarana tany am-boalohany.",
+  "rename.guide.codes": "Amin'ny lohateny dia azonao ampiasaina ireo kaody fandrafetana avy amin'ny Minecraft: ny famantarana § sy ny litera manaraka azy. Loko: §0–§9 ary §a–§f. Fomba: §l — matevina, §o — mitongotra, §n — misy tsipika ambany, §m — misy tsipika afovoany, §k — \"miafina\", §r — avereno ny zava-drehetra. Ny kaody loko dia mamerina ny fomba taloha, ka apetraho aorian'ny loko ny fomba"
 }

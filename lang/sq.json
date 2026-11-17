@@ -458,5 +458,17 @@
   "size.wmin": "Pesha e madhësisë min.",
   "size.wmax": "Pesha e madhësisë maksimale",
   "size.tile": "Përsërit strukturën",
-  "size.reset": "Rivendos"
+  "size.reset": "Rivendos",
+
+  "rename.title": "Klikoni për të riemërtuar",
+  "rename.cancel": "Kthehu te emri i mëparshëm (mos ruaj)",
+  "rename.placeholder": "Emri (bosh — origjinal)",
+  "rename.error": "Ruajtja e emrit të ri dështoi",
+  "rename.confirm_text": "Ndryshuat emrin por nuk e ruajtët. Të mbahet \"%s\"?",
+  "rename.confirm_save": "Ruaj",
+  "rename.confirm_discard": "Mos ruaj",
+  "rename.confirm_back": "Vazhdo redaktimin",
+  "rename.guide.title": "Si të riemërtoni dhe stiloni (kodet §)",
+  "rename.guide.how": "Për të riemërtuar, klikoni te titulli i kartës, shkruani një të ri dhe klikoni kudo në hapësirë boshe — do të ruhet. Kryqi pranë fushës do të kthejë emrin e mëparshëm pa ruajtur. Një fushë boshe do të rivendosë emrin origjinal.",
+  "rename.guide.codes": "Në titull mund të përdorni kodet e formatimit nga Minecraft: shenjën § dhe një simbol pas saj. Ngjyrat: §0–§9 dhe §a–§f. Stilet: §l — e trashë, §o — e pjerrët, §n — e nënvizuar, §m — e shifruar/e fshirë, §k — \"kriptuar\", §r — rivendos gjithçka. Kodi i ngjyrës rivendos stilet e mëparshme, ndaj vendosni stilet pas ngjyrës"
 }

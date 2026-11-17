@@ -458,5 +458,17 @@
   "size.wmin": "Váha min. velikosti",
   "size.wmax": "Hmotnost maximální velikosti",
   "size.tile": "Opakovat texturu",
-  "size.reset": "Obnovit"
+  "size.reset": "Obnovit",
+
+  "rename.title": "Kliknutím přejmenujete",
+  "rename.cancel": "Vrátit předchozí název (neukládat)",
+  "rename.placeholder": "Název (prázdné — původní)",
+  "rename.error": "Nepodařilo se uložit nový název",
+  "rename.confirm_text": "Změnili jste název, ale neuložili jej. Ponechat „%s“?",
+  "rename.confirm_save": "Uložit",
+  "rename.confirm_discard": "Neukládat",
+  "rename.confirm_back": "Pokračovat v úpravách",
+  "rename.guide.title": "Jak přejmenovat a stylovat (§ kódy)",
+  "rename.guide.how": "Chcete-li přejmenovat, klikněte na název karty, zadejte nový a klikněte kamkoliv do prázdného místa — uloží se. Křížek vedle pole vrátí předchozí název bez uložení. Prázdné pole obnoví původní název.",
+  "rename.guide.codes": "V názvu můžete používat kódy formátování z Minecraftu: znak § a symbol za ním. Barvy: §0–§9 a §a–§f. Styly: §l — tučné, §o — kurzíva, §n — podtržené, §m — přeškrtnuté, §k — „šifrované“, §r — resetovat vše. Kód barvy resetuje předchozí styly, proto styly umisťujte za barvu"
 }

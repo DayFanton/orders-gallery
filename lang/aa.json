@@ -456,5 +456,17 @@
   "size.wmin": "Qaxar gita qaxar",
   "size.wmax": "Max size weight",
   "size.tile": "Gaca texture",
-  "size.reset": "Cabbis"
+  "size.reset": "Cabbis",
+
+  "rename.title": "Abak aruwta",
+  "rename.cancel": "Aruwta gaba (ma caysu)",
+  "rename.placeholder": "Aruwta (ma caysa — gaba)",
+  "rename.error": "Ma caysima aruwta gaba",
+  "rename.confirm_text": "Aruwta caysitke am ma caysima. \"%s\" gaba?",
+  "rename.confirm_save": "Caysu",
+  "rename.confirm_discard": "Ma caysu",
+  "rename.confirm_back": "Gaba abak",
+  "rename.guide.title": "Aruwta caysitkeeh ma caysimta kak abtem (§ codes §)",
+  "rename.guide.how": "Aruwta caysitkeeh, card title gaba caysitkeh, ma caysimta gaba caysitkeh ma caysimta gaba caysitkeh — caysimta abta. Cross gaba caysimta kak abta ma caysima. Fari gaba caysimta gaba caysitkeh.",
+  "rename.guide.codes": "Ti xiyyaat maltoosuu, koodii qindawaa Minecraft fayyadamtu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i"
 }

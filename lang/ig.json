@@ -458,5 +458,17 @@
   "size.wmin": "Ibu ogo kacha nta",
   "size.wmax": "Ibu nke kachasị ukwuu",
   "size.tile": "Emeghachi textures",
-  "size.reset": "Tọgharịa"
+  "size.reset": "Tọgharịa",
+
+  "rename.title": "Pịa iji nyegharịa aha",
+  "rename.cancel": "Weghachite aha mbụ (echekwabala ya)",
+  "rename.placeholder": "Aha (efu — nke mbụ)",
+  "rename.error": "Echekwaibe aha ọhụrụ ahụ",
+  "rename.confirm_text": "Ị gbanwere aha ahụ mana echekwabala ya. Ichekwa \"%s\"?",
+  "rename.confirm_save": "Chekwaa",
+  "rename.confirm_discard": "Echekwabala ya",
+  "rename.confirm_back": "Gaa n'ihu na-edezi",
+  "rename.guide.title": "Otu esi ewegharị aha ma chọọ ya mma (koodu §)",
+  "rename.guide.how": "Iji nyegharịa aha, pịa isi akwụkwọ kaadị ahụ, tinye aha ọhụrụ ma pịa n'ebe ọ bụla tọgbọ chakoo — a ga-echekwa ya. Oghere obe n'akụkụ ubi ahụ ga-eweghachite aha mbụ n'echekwabala ya. Oghere tọgbọ chakoo ga-eweghachite aha mbụ ahụ.",
+  "rename.guide.codes": "N'ime aha, ị nwere ike iji koodu nhazi Minecraft: akara § na agwa sochirinji ya. Agba: §0–§9 na §a–§f. Ụdị: §l — siri ike, §o — tọrọ agbago, §n — n'okpuru akara, §m — a kpọchiri akara, §k — \"mgbagwoju anya\", §r — tọgharịa ihe niile. Koodu agba na-emeghachi ụdị mbụ, yabụ tinye ụdị mgbe agba gasịrị"
 }

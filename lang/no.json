@@ -458,5 +458,17 @@
   "size.wmin": "Vekt for min. størrelse",
   "size.wmax": "Maksimal størrelsesvekt",
   "size.tile": "Gjenta tekstur",
-  "size.reset": "Tilbakestill"
+  "size.reset": "Tilbakestill",
+
+  "rename.title": "Klikk for å gi nytt navn",
+  "rename.cancel": "Gjenopprett tidligere navn (ikke lagre)",
+  "rename.placeholder": "Navn (tomt — opprinnelig)",
+  "rename.error": "Klarte ikke å lagre det nye navnet",
+  "rename.confirm_text": "Du har endret navnet, men ikke lagret det. Vil du beholde «%s»?",
+  "rename.confirm_save": "Lagre",
+  "rename.confirm_discard": "Ikke lagre",
+  "rename.confirm_back": "Fortsett redigering",
+  "rename.guide.title": "Hvordan gi nytt navn og style (§-koder)",
+  "rename.guide.how": "For å gi nytt navn, klikk på korttittelen, skriv inn et nytt og klikk hvor som helst på et tomt felt — det vil bli lagret. Krysser ved siden av feltet vil tilbakestille til det forrige navnet uten å lagre. Et tomt felt vil gjenopprette det opprinnelige navnet.",
+  "rename.guide.codes": "I tittelen kan du bruke formateringskoder fra Minecraft: tegnet § og et tegn etter det. Farger: §0–§9 og §a–§f. Stiler: §l — fet, §o — kursiv, §n — understreket, §m — gjennomstreket, §k — «forvirret», §r — tilbakestill alt. Fargekoden tilbakestiller tidligere stiler, så plasser stiler etter fargen"
 }

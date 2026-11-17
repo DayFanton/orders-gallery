@@ -456,5 +456,17 @@
   "size.wmin": "Boima ba boholo bo bonyenyane",
   "size.wmax": "Boima ba boholo bo phahameng fetisisa",
   "size.tile": "Pheta sebopeho",
-  "size.reset": "Theha botjha"
+  "size.reset": "Theha botjha",
+
+  "rename.title": "Tobetsa ho reha lebitso la bocha",
+  "rename.cancel": "Khutlisetsa lebitso la pele (se boloke)",
+  "rename.placeholder": "Lebitso (le se nang letho — la pele)",
+  "rename.error": "Ho hlolehile ho boloka lebitso le lecha",
+  "rename.confirm_text": "U fetotse lebitso empa ha o a le boloka. O batla hore ho dule \"%s\"?",
+  "rename.confirm_save": "Boloka",
+  "rename.confirm_discard": "Se boloke",
+  "rename.confirm_back": "Tsoela pele ho hlophisa",
+  "rename.guide.title": "Mokhoa o ka fetolang lebitso le ho le khabisa (§ khoutu)",
+  "rename.guide.how": "Ho reha lebitso la bocha, tobetsa sehlooho sa karete, kenya le lecha e Mme o tebetse sebaka leha e le sefe se se nang letho - se tla bolokoa. Sefapano se haufi le lebala se tla khutlisetsa lebitso la pele ntle le ho boloka. Lebala le se nang letho le tla khutlisetsa lebitso la pele.",
+  "rename.guide.codes": "Sehloeng, o ka sebelisa likhoutu tsa ho fomata tsa Minecraft: letšoao § le tlhaku ka mor'a lona. Mebala: §0–§9 le §a–§f. Mekhoa: §l — e teteaneng, §o — e sekameng, §n — e thaletsoeng ka tlase, §m — e thaletsoeng bohareng, §k — \"e patiloeng\", §r — hlophisa bocha tsohle. Khoutu ea mmala e hlophisa bocha mekhoa e fetileng, kahoo beha mekhoa ka mor'a mmala"
 }

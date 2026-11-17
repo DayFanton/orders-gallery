@@ -456,5 +456,17 @@
   "size.wmin": "Teža min. velikosti",
   "size.wmax": "Teža največje velikosti",
   "size.tile": "Ponavljaj teksturo",
-  "size.reset": "Ponastavi"
+  "size.reset": "Ponastavi",
+
+  "rename.title": "Kliknite za preimenovanje",
+  "rename.cancel": "Vrni prejšnje ime (ne shrani)",
+  "rename.placeholder": "Ime (prazno — izvirno)",
+  "rename.error": "Novega imena ni bilo mogoče shraniti",
+  "rename.confirm_text": "Spremenili ste ime, vendar ga niste shranili. Obdržati „%s“?",
+  "rename.confirm_save": "Shrani",
+  "rename.confirm_discard": "Ne shrani",
+  "rename.confirm_back": "Nadaljuj urejanje",
+  "rename.guide.title": "Kako preimenovati in okrasiti (§ kode)",
+  "rename.guide.how": "Za preimenovanje kliknite naslov kartice, vnesite novega in kliknite kjer koli na prazno mesto — shranilo se bo. Križec poleg polja vrne prejšnje ime brez shranjenja. Prazno polje obnovi izvirno ime.",
+  "rename.guide.codes": "V naslovu lahko uporabljate kode za oblikovanje iz Minecrafta: znak § in simbol za njim. Barve: §0–§9 in §a–§f. Slogi: §l — krepko, §o — ležeče, §n — podčrtano, §m — prečrtano, §k — „šifrirano“, §r — ponastavi vse. Koda barve ponastavi prejšnje sloge, zato sloge postavite za barvo"
 }

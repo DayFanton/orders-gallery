@@ -456,5 +456,17 @@
   "size.wmin": "Nsɛse kɛse mu duru",
   "size.wmax": "Sɛ sɛbea kɛse no mu duru",
   "size.tile": "San yɛ texture no bio",
-  "size.reset": "Sane hyɛ ase"
+  "size.reset": "Sane hyɛ ase",
+
+  "rename.title": "Mia sɛ woresesa din no",
+  "rename.cancel": "San kɔ din dedaw no mu (mmrae)",
+  "rename.placeholder": "Din (nhye — deɛ edi kan)",
+  "rename.error": "Entumi nsie din foforo no",
+  "rename.confirm_text": "Woasesa din no nanso wunsie. Wopɛ sɛ wotena \"%s\"?",
+  "rename.confirm_save": "Sie",
+  "rename.confirm_discard": "Mmrae",
+  "rename.confirm_back": "Kɔ so sesa no",
+  "rename.guide.title": "Sɛnea wubesesa din no na wode kɔla ahyehyɛ mu (§ codes §)",
+  "rename.guide.how": "Sɛ wopɛ sɛ wosesa din no a, mia din a ɛwɔ kaadi no so, kyerɛw foforo na mia baabiara a ahunu — wobesie. Asasia a ɛwɔ faako a ɛhɔ no bɛsan de din dedaw no aba na wonsie. Faako a ahunu bɛsan de din titiriw no aba.",
+  "rename.guide.codes": "Wɔ ti n’asɛm ase no, wobetumi de Minecraft nhyehyɛe nkrataa adi dwuma: nkrataa § ne nea edidi so no. Ahyase: §0–§9 ne §a–§f. Sɛnea ɛte: §l — duru, §o — koto, §n — ase hyehyɛ, §m — mfinimfini hyehyɛ, §k — \"ahyɛ\", §r — sankɔ hyɛ nyinaa. Ahyase kɔd no sankɔ hyɛ tete ahyase no, enti fa ahyase no gu ahyase kɔd no akyi"
 }

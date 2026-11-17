@@ -458,5 +458,17 @@
   "size.wmin": "Vuleki bya vukulu bya le hansi",
   "size.wmax": "Vule ra ntshontsho lowukulu",
   "size.tile": "Pheta xiyimo",
-  "size.reset": "Riseta"
+  "size.reset": "Riseta",
+
+  "rename.title": "Tlanya ku cinca vito",
+  "rename.cancel": "Vuyisela vito ra khale (ungahlayisi)",
+  "rename.placeholder": "Vito (ku pfumala — ra masungulo)",
+  "rename.error": "Ku hlulekile ku hlayisa vito lerintshwa",
+  "rename.confirm_text": "U cince vito kambe u nga ri hlayisi. Xana u lava ku siya \"%s\"?",
+  "rename.confirm_save": "Hlayisa",
+  "rename.confirm_discard": "Ungahlayisi",
+  "rename.confirm_back": "Yisa emahlweni ku lulamisa",
+  "rename.guide.title": "Ndlela yo cinca vito ni ku ri sasekisa (§ ti khodi ta §)",
+  "rename.guide.how": "Ku cinca vito, tlanya eka nhlokomhaka ya khadi, nghenisa rintshwa kutani u tlanya eka ndhawu yin'wana ni yin'wana leyi nga riki na nchumu — yi ta hlayisiwa. Xihambano lexi nga kusuhi ni ndhawu xi ta vuyisela vito ra khale handle ko hlayisa. Ndhawu leyi nga riki na nchumu yi ta vuyisela vito ra masungulo.",
+  "rename.guide.codes": "MZ: Eka xihloko u nga tirhisa khodi ya ku fomata ya Minecraft: hayi § ni xibalo endzhaku ka yona. Mihlovo: §0–§9 ni §a–§f. Tinxaka: §l — yo kora, §o — yo nonile, §n — leyi nga ni ntsandza ehansi, §m — leyi nga ni ntsandza exikarhi, §k — \"yo tumbetiwa\", §r — thava hinkwaswo leswi hundzeke. Khodi ya muhlovo yi vuyisela tinxaka leti hundzeke, kambe veka tinxaka endzhaku ka muhlovo"
 }

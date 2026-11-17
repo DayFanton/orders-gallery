@@ -458,5 +458,17 @@
   "size.wmin": "Ponderea dim. min.",
   "size.wmax": "Greutatea dimensiunii maxime",
   "size.tile": "Repetă textura",
-  "size.reset": "Resetează"
+  "size.reset": "Resetează",
+
+  "rename.title": "Faceți clic pentru a redenumi",
+  "rename.cancel": "Reveniți la numele anterior (nu salvați)",
+  "rename.placeholder": "Nume (gol — original)",
+  "rename.error": "Nu s-a putut salva noul nume",
+  "rename.confirm_text": "Ați modificat numele, dintr-un motiv oarecare nu l-ați salvat. Păstrați „%s”?",
+  "rename.confirm_save": "Salvați",
+  "rename.confirm_discard": "Nu salvați",
+  "rename.confirm_back": "Continuați editarea",
+  "rename.guide.title": "Cum se redenumește și se personalizează cu culori (coduri §)",
+  "rename.guide.how": "Pentru a redenumi, faceți clic pe titlul cardului, introduceți unul nou și faceți clic oriunde în spațiul gol — acesta va fi salvat. Crucea de lângă câmp va reveni la numele anterior fără a salva. Un câmp gol va restaura numele original.",
+  "rename.guide.codes": "În titlu puteți folosi coduri de formatare din Minecraft: semnul § și un caracter după acesta. Culori: §0–§9 și §a–§f. Stiluri: §l — aldin, §o — cursiv, §n — subrayat, §m — tăiat, §k — „cifrat”, §r — resetează tot. Codul de culoare resetează stilurile anterioare, așa că plasați stilurile după culoare"
 }

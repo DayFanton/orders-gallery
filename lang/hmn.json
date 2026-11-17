@@ -456,5 +456,17 @@
   "size.wmin": "Qhov hnyav ntawm qhov me tshaj",
   "size.wmax": "Qhov hnyav ntawm qhov loj tshaj plaws",
   "size.tile": "Rov qab ua qhov zoo nkauj",
-  "size.reset": "Pib dua"
+  "size.reset": "Pib dua",
+
+  "rename.title": "Nyem kom hloov npe",
+  "rename.cancel": "Rov qab rau lub npe qub (tsis txhob ceev)",
+  "rename.placeholder": "Lub npe (pob - qub)",
+  "rename.error": "Tsis nco qab khaws lub npe tshiab",
+  "rename.confirm_text": "Koj hloov lub npe tab sis tsis tau khaws. Yuav khaws \"%s\"?",
+  "rename.confirm_save": "Khaws",
+  "rename.confirm_discard": "Tsis txhob ceev",
+  "rename.confirm_back": "Txuas ntxiv kho",
+  "rename.guide.title": "Yuav ua li cas thiaj hloov lub npe thiab zoo nkauj (§ codes)",
+  "rename.guide.how": "Yuav hloov lub npe, nyem rau daim npav lub npe, sau ib tug tshiab thiab nyem rau txhua qhov chaw dawb — nws yuav khaws cia. Tus ntoo khaub lig nyob ib sab ntawm lub teb yuav rov qab los rau lub npe qub yam tsis tau khaws. Ib lub teb dawb yuav rov qab los rau lub npe qub.",
+  "rename.guide.codes": "Hauv lub npe, koj tuaj yeem siv Minecraft cov cai qauv: lub cim § thiab ib tug cwj pwm tom qab nws. Xim: §0–§9 thiab §a–§f. Cov qauv: §l — tuab, §o — ncaj, §n — hauv qab kos, §m — hauv nruab nrab kos, §k — \"nyob nraim\", §r — rov pib dua txhua yam. Cov xim code rov pib dua cov qauv qub, yog li muaj cov qauv tom qab xim"
 }

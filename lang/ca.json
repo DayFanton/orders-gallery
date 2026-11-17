@@ -458,5 +458,17 @@
   "size.wmin": "Pes de la mida mín.",
   "size.wmax": "Pes de la mida màxima",
   "size.tile": "Repetir textura",
-  "size.reset": "Restablir"
+  "size.reset": "Restablir",
+
+  "rename.title": "Feu clic per canviar el nom",
+  "rename.cancel": "Torna al nom anterior (no desis)",
+  "rename.placeholder": "Nom (buit — original)",
+  "rename.error": "No s'ha pogut desar el nou nom",
+  "rename.confirm_text": "Heu canviat el nom però no l'heu desat. Voleu mantenir «%s»?",
+  "rename.confirm_save": "Desa",
+  "rename.confirm_discard": "No desis",
+  "rename.confirm_back": "Continuar editant",
+  "rename.guide.title": "Com canviar el nom i estilitzar (codis §)",
+  "rename.guide.how": "Per canviar el nom, cliqueu al títol de la targeta, introduïu un de nou i cliqueu a qualsevol espai buit; es desarà. La creu al costat del camp tornarà al nom anterior sense desar. Un camp buit restaurarà el nom original.",
+  "rename.guide.codes": "Al títol podeu utilitzar codis de format de Minecraft: el signe § i un caràcter després. Colors: §0–§9 i §a–§f. Estils: §l — negreta, §o — cursiva, §n — subratllat, §m — tatxat, §k — «ofuscat», §r — restablir-ho tot. El codi de color restablix els estils anteriors, així que col·loqueu els estils després del color"
 }

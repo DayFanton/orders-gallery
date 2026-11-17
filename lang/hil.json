@@ -458,5 +458,17 @@
   "size.wmin": "Timbang sang min. kadakuon",
   "size.wmax": "Timbang sang maximum nga kadakuon",
   "size.tile": "Ulihona ang texture",
-  "size.reset": "I-reset"
+  "size.reset": "I-reset",
+
+  "rename.title": "I-click para ilisan ang ngalan",
+  "rename.cancel": "Ibalik sa una nga ngalan (indi pag-save)",
+  "rename.placeholder": "Ngalan (blangko — original)",
+  "rename.error": "Wala na-save ang bag-o nga ngalan",
+  "rename.confirm_text": "Ginbag-o mo ang ngalan apan wala mo ini gin-save. Gusto mo bala tipigan ang \"%s\"?",
+  "rename.confirm_save": "Tipigi",
+  "rename.confirm_discard": "Indi pag-save",
+  "rename.confirm_back": "Ipadayon ang pag-edit",
+  "rename.guide.title": "Paano pag-ilis sang ngalan kag pagpatahom (mga § code)",
+  "rename.guide.how": "Para mapulihan ang ngalan, i-klik ang titulo sang kard, isulat ang bag-o kag i-klik ang bisan diin nga wala sang sulod — ma-save ini. Ang krus sa tupad sang field magabalik sa una nga ngalan nga indi pag-tipigan. Ang wala sang sulod nga field magabalik sang original nga ngalan.",
+  "rename.guide.codes": "Sa titulo, sarang mo gamiton ang mga code sang pag-format sang Minecraft: ang tanda § kag isa ka karakter sa likod sini. Mga Kolor: §0–§9 kag §a–§f. Mga Estilo: §l — bold, §o — italic, §n — may linya sa ubos, §m — may linya sa tunga, §k — \"gin-obscure\", §r — i-reset ang tanan. Ang code sang kolor nag-re-reset sang mga na una nga estilo, gani ibutang ang mga estilo sa likod sang kolor"
 }

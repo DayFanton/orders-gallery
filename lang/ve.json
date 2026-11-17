@@ -458,5 +458,17 @@
   "size.wmin": "Tshilemo tsha vhuhulu vhutuku",
   "size.wmax": "Tshilemo tsha vhuhulwane vhuhulu",
   "size.tile": "Vhaedza vhuimo",
-  "size.reset": "Vhaedza hafhu"
+  "size.reset": "Vhaedza hafhu",
+
+  "rename.title": "Kgotedzani u shandula dzina",
+  "rename.cancel": "Vhuyedzani kha dzina ḽaho fhiraho (ni songo vhulunga)",
+  "rename.placeholder": "Dzina (lu songo vha na tshithu — ḽa u thoma)",
+  "rename.error": "Zwo haniwa u vhulunga dzina ḽiswa",
+  "rename.confirm_text": "Ni shandula dzina fhedzi ni songo vhulunga. Ni khou toda u sia \"%s\"?",
+  "rename.confirm_save": "Vhulunga",
+  "rename.confirm_discard": "Ni songo vhulunga",
+  "rename.confirm_back": "Bvela phandḽa u lulamisa",
+  "rename.guide.title": "Vha nga shandula hani dzina na u ḽi khavhisa (§ khodo)",
+  "rename.guide.how": "U shandula dzina, ni kwama thiramu ya kada, ni dzhenise ḽiswa ni kwama hune ha vha na tshithu — ḽi do vhulungwa. Murobo u re tsini na shango u do vhuyedzani dzina ḽaho fhiraho hu songo vhulungwa. Shango ḽi songo vha na tshithu ḽi do vhuyedzani dzina ḽa u thoma.",
+  "rename.guide.codes": "Hu tshi itwa thero, ni nga shumisa khodoro ya u fomata ya Minecraft: tshiga § na maṅwalo nga murahu hayo. Mivhala: §0–§9 na §a–§f. Mitaila: §l — ya nṱha, §o — ya u sekama, §n — yo olwaho fhasi, §m — yo olwaho vhukati, §k — \"yo dzumba\", §r — vhuyedzedzani zwoṱhe. Khodoro ya muvhala i vhuyedzedza mitaila ya kale, nga zwenezwo vhekani mitaila nga murahu ha muvhala"
 }

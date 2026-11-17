@@ -456,5 +456,17 @@
   "size.wmin": "Min. izmēra svars",
   "size.wmax": "Maksimālā izmēra svars",
   "size.tile": "Atkārtot tekstūru",
-  "size.reset": "Atiestatīt"
+  "size.reset": "Atiestatīt",
+
+  "rename.title": "Noklikšķiniet, lai pārdēvētu",
+  "rename.cancel": "Atgriezt iepriekšējo nosaukumu (nesaglabāt)",
+  "rename.placeholder": "Nosaukums (tukšs — oriģinālais)",
+  "rename.error": "Neizdevās saglabāt jauno nosaukumu",
+  "rename.confirm_text": "Jūs mainījāt nosaukumu, bet neesat to saglabājuši. Saglabāt \"%s\"?",
+  "rename.confirm_save": "Saglabāt",
+  "rename.confirm_discard": "Nesaglabāt",
+  "rename.confirm_back": "Turpināt rediģēšanu",
+  "rename.guide.title": "Kā pārdēvēt un noformēt (§ kodi)",
+  "rename.guide.how": "Lai pārdēvētu, noklikšķiniet uz kartītes virsraksta, ievadiet jaunu un noklikšķiniet jebkurā tukšā vietā — tā tiks saglabāta. Krustiņš blakus laukam atgriezīs iepriekšējo nosaukumu bez saglabāšanas. Tukšs lauks atjaunos oriģinālo nosaukumu.",
+  "rename.guide.codes": "Nosaukumā varat izmantot Minecraft formatēšanas kodus: zīmi § un simbolu pēc tās. Krāsas: §0–§9 un §a–§f. Stili: §l — treknraksts, §o — slīpraksts, §n — pasvītrots, §m — pārsvītrots, §k — „šifrēts“, §r — atiestatīt visu. Krāsas kods atiestata iepriekšējos stilus, tāpēc stilus novietojiet pēc krāsas"
 }

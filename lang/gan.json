@@ -456,5 +456,17 @@
   "size.wmin": "最小尺寸權重",
   "size.wmax": "最大尺寸重量",
   "size.tile": "重复纹理",
-  "size.reset": "重置"
+  "size.reset": "重置",
+
+  "rename.title": "點擊改名",
+  "rename.cancel": "還原原名（毋保存）",
+  "rename.placeholder": "名稱（空白 — 原本）",
+  "rename.error": "無法儲存新名稱",
+  "rename.confirm_text": "您已更改名稱但毋儲存。要保留「%s」嗎？",
+  "rename.confirm_save": "儲存",
+  "rename.confirm_discard": "毋保存",
+  "rename.confirm_back": "繼續編輯",
+  "rename.guide.title": "如何重命名並使用顏色美化（§ 代碼）",
+  "rename.guide.how": "要重新命名，請點擊卡片標題，輸入新名稱並點擊任何空白處 — 它將被儲存。欄位旁邊的交叉將在不儲存的情況下恢復先前的名稱。空欄位將恢復原始名稱。",
+  "rename.guide.codes": "在标题里你可以用 Minecraft 的格式代码：§ 符号搭仔后首个字符。颜色：§0–§9 搭 §a–§f。样式：§l — 粗体，§o — 斜体，§n — 下划线，§m — 中划线，§k — “乱码”，§r — 重置全部。颜色代码会重置之前个样式，所以拿样式摆勒颜色后面"
 }

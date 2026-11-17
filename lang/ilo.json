@@ -456,5 +456,17 @@
   "size.wmin": "Timbang ti min. a dakdakkel",
   "size.wmax": "Timbang ti maximum a kadakkel",
   "size.tile": "Ulingen ti tekstura",
-  "size.reset": "I-reset"
+  "size.reset": "I-reset",
+
+  "rename.title": "I-klik tapno baliwan ti nagan",
+  "rename.cancel": "Isubli iti dati a nagan (saan a i-save)",
+  "rename.placeholder": "Nagan (nawang — nagtaudan)",
+  "rename.error": "Nabigo a i-save ti baro a nagan",
+  "rename.confirm_text": "Dinismayo mo ti nagan ngem saanmo nga in-save. Agtalinaed kadi ti \"%s\"?",
+  "rename.confirm_save": "I-save",
+  "rename.confirm_discard": "Saan a i-save",
+  "rename.confirm_back": "Ituloy ti ag-edit",
+  "rename.guide.title": "Kasano ti agbaliw iti nagan ken agpinta (§ code)",
+  "rename.guide.how": "Tapno palamiaten ti nagan, i-klik ti titulo ti kard, iyis-is a baro ken i-klik ti aniaman a awan nagan — ma-save daytoy. Ti krus iti abay ti field ket isublina ti dati a nagan nga awan a-save-na. Ti awan nagan a field ket isublina ti nagtaudan.",
+  "rename.guide.codes": "Iti titulo, mabalinmo nga úsaren Dagiti code ti panag-format ti Minecraft: ti pagdakamat § ken maysa a karakter iti likudna. Dagiti Kulay: §0–§9 ken §a–§f. Dagiti Estilo: §l — napuskol, §o — nakairing, §n — addaanulay iti baba, §m — addaanulay iti tengnga, §k — \"makarلطib\", §r — i-reset amin. Ti code ti kulay ket i-resetna dagiti dati nga estilo, isu nga ipaspektum dagiti estilo kalpasan ti kulay"
 }

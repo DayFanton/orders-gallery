@@ -458,5 +458,17 @@
   "size.wmin": "Boima jwa bogolo jo bonnye",
   "size.wmax": "Bokete jwa bogolo jo bo kwa godimo",
   "size.tile": "Pheta sebopeho",
-  "size.reset": "Dira gape"
+  "size.reset": "Dira gape",
+
+  "rename.title": "Tobetsa go fetola leina",
+  "rename.cancel": "Busetsa lebitso la pele (se boloke)",
+  "rename.placeholder": "Leina (fela — la pele)",
+  "rename.error": "Go padile go boloka lebitso le lešha",
+  "rename.confirm_text": "O fetotse lebitso mme ga o a le boloka. A o batla go tlogela \"%s\"?",
+  "rename.confirm_save": "Boloka",
+  "rename.confirm_discard": "Se boloke",
+  "rename.confirm_back": "Tswelela pele go rulaganya",
+  "rename.guide.title": "Ka fao o ka fetolang lebitso le go le kgabisa (§ khoutu)",
+  "rename.guide.how": "Go fetola lebitso, tobetsa setlhogo sa karata, tsenya le lešha mme o tlhabelle lefelo lepe fela le le senang sepe — le tla bolokwa. Sefapaano se se gaufi le lebala se tla busetsa lebitso la pele ntle le go boloka. Lebala le le senang sepe le tla busetsa leina la pele.",
+  "rename.guide.codes": "Mo setlhong, o ka dirisa dikhoutu tsa go fomata tsa Minecraft: letshwao § le tlhaku morago ga lone. Mebala: §0–§9 le §a–§f. Ditsela: §l — e e nonneng, §o — e e sekameng, §n — e e thaletsweng kwa tlase, §m — e e thaletsweng mo gare, §k — \"e e fitlhilweng\", §r — boela gantsi tsotlhe. Khhoutu ya mmala e busetsa ditsela tsa pele, ka jalo baya ditsela morago ga mmala"
 }

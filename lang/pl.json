@@ -458,5 +458,17 @@
   "size.wmin": "Waga min. rozmiaru",
   "size.wmax": "Waga maksymalnego rozmiaru",
   "size.tile": "Powtórz teksturaturowanie",
-  "size.reset": "Resetuj"
+  "size.reset": "Resetuj",
+
+  "rename.title": "Kliknij, aby zmienić nazwę",
+  "rename.cancel": "Przywróć poprzednią nazwę (nie zapisuj)",
+  "rename.placeholder": "Nazwa (puste — oryginalna)",
+  "rename.error": "Nie udało się zapisać nowej nazwy",
+  "rename.confirm_text": "Zmieniono nazwę, ale jej nie zapisano. Zachować „%s”?",
+  "rename.confirm_save": "Zapisz",
+  "rename.confirm_discard": "Nie zapisuj",
+  "rename.confirm_back": "Kontynuuj edycję",
+  "rename.guide.title": "Jak zmienić nazwę i ozdobić (kody §)",
+  "rename.guide.how": "Aby zmienić nazwę, kliknij tytuł karty, wpisz nową i kliknij w dowolne wolne miejsce — zostanie zapisana. Krzyżyk obok pola przywróci poprzednią nazwę bez zapisu. Puste pole przywróci oryginalną nazwę.",
+  "rename.guide.codes": "W tytule możesz używać kodów formatowania z Minecrafta: znaku § i następującego po nim znaku. Kolory: §0–§9 oraz §a–§f. Style: §l — pogrubienie, §o — kursywa, §n — podkreślenie, §m — przekreślenie, §k — „zaszyfrowany”, §r — resetuj wszystko. Kod koloru resetuje poprzednie style, więc umieszczaj style po kolorze"
 }

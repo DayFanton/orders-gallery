@@ -458,5 +458,17 @@
   "size.wmin": "Pwysau'r maint lleiaf",
   "size.wmax": "Pwysau maint mwyaf",
   "size.tile": "Ailadrodd gwead",
-  "size.reset": "Ailosod"
+  "size.reset": "Ailosod",
+
+  "rename.title": "Cliciwch i ail-enwi",
+  "rename.cancel": "Dychwelyd i'r enw blaenorol (peidiwch â chadw)",
+  "rename.placeholder": "Enw (wag — gwreiddiol)",
+  "rename.error": "Methodd â chadw'r enw newydd",
+  "rename.confirm_text": "Rydych wedi newid yr enw ond heb ei gadw. Cadw \"%s\"?",
+  "rename.confirm_save": "Cadw",
+  "rename.confirm_discard": "Peidiwch â chadw",
+  "rename.confirm_back": "Parhau i olygu",
+  "rename.guide.title": "Sut i ail-enwi a'i steilio (codau §)",
+  "rename.guide.how": "I ail-enwi, cliciwch ar deitl y cerdyn, nodwch un newydd a cliciwch unrhyw le ar le gwag — bydd yn cael ei gadw. Bydd y groes wrth ymyl y maes yn dychwelyd i'r enw blaenorol heb ei gadw. Bydd maes gwag yn adfer yr enw gwreiddiol.",
+  "rename.guide.codes": "Yn y teitl, gallwch ddefnyddio codau fformatio o Minecraft: yr arwydd § a nod ar ôl hynny. Lliwiau: §0–§9 a §a–§f. Arddulliau: §l — trwchus, §o — italig, §n — dan linell, §m — trwodd, §k — \"aneglur\", §r — ailosod popeth. Mae'r cod lliw yn ailosod arddulliau blaenorol, felly rhowch arddulliau ar ôl y lliw"
 }

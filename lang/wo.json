@@ -458,5 +458,17 @@
   "size.wmin": "Dole dayo bu ndaw",
   "size.wmax": "Gewicht bu maggu ba",
   "size.tile": "Dellu defar texture",
-  "size.reset": "Defar"
+  "size.reset": "Defar",
+
+  "rename.title": "Bës ngir coppite tur wi",
+  "rename.cancel": "Dellu ci tur wi wessu (bul aar)",
+  "rename.placeholder": "Tur (mu amul dara — bu njëkk)",
+  "rename.error": "Bëgg nañu aar tur wu bees bi, waaye amul njariñ",
+  "rename.confirm_text": "Yenn na tur wi waaye aaroo ko. Bëgg nga bàyyi \"%s\"?",
+  "rename.confirm_save": "Aar",
+  "rename.confirm_discard": "Bul aar",
+  "rename.confirm_back": "Wooyal coppite bi",
+  "rename.guide.title": "Naka nga faytu tur wi te def ci bànqas (§ codes §)",
+  "rename.guide.how": "Ngir coppite tur wi, bësal ci turu kart bi, bindal benn bu bees bësal ci benn barab bu amul dara — dina am njariñ. Xaali bi nekk ci wetu barab bi dina dellusi ci tur wi wessu te aaroo ko. Barab bu amul dara dina dellusi ci tur wi njëkk.",
+  "rename.guide.codes": "Ci tiktal bi, mën nga jëfandikoo kodi yu sotti yu Minecraft: maandax § ak benn bokk ca ginnaawam. Ronkaay yi: §0–§9 ak §a–§f. Melosuuf yi: §l — mën, §o — wëñ, §n — am rënq ci suuf, §m — am rënq ci digg bi, §k — \"bëtu\", §r — dellu ci lépp. Kodi ronkaay bi dafa dellu ci melosuuf yu yàlla yi, kon tekkil melosuuf yi ci ginnaaw ronkaay bi"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "최소 크기 가중치",
   "size.wmax": "최대 사이즈 무게",
   "size.tile": "텍스처 반복",
-  "size.reset": "초기화"
+  "size.reset": "초기화",
+
+  "rename.title": "이름을 변경하려면 클릭하세요",
+  "rename.cancel": "이전 이름으로 되돌리기(저장 안 함)",
+  "rename.placeholder": "이름(비워두면 원래 이름)",
+  "rename.error": "새 이름을 저장하지 못했습니다",
+  "rename.confirm_text": "이름을 변경했지만 저장하지 않았습니다. '%s'(으)로 유지하시겠습니까?",
+  "rename.confirm_save": "저장",
+  "rename.confirm_discard": "저장 안 함",
+  "rename.confirm_back": "편집 계속하기",
+  "rename.guide.title": "이름을 바꾸고 예쁘게 꾸미는 법 (§ 코드)",
+  "rename.guide.how": "이름을 바꾸려면 카드 제목을 클릭하고 새 이름을 입력한 후 빈 곳을 클릭하면 저장됩니다. 필드 옆의 X 표시는 저장하지 않고 이전 이름으로 되돌립니다. 빈 필드는 원래 이름으로 복원합니다.",
+  "rename.guide.codes": "제목에서는 Minecraft 서식 코드를 사용할 수 있습니다: § 기호와 그 뒤의 문자. 색상: §0–§9 및 §a–§f. 스타일: §l — 굵게, §o — 기울임꼴, §n — 밑줄, §m — 취소선, §k — \"난독화\", §r — 모두 재설정. 색상 코드는 이전 스타일을 재설정하므로 스타일은 색상 뒤에 배치하세요"
 }

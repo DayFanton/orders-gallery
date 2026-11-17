@@ -458,5 +458,17 @@
   "size.wmin": "Bobot ukuran min.",
   "size.wmax": "Berat ukuran maksimal",
   "size.tile": "Ulangi tekstur",
-  "size.reset": "Atur ulang"
+  "size.reset": "Atur ulang",
+
+  "rename.title": "Klik untuk mengganti nama",
+  "rename.cancel": "Kembali ke nama sebelumnya (jangan simpan)",
+  "rename.placeholder": "Nama (kosong — asli)",
+  "rename.error": "Gagal menyimpan nama baru",
+  "rename.confirm_text": "Anda telah mengubah nama tetapi belum menyimpannya. Tetap gunakan \"%s\"?",
+  "rename.confirm_save": "Simpan",
+  "rename.confirm_discard": "Jangan simpan",
+  "rename.confirm_back": "Lanjutkan mengedit",
+  "rename.guide.title": "Cara mengganti nama dan mempercantik (kode §)",
+  "rename.guide.how": "Untuk mengganti nama, klik judul kartu, masukkan nama baru dan klik di sembarang tempat kosong — nama tersebut akan disimpan. Tombol silang di sebelah bidang akan mengembalikan nama sebelumnya tanpa menyimpan. Bidang kosong akan memulihkan nama asli.",
+  "rename.guide.codes": "Di judul, Anda dapat menggunakan kode pemformatan Minecraft: tanda § dan karakter setelahnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — miring, §n — garis bawah, §m — coret, §k — \"tersamarkan\", §r — reset semua. Kode warna mengatur ulang gaya sebelumnya, jadi letakkan gaya setelah warna"
 }

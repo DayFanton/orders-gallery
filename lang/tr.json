@@ -458,5 +458,17 @@
   "size.wmin": "Min. boyut ağırlığı",
   "size.wmax": "Maksimum boyut ağırlığı",
   "size.tile": "Dokuyu tekrarla",
-  "size.reset": "Sıfırla"
+  "size.reset": "Sıfırla",
+
+  "rename.title": "Yeniden adlandırmak için tıklayın",
+  "rename.cancel": "Önceki adı geri yükle (kaydetme)",
+  "rename.placeholder": "Ad (boş — orijinal)",
+  "rename.error": "Yeni ad kaydedilemedi",
+  "rename.confirm_text": "Adı değiştirdiniz ancak kaydetmediniz. \"%s\" kalsın mı?",
+  "rename.confirm_save": "Kaydet",
+  "rename.confirm_discard": "Kaydetme",
+  "rename.confirm_back": "Düzenlemeye devam et",
+  "rename.guide.title": "Nasıl yeniden adlandırılır ve renkli biçimlendirilir (§ kodları)",
+  "rename.guide.how": "Yeniden adlandırmak için kart başlığına tıklayın, yeni bir ad girin ve herhangi bir boş alana tıklayın — kaydedilecektir. Alanın yanındaki çarpı işareti kaydetmeden önceki adı geri yükler. Boş bir alan orijinal adı geri getirecektir.",
+  "rename.guide.codes": "Başlıkta Minecraft biçimlendirme kodlarını kullanabilirsiniz: § işareti ve sonrasındaki karakter. Renkler: §0–§9 ve §a–§f. Stiller: §l — kalın, §o — italik, §n — altı çizili, §m — üstü çizili, §k — „şifreli”, §r — tümünü sıfırla. Renk kodu önceki stilleri sıfırlar, bu yüzden stilleri renkten sonra yerleştirin"
 }

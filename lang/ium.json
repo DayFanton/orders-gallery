@@ -458,5 +458,17 @@
   "size.wmin": "Ulemu wa ukulu wandende",
   "size.wmax": "Max size weight",
   "size.tile": "Repeat texture",
-  "size.reset": "Reset"
+  "size.reset": "Reset",
+
+  "rename.title": "Hnyangv hnoqv",
+  "rename.cancel": "Hnyangv hnoqv da'caux (norh mbuov hnyangv)",
+  "rename.placeholder": "Hnyangv (hnoqv zoux - hnyangv mbuov)",
+  "rename.error": "Mbuov hnyangv zoux niouv mbuov",
+  "rename.confirm_text": "Hnyangv hnoqv zoux niouv mbuov. Hnyangv \"%s\" zoux?",
+  "rename.confirm_save": "Hnyangv mbuov",
+  "rename.confirm_discard": "Norh mbuov hnyangv",
+  "rename.confirm_back": "Mbuov zoux hnyangv",
+  "rename.guide.title": "Hnyangv hnoqv zoux niouv mbuov mingv (§ codes §)",
+  "rename.guide.how": "Hnyangv hnoqv zoux niouv mbuov, hnyangv hnoqv zoux niouv mbuov, hnyangv hnoqv zoux niouv mbuov — hnyangv mbuov. Hnyangv hnoqv zoux niouv mbuov hnyangv hnoqv. Hnyangv hnoqv zoux niouv mbuov hnyangv hnoqv zoux.",
+  "rename.guide.codes": "Nyung yiet nqong mbuo Minecraft mbunh yiet ngong: § kluom hnyang yiet ngong. Mbunh: §0–§9 ngh §a–§f. Hnyang: §l — hnyang nqong, §o — hnyang zang, §n — hnyang long zang, §m — hnyang long tɔt, §k — \"nyien\", §r — yiet mbuo. Mbunh kodi hnyang mbuo lɔ, kung nyang yiet ngong mbunh kodi mbuo"
 }

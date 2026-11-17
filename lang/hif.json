@@ -458,5 +458,17 @@
   "size.wmin": "Sab se chhota aakar ka wajan",
   "size.wmax": "Max size weight",
   "size.tile": "Texture ke repeat karo",
-  "size.reset": "Reset karo"
+  "size.reset": "Reset karo",
+
+  "rename.title": "Naam badle khatir click karo",
+  "rename.cancel": "Puraana naam pe wapas jao (save mat karo)",
+  "rename.placeholder": "Naam (khali — asli)",
+  "rename.error": "Nawa naam save nai bhayis",
+  "rename.confirm_text": "Aap naam badal diyo lekin save nai kiyo. Kya \"%s\" rakhe ke hai?",
+  "rename.confirm_save": "Save karo",
+  "rename.confirm_discard": "Save mat karo",
+  "rename.confirm_back": "Sudhaar jaari rakho",
+  "rename.guide.title": "Naam kaise badle aur sundar banaye (§ codes §)",
+  "rename.guide.how": "Naam badle khatir, card ke title pe click karo, naya naam likho aur koi bhi khali jagah pe click karo — ye save ho jaega. Field ke bagal wala cross bina save kiye purana naam wapas le aaega. Khali field asli naam wapas le aaega.",
+  "rename.guide.codes": "Title me aap Minecraft formatting codes use kar sakte hain: § sign aur uske baad ek character. Colors: §0–§9 aur §a–§f. Styles: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — sab reset karein. Color code pichle styles ko reset kar deta hai, isliye styles ko color ke baad rakhein"
 }

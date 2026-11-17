@@ -456,5 +456,17 @@
   "size.wmin": "Min. oʻlcham vazni",
   "size.wmax": "Maksimal o'lcham og'irligi",
   "size.tile": "Texturani takrorlash",
-  "size.reset": "Qayta o'rnatish"
+  "size.reset": "Qayta o'rnatish",
+
+  "rename.title": "Qayta nomlash uchun bosing",
+  "rename.cancel": "Oldingi nomga qaytarish (saqlamaslik)",
+  "rename.placeholder": "Nomi (boʻsh — asl holati)",
+  "rename.error": "Yangi nomni saqlab boʻlmadi",
+  "rename.confirm_text": "Nomni o'zgartirdingiz, lekin saqlamadingiz. \"%s\" qoldirilsinmi?",
+  "rename.confirm_save": "Saqlash",
+  "rename.confirm_discard": "Saqlamaslik",
+  "rename.confirm_back": "Tahrirlashni davom ettirish",
+  "rename.guide.title": "Qayta nomlash va bezash usuli (§ kodlari)",
+  "rename.guide.how": "Qayta nomlash uchun karta sarlavhasiga bosing, yangisini kiriting va istalgan boʻsh joyga bosing — u saqlanadi. Maydon yonidagi xoch saqlamasdan oldingi nomni qaytaradi. Boʻsh maydon asl nomni tiklaydi.",
+  "rename.guide.codes": "Sarlavhada Minecraft formatlash kodlaridan foydalanishingiz mumkin: § belgisi va undan keyingi belgi. Ranglar: §0–§9 va §a–§f. Uslublar: §l — qalin, §o — qiya, §n — tagiga chiziq tortilgan, §m — ustidan chiziq tortilgan, §k — \"shifrlangan\", §r — hammasini tiklash. Rang kodi oldingi uslublarni tiklaydi, shuning uchun uslublarni rangdan keyin qo'ying"
 }

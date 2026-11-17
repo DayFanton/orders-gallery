@@ -456,5 +456,17 @@
   "size.wmin": "Kusebenta kwebubungaka lobuncane",
   "size.wmax": "Bundzima besayizi lenkhulu kakhulu",
   "size.tile": "Phinda sakhiwo",
-  "size.reset": "Setha futsi"
+  "size.reset": "Setha futsi",
+
+  "rename.title": "Chofoza kushintsha ligama",
+  "rename.cancel": "Buyisela ligama langaphambili (ungawongci)",
+  "rename.placeholder": "Ligama (lingenalutho — lekuqala)",
+  "rename.error": "Kuhlulekile kugcina ligama lelusha",
+  "rename.confirm_text": "Ushintšitse ligama kodwa awuligcinanga. Ufuna kushiya \"%s\"?",
+  "rename.confirm_save": "Wongca",
+  "rename.confirm_discard": "Ungawongci",
+  "rename.confirm_back": "Qhubeka uhlela",
+  "rename.guide.title": "Indlela yekushintsha ligama kanye nekuhlobisa (§ makhodi)",
+  "rename.guide.how": "Kantsi kute u-shintsha ligama, chofoza sitsite selikhadi, faka lelusha bese uchofoza noma yiphi indawo engenalutho — izowongcwa. Siphambano lesiseceleni kwendzawo sizobuyisela ligama langaphambili ngaphandle kokungcwaba. Indzawo engenalutho izobuyisela ligama lekucala.",
+  "rename.guide.codes": "Esihlokweni ungasebentisa emakhodi ekufomatha e-Minecraft: uphawu § kanye nelibala ngemuva kwalo. Imibala: §0–§9 kanye ne-§a–§f. Titayela: §l — lokugqinsi, §o — lokuncike, §n — lokunemugqa ngaphansi, §m — lokunemugqa phakatsi, §k — \"lokufihliwe\", §r — setha kabusha konkhe. Ikhodi yemibala iseta kabusha titayela tangaphambili, ngakho beka titayela ngemuva kwemibala"
 }

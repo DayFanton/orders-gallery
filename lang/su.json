@@ -458,5 +458,17 @@
   "size.wmin": "Beurat ukuran min.",
   "size.wmax": "Beurat ukuran maksimal",
   "size.tile": "Balikan tékstur",
-  "size.reset": "Setél deui"
+  "size.reset": "Setél deui",
+
+  "rename.title": "Klik pikeun ngaranan deui",
+  "rename.cancel": "Balikkeun kana nami asal (teu disimpen)",
+  "rename.placeholder": "Nami (kosong — asal)",
+  "rename.error": "Gagal nyimpen nami énggal",
+  "rename.confirm_text": "Nami parantos dirobah tapi teu disimpen. Tetep dianggo \"%s\"?",
+  "rename.confirm_save": "Simpen",
+  "rename.confirm_discard": "Teu disimpen",
+  "rename.confirm_back": "Teraskeun ngédit",
+  "rename.guide.title": "Kumaha cara ngarobih nami tur ngahias (kode §)",
+  "rename.guide.how": "Pikeun ngarobih nami, klik judul kartu, ketik nami anyar teras klik di mana waé tempat kosong — bakal disimpen. Tanda silang gigireun kolom bakal mulihkeun nami sateuacanna tanpa disimpen. Kolom kosong bakal mulihkeun nami asal.",
+  "rename.guide.codes": "Dina judul, anjeun tiasa nganggo kode pormat Minecraft: tanda § sareng aksara saatosna. Warna: §0–§9 sareng §a–§f. Gaya: §l — kandel, §o — miring, §n — garis handap, §m — dicoret, §k — \"samar\", §r — setel ulang sadayana. Kode warna nyetel ulang gaya sateuacanna, janten pasang gaya saatos warna"
 }

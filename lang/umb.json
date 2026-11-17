@@ -456,5 +456,17 @@
   "size.wmin": "Ocilemo cunene utito",
   "size.wmax": "Ocilemo cukulu cilemo",
   "size.tile": "Kuvelula olonene",
-  "size.reset": "Vyingula vali"
+  "size.reset": "Vyingula vali",
+
+  "rename.title": "Finika oco ukapulule esina",
+  "rename.cancel": "Tiukila kesina liosi (ka usiike)",
+  "rename.placeholder": "Esina (kavi — liyetene)",
+  "rename.error": "Kayila okuvikeka esina lipeasya",
+  "rename.confirm_text": "Watesa esina lisi o kaikele. Olangi okasi \"%s\"?",
+  "rename.confirm_save": "Ikisa",
+  "rename.confirm_discard": "Ka usiike",
+  "rename.confirm_back": "Kuata ko okuvelako",
+  "rename.guide.title": "Ukati wokukwata esina lokuciwila (§ ocindilo §)",
+  "rename.guide.how": "Okuvikeka esina, kuata kesina liokadi, soneka lipeaso lokuciata kokuosi kavi — likatiuka. Ocingandu ci kasi pesina likuata esina liosi ka usiike. Ocina kavi cika tiukila kesina liyetene.",
+  "rename.guide.codes": "Vokilonga olo tivila okuvela ovikolo vio Minecraft: ovisila § kuenda ovikolo viokunima yaye. Ovipala: §0–§9 kuenda §a–§f. Ovinyingi: §l — ocene, §o — okukoka, §n — okusako posi, §m — okusako pokati, §k — \"ociku\", §r — pindula vyosi. Ovipala viokindika ovinyingi viokunyima, omo liaco tumbika ovinyingi kesi liovipala"
 }

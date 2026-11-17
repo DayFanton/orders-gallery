@@ -458,5 +458,17 @@
   "size.wmin": "Težina min. veličine",
   "size.wmax": "Težina maksimalne veličine",
   "size.tile": "Ponavljaj teksturu",
-  "size.reset": "Poništi"
+  "size.reset": "Poništi",
+
+  "rename.title": "Kliknite za preimenovanje",
+  "rename.cancel": "Vrati prethodni naziv (ne spremaj)",
+  "rename.placeholder": "Naziv (prazno — izvorno)",
+  "rename.error": "Spremanje novog naziva nije uspjelo",
+  "rename.confirm_text": "Promijenili ste naziv, ali ga niste spremili. Želite li zadržati „%s“?",
+  "rename.confirm_save": "Spremi",
+  "rename.confirm_discard": "Ne spremaj",
+  "rename.confirm_back": "Nastavi uređivanje",
+  "rename.guide.title": "Kako preimenovati i urediti (§ kodovi)",
+  "rename.guide.how": "Za preimenovanje kliknite na naziv kartice, upišite novi i kliknite bilo gdje na prazno mjesto — spremit će se. Križić pokraj polja vratit će prethodni naziv bez spremanja. Prazno polje vratit će izvorni naziv.",
+  "rename.guide.codes": "U naslovu možete koristiti kodove formatiranja iz Minecrafta: znak § i simbol nakon njega. Boje: §0–§9 i §a–§f. Stilovi: §l — podebljano, §o — kurziv, §n — podcrtano, §m — prekriženo, §k — „šifrirano“, §r — poništi sve. Kod boje poništava prethodne stilove, stoga stilove stavite nakon boje"
 }

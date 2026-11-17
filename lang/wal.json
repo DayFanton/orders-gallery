@@ -458,5 +458,17 @@
   "size.wmin": "Misa guuti ullo",
   "size.wmax": "Duriya gita woshsha",
   "size.tile": "Zaare texture",
-  "size.reset": "Zaare minsha"
+  "size.reset": "Zaare minsha",
+
+  "rename.title": "Sunttanau shiqis...",
+  "rename.cancel": "Koyro sunttanau simmisa (qanttana eda)",
+  "rename.placeholder": "Sunttanau (baqana — koyro)",
+  "rename.error": "Barri sunttanau qanta qixxissana",
+  "rename.confirm_text": "Sunttanau simmitto gidikka qanttana eda. \"%s\" aggana?",
+  "rename.confirm_save": "Qanttana",
+  "rename.confirm_discard": "Qanttana eda",
+  "rename.confirm_back": "Simmisa qanttana",
+  "rename.guide.title": "Sunttanau qanttana qixxissana ogiya (§ codes §)",
+  "rename.guide.how": "Sunttanau qanttana, card title qanttana, haari qanttana qixxissana ogiya qanttana — qanttanau eda. Cross qanttana koyro sunttanau simmisa qanttana. Baqana qanttana koyro sunttanau simmisa qanttana.",
+  "rename.guide.codes": "Maxaafaa huuphiyee wozanaappe Minecraft qefete kowo goynna dandeeta: § malliyaa neegaappe simmiyaagaa. Kulo: §0–§9 ne §a–§f. Qefete: §l — gita, §o — geeshsha, §n — gelaappe gidiyaagaa, §m — giddoppe gidiyaagaa, §k — \"shiqiri\", §r — ubbata zaara. Kulo kodiyaappe kase qefete zaariis, yaatin qefete kulo simmin wota"
 }

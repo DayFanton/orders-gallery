@@ -456,5 +456,17 @@
   "size.wmin": "وزن الحد الأدنى للحجم",
   "size.wmax": "Wozn elhagm elakbar",
   "size.tile": "Tikrar el-nasij",
-  "size.reset": "Iadat taaen"
+  "size.reset": "Iadat taaen",
+
+  "rename.title": "اضغط باش تبدل الاسم",
+  "rename.cancel": "Rajeu l-ism el-qodim (ma tsajjil)",
+  "rename.placeholder": "Al-ism (fari - el-asli)",
+  "rename.error": "Mafish tariqa la-tasjil el-ism el-jdid",
+  "rename.confirm_text": "Beddelt el-ism w ma sajjiltosh. Tkhalli \"%s\"?",
+  "rename.confirm_save": "Sajjil",
+  "rename.confirm_discard": "Ma tsajjil",
+  "rename.confirm_back": "Kamel et-ta'dil",
+  "rename.guide.title": "Kif tbedd el-ism w tezbaqou (§ codes §)",
+  "rename.guide.how": "La-tbedil el-ism, dagh al-عنوان el-card, uktub ism jdid u dagh fi ay makan fari — has-sajjil. El-cross elli gamb el-field haj-rajeu el-ism el-qodim min gher tasjil. El-field el-fari haj-rajeu el-ism el-asli.",
+  "rename.guide.codes": "Fi ism int taqdar tistakhdim rumuz tansiq Minecraft: al-rumuz § wa harf ba'adaha. Al-alwan: §0–§9 wa §a–§f. Al-namat: §l — 'arid, §o — ma'il, §n — tahtahu khat, §m — mashtub, §k — \"mushafif\", §r — i'adat ta'yin al-kul. Ramz al-lawn yu'id ta'yin al-namat al-sabiqa, lidhalik da' al-namat ba'ad al-lawn"
 }

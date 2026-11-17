@@ -456,5 +456,17 @@
   "size.wmin": "Enkai oloshoro oloing'oni",
   "size.wmax": "Enkito e saizi olore",
   "size.tile": "Enkito e nkop",
-  "size.reset": "Eriset"
+  "size.reset": "Eriset",
+
+  "rename.title": "Aibung' anasa",
+  "rename.cancel": "Aibung' anasa olaitoroki (mikitoki)",
+  "rename.placeholder": "Olaitoroki (mikitoki — e lesesia)",
+  "rename.error": "Erisai aibung' olaitoroki le olturesh",
+  "rename.confirm_text": "Aiishoto olaitoroki lenyiki, mibung'. Kitoki \"%s\"?",
+  "rename.confirm_save": "Bung",
+  "rename.confirm_discard": "Mikitoki",
+  "rename.confirm_back": "Eibung' olaitoroki lenyiki, kitoki",
+  "rename.guide.title": "Aibung' olaitoroki neibishii (§ codes e §)",
+  "rename.guide.how": "Aibung' olaitoroki neibishii olaitoroki lenyiki, mibung', eibung' eishoo olaitoroki le e lesesia — mibung'. Olaitoroki le e lesesia oibung' olaitoroki lenyiki.",
+  "rename.guide.codes": "E namba e nkop naitung'olok enkishui e Minecraft: enkishui § enjore enye. Emibala: §0–§9 enye §a–§f. Isilaili: §l — nene, §o — opuku, §n — enye enkinya olosua, §m — enye olosua lelo, §k — \"eishoo\", §r — ikweli olosua. Inkishui enye emibala eishoo isilaili e duku, olosua isilaili aing'oru emibala"
 }

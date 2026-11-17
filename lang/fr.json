@@ -458,5 +458,17 @@
   "size.wmin": "Poids de la taille min.",
   "size.wmax": "Poids de la taille maximale",
   "size.tile": "Répéter la texture",
-  "size.reset": "Réinitialiser"
+  "size.reset": "Réinitialiser",
+
+  "rename.title": "Cliquer pour renommer",
+  "rename.cancel": "Rétablir le nom précédent (ne pas enregistrer)",
+  "rename.placeholder": "Nom (vide — d'origine)",
+  "rename.error": "Échec de l'enregistrement du nouvel nom",
+  "rename.confirm_text": "Vous avez modifié le nom mais ne l'avez pas enregistré. Conserver « %s » ?",
+  "rename.confirm_save": "Enregistrer",
+  "rename.confirm_discard": "Ne pas enregistrer",
+  "rename.confirm_back": "Continuer la modification",
+  "rename.guide.title": "Comment renommer et styliser (codes §)",
+  "rename.guide.how": "Pour renommer, cliquez sur le titre de la carte, saisissez-en un nouveau et cliquez n'importe où dans l'espace vide — il sera enregistré. La croix à côté du champ rétablira le nom précédent sans enregistrer. Un champ vide restaurera le nom d'origine.",
+  "rename.guide.codes": "Dans le titre, vous pouvez utiliser les codes de formatage de Minecraft : le signe § et un caractère après celui-ci. Couleurs : §0–§9 et §a–§f. Styles : §l — gras, §o — italique, §n — souligné, §m — barré, §k — « obfusqué », §r — tout réinitialiser. Le code couleur réinitialise les styles précédents, placez donc les styles après la couleur"
 }

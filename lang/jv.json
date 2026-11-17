@@ -458,5 +458,17 @@
   "size.wmin": "Bobot ukuran min.",
   "size.wmax": "Bobot ukuran maksimal",
   "size.tile": "Baleni tektur",
-  "size.reset": "Setel ulang"
+  "size.reset": "Setel ulang",
+
+  "rename.title": "Klik kanggo ganti jeneng",
+  "rename.cancel": "Balèkak jeneng lawas (aja diarsipake)",
+  "rename.placeholder": "Jeneng (kosong — asli)",
+  "rename.error": "Gagal nyimpen jeneng anyar",
+  "rename.confirm_text": "Jeneng wis diowahi nanging durung disimpen. Tetep nganggo \"%s\"?",
+  "rename.confirm_save": "Simpen",
+  "rename.confirm_discard": "Aja disimpen",
+  "rename.confirm_back": "Terusake ngowahi",
+  "rename.guide.title": "Kepiye carane ngganti jeneng lan menehi hiasan (kode §)",
+  "rename.guide.how": "Kanggo ngganti jeneng, klik judhul kertu, ketik jeneng anyar banjur klik ing panggonan kosong apa wae — bakal disimpen. Tandha silang ing sebelah kolom bakal mbalekake jeneng sadurunge tanpa nyimpen. Kolom sing kosong bakal mulihake jeneng asli.",
+  "rename.guide.codes": "Ing irah-irah, sampeyan bisa nggunakake kode format Minecraft: tandha § lan aksara ing mburine. Werna: §0–§9 lan §a–§f. Gaya: §l — kandel, §o — miring, §n — garis ngisor, §m — dicoret, §k — \"samar\", §r — reset kabeh. Kode werna ngganti gaya sadurunge, mula pasang gaya ing mburine werna"
 }

@@ -456,5 +456,17 @@
   "size.wmin": "Min. suuruse kaal",
   "size.wmax": "Maksimaalse suuruse kaal",
   "size.tile": "Korrata tekstuuri",
-  "size.reset": "Lähtesta"
+  "size.reset": "Lähtesta",
+
+  "rename.title": "Klõpsake ümbernimetamiseks",
+  "rename.cancel": "Taasta eelmine nimi (ära salvesta)",
+  "rename.placeholder": "Nimi (tühi — algne)",
+  "rename.error": "Uue nime salvestamine ebaõnnestus",
+  "rename.confirm_text": "Muutsite nime, aga ei salvestanud seda. Kas jätta „%s“?",
+  "rename.confirm_save": "Salvesta",
+  "rename.confirm_discard": "Ära salvesta",
+  "rename.confirm_back": "Jätka muutmist",
+  "rename.guide.title": "Kuidas ümber nimetada ja kujundada (§ koodid)",
+  "rename.guide.how": "Ümbernimetamiseks klõpsake kaardi pealkirjal, sisestage uus ja klõpsake suvalises tühjas kohas — see salvestatakse. Välja kõrval olev rist taastab eelmise nime ilma salvestamiseta. Tühi väli taastab algse nime.",
+  "rename.guide.codes": "Pealkirjas saate kasutada Minecrafti vorminduskoode: märki § ja sellele järgnevat sümbolit. Värvid: §0–§9 ja §a–§f. Stiilid: §l — paks, §o — kaldkiri, §n — allajoonitud, §m — läbikriipsutatud, §k — „šifreeritud“, §r — lähtesta kõik. Värvikood lähtestab varasemad stiilid, seega pange stiilid pärast värvi"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "Mudi kichi muri",
   "size.wmax": "Gidigidi boro",
   "size.tile": "Nene texture",
-  "size.reset": "Nene lalo"
+  "size.reset": "Nene lalo",
+
+  "rename.title": "Name maod",
+  "rename.cancel": "Name maod nae gae (ne save)",
+  "rename.placeholder": "Name (kae — marigai)",
+  "rename.error": "Name maod nae gae save gae",
+  "rename.confirm_text": "Name maod nae gae save gae kae. Keep \"%s\"?",
+  "rename.confirm_save": "Save",
+  "rename.confirm_discard": "Ne save",
+  "rename.confirm_back": "Edit kase continue",
+  "rename.guide.title": "Name maod nae gae design gae (§ codes §)",
+  "rename.guide.how": "Name maod nae gae, card title pe click gae, new name write gae, free space pe click gae — save gae. Field pa cross name back gae ne save. Blank field original name back gae.",
+  "rename.guide.codes": "Erau ai bona yu inaka Minecraft format kodu: § maumau bona mataidia una. Miri: §0–§9 bona §a–§f. Stila: §l — goeva, §o — kaukau, §n — rakana raru, §m — rakana mase, §k — \"nininini\", §r — emu bona iseda. Miri kodu ia lalo stila tauna, bona stila vada miri murinai"
 }

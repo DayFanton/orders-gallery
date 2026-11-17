@@ -458,5 +458,17 @@
   "size.wmin": "Ulemu wa ukulu wandende",
   "size.wmax": "Ulembwe wa ukulu wakulungwa",
   "size.tile": "Aweni lilemba",
-  "size.reset": "Welasya"
+  "size.reset": "Welasya",
+
+  "rename.title": "Dinani kuti musinthe zina",
+  "rename.cancel": "Goleleje ku zina lyakusa (mkasungila)",
+  "rename.placeholder": "Zina (chabe — lyandanda)",
+  "rename.error": "Gulemile kusungila zina lyalisasu",
+  "rename.confirm_text": "Mwasinile zina nung'amba ngasimnile. Akusachila kusiyiwa \"%s\"?",
+  "rename.confirm_save": "Sungila",
+  "rename.confirm_discard": "Mkasungila",
+  "rename.confirm_back": "Jitikele kusuma",
+  "rename.guide.title": "Mwasichile kwayiche kucheleta zina lyawo (§ codes §)",
+  "rename.guide.how": "Kuti mwasindile zina, galamani pa zina lya card, lembani lyalisasu ni kugalamani pa malo galilichabe — lisungike. Chiphale chili pafupi ni malo aga tichilolele zina lyakusa ngasimnile. Malo gachabe tichilolele zina lyandanda.",
+  "rename.guide.codes": "Pa mutwe wenu mpaka mkamseka makodi ga kamanyilo ga Minecraft: chimanyilo § ni lilemba lilikuyako. Mitundu: §0–§9 ni §a–§f. Mitela: §l — jikulile, §o — jakupinda, §n — jakulembedwa pasi, §m — jakulembedwa pakati, §k — \"jakuisiwa\", §r — wubula syosope. Kodi ja mtundu jikusawubula mitela jandanda, ntiŵika mitela pakati pa mtundu"
 }

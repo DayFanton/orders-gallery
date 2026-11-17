@@ -456,5 +456,17 @@
   "size.wmin": "Pisi sayaypa llasaynin",
   "size.wmax": "Aswan hatun sayaypa llasaynin",
   "size.tile": "Tukuyninta kutipay",
-  "size.reset": "Kutichiy"
+  "size.reset": "Kutichiy",
+
+  "rename.title": "Sutita hukchanaykipaq ñitiy",
+  "rename.cancel": "Ñawpaq sutiman kutichiy (ama waqaychaychu)",
+  "rename.placeholder": "Sutikuna (ch'usaq — ñawpaq kaq)",
+  "rename.error": "Musuq sutitaqa manam waqaychayta atikurqanchu",
+  "rename.confirm_text": "Sutita hukcharqanki manataq waqaycharqankichu. ¿\"%s\"-ta saqisunmanchu?",
+  "rename.confirm_save": "Waqaychay",
+  "rename.confirm_discard": "Ama waqaychaychu",
+  "rename.confirm_back": "Llamkapuyta qatiy",
+  "rename.guide.title": "¿Imaynatan sutikunata hukchayta chaymanta sumaqyachiyta atikun? (§ qillqakuna)",
+  "rename.guide.how": "Sutita hukchanaykipaq, cardpa umanpi ñitiy, musuqta qillqay hinaspa mayqin ch'usaq kaqpipas ñitiy — waqaychasqam kanqa. Fieldpa qayllanpi cruzqa mana waqaychaspa ñawpaq sutitam kutichimunqa. Ch'usaq fieldqa ñawpaq sutitam kutichimunqa.",
+  "rename.guide.codes": "Sutipaqqa Minecraft nisqa format ruwanapaq kodigokunatam akllankiman: § sanancha chaymanta huk qillqa. Llimpikuna: §0–§9 hinallataq §a–§f. Estilokuna: §l — k'aspisqa, §o — sik'isqa, §n — urinpi siqisqa, §m — chawpinpi siqisqa, §k — \"pakasqa\", §r — llapan kutichiy. Llimpi kodigoqa ñawpaq estilokunatam kutichin, chayrayku estilokunata llimpip qipanman churay"
 }

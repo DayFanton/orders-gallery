@@ -458,5 +458,17 @@
   "size.wmin": "Pimo mar pimo matin",
   "size.wmax": "Lit mar mwandu madonge",
   "size.tile": "Dok gi nonro",
-  "size.reset": "Cheno kendo"
+  "size.reset": "Cheno kendo",
+
+  "rename.title": "Dhi nyime",
+  "rename.cancel": "Choki nyingni machon (kik iketo)",
+  "rename.placeholder": "Nyingni (onge — mar chakruok)",
+  "rename.error": "Orem mar kieto nying manyien",
+  "rename.confirm_text": "Ichenjo nyingni to kik iketo. Ibedo gi \"%s\"?",
+  "rename.confirm_save": "Iketo",
+  "rename.confirm_discard": "Kik iketo",
+  "rename.confirm_back": "Med nyime gi konyo",
+  "rename.guide.title": "Naka ma ijiro nyingni kendo ipako (§ kod §)",
+  "rename.guide.how": "Mondo ijiro nyingni, dhi malo kuom nying kadi, ket manyien kendo idhi kuom kama onge gimoro — biro keti. Msalaba ma ni machiegni gi kama biro choko nyingni machon kik iketo. Kama onge gimoro biro konyo nyingni mokwongo.",
+  "rename.guide.codes": "E wi wachu inyalo tiyo gi kod mag fwayo mag Minecraft: alama § kod ranyisi bang'e. Runge: §0–§9 gi §a–§f. Dhi Nyime: §l — tek, §o — oywe, §n — otiki piny, §m — otiki dier, §k — \"mofwanifu\", §r — los duto kethore. Kod mar rang'iny loso dhi nyime machon, koro ket dhi nyime bang' rang'iny"
 }

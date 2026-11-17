@@ -458,5 +458,17 @@
   "size.wmin": "Wuzuzu wuzuzu kpòwé tɔn",
   "size.wmax": "Jónɔ̀ tɔ̀n gángán tɔ̀n",
   "size.tile": "Vɔ vɔ wɛtɛ",
-  "size.reset": "Sɔ́ ɛ ɖó te"
+  "size.reset": "Sɔ́ ɛ ɖó te",
+
+  "rename.title": "Kpé nɔ bo na ɖyɔ nyikɔ",
+  "rename.cancel": "Lɛ kɔ yi nyikɔ xoxo ɔ jí (ma bló gbɔ)",
+  "rename.placeholder": "Nyikɔ (vovo — tɔn)",
+  "rename.error": "E ma blo bɔ e xo nyikɔ yɔyɔ ɔ ɖo wè gbe ǎ",
+  "rename.confirm_text": "A ɖyɔ nyikɔ ɔ amɔ a ma ɖo wè gbe ǎ. A jlo na ɖò \"%s\" wɛ à?",
+  "rename.confirm_save": "Bló gbɔ",
+  "rename.confirm_discard": "Ma bló gbɔ",
+  "rename.confirm_back": "Zɔn kpo ɖo ɖyɔdidyɔ ɔ jí",
+  "rename.guide.title": "Lee e nɔ ɖyɔ nyikɔ bo nɔ ɖó sinsɛn gbɔn tɛn mɛ ɔ (§ kɔdu lɛ)",
+  "rename.guide.how": "Bo na ɖyɔ nyikɔ ɔ, kpé nɔ nyikɔ kpɛví ɔ jí, ɖó yɔyɔ tɛn mɛ bo kpé tɛn vovo ɖebǔ mɛ — e na ɖo wè gbe. Xaali e ɖò kpɛví ɔ lɛ kpa ɔ na lɛ kɛ lɛ kɔ yi nyikɔ xoxo ɔ jí ma bló gbɔ. Tɛn vovo ɔ na lɛ kɔ yi nyikɔ tɔn mɛ.",
+  "rename.guide.codes": "To xota ɔ mɛ ɔ, a hɛn ɔ ka zɛ xɛnyɛnyɔn xóɖò tɔn Minecraft tɔn lɛ: kpo § kpo kpo nǔ e bɔ bɔ kudo ɔ kpo. Xɔnnɔ lɛ: §0–§9 kpo §a–§f kpo. Ali lɛ: §l — gbigba, §o — bɔ bɔ kudo mɛ, §n — do glɔ, §m — do tɛntin, §k — \"nu e gleta ɔ\", §r — lɛkɔ ɖó nǔ bǐ. Xɔnnɔ kɔdii lɛ nɔ lɛkɔ ali xoxo lɛ, enɛ wɛ zɔ bɔ a nɔ ɖó ali lɛ ɖò xɔnnɔ ɔ gudo"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "Timbang ng min. sukat",
   "size.wmax": "Timbang ng maximum na sukat",
   "size.tile": "Ulitin ang texture",
-  "size.reset": "I-reset"
+  "size.reset": "I-reset",
+
+  "rename.title": "I-click para palitan ang pangalan",
+  "rename.cancel": "Ibalik sa dating pangalan (huwag i-save)",
+  "rename.placeholder": "Pangalan (blangko — orihihinal)",
+  "rename.error": "Hindi na-save ang bagong pangalan",
+  "rename.confirm_text": "Binago mo ang pangalan ngunit hindi ito nai-save. Panatilihin ang \"%s\"?",
+  "rename.confirm_save": "I-save",
+  "rename.confirm_discard": "Huwag i-save",
+  "rename.confirm_back": "Ipagpatuloy ang pag-edit",
+  "rename.guide.title": "Paano palitan ang pangalan at pagandahin (mga § code)",
+  "rename.guide.how": "Para palitan ang pangalan, i-click ang pamagat ng card, maglagay ng bago, at i-click ang anumang blangkong espasyo — mase-save ito. Ang krus sa tabi ng field ay magbabalik sa dating pangalan nang hindi nagse-save. Ang blangkong field ay magpapanumbalik ng orihinal na pangalan.",
+  "rename.guide.codes": "Sa pamagat, maaari mong gamitin ang mga code ng pag-format ng Minecraft: ang tandang § at isang karakter pagkatapos nito. Mga Kulay: §0–§9 at §a–§f. Mga Estilo: §l — bold, §o — italic, §n — nakasalungguhit, §m — may guhit sa gitna, §k — \"naka-obfuscate\", §r — i-reset ang lahat. Ang code ng kulay ay nag-re-reset sa mga nakaraang estilo, kaya ilagay ang mga estilo pagkatapos ng kulay"
 }

@@ -456,5 +456,17 @@
   "size.wmin": "Kurema kwekukura kushoma",
   "size.wmax": "Huremu hwazvinhu zvakakura",
   "size.tile": "Dzokorora chimiro",
-  "size.reset": "Nyora patsva"
+  "size.reset": "Nyora patsva",
+
+  "rename.title": "Dzvanya kuti uchinje zita",
+  "rename.cancel": "Dzosera zita rekare (usachengeta)",
+  "rename.placeholder": "Zita (risina chinhu — rekutanga)",
+  "rename.error": "Zvatadza kuchengeta zita idzva",
+  "rename.confirm_text": "Wakanganisa zita asi wakachengeta. Unoda kusiya \"%s\"?",
+  "rename.confirm_save": "Chengeta",
+  "rename.confirm_discard": "Usachengeta",
+  "rename.confirm_back": "Ramba uchichinja",
+  "rename.guide.title": "Maitiro ekuchinja zita uye kurishongedza (§ makodhi)",
+  "rename.guide.how": "Kuti uchinje zita, tinya pane musoro wekadhi, isa idzva wozo tinya chero panzvimbo isina chinhu — richachengetwa. Muchinjikwa uri pedyo nenzvimbo iyi uchadzorera zita rekare usina kuchengeta. Nzvimbo isina chinhu ichadzorera zita rekutanga.",
+  "rename.guide.codes": "Mumusoro unogona kushandisa makodhi ekufomata eMinecraft: chiratidzo § nechinyorwa chiri pashure pacho. Mavara: §0–§9 ne §a–§f. Masitaera: §l — akakora, §o — akakombama, §n — ane mutsetse pasi, §m — ane mutsetse pakati, §k — \"akavanzika\", §r — dzosera zvese pakutanga. Khodhi yemavara inodzosera masitaera ekare, saka isa masitaera pashure pemavara"
 }

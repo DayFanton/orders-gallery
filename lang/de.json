@@ -458,5 +458,17 @@
   "size.wmin": "Gewicht der Mindestgröße",
   "size.wmax": "Gewicht der Maximalgröße",
   "size.tile": "Textur wiederholen",
-  "size.reset": "Zurücksetzen"
+  "size.reset": "Zurücksetzen",
+
+  "rename.title": "Zum Umbenennen klicken",
+  "rename.cancel": "Zum vorherigen Namen zurückkehren (nicht speichern)",
+  "rename.placeholder": "Name (leer – original)",
+  "rename.error": "Neuer Name konnte nicht gespeichert werden",
+  "rename.confirm_text": "Sie haben den Namen geändert, aber nicht gespeichert. „%s“ behalten?",
+  "rename.confirm_save": "Speichern",
+  "rename.confirm_discard": "Nicht speichern",
+  "rename.confirm_back": "Bearbeitung fortsetzen",
+  "rename.guide.title": "Umbenennen und stilvoll benennen (§-Codes)",
+  "rename.guide.how": "Um den Namen zu ändern, klicken Sie auf den Kartentitel, geben Sie einen neuen ein und klicken Sie auf eine beliebige freie Stelle – er wird gespeichert. Das Kreuz neben dem Feld setzt den vorherigen Namen ohne Speichern zurück. Ein leeres Feld stellt den ursprünglichen Namen wieder her.",
+  "rename.guide.codes": "Im Titel können Sie Minecraft-Formatierungscodes verwenden: das Zeichen § und ein Zeichen danach. Farben: §0–§9 und §a–§f. Stile: §l — fett, §o — kursiv, §n — unterstrichen, §m — durchgestrichen, §k — „verschlüsselt“, §r — alles zurücksetzen. Der Farbcode setzt vorherige Stile zurück, platzieren Sie Stile daher nach der Farbe"
 }

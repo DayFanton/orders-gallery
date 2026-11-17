@@ -458,5 +458,17 @@
   "size.wmin": "Ũritu wa ũnene munini",
   "size.wmax": "Kurito kwa mũigano mũnene",
   "size.tile": "Gocokia mwandiko",
-  "size.reset": "Thiĩ na mbere"
+  "size.reset": "Thiĩ na mbere",
+
+  "rename.title": "Thika niguo uhindure ririina",
+  "rename.cancel": "Thire ririina ria tene (ndigithie)",
+  "rename.placeholder": "Ririina (kia hinya — ria mbere)",
+  "rename.error": "Ndirire kuuma ririina ria njeru",
+  "rename.confirm_text": "Ndirire kuuma ririina riria njeru, no ndwathie. Ũrenda kũiga \"%s\"?",
+  "rename.confirm_save": "Thia",
+  "rename.confirm_discard": "Ndigithie",
+  "rename.confirm_back": "Thii na mbere na githimi",
+  "rename.guide.title": "Ũrĩa woka kũhuria ririina na kũritha (§ kodi cia §)",
+  "rename.guide.how": "Ndirire kũhuria ririina, thika ririina ria ikaratasi, wandike riria njeru na uthike handũ o hothe harĩ hĩa — rĩgĩgithio. Gicigo kĩrĩ hakuhĩ na handũ hau nĩkĩgacokia ririina riria rĩahĩte to ndwathie. Handũ harĩ hĩa nĩkĩgacokia ririina ria mbere.",
+  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru"
 }

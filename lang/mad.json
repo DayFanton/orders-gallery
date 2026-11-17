@@ -458,5 +458,17 @@
   "size.wmin": "Bobot okoran min.",
   "size.wmax": "Berta ukuran maksimal",
   "size.tile": "Olangi tekstur",
-  "size.reset": "Ator polè"
+  "size.reset": "Ator polè",
+
+  "rename.title": "Klik ka'angghuy ngobah nyama",
+  "rename.cancel": "Abâh ka nyama sè sabellâ (jhâ' èsimpen)",
+  "rename.placeholder": "Nyama (kosong — aslina)",
+  "rename.error": "Gagal nyempen nyama sè anyar",
+  "rename.confirm_text": "Nyama ampon èobah tape ta' èsimpen. Guna' \"%s\"?",
+  "rename.confirm_save": "Èsimpen",
+  "rename.confirm_discard": "Jhâ' èsimpen",
+  "rename.confirm_back": "Terrosaghi ny alow",
+  "rename.guide.title": "Cara ngobah nyama ban aghâbây bhâghus (kode §)",
+  "rename.guide.how": "Ka'angghuy ngobah nyama, klik judhul kartla, maso'aghi sè anyar bân klik è kennengan sè kosong — bhkal èsimpen. Tandhâ silang è seddhi'na kolom bhkal abâli' nyama sè sabellâ ta' èsimpen. Kolom sè kosong bhkal abâli' nyama aslina.",
+  "rename.guide.codes": "E ḍâlem judul, sampeyan bisa ngangghuy kode format Minecraft: tanda § bân aksara samarèna. Warna: §0–§9 bân §a–§f. Gaya: §l — kandel, §o — miring, §n — garis bâbâ, §m — ècoret, §k — \"samar\", §r — reset sadhâjâ. Kode warna ngèbâsaghi gaya sabelluna, daddi pasang gaya samarèna warna"
 }

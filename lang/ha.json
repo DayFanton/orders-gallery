@@ -458,5 +458,17 @@
   "size.wmin": "Nauyin karamin girma",
   "size.wmax": "Nauyin girman matsakaici",
   "size.tile": "Maimaita laushi",
-  "size.reset": "Sake saiti"
+  "size.reset": "Sake saiti",
+
+  "rename.title": "Danna don sake suna",
+  "rename.cancel": "Mayar da tsohon suna (kada a adana)",
+  "rename.placeholder": "Suna (babu — na asali)",
+  "rename.error": "An kasa adana sabon suna",
+  "rename.confirm_text": "Kun canza suna amma ba ku adana shi ba. A bar \"%s\"?",
+  "rename.confirm_save": "A adana",
+  "rename.confirm_discard": "Kada a adana",
+  "rename.confirm_back": "Cigaba da gyarawa",
+  "rename.guide.title": "Yadda za a sake suna da kuma yin ado da launuka (§ lambobi)",
+  "rename.guide.how": "Don sake suna, danna kan taken katin, shigar da sabon suna sannan danna ko a wani wuri mara komai - za a adana shi. Giciye da ke kusa da filin zai dawo da tsohon suna ba tare da an adana ba. Filin mara komai zai dawo da sunan asali.",
+  "rename.guide.codes": "A cikin taken, zaka iya amfani da lambobin tsara na Minecraft: alamar § da harafi bayan ta. Launuka: §0–§9 da §a–§f. Saloli: §l — kauri, §o — lankwasa, §n — ƙarƙashin layin, §m — an yanke, §k — \"ɓoye\", §r — sake saita komai. Lambar launi tana sake saita tsoffin saloli, don haka saka saloli bayan launi"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "Min. ölçeg agramy",
   "size.wmax": "Maksimal ölçegiň agramy",
   "size.tile": "Gurluşy gaýtalamak",
-  "size.reset": "Assa düşurmek"
+  "size.reset": "Assa düşurmek",
+
+  "rename.title": "Adyny üýtgetmek üçin basyň",
+  "rename.cancel": "Öňki adyna gaýtarmak (ýatda saklamaň)",
+  "rename.placeholder": "Ady (boş — asyl)",
+  "rename.error": "Täze ady ýatda saklap bolmady",
+  "rename.confirm_text": "Adyny üýtgetdiňiz, ýöne ýatda saklamadyňyz. «%s» galdyrylsynmy?",
+  "rename.confirm_save": "Ýatda saklaň",
+  "rename.confirm_discard": "Ýatda saklamaň",
+  "rename.confirm_back": "Düzetmäge dowam ediň",
+  "rename.guide.title": "Adyny üýtgetmek we owadanlamak (§ kodlary)",
+  "rename.guide.how": "Adyny üýtgetmek üçin kartoçkanyň adyna basyň, täzesini ýazyň we islendik boş ýere basyň — ol ýatda saklanar. Meýdanyň ýanyndaky hays ýatda saklamazdan öňki adyny gaýtaryp getirer. Boş meýdan asyl adyny dikelder.",
+  "rename.guide.codes": "Adaty adaty atda Minecraft formatlama kodlaryny ulanyp bilersiňiz: § nyşany we ondan soňky simwol. Reňkler: §0–§9 we §a–§f. Stiller: §l — ýogun, §o — gyşyk, §n — aşagy çyzykly, §m — üstünden çyzyk çyzylan, §k — \"şifrlenen\", §r — hemmesini deslapky ýagdaýyna getirmek. Reňk kody öňki stilleri deslapky ýagdaýyna getirýär, şonuň üçin stilleri reňkden soň goýuň"
 }

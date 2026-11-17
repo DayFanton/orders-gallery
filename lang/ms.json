@@ -456,5 +456,17 @@
   "size.wmin": "Berat saiz min.",
   "size.wmax": "Berat saiz maksimum",
   "size.tile": "Ulang tekstur",
-  "size.reset": "Tetapkan semula"
+  "size.reset": "Tetapkan semula",
+
+  "rename.title": "Klik untuk namakan semula",
+  "rename.cancel": "Kembali ke nama asal (jangan simpan)",
+  "rename.placeholder": "Nama (kosong — asal)",
+  "rename.error": "Gagal menyimpan nama baharu",
+  "rename.confirm_text": "Anda telah menukar nama tetapi tidak menyimpannya. Kekalkan \"%s\"?",
+  "rename.confirm_save": "Simpan",
+  "rename.confirm_discard": "Jangan simpan",
+  "rename.confirm_back": "Teruskan mengedit",
+  "rename.guide.title": "Cara menamakan semula dan menghiasi (kod §)",
+  "rename.guide.how": "Untuk menamakan semula, klik pada tajuk kad, masukkan yang baharu dan klik di mana-mana ruang kosong — ia akan disimpan. Tanda pangkah di sebelah medan akan mengembalikan nama asal tanpa menyimpan. Medan kosong akan memulihkan nama asal.",
+  "rename.guide.codes": "Dalam tajuk, anda boleh menggunakan kod pemformatan Minecraft: tanda § dan aksara selepasnya. Warna: §0–§9 dan §a–§f. Gaya: §l — tebal, §o — condong, §n — bergaris bawah, §m — potong, §k — \"kabur\", §r — tetapkan semula semua. Kod warna menetapkan semula gaya terdahulu, jadi letakkan gaya selepas warna"
 }

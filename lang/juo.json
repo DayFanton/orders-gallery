@@ -456,5 +456,17 @@
   "size.wmin": "Rem piny rem",
   "size.wmax": "Mawun luru luru",
   "size.tile": "Mawun luru luru",
-  "size.reset": "Mawun luru luru"
+  "size.reset": "Mawun luru luru",
+
+  "rename.title": "Nyak",
+  "rename.cancel": "Nyak ka kɛk (kɔn ka kɛk)",
+  "rename.placeholder": "Nyak (kɔl — ka kɛk)",
+  "rename.error": "Nyak ka kɛk ma kɔn ka kɛk",
+  "rename.confirm_text": "Nyak ka kɛk ma kɔn ka kɛk. Kɛk \"%s\"?",
+  "rename.confirm_save": "Kɛk",
+  "rename.confirm_discard": "Kɔn ka kɛk",
+  "rename.confirm_back": "Kɛk ka kɛk",
+  "rename.guide.title": "Nyak ka kɛk ma kɔn ka kɛk (§ codes §)",
+  "rename.guide.how": "Nyak ka kɛk, kɛk ka card title, kɛk ka nyak nyen ma kɛk ka kɔl space — kɛk ka kɛk. Cross ka kɛk card kɔn ka kɛk nyak kɛk ma kɔn ka kɛk. Space kɛk ka kɛk nyak ka kɛk.",
+  "rename.guide.codes": "Wola kpe Minecraft format kodi: § sign ba gbe letter. Color: §0–§9 ba §a–§f. Stali: §l — bold, §o — italic, §n — underline, §m — strikethrough, §k — \"obfuscated\", §r — reset all. Color kodi reset old stali, so put stali after color"
 }

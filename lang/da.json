@@ -458,5 +458,17 @@
   "size.wmin": "Vægt for min. størrelse",
   "size.wmax": "Maksimal størrelsesvægt",
   "size.tile": "Gentag tekstur",
-  "size.reset": "Nulstil"
+  "size.reset": "Nulstil",
+
+  "rename.title": "Klik for at omdøbe",
+  "rename.cancel": "Gendan tidligere navn (gem ikke)",
+  "rename.placeholder": "Navn (tomt — oprindeligt)",
+  "rename.error": "Kunne ikke gemme det nye navn",
+  "rename.confirm_text": "Du har ændret navnet, men ikke gemt det. Vil du beholde \"%s\"?",
+  "rename.confirm_save": "Gem",
+  "rename.confirm_discard": "Gem ikke",
+  "rename.confirm_back": "Fortsæt redigering",
+  "rename.guide.title": "Sådan omdøbes og styles (§ koder)",
+  "rename.guide.how": "For at omdøbe skal du klikke på kortets titel, skrive en ny og klikke et vilkårligt sted på et tomt felt — den gemmes. Krydset ved siden af feltet gendanner det forrige navn uden at gemme. Et tomt felt gendanner det oprindelige navn.",
+  "rename.guide.codes": "I titlen kan du bruge formateringskoder fra Minecraft: tegnet § og et tegn efter det. Farver: §0–§9 og §a–§f. Stilarter: §l — fed, §o — kursiv, §n — understreget, §m — gennemstreget, §k — \"forvirret\", §r — nulstil alt. Farvekoden nulstiller tidligere stilarter, så placer stilarter efter farven"
 }

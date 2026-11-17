@@ -456,5 +456,17 @@
   "size.wmin": "Min. méret súlya",
   "size.wmax": "Maximális méret súlya",
   "size.tile": "Textúra ismétlése",
-  "size.reset": "Alaphelyzet"
+  "size.reset": "Alaphelyzet",
+
+  "rename.title": "Kattintson az átnevezéshez",
+  "rename.cancel": "Visszatérés az előző névhez (ne mentse)",
+  "rename.placeholder": "Név (üres – eredeti)",
+  "rename.error": "Az új név mentése nem sikerült",
+  "rename.confirm_text": "Megváltoztatta a nevet, de nem mentette el. Megtartja a következőt: „%s”?",
+  "rename.confirm_save": "Mentés",
+  "rename.confirm_discard": "Ne mentse",
+  "rename.confirm_back": "Szerkesztés folytatása",
+  "rename.guide.title": "Hogyan kell átnevezni és díszíteni (§ kódok)",
+  "rename.guide.how": "Az átnevezéshez kattintson a kártya címére, írjon be egy újat, és kattintson bárhová az üres helyen – el lesz mentve. A mező melletti kereszt mentés nélkül visszaállítja az előző nevet. Az üres mező visszaállítja az eredeti nevet.",
+  "rename.guide.codes": "A címben használhatod a Minecraft formázási kódjait: a § jelet és az utána lévő karaktert. Színek: §0–§9 és §a–§f. Stílusok: §l — félkövér, §o — dőlt, §n — aláhúzott, §m — áthúzott, §k — „rejtjelezett”, §r — mindent visszaállít. A színkód visszaállítja az előző stílusokat, ezért a stílusokat a szín után helyezd el"
 }

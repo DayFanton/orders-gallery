@@ -458,5 +458,17 @@
   "size.wmin": "Vähimmäiskoon paino",
   "size.wmax": "Maksimikoon paino",
   "size.tile": "Toista tekstuuri",
-  "size.reset": "Palauta"
+  "size.reset": "Palauta",
+
+  "rename.title": "Napsauta nimetäksesi uudelleen",
+  "rename.cancel": "Palauta edellinen nimi (älä tallenna)",
+  "rename.placeholder": "Nimi (tyhjä — alkuperäinen)",
+  "rename.error": "Uutta nimeä ei voitu tallentaa",
+  "rename.confirm_text": "Nimeä on muutettu, mutta sitä ei ole tallennettu. Säilytetäänkö ”%s”?",
+  "rename.confirm_save": "Tallenna",
+  "rename.confirm_discard": "Älä tallenna",
+  "rename.confirm_back": "Jatka muokkausta",
+  "rename.guide.title": "Miten nimetä uudelleen ja tyylitellä (§-koodit)",
+  "rename.guide.how": "Nimeä napsauttamalla kortin otsikkoa, kirjoita uusi ja napsauta mitä tahansa tyhjää aluetta – se tallennetaan. Kentän vieressä oleva rasti palauttaa edellisen nimen tallentamatta. Tyhjä kenttä palauttaa alkuperäisen nimen.",
+  "rename.guide.codes": "Otsikossa voit käyttää Minecraftin muotoilukoodeja: §-merkki ja sitä seuraava merkki. Värit: §0–§9 ja §a–§f. Tyylit: §l — lihavoitu, §o — kursivoitu, §n — alleviivattu, §m — yliviivattu, §k — \"sekaisin\", §r — nollaa kaikki. Värikoodi nollaa aiemmat tyylit, joten sijoita tyylit värin jälkeen"
 }

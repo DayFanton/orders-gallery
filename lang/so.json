@@ -458,5 +458,17 @@
   "size.wmin": "Miisaanka cabirka ugu yar",
   "size.wmax": "Miisaanka cabbirka ugu badan",
   "size.tile": "Ku celi habka",
-  "size.reset": "Dib u deji"
+  "size.reset": "Dib u deji",
+
+  "rename.title": "Guji si aad dib ugu magacowdo",
+  "rename.cancel": "Ku noqo magacii hore (ha keydin)",
+  "rename.placeholder": "Magaca (madhan — asalka)",
+  "rename.error": "Ku guuldareystay in la keydiyo magaca cusub",
+  "rename.confirm_text": "Waad badeshay magaca laakiin ma aadan keydin. Ma rabtaa inaa \"%s\" reebto?",
+  "rename.confirm_save": "Keydi",
+  "rename.confirm_discard": "Ha keydin",
+  "rename.confirm_back": "Sii wad tafatirka",
+  "rename.guide.title": "Sida loo bedelo magaca oo loo qurxiyo (§ codes)",
+  "rename.guide.how": "Si aad u bedesho magaca, guji cinwaanka kaarka, geli mid cusub oo guji meel kasta oo madhan - waa la keydin doonaa. Iskutallaabta ku xigta goobta waxay dib u soo celin doonaa magacii hore adigoon keydin. Goob madhan waxay soo celin doonaa magacii asalka ahaa.",
+  "rename.guide.codes": "Ciwaanka, waxaad isticmaali kartaa koodhadhka qaabaynta ee Minecraft: calaamadda § iyo xaraf ka dambeeya. Midabada: §0–§9 iyo §a–§f. Hababka: §l — dhumuc leh, §o — qalloocan, §n — hoosta laga xariiqay, §m — la dhex xariiqay, §k — \"sir ah\", §r — dib u deji wax walba. Koodka midabku wuxuu dib u dejiyaa hababkii hore, markaa geli hababka midabka ka dib"
 }

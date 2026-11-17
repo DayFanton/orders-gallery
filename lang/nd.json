@@ -456,5 +456,17 @@
   "size.wmin": "Ubunzima bobukhulu obuncane",
   "size.wmax": "Isisindo sesayizi ephezulu",
   "size.tile": "Phinda isimo",
-  "size.reset": "Buyisela emuva"
+  "size.reset": "Buyisela emuva",
+
+  "rename.title": "Chofoza ukutshintsha igama",
+  "rename.cancel": "Buyisela igama elidala (ungagcini)",
+  "rename.placeholder": "Igama (elingenanto — lakuqala)",
+  "rename.error": "Kuhlulekile ukugcina igama elitsha",
+  "rename.confirm_text": "Ushintshe igama kodwa awuligcinanga. Ufuna ukushiya \"%s\"?",
+  "rename.confirm_save": "Gcina",
+  "rename.confirm_discard": "Ungagcini",
+  "rename.confirm_back": "Qhubeka uhlela",
+  "rename.guide.title": "Indlela yokutshintsha igama lokuhlobisa (§ amakhodi)",
+  "rename.guide.how": "Ukutshintsha igama, chofoza isihloko sekadi, faka esitsha ube uchofoza endaweni engenanto — kuzogcinwa. Umnqamlezo osemacaleni kwendawo uzo buyisela igama langaphambili ngaphandle kokugcina. Indawo engenanto izobuyisela igama lakuqala.",
+  "rename.guide.codes": "Esihlokweni ungasebenzisa amakhodi wokufomatha weMinecraft: uphawu § kanye lonobhala ngemuva kwalo. Imibala: §0–§9 kanye ne-§a–§f. Izitayela: §l — ogqithelileyo, §o — ocimezileyo, §n — onomugqa ngezansi, §m — onomugqa phakathi, §k — \"ofihlakele\", §r — setha kabusha konke. Ikhodi yombala isetha kabusha izitayela zangaphambili, ngakho faka izitayela ngemuva kombala"
 }

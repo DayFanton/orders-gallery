@@ -458,5 +458,17 @@
   "size.wmin": "Ũito wa ũnene munini",
   "size.wmax": "Ũito wa nini nene",
   "size.tile": "Syoka mwandiko",
-  "size.reset": "Syoka mbere"
+  "size.reset": "Syoka mbere",
+
+  "rename.title": "Kanda nĩguo ũvĩndũle syĩtwa",
+  "rename.cancel": "KŨlya syĩtwa kĩu kya tene (ndũũkĩthe)",
+  "rename.placeholder": "Syĩtwa (kĩvuku — kĩa mbere)",
+  "rename.error": "Nĩndwa ũkwĩkĩtha syĩtwa kĩiao kĩnini",
+  "rename.confirm_text": "Ũvĩndũle syĩtwa no ndũkĩthe. Ũkwenda tũthe \"%s\"?",
+  "rename.confirm_save": "Ũkĩtha",
+  "rename.confirm_discard": "Ndũũkĩthe",
+  "rename.confirm_back": "Thiĩ na mbere na ũvĩndũle",
+  "rename.guide.title": "Ũndũ wa kũvĩndũle syĩtwa na kũsya ngũi (§ kodi syá §)",
+  "rename.guide.how": "Ũvĩndũle syĩtwa, kanda kĩtwĩ kĩa katani, vandika kingĩ na ukande vandũ o vonthe vata vata — nĩkũũkĩthwa. Ndanzi ĩla ĩvo vakuvi na vandũ ĩu nĩkũsyokalĩa syĩtwa kĩu kya tene vata ndũũkĩthe. Vandũ vata vata nĩkũsyokalĩa syĩtwa kĩa mbere.",
+  "rename.guide.codes": "Kĩongo-inĩ kĩu nĩ gũkoresha macodi ma kũgarūra maweko ma Minecraft: icagi § na karũgamba thutha wayo. Rũru: §0–§9 na §a–§f. Mĩikarire: §l — nene, §o — thomete, §n — ũndĩtwo thĩ, §m — ũndĩtwo gatagatĩ, §k — \"hithĩtwo\", §r — cokeria ciothe hau mbere. Codi ya rũru ĩcokeria mĩikarire ya tene, nĩ ɗo ũtoithie mĩikarire thutha wa rũru"
 }

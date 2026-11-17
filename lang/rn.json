@@ -458,5 +458,17 @@
   "size.wmin": "Uburemere bw'ubunini buke",
   "size.wmax": "Uburemere bw'ingano nini",
   "size.tile": "Subiramwo imiterere",
-  "size.reset": "Subira utangure"
+  "size.reset": "Subira utangure",
+
+  "rename.title": "Kanda kugira ngo uhindure izina",
+  "rename.cancel": "Subiza izina rya kera (ntubike)",
+  "rename.placeholder": "Izina (ubusa — ry'akarangiramata)",
+  "rename.error": "Vyanka kubika izina rishasha",
+  "rename.confirm_text": "Wahinduye izina ariko ntubika. Urashaka gusigarana \"%s\"?",
+  "rename.confirm_save": "Bika",
+  "rename.confirm_discard": "Ntubike",
+  "rename.confirm_back": "Bandanya guhindura",
+  "rename.guide.title": "Uko wahindura izina ukaryiza (§ codes za §)",
+  "rename.guide.how": "Kugira ngo uhindure izina, kanda ku mutwe w'ikarita, wandike irishasha hanyuma ukande ahabusa hose — bizabikwa. Umusaraba uri hafi y'akarere uzasubiza izina rya kera utabikiye. Akarere k'ubusa kazasubiza izina ry'akarangiramata.",
+  "rename.guide.codes": "Mu mutwe ushobora gukoresha amakode yo gufomata ya Minecraft: ikimenyetso § n'inyuguti ikurikira. Amabara: §0–§9 na §a–§f. Imiterere: §l — y'umubyimba, §o — yunamye, §n — yanditseho munsi, §m — yanditseho hagati, §k — \"yahishwe\", §r — subiza byose kuri zeru. Kode y'ibara isubiramo imiterere ya mbere, bityo shyira imiterere nyuma y'ibara"
 }

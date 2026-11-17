@@ -458,5 +458,17 @@
   "size.wmin": "Giranîya ebatê hê verênî",
   "size.wmax": "Pêse pîvana herî mezin",
   "size.tile": "Teksturî dubare ke",
-  "size.reset": "Ser de"
+  "size.reset": "Ser de",
+
+  "rename.title": "Seba vurnayışê name bıkıtêni",
+  "rename.cancel": "Name khoyo bınarnayış (maçekerên)",
+  "rename.placeholder": "Name (Veng — Asıl)",
+  "rename.error": "Name newe nêeşiya bınıro",
+  "rename.confirm_text": "Name vurna, lakin mawe maçekerên. \"%s\" bımanê?",
+  "rename.confirm_save": "Bınırnayış",
+  "rename.confirm_discard": "Maçekerên",
+  "rename.confirm_back": "Vurnayışi de dewam ke",
+  "rename.guide.title": "Name sen vurnayış u rınd kerdış (§ codes §)",
+  "rename.guide.how": "Name vurnayış rê, ser nameyê karti bıkıtêni, nameyo newe binusên u cayê veng de bıkıtêni — bınıro. Xaço ke rax de yo, maçekerênnameyê khoyo bınarnayış maçekerên. Cayê veng nameyê asıl bınarnayış.",
+  "rename.guide.codes": "Sername de şima şenê kodê formatkerdışî yê Minecraftî bixebitnê: nîşaneyê § û yew karekter pey cû. Rengî: §0–§9 û §a–§f. Stîlî: §l — stûr, §o — meylkerde, §n — binxetkerde, §m — miyanxetkerde, §k — \"şîfrekerde\", §r — pêro newe ra bierzo. Kodê rengî stîlê verênî newe ra erzeno, Seba nê stîlî rengî pey de bınusnê"
 }

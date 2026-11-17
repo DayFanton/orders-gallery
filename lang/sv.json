@@ -458,5 +458,17 @@
   "size.wmin": "Vikt för min. storlek",
   "size.wmax": "Maximal storleksvikt",
   "size.tile": "Upprepa textur",
-  "size.reset": "Återställ"
+  "size.reset": "Återställ",
+
+  "rename.title": "Klicka för att byta namn",
+  "rename.cancel": "Återställ till tidigare namn (spara inte)",
+  "rename.placeholder": "Namn (tomt — ursprungligt)",
+  "rename.error": "Det gick inte att spara det nya namnet",
+  "rename.confirm_text": "Du har ändrat namnet men inte sparat det. Vill du behålla \"%s\"?",
+  "rename.confirm_save": "Spara",
+  "rename.confirm_discard": "Spara inte",
+  "rename.confirm_back": "Fortsätt redigera",
+  "rename.guide.title": "Hur man byter namn och snyggar till (§-koder)",
+  "rename.guide.how": "För att byta namn, klicka på kortets titel, skriv in ett nytt och klicka på valfri tom yta – det sparas. Kryssmärket bredvid fältet återställer det föregående namnet utan att spara. Ett tomt fält återställer det ursprungliga namnet.",
+  "rename.guide.codes": "I titeln kan du använda formateringskoder från Minecraft: tecknet § och ett tecken efter det. Färger: §0–§9 och §a–§f. Stilar: §l — fetstil, §o — kursiv, §n — understruken, §m — genomstruken, §k — \"förvirrad\", §r — återställ allt. Färgkoden återställer tidigare stilar, så placera stilar efter färgen"
 }

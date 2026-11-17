@@ -458,5 +458,17 @@
   "size.wmin": "Min saiz wet",
   "size.wmax": "Weg of di max saiz",
   "size.tile": "Ripet tekstho",
-  "size.reset": "Riset"
+  "size.reset": "Riset",
+
+  "rename.title": "Klik to chenj nem",
+  "rename.cancel": "Riturn to di ol nem (no seif am)",
+  "rename.placeholder": "Nem (blank — orijinal)",
+  "rename.error": "Fail to seif di nyu nem",
+  "rename.confirm_text": "Yu chenj di nem, sef yu no seif am. Keep \"%s\"?",
+  "rename.confirm_save": "Seif",
+  "rename.confirm_discard": "No seif am",
+  "rename.confirm_back": "Kontiniu to edit",
+  "rename.guide.title": "How to chenj nem andstyle am (§ kods)",
+  "rename.guide.how": "To chenj di nem, klik di nem of di kad, put nyu nem and klik any blangk pat — e go seif. Di kros wey de neneht di box go riturn di ol nem without seifing am. Blangk box go riturn di orijinal nem.",
+  "rename.guide.codes": "Insaid di taitu, yu fit yuz Minecraft formatin kod: di § sain and one leta afta am. Colours: §0–§9 and §a–§f. Stailz: §l — bold, §o — italic, §n — onda-lain, §m — kross-aut, §k — \"confused\", §r — rizet evritin. Di colour kod dey rizet di old stailz, so put di stailz afta di colour"
 }

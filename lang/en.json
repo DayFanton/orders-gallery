@@ -456,5 +456,17 @@
   "size.wmin": "Min. size weight",
   "size.wmax": "Max size weight",
   "size.tile": "Repeat texture",
-  "size.reset": "Reset"
+  "size.reset": "Reset",
+
+  "rename.title": "Click to rename",
+  "rename.cancel": "Revert to previous name (do not save)",
+  "rename.placeholder": "Name (blank — original)",
+  "rename.error": "Failed to save new name",
+  "rename.confirm_text": "You changed the name but didn't save it. Keep \"%s\"?",
+  "rename.confirm_save": "Save",
+  "rename.confirm_discard": "Do not save",
+  "rename.confirm_back": "Continue editing",
+  "rename.guide.title": "How to rename and style with colors (§ codes)",
+  "rename.guide.how": "To rename, click on the card title, enter a new one, and click anywhere on empty space — it will be saved. The cross next to the field will revert to the previous name without saving. An empty field will restore the original name.",
+  "rename.guide.codes": "You can use Minecraft formatting codes in the title: the § sign and a character after it. Colors: §0–§9 and §a–§f. Styles: §l — bold, §o — italic, §n — underlined, §m — strikethrough, §k — \"obfuscated\", §r — reset all. The color code resets previous styles, so place styles after the color"
 }

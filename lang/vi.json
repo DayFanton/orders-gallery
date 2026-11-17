@@ -458,5 +458,17 @@
   "size.wmin": "Trọng số kích thước tối thiểu",
   "size.wmax": "Trọng lượng kích thước tối đa",
   "size.tile": "Lặp lại kết cấu",
-  "size.reset": "Đặt lại"
+  "size.reset": "Đặt lại",
+
+  "rename.title": "Nhấp để đổi tên",
+  "rename.cancel": "Quay lại tên trước (không lưu)",
+  "rename.placeholder": "Tên (trống — ban đầu)",
+  "rename.error": "Không thể lưu tên mới",
+  "rename.confirm_text": "Bạn đã thay đổi tên nhưng chưa lưu. Giữ lại \"%s\"?",
+  "rename.confirm_save": "Lưu",
+  "rename.confirm_discard": "Không lưu",
+  "rename.confirm_back": "Tiếp tục chỉnh sửa",
+  "rename.guide.title": "Cách đổi tên và tạo kiểu (mã §)",
+  "rename.guide.how": "Để đổi tên, hãy nhấp vào tiêu đề thẻ, nhập tên mới và nhấp vào bất kỳ khoảng trống nào — tên đó sẽ được lưu. Dấu nhân bên cạnh trường sẽ quay lại tên trước đó mà không lưu. Trường trống sẽ khôi phục tên ban đầu.",
+  "rename.guide.codes": "Trong tiêu đề, bạn có thể sử dụng các mã định dạng của Minecraft: dấu § và một ký tự theo sau. Màu sắc: §0–§9 và §a–§f. Kiểu chữ: §l — đậm, §o — nghiêng, §n — gạch chân, §m — gạch ngang, §k — \"làm rối\", §r — đặt lại tất cả. Mã màu sẽ đặt lại các kiểu trước đó, vì vậy hãy đặt kiểu sau màu"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "Peso do tamanho mín.",
   "size.wmax": "Peso do tamanho máximo",
   "size.tile": "Repetir textura",
-  "size.reset": "Redefinir"
+  "size.reset": "Redefinir",
+
+  "rename.title": "Clique para renomear",
+  "rename.cancel": "Reverter para o nome anterior (não salvar)",
+  "rename.placeholder": "Nome (vazio — original)",
+  "rename.error": "Falha ao salvar o novo nome",
+  "rename.confirm_text": "Você alterou o nome, mas não o salvou. Manter \"%s\"?",
+  "rename.confirm_save": "Salvar",
+  "rename.confirm_discard": "Não salvar",
+  "rename.confirm_back": "Continuar editando",
+  "rename.guide.title": "Como renomear e estilizar (códigos §)",
+  "rename.guide.how": "Para renomear, clique no título do cartão, digite um novo e clique em qualquer espaço vazio — ele será salvo. O X ao lado do campo retornará ao nome anterior sem salvar. Um campo vazio restaurará o nome original.",
+  "rename.guide.codes": "No título, você pode usar códigos de formatação do Minecraft: o sinal § e um caractere após ele. Cores: §0–§9 e §a–§f. Estilos: §l — negrito, §o — itálico, §n — sublinhado, §m — tachado, §k — «ofuscado», §r — redefinir tudo. O código de cor redefine os estilos anteriores, portanto, coloque os estilos após a cor"
 }

@@ -458,5 +458,17 @@
   "size.wmin": "Uzito wa ukubwa mdogo",
   "size.wmax": "Uzito wa saizi ya juu",
   "size.tile": "Rududia muundo",
-  "size.reset": "Weka upya"
+  "size.reset": "Weka upya",
+
+  "rename.title": "Bonyeza kubadili jina",
+  "rename.cancel": "Rudisha jina la awali (usihifadhi)",
+  "rename.placeholder": "Jina (tupu — asilia)",
+  "rename.error": "Imeshindwa kuhifadhi jina jipya",
+  "rename.confirm_text": "Umebadilisha jina lakini hukuihifadhi. Uweke \"%s\"?",
+  "rename.confirm_save": "Hifadhi",
+  "rename.confirm_discard": "Usihifadhi",
+  "rename.confirm_back": "Endelea kuhariri",
+  "rename.guide.title": "Jinsi ya kubadili jina na kupamba (nambari za §)",
+  "rename.guide.how": "Ili kubadili jina, bonyeza kichwa cha kadi, weka jina jipya na bonyeza mahali popote palipo wazi — litahifadhiwa. Msalaba karibu na uwanja utarudisha jina la awali bila kuhifadhi. Uwanja mtupu utarejesha jina asilia.",
+  "rename.guide.codes": "Kwenye kichwa cha habari, unaweza kutumia nambari za uumbizaji za Minecraft: ishara § na herufi baada yake. Rangi: §0–§9 na §a–§f. Mitindo: §l — nene, §o — italiki, §n — mstari chini, §m — mstari katikati, §k — \"kuchanganywa\", §r — rudisha zote. Msimbo wa rangi hurudisha mitindo ya awali, kwa hiyo weka mitindo baada ya rangi"
 }

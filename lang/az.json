@@ -458,5 +458,17 @@
   "size.wmin": "Min. ölçü çəkisi",
   "size.wmax": "Maksimum ölçünün çəkisi",
   "size.tile": "Teksturanı təkrarla",
-  "size.reset": "Sıfırla"
+  "size.reset": "Sıfırla",
+
+  "rename.title": "Yenidən adlandırmaq üçün klikləyin",
+  "rename.cancel": "Əvvəlki ada qayıt (saxlama)",
+  "rename.placeholder": "Ad (boş — orijinal)",
+  "rename.error": "Yeni adı yadda saxlamaq mümkün olmadı",
+  "rename.confirm_text": "Adı dəyişdiniz, lakin yadda saxlamadınız. \"%s\" saxlanılsın?",
+  "rename.confirm_save": "Yadda saxla",
+  "rename.confirm_discard": "Saxlama",
+  "rename.confirm_back": "Düzəlişə davam et",
+  "rename.guide.title": "Necə yenidən adlandırmaq və rəngləndirmək (§ kodları)",
+  "rename.guide.how": "Yenidən adlandırmaq üçün kartın başlığına klikləyin, yenisini daxil edin və istənilən boş yerə klikləyin — o, yadda saxlanılacaq. Sahənin yanında olan xaç işarəsi yadda saxlamadan əvvəlki adı qaytaracaq. Boş sahə orijinal adı bərpa edəcək.",
+  "rename.guide.codes": "Başlıqda Minecraft formatlaşdırma kodlarından istifadə edə bilərsiniz: § işarəsi və ondan sonrakı simvol. Rənglər: §0–§9 və §a–§f. Üslublar: §l — qalın, §o — kursiv, §n — altı xətt çəkilmiş, §m — üstü xətt çəkilmiş, §k — „şifrələnmiş“, §r — hər şeyi sıfırla. Rəng kodu əvvəlki üslubları sıfırlayır, ona görə də üslubları rəngdən sonra qoyun"
 }

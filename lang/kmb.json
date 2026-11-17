@@ -458,5 +458,17 @@
   "size.wmin": "Kulema kw'ukulu wadiwisi",
   "size.wmax": "Kilemo kyandumba",
   "size.tile": "Kubakana otondo",
-  "size.reset": "Kubakana"
+  "size.reset": "Kubakana",
+
+  "rename.title": "Kanda oco ubandulule dijina",
+  "rename.cancel": "Tunda dijina dia kuala (ndala kukatela)",
+  "rename.placeholder": "Dijina (kaxi — dia dianga)",
+  "rename.error": "Kuzukuta okukatela dijina diowapela",
+  "rename.confirm_text": "Watakula dijina mena kukatela. Ulandu kutala \"%s\"?",
+  "rename.confirm_save": "Katela",
+  "rename.confirm_discard": "Ndala kukatela",
+  "rename.confirm_back": "Kuata ko okubandulula",
+  "rename.guide.title": "Mukua okutula dijina ni kubandulula (§ mikango §)",
+  "rename.guide.how": "Okuandulula dijina, kanda ku mutué uadi dijina, soneka diowapela kanda ku madiadia moso ma kaxi — diakutela. Kanda diakatalama ku madiadia diakutela dijina dia kuala mena kukatela. Madiadia ma kaxi diakutela dijina diandi dianga.",
+  "rename.guide.codes": "Mu ntu ya milongi, nenda sadila macodi ma kufomata ma Minecraft: kidimbu § ni kidimbu kia nima yandi. Mibala: §0–§9 ni §a–§f. Mitindo: §l — ya nene, §o — ya kukulumuka, §n — ya kusonama kunsi, §m — ya kusonama mukati, §k — \"ya kubumbama\", §r — vutula yonso. Kodi ya mibala ivutulaka mitindo ya ntama, yandumba mitindo kunima ya mibala"
 }

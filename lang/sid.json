@@ -458,5 +458,17 @@
   "size.wmin": "Gafi xiinnoo gafi",
   "size.wmax": "Horo katte roora",
   "size.tile": "Maqqidi gashsho",
-  "size.reset": "Macchishi"
+  "size.reset": "Macchishi",
+
+  "rename.title": "Tunsishi",
+  "rename.cancel": "Qine qara suwote qoli (hagi hayte)",
+  "rename.placeholder": "Suwote (hagi — qara)",
+  "rename.error": "Hagi hayte qara suwote qolote",
+  "rename.confirm_text": "Qara suwote qoltini ikkire hagi haytine. \"%s\" qole?",
+  "rename.confirm_save": "Qoli",
+  "rename.confirm_discard": "Hagi hayte",
+  "rename.confirm_back": "Qoli qaranote",
+  "rename.guide.title": "Suwote qolote qara giddote qolishi (§ codes §)",
+  "rename.guide.how": "Qara suwote qolote, card title qara qolote, qara suwote qolote - qoli qolote. Cross qara qolote hagi hayte qara suwote qolote. Qara qolote qara suwote qolote.",
+  "rename.guide.codes": "Hakiisi ikkitino roso rakiishshira Minecraft kodi gari: § malaate ikkitino nna qara qara kotti. Roru: §0–§9 nna §a–§f. Gari: §l — gobba, §o — maqqo, §n — hanni gari, §m — giddo gari, §k — \"wo'ma\", §r — qixxaa sai. Roru kodi xagga gari qixxa'anno, hakkiinni gari roru kotti agurto"
 }

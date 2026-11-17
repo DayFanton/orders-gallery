@@ -456,5 +456,17 @@
   "size.wmin": "Meáchan na híosmhéide",
   "size.wmax": "Meáchan an mhéid uasta",
   "size.tile": "Déan uigeacht arís",
-  "size.reset": "Athshocraigh"
+  "size.reset": "Athshocraigh",
+
+  "rename.title": "Cliceáil chun athainmniú",
+  "rename.cancel": "Fill ar an ainm roimhe seo (ná sábháil)",
+  "rename.placeholder": "Ainm (bán — bunúsach)",
+  "rename.error": "Níorbh fhéidir an t-ainm nua a shábháil",
+  "rename.confirm_text": "D'athraigh tú an t-ainm ach níor shábháil tú é. Ar mhaith leat \"%s\" a choinneáil?",
+  "rename.confirm_save": "Sábháil",
+  "rename.confirm_discard": "Ná sábháil",
+  "rename.confirm_back": "Lean den eagarthóireacht",
+  "rename.guide.title": "Conas ainm a athrú agus a mhaisiú (cóid §)",
+  "rename.guide.how": "Chun ainm a athrú, cliceáil ar theideal an chárta, cuir ceann nua isteach agus cliceáil áit ar bith ar spás bán — sábhálfar é. Cuirfidh an cros in aice leis an réimse an t-ainm roimhe seo ar ais gan é a shábháil. Cuirfidh réimse bán an t-ainm bunúsach ar ais.",
+  "rename.guide.codes": "San teideal, is féidir leat cóid formáidithe Minecraft a úsáid: an comhartha § agus carachtar ina dhiaidh. Dathanna: §0–§9 agus §a–§f. Stíleanna: §l — trom, §o — iodálach, §n — faoi líne, §m — línithe tríd, §k — \"doiléir\", §r — athshocrú gach rud. Athshocraíonn an cód datha na stíleanna roimhe seo, mar sin cuir na stíleanna tar éis an datha"
 }

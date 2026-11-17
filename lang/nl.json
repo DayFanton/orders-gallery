@@ -456,5 +456,17 @@
   "size.wmin": "Gewicht min. grootte",
   "size.wmax": "Gewicht van de maximale maat",
   "size.tile": "Textuur herhalen",
-  "size.reset": "Resetten"
+  "size.reset": "Resetten",
+
+  "rename.title": "Klik om te hernoemen",
+  "rename.cancel": "Vorige naam herstellen (niet opslaan)",
+  "rename.placeholder": "Naam (leeg — origineel)",
+  "rename.error": "Kan nieuwe naam niet opslaan",
+  "rename.confirm_text": "Je hebt de naam gewijzigd maar niet opgeslagen. \"%s\" behouden?",
+  "rename.confirm_save": "Opslaan",
+  "rename.confirm_discard": "Niet opslaan",
+  "rename.confirm_back": "Bewerken hervatten",
+  "rename.guide.title": "Hoe te hernoemen en mooi te maken (§ codes)",
+  "rename.guide.how": "Om te hernoemen klik je op de kaarttitel, typ je een nieuwe in en klik je ergens in de lege ruimte — deze wordt opgeslagen. Het kruisje naast het veld herstelt de vorige naam zonder op te slaan. Een leeg veld herstelt de oorspronkelijke naam.",
+  "rename.guide.codes": "In de titel kun je Minecraft-opmaakcodes gebruiken: het §-teken en een teken daarna. Kleuren: §0–§9 en §a–§f. Stijlen: §l — vet, §o — cursief, §n — onderstreept, §m — doorgehaald, §k — „verward”, §r — alles resetten. De kleurcode reset eerdere stijlen, dus plaats stijlen na de kleur"
 }

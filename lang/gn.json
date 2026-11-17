@@ -458,5 +458,17 @@
   "size.wmin": "Tembiru miveve pohýi",
   "size.wmax": "Pyahue guasu mba'epuru",
   "size.tile": "Mbojuepy jey",
-  "size.reset": "Mombojey"
+  "size.reset": "Mombojey",
+
+  "rename.title": "Eñopyũ nde réra moambue hag̃ua",
+  "rename.cancel": "Ejevy nde réra yma guare (ani emboguapy)",
+  "rename.placeholder": "Téra (heta — ñepyrũgua)",
+  "rename.error": "Ndikatúi emboguapy téra pyahu",
+  "rename.confirm_text": "Emoambue nde réra ha ndemboguapýi. ¿Emboheja \"%s\"?",
+  "rename.confirm_save": "Embohepy",
+  "rename.confirm_discard": "Ani emboguapy",
+  "rename.confirm_back": "Emoherakuavo ñepyrũ",
+  "rename.guide.title": "Mba'éichapa emoambue ha emboporã nde réra (§ rapykuere §)",
+  "rename.guide.how": "Emoambue hag̃ua, eikutu nde réra rehe, emboguapy pyahu ha eikutu umi tenda nahani'ỹvape — oñemomba'apo porãta. Umi cruz oĩva hapykuere ojehecha haguã ojeipyso hag̃ua téra yma guare. Tenda nahani'ỹva omoingo jey téra yma guare.",
+  "rename.guide.codes": "Tysýpe ikatu rejapo Minecraft ñemichu kódigo: § techaukaha ha peteĩ taikuéra upéi. Sa'ykuéra: §0–§9 ha §a–§f. Ñemichu: §l — akãguasu, §o — chũmbypáva, §n — ijykére, §m — mbytepe, §k — \"ñemi\", §r — mbojevy opaite. Sa'y kódigo mbojevy umi ñemichu yma guare, upévare emoĩ ñemichu sa'y rire"
 }

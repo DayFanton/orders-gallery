@@ -458,5 +458,17 @@
   "size.wmin": "Ulfaatina guddina xiqqaa",
   "size.wmax": "Ulfaatii safuu olaanaa",
   "size.tile": "Irra deebi'ii agarsiisi",
-  "size.reset": "Irra deebisi"
+  "size.reset": "Irra deebisi",
+
+  "rename.title": "Maqaa jijjiiruuf tuqi",
+  "rename.cancel": "Maqaa durii deebisi (hin kuufatin)",
+  "rename.placeholder": "Maqaa (duwwaa — duraa)",
+  "rename.error": "Maqaa haaraa kuufachuun hin danda'amne",
+  "rename.confirm_text": "Maqaa jijjiirratte hin kuufanne. '%s' haa hafiu?",
+  "rename.confirm_save": "Kuufadhu",
+  "rename.confirm_discard": "Hin kuufatin",
+  "rename.confirm_back": "Gulaalu fufuu",
+  "rename.guide.title": "Maqaa jijjiiruufi miidhagsuuf (§ koodii §)",
+  "rename.guide.how": "Maqaa jijjiiruuf, mataa'ewaa kaardii tuqaa, haaraa galchuun bakka duwwaa kamittuu tuqaa — ni kuufama. Fannoon dirree sana cina jiru maqaa durii osoo hin kuufatin deebisa. Dirreen duwwaan maqaa duraa deebisa.",
+  "rename.guide.codes": "Mataureecha irratti koodii uumamuu Minecraft fayyadamuu dandeessa: mallattoo § fi qubee isaa booda jiru. Halluuwwan: §0–§9 fi §a–§f. Akkaataa: §l — furdaa, §o — jal'aa, §n — jala sararame, §m — gidduun sararame, §k — \"dhoksaa\", §r — hundumaa deebisi. Koodhi halluu akkaataa duraanii deebisa, kanaafuu akkaataa halluu booda kaa'i"
 }

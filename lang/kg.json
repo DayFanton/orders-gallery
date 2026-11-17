@@ -458,5 +458,17 @@
   "size.wmin": "Mfunu ya mfunu moke",
   "size.wmax": "Mbuya ya nene ya luta",
   "size.tile": "Vutula nsadukilu",
-  "size.reset": "Vutula diaka"
+  "size.reset": "Vutula diaka",
+
+  "rename.title": "Finika sambu na kusoba nkumbu",
+  "rename.cancel": "Vutula nkumbu ya ntama (kika tumbula te)",
+  "rename.placeholder": "Nkumbu (mpamba — ya ntete)",
+  "rename.error": "Kubikala nkumbu ya mpa yuleke",
+  "rename.confirm_text": "O sobaka nkumbu kansi o kumbula ve. Ku tula \"%s\"?",
+  "rename.confirm_save": "Kumbula",
+  "rename.confirm_discard": "Kika tumbula te",
+  "rename.confirm_back": "Landula kusoba",
+  "rename.guide.title": "Mutindu ya kusoba nkumbu mpi kutula minduki (§ bisalu §)",
+  "rename.guide.how": "Sambu na kusoba nkumbu, finika ntu ya kadi, sonika ya mpa mpi finika kisika mpidi ya mpamba — yo ta kumbuka. Nsalufu na lweka ya kisika ta vutula nkumbu ya ntama kukenda kumbuka ve. Kisika ya mpamba ta vutula nkumbu ya ntete.",
+  "rename.guide.codes": "Na ntu ya mambu, nge lenda sadila ba kodi ya kutula ntondolo ya Minecraft: bidimbu § mpe kisoni na nima na yo. Mitinu: §0–§9 mpe §a–§f. Mitindo: §l — ya ngolo, §o — ya kukulumuka, §n — ya kufuluka na nsi, §m — ya kufuluka na kati, §k — \"ya kubumbana\", §r — vutula yonso na ebandilu. Kodi ya mitindo ke vutulaka mitindo ya ntama, yo yina tula mitindo na nima ya kisoni"
 }

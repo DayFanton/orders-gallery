@@ -458,5 +458,17 @@
   "size.wmin": "Kpekpeme kpekpeme sue",
   "size.wmax": "Kpekpeme gã tɔ",
   "size.tile": "Gbugbɔ nɔnɔmetata la wɔwɔ",
-  "size.reset": "Trɔ ɖo ŋgɔ"
+  "size.reset": "Trɔ ɖo ŋgɔ",
+
+  "rename.title": "Nɔ dzadzraɖo dzi be nàtrɔ ŋkɔa",
+  "rename.cancel": "Trɔ yi ŋkɔ xoxo la dzi (mèdzra ɖo o)",
+  "rename.placeholder": "Ŋkɔ (ɖeka — gɔmedzede)",
+  "rename.error": "Meɖo ŋkɔ yeye la ɖo o",
+  "rename.confirm_text": "Trɔ ŋkɔ la gake mèɖo ɖo o. Èdi be yeɖe \"%s\" ɖa à?",
+  "rename.confirm_save": "Dzra ɖo",
+  "rename.confirm_discard": "Mèɖo ɖo o",
+  "rename.confirm_back": "Trɔ asi le eŋu yome",
+  "rename.guide.title": "Aleke nàtrɔ ŋkɔ ahado ƒomevi na ɖokuiwò (§ kɔduwo §)",
+  "rename.guide.how": "Ne nàtrɔ ŋkɔ la, nɔ ŋkɔ la dzi, nɔ yeye ɖo eye nàƒo ƒomevi ɖe teƒe si meɖale hã — woɖoe ɖo. Xaali si le teƒea ƒe aɖabaƒoƒo dzi la trɔ yi ŋkɔ xoxo la dzi manɔ manɔ me o. Teƒe si meɖale o la gbugbɔ ŋkɔ gbãtɔ va teƒe.",
+  "rename.guide.codes": "Le nyati la, èate ŋu zazã Minecraft ƒe nɔnɔmetata ƒe kɔdwo: dzesi § kple nuŋɔŋlɔ si le egbɔ.颜色: §0–§9 kple §a–§f. Nɔnɔmetatawo: §l — sesẽ, §o — tre, §n — teƒe teƒe, §m — ta ta, §k — \"bebe\", §r — gbugbɔ ɖo ɖoɖo katã. Kɔd kplẽ kɔɖa nɔnɔmetata xoxowo, eyata ɖo nɔnɔmetatawo ɖe kɔd kplẽ megbe"
 }

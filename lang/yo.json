@@ -458,5 +458,17 @@
   "size.wmin": "Ìwọ̀n ìwọ̀n kérésí",
   "size.wmax": "Ìwọ̀n ìwọ̀n tí o pọ̀ jùlọ",
   "size.tile": "Tún ẹ̀rọ ṣe",
-  "size.reset": "Tún unṣe"
+  "size.reset": "Tún unṣe",
+
+  "rename.title": "Tẹ lati tun lorukọ",
+  "rename.cancel": "Da orukọ iṣaaju padwa (má fipamọ)",
+  "rename.placeholder": "Orukọ (fofo — atilẹwa)",
+  "rename.error": "O kùkù lati fipamọ́ orukọ tuntun",
+  "rename.confirm_text": "O ti yipada orukọ ṣugbọn o ko fi pamọ́. Ṣe ki a fi \"%s\" sílẹ?",
+  "rename.confirm_save": "Fipamọ́",
+  "rename.confirm_discard": "Má fipamọ́",
+  "rename.confirm_back": "Tẹ̀ síwájú sí ẹ̀ṣà",
+  "rename.guide.title": "Bẹ́ẹ̀ ni lati tun orukọ ṣe ati Ṣe itọju rẹ (§ koodu)",
+  "rename.guide.how": "Lati tun orukọ ṣe, tẹ lori akọle kaadi, tẹ titun kan sii ki o tẹ si ibikibi ti ko ni ohunkohun — a o fipamọ́. Agbelebu ti o wa lẹgbẹẹ aaye naa yoo da orukọ iṣaaju pada laisi fifipamọ́. Aaye ti ko ni ohunkohun yoo da orukọ atilẹwa pada.",
+  "rename.guide.codes": "Nínú àkọlé, o le lo àwọn koodu ìṣètò ti Minecraft: àmì § àti lẹ́tà kan lẹ́yìn rẹ̀. Àwọn àwọ̀: §0–§9 àti §a–§f. Àwọn àṣà: §l — nipọn, §o — tẹ, §n — abẹ́ ìwé, §m — gígé kọjá, §k — \"tí ó rògbòdìyàn\", §r — tún ohun gbogbo ṣe sípò. Koodu àwọ̀ máa n tún àwọn àṣà àtijọ́ ṣe sípò, nitorina gbe awọn àṣà lẹ́yìn àwọ̀"
 }

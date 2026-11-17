@@ -458,5 +458,17 @@
   "size.wmin": "Kulemera kwa kukula kochepa",
   "size.wmax": "Kulemera kwa kukula kwakukulu",
   "size.tile": "Bwereza mawonekedwe",
-  "size.reset": "Bwezeretsani"
+  "size.reset": "Bwezeretsani",
+
+  "rename.title": "Dinani kuti musinthe dzina",
+  "rename.cancel": "Bwezerani dzina lakale (musasunge)",
+  "rename.placeholder": "Dzina (lopanda kanthu — loyamba)",
+  "rename.error": "Kulephera kusunga dzina latsopano",
+  "rename.confirm_text": "Munasinthadi dzina koma simunasunge. Kusiya \"%s\"?",
+  "rename.confirm_save": "Sungani",
+  "rename.confirm_discard": "Musasunge",
+  "rename.confirm_back": "Pitirizani kusintha",
+  "rename.guide.title": "Momwe mungasinthire dzina ndikuwoneka bwino (§ codes)",
+  "rename.guide.how": "Kuti musinthe dzina, dinani mutu wa khadi, lowetsani latsopano ndipo dinani paliponse popanda kanthu — lisungika. Mtanda womwe uli pafupi ndi malo amenewa udzabweretsa dzina lakale popanda kusunga. Malo opanda kanthu adzabweretsa dzina loyamba.",
+  "rename.guide.codes": "M'mutu mungagwiritse ntchito ma code a kulembetsa a Minecraft: chizindikiro § ndi chilembo chake pambuyo pake. Mitundu: §0–§9 ndi §a–§f. Mawonedwe: §l — yolimba, §o — yopendekera, §n — yotsika pansi, §m — yodutsa pakati, §k — \"yobisika\", §r — bwezeretsani zonse. Code yamtundu imabwezeretsani mawonedwe akale, chifukwa chake ikani mawonedwe pambuyo pamtundu"
 }

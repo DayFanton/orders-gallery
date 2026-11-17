@@ -456,5 +456,17 @@
   "size.wmin": "Bopekwani ya monene moke",
   "size.wmax": "Kilo ya bonene ya likolo",
   "size.tile": "Zongela lolenge",
-  "size.reset": "Bongola"
+  "size.reset": "Bongola",
+
+  "rename.title": "Finá pembe mpo na kobongola",
+  "rename.cancel": "Zongisa nkombo ya kala (kobomba te)",
+  "rename.placeholder": "Nkombo (ezangi — ya liboso)",
+  "rename.error": "Eboyi kobomba nkombo ya sika",
+  "rename.confirm_text": "Obongoli nkombo kasi obombi te. Olingi otika \"%s\"?",
+  "rename.confirm_save": "Bombá",
+  "rename.confirm_discard": "Kobomba te",
+  "rename.confirm_back": "Koba na mosala ya kobongisa",
+  "rename.guide.title": "Ndenge ya kobongola nkombo mpe kotɛka langi (§ mikakatisi §)",
+  "rename.guide.how": "Mpo na kobongola nkombo, kanda na motó ya karte, tika ya sika mpe kanda na esika nyonso ezangi eloko — ekobomba. Ekiembo pembeni ya esika ekosongisa nkombo ya kala kozanga kobomba. Esika ezangi eloko ekobongisa nkombo ya liboso.",
+  "rename.guide.codes": "Na motó ya likambo, okoki kosalela ba kodi ya bonene ya Minecraft: elembo § mpe elembo moko na nsima na yango. Mángóla: §0–§9 mpe §a–§f. Mitindo: §l — ya monene, §o — ya ekongolo, §n — ya nse na molangi, §m — ya katikati na molangi, §k — \"ya kobombama\", §r — zongisa nyonso na ebandeli. Kodi ya molangi ezongisaka mitindo ya kala, yango wana tía mitindo na nsima ya molangi"
 }

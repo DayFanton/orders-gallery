@@ -458,5 +458,17 @@
   "size.wmin": "Peso della dimensione min.",
   "size.wmax": "Peso della dimensione massima",
   "size.tile": "Ripeti texture",
-  "size.reset": "Ripristina"
+  "size.reset": "Ripristina",
+
+  "rename.title": "Clicca per rinominare",
+  "rename.cancel": "Ripristina il nome precedente (non salvare)",
+  "rename.placeholder": "Nome (vuoto — originale)",
+  "rename.error": "Impossibile salvare il nuovo nome",
+  "rename.confirm_text": "Hai modificato il nome ma non lo hai salvato. Vuoi mantenere \"%s\"?",
+  "rename.confirm_save": "Salva",
+  "rename.confirm_discard": "Non salvare",
+  "rename.confirm_back": "Continua la modifica",
+  "rename.guide.title": "Come rinominare e stilizzare (codici §)",
+  "rename.guide.how": "Per rinominare, fai clic sul titolo della scheda, inserisci uno nuovo e fai clic in un punto qualsiasi vuoto: verrà salvato. La crocetta accanto al campo ripristinerà il nome precedente senza salvare. Un campo vuoto ripristinerà il nome originale.",
+  "rename.guide.codes": "Nel titolo puoi usare i codici di formattazione di Minecraft: il simbolo § e un carattere successivo. Colori: §0–§9 e §a–§f. Stili: §l — grassetto, §o — corsivo, §n — sottolineato, §m — barrato, §k — «offuscato», §r — ripristina tutto. Il codice colore ripristina gli stili precedenti, quindi posiziona gli stili dopo il colore"
 }
