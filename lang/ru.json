@@ -392,7 +392,9 @@
 
   "badge.new": "НОВОЕ",
 
-  "platform.title": "Платформа",
+  "platform.title": "Платформа и освещение",
+  "light.enable": "Освещение и тени",
+  "veg.weight": "Вес (как часто выпадает)",
   "platform.enable": "Поставь платформу под персонажа",
   "platform.block": "Блок",
   "platform.time": "Время суток",
