@@ -1,46 +1,62 @@
 [
   {
     "file": "grass.png",
-    "weight": 6
+    "weight": 6,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "id": "tall_grass",
     "bottom": "tall_grass_bottom.png",
     "top": "tall_grass_top.png",
     "weight": 3,
-    "tint": "#91bd59"
+    "tint": "#91bd59",
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "pale_moss_carpet_side_small.png",
     "height": 1,
     "weight": 6,
-    "tint": "#95a48a"
+    "tint": "#95a48a",
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "pale_moss_carpet_side_tall.png",
     "height": 2,
     "weight": 6,
-    "tint": "#95a48a"
+    "tint": "#95a48a",
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "sweet_berry_bush_stage0.png",
     "height": 1,
-    "weight": 10
+    "weight": 10,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "sweet_berry_bush_stage1.png",
     "height": 1,
-    "weight": 10
+    "weight": 10,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "sweet_berry_bush_stage2.png",
     "height": 1,
-    "weight": 10
+    "weight": 10,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "sweet_berry_bush_stage3.png",
     "height": 1,
-    "weight": 10
+    "weight": 10,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "sugar_cane.png",
@@ -52,11 +68,15 @@
       "minWeight": 6,
       "maxWeight": 1,
       "step": 1
-    }
+    },
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   },
   {
     "file": "seagrass_32x.png",
     "height": 1,
-    "weight": 4
+    "weight": 4,
+    "author": "Braytonks",
+    "url": "https://modrinth.com/user/Braytonks"
   }
 ]
