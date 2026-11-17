@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Lejoe la End",
   "block.plain": "Ha ho sebopeho",
+  "block.tint": "Mmala wa thibelo",
 
   "mobile.gallery": "📁 Galari",
   "mobile.settings": "⚙️ Litlhophiso",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Dimela tsa ka",
   "folder.veg.hint": "Khetha setšoantšo sa semela (.png e bonahalang). Setšoantšo se selele (bophahamo bonyane makhetlo a 1.5 ho feta bophara, mohlala 16×32) e tla ba semela sa li-block tse 2",
   "folder.veg.error": "Khetha faele ea setšoantšo",
+  "folder.tint": "Mmala (oe tšoeu — ntle le moriti)",
+  "folder.weight": "Boima (maqhubu a ho oela)",
 
   "ui.hide": "Patla sebopeho (H)",
   "ui.show": "Bontša sebopeho (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Bula dimela",
   "veg.dice": "Kopanya",
-  "veg.set": "Sete ya dimela",
   "veg.density": "Motenya",
   "veg.layers": "Moo dimela di hōlang teng",
   "veg.layer1": "Sethala se ka hodimo",
   "veg.layer2": "Sethala se mahareng",
   "veg.layer3": "Sethala se ka tlase",
-  "veg.empty": "Ha ho dimela hajoale — kenya litlolo foldeng ea vegetation/ kapa u kenye tsa hau"
+  "veg.empty": "Ha ho dimela hajoale — kenya litlolo foldeng ea vegetation/ kapa u kenye tsa hau",
+  "veg.plants": "Dimela",
+  "veg.tint": "Mmala wa dimela",
+  "veg.name.grass": "Morafo",
+  "veg.name.tall_grass": "Morafo o molele",
+  "veg.name.pale_moss_carpet_side_small": "Mose o mosehla o mofubelu (khutšoane)",
+  "veg.name.pale_moss_carpet_side_tall": "Mose o mosehla o mofubelu (motelele)",
+  "veg.name.sweet_berry_bush_stage0": "Monokotsoai o monate (mohato oa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Monokotsoai o monate (mohato oa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Monokotsoai o monate (mohato oa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Monokotsoai o monate (mohato oa 4)",
+  "veg.name.sugar_cane": "Lehlaka la tsoekere",
+  "veg.name.seagrass_32x": "Morafo oa lewatle",
+
+  "credit.title": "Mongoli: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End Ita",
   "block.plain": "Ndahetéi textura",
+  "block.tint": "Bloko sa'y",
 
   "bgimg.name.day": "Ára",
   "bgimg.name.end": "Paha",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Che ñanduti",
   "folder.veg.hint": "Eiporavo ñanduti ra'ãnga (.png transparency rehegua). Ra'ãnga yvate (yvateve asy mbo'y 1.5 mbo'y mbytegua, techapyrã 16×32) oiko va'erã peteĩ ñanduti mokõi block rehegua",
   "folder.veg.error": "Eiporavo ra'ãnga mbohape",
+  "folder.tint": "Sa'y (morotĩ — ndaikovéva sa'y)",
+  "folder.weight": "Peteĩva (mbovýpa ojehecha)",
 
   "ui.hide": "Emonguete interface (H)",
   "ui.show": "Hechauka interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Ñanduti mboja",
   "veg.dice": "Mbojue",
-  "veg.set": "Ñanduti apyte",
   "veg.density": "Ñembyaty",
   "veg.layers": "Mba'eichapa ñanduti okakuaa",
   "veg.layer1": "Yvate guive",
   "veg.layer2": "Mbytegua guive",
   "veg.layer3": "Yvy guive",
-  "veg.empty": "Ñanduti ndaikatúi — eñoty ne ñanduti vegetation/ térã emoî ne mba'éva"
+  "veg.empty": "Ñanduti ndaikatúi — eñoty ne ñanduti vegetation/ térã emoî ne mba'éva",
+  "veg.plants": "Kaavo",
+  "veg.tint": "Kaavo sa'y",
+  "veg.name.grass": "Ka'aguy",
+  "veg.name.tall_grass": "Ka'aguy yvate",
+  "veg.name.pale_moss_carpet_side_small": "Ka'aguy sa'yju (michĩva)",
+  "veg.name.pale_moss_carpet_side_tall": "Ka'aguy sa'yju (yvate)",
+  "veg.name.sweet_berry_bush_stage0": "Yva he'ẽva (vore 1)",
+  "veg.name.sweet_berry_bush_stage1": "Yva he'ẽva (vore 2)",
+  "veg.name.sweet_berry_bush_stage2": "Yva he'ẽva (vore 3)",
+  "veg.name.sweet_berry_bush_stage3": "Yva he'ẽva (vore 4)",
+  "veg.name.sugar_cane": "Takuarê'ẽ",
+  "veg.name.seagrass_32x": "Ypa'ũ ka'aguy",
+
+  "credit.title": "Tihaihára: %s"
 }

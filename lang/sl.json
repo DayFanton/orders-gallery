@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End kamen",
   "block.plain": "Brez teksture",
+  "block.tint": "Barva bloka",
 
   "mobile.gallery": "📁 Galerija",
   "mobile.settings": "⚙️ Nastavitve",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Moje rastline",
   "folder.veg.hint": "Izberite sliko rastline (.png s prosojnostjo). Visoka slika (višina vsaj 1,5-krat večja od širine, npr. 16×32) bo postala 2 bloka visoka rastlina",
   "folder.veg.error": "Izberite slikovno datoteko",
+  "folder.tint": "Barva (bela — brez odtenka)",
+  "folder.weight": "Teža (pogostnost padanja)",
 
   "ui.hide": "Skrij vmesnik (H)",
   "ui.show": "Prikaži vmesnik (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Vklopi vegetacijo",
   "veg.dice": "Premešaj",
-  "veg.set": "Set vegetacije",
   "veg.density": "Gostota",
   "veg.layers": "Kje raste vegetacija",
   "veg.layer1": "Zgornja ploščad",
   "veg.layer2": "Srednja ploščad",
   "veg.layer3": "Spodnja ploščad",
-  "veg.empty": "Ni še rastlin — postavite teksture v mapo vegetation/ ali dodajte svoje"
+  "veg.empty": "Ni še rastlin — postavite teksture v mapo vegetation/ ali dodajte svoje",
+  "veg.plants": "Rastline",
+  "veg.tint": "Barva rastline",
+  "veg.name.grass": "Trava",
+  "veg.name.tall_grass": "Visoka trava",
+  "veg.name.pale_moss_carpet_side_small": "Bled mah (nizek)",
+  "veg.name.pale_moss_carpet_side_tall": "Bled mah (visok)",
+  "veg.name.sweet_berry_bush_stage0": "Sladke jagode (faza 1)",
+  "veg.name.sweet_berry_bush_stage1": "Sladke jagode (faza 2)",
+  "veg.name.sweet_berry_bush_stage2": "Sladke jagode (faza 3)",
+  "veg.name.sweet_berry_bush_stage3": "Sladke jagode (faza 4)",
+  "veg.name.sugar_cane": "Sladkorni trst",
+  "veg.name.seagrass_32x": "Morska trava",
+
+  "credit.title": "Avtor: %s"
 }

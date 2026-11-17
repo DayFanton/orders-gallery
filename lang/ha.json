@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dutsen End",
   "block.plain": "Babu laushi",
+  "block.tint": "Launi bulo",
 
   "bgimg.name.day": "Rana",
   "bgimg.name.end": "Ƙarshe",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Ciyayina",
   "folder.veg.hint": "Zaɓi hoton shuka (.png tare da nuna gaskiya). Hoton mai tsayi (tsawon aƙalla sau 1.5 fiye da faɗi, misali 16×32) zai zama shuka mai bulo 2",
   "folder.veg.error": "Zaɓi fayil ɗin hoto",
+  "folder.tint": "Launi (fari — ba tare da launi ba)",
+  "folder.weight": "Nauyi (yawan sauka)",
 
   "ui.hide": "Ɓoye mai amfani (H)",
   "ui.show": "Nuna mai amfani (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kunna ciyayi",
   "veg.dice": "Juya",
-  "veg.set": "Saitin ciyayi",
   "veg.density": "Yawa",
   "veg.layers": "Inda ciyayi ke girma",
   "veg.layer1": "Dandamali na sama",
   "veg.layer2": "Dandamali na tsakiya",
   "veg.layer3": "Dandamali na ƙasa",
-  "veg.empty": "Babu ciyayi tukuna — sanya hotunan a cikin babban fayil na vegetation/ ko ƙara naku"
+  "veg.empty": "Babu ciyayi tukuna — sanya hotunan a cikin babban fayil na vegetation/ ko ƙara naku",
+  "veg.plants": "Tsirrai",
+  "veg.tint": "Launi shuka",
+  "veg.name.grass": "Ciyawa",
+  "veg.name.tall_grass": "Ciyawa mai tsawo",
+  "veg.name.pale_moss_carpet_side_small": "Farin kaza (gajere)",
+  "veg.name.pale_moss_carpet_side_tall": "Farin kaza (mai tsawo)",
+  "veg.name.sweet_berry_bush_stage0": "Ya'yan itace masu zaƙi (mataki na 1)",
+  "veg.name.sweet_berry_bush_stage1": "Ya'yan itace masu zaƙi (mataki na 2)",
+  "veg.name.sweet_berry_bush_stage2": "Ya'yan itace masu zaƙi (mataki na 3)",
+  "veg.name.sweet_berry_bush_stage3": "Ya'yan itace masu zaƙi (mataki na 4)",
+  "veg.name.sugar_cane": "Rake",
+  "veg.name.seagrass_32x": "Ciyawar teku",
+
+  "credit.title": "Marubuci: %s"
 }

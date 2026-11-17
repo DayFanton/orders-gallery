@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kemera Endi",
   "block.plain": "Tekstur çın o",
+  "block.tint": "Rengê blokî",
 
   "bgimg.name.day": "Roje",
   "bgimg.name.end": "Peyni",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Tebiya mi",
   "folder.veg.hint": "Yewê tebia binusne (.png ke şevefiyayo). Yewê berze (berziya xo ke en tay 1.5 gırdê ra 16×32) bibe tebia dı blokan",
   "folder.veg.error": "Yewê dosya binusne",
+  "folder.tint": "Reng (se sıpê — bê reng)",
+  "folder.weight": "Giran (çend marê vecîno)",
 
   "ui.hide": "Enterfeyi bınusne (H)",
   "ui.show": "Enterfeyi bımocne (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Tebia akerne",
   "veg.dice": "Tede arê dayene",
-  "veg.set": "Setê tebia",
   "veg.density": "Tîrbîyayîş",
   "veg.layers": "Uca ke tebia tede roni",
   "veg.layer1": "Platformo corên",
   "veg.layer2": "Platformo miyanêne",
   "veg.layer3": "Platformo cêrên",
-  "veg.empty": "Tebia nîst — teksturan bende pîya bınê vegetation/ ya ziê xo bınusne"
+  "veg.empty": "Tebia nîst — teksturan bende pîya bınê vegetation/ ya ziê xo bınusne",
+  "veg.plants": "Giyai",
+  "veg.tint": "Rengê giyai",
+  "veg.name.grass": "Çayır",
+  "veg.name.tall_grass": "Çayiro berz",
+  "veg.name.pale_moss_carpet_side_small": "Mossê sıpê (kılm)",
+  "veg.name.pale_moss_carpet_side_tall": "Mossê sıpê (berz)",
+  "veg.name.sweet_berry_bush_stage0": "Meyweyê şîrinî (merheleyê 1)",
+  "veg.name.sweet_berry_bush_stage1": "Meyweyê şîrinî (merheleyê 2)",
+  "veg.name.sweet_berry_bush_stage2": "Meyweyê şîrinî (merheleyê 3)",
+  "veg.name.sweet_berry_bush_stage3": "Meyweyê şîrinî (merheleyê 4)",
+  "veg.name.sugar_cane": "Qamışê şekirî",
+  "veg.name.seagrass_32x": "Çayiro deryayî",
+
+  "credit.title": "Nusxekar: %s"
 }

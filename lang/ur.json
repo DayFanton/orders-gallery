@@ -374,6 +374,7 @@
   "block.netherrack": "نیدر ریک",
   "block.end_stone": "اینڈ پتھر",
   "block.plain": "کوئی ٹیکسچر نہیں",
+  "block.tint": "بلاک کا رنگ",
 
   "bgimg.name.day": "دن",
   "bgimg.name.end": "اینڈ",
@@ -407,6 +408,8 @@
   "folder.veg.title": "میرے پودے",
   "folder.veg.hint": "پودے کی تصویر منتخب کریں (.png شفافیت کے ساتھ)۔ ایک لمبی تصویر (اونچائی چड़ाई سے کم از کم 1.5 گنا زیادہ، مثلاً 16×32) 2 بلاک لمبا پودا بن جائے گی",
   "folder.veg.error": "تصویر کی فائل منتخب کریں",
+  "folder.tint": "رنگ (سیدھا سفید — بغیر کسی رنگت کے)",
+  "folder.weight": "وزن (گرنے کی فریکوئেন্সি)",
 
   "ui.hide": "انٹرفیس چھپائیں (H)",
   "ui.show": "انٹرفیس دکھائیں (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "نباتات کو فعال کریں",
   "veg.dice": "مکس کریں",
-  "veg.set": "نباتات کا مجموعہ",
   "veg.density": "کثافت",
   "veg.layers": "جہاں نباتات اگتی ہیں",
   "veg.layer1": "اوپری پلیٹ فارم",
   "veg.layer2": "درمیانی پلیٹ فارم",
   "veg.layer3": "نچلا پلیٹ فارم",
-  "veg.empty": "ابھی تک کوئی پودے نہیں ہیں — ٹیکسچرز کو vegetation/ فولڈر میں رکھیں یا اپنے شامل کریں"
+  "veg.empty": "ابھی تک کوئی پودے نہیں ہیں — ٹیکسچرز کو vegetation/ فولڈر میں رکھیں یا اپنے شامل کریں",
+  "veg.plants": "پودے",
+  "veg.tint": "پودے کا رنگ",
+  "veg.name.grass": "گھاس",
+  "veg.name.tall_grass": "لمبی گھاس",
+  "veg.name.pale_moss_carpet_side_small": "ہلکی کائی (چھوٹی)",
+  "veg.name.pale_moss_carpet_side_tall": "ہلکی کائی (لمبی)",
+  "veg.name.sweet_berry_bush_stage0": "میٹھے بیر (مرحلہ 1)",
+  "veg.name.sweet_berry_bush_stage1": "میٹھے بیر (مرحلہ 2)",
+  "veg.name.sweet_berry_bush_stage2": "میٹھے بیر (مرحلہ 3)",
+  "veg.name.sweet_berry_bush_stage3": "میٹھے بیر (مرحلہ 4)",
+  "veg.name.sugar_cane": "گنا",
+  "veg.name.seagrass_32x": "سمندری گھاس",
+
+  "credit.title": "مصنف: %s"
 }

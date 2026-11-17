@@ -109,6 +109,7 @@
   "block.netherrack": "I-Netherrack",
   "block.end_stone": "Itshe le-End",
   "block.plain": "Ayikho i-texture",
+  "block.tint": "Umbala webhulokhi",
 
   "mobile.gallery": "📁 Igalari",
   "mobile.settings": "⚙️ Izilungiselelo",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Izitshalo zami",
   "folder.veg.hint": "Khetha isithombe sesitshalo (.png esinokubonakala). Isithombe eside (ukuphakama okungenani kuphindwe 1.5 ububanzi, isb. 16×32) sizoba isitshalo samabhulokhi angu-2",
   "folder.veg.error": "Khetha ifayela lesithombe",
+  "folder.tint": "Umbala (omhlophe — ngaphandle kombala)",
+  "folder.weight": "Isisindo (ukuba khona kokuwa)",
 
   "ui.hide": "Fihla isikhombimsebenzisi (H)",
   "ui.show": "Khombisa isikhombimsebenzisi (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Vula izitshalo",
   "veg.dice": "Xuba",
-  "veg.set": "Isethi yezitshalo",
   "veg.density": "Ukuminyana",
   "veg.layers": "Lapho izitshalo zikhula khona",
   "veg.layer1": "Inkundla engenhla",
   "veg.layer2": "Inkundla ephakathi",
   "veg.layer3": "Inkundla engezansi",
-  "veg.empty": "Azikho izitshalo okwamanje — faka izinhlobo kufolda ye-vegetation/ noma wengeze ezakho"
+  "veg.empty": "Azikho izitshalo okwamanje — faka izinhlobo kufolda ye-vegetation/ noma wengeze ezakho",
+  "veg.plants": "Izitshalo",
+  "veg.tint": "Umbala wesitshalo",
+  "veg.name.grass": "Utshani",
+  "veg.name.tall_grass": "Utshani obude",
+  "veg.name.pale_moss_carpet_side_small": "I-moss ephaphathekile (enqamukile)",
+  "veg.name.pale_moss_carpet_side_tall": "I-moss ephaphathekile (ende)",
+  "veg.name.sweet_berry_bush_stage0": "Amajikijolo amnandi (isigaba 1)",
+  "veg.name.sweet_berry_bush_stage1": "Amajikijolo amnandi (isigaba 2)",
+  "veg.name.sweet_berry_bush_stage2": "Amajikijolo amnandi (isigaba 3)",
+  "veg.name.sweet_berry_bush_stage3": "Amajikijolo amnandi (isigaba 4)",
+  "veg.name.sugar_cane": "Umqoba",
+  "veg.name.seagrass_32x": "Utshani basolwandle",
+
+  "credit.title": "Umbhali: %s"
 }

@@ -109,6 +109,7 @@
   "block.netherrack": "නෙදර්‍රැක්",
   "block.end_stone": "එන්ඩ් ගල්",
   "block.plain": "වයනයක් නැත",
+  "block.tint": "කොටුවේ වර්ණය",
 
   "mobile.gallery": "📁 ගැලරිය",
   "mobile.settings": "⚙️ සැකසුම්",
@@ -405,6 +406,8 @@
   "folder.veg.title": "මගේ ශාක",
   "folder.veg.hint": "ශාක රූපයක් තෝරන්න (.png විනිවිදභාවය සහිත). උස රූපයක් (පළolaට වඩා අවම වශයෙන් 1.5 গুণයක් වැඩි උසක්, උදා. 16×32) කොටස් 2 ක උස ශාකයක් බවට පත්වේ",
   "folder.veg.error": "රූප ගොනුව තෝරන්න",
+  "folder.tint": "වර්ණය (සුදු - පැහැයක් නොමැතිව)",
+  "folder.weight": "බර (පτηත්ව සංඛ්‍යාතය)",
 
   "ui.hide": "අතුරු මුහුණත සඟවන්න (H)",
   "ui.show": "අතුරු මුහුණත පෙන්වන්න (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "ශාක සක්‍රීය කරන්න",
   "veg.dice": "කලවම් කරන්න",
-  "veg.set": "ශාක කට්ටලය",
   "veg.density": "ඝනත්වය",
   "veg.layers": "ශාක වැדෙන ස්ථානය",
   "veg.layer1": "ඉහළ වේදිකාව",
   "veg.layer2": "මැද වේදිකාව",
   "veg.layer3": "පහළ වේදිකාව",
-  "veg.empty": "තවමත් ශාක නොමැත — vegetation/ საქشය තුළ වයනය තබන්න හෝ ඔබේම එකක් එකතු කරන්න"
+  "veg.empty": "තවමත් ශාක නොමැත — vegetation/ საქشය තුළ වයනය තබන්න හෝ ඔබේම එකක් එකතු කරන්න",
+  "veg.plants": "ශාක",
+  "veg.tint": "ශාකයේ වර්ණය",
+  "veg.name.grass": "තණකොළ",
+  "veg.name.tall_grass": "لمبی گھاس",
+  "veg.name.pale_moss_carpet_side_small": "වැහැరి ගිය දිලීර (මිටි)",
+  "veg.name.pale_moss_carpet_side_tall": "වැහැరి ගිය දිලීර (උස)",
+  "veg.name.sweet_berry_bush_stage0": "පැණිරස බෙරි (අදියර 1)",
+  "veg.name.sweet_berry_bush_stage1": "පැණිරස බෙරි (අදියර 2)",
+  "veg.name.sweet_berry_bush_stage2": "පැණිරස බෙරි (අදියර 3)",
+  "veg.name.sweet_berry_bush_stage3": "පැණිරස බෙරි (අදියර 4)",
+  "veg.name.sugar_cane": "උක්",
+  "veg.name.seagrass_32x": "මුහුදු තණකොළ",
+
+  "credit.title": "කර්තෘ: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "نیدرایک",
   "block.end_stone": "د پای ډبره",
   "block.plain": "هیڅ ټکسچر نشته",
+  "block.tint": "د بلاک رنګ",
 
   "bgimg.name.day": "ورځ",
   "bgimg.name.end": "پای",
@@ -407,6 +408,8 @@
   "folder.veg.title": "زما نباتات",
   "folder.veg.hint": "د نبات انځور وټاکئ (.png د روڼتیا سره). اوږد انځور (لوړوالی لږترلეګی د پلنوالي 1.5 چنده زیات، د بیلګې په توګه 16×32) به د 2 بلاکونو یو نبات شي",
   "folder.veg.error": "د انځور فایل وټاکئ",
+  "folder.tint": "رنګ (سپین — بې له کوم رنګ)",
+  "folder.weight": "وزن (د غورځېدو شمېر)",
 
   "ui.hide": "انټرفیس پټ کړئ (H)",
   "ui.show": "انټرفیس ښکاره کړئ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "نباتات فعال کړئ",
   "veg.dice": "گډول",
-  "veg.set": "د نباتاتو سیټ",
   "veg.density": "کثافت",
   "veg.layers": "چیرې چې نباتات وده کوي",
   "veg.layer1": "پورتنی پلیټ فارم",
   "veg.layer2": "منځنی پلیټ فارم",
   "veg.layer3": "لاندینی پلیټ فارم",
-  "veg.empty": "لا نباتات نشته — جوړښتونه په vegetation/ پوښۍ کې واچوئ یا خپل خپله اضافه کړئ"
+  "veg.empty": "لا نباتات نشته — جوړښتونه په vegetation/ پوښۍ کې واچوئ یا خپل خپله اضافه کړئ",
+  "veg.plants": "بوټي",
+  "veg.tint": "د بوټي رنګ",
+  "veg.name.grass": "واښه",
+  "veg.name.tall_grass": "لوړ واښه",
+  "veg.name.pale_moss_carpet_side_small": "سپک مس (لنډ)",
+  "veg.name.pale_moss_carpet_side_tall": "سپک مس (لوړ)",
+  "veg.name.sweet_berry_bush_stage0": "خوږې مېوې (لومړی پړاو)",
+  "veg.name.sweet_berry_bush_stage1": "خوږې مېوې (دوهم پړاو)",
+  "veg.name.sweet_berry_bush_stage2": "خوږې مېوې (د درېیم پړاو)",
+  "veg.name.sweet_berry_bush_stage3": "خوږې مېوې (څلورم پړاو)",
+  "veg.name.sugar_cane": "شکر کاله",
+  "veg.name.seagrass_32x": "سمندري واښه",
+
+  "credit.title": "لیکوال: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pedra de l'End",
   "block.plain": "Sense textura",
+  "block.tint": "Color del bloc",
 
   "bgimg.name.day": "Dia",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Les meves plantes",
   "folder.veg.hint": "Trieu una imatge de planta (.png amb transparència). Una imatge alta (alçada almenys 1,5 vegades més gran que l'amplada, per exemple 16×32) es convertirà en una planta de 2 blocs",
   "folder.veg.error": "Trieu el fitxer d'imatge",
+  "folder.tint": "Color (blanc — sense tonalitat)",
+  "folder.weight": "Pes (freqüència de caiguda)",
 
   "ui.hide": "Ocultar la interfície (H)",
   "ui.show": "Mostrar la interfície (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Activar vegetació",
   "veg.dice": "Barrejar",
-  "veg.set": "Conjunt de vegetació",
   "veg.density": "Densitat",
   "veg.layers": "On creix la vegetació",
   "veg.layer1": "Plataforma superior",
   "veg.layer2": "Plataforma intermèdia",
   "veg.layer3": "Plataforma inferior",
-  "veg.empty": "Encara no hi ha plantes — col·loca les textures a la carpeta vegetation/ o afegeix les teves"
+  "veg.empty": "Encara no hi ha plantes — col·loca les textures a la carpeta vegetation/ o afegeix les teves",
+  "veg.plants": "Plantes",
+  "veg.tint": "Color de la planta",
+  "veg.name.grass": "Herba",
+  "veg.name.tall_grass": "Herba alta",
+  "veg.name.pale_moss_carpet_side_small": "Molsa pàlida (baixa)",
+  "veg.name.pale_moss_carpet_side_tall": "Molsa pàlida (alta)",
+  "veg.name.sweet_berry_bush_stage0": "Baies dolces (etapa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Baies dolces (etapa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Baies dolces (etapa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Baies dolces (etapa 4)",
+  "veg.name.sugar_cane": "Canya de sucre",
+  "veg.name.seagrass_32x": "Herba marina",
+
+  "credit.title": "Autor: %s"
 }

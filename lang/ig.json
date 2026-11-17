@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Nkume End",
   "block.plain": "Enweghị usoro",
+  "block.tint": "Agba blọkọ",
 
   "bgimg.name.day": "Ehihie",
   "bgimg.name.end": "Njikọta",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Osisi m",
   "folder.veg.hint": "Họrọ foto osisi (.png nwere pụtara ihe). Foto dị elu (ogologo opekata mpe 1.5 ugboro karịa obosara, dị ka 16×32) ga-abụ osisi nwere ngọngọ 2",
   "folder.veg.error": "Họrọ faịlụ onyonyo",
+  "folder.tint": "Agba (ọcha — na-enweghị agba ọzọ)",
+  "folder.weight": "Ibu (ugboro ole ka o na-ada)",
 
   "ui.hide": "Zonwe interface ahụ (H)",
   "ui.show": "Gosi interface ahụ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Gbanye osisi",
   "veg.dice": "Gwuo",
-  "veg.set": "Nhazi osisi",
   "veg.density": "Njupụta",
   "veg.layers": "Ebe osisi na-eto",
   "veg.layer1": "Ikpo okwu dị n'elu",
   "veg.layer2": "Ikpo okwu n'etiti",
   "veg.layer3": "Ikpo okwu dị n'ala",
-  "veg.empty": "Enweghị osisi ugbu a — tinye akwụkwọ nri n'ime folda vegetation/ ma ọ bụ tinye nke gị"
+  "veg.empty": "Enweghị osisi ugbu a — tinye akwụkwọ nri n'ime folda vegetation/ ma ọ bụ tinye nke gị",
+  "veg.plants": "Osisi",
+  "veg.tint": "Agba osisi",
+  "veg.name.grass": "Ahịhịa",
+  "veg.name.tall_grass": "Ahịhịa ogologo",
+  "veg.name.pale_moss_carpet_side_small": "Rọọ ọcha (dị mkpụmkpụ)",
+  "veg.name.pale_moss_carpet_side_tall": "Rọọ ọcha (dị ogologo)",
+  "veg.name.sweet_berry_bush_stage0": "Mkpụrụ osisi dị ụtọ (ọkwa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Mkpụrụ osisi dị ụtọ (ọkwa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Mkpụrụ osisi dị ụtọ (ọkwa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Mkpụrụ osisi dị ụtọ (ọkwa 4)",
+  "veg.name.sugar_cane": "Okpete",
+  "veg.name.seagrass_32x": "Ahịhịa osimiri",
+
+  "credit.title": "Odee: %s"
 }

@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End rumi",
   "block.plain": "Mana textura kanchu",
+  "block.tint": "Blospa llimpyn",
 
   "mobile.gallery": "📁 Rikuchina Wasi",
   "mobile.settings": "⚙️ Allichaykuna",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Sach'akunay",
   "folder.veg.hint": "Sach'aq rikch'anta akllay (.png transparentniyuq). Hatun rikch'acha (altunninqa ancha aswan 1.5 kiti sayayniyuq, ahinataq 16×32) iskay blockniyuq sach'aman tukunqa",
   "folder.veg.error": "Rikch'a archivota akllay",
+  "folder.tint": "Llimpi (yuraq — mana huk llimpiyuq)",
+  "folder.weight": "K'uskiynin (mayk'aqchus chayamun)",
 
   "ui.hide": "Rikchayta pakay (H)",
   "ui.show": "Rikchayta qawachiy (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Sach'akunata kichay",
   "veg.dice": "T'aqay",
-  "veg.set": "Sach'akuna huñu",
   "veg.density": "Ch'iqchi",
   "veg.layers": "Maypi sach'akuna wiñan",
   "veg.layer1": "Hawa patapata",
   "veg.layer2": "Chawpi patapata",
   "veg.layer3": "Uray patapata",
-  "veg.empty": "Manaraq sach'akuna kanchu — texturekunata vegetation/ q'ipichaman churay otaq kikinpaq yapay"
+  "veg.empty": "Manaraq sach'akuna kanchu — texturekunata vegetation/ q'ipichaman churay otaq kikinpaq yapay",
+  "veg.plants": "Plantak",
+  "veg.tint": "Plantap llimpyn",
+  "veg.name.grass": "Q'achu",
+  "veg.name.tall_grass": "Hatun q'achu",
+  "veg.name.pale_moss_carpet_side_small": "P'iqi musu (uchuylla)",
+  "veg.name.pale_moss_carpet_side_tall": "P'iqi musu (hatun)",
+  "veg.name.sweet_berry_bush_stage0": "Misk'i rurukuna (1 kaq)",
+  "veg.name.sweet_berry_bush_stage1": "Misk'i rurukuna (2 kaq)",
+  "veg.name.sweet_berry_bush_stage2": "Misk'i rurukuna (3 kaq)",
+  "veg.name.sweet_berry_bush_stage3": "Misk'i rurukuna (4 kaq)",
+  "veg.name.sugar_cane": "Q'achu waylla",
+  "veg.name.seagrass_32x": "Qucha q'achu",
+
+  "credit.title": "Qillqaq: %s"
 }

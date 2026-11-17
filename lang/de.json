@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endstein",
   "block.plain": "Keine Textur",
+  "block.tint": "Blockfarbe",
 
   "bgimg.name.day": "Tag",
   "bgimg.name.end": "Ende",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Meine Pflanzen",
   "folder.veg.hint": "Wählen Sie ein Pflanzenbild (.png mit Transparenz). Ein hohes Bild (Höhe mindestens 1,5-mal größer als die Breite, z. B. 16×32) wird zu einer 2 Blöcke hohen Pflanze",
   "folder.veg.error": "Bilddatei auswählen",
+  "folder.tint": "Farbe (weiß — ohne Farbton)",
+  "folder.weight": "Gewicht (Drop-Häufigkeit)",
 
   "ui.hide": "Interface ausblenden (H)",
   "ui.show": "Interface anzeigen (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Vegetation aktivieren",
   "veg.dice": "Mischen",
-  "veg.set": "Vegetationsset",
   "veg.density": "Dichte",
   "veg.layers": "Wo Vegetation wächst",
   "veg.layer1": "Obere Plattform",
   "veg.layer2": "Mittlere Plattform",
   "veg.layer3": "Untere Plattform",
-  "veg.empty": "Noch keine Pflanzen — platziere Texturen im Ordner vegetation/ oder füge deine eigenen hinzu"
+  "veg.empty": "Noch keine Pflanzen — platziere Texturen im Ordner vegetation/ oder füge deine eigenen hinzu",
+  "veg.plants": "Pflanzen",
+  "veg.tint": "Pflanzenfarbe",
+  "veg.name.grass": "Gras",
+  "veg.name.tall_grass": "Hohes Gras",
+  "veg.name.pale_moss_carpet_side_small": "Blasses Moos (niedrig)",
+  "veg.name.pale_moss_carpet_side_tall": "Blasses Moos (hoch)",
+  "veg.name.sweet_berry_bush_stage0": "Süßbeeren (Stufe 1)",
+  "veg.name.sweet_berry_bush_stage1": "Süßbeeren (Stufe 2)",
+  "veg.name.sweet_berry_bush_stage2": "Süßbeeren (Stufe 3)",
+  "veg.name.sweet_berry_bush_stage3": "Süßbeeren (Stufe 4)",
+  "veg.name.sugar_cane": "Zuckerrohr",
+  "veg.name.seagrass_32x": "Seegras",
+
+  "credit.title": "Autor: %s"
 }

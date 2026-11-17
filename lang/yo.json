@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Òkúta End",
   "block.plain": "Ko si aworan",
+  "block.tint": "Àwọ̀ bọlọọki",
 
   "bgimg.name.day": "Ọ̀sán",
   "bgimg.name.end": "Òpin",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Awọn ohun ọgbin mi",
   "folder.veg.hint": "Yan aworan ohun ọgbin (.png pẹlu gbangba). Aworan giga (giga o kere ju igba 1.5 tobi ju iwọn lọ, fun apẹẹrẹ 16×32) yoo di ohun ọgbin bulọọki 2",
   "folder.veg.error": "Yan aṣayan aworan",
+  "folder.tint": "Àwọ̀ (funfun — láìsí àwọ̀ yòówù)",
+  "folder.weight": "Ìwọ̀n (igbohunsafẹfẹ ìṣubu)",
 
   "ui.hide": "Tọ ko oju aṣayan (H)",
   "ui.show": "Fi oju aṣayan han (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Mú ohun ọgbin ṣiṣẹ",
   "veg.dice": "Darapọ̀",
-  "veg.set": "Eto ohun ọgbin",
   "veg.density": "Ìwọ̀n ìkójọpọ̀",
   "veg.layers": "Ibiti ohun ọgbin ti n dagba",
   "veg.layer1": "Pẹpẹ òkè",
   "veg.layer2": "Pẹpẹ aarin",
   "veg.layer3": "Pẹpẹ ìsàlẹ̀",
-  "veg.empty": "Kò si ohun ọgbin kankan sibẹsibẹ — gbe awọn awoara sinu folda vegetation/ tabi fi tirẹ kun"
+  "veg.empty": "Kò si ohun ọgbin kankan sibẹsibẹ — gbe awọn awoara sinu folda vegetation/ tabi fi tirẹ kun",
+  "veg.plants": "Awọn irugbin",
+  "veg.tint": "Àwọ̀ irugbin",
+  "veg.name.grass": "Koriko",
+  "veg.name.tall_grass": "Koriko giga",
+  "veg.name.pale_moss_carpet_side_small": "Rorò pálpál (kúrú)",
+  "veg.name.pale_moss_carpet_side_tall": "Rorò pálpál (giga)",
+  "veg.name.sweet_berry_bush_stage0": "Èso dídùn (ìpele 1)",
+  "veg.name.sweet_berry_bush_stage1": "Èso dídùn (ìpele 2)",
+  "veg.name.sweet_berry_bush_stage2": "Èso dídùn (ìpele 3)",
+  "veg.name.sweet_berry_bush_stage3": "Èso dídùn (ìpele 4)",
+  "veg.name.sugar_cane": "Oparun",
+  "veg.name.seagrass_32x": "Koriko okun",
+
+  "credit.title": "Olùkọ̀wé: %s"
 }

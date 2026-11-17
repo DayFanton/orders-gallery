@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End toshi",
   "block.plain": "Tekstura yo'q",
+  "block.tint": "Blok rangi",
 
   "mobile.gallery": "📁 Galereya",
   "mobile.settings": "⚙️ Sozlamalar",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Mening o'simliklarim",
   "folder.veg.hint": "O'simlik rasmini tanlang (.png shaffoflik bilan). Baland rasm (balandligi enidan kamida 1,5 barobar katta, masalan 16×32) 2 blokli o'simlikka aylanadi",
   "folder.veg.error": "Rasm faylini tanlash",
+  "folder.tint": "Rang (oq — tusiz)",
+  "folder.weight": "Ogʻirlik (tushish chastotasi)",
 
   "ui.hide": "Interfeysni yashirish (H)",
   "ui.show": "Interfeysni ko'rsatish (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "O'simliklarni yoqish",
   "veg.dice": "Aralashtirish",
-  "veg.set": "O'simliklar to'plami",
   "veg.density": "Zichlik",
   "veg.layers": "O'simliklar o'sadigan joy",
   "veg.layer1": "Yuqori platforma",
   "veg.layer2": "O'rta platforma",
   "veg.layer3": "Pastki platforma",
-  "veg.empty": "Hozircha o'simliklar yo'q — teksturalarni vegetation/ papkasiga joylashtiring yoki o'zingiznikini qo'shing"
+  "veg.empty": "Hozircha o'simliklar yo'q — teksturalarni vegetation/ papkasiga joylashtiring yoki o'zingiznikini qo'shing",
+  "veg.plants": "Oʻsimliklar",
+  "veg.tint": "Oʻsimlik rangi",
+  "veg.name.grass": "Oʻt",
+  "veg.name.tall_grass": "Baland oʻt",
+  "veg.name.pale_moss_carpet_side_small": "Och mox (past)",
+  "veg.name.pale_moss_carpet_side_tall": "Och mox (baland)",
+  "veg.name.sweet_berry_bush_stage0": "Shirin rezavorlar (1-bosqich)",
+  "veg.name.sweet_berry_bush_stage1": "Shirin rezavorlar (2-bosqich)",
+  "veg.name.sweet_berry_bush_stage2": "Shirin rezavorlar (3-bosqich)",
+  "veg.name.sweet_berry_bush_stage3": "Shirin rezavorlar (4-bosqich)",
+  "veg.name.sugar_cane": "Shakarqamish",
+  "veg.name.seagrass_32x": "Dengiz oʻti",
+
+  "credit.title": "Muallif: %s"
 }

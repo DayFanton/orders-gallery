@@ -374,6 +374,7 @@
   "block.netherrack": "نذراكت",
   "block.end_stone": "حجر النهاية",
   "block.plain": "بدون ملمس",
+  "block.tint": "لون الكتلة",
 
   "bgimg.name.day": "نهار",
   "bgimg.name.end": "النهاية",
@@ -407,6 +408,8 @@
   "folder.veg.title": "نباتاتي",
   "folder.veg.hint": "اختر صورة نبات (.png بشفافية). الصورة الطويلة (الارتفاع أكتر من العرض بمرة ونصف على الأقل، زي 16×32) هتبقى نبات بطول بلوكين",
   "folder.veg.error": "اختار ملف الصورة",
+  "folder.tint": "اللون (أبيض — بدون تدرج)",
+  "folder.weight": "الوزن (معدل الظهور)",
 
   "ui.hide": "إخفاء الواجهة (H)",
   "ui.show": "إظهار الواجهة (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "تشغيل النباتات",
   "veg.dice": "خلط",
-  "veg.set": "مجموعة النباتات",
   "veg.density": "الكثافة",
   "veg.layers": "أين تنمو النباتات",
   "veg.layer1": "المنصة العلوية",
   "veg.layer2": "المنصة الوسطى",
   "veg.layer3": "المنصة السفلية",
-  "veg.empty": "لسه مفيش نباتات — حط الخامات في مجلد vegetation/ أو ضيف خاماتك الخاصة"
+  "veg.empty": "لسه مفيش نباتات — حط الخامات في مجلد vegetation/ أو ضيف خاماتك الخاصة",
+  "veg.plants": "نباتات",
+  "veg.tint": "لون النبات",
+  "veg.name.grass": "عشب",
+  "veg.name.tall_grass": "عشب طويل",
+  "veg.name.pale_moss_carpet_side_small": "طحلب شاحب (منخفض)",
+  "veg.name.pale_moss_carpet_side_tall": "طحلب شاحب (طويل)",
+  "veg.name.sweet_berry_bush_stage0": "التوت الحلو (المرحلة 1)",
+  "veg.name.sweet_berry_bush_stage1": "التوت الحلو (المرحلة 2)",
+  "veg.name.sweet_berry_bush_stage2": "التوت الحلو (المرحلة 3)",
+  "veg.name.sweet_berry_bush_stage3": "التوت الحلو (المرحلة 4)",
+  "veg.name.sugar_cane": "قصب السكر",
+  "veg.name.seagrass_32x": "عشبة البحر",
+
+  "credit.title": "المؤلف: %s"
 }

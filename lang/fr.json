@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pierre de l'End",
   "block.plain": "Sans texture",
+  "block.tint": "Couleur du bloc",
 
   "bgimg.name.day": "Jour",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mes plantes",
   "folder.veg.hint": "Choisissez une image de plante (.png avec transparence). Une image haute (hauteur au moins 1,5 fois supérieure à la largeur, par exemple 16×32) deviendra une plante de 2 blocs",
   "folder.veg.error": "Choisir le fichier image",
+  "folder.tint": "Couleur (blanc — sans nuance)",
+  "folder.weight": "Poids (fréquence d'obtention)",
 
   "ui.hide": "Masquer l'interface (H)",
   "ui.show": "Afficher l'interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Activer la végétation",
   "veg.dice": "Mélanger",
-  "veg.set": "Ensemble de végétation",
   "veg.density": "Densité",
   "veg.layers": "Où pousse la végétation",
   "veg.layer1": "Plateforme supérieure",
   "veg.layer2": "Plateforme intermédiaire",
   "veg.layer3": "Plateforme inférieure",
-  "veg.empty": "Pas encore de plantes — placez les textures dans le dossier vegetation/ ou ajoutez les vôtres"
+  "veg.empty": "Pas encore de plantes — placez les textures dans le dossier vegetation/ ou ajoutez les vôtres",
+  "veg.plants": "Plantes",
+  "veg.tint": "Couleur de la plante",
+  "veg.name.grass": "Herbe",
+  "veg.name.tall_grass": "Herbe haute",
+  "veg.name.pale_moss_carpet_side_small": "Mousse pâle (basse)",
+  "veg.name.pale_moss_carpet_side_tall": "Mousse pâle (haute)",
+  "veg.name.sweet_berry_bush_stage0": "Baies sucrées (stade 1)",
+  "veg.name.sweet_berry_bush_stage1": "Baies sucrées (stade 2)",
+  "veg.name.sweet_berry_bush_stage2": "Baies sucrées (stade 3)",
+  "veg.name.sweet_berry_bush_stage3": "Baies sucrées (stade 4)",
+  "veg.name.sugar_cane": "Canne à sucre",
+  "veg.name.seagrass_32x": "Herbe marine",
+
+  "credit.title": "Auteur : %s"
 }

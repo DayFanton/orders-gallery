@@ -374,6 +374,7 @@
   "block.netherrack": "Ditadi ya Nether",
   "block.end_stone": "Ditadi ya End",
   "block.plain": "Tekstur ve",
+  "block.tint": "Langi ya blok",
 
   "bgimg.name.day": "Mwini",
   "bgimg.name.end": "Nsuka",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Nti na mono",
   "folder.veg.hint": "Solula kifwanisu ya nti (.png ya kemonaka). Kifwanisu ya ndai (ndai mingi kuluta nene na 1.5, mbandu 16×32) ta kituka nti ya mabulu zole",
   "folder.veg.error": "Solula afile ya kifwanisu",
+  "folder.tint": "Langi (mpembe — kukonda luvila)",
+  "folder.weight": "Mfunu (mpova ya kubwila)",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kuwa nti",
   "veg.dice": "Kuvanga",
-  "veg.set": "Nkubulu ya nti",
   "veg.density": "Mbalu",
   "veg.layers": "Kuna nti ke nsunguka",
   "veg.layer1": "Kifulu kia zulu",
   "veg.layer2": "Kifulu kia katikati",
   "veg.layer3": "Kifulu kia nsi",
-  "veg.empty": "Mvimba ya nti ve — tula matiti na folda vegetation/ to vana ya nge"
+  "veg.empty": "Mvimba ya nti ve — tula matiti na folda vegetation/ to vana ya nge",
+  "veg.plants": "Biti",
+  "veg.tint": "Langi ya biti",
+  "veg.name.grass": "Bubu",
+  "veg.name.tall_grass": "Bubu ya ndanda",
+  "veg.name.pale_moss_carpet_side_small": "Bubu ya mpembe (fioti)",
+  "veg.name.pale_moss_carpet_side_tall": "Bubu ya mpembe (ndanda)",
+  "veg.name.sweet_berry_bush_stage0": "Mbuma ya sukali (kitini kia 1)",
+  "veg.name.sweet_berry_bush_stage1": "Mbuma ya sukali (kitini kia 2)",
+  "veg.name.sweet_berry_bush_stage2": "Mbuma ya sukali (kitini kia 3)",
+  "veg.name.sweet_berry_bush_stage3": "Mbuma ya sukali (kitini kia 4)",
+  "veg.name.sugar_cane": "Nsi ya sukali",
+  "veg.name.seagrass_32x": "Bubu ya mbu",
+
+  "credit.title": "Msoniki: %s"
 }

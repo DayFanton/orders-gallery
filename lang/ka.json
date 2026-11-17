@@ -109,6 +109,7 @@
   "block.netherrack": "ნეზერაკი",
   "block.end_stone": "ენდის ქვა",
   "block.plain": "ტექსტურის გარეშე",
+  "block.tint": "ბოკის ფერი",
 
   "mobile.gallery": "📁 გალერეა",
   "mobile.settings": "⚙️ პარამეტრები",
@@ -405,6 +406,8 @@
   "folder.veg.title": "ჩემი მცენარეები",
   "folder.veg.hint": "აირჩიეთ მცენარის სურათი (.png გამჭვირვალობით). მაღალი სურათი (სიმაღლე მინიმუმ 1.5-ჯერ აღემატება სიგანეს, მაგალითად 16×32) გახდება 2 ბლოკის სიმაღლის მცენარე",
   "folder.veg.error": "აირჩიეთ სურათის ფაილი",
+  "folder.tint": "ფერი (თეთრი — ტონის გარეშე)",
+  "folder.weight": "წონა (დაცემის სიხშირე)",
 
   "ui.hide": "ინტერფეისის დამალვა (H)",
   "ui.show": "ინტერფეისის ჩვენება (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "მცენარეულობის ჩართვა",
   "veg.dice": "არევა",
-  "veg.set": "მცენარეულობის ნაკრები",
   "veg.density": "სიმჭიდროვე",
   "veg.layers": "სადაც მცენარეულობა იზრდება",
   "veg.layer1": "ზედა პლატფორმა",
   "veg.layer2": "შუა პლატფორმა",
   "veg.layer3": "ქვედა პლატფორმა",
-  "veg.empty": "მცენარეები ჯერ არ არის — ჩადეთ ტექსტურები vegetation/ ფოლდერში ან დაამატეთ თქვენი"
+  "veg.empty": "მცენარეები ჯერ არ არის — ჩადეთ ტექსტურები vegetation/ ფოლდერში ან დაამატეთ თქვენი",
+  "veg.plants": "მცენარეები",
+  "veg.tint": "მცენარის ფერი",
+  "veg.name.grass": "ბალახი",
+  "veg.name.tall_grass": "მაღალი ბალახი",
+  "veg.name.pale_moss_carpet_side_small": "ფერმკრთალი ხავსი (დაბალი)",
+  "veg.name.pale_moss_carpet_side_tall": "ფერმკრთალი ხავსი (მაღალი)",
+  "veg.name.sweet_berry_bush_stage0": "ტკბილი კენკრა (ეტაპი 1)",
+  "veg.name.sweet_berry_bush_stage1": "ტკბილი კენკრა (ეტაპი 2)",
+  "veg.name.sweet_berry_bush_stage2": "ტკბილი კენკრა (ეტაპი 3)",
+  "veg.name.sweet_berry_bush_stage3": "ტკბილი კენკრა (ეტაპი 4)",
+  "veg.name.sugar_cane": "შაქრის ლერწამი",
+  "veg.name.seagrass_32x": "ზღვის ბალახი",
+
+  "credit.title": "ავტორი: %s"
 }

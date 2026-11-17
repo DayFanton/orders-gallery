@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Bato sa Katapusan",
   "block.plain": "Walay tekstura",
+  "block.tint": "Kolor sa bloke",
 
   "mobile.gallery": "📁 Galeriya",
   "mobile.settings": "⚙️ Mga Setting",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Akong mga tanom",
   "folder.veg.hint": "Pilia ang hulagway sa tanom (.png nga naay transparency). Ang taas nga hulagway (ang gitas-on labing minus 1.5 ka pilo nga mas dako kaysa sa gilapdon, pananglitan 16×32) mahimong tanom nga 2 ka bloke ang gitas-on",
   "folder.veg.error": "Pilia ang file sa hulagway",
+  "folder.tint": "Kolor (puti — walay kolor)",
+  "folder.weight": "Timbang (kadaghan sa pagkahulog)",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "I-on ang tanom",
   "veg.dice": "Sagol-sagol",
-  "veg.set": "Set sa tanom",
   "veg.density": "Kahuot",
   "veg.layers": "Hain motubo ang tanom",
   "veg.layer1": "Ibabaw nga plataporma",
   "veg.layer2": "Tunga-tunga nga plataporma",
   "veg.layer3": "Ubos nga plataporma",
-  "veg.empty": "Wala pay tanom — ibutang ang mga tekstura sa folder nga vegetation/ o iapil ang imoha"
+  "veg.empty": "Wala pay tanom — ibutang ang mga tekstura sa folder nga vegetation/ o iapil ang imoha",
+  "veg.plants": "Mga tanom",
+  "veg.tint": "Kolor sa tanom",
+  "veg.name.grass": "Balili",
+  "veg.name.tall_grass": "Taas nga balili",
+  "veg.name.pale_moss_carpet_side_small": "Hayag nga lumot (ubos)",
+  "veg.name.pale_moss_carpet_side_tall": "Hayag nga lumot (taas)",
+  "veg.name.sweet_berry_bush_stage0": "Tam-is nga berry (yugto 1)",
+  "veg.name.sweet_berry_bush_stage1": "Tam-is nga berry (yugto 2)",
+  "veg.name.sweet_berry_bush_stage2": "Tam-is nga berry (yugto 3)",
+  "veg.name.sweet_berry_bush_stage3": "Tam-is nga berry (yugto 4)",
+  "veg.name.sugar_cane": "Tubo",
+  "veg.name.seagrass_32x": "Balili sa dagat",
+
+  "credit.title": "Awtor: %s"
 }

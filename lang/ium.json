@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End Laangx",
   "block.plain": "No texture",
+  "block.tint": "Rangi ya blok",
 
   "bgimg.name.day": "Hnoi",
   "bgimg.name.end": "Mvanc",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Kuv tsob ntoo",
   "folder.veg.hint": "Xaiv tsob ntoo duab (.png uas pom tseeb). Cov duab siab (qhov siab tsawg kawg 1.5 zaug ntau tshaj qhov dav, piv txwv li 16×32) yuav ua tsob ntoo 2 thaiv siab",
   "folder.veg.error": "Xaiv duab ntawv",
+  "folder.tint": "Rangi ya (mwe — ngagwera)",
+  "folder.weight": "Ulemu (ndakai sya kugwa)",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Qhib tsob ntoo",
   "veg.dice": "Sib",
-  "veg.set": "Qhib tsob ntoo",
   "veg.density": "Tuab",
   "veg.layers": "Qhib tsob ntoo",
   "veg.layer1": "Qaum lub platform",
   "veg.layer2": "Qhib nruab nrab platform",
   "veg.layer3": "Qhib hauv qab platform",
-  "veg.empty": "Tsis muaj tsob ntoo — tso cov duab tso rau hauv vegetation/ folder lossis ntxiv koj tus kheej"
+  "veg.empty": "Tsis muaj tsob ntoo — tso cov duab tso rau hauv vegetation/ folder lossis ntxiv koj tus kheej",
+  "veg.plants": "Mimea",
+  "veg.tint": "Rangi ya mimea",
+  "veg.name.grass": "Utshani",
+  "veg.name.tall_grass": "Utshani obude",
+  "veg.name.pale_moss_carpet_side_small": "Moss ya pwerere (gong'osa)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss ya pwerere (lulelu)",
+  "veg.name.sweet_berry_bush_stage0": "Matunda matamu (hatua 1)",
+  "veg.name.sweet_berry_bush_stage1": "Matunda matamu (hatua 2)",
+  "veg.name.sweet_berry_bush_stage2": "Matunda matamu (hatua 3)",
+  "veg.name.sweet_berry_bush_stage3": "Matunda matamu (hatua 4)",
+  "veg.name.sugar_cane": "Tebu",
+  "veg.name.seagrass_32x": "Utshani basolwandle",
+
+  "credit.title": "Mwandiki: %s"
 }

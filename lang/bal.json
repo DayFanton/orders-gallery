@@ -374,6 +374,7 @@
   "block.netherrack": "نیدررک",
   "block.end_stone": "اینڈ سنگ",
   "block.plain": "هیچ تیکستور نیست",
+  "block.tint": "بلوک رنگ",
 
   "bgimg.name.day": "روچ",
   "bgimg.name.end": "آهری",
@@ -407,6 +408,8 @@
   "folder.veg.title": "منی روپانی",
   "folder.veg.hint": "روپانی عکس انتخاب کن (.png گلا با شفافیت). بلند عکس (بلندی کم از کم 1.5 برابر بیشتر از پهنا، مثال 16×32) یek دو بلوکی روپانی بابت",
   "folder.veg.error": "عکس فایلی انتخاب کن",
+  "folder.tint": "رنگ (سپی — بئ از رنگ)",
+  "folder.weight": "وزن (چون باز شوتگ)",
 
   "ui.hide": "انٹرفیس پچ (H)",
   "ui.show": "انٹرفیس پیش کن (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "روپانی روشن کن",
   "veg.dice": "درهم برهم",
-  "veg.set": "روپانی چم",
   "veg.density": "گنجان",
   "veg.layers": "جاهی کہ روپانی ووبیت",
   "veg.layer1": "برزی پلیٹ فارم",
   "veg.layer2": "میانجی پلیٹ فارم",
   "veg.layer3": "جهلی پلیٹ فارم",
-  "veg.empty": "هما روپانی نیست — بافتان په vegetation/ پوشه بچار یا وتی اضافه کن"
+  "veg.empty": "هما روپانی نیست — بافتان په vegetation/ پوشه بچار یا وتی اضافه کن",
+  "veg.plants": "گواہت",
+  "veg.tint": "گواہت رنگ",
+  "veg.name.grass": "کاه",
+  "veg.name.tall_grass": "بلند کاه",
+  "veg.name.pale_moss_carpet_side_small": "کم رنگیں موص (کلین)",
+  "veg.name.pale_moss_carpet_side_tall": "کم رنگیں موص (بلند)",
+  "veg.name.sweet_berry_bush_stage0": "وشیں میوہ (پاد 1)",
+  "veg.name.sweet_berry_bush_stage1": "وشیں میوہ (پاد 2)",
+  "veg.name.sweet_berry_bush_stage2": "وشیں میوہ (پاد 3)",
+  "veg.name.sweet_berry_bush_stage3": "وشیں میوہ (پاد 4)",
+  "veg.name.sugar_cane": "نیشکر",
+  "veg.name.seagrass_32x": "سمندری کاه",
+
+  "credit.title": "نویسندہ: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "سنگ ندر",
   "block.end_stone": "سنگ اند",
   "block.plain": "بدون بافت",
+  "block.tint": "رنگ بلوک",
 
   "bgimg.name.day": "روز",
   "bgimg.name.end": "اند",
@@ -407,6 +408,8 @@
   "folder.veg.title": "گیاهان من",
   "folder.veg.hint": "تصویر گیاه (.png با شفافیت) را انتخاب کنید. یک تصویر بلند (ارتفاع حداقل ۱.۵ برابر بیشتر از عرض، مثلاً ۱6×۳2) به یک گیاه ۲ بلوکی تبدیل خواهد شد",
   "folder.veg.error": "انتخاب فایل تصویر",
+  "folder.tint": "رنگ (سفید — بدون ته رنگ)",
+  "folder.weight": "وزن (فرکانس افتادن)",
 
   "ui.hide": "مخفی کردن رابط کاربری (H)",
   "ui.show": "نمایش رابط کاربری (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "فعال‌سازی پوشش گیاهی",
   "veg.dice": "درهم‌سازی",
-  "veg.set": "مجموعه پوشش گیاهی",
   "veg.density": "تراکم",
   "veg.layers": "جایی که پوشش گیاهی رشد می‌کند",
   "veg.layer1": "سکوی بالایی",
   "veg.layer2": "سکوی میانی",
   "veg.layer3": "سکوی پایینی",
-  "veg.empty": "هنوز گیاهی وجود ندارد — بافت‌ها را در پوشه vegetation/ قرار دهید یا بافت خود را اضافه کنید"
+  "veg.empty": "هنوز گیاهی وجود ندارد — بافت‌ها را در پوشه vegetation/ قرار دهید یا بافت خود را اضافه کنید",
+  "veg.plants": "گیاهان",
+  "veg.tint": "رنگ گیاه",
+  "veg.name.grass": "چمن",
+  "veg.name.tall_grass": "چمن بلند",
+  "veg.name.pale_moss_carpet_side_small": "خزه کم‌رنگ (کوتاه)",
+  "veg.name.pale_moss_carpet_side_tall": "خزه کم‌رنگ (بلند)",
+  "veg.name.sweet_berry_bush_stage0": "توت‌های شیرین (مرحله ۱)",
+  "veg.name.sweet_berry_bush_stage1": "توت‌های شیرین (مرحله ۲)",
+  "veg.name.sweet_berry_bush_stage2": "توت‌های شیرین (مرحله ۳)",
+  "veg.name.sweet_berry_bush_stage3": "توت‌های شیرین (مرحله ۴)",
+  "veg.name.sugar_cane": "نیشکر",
+  "veg.name.seagrass_32x": "علف دریایی",
+
+  "credit.title": "نویسنده: %s"
 }

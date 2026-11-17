@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Doju End",
   "block.plain": "Amul benn tekisur",
+  "block.tint": "Melokani biro",
 
   "bgimg.name.day": "Bëccëg",
   "bgimg.name.end": "Mujj",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Suuf si ma am",
   "folder.veg.hint": "Tànnal nataalu suuf (.png bu leer). Nataal bu kawe (kawe bi raw na yaatu bi 1.5 yoon, mel ni 16×32) dina nekk suuf bu am ñaari bët",
   "folder.veg.error": "Tànnal nataalu file bi",
+  "folder.tint": "Melokani (weex — amul benn melo)",
+  "folder.weight": "Dole (ni mu koy am)",
 
   "ui.hide": "Dollikul interface bi (H)",
   "ui.show": "Wone interface bi (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Dugalal suuf",
   "veg.dice": "Jàppale",
-  "veg.set": "Waxtaanu suuf",
   "veg.density": "Dëgër",
   "veg.layers": "Fi suuf gi di sax",
   "veg.layer1": "Ndigal bu kawe",
   "veg.layer2": "Ndigal bu digg",
   "veg.layer3": "Ndigal bu suuf",
-  "veg.empty": "Amul suuf benn — dugal xibaar yi ci dossier vegetation/ wala nga yokk sa bopp"
+  "veg.empty": "Amul suuf benn — dugal xibaar yi ci dossier vegetation/ wala nga yokk sa bopp",
+  "veg.plants": "Ronk",
+  "veg.tint": "Melokani ronk",
+  "veg.name.grass": "Xaj",
+  "veg.name.tall_grass": "Xaj bu gudd",
+  "veg.name.pale_moss_carpet_side_small": "Moos bu baax (guddul)",
+  "veg.name.pale_moss_carpet_side_tall": "Moos bu baax (gudd)",
+  "veg.name.sweet_berry_bush_stage0": "Doom yu neex (jëf 1)",
+  "veg.name.sweet_berry_bush_stage1": "Doom yu neex (jëf 2)",
+  "veg.name.sweet_berry_bush_stage2": "Doom yu neex (jëf 3)",
+  "veg.name.sweet_berry_bush_stage3": "Doom yu neex (jëf 4)",
+  "veg.name.sugar_cane": "Xam-xam",
+  "veg.name.seagrass_32x": "Xaj bu bëj",
+
+  "credit.title": "Bindkat: %s"
 }

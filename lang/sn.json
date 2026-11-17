@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dombo reEnd",
   "block.plain": "Hapana texture",
+  "block.tint": "Ruvara rwebhloko",
 
   "mobile.gallery": "📁 Garari",
   "mobile.settings": "⚙️ Zvirongwa",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Zvirimwa zvangu",
   "folder.veg.hint": "Sarudza mufananidzo wechirimwa (.png ine pachena). Mufananidzo murefu (kureba kanenge ka 1.5 kakakura kudarika hupamhi, semuenzaniso 16×32) uchange uita chirimwa chemabhuroko maviri",
   "folder.veg.error": "Sarudza faira remufananidzo",
+  "folder.tint": "Ruvara (chena — pasina zvimwe)",
+  "folder.weight": "Kurema (kakawanda kwarova)",
 
   "ui.hide": "Vanza interface (H)",
   "ui.show": "Ratidza interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Batidza zvirimwa",
   "veg.dice": "Vhenganisa",
-  "veg.set": "Chitsva chezvirimwa",
   "veg.density": "Kuwanda",
   "veg.layers": "Kunoera zvirimwa",
   "veg.layer1": "Chikuva chepamusoro",
   "veg.layer2": "Chikuva chepakati",
   "veg.layer3": "Chikuva chepasi",
-  "veg.empty": "Hapana zvirimwa parizvino — isa zvigadzirwa muhovha ye vegetation/ kana wedzera zvako"
+  "veg.empty": "Hapana zvirimwa parizvino — isa zvigadzirwa muhovha ye vegetation/ kana wedzera zvako",
+  "veg.plants": "Zvirimwa",
+  "veg.tint": "Ruvara rwezvirimwa",
+  "veg.name.grass": "Uswa",
+  "veg.name.tall_grass": "Uswa hurefu",
+  "veg.name.pale_moss_carpet_side_small": "Moss yakachenuruka (pfupi)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss yakachenuruka (refu)",
+  "veg.name.sweet_berry_bush_stage0": "Michero inotapira (danho 1)",
+  "veg.name.sweet_berry_bush_stage1": "Michero inotapira (danho 2)",
+  "veg.name.sweet_berry_bush_stage2": "Michero inotapira (danho 3)",
+  "veg.name.sweet_berry_bush_stage3": "Michero inotapira (danho 4)",
+  "veg.name.sugar_cane": "Shuga",
+  "veg.name.seagrass_32x": "Uswa hwegungwa",
+
+  "credit.title": "Munyori: %s"
 }

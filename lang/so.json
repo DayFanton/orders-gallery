@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dhagaxa End",
   "block.plain": "Ma jiro qaab-dhismeed",
+  "block.tint": "Midabka balooga",
 
   "bgimg.name.day": "Maalin",
   "bgimg.name.end": "Dhammaad",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Dhirtayda",
   "folder.veg.hint": "Dooro sawirka dhirta (.png oo daahfuran). Sawir dheer (dhererku ugu yaraan 1.5 jeer ka weyn yahay balaca, tusaale 16×32) wuxuu noqon doonaa dhir laba baloog ah",
   "folder.veg.error": "Dooro faylka sawirka",
+  "folder.tint": "Midab (cad — aan lahayn midab kale)",
+  "folder.weight": "Miisaanka (intuu soo dhacayo)",
 
   "ui.hide": "Qari is dhexgalka (H)",
   "ui.show": "Muuji is dhexgalka (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Daar dhirta",
   "veg.dice": "Isku dar",
-  "veg.set": "Qalabka dhirta",
   "veg.density": "Cufnaanta",
   "veg.layers": "Meesha ay dhirta ka baxdo",
   "veg.layer1": "Barxadda sare",
   "veg.layer2": "Barxadda dhexe",
   "veg.layer3": "Barxadda hoose",
-  "veg.empty": "Wali ma jiraan dhir — dhig qaab-dhismeedka galka vegetation/ ama ku dar adiga kuu gaar ah"
+  "veg.empty": "Wali ma jiraan dhir — dhig qaab-dhismeedka galka vegetation/ ama ku dar adiga kuu gaar ah",
+  "veg.plants": "Dhirta",
+  "veg.tint": "Midabka dhirta",
+  "veg.name.grass": "Caws",
+  "veg.name.tall_grass": "Caws dheer",
+  "veg.name.pale_moss_carpet_side_small": "Moos daciif ah (gaaban)",
+  "veg.name.pale_moss_carpet_side_tall": "Moos daciif ah (dheer)",
+  "veg.name.sweet_berry_bush_stage0": "Miro macaan (heerka 1)",
+  "veg.name.sweet_berry_bush_stage1": "Miro macaan (heerka 2)",
+  "veg.name.sweet_berry_bush_stage2": "Miro macaan (heerka 3)",
+  "veg.name.sweet_berry_bush_stage3": "Miro macaan (heerka 4)",
+  "veg.name.sugar_cane": "Caws sonkor",
+  "veg.name.seagrass_32x": "Caws badda",
+
+  "credit.title": "Qoraaga: %s"
 }

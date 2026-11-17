@@ -109,6 +109,7 @@
   "block.netherrack": "حجر نذير",
   "block.end_stone": "حجر النهاية",
   "block.plain": "Nime texture",
+  "block.tint": "لون الكتلة",
 
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Nabatati",
   "folder.veg.hint": "Ikhtir surat nabat (.png ma'a shafafiyya). Surat tawila (al-irtifaq 'ala al-aqall 1.5 marrat min al-'ard, mithl 16×32) satusbih nabatan min balukayn",
   "folder.veg.error": "Ikhtir milaf as-surat",
+  "folder.tint": "اللون (أبيض — بدون تدرج)",
+  "folder.weight": "الوزن (معدل السقوط)",
 
   "ui.hide": "Ikhfi interface (H)",
   "ui.show": "Zahhir interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Wajid an-nabatat",
   "veg.dice": "Khaltat",
-  "veg.set": "Set an-nabatat",
   "veg.density": "Kathafa",
   "veg.layers": "Mahalat an-nabatat namu",
   "veg.layer1": "Al-minassa al-ulya",
   "veg.layer2": "Al-minassa al-wusta",
   "veg.layer3": "Al-minassa as-sufla",
-  "veg.empty": "Ma fi nabatat — ahtut al-ansija fi mujallad vegetation/ aw zid khassatuk"
+  "veg.empty": "Ma fi nabatat — ahtut al-ansija fi mujallad vegetation/ aw zid khassatuk",
+  "veg.plants": "نباتات",
+  "veg.tint": "لون النبات",
+  "veg.name.grass": "عشب",
+  "veg.name.tall_grass": "عشب طويل",
+  "veg.name.pale_moss_carpet_side_small": "طحلب شاحب (منخفض)",
+  "veg.name.pale_moss_carpet_side_tall": "طحلب شاحب (طويل)",
+  "veg.name.sweet_berry_bush_stage0": "التوت الحلو (المرحلة 1)",
+  "veg.name.sweet_berry_bush_stage1": "التوت الحلو (المرحلة 2)",
+  "veg.name.sweet_berry_bush_stage2": "التوت الحلو (المرحلة 3)",
+  "veg.name.sweet_berry_bush_stage3": "التوت الحلو (المرحلة 4)",
+  "veg.name.sugar_cane": "قصب السكر",
+  "veg.name.seagrass_32x": "عشب البحر",
+
+  "credit.title": "المؤلف: %s"
 }

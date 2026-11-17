@@ -374,6 +374,7 @@
   "block.netherrack": "Nether taşı",
   "block.end_stone": "End taşı",
   "block.plain": "Doku yok",
+  "block.tint": "Blok rengi",
 
   "bgimg.name.day": "Gündüz",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Bitkilerim",
   "folder.veg.hint": "Bir bitki görseli seçin (şeffaflıklı .png). Uzun bir görsel (yüksekliği genişliğin en az 1,5 katı, örneğin 16x32), 2 blok yüksekliğinde bir bitki olacaktır",
   "folder.veg.error": "Görsel dosyası seç",
+  "folder.tint": "Renk (beyaz — tonda değil)",
+  "folder.weight": "Ağırlık (düşme sıklığı)",
 
   "ui.hide": "Arayüzü gizle (H)",
   "ui.show": "Arayüzü göster (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Bitki örtüsünü aç",
   "veg.dice": "Karıştır",
-  "veg.set": "Bitki örtüsü seti",
   "veg.density": "Yoğunluk",
   "veg.layers": "Bitki örtüsünün büyüdüğü yer",
   "veg.layer1": "Üst platform",
   "veg.layer2": "Orta platform",
   "veg.layer3": "Alt platform",
-  "veg.empty": "Henüz bitki yok — dokuları vegetation/ klasörüne yerleştirin veya kendi dokularınızı ekleyin"
+  "veg.empty": "Henüz bitki yok — dokuları vegetation/ klasörüne yerleştirin veya kendi dokularınızı ekleyin",
+  "veg.plants": "Bitkiler",
+  "veg.tint": "Bitki rengi",
+  "veg.name.grass": "Ot",
+  "veg.name.tall_grass": "Uzun ot",
+  "veg.name.pale_moss_carpet_side_small": "Soluk yosun (alçak)",
+  "veg.name.pale_moss_carpet_side_tall": "Soluk yosun (yüksek)",
+  "veg.name.sweet_berry_bush_stage0": "Tatlı orman meyveleri (aşama 1)",
+  "veg.name.sweet_berry_bush_stage1": "Tatlı orman meyveleri (aşama 2)",
+  "veg.name.sweet_berry_bush_stage2": "Tatlı orman meyveleri (aşama 3)",
+  "veg.name.sweet_berry_bush_stage3": "Tatlı orman meyveleri (aşama 4)",
+  "veg.name.sugar_cane": "Şeker kamışı",
+  "veg.name.seagrass_32x": "Deniz yosunu",
+
+  "credit.title": "Yazar: %s"
 }

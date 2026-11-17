@@ -109,6 +109,7 @@
   "block.netherrack": "下界岩",
   "block.end_stone": "末地石",
   "block.plain": "无材质",
+  "block.tint": "塊顏色",
 
   "mobile.gallery": "📁 畫廊",
   "mobile.settings": "⚙️ 設置",
@@ -404,6 +405,8 @@
   "folder.veg.open": "我的植物",
   "folder.veg.title": "我的植物",
   "folder.veg.error": "选择图片文件",
+  "folder.tint": "顏色（白色——無色調）",
+  "folder.weight": "權重（掉落頻率）",
 
   "ui.hide": "隐藏界面 (H)",
   "ui.show": "显示界面 (H)",
@@ -413,11 +416,24 @@
 
   "veg.enable": "启用植被",
   "veg.dice": "随机打乱",
-  "veg.set": "植被预设",
   "veg.density": "密度",
   "veg.layers": "植被生长嘅地方",
   "veg.layer1": "上层平台",
   "veg.layer2": "中层平台",
   "veg.layer3": "下层平台",
-  "veg.empty": "暂无植物 — 请将纹理放入 vegetation/ 文件夹或添加您自己的"
+  "veg.empty": "暂无植物 — 请将纹理放入 vegetation/ 文件夹或添加您自己的",
+  "veg.plants": "植物",
+  "veg.tint": "植物顏色",
+  "veg.name.grass": "草",
+  "veg.name.tall_grass": "高草",
+  "veg.name.pale_moss_carpet_side_small": "淺色苔蘚（低矮）",
+  "veg.name.pale_moss_carpet_side_tall": "淺色苔蘚（高大）",
+  "veg.name.sweet_berry_bush_stage0": "甜漿果（階段 1）",
+  "veg.name.sweet_berry_bush_stage1": "甜漿果（階段 2）",
+  "veg.name.sweet_berry_bush_stage2": "甜漿果（階段 3）",
+  "veg.name.sweet_berry_bush_stage3": "甜漿果（階段 4）",
+  "veg.name.sugar_cane": "甘蔗",
+  "veg.name.seagrass_32x": "海草",
+
+  "credit.title": "作者：%s"
 }

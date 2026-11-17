@@ -109,6 +109,7 @@
   "block.netherrack": "Незерташ",
   "block.end_stone": "Энд ташы",
   "block.plain": "Текстура юҡ",
+  "block.tint": "Блок төҫө",
 
   "mobile.gallery": "📁 Галерея",
   "mobile.settings": "⚙️ Көйләүҙәр",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Минең үҫемлектәр",
   "folder.veg.hint": "Үҫемлек һүрәтын һайлағыҙ (.png үтә күренмәле). Бейек һүрәт (бейеклеге киңлегенән кәм тигәндә 1,5 тапҡыр ҙур, мәҫәлән 16×32) 2 блоклы үҫемлек буласаҡ",
   "folder.veg.error": "Рәсем файлын һайлағыҙ",
+  "folder.tint": "Төҫ (аҡ — төҫһөҙ)",
+  "folder.weight": "Ауырлыҡ (нисә йыш төшә)",
 
   "ui.hide": "Интерфейсты йәшерергә (H)",
   "ui.show": "Интерфейсты күрһәтергә (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Үҫемлектәрҙе ҡабыҙырға",
   "veg.dice": "Буталға",
-  "veg.set": "Үҫемлектәр йыйылмаһы",
   "veg.density": "Тығыҙлыҡ",
   "veg.layers": "Үҫемлектәр үҫкән ер",
   "veg.layer1": "Өҫкө платформа",
   "veg.layer2": "Урта платформа",
   "veg.layer3": "Аҫҡы платформа",
-  "veg.empty": "Үҫемлектәр әле юҡ — текстураларҙы vegetation/ папкаһына һалығыҙ йәки үҙегеҙекен өҫтәгеҙ"
+  "veg.empty": "Үҫемлектәр әле юҡ — текстураларҙы vegetation/ папкаһына һалығыҙ йәки үҙегеҙекен өҫтәгеҙ",
+  "veg.plants": "Үҫемлектәр",
+  "veg.tint": "Үҫемлек төҫө",
+  "veg.name.grass": "Үлән",
+  "veg.name.tall_grass": "Бейек үлән",
+  "veg.name.pale_moss_carpet_side_small": "Аҡһыл мүк (бәләкәй)",
+  "veg.name.pale_moss_carpet_side_tall": "Аҡһыл мүк (бейек)",
+  "veg.name.sweet_berry_bush_stage0": "Татлы еләктәр (1-се стадия)",
+  "veg.name.sweet_berry_bush_stage1": "Татлы еләктәр (2-се стадия)",
+  "veg.name.sweet_berry_bush_stage2": "Татлы еләктәр (3-сө стадия)",
+  "veg.name.sweet_berry_bush_stage3": "Татлы еләктәр (4-се стадия)",
+  "veg.name.sugar_cane": "Шәкәр ҡамышы",
+  "veg.name.seagrass_32x": "Диңгеҙ үләне",
+
+  "credit.title": "Автор: %s"
 }

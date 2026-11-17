@@ -374,6 +374,7 @@
   "block.netherrack": "Nezerraak",
   "block.end_stone": "Eend kincho",
   "block.plain": "Texture afamištění",
+  "block.tint": "Blokki qocolo",
 
   "bgimg.name.day": "Barrimma",
   "bgimg.name.end": "Goofimarcho",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Xaawowuwa koo",
   "folder.veg.hint": "Xaawo qixxisiri qixxi (.png qixxite). Qixxite xaawo (xaawo xagi 1.5 kowu gatamote, lawishshaho 16×32) 2 boloqote xaawo ikkitanno",
   "folder.veg.error": "Qixxite fayli qixxi",
+  "folder.tint": "Qocolo (boora — illame male)",
+  "folder.weight": "Gafi (ha'neemmo wole)",
 
   "ui.hide": "Interface qorqora (H)",
   "ui.show": "Interface leellishshu (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Gashshishi xaawo",
   "veg.dice": "Fata",
-  "veg.set": "Xaawo qixxisiri",
   "veg.density": "Rukkina",
   "veg.layers": "Xaawo shini yanna",
   "veg.layer1": "Aliidi baatto",
   "veg.layer2": "Giddichshu baatto",
   "veg.layer3": "Woroonni baatto",
-  "veg.empty": "Xaawo dino — vegetation/ foldere qixxi woy kuwwi"
+  "veg.empty": "Xaawo dino — vegetation/ foldere qixxi woy kuwwi",
+  "veg.plants": "Bushshira",
+  "veg.tint": "Bushshira qocolo",
+  "veg.name.grass": "Bushshira",
+  "veg.name.tall_grass": "Bushshira rohi",
+  "veg.name.pale_moss_carpet_side_small": "Moosisi boora (shiiqqo)",
+  "veg.name.pale_moss_carpet_side_tall": "Bushshira boora (rohi)",
+  "veg.name.sweet_berry_bush_stage0": "Xaa'ma guma (1-ki deerrira)",
+  "veg.name.sweet_berry_bush_stage1": "Xaa'ma guma (2-ki deerrira)",
+  "veg.name.sweet_berry_bush_stage2": "Xaa'ma guma (3-ki deerrira)",
+  "veg.name.sweet_berry_bush_stage3": "Xaa'ma guma (4-ki deerrira)",
+  "veg.name.sugar_cane": "Shokoriga",
+  "veg.name.seagrass_32x": "Ba'ra bushshira",
+
+  "credit.title": "Boressanchicha: %s"
 }

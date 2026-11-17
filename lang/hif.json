@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End ke patthar",
   "block.plain": "Koi texture nahi hai",
+  "block.tint": "Block ke rang",
 
   "bgimg.name.day": "Din",
   "bgimg.name.end": "Ant",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mor banaspati",
   "folder.veg.hint": "Banaspati ka photo chuno (.png transparency ke sath). Lamba photo (unchai chaurai se kam se kam 1.5 guna zyada, jaise 16×32) 2 block lamba banaspati ban jaiga",
   "folder.veg.error": "Photo file chuno",
+  "folder.tint": "Rang (safeed — bina rang ke)",
+  "folder.weight": "Wajan (kitni baar drop hota hai)",
 
   "ui.hide": "Interface chupao (H)",
   "ui.show": "Interface dikhao (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Banaspati chalu karo",
   "veg.dice": "Mix karo",
-  "veg.set": "Banaspati set",
   "veg.density": "Ghanaapan",
   "veg.layers": "Jaba banaspati ugta hai",
   "veg.layer1": "Upar wala platform",
   "veg.layer2": "Bichla wala platform",
   "veg.layer3": "Niche wala platform",
-  "veg.empty": "Koi banaspati nahi hai — texture ko vegetation/ folder me rakho ya apna jodo"
+  "veg.empty": "Koi banaspati nahi hai — texture ko vegetation/ folder me rakho ya apna jodo",
+  "veg.plants": "Paudha",
+  "veg.tint": "Paudha ke rang",
+  "veg.name.grass": "Ghaas",
+  "veg.name.tall_grass": "Lamba ghaas",
+  "veg.name.pale_moss_carpet_side_small": "Fika moss (chhota)",
+  "veg.name.pale_moss_carpet_side_tall": "Fika moss (lamba)",
+  "veg.name.sweet_berry_bush_stage0": "Meetha berry (charan 1)",
+  "veg.name.sweet_berry_bush_stage1": "Meetha berry (charan 2)",
+  "veg.name.sweet_berry_bush_stage2": "Meetha berry (charan 3)",
+  "veg.name.sweet_berry_bush_stage3": "Meetha berry (charan 4)",
+  "veg.name.sugar_cane": "Ganna",
+  "veg.name.seagrass_32x": "Samudri ghaas",
+
+  "credit.title": "Author: %s"
 }

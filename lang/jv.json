@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Watu End",
   "block.plain": "Tanpa tekstur",
+  "block.tint": "Werna blok",
 
   "bgimg.name.day": "Rina",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Tanduranku",
   "folder.veg.hint": "Pilih gambar tanduran (.png kanthi transparansi). Gambar dhuwur (dhuwur minimal kaping 1,5 luwih gedhe tinimbang jembar, contone 16×32) bakal dadi tanduran 2 blok",
   "folder.veg.error": "Pilih berkas gambar",
+  "folder.tint": "Werna (putih — tanpa rona)",
+  "folder.weight": "Bobot (frekuensi metu)",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Aktifake vegetasi",
   "veg.dice": "Acak",
-  "veg.set": "Set vegetasi",
   "veg.density": "Kapadhetan",
   "veg.layers": "Panggonan tuwuh vegetasi",
   "veg.layer1": "Platform ndhuwur",
   "veg.layer2": "Platform tengah",
   "veg.layer3": "Platform ngisor",
-  "veg.empty": "Durung ana tanduran — pasang tekstur ing folder vegetation/ utawa tambahkan dhewe"
+  "veg.empty": "Durung ana tanduran — pasang tekstur ing folder vegetation/ utawa tambahkan dhewe",
+  "veg.plants": "Tanduran",
+  "veg.tint": "Werna tanduran",
+  "veg.name.grass": "Suket",
+  "veg.name.tall_grass": "Suket dhuwur",
+  "veg.name.pale_moss_carpet_side_small": "Lumut pucet (cendhak)",
+  "veg.name.pale_moss_carpet_side_tall": "Lumut pucet (dhuwur)",
+  "veg.name.sweet_berry_bush_stage0": "Woh beri legi (tahap 1)",
+  "veg.name.sweet_berry_bush_stage1": "Woh beri legi (tahap 2)",
+  "veg.name.sweet_berry_bush_stage2": "Woh beri legi (tahap 3)",
+  "veg.name.sweet_berry_bush_stage3": "Woh beri legi (tahap 4)",
+  "veg.name.sugar_cane": "Tebu",
+  "veg.name.seagrass_32x": "Suket segara",
+
+  "credit.title": "Penulis: %s"
 }

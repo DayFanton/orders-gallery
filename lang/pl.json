@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kamień Kresu",
   "block.plain": "Brak tekstury",
+  "block.tint": "Kolor bloku",
 
   "bgimg.name.day": "Dzień",
   "bgimg.name.end": "Kres",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Moje rośliny",
   "folder.veg.hint": "Wybierz obraz rośliny (.png z przezroczystością). Wysoki obraz (wysokość co najmniej 1,5 raza większa niż szerokość, np. 16×32) stanie się rośliną o wysokości 2 bloków",
   "folder.veg.error": "Wybierz plik obrazu",
+  "folder.tint": "Kolor (biały — bez odcienia)",
+  "folder.weight": "Waga (częstotliwość wypadania)",
 
   "ui.hide": "Ukryj interfejs (H)",
   "ui.show": "Pokaż interfejs (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Włącz roślinność",
   "veg.dice": "Pomieszaj",
-  "veg.set": "Zestaw roślinności",
   "veg.density": "Gęstość",
   "veg.layers": "Gdzie rośnie roślinność",
   "veg.layer1": "Górna platforma",
   "veg.layer2": "Środkowa platforma",
   "veg.layer3": "Dolna platforma",
-  "veg.empty": "Brak roślin — umieść tekstury w folderze vegetation/ lub dodaj własne"
+  "veg.empty": "Brak roślin — umieść tekstury w folderze vegetation/ lub dodaj własne",
+  "veg.plants": "Rośliny",
+  "veg.tint": "Kolor rośliny",
+  "veg.name.grass": "Trava",
+  "veg.name.tall_grass": "Wysoka trava",
+  "veg.name.pale_moss_carpet_side_small": "Blady mech (niski)",
+  "veg.name.pale_moss_carpet_side_tall": "Blady mech (wysoki)",
+  "veg.name.sweet_berry_bush_stage0": "Słodkie jagody (etap 1)",
+  "veg.name.sweet_berry_bush_stage1": "Słodkie jagody (etap 2)",
+  "veg.name.sweet_berry_bush_stage2": "Słodkie jagody (etap 3)",
+  "veg.name.sweet_berry_bush_stage3": "Słodkie jagody (etap 4)",
+  "veg.name.sugar_cane": "Trzcina cukrowa",
+  "veg.name.seagrass_32x": "Trawa morska",
+
+  "credit.title": "Autor: %s"
 }

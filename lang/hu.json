@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endkő",
   "block.plain": "Nincs textúra",
+  "block.tint": "Blokk színe",
 
   "mobile.gallery": "📁 Galéria",
   "mobile.settings": "⚙️ Beállítások",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Növényeim",
   "folder.veg.hint": "Válasszon ki egy növényképet (.png áttetszőséggel). A magas kép (a magasság legalább 1,5-szer nagyobb, mint a szélesség, pl. 16×32) 2 blokk magas növénnyé válik",
   "folder.veg.error": "Képfájl kiválasztása",
+  "folder.tint": "Szín (fehér — árnyalat nélkül)",
+  "folder.weight": "Súly (ejtési gyakoriság)",
 
   "ui.hide": "Felület elrejtése (H)",
   "ui.show": "Felület megjelenítése (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Növényzet bekapcsolása",
   "veg.dice": "Keverés",
-  "veg.set": "Növényzet készlet",
   "veg.density": "Sűrűség",
   "veg.layers": "Ahol a növényzet nő",
   "veg.layer1": "Felső platform",
   "veg.layer2": "Középső platform",
   "veg.layer3": "Alsó platform",
-  "veg.empty": "Még nincsenek növények — tegye a textúrákat a vegetation/ mappába, vagy adja hozzá a sajátjait"
+  "veg.empty": "Még nincsenek növények — tegye a textúrákat a vegetation/ mappába, vagy adja hozzá a sajátjait",
+  "veg.plants": "Növények",
+  "veg.tint": "Növény színe",
+  "veg.name.grass": "Fű",
+  "veg.name.tall_grass": "Magas fű",
+  "veg.name.pale_moss_carpet_side_small": "Halvány moha (alacsony)",
+  "veg.name.pale_moss_carpet_side_tall": "Halvány moha (magas)",
+  "veg.name.sweet_berry_bush_stage0": "Édes bogyók (1. fázis)",
+  "veg.name.sweet_berry_bush_stage1": "Édes bogyók (2. fázis)",
+  "veg.name.sweet_berry_bush_stage2": "Édes bogyók (3. fázis)",
+  "veg.name.sweet_berry_bush_stage3": "Édes bogyók (4. fázis)",
+  "veg.name.sugar_cane": "Cukornád",
+  "veg.name.seagrass_32x": "Tengeri fű",
+
+  "credit.title": "Szerző: %s"
 }

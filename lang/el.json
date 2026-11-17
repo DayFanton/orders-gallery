@@ -109,6 +109,7 @@
   "block.netherrack": "Νέδερακ",
   "block.end_stone": "Πέτρα του Εντ",
   "block.plain": "Χωρίς υφή",
+  "block.tint": "Xρώμα μπλοκ",
 
   "mobile.gallery": "📁 Γκαλερί",
   "mobile.settings": "⚙️ Ρυθμίσεις",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Τα φυτά μου",
   "folder.veg.hint": "Επιλέξτε εικόνα φυτού (.png με διαφάνεια). Μια ψηλή εικόνα (ύψος τουλάχιστον 1,5 φορά μεγαλύτερο από το πλάτος, π.χ. 16×32) θα γίνει φυτό 2 μπλοκ",
   "folder.veg.error": "Επιλογή αρχείου εικόνας",
+  "folder.tint": "Xρώμα (λευκό — χωρίς απόχρωση)",
+  "folder.weight": "Βάρος (συχνότητα εμφάνισης)",
 
   "ui.hide": "Απόκρυψη διεπαφής (H)",
   "ui.show": "Εμφάνιση διεπαφής (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Ενεργοποίηση βλάστησης",
   "veg.dice": "Ανακατεύω",
-  "veg.set": "Σετ βλάστησης",
   "veg.density": "Πυκνότητα",
   "veg.layers": "Πού μεγαλώνει η βλάστηση",
   "veg.layer1": "Άνω πλατφόρμα",
   "veg.layer2": "Μεσαία πλατφόρμα",
   "veg.layer3": "Κάτω πλατφόρμα",
-  "veg.empty": "Δεν υπάρχουν φυτά ακόμα — τοποθετήστε υφές στον φάκελο vegetation/ ή προσθέστε τις δικές σας"
+  "veg.empty": "Δεν υπάρχουν φυτά ακόμα — τοποθετήστε υφές στον φάκελο vegetation/ ή προσθέστε τις δικές σας",
+  "veg.plants": "Φυτά",
+  "veg.tint": "Xρώμα φυτού",
+  "veg.name.grass": "Xόρτο",
+  "veg.name.tall_grass": "Ψηλό χόρτο",
+  "veg.name.pale_moss_carpet_side_small": "Ωχρό βρύο (χαμηλό)",
+  "veg.name.pale_moss_carpet_side_tall": "Ωχρό βρύο (ψηλό)",
+  "veg.name.sweet_berry_bush_stage0": "Γλυκά μούρα (στάδιο 1)",
+  "veg.name.sweet_berry_bush_stage1": "Γλυκά μούρα (στάδιο 2)",
+  "veg.name.sweet_berry_bush_stage2": "Γλυκά μούρα (στάδιο 3)",
+  "veg.name.sweet_berry_bush_stage3": "Γλυκά μούρα (στάδιο 4)",
+  "veg.name.sugar_cane": "Ζαχαροκάλαμο",
+  "veg.name.seagrass_32x": "Θαλάσσιο χόρτο",
+
+  "credit.title": "Σγγραφέας: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End kameň",
   "block.plain": "Bez textúry",
+  "block.tint": "Farba bloku",
 
   "bgimg.name.day": "Deň",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Moje rastliny",
   "folder.veg.hint": "Vyberte obrázok rastliny (.png s priehľadnosťou). Vysoký obrázok (výška aspoň 1,5-krát väčšia ako šírka, napr. 16×32) sa stane rastlinou vysokou 2 bloky",
   "folder.veg.error": "Vybrať súbor obrázka",
+  "folder.tint": "Farba (biela — bez odtieňa)",
+  "folder.weight": "Váha (frekvencia padania)",
 
   "ui.hide": "Skryť rozhranie (H)",
   "ui.show": "Zobraziť rozhranie (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Zapnúť vegetáciu",
   "veg.dice": "Zamiešať",
-  "veg.set": "Súprava vegetácie",
   "veg.density": "Hustota",
   "veg.layers": "Kde rastie vegetácia",
   "veg.layer1": "Horná plošina",
   "veg.layer2": "Stredná plošina",
   "veg.layer3": "Dolná plošina",
-  "veg.empty": "Zatiaľ žiadne rastliny — vložte textúry do priečinka vegetation/ alebo pridajte svoje vlastné"
+  "veg.empty": "Zatiaľ žiadne rastliny — vložte textúry do priečinka vegetation/ alebo pridajte svoje vlastné",
+  "veg.plants": "Rastliny",
+  "veg.tint": "Farba rastliny",
+  "veg.name.grass": "Tráva",
+  "veg.name.tall_grass": "Vysoká tráva",
+  "veg.name.pale_moss_carpet_side_small": "Bledý mech (nízky)",
+  "veg.name.pale_moss_carpet_side_tall": "Bledý mech (vysoký)",
+  "veg.name.sweet_berry_bush_stage0": "Sladké bobule (fáza 1)",
+  "veg.name.sweet_berry_bush_stage1": "Sladké bobule (fáza 2)",
+  "veg.name.sweet_berry_bush_stage2": "Sladké bobule (fáza 3)",
+  "veg.name.sweet_berry_bush_stage3": "Sladké bobule (fáza 4)",
+  "veg.name.sugar_cane": "Cukrová trstina",
+  "veg.name.seagrass_32x": "Morská tráva",
+
+  "credit.title": "Autor: %s"
 }

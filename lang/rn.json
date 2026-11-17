@@ -374,6 +374,7 @@
   "block.netherrack": "Ibuye ryo mu kuzimu (Netherrack)",
   "block.end_stone": "Ibuye ryo kw'iherezo (End stone)",
   "block.plain": "Nta bice bifatika",
+  "block.tint": "Ibara ry'ibibanza",
 
   "bgimg.name.day": "Umurango",
   "bgimg.name.end": "Iherezo",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Ibiterwa vyanje",
   "folder.veg.hint": "Hitamo ishusho y'igiterwa (.png ifite ubwerabwera). Ishusho ndende (uburebure nibura incuro 1.5 kuruta ubugari, urugero 16×32) izaba igiterwa gifite amatafari abiri",
   "folder.veg.error": "Hitamo dosiye y'igiterwa",
+  "folder.tint": "Ibara (umweru — ata nta ibara)",
+  "folder.weight": "Uburemere (uko bigwa)",
 
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Gukora ibiterwa",
   "veg.dice": "Kuvanga",
-  "veg.set": "Urutonde rw'ibiterwa",
   "veg.density": "Ubwiganze",
   "veg.layers": "Aho ibiterwa bikura",
   "veg.layer1": "Urubuga rwo hejuru",
   "veg.layer2": "Urubuga rwo hagati",
   "veg.layer3": "Urubuga rwo hasi",
-  "veg.empty": "Nta biterwa bihari — shyira ibiterwa mu bubiko bwa vegetation/ cyangwa wongere ibyawe"
+  "veg.empty": "Nta biterwa bihari — shyira ibiterwa mu bubiko bwa vegetation/ cyangwa wongere ibyawe",
+  "veg.plants": "Ibimera",
+  "veg.tint": "Ibara ry'ibimera",
+  "veg.name.grass": "Ubwatsi",
+  "veg.name.tall_grass": "Ubwatsi burebure",
+  "veg.name.pale_moss_carpet_side_small": "Urume rwera (rugufi)",
+  "veg.name.pale_moss_carpet_side_tall": "Urume rwera (burebure)",
+  "veg.name.sweet_berry_bush_stage0": "Ivyanwa biryoshe (intambwe ya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Ivyanwa biryoshe (intambwe ya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Ivyanwa biryoshe (intambwe ya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Ivyanwa biryoshe (intambwe ya 4)",
+  "veg.name.sugar_cane": "Isigwa",
+  "veg.name.seagrass_32x": "Ubwatsi bw'ikiyaga",
+
+  "credit.title": "Umwanditsi: %s"
 }

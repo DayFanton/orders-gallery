@@ -374,6 +374,7 @@
   "block.netherrack": "नेदररॅक",
   "block.end_stone": "एंड दगड",
   "block.plain": "कोणतीही पोत नाही",
+  "block.tint": "ब्लॉकचा रंग",
 
   "bgimg.name.day": "दिवस",
   "bgimg.name.end": "एंड",
@@ -407,6 +408,8 @@
   "folder.veg.title": "माझ्या वनस्पती",
   "folder.veg.hint": "वनस्पतीची प्रतिमा निवडा (.png पारदर्शकतेसह). उंच प्रतिमा (रुंदीपेक्षा उंची किमान 1.5 पट जास्त, उदा. 16×32) 2 ब्लॉकची वनस्पती होईल",
   "folder.veg.error": "प्रतिमा फाइल निवडा",
+  "folder.tint": "रंग (पांढरा — छवेशive शिवाय)",
+  "folder.weight": "वजन (कसे पडते)",
 
   "ui.hide": "इंटरफेस लपवा (H)",
   "ui.show": "इंटरफेस दाखवा (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "वनस्पती सक्षम करा",
   "veg.dice": "मिसळा",
-  "veg.set": "वनस्पती संच",
   "veg.density": "घनता",
   "veg.layers": "वनस्पती कुठे वाढते",
   "veg.layer1": "वरचा प्लॅटफॉर्म",
   "veg.layer2": "मधला प्लॅटफॉर्म",
   "veg.layer3": "खालचा प्लॅटफॉर्म",
-  "veg.empty": "अद्याप कोणतीही वनस्पती नाही — टेक्सचर्स vegetation/ फोल्डरमध्ये ठेवा किंवा स्वतःचे जोडा"
+  "veg.empty": "अद्याप कोणतीही वनस्पती नाही — टेक्सचर्स vegetation/ फोल्डरमध्ये ठेवा किंवा स्वतःचे जोडा",
+  "veg.plants": "वनस्पती",
+  "veg.tint": "वनस्पतीचा रंग",
+  "veg.name.grass": "गवत",
+  "veg.name.tall_grass": "उंच गवत",
+  "veg.name.pale_moss_carpet_side_small": "फिकट शेवाळ (खालचे)",
+  "veg.name.pale_moss_carpet_side_tall": "फिकट शेवाळ (उंच)",
+  "veg.name.sweet_berry_bush_stage0": "गोड बेरी (टप्पा 1)",
+  "veg.name.sweet_berry_bush_stage1": "गोड बेरी (टप्पा 2)",
+  "veg.name.sweet_berry_bush_stage2": "गोड बेरी (टप्पा 3)",
+  "veg.name.sweet_berry_bush_stage3": "गोड बेरी (टप्पा 4)",
+  "veg.name.sugar_cane": "उस",
+  "veg.name.seagrass_32x": "सागरी गवत",
+
+  "credit.title": "लेखक: %s"
 }

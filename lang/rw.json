@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ibuye rya End",
   "block.plain": "Nta bice bifatika",
+  "block.tint": "Amabara y'ishyiga",
 
   "mobile.gallery": "📁 Inzu y'ibihangano",
   "mobile.settings": "⚙️ Igenamiterere",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Ibimera byanjye",
   "folder.veg.hint": "Hitamo ishusho y'igimera (.png ifite ubwerabwera). Ishusho ndende (uburebure nibura incuro 1.5 kuruta ubugari, urugero 16×32) izaba igimera gifite amatafari abiri",
   "folder.veg.error": "Hitamo dosiye y'ishusho",
+  "folder.tint": "Amabara (umweru — nta ibara)",
+  "folder.weight": "Uburemere (uko bigwa)",
 
   "ui.hide": "Hisha interface (H)",
   "ui.show": "Erekana interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Gushyira mu bikorwa ibimera",
   "veg.dice": "Kuvanga",
-  "veg.set": "Urutonde rw'ibimera",
   "veg.density": "Ubucucike",
   "veg.layers": "Aho ibimera bikura",
   "veg.layer1": "Urubuga rwo hejuru",
   "veg.layer2": "Urubuga rwo hagati",
   "veg.layer3": "Urubuga rwo hasi",
-  "veg.empty": "Nta bimera bihari — shyira imiterere mu bubiko bwa vegetation/ cyangwa wongere ibyawe"
+  "veg.empty": "Nta bimera bihari — shyira imiterere mu bubiko bwa vegetation/ cyangwa wongere ibyawe",
+  "veg.plants": "Ibimera",
+  "veg.tint": "Amabara y'ibimera",
+  "veg.name.grass": "UBWatsi",
+  "veg.name.tall_grass": "Ubwatsi burebure",
+  "veg.name.pale_moss_carpet_side_small": "Urume rwera (rugufi)",
+  "veg.name.pale_moss_carpet_side_tall": "Urume rwera (burebure)",
+  "veg.name.sweet_berry_bush_stage0": "Imbuto ziryoshye (icyiciro cya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Imbuto ziryoshye (icyiciro cya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Imbuto ziryoshye (icyiciro cya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Imbuto ziryoshye (icyiciro cya 4)",
+  "veg.name.sugar_cane": "Is sugarcane",
+  "veg.name.seagrass_32x": "Ubwatsi bw'inyanja",
+
+  "credit.title": "Umwanditsi: %s"
 }

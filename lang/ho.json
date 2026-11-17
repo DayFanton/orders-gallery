@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End nadi",
   "block.plain": "Texture amo ta",
+  "block.tint": "Blok rongo",
 
   "bgimg.name.day": "Dina",
   "bgimg.name.end": "Dokona",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Nabo angu",
   "folder.veg.hint": "Nabo photo thabena (.png transparency ena). Lamba photo (unai width taru 1.5 guna jada, jaisey 16×32) 2 block lamba nabo hobena",
   "folder.veg.error": "Photo file thabena",
+  "folder.tint": "Rongo (kuro — maro mara)",
+  "folder.weight": "Muri (doko arora)",
 
   "ui.hide": "Interface amo lalon (H)",
   "ui.show": "Interface amo nene (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Nabo bano",
   "veg.dice": "Tamona",
-  "veg.set": "Nabo set",
   "veg.density": "Uduna",
   "veg.layers": "Nabo bano bansa",
   "veg.layer1": "Atai ena platform",
   "veg.layer2": "Gidara ena platform",
   "veg.layer3": "Henunai ena platform",
-  "veg.empty": "Nabo tawa mela — texture da vegetation/ folder men thabena"
+  "veg.empty": "Nabo tawa mela — texture da vegetation/ folder men thabena",
+  "veg.plants": "Kai",
+  "veg.tint": "Kai rongo",
+  "veg.name.grass": "Soso",
+  "veg.name.tall_grass": "Soso dolo",
+  "veg.name.pale_moss_carpet_side_small": "Muri kuro (tite)",
+  "veg.name.pale_moss_carpet_side_tall": "Muri kuro (dolo)",
+  "veg.name.sweet_berry_bush_stage0": "Huahua momona (kahana 1)",
+  "veg.name.sweet_berry_bush_stage1": "Huahua momona (kahana 2)",
+  "veg.name.sweet_berry_bush_stage2": "Huahua momona (kahana 3)",
+  "veg.name.sweet_berry_bush_stage3": "Huahua momona (kahana 4)",
+  "veg.name.sugar_cane": "Taku",
+  "veg.name.seagrass_32x": "Doko soso",
+
+  "credit.title": "Olom: %s"
 }

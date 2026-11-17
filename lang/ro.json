@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Piatră de End",
   "block.plain": "Fără textură",
+  "block.tint": "Culoarea blocului",
 
   "bgimg.name.day": "Zi",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Plantele mele",
   "folder.veg.hint": "Alegeți o imagine de plantă (.png cu transparență). O imagine înaltă (înălțimea de cel puțin 1,5 ori mai mare decât lățimea, de exemplu 16×32) va deveni o plantă de 2 blocuri",
   "folder.veg.error": "Alegeți fișierul imagine",
+  "folder.tint": "Culoare (alb — fără nuanță)",
+  "folder.weight": "Pondere (cât de des pică)",
 
   "ui.hide": "Ascunde interfața (H)",
   "ui.show": "Afișează interfața (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Activează vegetația",
   "veg.dice": "Amestecă",
-  "veg.set": "Set de vegetație",
   "veg.density": "Densitate",
   "veg.layers": "Unde crește vegetația",
   "veg.layer1": "Platforma superioară",
   "veg.layer2": "Platforma mijlocie",
   "veg.layer3": "Platforma inferioară",
-  "veg.empty": "Nu există plante încă — plasați texturile în folderul vegetation/ sau adăugați propriile texturi"
+  "veg.empty": "Nu există plante încă — plasați texturile în folderul vegetation/ sau adăugați propriile texturi",
+  "veg.plants": "Plante",
+  "veg.tint": "Culoarea plantei",
+  "veg.name.grass": "Iarbă",
+  "veg.name.tall_grass": "Iarbă înaltă",
+  "veg.name.pale_moss_carpet_side_small": "Mușchi pal (scund)",
+  "veg.name.pale_moss_carpet_side_tall": "Mușchi pal (înalt)",
+  "veg.name.sweet_berry_bush_stage0": "Fructe de pădure dulci (etapa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Fructe de pădure dulci (etapa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Fructe de pădure dulci (etapa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Fructe de pădure dulci (etapa 4)",
+  "veg.name.sugar_cane": "Trestie de zahăr",
+  "veg.name.seagrass_32x": "Iarbă de mare",
+
+  "credit.title": "Autor: %s"
 }

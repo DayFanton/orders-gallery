@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Endsten",
   "block.plain": "Ingen textur",
+  "block.tint": "Blockfärg",
 
   "bgimg.name.day": "Dag",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mina växter",
   "folder.veg.hint": "Välj en växtbild (.png med transparens). En hög bild (höjd minst 1,5 gånger större än bredd, t.ex. 16×32) blir en 2 block hög växt",
   "folder.veg.error": "Välj bildfil",
+  "folder.tint": "Färg (vit — utan nyans)",
+  "folder.weight": "Vikt (droppfrekvens)",
 
   "ui.hide": "Dölj gränssnitt (H)",
   "ui.show": "Visa gränssnitt (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Aktivera växtlighet",
   "veg.dice": "Blanda",
-  "veg.set": "Vegetationstyp",
   "veg.density": "Täthet",
   "veg.layers": "Var vegetation växer",
   "veg.layer1": "Övre plattform",
   "veg.layer2": "Mellersta plattform",
   "veg.layer3": "Nedre plattform",
-  "veg.empty": "Inga växter ännu — placera texturer i mappen vegetation/ eller lägg till dina egna"
+  "veg.empty": "Inga växter ännu — placera texturer i mappen vegetation/ eller lägg till dina egna",
+  "veg.plants": "Växter",
+  "veg.tint": "Växtfärg",
+  "veg.name.grass": "Gräs",
+  "veg.name.tall_grass": "Högt gräs",
+  "veg.name.pale_moss_carpet_side_small": "Blek mossa (låg)",
+  "veg.name.pale_moss_carpet_side_tall": "Blek mossa (hög)",
+  "veg.name.sweet_berry_bush_stage0": "Söta bär (stadium 1)",
+  "veg.name.sweet_berry_bush_stage1": "Söta bär (stadium 2)",
+  "veg.name.sweet_berry_bush_stage2": "Söta bär (stadium 3)",
+  "veg.name.sweet_berry_bush_stage3": "Söta bär (stadium 4)",
+  "veg.name.sugar_cane": "Sockerrör",
+  "veg.name.seagrass_32x": "Sjögräs",
+
+  "credit.title": "Författare: %s"
 }

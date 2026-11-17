@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End-sten",
   "block.plain": "Ingen tekstur",
+  "block.tint": "Blok farve",
 
   "bgimg.name.day": "Dag",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mine planter",
   "folder.veg.hint": "Vælg et plantebillede (.png med gennemsigtighed). Et højt billede (højde mindst 1,5 gange større end bredde, f.eks. 16×32) bliver en 2 blokke høj plante",
   "folder.veg.error": "Vælg billedfil",
+  "folder.tint": "Farve (hvid — uden nuance)",
+  "folder.weight": "Vægt (drop hyppighed)",
 
   "ui.hide": "Skjul grænseflade (H)",
   "ui.show": "Vis grænseflade (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Slå vegetation til",
   "veg.dice": "Bland",
-  "veg.set": "Vegetationssæt",
   "veg.density": "Tæthed",
   "veg.layers": "Hvor vegetationen vokser",
   "veg.layer1": "Øverste platform",
   "veg.layer2": "Mellemste platform",
   "veg.layer3": "Nederste platform",
-  "veg.empty": "Ingen planter endnu — placer teksturer i mappen vegetation/ eller tilføj dine egne"
+  "veg.empty": "Ingen planter endnu — placer teksturer i mappen vegetation/ eller tilføj dine egne",
+  "veg.plants": "Planter",
+  "veg.tint": "Plante farve",
+  "veg.name.grass": "Græs",
+  "veg.name.tall_grass": "Højt græs",
+  "veg.name.pale_moss_carpet_side_small": "Bleg mos (lav)",
+  "veg.name.pale_moss_carpet_side_tall": "Bleg mos (høj)",
+  "veg.name.sweet_berry_bush_stage0": "Søde bær (stadie 1)",
+  "veg.name.sweet_berry_bush_stage1": "Søde bær (stadie 2)",
+  "veg.name.sweet_berry_bush_stage2": "Søde bær (stadie 3)",
+  "veg.name.sweet_berry_bush_stage3": "Søde bær (stadie 4)",
+  "veg.name.sugar_cane": "Sukkerør",
+  "veg.name.seagrass_32x": "Sjøgræs",
+
+  "credit.title": "Forfatter: %s"
 }

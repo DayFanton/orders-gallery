@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End stone",
   "block.plain": "Walang tekstura",
+  "block.tint": "Kulay ng bloke",
 
   "bgimg.name.day": "Araw",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Ang aking mga halaman",
   "folder.veg.hint": "Pumili ng larawan ng halaman (.png na may transparency). Ang isang matangkad na larawan (ang taas ay hindi bababa sa 1.5 beses na mas malaki kaysa sa lapad, halimbawa 16×32) ay magiging halaman na may 2 bloke",
   "folder.veg.error": "Piliin ang file ng imahe",
+  "folder.tint": "Kulay (puti — walang kulay-tov)",
+  "folder.weight": "Timbang (dalas ng pagpatak)",
 
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "I-on ang mga halaman",
   "veg.dice": "I-shuffle",
-  "veg.set": "Preset ng halaman",
   "veg.density": "Kapal",
   "veg.layers": "Kung saan lumalago ang mga halaman",
   "veg.layer1": "Itaas na plataporma",
   "veg.layer2": "Gitnang plataporma",
   "veg.layer3": "Ibabang plataporma",
-  "veg.empty": "Wala pang mga halaman — ilagay ang mga texture sa folder na vegetation/ o idagdag ang sa iyo"
+  "veg.empty": "Wala pang mga halaman — ilagay ang mga texture sa folder na vegetation/ o idagdag ang sa iyo",
+  "veg.plants": "Mga halaman",
+  "veg.tint": "Kulay ng halaman",
+  "veg.name.grass": "Damo",
+  "veg.name.tall_grass": "Matangkad na damo",
+  "veg.name.pale_moss_carpet_side_small": "Maputlang lumot (mababa)",
+  "veg.name.pale_moss_carpet_side_tall": "Maputlang lumot (matangkad)",
+  "veg.name.sweet_berry_bush_stage0": "Matatamis na berry (yugto 1)",
+  "veg.name.sweet_berry_bush_stage1": "Matatamis na berry (yugto 2)",
+  "veg.name.sweet_berry_bush_stage2": "Matatamis na berry (yugto 3)",
+  "veg.name.sweet_berry_bush_stage3": "Matatamis na berry (yugto 4)",
+  "veg.name.sugar_cane": "Tubo",
+  "veg.name.seagrass_32x": "Damo sa dagat",
+
+  "credit.title": "May-akda: %s"
 }

@@ -109,6 +109,7 @@
   "block.netherrack": "Тамын чулуу",
   "block.end_stone": "Эндийн чулуу",
   "block.plain": "Бүтэцгүй",
+  "block.tint": "Блокийн өнгө",
 
   "mobile.gallery": "📁 Галерей",
   "mobile.settings": "⚙️ Тохиргоо",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Миний ургамал",
   "folder.veg.hint": "Ургамлын зураг сонгоно уу (.png тунгалаг). Өндөр зураг (өндөр нь өргөнөөсөө дор хаяж 1.5 дахин их, жишээ нь 16×32) нь 2 блок өндөртэй ургамал болно",
   "folder.veg.error": "Зургийн файл сонгох",
+  "folder.tint": "Өнгө (цагаан — сүүдөргүй)",
+  "folder.weight": "Жин (унаж бу давтамж)",
 
   "ui.hide": "Интерфэйсийг нуух (H)",
   "ui.show": "Интерфэйсийг харуулах (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Ургамлыг асаах",
   "veg.dice": "Холих",
-  "veg.set": "Ургамлын багц",
   "veg.density": "Нягтрал",
   "veg.layers": "Ургамал ургах газар",
   "veg.layer1": "Дээд тавцан",
   "veg.layer2": "Дунд тавцан",
   "veg.layer3": "Доод тавцан",
-  "veg.empty": "Одоогоор ургамал байхгүй — текстуруудыг vegetation/ хавтас руу хийх эсвэл өөрийнхөөг нэмнэ үү"
+  "veg.empty": "Одоогоор ургамал байхгүй — текстуруудыг vegetation/ хавтас руу хийх эсвэл өөрийнхөөг нэмнэ үү",
+  "veg.plants": "Ургамал",
+  "veg.tint": "Ургамлын өнгө",
+  "veg.name.grass": "Өвс",
+  "veg.name.tall_grass": "Өндөр өвс",
+  "veg.name.pale_moss_carpet_side_small": "Цайвар хөвд (намхан)",
+  "veg.name.pale_moss_carpet_side_tall": "Цайвар хөвд (өндөр)",
+  "veg.name.sweet_berry_bush_stage0": "Чихэрлэг жимсгэнэ (1-р үе)",
+  "veg.name.sweet_berry_bush_stage1": "Чихэрлэг жимсгэнэ (2-р үе)",
+  "veg.name.sweet_berry_bush_stage2": "Чихэрлэг жимсгэнэ (3-р үе)",
+  "veg.name.sweet_berry_bush_stage3": "Чихэрлэг жимсгэнэ (4-р үе)",
+  "veg.name.sugar_cane": "Чихрийн нишингэ",
+  "veg.name.seagrass_32x": "Далайн өвс",
+
+  "credit.title": "Зохиогч: %s"
 }

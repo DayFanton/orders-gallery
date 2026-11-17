@@ -374,6 +374,7 @@
   "block.netherrack": "නෙදර්‍රැක්",
   "block.end_stone": "အန့်ကျောက်",
   "block.plain": "အသွင်အပြင် မရှိပါ",
+  "block.tint": "បလောက်အရောင်",
 
   "bgimg.name.day": "နေ့",
   "bgimg.name.end": "အဆုံး",
@@ -407,6 +408,8 @@
   "folder.veg.title": "मेro উদ্ভিদসমূহ",
   "folder.veg.hint": "အပင်ပုံကို ရွေးချယ်ပါ (.png ပွင့်လင်းမြင်သာမှုပါသော)။ အမြင့်ပုံ (အကျယ်ထက် အနည်းဆုံး ၁.၅ ဆ ပိုမြင့်သော၊ ဥပမာ ၁၆×၃၂) သည် ၂ ဘလော့ခ်အမြင့်ရှိ အပင် ဖြစ်လာပါမည်",
   "folder.veg.error": "ပုံဖိုင်ကို ရွေးချယ်ပါ",
+  "folder.tint": "အရောင် (ဖြူစင် - အရောင်မပါဘဲ)",
+  "folder.weight": "အလေးချိန် (ကျဆင်းသည့်အကြိမ်ရေ)",
 
   "ui.hide": "အင်တာဖေ့စ်ကို ဝှက်ရန် (H)",
   "ui.show": "အင်တာဖေ့စ်ကို ပြရန် (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "အပင်များကို ဖွင့်ရန်",
   "veg.dice": "ရောနှောရန်",
-  "veg.set": "အပင် အစုံ",
   "veg.density": "သိပ်သည်းမှု",
   "veg.layers": "အပင်များ ကြီးထွားရာနေရာ",
   "veg.layer1": "အပေါ်ပိုင်း ပလက်ဖောင်း",
   "veg.layer2": "အလယ်ပိုင်း ပလက်ဖောင်း",
   "veg.layer3": "အောက်ပိုင်း ပလက်ဖောင်း",
-  "veg.empty": "အပင်များ မရှိသေးပါ — texture များကို vegetation/ ဖိုင်တွဲထဲတွင် ထည့်ပါ သို့မဟုတ် သင်၏ကိုယ်ပိုင်ကို ထည့်ပါ"
+  "veg.empty": "အပင်များ မရှိသေးပါ — texture များကို vegetation/ ဖိုင်တွဲထဲတွင် ထည့်ပါ သို့မဟုတ် သင်၏ကိုယ်ပိုင်ကို ထည့်ပါ",
+  "veg.plants": "အပင်များ",
+  "veg.tint": "အပင်အရောင်",
+  "veg.name.grass": "မြက်",
+  "veg.name.tall_grass": "မြက်ရှည်",
+  "veg.name.pale_moss_carpet_side_small": "မှော်ဖျော့ (နိမ့်)",
+  "veg.name.pale_moss_carpet_side_tall": "မှော်ဖျော့ (မြင့်)",
+  "veg.name.sweet_berry_bush_stage0": "ချိုသောဘယ်ရီသီး (အဆင့် ၁)",
+  "veg.name.sweet_berry_bush_stage1": "ချိုသောဘယ်ရီသီး (အဆင့် ၂)",
+  "veg.name.sweet_berry_bush_stage2": "ချိုသောဘယ်ရီသီး (အဆင့် ၃)",
+  "veg.name.sweet_berry_bush_stage3": "ချိုသောဘယ်ရီသီး (အဆင့် ၄)",
+  "veg.name.sugar_cane": "ကြံ",
+  "veg.name.seagrass_32x": "ပင်လယ်မြက်",
+
+  "credit.title": "စာရေးသူ: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "نيدرريڪ",
   "block.end_stone": "اينڊ پٿر",
   "block.plain": "ڪو به ٽيڪسچر ناهي",
+  "block.tint": "بلاڪ جو رنگ",
 
   "bgimg.name.day": "ڏينهن",
   "bgimg.name.end": "پڄاڻي",
@@ -407,6 +408,8 @@
   "folder.veg.title": "منهنجا ٻوٽا",
   "folder.veg.hint": "ٻوٽي جي تصوير چونڊيو (.png شفافيت سان). ڊگهੀ تصوير (اوچائي ويڪر کان گهٽ ۾ گهٽ 1.5 دفعا وڌيڪ، مثال طور 16×32) 2 بلاڪن جو ٻوٽو بڻجي ويندي",
   "folder.veg.error": "تصوير جي فائيل چونڊيو",
+  "folder.tint": "رنگ (سفيد — بغير ڪنهن رنگت جي)",
+  "folder.weight": "وزن (ڪيترو ڌيرو پوي ٿو)",
 
   "ui.hide": "انٽرفيس لڪايو (H)",
   "ui.show": "انٽرفيس ڏکوءِ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "ٻوٽن کي چالو ڪريو",
   "veg.dice": "گڏائڻ",
-  "veg.set": "ٻوٽن جو سيٽ",
   "veg.density": "گهاٽائي",
   "veg.layers": "جتي ٻوٽا ٿا ٿين",
   "veg.layer1": "مٿيون پليٽ فارم",
   "veg.layer2": "وچون پليٽ فارم",
   "veg.layer3": "هيٺيون پليٽ فارم",
-  "veg.empty": "اڃا ڪي به ٻوٽا ناهن — بناوت کي vegetation/ فولڊر ۾ رکو يا پنهنجو شامل ڪريو"
+  "veg.empty": "اڃا ڪي به ٻوٽا ناهن — بناوت کي vegetation/ فولڊر ۾ رکو يا پنهنجو شامل ڪريو",
+  "veg.plants": "ٻوٽا",
+  "veg.tint": "ٻوٽي جو رنگ",
+  "veg.name.grass": "گاهه",
+  "veg.name.tall_grass": "ڊگهو گاهه",
+  "veg.name.pale_moss_carpet_side_small": "ڦڪو موءس (ننڍو)",
+  "veg.name.pale_moss_carpet_side_tall": "ڦڪو موءس (ڊگهو)",
+  "veg.name.sweet_berry_bush_stage0": "مٺا ٻير (مرحلو 1)",
+  "veg.name.sweet_berry_bush_stage1": "مٺا ٻير (مرحلو 2)",
+  "veg.name.sweet_berry_bush_stage2": "مٺا ٻير (مرحلو 3)",
+  "veg.name.sweet_berry_bush_stage3": "مٺا ٻير (مرحلو 4)",
+  "veg.name.sugar_cane": "ڪمند",
+  "veg.name.seagrass_32x": "سمنڊ جو گاهه",
+
+  "credit.title": "ليکڪ: %s"
 }

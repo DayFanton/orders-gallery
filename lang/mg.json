@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Vaton'ny End",
   "block.plain": "Tsy misy rafitra",
+  "block.tint": "Loko blôka",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Fikirana",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Ny zavamaniry eto amiko",
   "folder.veg.hint": "Safidio ny sarin-javamaniry (.png misy mangarahara). Ny sary lava (ny haavony farafahakeliny 1.5 henyan'ny sakany, ohatra 16×32) dia ho zavamaniry misy sakana roa",
   "folder.veg.error": "Safidio ny rakitra sary",
+  "folder.tint": "Loko (fotsy — tsy misy loko)",
+  "folder.weight": "Lanja (faharetan'ny fivoahana)",
 
   "ui.hide": "Afeno ny endrika (H)",
   "ui.show": "Asehoy ny endrika (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Alefaso ny zavamaniry",
   "veg.dice": "Afangaro",
-  "veg.set": "Vondron-javamaniry",
   "veg.density": "Hakitroka",
   "veg.layers": "Toerana maniry ny zavamaniry",
   "veg.layer1": "Sehatra ambony",
   "veg.layer2": "Sehatra afovoany",
   "veg.layer3": "Sehatra ambany",
-  "veg.empty": "Tsy misy zavamaniry aloha — apetraho ao amin'ny lahatahiry vegetation/ ny soratra na ampio ny anao"
+  "veg.empty": "Tsy misy zavamaniry aloha — apetraho ao amin'ny lahatahiry vegetation/ ny soratra na ampio ny anao",
+  "veg.plants": "Zavamaniry",
+  "veg.tint": "Loko zavamaniry",
+  "veg.name.grass": "Ahitra",
+  "veg.name.tall_grass": "Ahitra lava",
+  "veg.name.pale_moss_carpet_side_small": "Moss hatsatra (fohy)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss hatsatra (lava)",
+  "veg.name.sweet_berry_bush_stage0": "Voaroy mamy (dingana 1)",
+  "veg.name.sweet_berry_bush_stage1": "Voaroy mamy (dingana 2)",
+  "veg.name.sweet_berry_bush_stage2": "Voaroy mamy (dingana 3)",
+  "veg.name.sweet_berry_bush_stage3": "Voaroy mamy (dingana 4)",
+  "veg.name.sugar_cane": "Fary",
+  "veg.name.seagrass_32x": "Ahitra an-dranomasina",
+
+  "credit.title": "Mpanoratra: %s"
 }

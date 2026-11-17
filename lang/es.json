@@ -374,6 +374,7 @@
   "block.netherrack": "Infiedra",
   "block.end_stone": "Piedra de End",
   "block.plain": "Sin textura",
+  "block.tint": "Color de bloque",
 
   "bgimg.name.day": "Día",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mis plantas",
   "folder.veg.hint": "Elija una imagen de planta (.png con transparencia). Una imagen alta (con una altura al menos 1.5 veces mayor que el ancho, por ejemplo 16×32) se convertirá en una planta de 2 bloques",
   "folder.veg.error": "Elegir archivo de imagen",
+  "folder.tint": "Color (blanco — sin matiz)",
+  "folder.weight": "Peso (frecuencia de aparición)",
 
   "ui.hide": "Ocultar interfaz (H)",
   "ui.show": "Mostrar interfaz (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Activar vegetación",
   "veg.dice": "Mezclar",
-  "veg.set": "Conjunto de vegetación",
   "veg.density": "Densidad",
   "veg.layers": "Dónde crece la vegetación",
   "veg.layer1": "Plataforma superior",
   "veg.layer2": "Plataforma intermedia",
   "veg.layer3": "Plataforma inferior",
-  "veg.empty": "No hay plantas todavía; coloca las texturas en la carpeta vegetation/ o añade las tuyas"
+  "veg.empty": "No hay plantas todavía; coloca las texturas en la carpeta vegetation/ o añade las tuyas",
+  "veg.plants": "Plantas",
+  "veg.tint": "Color de planta",
+  "veg.name.grass": "Hierba",
+  "veg.name.tall_grass": "Hierba alta",
+  "veg.name.pale_moss_carpet_side_small": "Musgo pálido (bajo)",
+  "veg.name.pale_moss_carpet_side_tall": "Musgo pálido (alto)",
+  "veg.name.sweet_berry_bush_stage0": "Bayas dulces (etapa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Bayas dulces (etapa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Bayas dulces (etapa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Bayas dulces (etapa 4)",
+  "veg.name.sugar_cane": "Caña de azúcar",
+  "veg.name.seagrass_32x": "Hierba marina",
+
+  "credit.title": "Autor: %s"
 }

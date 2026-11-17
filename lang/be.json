@@ -109,6 +109,7 @@
   "block.netherrack": "Нэдарэк",
   "block.end_stone": "Камень Энда",
   "block.plain": "Без тэкстуры",
+  "block.tint": "Колер блока",
 
   "mobile.gallery": "📁 Галерэя",
   "mobile.settings": "⚙️ Налады",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Маі расліны",
   "folder.veg.hint": "Выберыце малюнак расліны (.png з празрыстасцю). Высокі малюнак (вышыня мінімум у 1,5 раза большая за шырыню, напрыклад 16×32) стане раслінай у 2 блокі",
   "folder.veg.error": "Выберыце файл выявы",
+  "folder.tint": "Колер (белы — без адцення)",
+  "folder.weight": "Вага (як часта выпадае)",
 
   "ui.hide": "Схаваць інтэрфейс (H)",
   "ui.show": "Паказаць інтэрфейс (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Уключыць расліннасць",
   "veg.dice": "Перамяшаць",
-  "veg.set": "Набор расліннасці",
   "veg.density": "Шчыльнасць",
   "veg.layers": "Дзе расце расліннасць",
   "veg.layer1": "Верхняя платформа",
   "veg.layer2": "Сярэдняя платформа",
   "veg.layer3": "Ніжняя платформа",
-  "veg.empty": "Пакуль няма раслін — пакладзіце тэкстуры ў папку vegetation/ або дадайце свае"
+  "veg.empty": "Пакуль няма раслін — пакладзіце тэкстуры ў папку vegetation/ або дадайце свае",
+  "veg.plants": "Расліны",
+  "veg.tint": "Колер расліны",
+  "veg.name.grass": "Трава",
+  "veg.name.tall_grass": "Высокая трава",
+  "veg.name.pale_moss_carpet_side_small": "Бледны мох (нізкі)",
+  "veg.name.pale_moss_carpet_side_tall": "Бледны мох (высокі)",
+  "veg.name.sweet_berry_bush_stage0": "Салодкія ягады (стадыя 1)",
+  "veg.name.sweet_berry_bush_stage1": "Салодкія ягады (стадыя 2)",
+  "veg.name.sweet_berry_bush_stage2": "Салодкія ягады (стадыя 3)",
+  "veg.name.sweet_berry_bush_stage3": "Салодкія ягады (стадыя 4)",
+  "veg.name.sugar_cane": "Цукровы трысцёг",
+  "veg.name.seagrass_32x": "Марская трава",
+
+  "credit.title": "Аўтар: %s"
 }

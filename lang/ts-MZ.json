@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ribye ra End",
   "block.plain": "Ku hava xivumbeko",
+  "block.tint": "Mbala wa block",
 
   "bgimg.name.day": "Nhlikanhi",
   "bgimg.name.end": "Makumu",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Swimila swa mina",
   "folder.veg.hint": "Hlawula xifaniso xa swimila (.png leyi vonikelaka). Xifaniso lexi lehaheke (ku leha ka kona ku ringana minkarhi leyi nga ni 1.5 ku tlula vuanu, xikombiso 16×32) xi ta va ximila xa tiboko timbirhi",
   "folder.veg.error": "Hlawula fayili ya xifaniso",
+  "folder.tint": "Mbala (ku basa — handle ka mbala)",
+  "folder.weight": "Vuleki (ku fika ka nkarhi)",
 
   "ui.hide": "Tumika mahlo (H)",
   "ui.show": "Kombisa mahlo (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Pfula swimila",
   "veg.dice": "Phatakatela",
-  "veg.set": "Seti ya swimila",
   "veg.density": "Ku tlhuma",
   "veg.layers": "La swimila swi kulaka kona",
   "veg.layer1": "Xiteji xa le henhla",
   "veg.layer2": "Xiteji xa le xikarhi",
   "veg.layer3": "Xiteji xa le hansi",
-  "veg.empty": "Ku hava swimila sweswi — veka swifaniso eka foldara ya vegetation/ kumbe u engetela swa wena"
+  "veg.empty": "Ku hava swimila sweswi — veka swifaniso eka foldara ya vegetation/ kumbe u engetela swa wena",
+  "veg.plants": "Mila",
+  "veg.tint": "Mbala wa mila",
+  "veg.name.grass": "Byanyi",
+  "veg.name.tall_grass": "Byanyi le byikulu",
+  "veg.name.pale_moss_carpet_side_small": "Moso wo basa (ku koma)",
+  "veg.name.pale_moss_carpet_side_tall": "Moso wo basa (byikulu)",
+  "veg.name.sweet_berry_bush_stage0": "Mihandzu yo tsokombela (xiyimo xa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Mihandzu yo tsokombela (xiyimo xa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Mihandzu yo tsokombela (xiyimo xa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Mihandzu yo tsokombela (xiyimo xa 4)",
+  "veg.name.sugar_cane": "Nsinya wo tsokombela",
+  "veg.name.seagrass_32x": "Byanyi bya lwandle",
+
+  "credit.title": "Mutsari: %s"
 }

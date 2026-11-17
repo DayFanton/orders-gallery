@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Liganga lya End",
   "block.plain": "Pangasiman texture",
+  "block.tint": "Mtundu wa blok",
 
   "bgimg.name.day": "Muusi",
   "bgimg.name.end": "Mbesi",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Miti yangu",
   "folder.veg.hint": "Kusanya chitepo cha miti (.png chakuwoneka). Chitepo chitala (kutalika kwake kuŵe ka 1.5 kuposa m'lifupi mwachitsanzo 16×32) chichata chitepo cha miti chiŵiri",
   "folder.veg.error": "Kusanya chitepo cha faili",
+  "folder.tint": "Mtundu (wera — ngagwera mtundu)",
+  "folder.weight": "Ulemu (ndakai sya kugwa)",
 
   "ui.hide": "Chisisi interface (H)",
   "ui.show": "Langanya interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Jula miti",
   "veg.dice": "Kusanya",
-  "veg.set": "Chalo cha miti",
   "veg.density": "Kuwanda",
   "veg.layers": "Kuna kuli miti",
   "veg.layer1": "Chitepo cha penani",
   "veg.layer2": "Chitepo cha pakati",
   "veg.layer3": "Chitepo cha pasi",
-  "veg.empty": "Ali miti — ikani matiti m'chitepo cha vegetation/ kapena mtende wenu"
+  "veg.empty": "Ali miti — ikani matiti m'chitepo cha vegetation/ kapena mtende wenu",
+  "veg.plants": "Mitengo",
+  "veg.tint": "Mtundu wa mitengo",
+  "veg.name.grass": "Lusilu",
+  "veg.name.tall_grass": "Lusilu lulelu",
+  "veg.name.pale_moss_carpet_side_small": "Moss wa pwerere (gong'osa)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss wa pwerere (lulelu)",
+  "veg.name.sweet_berry_bush_stage0": "Yisogosi yakunong'a (gawo 1)",
+  "veg.name.sweet_berry_bush_stage1": "Yisogosi yakunong'a (gawo 2)",
+  "veg.name.sweet_berry_bush_stage2": "Yisogosi yakunong'a (gawo 3)",
+  "veg.name.sweet_berry_bush_stage3": "Yisogosi yakunong'a (gawo 4)",
+  "veg.name.sugar_cane": "Nzimbe",
+  "veg.name.seagrass_32x": "Lusilu lwa mnyanja",
+
+  "credit.title": "Mlembi: %s"
 }

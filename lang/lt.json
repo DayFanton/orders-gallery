@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pabaigos akmuo",
   "block.plain": "Nėra tekstūros",
+  "block.tint": "Bloko spalva",
 
   "bgimg.name.day": "Diena",
   "bgimg.name.end": "Pabaiga",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mano augalai",
   "folder.veg.hint": "Pasirinkite augalo paveikslėlį (.png su permatomumu). Aukštas paveikslėlis (aukštis bent 1,5 karto didesnis už plotį, pvz., 16×32) taps 2 blokų augalu",
   "folder.veg.error": "Pasirinkti paveikslėlio failą",
+  "folder.tint": "Spalva (balta — be atspalvio)",
+  "folder.weight": "Svoris (kritimo dažnis)",
 
   "ui.hide": "Slėpti sąsają (H)",
   "ui.show": "Rodyti sąsają (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Įjungti augmeniją",
   "veg.dice": "Maišyti",
-  "veg.set": "Augmenijos rinkinys",
   "veg.density": "Tankis",
   "veg.layers": "Kur auga augmenija",
   "veg.layer1": "Viršutinė platforma",
   "veg.layer2": "Vidurinė platforma",
   "veg.layer3": "Apatinė platforma",
-  "veg.empty": "Augalų dar nėra — įdėkite tekstūras į vegetation/ aplanką arba pridėkite savo"
+  "veg.empty": "Augalų dar nėra — įdėkite tekstūras į vegetation/ aplanką arba pridėkite savo",
+  "veg.plants": "Augalai",
+  "veg.tint": "Augalo spalva",
+  "veg.name.grass": "Žolė",
+  "veg.name.tall_grass": "Aukšta žolė",
+  "veg.name.pale_moss_carpet_side_small": "Blyškios samanos (žemos)",
+  "veg.name.pale_moss_carpet_side_tall": "Blyškios samanos (aukštos)",
+  "veg.name.sweet_berry_bush_stage0": "Saldžiosios uogos (1 etapas)",
+  "veg.name.sweet_berry_bush_stage1": "Saldžiosios uogos (2 etapas)",
+  "veg.name.sweet_berry_bush_stage2": "Saldžiosios uogos (3 etapas)",
+  "veg.name.sweet_berry_bush_stage3": "Saldžiosios uogos (4 etapas)",
+  "veg.name.sugar_cane": "Cukranendrė",
+  "veg.name.seagrass_32x": "Jūros žolė",
+
+  "credit.title": "Autorius: %s"
 }

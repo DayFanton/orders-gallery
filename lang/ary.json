@@ -109,6 +109,7 @@
   "block.netherrack": "نيثيرراك",
   "block.end_stone": "حجر الإند",
   "block.plain": "بلا تكسطور",
+  "block.tint": "لون الكتلة",
 
   "mobile.gallery": "📁 المعرض",
   "mobile.settings": "⚙️ الإعدادات",
@@ -405,6 +406,8 @@
   "folder.veg.title": "النباتات ديالي",
   "folder.veg.hint": "اختار تصwيرة ديال النبات (.png مع شفافية). التصwيرة الطويلة (العلو ديالها كبر من العرض بـ 1.5 مرة على الأقل، بحال 16×32) غادي تولي نبتة فيها جوج بلوكات",
   "folder.veg.error": "اختار ملف التصويرة",
+  "folder.tint": "اللون (أبيض — بدون تدرج)",
+  "folder.weight": "الوزن (معدل الظهور)",
 
   "ui.hide": "خبّي الواجهة (H)",
   "ui.show": "بين الواجهة (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "تفعيل النباتات",
   "veg.dice": "خلط",
-  "veg.set": "مجموعة النباتات",
   "veg.density": "الكثافة",
   "veg.layers": "فين كتمو النباتات",
   "veg.layer1": "المنصة العلوية",
   "veg.layer2": "المنصة الوسطى",
   "veg.layer3": "المنصة السفلية",
-  "veg.empty": "ما كاينينش النباتات دابا — حط لختورات ففلدر vegetation/ ولا زيد ديالك"
+  "veg.empty": "ما كاينينش النباتات دابا — حط لختورات ففلدر vegetation/ ولا زيد ديالك",
+  "veg.plants": "نباتات",
+  "veg.tint": "لون النبات",
+  "veg.name.grass": "عشب",
+  "veg.name.tall_grass": "عشب طويل",
+  "veg.name.pale_moss_carpet_side_small": "طحلب باهت (قصير)",
+  "veg.name.pale_moss_carpet_side_tall": "طحلب باهت (طويل)",
+  "veg.name.sweet_berry_bush_stage0": "التوت الحلو (المرحلة 1)",
+  "veg.name.sweet_berry_bush_stage1": "التوت الحلو (المرحلة 2)",
+  "veg.name.sweet_berry_bush_stage2": "التوت الحلو (المرحلة 3)",
+  "veg.name.sweet_berry_bush_stage3": "التوت الحلو (المرحلة 4)",
+  "veg.name.sugar_cane": "قصب السكر",
+  "veg.name.seagrass_32x": "عشبة البحر",
+
+  "credit.title": "الكاتب: %s"
 }

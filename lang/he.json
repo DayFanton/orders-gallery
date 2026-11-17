@@ -109,6 +109,7 @@
   "block.netherrack": "נת'ראק",
   "block.end_stone": "אבן אנדר",
   "block.plain": "ללא מרקם",
+  "block.tint": "צבע הבלוק",
 
   "mobile.gallery": "📁 גלריה",
   "mobile.settings": "⚙️ הגדרות",
@@ -405,6 +406,8 @@
   "folder.veg.title": "הצמחים שלי",
   "folder.veg.hint": "בחר תצוגת צמח (.png עם שקיפות). תמונה גבוהה (גובה לפחות פי 1.5 מהרוחב, למשל 16×32) תהפוך לצמח בגובה 2 בלוקים",
   "folder.veg.error": "בחר קובץ תמונה",
+  "folder.tint": "צבע (לבן — ללא גוון)",
+  "folder.weight": "משקל (תדירות נפילה)",
 
   "ui.hide": "הסתר ממשק (H)",
   "ui.show": "הצג ממשק (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "הפעל צמחייה",
   "veg.dice": "ערבב",
-  "veg.set": "ערכת צמחייה",
   "veg.density": "צפיפות",
   "veg.layers": "היכן צומחת הצמחייה",
   "veg.layer1": "פלטפורמה עליונה",
   "veg.layer2": "פלטפורמה אמצעית",
   "veg.layer3": "פלטפורמה תחתונה",
-  "veg.empty": "אין עדיין צמחים — מיקום טקסטורות בתיקייה vegetation/ או הוסף משלך"
+  "veg.empty": "אין עדיין צמחים — מיקום טקסטורות בתיקייה vegetation/ או הוסף משלך",
+  "veg.plants": "צמחים",
+  "veg.tint": "צבע הצמח",
+  "veg.name.grass": "עשב",
+  "veg.name.tall_grass": "עשב גבוה",
+  "veg.name.pale_moss_carpet_side_small": "טחב חיוור (נמוך)",
+  "veg.name.pale_moss_carpet_side_tall": "טחב חיוור (גבוה)",
+  "veg.name.sweet_berry_bush_stage0": "פירות יער מתוקים (שלב 1)",
+  "veg.name.sweet_berry_bush_stage1": "פירות יער מתוקים (שלב 2)",
+  "veg.name.sweet_berry_bush_stage2": "פירות יער מתוקים (שלב 3)",
+  "veg.name.sweet_berry_bush_stage3": "פירות יער מתוקים (שלב 4)",
+  "veg.name.sugar_cane": "קנה סוכר",
+  "veg.name.seagrass_32x": "עשב ים",
+
+  "credit.title": "מחבר: %s"
 }

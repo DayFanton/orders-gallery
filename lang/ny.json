@@ -374,6 +374,7 @@
   "block.netherrack": "Mwala wa Nether",
   "block.end_stone": "Mwala wa End",
   "block.plain": "Palibe mawonekedwe",
+  "block.tint": "Mtundu wa block",
 
   "bgimg.name.day": "Masana",
   "bgimg.name.end": "Mapeto",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Zomera zanga",
   "folder.veg.hint": "Sankhani chithunzi cha chomera (.png chowoneka bwino). Chithunzi chitali (kutalika kwake koposa 1.5 kuposa m'lifupi, mwachitsanzo 16×32) chidzakhala chomera cha midadada iwiri",
   "folder.veg.error": "Sankhani fayilo ya chithunzi",
+  "folder.tint": "Mtundu (woyera — wopanda utoto)",
+  "folder.weight": "Kulemera (kuti zimatuluka kangati)",
 
   "ui.hide": "Bisani mawonekedwe (H)",
   "ui.show": "Sonyezani mawonekedwe (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kuyatsa zomera",
   "veg.dice": "Sakaniza",
-  "veg.set": "Zida za zomera",
   "veg.density": "Kuchulukana",
   "veg.layers": "Kumene kumamera zomera",
   "veg.layer1": "Pulatifomu yapamwamba",
   "veg.layer2": "Pulatifomu yapakati",
   "veg.layer3": "Pulatifomu yapansi",
-  "veg.empty": "Palibe zomera pano — ikani zithunzi m'foda ya vegetation/ kapena wonjezera zanu"
+  "veg.empty": "Palibe zomera pano — ikani zithunzi m'foda ya vegetation/ kapena wonjezera zanu",
+  "veg.plants": "Zomera",
+  "veg.tint": "Mtundu wa zomera",
+  "veg.name.grass": "Udzu",
+  "veg.name.tall_grass": "Udzu wautali",
+  "veg.name.pale_moss_carpet_side_small": "Moss wofiira (wochepa)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss wofiira (wautali)",
+  "veg.name.sweet_berry_bush_stage0": "Zipatso zotsekemera (gawo 1)",
+  "veg.name.sweet_berry_bush_stage1": "Zipatso zotsekemera (gawo 2)",
+  "veg.name.sweet_berry_bush_stage2": "Zipatso zotsekemera (gawo 3)",
+  "veg.name.sweet_berry_bush_stage3": "Zipatso zotsekemera (gawo 4)",
+  "veg.name.sugar_cane": "Nzimbe",
+  "veg.name.seagrass_32x": "Udzu wam'nyanja",
+
+  "credit.title": "Wolemba: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End-stein",
   "block.plain": "Ingen tekstur",
+  "block.tint": "Blokkfarge",
 
   "bgimg.name.day": "Dag",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mine planter",
   "folder.veg.hint": "Velg et planteoversiktbilde (.png med gjennomsiktighet). Et høyt bilde (høyde minst 1,5 ganger større enn bredde, f.eks. 16×32) blir en 2 blokkers høy plante",
   "folder.veg.error": "Velg bildefil",
+  "folder.tint": "Farge (hvit — uten fargetone)",
+  "folder.weight": "Vekt (droppfrekvens)",
 
   "ui.hide": "Skjul grensesnitt (H)",
   "ui.show": "Vis grensesnitt (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Aktiver vegetasjon",
   "veg.dice": "Stokk om",
-  "veg.set": "Vegetasjonsoppsett",
   "veg.density": "Tetthet",
   "veg.layers": "Hvor vegetasjonen vokser",
   "veg.layer1": "Øvre plattform",
   "veg.layer2": "Midtre plattform",
   "veg.layer3": "Nedre plattform",
-  "veg.empty": "Ingen planter ennå — plasser teksturer i mappen vegetation/ eller legg til dine egne"
+  "veg.empty": "Ingen planter ennå — plasser teksturer i mappen vegetation/ eller legg til dine egne",
+  "veg.plants": "Planter",
+  "veg.tint": "Plantefarge",
+  "veg.name.grass": "Gress",
+  "veg.name.tall_grass": "Høyt gress",
+  "veg.name.pale_moss_carpet_side_small": "Blekksmose (lav)",
+  "veg.name.pale_moss_carpet_side_tall": "Blekksmose (høy)",
+  "veg.name.sweet_berry_bush_stage0": "Søte bær (stadium 1)",
+  "veg.name.sweet_berry_bush_stage1": "Søte bær (stadium 2)",
+  "veg.name.sweet_berry_bush_stage2": "Søte bær (stadium 3)",
+  "veg.name.sweet_berry_bush_stage3": "Søte bær (stadium 4)",
+  "veg.name.sugar_cane": "Sukkerrør",
+  "veg.name.seagrass_32x": "Sjøgress",
+
+  "credit.title": "Forfatter: %s"
 }

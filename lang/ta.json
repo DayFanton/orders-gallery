@@ -374,6 +374,7 @@
   "block.netherrack": "நெதராக்",
   "block.end_stone": "எண்ட் கல்",
   "block.plain": "டெக்ஸ்சர் இல்லை",
+  "block.tint": "தொகுதி நிறம்",
 
   "bgimg.name.day": "பகல்",
   "bgimg.name.end": "எண்ட்",
@@ -407,6 +408,8 @@
   "folder.veg.title": "எனது தாவரங்கள்",
   "folder.veg.hint": "தாவரப் படத்தைத் தேர்ந்தெடுக்கவும் (.png ஒளிபுகும் தன்மையுடன்). உயரமான படம் (அகலத்தை விட குறைந்தது 1.5 மடங்கு அதிக உயரம், எ.கா. 16×32) 2 தொகுதிகள் உயரமுள்ள தாவரமாக மாறும்",
   "folder.veg.error": "படக் கோப்பைத் தேர்ந்தெடு",
+  "folder.tint": "நிறம் (வெள்ளை — சாயல் இல்லாமல்)",
+  "folder.weight": "எடை (விழும் அதிர்வெண்)",
 
   "ui.hide": "இடைமுகத்தை மறை (H)",
   "ui.show": "இடைமுகத்தைக் காட்டு (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "தாவரங்களை இயக்கு",
   "veg.dice": "கலந்துவிடு",
-  "veg.set": "தாவரத் தொகுப்பு",
   "veg.density": "அடர்த்தி",
   "veg.layers": "தாவரங்கள் வளரும் இடம்",
   "veg.layer1": "மேல் தளம்",
   "veg.layer2": "நடுத் தளம்",
   "veg.layer3": "கீழ் தளம்",
-  "veg.empty": "தாவரങ്ങൾ இன்னும் இல்லை — vegetation/ கோப்புறைக்குள் இழைத்தூவல்களை வைக்கவும் அல்லது உங்களுடையதைச் சேர்க்கவும்"
+  "veg.empty": "தாவரങ്ങൾ இன்னும் இல்லை — vegetation/ கோப்புறைக்குள் இழைத்தூவல்களை வைக்கவும் அல்லது உங்களுடையதைச் சேர்க்கவும்",
+  "veg.plants": "தாவரங்கள்",
+  "veg.tint": "தாவர நிறம்",
+  "veg.name.grass": "புல்",
+  "veg.name.tall_grass": "நீண்ட புல்",
+  "veg.name.pale_moss_carpet_side_small": "வெளிறிய பாசி (குறைவான)",
+  "veg.name.pale_moss_carpet_side_tall": "வெளிறிய பாசி (உயரமான)",
+  "veg.name.sweet_berry_bush_stage0": "இனிப்பு பெர்ரிகள் (நிலை 1)",
+  "veg.name.sweet_berry_bush_stage1": "இனிப்பு பெர்ரிகள் (நிலை 2)",
+  "veg.name.sweet_berry_bush_stage2": "இனிப்பு பெர்ரிகள் (நிலை 3)",
+  "veg.name.sweet_berry_bush_stage3": "இனிப்பு பெர்ரிகள் (நிலை 4)",
+  "veg.name.sugar_cane": "கரும்பு",
+  "veg.name.seagrass_32x": "கடல் புல்",
+
+  "credit.title": "ஆசிரியர்: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Nuwuwu kpe",
   "block.plain": "Tekstura mele o",
+  "block.tint": "Blɔk ƒe amadede",
 
   "bgimg.name.day": "Ŋdɔ",
   "bgimg.name.end": "Nuwuwu",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Ŋutilafa nyenyewo",
   "folder.veg.hint": "Tia ŋutilafa ƒe nɔnɔme (.png si le ʋuʋum). Nɔnɔme kɔkɔ (kɔkɔ kple kekeme sɔ kple zi 1.5, elabena 16×32) azuzu ŋutilafa si le blɔk eve kɔkɔme",
   "folder.veg.error": "Tia nɔnɔme ƒe fiile",
+  "folder.tint": "Amadede (wit — evɔ meli o)",
+  "folder.weight": "Kpekpeme (ale si wòdzena zi gbɔ zi gbɔ)",
 
   "ui.hide": "Ɓla nɔnɔmɛ la (H)",
   "ui.show": "Fia nɔnɔmɛ la (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Tsɔ ŋutilafa ɖe edzi",
   "veg.dice": "Tsɔ tsɔe",
-  "veg.set": "Ŋutilafa ƒe ɖoɖo",
   "veg.density": "Titri",
   "veg.layers": "Afiɖe ŋutilafa si le",
   "veg.layer1": "Kplɔ̃ si le dzi",
   "veg.layer2": "Kplɔ̃ si le titina",
   "veg.layer3": "Kplɔ̃ si le anyime",
-  "veg.empty": "Nutilafa aɖeke meli o — da nutilafanuwo ɖe vegetation/ fe akɔnta me alo tsɔ wò ŋutɔ tɔ ɖe edzi"
+  "veg.empty": "Nutilafa aɖeke meli o — da nutilafanuwo ɖe vegetation/ fe akɔnta me alo tsɔ wò ŋutɔ tɔ ɖe edzi",
+  "veg.plants": "Woewo",
+  "veg.tint": "Woewo ƒe amadede",
+  "veg.name.grass": "Ŋudede",
+  "veg.name.tall_grass": "Ŋudede kɔkɔ",
+  "veg.name.pale_moss_carpet_side_small": "Amadede le flɛte (vlɔ)",
+  "veg.name.pale_moss_carpet_side_tall": "Amadede le flɛte (kɔkɔ)",
+  "veg.name.sweet_berry_bush_stage0": "Kutsetse viviwo (afɔɖeɖe 1)",
+  "veg.name.sweet_berry_bush_stage1": "Kutsetse viviwo (afɔɖeɖe 2)",
+  "veg.name.sweet_berry_bush_stage2": "Kutsetse viviwo (afɔɖeɖe 3)",
+  "veg.name.sweet_berry_bush_stage3": "Kutsetse viviwo (afɔɖeɖe 4)",
+  "veg.name.sugar_cane": "Sukartseti",
+  "veg.name.seagrass_32x": "Tetede ƒe ŋudede",
+
+  "credit.title": "Ŋlɔla: %s"
 }

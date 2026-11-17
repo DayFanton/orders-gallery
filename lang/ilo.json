@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Bato ti End",
   "block.plain": "Awan ti tekstura",
+  "block.tint": "Kulay ti blok",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Settings",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Dagiti mulak",
   "folder.veg.hint": "Piliin ti ladawan ti mula (.png nga adda transparency). Ti nangato a ladawan (katayag a di lessay ngem 1.5 a daras a dakdakkel ngem ti lakapad, kas iti 16×32) ket agbalin a mula nga 2 a bloke ti katayagna",
   "folder.veg.error": "Piliin ti file ti ladawan",
+  "folder.tint": "Kulay (ti napudaw — awan ti kulayna)",
+  "folder.weight": "Timbang (dalas ti pannakahulogna)",
 
   "ui.hide": "Ilemmeng ti interface (H)",
   "ui.show": "Ipakita ti interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "I-on ti mula",
   "veg.dice": "Agsep",
-  "veg.set": "Set ti mula",
   "veg.density": "Kasedsed",
   "veg.layers": "Pagtubo ti mula",
   "veg.layer1": "Akinngato a plataporma",
   "veg.layer2": "Kennga a plataporma",
   "veg.layer3": "Makinkukuna a plataporma",
-  "veg.empty": "Awan pay ti mula — ikabil dagiti tekstura iti folder a vegetation/ wenno iraman ti kuam"
+  "veg.empty": "Awan pay ti mula — ikabil dagiti tekstura iti folder a vegetation/ wenno iraman ti kuam",
+  "veg.plants": "Maysa a mula",
+  "veg.tint": "Kulay ti mula",
+  "veg.name.grass": "Raborabot",
+  "veg.name.tall_grass": "Nangato a raborabot",
+  "veg.name.pale_moss_carpet_side_small": "Nalaka a lumot (aba)",
+  "veg.name.pale_moss_carpet_side_tall": "Nalaka a lumot (nangato)",
+  "veg.name.sweet_berry_bush_stage0": "Nasam-it a berry (paset 1)",
+  "veg.name.sweet_berry_bush_stage1": "Nasam-it a berry (paset 2)",
+  "veg.name.sweet_berry_bush_stage2": "Nasam-it a berry (paset 3)",
+  "veg.name.sweet_berry_bush_stage3": "Nasam-it a berry (paset 4)",
+  "veg.name.sugar_cane": "Tubo",
+  "veg.name.seagrass_32x": "Raborabot ti baybay",
+
+  "credit.title": "Mannurat: %s"
 }

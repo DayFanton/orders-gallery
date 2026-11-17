@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Tombo ḽa End",
   "block.plain": "A hu thekisiture",
+  "block.tint": "Mbala ya buloko",
 
   "bgimg.name.day": "Masiari",
   "bgimg.name.end": "Magumo",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Zwimela zwanga",
   "folder.veg.hint": "Nangani tshifanyiso tsha zwimela (.png ya vha ya vhonala). Tshifanyiso tsha u lela (vulele la vha u fhirisa vhuphara nga maraga ya 1.5, tsumbo 16×32) i do vha tshimela tsha zwibula zwivhili",
   "folder.veg.error": "Nangani faele ya tshifanyiso",
+  "folder.tint": "Mbala (ya luvhala — i si na mbala)",
+  "folder.weight": "Tshilemo (tshikhula tsha u wa)",
 
   "ui.hide": "Vhaedza zwiga (H)",
   "ui.show": "Luvhadza zwiga (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Vula zwimela",
   "veg.dice": "Vuvhela",
-  "veg.set": "Setshedzo tsha zwimela",
   "veg.density": "U tsitsikana",
   "veg.layers": "Hune zwimela zwa mela hone",
   "veg.layer1": "Tshiimo tsha nṱha",
   "veg.layer2": "Tshiimo tsha vhukati",
   "veg.layer3": "Tshiimo tsha fhasi",
-  "veg.empty": "A hu na zwimela zwino — vheani zwishumiswa kha folda ya vegetation/ kana u engedza zwanyu"
+  "veg.empty": "A hu na zwimela zwino — vheani zwishumiswa kha folda ya vegetation/ kana u engedza zwanyu",
+  "veg.plants": "Zwimela",
+  "veg.tint": "Mbala ya zwimela",
+  "veg.name.grass": "Vhusiku",
+  "veg.name.tall_grass": "Vhusiku luhulu",
+  "veg.name.pale_moss_carpet_side_small": "MuṰa u sa vhonali (pfufhisa)",
+  "veg.name.pale_moss_carpet_side_tall": "MuṰa u sa vhonali (luhulu)",
+  "veg.name.sweet_berry_bush_stage0": "Mitshelo i difhaho (luṱa lwa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Mitshelo i difhaho (luṱa lwa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Mitshelo i difhaho (luṱa lwa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Mitshelo i difhaho (luṱa lwa 4)",
+  "veg.name.sugar_cane": "Luvhanda lwa tswikiri",
+  "veg.name.seagrass_32x": "Vhusiku ha lwanani",
+
+  "credit.title": "Murendami: %s"
 }

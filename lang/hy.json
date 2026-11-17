@@ -374,6 +374,7 @@
   "block.netherrack": "Նեդերռաք",
   "block.end_stone": "Էնդի քար",
   "block.plain": "Առանց հյուսվածքի",
+  "block.tint": "Բլոկի գույնը",
 
   "bgimg.name.day": "Օր",
   "bgimg.name.end": "Էնդ",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Իմ բույսերը",
   "folder.veg.hint": "Ընտրեք բույսի նկար (.png թափանցիկությամբ): Բարձր նկարը (բարձրությունը առնվազն 1.5 անգամ մեծ է լայնությունից, օրինակ՝ 16×32) կդառնա 2 բլոկ բարձրությամբ բույս",
   "folder.veg.error": "Ընտրեք պատկերի ֆայլը",
+  "folder.tint": "Գույն (սպիտակ՝ առանց երանգի)",
+  "folder.weight": "Քաշ (որքան հաճախ է ընկնում)",
 
   "ui.hide": "Թաքցնել ինտերֆեյսը (H)",
   "ui.show": "Ցույց տալ ինտերֆեյսը (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Միացնել բուսականությունը",
   "veg.dice": "Խառնել",
-  "veg.set": "Բուսականության հավաքածու",
   "veg.density": "Խտություն",
   "veg.layers": "Որտեղ է աճում բուսականությունը",
   "veg.layer1": "Վերին հարթակ",
   "veg.layer2": "Միջին հարթակ",
   "veg.layer3": "Ստորին հարթակ",
-  "veg.empty": "Բույսեր դեռևս չկան. տեղադրեք հյուսվածքները vegetation/ թղթապանակում կամ ավելացրեք ձերը"
+  "veg.empty": "Բույսեր դեռևս չկան. տեղադրեք հյուսվածքները vegetation/ թղթապանակում կամ ավելացրեք ձերը",
+  "veg.plants": "Բույսեր",
+  "veg.tint": "Բույսի գույնը",
+  "veg.name.grass": "Խոտ",
+  "veg.name.tall_grass": "Բարձր խոտ",
+  "veg.name.pale_moss_carpet_side_small": "Գունատ մամուռ (ցածր)",
+  "veg.name.pale_moss_carpet_side_tall": "Գունատ մամուռ (բարձր)",
+  "veg.name.sweet_berry_bush_stage0": "Քաղցր հատապտուղներ (փուլ 1)",
+  "veg.name.sweet_berry_bush_stage1": "Քաղցր հատապտուղներ (փուլ 2)",
+  "veg.name.sweet_berry_bush_stage2": "Քաղցր հատապտուղներ (փուլ 3)",
+  "veg.name.sweet_berry_bush_stage3": "Քաղցր հատապտուղներ (փուլ 4)",
+  "veg.name.sugar_cane": "Շաքարեղեգ",
+  "veg.name.seagrass_32x": "Ծովային խոտ",
+
+  "credit.title": "Հեղինակ՝ %s"
 }

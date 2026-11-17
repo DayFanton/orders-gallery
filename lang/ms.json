@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
   "block.plain": "Tiada tekstur",
+  "block.tint": "Warna blok",
 
   "mobile.gallery": "📁 Galeri",
   "mobile.settings": "⚙️ Tetapan",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Tanaman saya",
   "folder.veg.hint": "Pilih imej tumbuhan (.png dengan ketelusan). Imej tinggi (ketinggian sekurang-kurangnya 1.5 kali ganda daripada lebar, contohnya 16×32) akan menjadi tumbuhan 2 blok",
   "folder.veg.error": "Pilih fail imej",
+  "folder.tint": "Warna (putih — tanpa rona)",
+  "folder.weight": "Berat (kekerapan jatuh)",
 
   "ui.hide": "Sembunyikan antara muka (H)",
   "ui.show": "Tunjukkan antara muka (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Aktifkan vegetasi",
   "veg.dice": "Rawak",
-  "veg.set": "Set vegetasi",
   "veg.density": "Ketumpatan",
   "veg.layers": "Di mana vegetasi tumbuh",
   "veg.layer1": "Platform atas",
   "veg.layer2": "Platform tengah",
   "veg.layer3": "Platform bawah",
-  "veg.empty": "Belum ada tanaman — letakkan tekstur dalam folder vegetation/ atau tambahkan sendiri"
+  "veg.empty": "Belum ada tanaman — letakkan tekstur dalam folder vegetation/ atau tambahkan sendiri",
+  "veg.plants": "Tumbuhan",
+  "veg.tint": "Warna tumbuhan",
+  "veg.name.grass": "Rumput",
+  "veg.name.tall_grass": "Rumput tinggi",
+  "veg.name.pale_moss_carpet_side_small": "Lumut pucat (rendah)",
+  "veg.name.pale_moss_carpet_side_tall": "Lumut pucat (tinggi)",
+  "veg.name.sweet_berry_bush_stage0": "Beri manis (tahap 1)",
+  "veg.name.sweet_berry_bush_stage1": "Beri manis (tahap 2)",
+  "veg.name.sweet_berry_bush_stage2": "Beri manis (tahap 3)",
+  "veg.name.sweet_berry_bush_stage3": "Beri manis (tahap 4)",
+  "veg.name.sugar_cane": "Tebu",
+  "veg.name.seagrass_32x": "Rumput laut",
+
+  "credit.title": "Penulis: %s"
 }

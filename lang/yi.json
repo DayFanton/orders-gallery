@@ -374,6 +374,7 @@
   "block.netherrack": "נעזערראַק",
   "block.end_stone": "ענדשטיין",
   "block.plain": "קיין טעקסטור פֿאָר נישט",
+  "block.tint": "בלאָק קאָליר",
 
   "bgimg.name.day": "טאָג",
   "bgimg.name.end": "ענדע",
@@ -407,6 +408,8 @@
   "folder.veg.title": "מיינע געוויקסן",
   "folder.veg.hint": "קלייב אויס אַ געוויקס בילד (.png מיט טראַנספּאַרענטקייט). אַ הויך בילד (הۆی הכפלות ווי די ברייט בייַ מינדסטער 1.5 מאָל, למשל 16×32) וועט ווערן אַ געוויקס פון 2 בלאָק",
   "folder.veg.error": "קלייב אויס בילד טעקע",
+  "folder.tint": "קאָליר (ווײַס — אָן אַ שאָטן)",
+  "folder.weight": "וואָג (ווי אָפט עס פֿאַלט)",
 
   "ui.hide": "באַהאַרטן אינטערפֿייס (H)",
   "ui.show": "ווייזן אינטערפֿייס (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "איינשאַלטן וועgetאַציע",
   "veg.dice": "מישן",
-  "veg.set": "וועגעטאַציע סעט",
   "veg.density": "געדיכטקייט",
   "veg.layers": "וווּ וועgetאַציע וואַקסט",
   "veg.layer1": "אויבערשטע פּלאַטפאָרמע",
   "veg.layer2": "מיטלשטע פּלאַטפאָרמע",
   "veg.layer3": "אונטערשטע פּלאַטפאָרמע",
-  "veg.empty": "עס ז್ಯנען נאָך קיין געוויקסן נישטאָ — לייג טעקסטורן אין דעם פאָלדער vegetation/ אָדער לייג צו דײַנע אייגענע"
+  "veg.empty": "עס ז್ಯנען נאָך קיין געוויקסן נישטאָ — לייג טעקסטורן אין דעם פאָלדער vegetation/ אָדער לייג צו דײַנע אייגענע",
+  "veg.plants": "פלאַנצן",
+  "veg.tint": "פלאַנצן קאָליר",
+  "veg.name.grass": "גראָז",
+  "veg.name.tall_grass": "הויכע גראָז",
+  "veg.name.pale_moss_carpet_side_small": "בלייד מאָך (נידעריק)",
+  "veg.name.pale_moss_carpet_side_tall": "בלייד מאָך (הויך)",
+  "veg.name.sweet_berry_bush_stage0": "זיסע יאַגדעס (שטאַפּל 1)",
+  "veg.name.sweet_berry_bush_stage1": "זיסע יאַגדעס (שטאַפּל 2)",
+  "veg.name.sweet_berry_bush_stage2": "זיסע יאַגדעס (שטאַפּל 3)",
+  "veg.name.sweet_berry_bush_stage3": "זיסע יאַגדעס (שטאַפּל 4)",
+  "veg.name.sugar_cane": "צוקער־ריר",
+  "veg.name.seagrass_32x": "ים־גראָז",
+
+  "credit.title": "מחבר: %s"
 }

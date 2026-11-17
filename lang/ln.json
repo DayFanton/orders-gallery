@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Libangá ya End",
   "block.plain": "Tekstur te",
+  "block.tint": "Langi ya blɔkɔ",
 
   "mobile.gallery": "📁 Galerí",
   "mobile.settings": "⚙️ Bobongisi",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Nzeté na ngai",
   "folder.veg.hint": "Pona elilingi ya nzeté (.png na pole). Elilingi ya molayi (bolayi koleka 1.5 ya bonene, na ndakisa 16×32) ekomaka nzeté ya mabulu mibale",
   "folder.veg.error": "Pona faili ya elilingi",
+  "folder.tint": "Langi (pembe — ezangi langi ya boye)",
+  "folder.weight": "Bopekwani (mpasi ya kokweyá)",
 
   "ui.hide": "Bomba interface (H)",
   "ui.show": "Monisa interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Kóka nzeté",
   "veg.dice": "Kokabisa",
-  "veg.set": "Mwa nzeté",
   "veg.density": "Bokasi",
   "veg.layers": "Esika nzeté ekoli",
   "veg.layer1": "Eteni ya likolo",
   "veg.layer2": "Eteni ya katikati",
   "veg.layer3": "Eteni ya nse",
-  "veg.empty": "Ezali na nzeté te — tyá bilembo na folda vegetation/ to bakisa ya yo moko"
+  "veg.empty": "Ezali na nzeté te — tyá bilembo na folda vegetation/ to bakisa ya yo moko",
+  "veg.plants": "Bisé la",
+  "veg.tint": "Langi ya bisé la",
+  "veg.name.grass": "BWA",
+  "veg.name.tall_grass": "BWA molayi",
+  "veg.name.pale_moss_carpet_side_small": "Langi ya mpiaka (moke)",
+  "veg.name.pale_moss_carpet_side_tall": "Langi ya mpiaka (molayi)",
+  "veg.name.sweet_berry_bush_stage0": "Mbuma ya sukali (eteni ya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Mbuma ya sukali (eteni ya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Mbuma ya sukali (eteni ya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Mbuma ya sukali (eteni ya 4)",
+  "veg.name.sugar_cane": "Mobange",
+  "veg.name.seagrass_32x": "BWA ya mbu",
+
+  "credit.title": "Mokomi: %s"
 }

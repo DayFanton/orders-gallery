@@ -374,6 +374,7 @@
   "block.netherrack": "Đá Nether",
   "block.end_stone": "Đá End",
   "block.plain": "Không có kết cấu",
+  "block.tint": "Màu khối",
 
   "bgimg.name.day": "Ban ngày",
   "bgimg.name.end": "The End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Cây của tôi",
   "folder.veg.hint": "Chọn hình ảnh thực vật (.png có độ trong suốt). Hình ảnh cao (chiều cao lớn hơn chiều rộng ít nhất 1,5 lần, ví dụ 16×32) sẽ trở thành cây cao 2 khối",
   "folder.veg.error": "Chọn tệp hình ảnh",
+  "folder.tint": "Màu sắc (trắng — không có sắc độ)",
+  "folder.weight": "Trọng số (tần suất xuất hiện)",
 
   "ui.hide": "ẩn giao diện (H)",
   "ui.show": "Hiện giao diện (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Bật thảm thực vật",
   "veg.dice": "Xáo trộn",
-  "veg.set": "Bộ thảm thực vật",
   "veg.density": "Mật độ",
   "veg.layers": "Nơi thảm thực vật phát triển",
   "veg.layer1": "Nền tảng trên",
   "veg.layer2": "Nền tảng giữa",
   "veg.layer3": "Nền tảng dưới",
-  "veg.empty": "Chưa có thảm thực vật — hãy đặt kết cấu vào thư mục vegetation/ hoặc thêm của riêng bạn"
+  "veg.empty": "Chưa có thảm thực vật — hãy đặt kết cấu vào thư mục vegetation/ hoặc thêm của riêng bạn",
+  "veg.plants": "Thực vật",
+  "veg.tint": "Màu sắc thực vật",
+  "veg.name.grass": "Cỏ",
+  "veg.name.tall_grass": "Cỏ cao",
+  "veg.name.pale_moss_carpet_side_small": "Rêu nhạt (thấp)",
+  "veg.name.pale_moss_carpet_side_tall": "Rêu nhạt (cao)",
+  "veg.name.sweet_berry_bush_stage0": "Quả mọng ngọt (giai đoạn 1)",
+  "veg.name.sweet_berry_bush_stage1": "Quả mọng ngọt (giai đoạn 2)",
+  "veg.name.sweet_berry_bush_stage2": "Quả mọng ngọt (giai đoạn 3)",
+  "veg.name.sweet_berry_bush_stage3": "Quả mọng ngọt (giai đoạn 4)",
+  "veg.name.sugar_cane": "Cây mía",
+  "veg.name.seagrass_32x": "Cỏ biển",
+
+  "credit.title": "Tác giả: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "Nezerraakiyaa",
   "block.end_stone": "End shuchchaa",
   "block.plain": "Texture bayntilde",
+  "block.tint": "Blokke buula",
 
   "bgimg.name.day": "Gallassa",
   "bgimg.name.end": "Wurssetta",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Ta kawoosho",
   "folder.veg.hint": "Kawoosho qashshoo doorite (.png paydanchchira). Guquqquwa qashshoo (qashshooga keeshshaturgge 1.5 gita, leemisu 16×32) 2 blokki kawoosho gidana",
   "folder.veg.error": "Oychchaa fayile doorite",
+  "folder.tint": "Buula (bollo — qaxxe bainna)",
+  "folder.weight": "Ullo (shiiqqiyo wode)",
 
   "ui.hide": "Interface qixxa (H)",
   "ui.show": "Interface bescite (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kawoosho",
   "veg.dice": "Xoossa",
-  "veg.set": "Kawoosho qashsho",
   "veg.density": "Orddaa",
   "veg.layers": "Kawoosho kayiyaas yannay",
   "veg.layer1": "Bollaa oychchaa",
   "veg.layer2": "Giddichcha oychchaa",
   "veg.layer3": "Garssa oychchaa",
-  "veg.empty": "Kawoosho baawa — vegetation/ oychchan shiraashsha woy naha godo"
+  "veg.empty": "Kawoosho baawa — vegetation/ oychchan shiraashsha woy naha godo",
+  "veg.plants": "Qora",
+  "veg.tint": "Qora buula",
+  "veg.name.grass": "Qora",
+  "veg.name.tall_grass": "Qora gita",
+  "veg.name.pale_moss_carpet_side_small": "Moose buula (qaxxe)",
+  "veg.name.pale_moss_carpet_side_tall": "Moose buula (gita)",
+  "veg.name.sweet_berry_bush_stage0": "Mal''o ayfiyaa (1-tta xaphuwaa)",
+  "veg.name.sweet_berry_bush_stage1": "Mal''o ayfiyaa (2-tta xaphuwaa)",
+  "veg.name.sweet_berry_bush_stage2": "Mal''o ayfiyaa (3-tta xaphuwaa)",
+  "veg.name.sweet_berry_bush_stage3": "Mal''o ayfiyaa (4-tta xaphuwaa)",
+  "veg.name.sugar_cane": "Shokoriga",
+  "veg.name.seagrass_32x": "Abba qora",
+
+  "credit.title": "Ayissiya: %s"
 }

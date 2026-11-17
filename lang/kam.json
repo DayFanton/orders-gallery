@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ĩvia ya End",
   "block.plain": "Ndũĩndwa kyũmbe",
+  "block.tint": "Rangi ya kyama",
 
   "bgimg.name.day": "Mũthenya",
   "bgimg.name.end": "Mũthya",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Miti yakwa",
   "folder.veg.hint": "Thuranĩa mũhianano wa miti (.png ĩĩ na ũtheri). Mũhianano mũlaiku (ũlaiku mbee wa mĩiganjo 1.5 kwi ũene, ta 16×32) ũkaĩkĩa mti wa mavaluki meerĩ",
   "folder.veg.error": "Thuranĩa faili ya mĩhianano",
+  "folder.tint": "Rangi (njeru — na kĩtĩ)",
+  "folder.weight": "Ũito (kĩla kĩvaka)",
 
   "ui.hide": "Ĩtheka mbica (H)",
   "ui.show": "Tharia mbica (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Vumba miti",
   "veg.dice": "Kũvangĩa",
-  "veg.set": "Kĩsũngo kĩa miti",
   "veg.density": "Ũnyinyi",
   "veg.layers": "Handu ha miti ĩkũa",
   "veg.layer1": "Kĩvĩla kya ĩũlũ",
   "veg.layer2": "Kĩvĩla kya vatic nze",
   "veg.layer3": "Kĩvĩla kya nthĩ",
-  "veg.empty": "Ti mĩti ĩvĩ — ikia mĩhianano folda-ini ya vegetation/ kana wongeya yaku"
+  "veg.empty": "Ti mĩti ĩvĩ — ikia mĩhianano folda-ini ya vegetation/ kana wongeya yaku",
+  "veg.plants": "Mimea",
+  "veg.tint": "Rangi ya mimea",
+  "veg.name.grass": "Nyasi",
+  "veg.name.tall_grass": "Nyasi nene",
+  "veg.name.pale_moss_carpet_side_small": "Moss ya mbee (nene)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss ya mbee (nene)",
+  "veg.name.sweet_berry_bush_stage0": "Matunda me mũyo (kĩlungu kya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Matunda me mũyo (kĩlungu kya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Matunda me mũyo (kĩlungu kya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Matunda me mũyo (kĩlungu kya 4)",
+  "veg.name.sugar_cane": "Kĩkandi",
+  "veg.name.seagrass_32x": "Nyasi ya ikuni",
+
+  "credit.title": "Mwandĩki: %s"
 }

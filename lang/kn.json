@@ -374,6 +374,7 @@
   "block.netherrack": "ನೆದರ್‌ರಾಕ್",
   "block.end_stone": "ಎಂಡ್ ಕಲ್ಲು",
   "block.plain": "ಯಾವುದೇ ವಿನ್ಯಾಸವಿಲ್ಲ",
+  "block.tint": "ಬ್ಲಾಕ್ ಬಣ್ಣ",
 
   "bgimg.name.day": "ಹಗಲು",
   "bgimg.name.end": "ಎಂಡ್",
@@ -407,6 +408,8 @@
   "folder.veg.title": "ನನ್ನ ಸಸ್ಯಗಳು",
   "folder.veg.hint": "ಸಸ್ಯದ ಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ (.png ಪಾರದರ್ಶಕತೆಯೊಂದಿಗೆ). ಎತ್ತರದ ಚಿತ್ರ (ಅಲಗಿನಕ್ಕಿಂತ ಕನಿಷ್ಠ 1.5 ಪಟ್ಟು ಹೆಚ್ಚು ಎತ್ತರ, ಉದಾ. 16×32) 2 ಬ್ಲಾಕ್‌ಗಳ ಎತ್ತರದ ಸಸ್ಯವಾಗುತ್ತದೆ",
   "folder.veg.error": "ಚಿತ್ರ ಕಡತವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "folder.tint": "ಬಣ್ಣ (ಬಿಳಿ — ಛಾಯೆ ಇಲ್ಲದೆ)",
+  "folder.weight": "ತೂಕ (ಬೀಳುವ ಆವರ್ತನ)",
 
   "ui.hide": "ಇಂಟರ್ಫೇಸ್ ಮರೆಮಾಡಿ (H)",
   "ui.show": "ಇಂಟರ್ಫೇಸ್ ತೋರಿಸಿ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "ಸಸ್ಯವರ್ಗವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
   "veg.dice": "ಬೆರೆಸು",
-  "veg.set": "ಸಸ್ಯವರ್ಗದ ಸೆಟ್",
   "veg.density": "ಸಾಂದ್ರತೆ",
   "veg.layers": "ಸಸ್ಯವರ್ಗ ಬೆಳೆಯುವ ಸ್ಥಳ",
   "veg.layer1": "ಮೇಲಿನ ವೇದಿಕೆ",
   "veg.layer2": "ಮಧ್ಯದ ವೇದಿಕೆ",
   "veg.layer3": "ಕೆಳಗಿನ ವೇದಿಕೆ",
-  "veg.empty": "ಇನ್ನೂ ಯಾವುದೇ ಸಸ್ಯವರ್ಗವಿಲ್ಲ — vegetation/ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ ವಿನ್ಯಾಸಗಳನ್ನು ಇರಿಸಿ ಅಥವಾ ನಿಮ್ಮದೇ ಆದದ್ದನ್ನು ಸೇರಿಸಿ"
+  "veg.empty": "ಇನ್ನೂ ಯಾವುದೇ ಸಸ್ಯವರ್ಗವಿಲ್ಲ — vegetation/ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ ವಿನ್ಯಾಸಗಳನ್ನು ಇರಿಸಿ ಅಥವಾ ನಿಮ್ಮದೇ ಆದದ್ದನ್ನು ಸೇರಿಸಿ",
+  "veg.plants": "ಸಸ್ಯಗಳು",
+  "veg.tint": "ಸಸ್ಯದ ಬಣ್ಣ",
+  "veg.name.grass": "ಹುಲ್ಲು",
+  "veg.name.tall_grass": "ಉದ್ದನೆಯ ಹುಲ್ಲು",
+  "veg.name.pale_moss_carpet_side_small": "ತಿಳಿಪಾಚಿ (ಕಡಿಮೆ)",
+  "veg.name.pale_moss_carpet_side_tall": "ತಿಳಿಪಾಚಿ (ಉದ್ದನೆಯ)",
+  "veg.name.sweet_berry_bush_stage0": "ಸಿಹಿ ಹಣ್ಣುಗಳು (ಹಂತ 1)",
+  "veg.name.sweet_berry_bush_stage1": "ಸಿಹಿ ಹಣ್ಣುಗಳು (ಹಂತ 2)",
+  "veg.name.sweet_berry_bush_stage2": "ಸಿಹಿ ಹಣ್ಣುಗಳು (ಹಂತ 3)",
+  "veg.name.sweet_berry_bush_stage3": "ಸಿಹಿ ಹಣ್ಣುಗಳು (ಹಂತ 4)",
+  "veg.name.sugar_cane": "ಕಬ್ಬು",
+  "veg.name.seagrass_32x": "ಸಮುದ್ರದ ಹುಲ್ಲು",
+
+  "credit.title": "ಲೇಖಕ: %s"
 }

@@ -374,6 +374,7 @@
   "block.netherrack": "নেদারর্যাক",
   "block.end_stone": "এন্ড স্টোন",
   "block.plain": "কোনো টেক্সচার নেই",
+  "block.tint": "ব্লকের রঙ",
 
   "bgimg.name.day": "দিন",
   "bgimg.name.end": "এন্ড",
@@ -407,6 +408,8 @@
   "folder.veg.title": "আমার গাছপালা",
   "folder.veg.hint": "একটি উদ্ভিদের ছবি চয়ন করুন (.png স্বচ্ছতা সহ)। একটি লম্বা ছবি (প্রস্থের চেয়ে কমপক্ষে ১.৫ গুণ বেশি উচ্চতা, যেমন ১৬×৩২) ২ ব্লক লম্বা উদ্ভিদ হয়ে উঠবে",
   "folder.veg.error": "ইমেজ ফাইল নির্বাচন করুন",
+  "folder.tint": "রঙ (সাদা — কোনো আভা ছাড়া)",
+  "folder.weight": "ওজন (ড্রপ ফ্রিকোয়েন্সি)",
 
   "ui.hide": "ইন্টারফেস লুকান (H)",
   "ui.show": "ইন্টারফেস দেখান (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "উদ্ভিদ সক্ষম করুন",
   "veg.dice": "এলোমেলো করুন",
-  "veg.set": "উদ্ভিদ প্রিসেট",
   "veg.density": "ঘনত্ব",
   "veg.layers": "যেখানে উদ্ভিদ জন্মায়",
   "veg.layer1": "উপরের প্ল্যাটফর্ম",
   "veg.layer2": "মধ্য প্ল্যাটফর্ম",
   "veg.layer3": "নিচের প্ল্যাটফর্ম",
-  "veg.empty": "এখনও কোন উদ্ভিদ নেই — vegetation/ ফোল্ডারে টেক্সচার রাখুন অথবা আপনার নিজের যোগ করুন"
+  "veg.empty": "এখনও কোন উদ্ভিদ নেই — vegetation/ ফোল্ডারে টেক্সচার রাখুন অথবা আপনার নিজের যোগ করুন",
+  "veg.plants": "উদ্ভিদ",
+  "veg.tint": "উদ্ভিদের রঙ",
+  "veg.name.grass": "ঘাস",
+  "veg.name.tall_grass": "লম্বা ঘাস",
+  "veg.name.pale_moss_carpet_side_small": "ফ্যাকাশে শ্যাওলা (খাটো)",
+  "veg.name.pale_moss_carpet_side_tall": "ফ্যাকাশে শ্যাওলা (লম্বা)",
+  "veg.name.sweet_berry_bush_stage0": "মিষ্টি বেরি (ধাপ ১)",
+  "veg.name.sweet_berry_bush_stage1": "মিষ্টি বেরি (ধাপ ২)",
+  "veg.name.sweet_berry_bush_stage2": "মিষ্টি বেরি (ধাপ ৩)",
+  "veg.name.sweet_berry_bush_stage3": "মিষ্টি বেরি (ধাপ ৪)",
+  "veg.name.sugar_cane": "আখ",
+  "veg.name.seagrass_32x": "সামুদ্রিক ঘাস",
+
+  "credit.title": "লেখক: %s"
 }

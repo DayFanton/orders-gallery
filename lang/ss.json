@@ -109,6 +109,7 @@
   "block.netherrack": "I-Netherrack",
   "block.end_stone": "Litje le-End",
   "block.plain": "Ayikho i-texture",
+  "block.tint": "Umbala welibhuloki",
 
   "mobile.gallery": "📁 Igalari",
   "mobile.settings": "⚙️ Tihlelo",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Titjalo tami",
   "folder.veg.hint": "Khetha sitsandzwa setitjalo (.png lesikhanya). Sitfombe lesidze (kuphakama lokungenani kuphindvwe kani 1.5 kububanti, sib. 16×32) kutawuba sitjalo semabhuloki lamabili",
   "folder.veg.error": "Khetha ifayela lesitfombe",
+  "folder.tint": "Umbala (lomhlophe — ngaphandle kwembala)",
+  "folder.weight": "Kusebenta (kuvela kwalesento)",
 
   "ui.hide": "Fihla isikhombandlela (H)",
   "ui.show": "Khombisa isikhombandlela (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Vula titjalo",
   "veg.dice": "Hlanganisa",
-  "veg.set": "Sete yetitjalo",
   "veg.density": "Kucinana",
   "veg.layers": "Lapho titjalo tikhula khona",
   "veg.layer1": "Siteji lesisetulu",
   "veg.layer2": "Siteji lesisemkhatsini",
   "veg.layer3": "Siteji lesingephansi",
-  "veg.empty": "Kute titjalo kanyene — beka titjalo kufolda ye vegetation/ noma engetela takho"
+  "veg.empty": "Kute titjalo kanyene — beka titjalo kufolda ye vegetation/ noma engetela takho",
+  "veg.plants": "Titjalo",
+  "veg.tint": "Umbala wetjalo",
+  "veg.name.grass": "Tjani",
+  "veg.name.tall_grass": "Tjani lobadze",
+  "veg.name.pale_moss_carpet_side_small": "Umusi lobovu (locashile)",
+  "veg.name.pale_moss_carpet_side_tall": "Umusi lobovu (lomdzala)",
+  "veg.name.sweet_berry_bush_stage0": "Emajikijolo lamnandzi (sigaba 1)",
+  "veg.name.sweet_berry_bush_stage1": "Emajikijolo lamnandzi (sigaba 2)",
+  "veg.name.sweet_berry_bush_stage2": "Emajikijolo lamnandzi (sigaba 3)",
+  "veg.name.sweet_berry_bush_stage3": "Emajikijolo lamnandzi (sigaba 4)",
+  "veg.name.sugar_cane": "Likhoba leswekati",
+  "veg.name.seagrass_32x": "Tjani laselwandle",
+
+  "credit.title": "Umbhali: %s"
 }

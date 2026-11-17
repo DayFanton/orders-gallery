@@ -374,6 +374,7 @@
   "block.netherrack": "เนเธอร์แร็ค",
   "block.end_stone": "หินเอนด์",
   "block.plain": "ไม่มีพื้นผิว",
+  "block.tint": "สีของบล็อก",
 
   "bgimg.name.day": "กลางวัน",
   "bgimg.name.end": "ดิเอนด์",
@@ -407,6 +408,8 @@
   "folder.veg.title": "พืชของฉัน",
   "folder.veg.hint": "เลือกรูปภาพพืช (.png ที่มีความโปร่งใส) รูปภาพทรงสูง (ความสูงมากกว่าความกว้างอย่างน้อย 1.5 เท่า เช่น 16×32) จะกลายเป็นพืชขนาด 2 บล็อก",
   "folder.veg.error": "เลือกไฟล์รูปภาพ",
+  "folder.tint": "สี (สีขาว — ไม่มีเฉดสี)",
+  "folder.weight": "น้ำหนัก (ความถี่ในการดรอป)",
 
   "ui.hide": "ซ่อนอินเทอร์เฟซ (H)",
   "ui.show": "แสดงอินเทอร์เฟซ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "เปิดพืชพรรณ",
   "veg.dice": "สลับ",
-  "veg.set": "ชุดพืชพรรณ",
   "veg.density": "ความหนาแน่น",
   "veg.layers": "บริเวณที่พืชพรรณเติบโต",
   "veg.layer1": "แพลตฟอร์มด้านบน",
   "veg.layer2": "แพลตฟอร์มตรงกลาง",
   "veg.layer3": "แพลตฟอร์มด้านล่าง",
-  "veg.empty": "ยังไม่มีพืชพรรณ — วางพื้นผิวลงในโฟลเดอร์ vegetation/ หรือเพิ่มของคุณเอง"
+  "veg.empty": "ยังไม่มีพืชพรรณ — วางพื้นผิวลงในโฟลเดอร์ vegetation/ หรือเพิ่มของคุณเอง",
+  "veg.plants": "พืช",
+  "veg.tint": "สีของพืช",
+  "veg.name.grass": "หญ้า",
+  "veg.name.tall_grass": "หญ้าสูง",
+  "veg.name.pale_moss_carpet_side_small": "มอสซีด (เตี้ย)",
+  "veg.name.pale_moss_carpet_side_tall": "มอสซีด (สูง)",
+  "veg.name.sweet_berry_bush_stage0": "สวีทเบอร์รี (ระยะที่ 1)",
+  "veg.name.sweet_berry_bush_stage1": "สวีทเบอร์รี (ระยะที่ 2)",
+  "veg.name.sweet_berry_bush_stage2": "สวีทเบอร์รี (ระยะที่ 3)",
+  "veg.name.sweet_berry_bush_stage3": "สวีทเบอร์รี (ระยะที่ 4)",
+  "veg.name.sugar_cane": "อ้อย",
+  "veg.name.seagrass_32x": "หญ้าทะเล",
+
+  "credit.title": "ผู้เขียน: %s"
 }

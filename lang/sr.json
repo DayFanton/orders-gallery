@@ -374,6 +374,7 @@
   "block.netherrack": "Недерак",
   "block.end_stone": "Камен Енда",
   "block.plain": "Без текстуре",
+  "block.tint": "Боја блока",
 
   "bgimg.name.day": "Дан",
   "bgimg.name.end": "Крај",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Моје биљке",
   "folder.veg.hint": "Изаберите слику биљке (.png са провидношћу). Висока слика (висина најмање 1,5 пута већа од ширине, нпр. 16×32) постаће биљка висока 2 блока",
   "folder.veg.error": "Изаберите датотеку слике",
+  "folder.tint": "Боја (бела — без нијансе)",
+  "folder.weight": "Тежина (уučесталost испадања)",
 
   "ui.hide": "Сакриј интерфејс (H)",
   "ui.show": "Прикажи интерфејс (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Укључи вегетацију",
   "veg.dice": "Промешај",
-  "veg.set": "Сет вегетације",
   "veg.density": "Густина",
   "veg.layers": "Где расте вегетација",
   "veg.layer1": "Горња платформа",
   "veg.layer2": "Средња платформа",
   "veg.layer3": "Доња платформа",
-  "veg.empty": "Још нема биљака — поставите текстуре у vegetation/ фасциклу или додајте своје"
+  "veg.empty": "Још нема биљака — поставите текстуре у vegetation/ фасциклу или додајте своје",
+  "veg.plants": "Биљке",
+  "veg.tint": "Боја биљке",
+  "veg.name.grass": "Трава",
+  "veg.name.tall_grass": "Висока трава",
+  "veg.name.pale_moss_carpet_side_small": "Бледи мах (ниски)",
+  "veg.name.pale_moss_carpet_side_tall": "Бледи мах (високи)",
+  "veg.name.sweet_berry_bush_stage0": "Слатке бобице (фаза 1)",
+  "veg.name.sweet_berry_bush_stage1": "Слатке бобице (фаза 2)",
+  "veg.name.sweet_berry_bush_stage2": "Слатке бобице (фаза 3)",
+  "veg.name.sweet_berry_bush_stage3": "Слатке бобице (фаза 4)",
+  "veg.name.sugar_cane": "Шећерна трска",
+  "veg.name.seagrass_32x": "Морска трава",
+
+  "credit.title": "Аутор: %s"
 }

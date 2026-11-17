@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Dhagaa End",
   "block.plain": "Hanga hin qabne",
+  "block.tint": "Halluu bulookii",
 
   "bgimg.name.day": "Guyyaa",
   "bgimg.name.end": "Dhuma",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Biqiltuu koo",
   "folder.veg.hint": "Suuraa biqiltuu filadhu (.png ifaa qabu). Suuraan dheeraa (dheereen bal'ina irraa yoo xiqqaate si'a 1.5 kan caalu, fakkeenyaaf 16×32) biqiltuu bulookii 2 ta'a",
   "folder.veg.error": "Faayilii suuraa filadhu",
+  "folder.tint": "Halluu (adii — dhandhammii malee)",
+  "folder.weight": "Ulfaatina (haala bu'insa)",
 
   "ui.hide": "Fuula dhoqqee dhoksuu (H)",
   "ui.show": "Fuula dhoqqee agarsiisuu (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Biqiltuu dandeessisi",
   "veg.dice": "Makaasuu",
-  "veg.set": "Walitti qabaa biqiltuu",
   "veg.density": "Rukkina",
   "veg.layers": "Bakki biqiltuun itti guddatu",
   "veg.layer1": "Waltajjii olii",
   "veg.layer2": "Waltajjii gidduu",
   "veg.layer3": "Waltajjii gadii",
-  "veg.empty": "Biqiltuun hin jiru — teekischaarii gubbaa vegetation/ kaa'i ykn kan kee dabaluuf"
+  "veg.empty": "Biqiltuun hin jiru — teekischaarii gubbaa vegetation/ kaa'i ykn kan kee dabaluuf",
+  "veg.plants": "Biqiltuu",
+  "veg.tint": "Halluu biqiltuu",
+  "veg.name.grass": "Caffee",
+  "veg.name.tall_grass": "Caffee dheeraa",
+  "veg.name.pale_moss_carpet_side_small": "Muuzii qabbaneessaa (gabaabaa)",
+  "veg.name.pale_moss_carpet_side_tall": "Muuzii qabbaneessaa (dheeraa)",
+  "veg.name.sweet_berry_bush_stage0": "Kuduraa mi'aawaa (sadarkaa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Kuduraa mi'aawaa (sadarkaa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Kuduraa mi'aawaa (sadarkaa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Kuduraa mi'aawaa (sadarkaa 4)",
+  "veg.name.sugar_cane": "Shaqarkaraa",
+  "veg.name.seagrass_32x": "Caffee galaana",
+
+  "credit.title": "Barreessaa: %s"
 }

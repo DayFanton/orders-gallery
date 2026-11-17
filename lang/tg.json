@@ -374,6 +374,7 @@
   "block.netherrack": "Незеррак",
   "block.end_stone": "Санги Энд",
   "block.plain": "Бе бофт",
+  "block.tint": "Ранги блок",
 
   "bgimg.name.day": "Рӯз",
   "bgimg.name.end": "Энд",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Растаниҳои من",
   "folder.veg.hint": "Тасвири растаниро интихоб кунед (.png бо шаффофият). Тасвири баланд (баландӣ на камтар аз 1,5 маротиба аз паҳноӣ калонтар, масалан 16×32) растании 2 блоки хоҳад шуд",
   "folder.veg.error": "Интихоби файли тасвир",
+  "folder.tint": "Ранг (сафед — бе соя)",
+  "folder.weight": "Вазн (басомади афтодан)",
 
   "ui.hide": "Пӯшидани интерфейс (H)",
   "ui.show": "Намоиш додани интерфейс (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Фаъол кардани наботот",
   "veg.dice": "Омехта кардан",
-  "veg.set": "Маҷмӯи наботот",
   "veg.density": "Зичӣ",
   "veg.layers": "Дар куҷо наботот мерӯяд",
   "veg.layer1": "Платформаи болоӣ",
   "veg.layer2": "Платформаи миёна",
   "veg.layer3": "Платформаи поёнӣ",
-  "veg.empty": "Ҳоло наботот нест — матнҳоро ба ҷузвдони vegetation/ гузоред ё худ илова кунед"
+  "veg.empty": "Ҳоло наботот нест — матнҳоро ба ҷузвдони vegetation/ гузоред ё худ илова кунед",
+  "veg.plants": "Растаниҳо",
+  "veg.tint": "Ранги растанӣ",
+  "veg.name.grass": "Сабза",
+  "veg.name.tall_grass": "Сабзаи баланд",
+  "veg.name.pale_moss_carpet_side_small": "Ххаки камранг (паст)",
+  "veg.name.pale_moss_carpet_side_tall": "Ххаки камранг (баланд)",
+  "veg.name.sweet_berry_bush_stage0": "Буттамеваҳои ширин (марҳилаи 1)",
+  "veg.name.sweet_berry_bush_stage1": "Буттамеваҳои ширин (марҳилаи 2)",
+  "veg.name.sweet_berry_bush_stage2": "Буттамеваҳои ширин (марҳилаи 3)",
+  "veg.name.sweet_berry_bush_stage3": "Буттамеваҳои ширин (марҳилаи 4)",
+  "veg.name.sugar_cane": "Намакканд",
+  "veg.name.seagrass_32x": "Сабзаи баҳрӣ",
+
+  "credit.title": "Муаллиф: %s"
 }

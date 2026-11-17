@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "End stone",
   "block.plain": "No texture",
+  "block.tint": "Block color",
 
   "mobile.gallery": "📁 Gallery",
   "mobile.settings": "⚙️ Settings",
@@ -405,6 +406,8 @@
   "folder.veg.title": "My plants",
   "folder.veg.hint": "Choose a plant image (.png with transparency). A tall image (height at least 1.5 times greater than width, e.g. 16×32) will become a 2-block-tall plant",
   "folder.veg.error": "Choose image file",
+  "folder.tint": "Color (white — without tint)",
+  "folder.weight": "Weight (drop frequency)",
 
   "ui.hide": "Hide interface (H)",
   "ui.show": "Show interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Enable vegetation",
   "veg.dice": "Shuffle",
-  "veg.set": "Vegetation preset",
   "veg.density": "Density",
   "veg.layers": "Where vegetation grows",
   "veg.layer1": "Upper platform",
   "veg.layer2": "Middle platform",
   "veg.layer3": "Lower platform",
-  "veg.empty": "No plants yet — place textures in the vegetation/ folder or add your own"
+  "veg.empty": "No plants yet — place textures in the vegetation/ folder or add your own",
+  "veg.plants": "Plants",
+  "veg.tint": "Plant color",
+  "veg.name.grass": "Grass",
+  "veg.name.tall_grass": "Tall grass",
+  "veg.name.pale_moss_carpet_side_small": "Pale moss (short)",
+  "veg.name.pale_moss_carpet_side_tall": "Pale moss (tall)",
+  "veg.name.sweet_berry_bush_stage0": "Sweet berries (stage 1)",
+  "veg.name.sweet_berry_bush_stage1": "Sweet berries (stage 2)",
+  "veg.name.sweet_berry_bush_stage2": "Sweet berries (stage 3)",
+  "veg.name.sweet_berry_bush_stage3": "Sweet berries (stage 4)",
+  "veg.name.sugar_cane": "Sugar cane",
+  "veg.name.seagrass_32x": "Seagrass",
+
+  "credit.title": "Author: %s"
 }

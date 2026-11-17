@@ -109,6 +109,7 @@
   "block.netherrack": "ኔዘርራክ",
   "block.end_stone": "እምኒ ኤንድ",
   "block.plain": "ዝኾነ ቅርጺ የብሉን",
+  "block.tint": "rangi ብሎክ",
 
   "mobile.gallery": "📁 ጋለሪ",
   "mobile.settings": "⚙️ ቅጥዕታት",
@@ -405,6 +406,8 @@
   "folder.veg.title": "ናተይ ተክሊ",
   "folder.veg.hint": "ስእሊ ተክሊ ምረጽ (.png ምስ ግሉጽነት)። ነዊሕ ስእሊ (ቁመቱ ካብ ስፍሓቱ ብንእሽተኡ 1.5 ዕጽፊ ዝዓበየ፣ ንኣብነት 16×32) ናይ 2 ብሎክ ዝንጽኡ ተክሊ ኪኸውን እዩ",
   "folder.veg.error": "ፋይል ስእሊ ምረጽ",
+  "folder.tint": "rangi (ጻዕዳ — ብዘይ ሕብሪ)",
+  "folder.weight": "ክብደት (ብዝሒ ግዜ ምንቍዕ)",
 
   "ui.hide": "መራኸቢ ሕብረተሰብ ሓብእ (H)",
   "ui.show": "መራኸቢ ሕብረተሰብ ኣርኢ (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "ተክሊ ኣብርትዕ",
   "veg.dice": "ምውحሓድ",
-  "veg.set": "ስብስብ ተክሊ",
   "veg.density": "ጽግግ",
   "veg.layers": "ተክሊ ዝበקልሉ ቦታ",
   "veg.layer1": "ላዕለዋይ መድረኽ",
   "veg.layer2": "ማእከላይ መድረኽ",
   "veg.layer3": "ታሕተዋይ መድረኽ",
-  "veg.empty": "ተክሊ ገና የለን — ነጸብራቕ ኣብ መዝገብ vegetation/ ኣእትዉ ወይ ናይካ ወስኽ"
+  "veg.empty": "ተክሊ ገና የለን — ነጸብራቕ ኣብ መዝገብ vegetation/ ኣእትዉ ወይ ናይካ ወስኽ",
+  "veg.plants": "ተክሊ",
+  "veg.tint": "rangi ተክሊ",
+  "veg.name.grass": "ሳዕሪ",
+  "veg.name.tall_grass": "ሓماቕ ሳዕሪ",
+  "veg.name.pale_moss_carpet_side_small": "ለזበ ሰናፍጭ (ናእሽተይ)",
+  "veg.name.pale_moss_carpet_side_tall": "ለזበ ሰናፍጭ (ነዊሕ)",
+  "veg.name.sweet_berry_bush_stage0": "ጥዑም ፍረታት (ደረጃ 1)",
+  "veg.name.sweet_berry_bush_stage1": "ጥዑም ፍረታት (ደረጃ 2)",
+  "veg.name.sweet_berry_bush_stage2": "ጥዑም ፍረታት (ደረጃ 3)",
+  "veg.name.sweet_berry_bush_stage3": "ጥዑም ፍረታት (ደረጃ 4)",
+  "veg.name.sugar_cane": "ሻንኮራ",
+  "veg.name.seagrass_32x": "ባሕሪ ሳዕሪ",
+
+  "credit.title": "מחבר: %s"
 }

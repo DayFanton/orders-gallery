@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Preda de l'End",
   "block.plain": "Sensa texture",
+  "block.tint": "Colur del bloc",
 
   "mobile.gallery": "📁 Galeria",
   "mobile.settings": "⚙️ Impostazzion",
@@ -405,6 +406,8 @@
   "folder.veg.title": "I mè piant",
   "folder.veg.hint": "Scegl un imaj de pianta (.png con trasparenza). Un imaj alta (altèssa almanch 1.5 vòlt püs granda de la larghezza, per esempi 16×32) la vegnarà a vèss una pianta de 2 bloch",
   "folder.veg.error": "Scegl el file de l'imaj",
+  "folder.tint": "Colur (bianch — sena scümatüra)",
+  "folder.weight": "Pes (quand spess el ven fòra)",
 
   "ui.hide": "Scond l'interfaccia (H)",
   "ui.show": "Mostra l'interfaccia (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Attiva vegetazzion",
   "veg.dice": "Mes'ci",
-  "veg.set": "Set de vegetazzion",
   "veg.density": "Densità",
   "veg.layers": "Indove la vegetazzion la cress",
   "veg.layer1": "Piattaforma de sora",
   "veg.layer2": "Piattaforma de mez",
   "veg.layer3": "Piattaforma de sota",
-  "veg.empty": "Gh'è nanch un pis — met i testur in de la cartella vegetation/ o t'agiung i tò"
+  "veg.empty": "Gh'è nanch un pis — met i testur in de la cartella vegetation/ o t'agiung i tò",
+  "veg.plants": "Piant",
+  "veg.tint": "Colur de la pianta",
+  "veg.name.grass": "Erba",
+  "veg.name.tall_grass": "Erba alta",
+  "veg.name.pale_moss_carpet_side_small": "Moss palid (bàs)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss palid (alt)",
+  "veg.name.sweet_berry_bush_stage0": "Früt de bosch dulz (fas 1)",
+  "veg.name.sweet_berry_bush_stage1": "Früt de bosch dulz (fas 2)",
+  "veg.name.sweet_berry_bush_stage2": "Früt de bosch dulz (fas 3)",
+  "veg.name.sweet_berry_bush_stage3": "Früt de bosch dulz (fas 4)",
+  "veg.name.sugar_cane": "Canna da zùcar",
+  "veg.name.seagrass_32x": "Erba marina",
+
+  "credit.title": "Autor: %s"
 }

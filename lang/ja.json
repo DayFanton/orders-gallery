@@ -374,6 +374,7 @@
   "block.netherrack": "ネザーラック",
   "block.end_stone": "エンドストーン",
   "block.plain": "テクスチャなし",
+  "block.tint": "ブロックの色",
 
   "bgimg.name.day": "昼",
   "bgimg.name.end": "ジ・エンド",
@@ -407,6 +408,8 @@
   "folder.veg.title": "マイプランツ",
   "folder.veg.hint": "植物の画像（透明度付き .png）を選択します。縦長の画像（高さが幅の1.5倍以上、例：16×32）は、2ブロック分の高さの植物になります",
   "folder.veg.error": "画像ファイルを選択",
+  "folder.tint": "色（白 — 色合いなし）",
+  "folder.weight": "重み（ドロップ率）",
 
   "ui.hide": "インターフェースを隠す (H)",
   "ui.show": "インターフェースを表示 (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "植生を有効にする",
   "veg.dice": "シャッフル",
-  "veg.set": "植生プリセット",
   "veg.density": "密度",
   "veg.layers": "植生が育つ場所",
   "veg.layer1": "上部プラットフォーム",
   "veg.layer2": "中部プラットフォーム",
   "veg.layer3": "下部プラットフォーム",
-  "veg.empty": "植物がまだありません — vegetation/ フォルダーにテクスチャを配置するか、自分で追加してください"
+  "veg.empty": "植物がまだありません — vegetation/ フォルダーにテクスチャを配置するか、自分で追加してください",
+  "veg.plants": "植物",
+  "veg.tint": "植物の色",
+  "veg.name.grass": "草",
+  "veg.name.tall_grass": "背の高い草",
+  "veg.name.pale_moss_carpet_side_small": "淡色の苔（低い）",
+  "veg.name.pale_moss_carpet_side_tall": "淡色の苔（高い）",
+  "veg.name.sweet_berry_bush_stage0": "スイートベリー（ステージ 1）",
+  "veg.name.sweet_berry_bush_stage1": "スイートベリー（ステージ 2）",
+  "veg.name.sweet_berry_bush_stage2": "スイートベリー（ステージ 3）",
+  "veg.name.sweet_berry_bush_stage3": "スイートベリー（ステージ 4）",
+  "veg.name.sugar_cane": "サトウキビ",
+  "veg.name.seagrass_32x": "海草",
+
+  "credit.title": "作者: %s"
 }

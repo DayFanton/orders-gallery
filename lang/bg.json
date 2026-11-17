@@ -374,6 +374,7 @@
   "block.netherrack": "Недърак",
   "block.end_stone": "Камък от Края",
   "block.plain": "Без текстура",
+  "block.tint": "Цвят на блока",
 
   "bgimg.name.day": "Ден",
   "bgimg.name.end": "Краят",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Моите растения",
   "folder.veg.hint": "Изберете изображение на растение (.png с прозрачност). Високо изображение (височина най-малко 1,5 пъти по-голяма от ширината, например 16×32) ще стане растение с височина 2 блока",
   "folder.veg.error": "Изберете файлов файл с изображение",
+  "folder.tint": "Цвят (бял — без нюанс)",
+  "folder.weight": "Тегло (честота на падане)",
 
   "ui.hide": "Скриване на интерфейса (H)",
   "ui.show": "Показване на интерфейса (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Включване на растителността",
   "veg.dice": "Разбъркване",
-  "veg.set": "Комплект растителност",
   "veg.density": "Плътност",
   "veg.layers": "Къде расте растителността",
   "veg.layer1": "Горна платформа",
   "veg.layer2": "Средна платформа",
   "veg.layer3": "Долна платформа",
-  "veg.empty": "Все още няма растения — поставете текстурите в папка vegetation/ или добавете ваши собствени"
+  "veg.empty": "Все още няма растения — поставете текстурите в папка vegetation/ или добавете ваши собствени",
+  "veg.plants": "Растения",
+  "veg.tint": "Цвят на растението",
+  "veg.name.grass": "Трева",
+  "veg.name.tall_grass": "Висока трева",
+  "veg.name.pale_moss_carpet_side_small": "Блед мъх (нисък)",
+  "veg.name.pale_moss_carpet_side_tall": "Блед мъх (висок)",
+  "veg.name.sweet_berry_bush_stage0": "Сладки плодове (етап 1)",
+  "veg.name.sweet_berry_bush_stage1": "Сладки плодове (етап 2)",
+  "veg.name.sweet_berry_bush_stage2": "Сладки плодове (етап 3)",
+  "veg.name.sweet_berry_bush_stage3": "Сладки плодове (етап 4)",
+  "veg.name.sugar_cane": "Захарна тръстика",
+  "veg.name.seagrass_32x": "Морска трева",
+
+  "credit.title": "Автор: %s"
 }

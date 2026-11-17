@@ -374,6 +374,7 @@
   "block.netherrack": "నెదర్‌రాక్",
   "block.end_stone": "ఎండ్ రాయి",
   "block.plain": "టెక్చర్ లేదు",
+  "block.tint": "బ్లాక్ రంగు",
 
   "bgimg.name.day": "పగలు",
   "bgimg.name.end": "ఎండ్",
@@ -407,6 +408,8 @@
   "folder.veg.title": "నా మొక్కలు",
   "folder.veg.hint": "మొక్క చిత్రాన్ని ఎంచుకోండి (.png పారదర్శకతతో). పొడవైన చిత్రం (వెడల్పు కంటే కనీసం 1.5 రెట్లు ఎక్కువ ఎత్తు, ఉదా. 16×32) 2 బ్లాకుల మొక్కగా మారుతుంది",
   "folder.veg.error": "చిత్ర ఫైల్‌ను ఎంచుకోండి",
+  "folder.tint": "రంగు (తెలుపు — రంగు లేకుండా)",
+  "folder.weight": "బరువు (డ్రాప్ ఫ్రీక్వెన్సీ)",
 
   "ui.hide": "ఇంటర్‌ఫేస్‌ను దాచు (H)",
   "ui.show": "ఇంటర్‌ఫేస్‌ను చూపించు (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "వృక్షసంపదను ప్రారంభించు",
   "veg.dice": "కలపండి",
-  "veg.set": "వృక్షసంపద సెట్",
   "veg.density": "సాంద్రత",
   "veg.layers": "వృక్షసంపద పెరిగే ప్రదేశం",
   "veg.layer1": "ఎగువ ప్లాట్‌ఫారమ్",
   "veg.layer2": "మధ్య ప్లాట్‌ఫారమ్",
   "veg.layer3": "దిగువ ప్లాట్‌ఫారమ్",
-  "veg.empty": "ఇంకా మొక్కలు లేవు — టెక్చర్‌లను vegetation/ ఫోల్డర్‌లో ఉంచండి లేదా మీ సొంతం జోడించండి"
+  "veg.empty": "ఇంకా మొక్కలు లేవు — టెక్చర్‌లను vegetation/ ఫోల్డర్‌లో ఉంచండి లేదా మీ సొంతం జోడించండి",
+  "veg.plants": "మొక్కలు",
+  "veg.tint": "మొక్క రంగు",
+  "veg.name.grass": "గడ్డి",
+  "veg.name.tall_grass": "పొడవు గడ్డి",
+  "veg.name.pale_moss_carpet_side_small": "లేత నాచు (పొట్టి)",
+  "veg.name.pale_moss_carpet_side_tall": "లేత నాచు (పొడవు)",
+  "veg.name.sweet_berry_bush_stage0": "తీపి బెర్రీలు (దశ 1)",
+  "veg.name.sweet_berry_bush_stage1": "తీపి బెర్రీలు (దశ 2)",
+  "veg.name.sweet_berry_bush_stage2": "తీపి బెర్రీలు (దశ 3)",
+  "veg.name.sweet_berry_bush_stage3": "తీపి బెర్రీలు (దశ 4)",
+  "veg.name.sugar_cane": "చెరకు",
+  "veg.name.seagrass_32x": "సముద్రపు గడ్డి",
+
+  "credit.title": "రచయిత: %s"
 }

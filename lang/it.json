@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Pietra dell'End",
   "block.plain": "Nessuna texture",
+  "block.tint": "Colore del blocco",
 
   "bgimg.name.day": "Giorno",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Le mie piante",
   "folder.veg.hint": "Scegli un'immagine di pianta (.png con trasparenza). Un'immagine alta (altezza almeno 1,5 volte superiore alla larghezza, ad esempio 16×32) diventerà una pianta alta 2 blocchi",
   "folder.veg.error": "Scegli file immagine",
+  "folder.tint": "Colore (bianco — senza tonalità)",
+  "folder.weight": "Peso (frequenza di drop)",
 
   "ui.hide": "Nascondi interfaccia (H)",
   "ui.show": "Mostra interfaccia (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Attiva vegetazione",
   "veg.dice": "Mescola",
-  "veg.set": "Set di vegetazione",
   "veg.density": "Densità",
   "veg.layers": "Dove cresce la vegetazione",
   "veg.layer1": "Piattaforma superiore",
   "veg.layer2": "Piattaforma intermedia",
   "veg.layer3": "Piattaforma inferiore",
-  "veg.empty": "Nessuna pianta ancora — posiziona le trame nella cartella vegetation/ o aggiungi le tue"
+  "veg.empty": "Nessuna pianta ancora — posiziona le trame nella cartella vegetation/ o aggiungi le tue",
+  "veg.plants": "Piante",
+  "veg.tint": "Colore della pianta",
+  "veg.name.grass": "Erba",
+  "veg.name.tall_grass": "Erba alta",
+  "veg.name.pale_moss_carpet_side_small": "Muschio pallido (basso)",
+  "veg.name.pale_moss_carpet_side_tall": "Muschio pallido (alto)",
+  "veg.name.sweet_berry_bush_stage0": "Bacche dolci (stadio 1)",
+  "veg.name.sweet_berry_bush_stage1": "Bacche dolci (stadio 2)",
+  "veg.name.sweet_berry_bush_stage2": "Bacche dolci (stadio 3)",
+  "veg.name.sweet_berry_bush_stage3": "Bacche dolci (stadio 4)",
+  "veg.name.sugar_cane": "Canna da zucchero",
+  "veg.name.seagrass_32x": "Erba marina",
+
+  "credit.title": "Autore: %s"
 }

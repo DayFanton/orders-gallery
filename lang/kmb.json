@@ -374,6 +374,7 @@
   "block.netherrack": "Ditadi dya Netherrack",
   "block.end_stone": "Ditadi dya End",
   "block.plain": "Kuli ovitumiko via sangiwe",
+  "block.tint": "Lwang'i ia blok",
 
   "bgimg.name.day": "Mwanha",
   "bgimg.name.end": "Disukilu",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mitiyi yami",
   "folder.veg.hint": "Sola kifwanisu kia miti (.png ia kieleka). Kifwanisu kia thandu (thandu ja kala kukila 1.5 ia buleke, mbandu 16×32) ikala miti ia mabulu ayole",
   "folder.veg.error": "Sola faile ya kifwanisu",
+  "folder.tint": "Lwang'i (mutu — phamba)",
+  "folder.weight": "Kulema (kuvota kw'etshiki)",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kubandula miti",
   "veg.dice": "Kubakana",
-  "veg.set": "Kitendelu kia miti",
   "veg.density": "Kuenda",
   "veg.layers": "Handu hakukula miti",
   "veg.layer1": "Kididi kia thandu",
   "veg.layer2": "Kididi kia mukati",
   "veg.layer3": "Kididi kia boxi",
-  "veg.empty": "Kene mididi ya miti — tula matiti mu folda vegetation/ kana kutulako ya yove"
+  "veg.empty": "Kene mididi ya miti — tula matiti mu folda vegetation/ kana kutulako ya yove",
+  "veg.plants": "Imaji",
+  "veg.tint": "Lwang'i ia imaji",
+  "veg.name.grass": "Wiji",
+  "veg.name.tall_grass": "Wiji wautui",
+  "veg.name.pale_moss_carpet_side_small": "Wiji wamutu (kaxi)",
+  "veg.name.pale_moss_carpet_side_tall": "Wiji wamutu (wautui)",
+  "veg.name.sweet_berry_bush_stage0": "Ibundu ya mwenhu (kibandululu 1)",
+  "veg.name.sweet_berry_bush_stage1": "Ibundu ya mwenhu (kibandululu 2)",
+  "veg.name.sweet_berry_bush_stage2": "Ibundu ya mwenhu (kibandululu 3)",
+  "veg.name.sweet_berry_bush_stage3": "Ibundu ya mwenhu (kibandululu 4)",
+  "veg.name.sugar_cane": "Usukali",
+  "veg.name.seagrass_32x": "Wiji wamungwa",
+
+  "credit.title": "Mukwa-ene: %s"
 }

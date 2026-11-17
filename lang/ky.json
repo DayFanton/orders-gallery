@@ -374,6 +374,7 @@
   "block.netherrack": "Незер ташы",
   "block.end_stone": "Энд ташы",
   "block.plain": "Текстура жок",
+  "block.tint": "Блок түсү",
 
   "bgimg.name.day": "Күн",
   "bgimg.name.end": "Энд",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Менин өсүмдүктөрүм",
   "folder.veg.hint": "Өсүмдүктүн сүрөтүн тандаңыз (.png тунуктугу менен). Бийик сүрөт (бийиктиги туурасынан кеминде 1,5 эсе чоң, мисалы 16×32) 2 блок болгон өсүмдүккө айланат",
   "folder.veg.error": "Сүрөт файлын тандоо",
+  "folder.tint": "Түс (ак — өңсүз)",
+  "folder.weight": "Салмагы (канчалык көп түшөт)",
 
   "ui.hide": "Интерфейсти жашыруу (H)",
   "ui.show": "Интерфейсти көрсөтүү (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Өсүмдүктөрдү күйгүзүү",
   "veg.dice": "Аралаштыруу",
-  "veg.set": "Өсүмдүктөр топтому",
   "veg.density": "Тыгыздык",
   "veg.layers": "Өсүмдүктөр өскөн жер",
   "veg.layer1": "Жогорку платформа",
   "veg.layer2": "Ортоңку платформа",
   "veg.layer3": "Төмөнкү платформа",
-  "veg.empty": "Азыр өсүмдүктөр жок — текстураларды vegetation/ папкасына салыңыз же өзүңүздүкүн кошуңуз"
+  "veg.empty": "Азыр өсүмдүктөр жок — текстураларды vegetation/ папкасына салыңыз же өзүңүздүкүн кошуңуз",
+  "veg.plants": "Өсүмдүктөр",
+  "veg.tint": "Өсүмдүк түсү",
+  "veg.name.grass": "Чөп",
+  "veg.name.tall_grass": "Бийик чөп",
+  "veg.name.pale_moss_carpet_side_small": "Боз мүк (жапыз)",
+  "veg.name.pale_moss_carpet_side_tall": "Боз мүк (бийик)",
+  "veg.name.sweet_berry_bush_stage0": "Таттуу мөмөлөр (1-баскыч)",
+  "veg.name.sweet_berry_bush_stage1": "Таттуу мөмөлөр (2-баскыч)",
+  "veg.name.sweet_berry_bush_stage2": "Таттуу мөмөлөр (3-баскыч)",
+  "veg.name.sweet_berry_bush_stage3": "Таттуу мөмөлөр (4-баскыч)",
+  "veg.name.sugar_cane": "Кант камышы",
+  "veg.name.seagrass_32x": "Деңиз чөбү",
+
+  "credit.title": "Автор: %s"
 }

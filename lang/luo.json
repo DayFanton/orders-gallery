@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Kidi mar End",
   "block.plain": "Oonge kit kido",
+  "block.tint": "Rang mar bloku",
 
   "bgimg.name.day": "Odiecthieng",
   "bgimg.name.end": "Giko",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Yathedhe",
   "folder.veg.hint": "Yied kido mar yath (.png mar ler). Kido ma bor (bor mar kwan ma romo 1.5 ma romo chal ni 16×32) biro bedo yath mar bok adek",
   "folder.veg.error": "Yied fail mar kido",
+  "folder.tint": "Rang (makachiel — onge rang mar achiel)",
+  "folder.weight": "Pimo (nyalgo mar podho)",
 
   "ui.hide": "Mon gima (H)",
   "ui.show": "Nyis gima (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Nyiego yath",
   "veg.dice": "Nyango",
-  "veg.set": "Giko mar yath",
   "veg.density": "Dinyo",
   "veg.layers": "Kama yath oyudo",
   "veg.layer1": "Kar chung' ma malo",
   "veg.layer2": "Kar chung' ma dier",
   "veg.layer3": "Kar chung' ma piny",
-  "veg.empty": "Onge yath moro amora — kiti kido e foya mar vegetation/ kendo miy iwuon"
+  "veg.empty": "Onge yath moro amora — kiti kido e foya mar vegetation/ kendo miy iwuon",
+  "veg.plants": "Metho",
+  "veg.tint": "Rang mar metho",
+  "veg.name.grass": "Lum",
+  "veg.name.tall_grass": "Lum malach",
+  "veg.name.pale_moss_carpet_side_small": "Lum machien (machiegni)",
+  "veg.name.pale_moss_carpet_side_tall": "Lum machien (malach)",
+  "veg.name.sweet_berry_bush_stage0": "Olembe mamit (okang' 1)",
+  "veg.name.sweet_berry_bush_stage1": "Olembe mamit (okang' 2)",
+  "veg.name.sweet_berry_bush_stage2": "Olembe mamit (okang' 3)",
+  "veg.name.sweet_berry_bush_stage3": "Olembe mamit (okang' 4)",
+  "veg.name.sugar_cane": "Midhanyi",
+  "veg.name.seagrass_32x": "Lum mar nam",
+
+  "credit.title": "Jawinjoga: %s"
 }

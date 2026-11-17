@@ -109,6 +109,7 @@
   "block.netherrack": "下界岩",
   "block.end_stone": "末地石",
   "block.plain": "Texture duɔni naani",
+  "block.tint": "Rangi ya blok",
 
   "mobile.gallery": "📁 画廊",
   "mobile.settings": "⚙️ 设置",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Miti amata anga",
   "folder.veg.hint": "Miti amata fita (.png ma'a shafafiyya). Miti ma lamba (lamba min 1.5 marrat min width, jaisey 16×32) kibanna miti ma block biya la",
   "folder.veg.error": "Miti amata file fita",
+  "folder.tint": "Rangi (ler — pe ni rangi mbele)",
+  "folder.weight": "Rem (namba ma pe ni kondo)",
 
   "ui.hide": "Interface duɔni nani (H)",
   "ui.show": "Interface duɔni nani (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Miti amata",
   "veg.dice": "Gwelek",
-  "veg.set": "Miti set",
   "veg.density": "Dinyo",
   "veg.layers": "Miti amata gata",
   "veg.layer1": "Platform ma malo",
   "veg.layer2": "Platform ma giddichcha",
   "veg.layer3": "Platform ma piny",
-  "veg.empty": "Miti amata ba — teksi amiti a vegetation/ fa ta gata"
+  "veg.empty": "Miti amata ba — teksi amiti a vegetation/ fa ta gata",
+  "veg.plants": "Mimea",
+  "veg.tint": "Rangi ya mimea",
+  "veg.name.grass": "Lango",
+  "veg.name.tall_grass": "Lango diki",
+  "veg.name.pale_moss_carpet_side_small": "Mvemve ler (piny)",
+  "veg.name.pale_moss_carpet_side_tall": "Mvemve ler (diki)",
+  "veg.name.sweet_berry_bush_stage0": "Nyig yath mamit (kuma 1)",
+  "veg.name.sweet_berry_bush_stage1": "Nyig yath mamit (kuma 2)",
+  "veg.name.sweet_berry_bush_stage2": "Nyig yath mamit (kuma 3)",
+  "veg.name.sweet_berry_bush_stage3": "Ngig yath mamit (kuma 4)",
+  "veg.name.sugar_cane": "Mborog",
+  "veg.name.seagrass_32x": "Lango ni thim",
+
+  "credit.title": "Mwandishi: %s"
 }

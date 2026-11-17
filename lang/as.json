@@ -109,6 +109,7 @@
   "block.netherrack": "নেদাৰৰেক",
   "block.end_stone": "এণ্ড শিল",
   "block.plain": "কোনো টেক্সচাৰ নাই",
+  "block.tint": "ব্লাকৰ ৰং",
 
   "mobile.gallery": "📁 গেলাৰী",
   "mobile.settings": "⚙️ ছেটিংছ",
@@ -405,6 +406,8 @@
   "folder.veg.title": "মোৰ উদ্ভিদসমূহ",
   "folder.veg.hint": "উদ্ভিদৰ ছবি বাছক (.png স্বচ্ছতাৰে)। এটা ওখ ছবি (প্ৰস্থতকৈ কমেও ১.৫ গুণ বেছি উচ্চতা, যেনে ১৬×३২) ২ ব্লাক ওখ উদ্ভিদ হ'ব",
   "folder.veg.error": "ছবি ফাইল বাছক",
+  "folder.tint": "ৰং (বগা - অবিহনে)",
+  "folder.weight": "ওজন (ড্রপ ফ্রিকোয়েন্সি)",
 
   "ui.hide": "ইণ্টাৰফেচ ল εkuৱক (H)",
   "ui.show": "ইণ্টাৰফেচ দেখুৱক (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "উদ্ভিদ সক্ৰিয় কৰক",
   "veg.dice": "মিহলি কৰক",
-  "veg.set": "উদ্ভিদ চেট",
   "veg.density": "ঘনত্ব",
   "veg.layers": "য'ত উদ্ভিদ বাঢ়ে",
   "veg.layer1": "ওপৰৰ প্লেটফৰ্ম",
   "veg.layer2": "মধ্যৰ প্লেটফৰ্ম",
   "veg.layer3": "তলৰ প্লেটফৰ্ম",
-  "veg.empty": "এতিয়াও কোনো উদ্ভিদ নাই — vegetation/ ফোল্ডাৰত টেক্সচাৰ ৰাখক বা আপোনাৰ নিজৰ যোগ কৰক"
+  "veg.empty": "এতিয়াও কোনো উদ্ভিদ নাই — vegetation/ ফোল্ডাৰত টেক্সচাৰ ৰাখক বা আপোনাৰ নিজৰ যোগ কৰক",
+  "veg.plants": "উদ্ভিদ",
+  "veg.tint": "উদ্ভিদৰ ৰং",
+  "veg.name.grass": "ঘাঁহ",
+  "veg.name.tall_grass": "দীঘল ঘাঁহ",
+  "veg.name.pale_moss_carpet_side_small": "শেলাই (চুটি)",
+  "veg.name.pale_moss_carpet_side_tall": "শেলাই (দীঘল)",
+  "veg.name.sweet_berry_bush_stage0": "মিঠা জামু (পৰ্যায় ১)",
+  "veg.name.sweet_berry_bush_stage1": "মিঠা জামু (পৰ্যায় ২)",
+  "veg.name.sweet_berry_bush_stage2": "মিঠা জামু (পৰ্যায় ৩)",
+  "veg.name.sweet_berry_bush_stage3": "মিঠা জামু (পৰ্যায় ৪)",
+  "veg.name.sugar_cane": "কুঁহিয়াৰ",
+  "veg.name.seagrass_32x": "সাগৰীয় ঘাঁহ",
+
+  "credit.title": "লেখক: %s"
 }

@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Ewe lio End",
   "block.plain": "Kuli ovitumiko via sangiwe",
+  "block.tint": "Ocilonga coviloko",
 
   "mobile.gallery": "📁 Ogaleriya",
   "mobile.settings": "⚙️ Oku-pongolola",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Olosisi viange",
   "folder.veg.hint": "Nanga efwaniso lolosisi (.png ya talamena). Efwaniso yalaba (ulaba wa kala okila 1.5 yebalaka, nduti 16×32) ikala olosisi yolovulu yivali",
   "folder.veg.error": "Nanga faile yefwaniso",
+  "folder.tint": "Ocilonga (ocela — ka kuli onepa)",
+  "folder.weight": "Ocilemo (okuvela kweciwa)",
 
   "ui.hide": "Tumika interface (H)",
   "ui.show": "Monika interface (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Kuanyisa olosisi",
   "veg.dice": "Sokola",
-  "veg.set": "Etimba lyolosisi",
   "veg.density": "Okuenda",
   "veg.layers": "Koku kasi olosisi",
   "veg.layer1": "Ocikango co kilu",
   "veg.layer2": "Ocikango co vokalaka",
   "veg.layer3": "Ocikango co posi",
-  "veg.empty": "Ka kuli olosisi — tula olosisi volofoda vegetation/ ale tumbula yove"
+  "veg.empty": "Ka kuli olosisi — tula olosisi volofoda vegetation/ ale tumbula yove",
+  "veg.plants": "Oviti",
+  "veg.tint": "Ocilonga coviti",
+  "veg.name.grass": "Ocipuka",
+  "veg.name.tall_grass": "Ocipuka catimba",
+  "veg.name.pale_moss_carpet_side_small": "Ocipuka ca pita (tito)",
+  "veg.name.pale_moss_carpet_side_tall": "Ocipuka ca pita (catimba)",
+  "veg.name.sweet_berry_bush_stage0": "Apako a pepa (onepa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Apako a pepa (onepa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Apako a pepa (onepa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Apako a pepa (onepa 4)",
+  "veg.name.sugar_cane": "Ocilonga cosukali",
+  "veg.name.seagrass_32x": "Ocipuka cocelamo",
+
+  "credit.title": "Umoneki: %s"
 }

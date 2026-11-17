@@ -109,6 +109,7 @@
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
   "block.plain": "कोई टेक्सचर नहीं",
+  "block.tint": "ब्लॉक का रंग",
 
   "mobile.gallery": "📁 गैलरी",
   "mobile.settings": "⚙️ सेटिंग",
@@ -405,6 +406,8 @@
   "folder.veg.title": "मेरा वनस्पति",
   "folder.veg.hint": "वनस्पति री फोटो चुणो (.png पारदर्शिता सागे)। लम्बी फोटो (ऊंचाई चौड़ाई सागे कम से कम 1.5 गुणा ज्यादा, मिसाल 16×32) 2 ब्लॉक लंबी वनस्पति बन जावेंसी",
   "folder.veg.error": "फोटो फाइल चुणो",
+  "folder.tint": "रंग (सफेद — बिना किसी रंग के)",
+  "folder.weight": "वजन (ड्रॉप होने की आवृत्ति)",
 
   "ui.hide": "इंटरफेस छुपाओ (H)",
   "ui.show": "इंटरफेस दिखाओ (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "वनस्पति ऑन करो",
   "veg.dice": "शफल करो",
-  "veg.set": "वनस्पति सेट",
   "veg.density": "घनत्व",
   "veg.layers": "जिथै वनस्पति उगदी है",
   "veg.layer1": "ऊपरला प्लेटफार्म",
   "veg.layer2": "बीचला प्लेटफार्म",
   "veg.layer3": "निचला प्लेटफार्म",
-  "veg.empty": "कोई वनस्पति कोनी — टेक्सचर vegetation/ फोल्डर में रखो या आपणा जोड़ो"
+  "veg.empty": "कोई वनस्पति कोनी — टेक्सचर vegetation/ फोल्डर में रखो या आपणा जोड़ो",
+  "veg.plants": "पौधे",
+  "veg.tint": "पौधे का रंग",
+  "veg.name.grass": "घास",
+  "veg.name.tall_grass": "लंबी घास",
+  "veg.name.pale_moss_carpet_side_small": "पीला काई (छोटा)",
+  "veg.name.pale_moss_carpet_side_tall": "पीला काई (लंबा)",
+  "veg.name.sweet_berry_bush_stage0": "मीठे बेर (चरण 1)",
+  "veg.name.sweet_berry_bush_stage1": "मीठे बेर (चरण 2)",
+  "veg.name.sweet_berry_bush_stage2": "मीठे बेर (चरण 3)",
+  "veg.name.sweet_berry_bush_stage3": "मीठे बेर (चरण 4)",
+  "veg.name.sugar_cane": "गन्ना",
+  "veg.name.seagrass_32x": "समुद्री घास",
+
+  "credit.title": "लेखक: %s"
 }

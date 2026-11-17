@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Leje la End",
   "block.plain": "Ga go na sebopeho",
+  "block.tint": "Mmala wa thibelo",
 
   "bgimg.name.day": "Motshegare",
   "bgimg.name.end": "Bokhutlo",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Dimela tsa me",
   "folder.veg.hint": "Alola setshwantsho sa semela (.png e e bonalang). Setshwantsho se seleele (bophahamo bonyane makhetlo a 1.5 go feta bophara, sekai 16×32) e tla nna semela sa dibloko tse 2",
   "folder.veg.error": "Alola faele ya setshwantsho",
+  "folder.tint": "Mmala (o mosweu — ntle le mmala)",
+  "folder.weight": "Boima (kgwedi ya gowa)",
 
   "ui.hide": "Fitlha sebopego (H)",
   "ui.show": "Bontsha sebopego (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Bula dimela",
   "veg.dice": "Tswakanya",
-  "veg.set": "Sete ya dimela",
   "veg.density": "Bokete",
   "veg.layers": "Mo dimela di gologang teng",
   "veg.layer1": "Serala se se kwa godimo",
   "veg.layer2": "Serala se se fa gare",
   "veg.layer3": "Serala se se kwa tlase",
-  "veg.empty": "Ga go na dimela ga jaana — baya ditlolo mo foldeng ya vegetation/ kgotsa o tsenye tsa gago"
+  "veg.empty": "Ga go na dimela ga jaana — baya ditlolo mo foldeng ya vegetation/ kgotsa o tsenye tsa gago",
+  "veg.plants": "Dimela",
+  "veg.tint": "Mmala wa dimela",
+  "veg.name.grass": "Bojang",
+  "veg.name.tall_grass": "Bojang jo bolele",
+  "veg.name.pale_moss_carpet_side_small": "Moše o o botlana (khutshwane)",
+  "veg.name.pale_moss_carpet_side_tall": "Moše o o botlana (molele)",
+  "veg.name.sweet_berry_bush_stage0": "Moretlwa o o botshe (kgato ya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Moretlwa o o botshe (kgato ya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Moretlwa o o botshe (kgato ya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Moretlwa o o botshe (kgato ya 4)",
+  "veg.name.sugar_cane": "Letlhaka la tswekiri",
+  "veg.name.seagrass_32x": "Bojang jwa lewatle",
+
+  "credit.title": "Mokwadi: %s"
 }

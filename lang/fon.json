@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Àwìnyà End tɔn",
   "block.plain": "Tɛsutuxu ɖe ǎ",
+  "block.tint": "Blok sin mɛ",
 
   "bgimg.name.day": "Kèzé",
   "bgimg.name.end": "Vɔvɔ",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Gbɛtɔ́ ce lɛ",
   "folder.veg.hint": "Ze gbɛtɔ́ e ɖò kpɔ́ é ɖè (.png e hɛn ɔ e mɛ nɔ mɔ nu é). Gbɛtɔ́ kɔ zǎn e kɔ tɔn sín mɛ dɩtɛ kɛn 1.5 bɔ è nɔ mɔ é, ɖɔhun 16×32, na huzu gbɛtɔ́ kpɛví wè",
   "folder.veg.error": "Ze tɔn e ɖò nu e ɖò kpɔ́ é fayi",
+  "folder.tint": "Loko (wewe — e ma tindo zɛnzɛn)",
+  "folder.weight": "Wuzuzu (le é ɖò tite gbɔn)",
 
   "ui.hide": "Xò nɔ wiwlé tɔn (H)",
   "ui.show": "Xò nɔ wiwlé tɔn xlɛ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Kɔ zǎn gbè",
   "veg.dice": "Kɔ́n",
-  "veg.set": "Gbɛtɔ́ kɔ zǎn",
   "veg.density": "Sùsù",
   "veg.layers": "Fi e gbɛtɔ́ kɔ zǎn ɖè",
   "veg.layer1": "Kpɔ́ e ɖò aga é",
   "veg.layer2": "Kpɔ́ e ɖò tɛntin é",
   "veg.layer3": "Kpɔ́ e ɖò dò é",
-  "veg.empty": "Gbɛtɔ́ ɖě ká ɖě ǎ — ze nu e ɖò vegetation/ mɛ lɛ alo yǐ tɔn gbe"
+  "veg.empty": "Gbɛtɔ́ ɖě ká ɖě ǎ — ze nu e ɖò vegetation/ mɛ lɛ alo yǐ tɔn gbe",
+  "veg.plants": "Atín",
+  "veg.tint": "Atín sin mɛ",
+  "veg.name.grass": "Gbɔ̌",
+  "veg.name.tall_grass": "Gbɔ̌ kpoŋ",
+  "veg.name.pale_moss_carpet_side_small": "Gbɔ̌wɛwɛ (kpovɛ)",
+  "veg.name.pale_moss_carpet_side_tall": "Gbɔ̌wɛwɛ (kpoŋ)",
+  "veg.name.sweet_berry_bush_stage0": "Atínsínsɛ́n víví (afɔɖiɖe 1)",
+  "veg.name.sweet_berry_bush_stage1": "Atínsínsɛ́n víví (afɔɖiɖe 2)",
+  "veg.name.sweet_berry_bush_stage2": "Atínsínsɛ́n víví (afɔɖiɖe 3)",
+  "veg.name.sweet_berry_bush_stage3": "Atínsínsɛ́n víví (afɔɖiɖe 4)",
+  "veg.name.sugar_cane": "Kɔlɔ",
+  "veg.name.seagrass_32x": "Gbɔ̌ tɔ̀ ji tɔn",
+
+  "credit.title": "Wemaŋlótọ: %s"
 }

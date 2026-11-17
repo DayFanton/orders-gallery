@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Jiwe la End",
   "block.plain": "Hakuna muundo",
+  "block.tint": "Rangi ya kizuizi",
 
   "bgimg.name.day": "Mchana",
   "bgimg.name.end": "Mwisho",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mimea yangu",
   "folder.veg.hint": "Chagua picha ya mimea (.png yenye uwazi). Picha ndefu (urefu angalau mara 1.5 kuliko upana, mfano 16×32) itakuwa mmea wa bloki 2",
   "folder.veg.error": "Chagua faili la picha",
+  "folder.tint": "Rangi (nyeupe — bila kivuli)",
+  "folder.weight": "Uzito (marudio ya kuanguka)",
 
   "ui.hide": "Ficha kiolesura (H)",
   "ui.show": "Onyesha kiolesura (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Washa mimea",
   "veg.dice": "Changanya",
-  "veg.set": "Seti ya mimea",
   "veg.density": "Msongamano",
   "veg.layers": "Mahali ambapo mimea inakua",
   "veg.layer1": "Jukwaa la juu",
   "veg.layer2": "Jukwaa la kati",
   "veg.layer3": "Jukwaa la chini",
-  "veg.empty": "Hakuna mimea bado — weka maumbo katika folda ya vegetation/ au ongeza yako mwenyewe"
+  "veg.empty": "Hakuna mimea bado — weka maumbo katika folda ya vegetation/ au ongeza yako mwenyewe",
+  "veg.plants": "Mimea",
+  "veg.tint": "Rangi ya mimea",
+  "veg.name.grass": "Nyasi",
+  "veg.name.tall_grass": "Nyasi ndefu",
+  "veg.name.pale_moss_carpet_side_small": "Mossy hafifu (fupi)",
+  "veg.name.pale_moss_carpet_side_tall": "Mossy hafifu (ndefu)",
+  "veg.name.sweet_berry_bush_stage0": "Matunda matamu (hatua ya 1)",
+  "veg.name.sweet_berry_bush_stage1": "Matunda matamu (hatua ya 2)",
+  "veg.name.sweet_berry_bush_stage2": "Matunda matamu (hatua ya 3)",
+  "veg.name.sweet_berry_bush_stage3": "Matunda matamu (hatua ya 4)",
+  "veg.name.sugar_cane": "Miwa",
+  "veg.name.seagrass_32x": "Nyasi ya bahari",
+
+  "credit.title": "Mwandishi: %s"
 }

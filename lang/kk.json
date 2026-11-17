@@ -374,6 +374,7 @@
   "block.netherrack": "Тозақ тасы",
   "block.end_stone": "Энд тасы",
   "block.plain": "Текстура жоқ",
+  "block.tint": "Блок түсі",
 
   "bgimg.name.day": "Күн",
   "bgimg.name.end": "Энд",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Менің өсімдіктерім",
   "folder.veg.hint": "Өсімдік суретін таңдаңыз (.png мөлдірлігі бар). Биік сурет (биіктігі енінен кем дегенде 1,5 есе үлкен, мысалы 16×32) 2 блок болатын өсімдікке айналады",
   "folder.veg.error": "Сурет файлын таңдаңыз",
+  "folder.tint": "Түс (ак — реңксіз)",
+  "folder.weight": "Салмағы (қаншалықты жиі түседі)",
 
   "ui.hide": "Интерфейсті жасыру (H)",
   "ui.show": "Интерфейсті көрсету (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Өсімдікті қосу",
   "veg.dice": "Араластыру",
-  "veg.set": "Өсімдіктер жиынтығы",
   "veg.density": "Тығыздық",
   "veg.layers": "Өсімдік қай жерде өседі",
   "veg.layer1": "Жоғарғы платформа",
   "veg.layer2": "Орталық платформа",
   "veg.layer3": "Төменгі платформа",
-  "veg.empty": "Әзірге өсімдіктер жоқ — текстураларды vegetation/ папкасына салыңыз немесе өздігінен қосыңыз"
+  "veg.empty": "Әзірге өсімдіктер жоқ — текстураларды vegetation/ папкасына салыңыз немесе өздігінен қосыңыз",
+  "veg.plants": "Өсімдіктер",
+  "veg.tint": "Өсімдік түсі",
+  "veg.name.grass": "Шөп",
+  "veg.name.tall_grass": "Биік шөп",
+  "veg.name.pale_moss_carpet_side_small": "Боз мүк (аласа)",
+  "veg.name.pale_moss_carpet_side_tall": "Боз мүк (биік)",
+  "veg.name.sweet_berry_bush_stage0": "Тәтті жидектер (1-кезең)",
+  "veg.name.sweet_berry_bush_stage1": "Тәтті жидектер (2-кезең)",
+  "veg.name.sweet_berry_bush_stage2": "Тәтті жидектер (3-кезең)",
+  "veg.name.sweet_berry_bush_stage3": "Тәтті жидектер (4-кезең)",
+  "veg.name.sugar_cane": "Қант қамысы",
+  "veg.name.seagrass_32x": "Теңіз шөбі",
+
+  "credit.title": "Автор: %s"
 }

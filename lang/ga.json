@@ -109,6 +109,7 @@
   "block.netherrack": "Neamhchloch",
   "block.end_stone": "Cloch na Críche",
   "block.plain": "Gan uigeacht",
+  "block.tint": "Dath an bhloic",
 
   "mobile.gallery": "📁 Gailearaí",
   "mobile.settings": "⚙️ Socruithe",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Mo phlandaí",
   "folder.veg.hint": "Roghnaigh íomhá planda (.png le trédhearcacht). Beidh íomhá ard (airde ar a laghad 1.5 uair níos mó ná leithead, e.g. 16×32) ina phlanda 2 bhloc",
   "folder.veg.error": "Roghnaigh comhad íomhá",
+  "folder.tint": "Dath (bán — gan dath breise)",
+  "folder.weight": "Meáchan (minicíocht titim)",
 
   "ui.hide": "Folaigh an comhéadan (H)",
   "ui.show": "Taispeáin an comhéadan (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Cumasaigh fásra",
   "veg.dice": "Sracadh",
-  "veg.set": "Tac fásra",
   "veg.density": "Dlús",
   "veg.layers": "Cá bhfásann fásra",
   "veg.layer1": "Ardán uachtarach",
   "veg.layer2": "Ardán meánach",
   "veg.layer3": "Ardán íochtarach",
-  "veg.empty": "Níl aon fásra fós — cuir uigeachtaí sa fhillteán vegetation/ nó cuir do chuid féin leis"
+  "veg.empty": "Níl aon fásra fós — cuir uigeachtaí sa fhillteán vegetation/ nó cuir do chuid féin leis",
+  "veg.plants": "Plandaí",
+  "veg.tint": "Dath an phlanda",
+  "veg.name.grass": "Féar",
+  "veg.name.tall_grass": "Féar ard",
+  "veg.name.pale_moss_carpet_side_small": "Caonach bán (íseal)",
+  "veg.name.pale_moss_carpet_side_tall": "Caonach bán (ard)",
+  "veg.name.sweet_berry_bush_stage0": "Caora milse (céim 1)",
+  "veg.name.sweet_berry_bush_stage1": "Caora milse (céim 2)",
+  "veg.name.sweet_berry_bush_stage2": "Caora milse (céim 3)",
+  "veg.name.sweet_berry_bush_stage3": "Caora milse (céim 4)",
+  "veg.name.sugar_cane": "Cána siúcra",
+  "veg.name.seagrass_32x": "Féar mara",
+
+  "credit.title": "Údar: %s"
 }

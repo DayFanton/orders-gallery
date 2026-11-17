@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Carreg yr End",
   "block.plain": "Dim gwead",
+  "block.tint": "Lliw bloc",
 
   "bgimg.name.day": "Dydd",
   "bgimg.name.end": "Y Diwedd",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Fy llystyfiant i",
   "folder.veg.hint": "Dewiswch ddelwedd planhigyn (.png gyda thryloywder). Bydd delwedd uchel (uchder o leiaf 1.5 gwaith yn fwy na'r lled, e.e. 16×32) yn dod yn blanhigyn 2 floc",
   "folder.veg.error": "Dewis ffeil ddelwedd",
+  "folder.tint": "Lliw (gwyn — heb arliw)",
+  "folder.weight": "Pwysau (amlder gollwng)",
 
   "ui.hide": "Cuddio'r rhyngwyneb (H)",
   "ui.show": "Dangos y rhyngwyneb (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Galluogi llystyfiant",
   "veg.dice": "Cymysgu",
-  "veg.set": "Set llystyfiant",
   "veg.density": "Dwysedd",
   "veg.layers": "Lle mae llystyfiant yn tyfu",
   "veg.layer1": "Llwyfan uchaf",
   "veg.layer2": "Llwyfan canol",
   "veg.layer3": "Llwyfan isaf",
-  "veg.empty": "Dim llystyfiant eto — rhowch weadau yn y ffolder vegetation/ neu ychwanegwch eich rhai eich hun"
+  "veg.empty": "Dim llystyfiant eto — rhowch weadau yn y ffolder vegetation/ neu ychwanegwch eich rhai eich hun",
+  "veg.plants": "Planhigion",
+  "veg.tint": "Lliw planhigyn",
+  "veg.name.grass": "Glaswellt",
+  "veg.name.tall_grass": "Glaswellt uchel",
+  "veg.name.pale_moss_carpet_side_small": "Mwsogl golau (isel)",
+  "veg.name.pale_moss_carpet_side_tall": "Mwsogl golau (uchel)",
+  "veg.name.sweet_berry_bush_stage0": "Aeron melys (cam 1)",
+  "veg.name.sweet_berry_bush_stage1": "Aeron melys (cam 2)",
+  "veg.name.sweet_berry_bush_stage2": "Aeron melys (cam 3)",
+  "veg.name.sweet_berry_bush_stage3": "Aeron melys (cam 4)",
+  "veg.name.sugar_cane": "Cansen siwgr",
+  "veg.name.seagrass_32x": "Glaswellt môr",
+
+  "credit.title": "Awdur: %s"
 }

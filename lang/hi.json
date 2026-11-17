@@ -374,6 +374,7 @@
   "block.netherrack": "नेदररैक",
   "block.end_stone": "एंड स्टोन",
   "block.plain": "कोई टेक्सचर नहीं",
+  "block.tint": "ब्लॉक का रंग",
 
   "bgimg.name.day": "दिन",
   "bgimg.name.end": "एंड",
@@ -407,6 +408,8 @@
   "folder.veg.title": "मेरे पौधे",
   "folder.veg.hint": "पौधे की छवि चुनें (.png पारदर्शिता के साथ)। एक लंबी छवि (ऊंचाई चौड़ाई से कम से कम 1.5 गुना अधिक, जैसे 16×32) 2 ब्लॉक लंबा पौधा बन जाएगी",
   "folder.veg.error": "छवि फ़ाइल चुनें",
+  "folder.tint": "रंग (सफेद — बिना किसी रंगत के)",
+  "folder.weight": "वजन (ड्रॉप होने की आवृत्ति)",
 
   "ui.hide": "इंटरफ़ेस छुपाएं (H)",
   "ui.show": "इंटरफ़ेस दिखाएं (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "वनस्पति सक्षम करें",
   "veg.dice": "फेरबदल करें",
-  "veg.set": "वनस्पति प्रीसेट",
   "veg.density": "घनत्व",
   "veg.layers": "जहाँ वनस्पति उगती है",
   "veg.layer1": "ऊपरी प्लेटफ़ॉर्म",
   "veg.layer2": "मध्य प्लेटफ़ॉर्म",
   "veg.layer3": "निचला प्लेटफ़ॉर्म",
-  "veg.empty": "अभी कोई वनस्पति नहीं है — टेक्सचर को vegetation/ फ़ोल्डर में रखें या अपना खुद का जोड़ें"
+  "veg.empty": "अभी कोई वनस्पति नहीं है — टेक्सचर को vegetation/ फ़ोल्डर में रखें या अपना खुद का जोड़ें",
+  "veg.plants": "पौधे",
+  "veg.tint": "पौधे का रंग",
+  "veg.name.grass": "घास",
+  "veg.name.tall_grass": "लंबी घास",
+  "veg.name.pale_moss_carpet_side_small": "पीला काई (छोटा)",
+  "veg.name.pale_moss_carpet_side_tall": "पीला काई (लंबा)",
+  "veg.name.sweet_berry_bush_stage0": "मीठे जामुन (चरण 1)",
+  "veg.name.sweet_berry_bush_stage1": "मीठे जामुन (चरण 2)",
+  "veg.name.sweet_berry_bush_stage2": "मीठे जामुन (चरण 3)",
+  "veg.name.sweet_berry_bush_stage3": "मीठे जामुन (चरण 4)",
+  "veg.name.sugar_cane": "गन्ने",
+  "veg.name.seagrass_32x": "समुद्री घास",
+
+  "credit.title": "लेखक: %s"
 }

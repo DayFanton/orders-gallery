@@ -109,6 +109,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Lõpukivi",
   "block.plain": "Tekstuur puudub",
+  "block.tint": "Bloki värv",
 
   "mobile.gallery": "📁 Galerii",
   "mobile.settings": "⚙️ Seaded",
@@ -405,6 +406,8 @@
   "folder.veg.title": "Minu taimed",
   "folder.veg.hint": "Valige taime pilt (.png läbipaistvusega). Kõrge pilt (kõrgus vähemalt 1,5 korda suurem kui laius, nt 16×32) muutub 2 ploki kõrguseks taimeks",
   "folder.veg.error": "Valige pildifail",
+  "folder.tint": "Värv (valge — varjundita)",
+  "folder.weight": "Kaal (kukkumissagedus)",
 
   "ui.hide": "Peida liides (H)",
   "ui.show": "Näita liidest (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "Lülita taimestik sisse",
   "veg.dice": "Segamini",
-  "veg.set": "Taimestiku komplekt",
   "veg.density": "Tihedus",
   "veg.layers": "Kus taimestik kasvab",
   "veg.layer1": "Ülemine platvorm",
   "veg.layer2": "Keskmine platvorm",
   "veg.layer3": "Alumine platvorm",
-  "veg.empty": "Taimi pole veel — paigutage tekstuurid kausta vegetation/ või lisage oma"
+  "veg.empty": "Taimi pole veel — paigutage tekstuurid kausta vegetation/ või lisage oma",
+  "veg.plants": "Taimed",
+  "veg.tint": "Taimede värv",
+  "veg.name.grass": "Rohi",
+  "veg.name.tall_grass": "Kõrge rohi",
+  "veg.name.pale_moss_carpet_side_small": "Kahvatu sammal (madal)",
+  "veg.name.pale_moss_carpet_side_tall": "Kahvatu sammal (kõrge)",
+  "veg.name.sweet_berry_bush_stage0": "Magusad marjad (1. etapp)",
+  "veg.name.sweet_berry_bush_stage1": "Magusad marjad (2. etapp)",
+  "veg.name.sweet_berry_bush_stage2": "Magusad marjad (3. etapp)",
+  "veg.name.sweet_berry_bush_stage3": "Magusad marjad (4. etapp)",
+  "veg.name.sugar_cane": "Suhkruroog",
+  "veg.name.seagrass_32x": "Mererohi",
+
+  "credit.title": "Autor: %s"
 }

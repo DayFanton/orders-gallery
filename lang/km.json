@@ -109,6 +109,7 @@
   "block.netherrack": "ថ្មណេឌឺ",
   "block.end_stone": "ថ្មអ៊ែន",
   "block.plain": "គ្មានវាយនភាពទេ",
+  "block.tint": "ពណ៌ប្លុក",
 
   "mobile.gallery": "📁 វិចិត្រសាល",
   "mobile.settings": "⚙️ ការកំណត់",
@@ -405,6 +406,8 @@
   "folder.veg.title": "រុក្ខជាតិរបស់ខ្ញុំ",
   "folder.veg.hint": "ជ្រើសរើសរូបភាពរុក្ខជាតិ (.png ដែលមានតម្លាភាព)។ រូបភាពខ្ពស់ (កម្ពស់យ៉ាងហោចណាស់ ១,៥ ដងធំជាងទទឹង ឧ. ១៦×៣២) នឹងក្លាយជារុក្ខជាតិកម្ពស់ ២ ប្លុក",
   "folder.veg.error": "ជ្រើសរើសឯកសាររូបភាព",
+  "folder.tint": "ពណ៌ (ស - គ្មានពណ៌លาย)",
+  "folder.weight": "ទម្ងន់ (ប្រេកង់ធ្លាក់)",
 
   "ui.hide": "លាក់ចំណុចប្រទាក់ (H)",
   "ui.show": "បង្ហាញចំណុចប្រទាក់ (H)",
@@ -414,11 +417,24 @@
 
   "veg.enable": "បើកដំណើរការរុក្ខជាតិ",
   "veg.dice": "ច្របល់",
-  "veg.set": "កំណ트រុក្ខជាតិ",
   "veg.density": "ដង់ស៊ីតេ",
   "veg.layers": "កន្លែងដែលរុក្ខជាតិលូតលាស់",
   "veg.layer1": "វេទិកាខាងលើ",
   "veg.layer2": "វេទិកាកណ្តាល",
   "veg.layer3": "វេទិកាខាងក្រោម",
-  "veg.empty": "គ្មានរុក្ខជាតិទេ — ដាក់វាយនភាពក្នុងថត vegetation/ ឬបន្ថែមផ្ទាល់ខ្លួន"
+  "veg.empty": "គ្មានរុក្ខជាតិទេ — ដាក់វាយនភាពក្នុងថត vegetation/ ឬបន្ថែមផ្ទាល់ខ្លួន",
+  "veg.plants": "រុក្ខជាតិ",
+  "veg.tint": "ពណ៌រុក្ខជាតិ",
+  "veg.name.grass": "ស្មៅ",
+  "veg.name.tall_grass": "ស្មៅខ្ពស់",
+  "veg.name.pale_moss_carpet_side_small": "សសៃខ្សាយ (ទាប)",
+  "veg.name.pale_moss_carpet_side_tall": "សសៃខ្សាយ (ខ្ពស់)",
+  "veg.name.sweet_berry_bush_stage0": "ផ្លែប៊ឺរីផ្អែម (ដំណាក់កាលទី ១)",
+  "veg.name.sweet_berry_bush_stage1": "ផ្លែប៊ឺរីផ្អែម (ដំណាក់កាលទី ២)",
+  "veg.name.sweet_berry_bush_stage2": "ផ្លែប៊ឺរីផ្អែម (ដំណាក់កាលទី ៣)",
+  "veg.name.sweet_berry_bush_stage3": "ផ្លែប៊ឺរីផ្អែម (ដំណាក់កាលទី ៤)",
+  "veg.name.sugar_cane": "ដើមអំពៅ",
+  "veg.name.seagrass_32x": "ស្មៅសមុទ្រ",
+
+  "credit.title": "អ្នកនិពន្ធ៖ %s"
 }

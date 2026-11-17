@@ -374,6 +374,7 @@
   "block.netherrack": "Недерак",
   "block.end_stone": "Камен од Крајот",
   "block.plain": "Без текстура",
+  "block.tint": "Боја на блокот",
 
   "bgimg.name.day": "Ден",
   "bgimg.name.end": "Крај",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Мои растенија",
   "folder.veg.hint": "Изберете слика од растение (.png со транспарентност). Висока слика (висина најмалку 1,5 пати поголема од ширината, на пример 16×32) ќе стане растение од 2 блока",
   "folder.veg.error": "Изберете датотека со слика",
+  "folder.tint": "Боја (бела — без нијанса)",
+  "folder.weight": "Тежина (колку често паѓа)",
 
   "ui.hide": "Сокриј интерфејс (H)",
   "ui.show": "Прикажи интерфејс (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Вклучи вегетација",
   "veg.dice": "Промешај",
-  "veg.set": "Комплет вегетација",
   "veg.density": "Густина",
   "veg.layers": "Каде расте вегетацијата",
   "veg.layer1": "Горна платформа",
   "veg.layer2": "Средна платформа",
   "veg.layer3": "Долна платформа",
-  "veg.empty": "Нема растенија засега — ставете текстури во папката vegetation/ или додајте свои"
+  "veg.empty": "Нема растенија засега — ставете текстури во папката vegetation/ или додајте свои",
+  "veg.plants": "Растенија",
+  "veg.tint": "Боја на растението",
+  "veg.name.grass": "Трева",
+  "veg.name.tall_grass": "Висока трева",
+  "veg.name.pale_moss_carpet_side_small": "Блеד мов (низок)",
+  "veg.name.pale_moss_carpet_side_tall": "Бледе мов (висок)",
+  "veg.name.sweet_berry_bush_stage0": "Слатки бобинки (фаза 1)",
+  "veg.name.sweet_berry_bush_stage1": "Слатки бобинки (фаза 2)",
+  "veg.name.sweet_berry_bush_stage2": "Слатки бобинки (фаза 3)",
+  "veg.name.sweet_berry_bush_stage3": "Слатки бобинки (фаза 4)",
+  "veg.name.sugar_cane": "Шеќерна трска",
+  "veg.name.seagrass_32x": "Морска трева",
+
+  "credit.title": "Автор: %s"
 }

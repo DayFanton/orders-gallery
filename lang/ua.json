@@ -374,6 +374,7 @@
   "block.netherrack": "Незеррак",
   "block.end_stone": "Камінь Краю",
   "block.plain": "Без текстури",
+  "block.tint": "Колір блока",
 
   "bgimg.name.day": "День",
   "bgimg.name.end": "Енд",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Мої рослини",
   "folder.veg.hint": "Виберіть зображення рослини (.png з прозорістю). Високе зображення (висота щонайменше в 1,5 раза більша за ширину, наприклад 16×32) стане рослиною у 2 блоки",
   "folder.veg.error": "Виберіть файл зображення",
+  "folder.tint": "Колір (білий — без відтінку)",
+  "folder.weight": "Вага (як часто випадає)",
 
   "ui.hide": "Сховати інтерфейс (H)",
   "ui.show": "Показати інтерфейс (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Увімкнути рослинність",
   "veg.dice": "Перемішати",
-  "veg.set": "Набір рослинності",
   "veg.density": "Щільність",
   "veg.layers": "Де росте рослинність",
   "veg.layer1": "Верхня платформа",
   "veg.layer2": "Середня платформа",
   "veg.layer3": "Нижня платформа",
-  "veg.empty": "Рослин поки немає — покладіть текстури в папку vegetation/ або додайте свої"
+  "veg.empty": "Рослин поки немає — покладіть текстури в папку vegetation/ або додайте свої",
+  "veg.plants": "Рослини",
+  "veg.tint": "Колір рослини",
+  "veg.name.grass": "Трава",
+  "veg.name.tall_grass": "Висока трава",
+  "veg.name.pale_moss_carpet_side_small": "Блідий мох (низький)",
+  "veg.name.pale_moss_carpet_side_tall": "Блідий мох (високий)",
+  "veg.name.sweet_berry_bush_stage0": "Солодкі ягоди (стадія 1)",
+  "veg.name.sweet_berry_bush_stage1": "Солодкі ягоди (стадія 2)",
+  "veg.name.sweet_berry_bush_stage2": "Солодкі ягоди (стадія 3)",
+  "veg.name.sweet_berry_bush_stage3": "Солодкі ягоди (стадія 4)",
+  "veg.name.sugar_cane": "Цукрова тростина",
+  "veg.name.seagrass_32x": "Морська трава",
+
+  "credit.title": "Автор: %s"
 }

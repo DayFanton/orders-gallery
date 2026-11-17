@@ -374,6 +374,7 @@
   "block.netherrack": "ኔዘርራክ",
   "block.end_stone": "የኢንድ ድንጋይ",
   "block.plain": "ምንም ሸካራነት የለም",
+  "block.tint": "የብሎክ ቀለም",
 
   "bgimg.name.day": "ቀን",
   "bgimg.name.end": "መጨረሻ",
@@ -407,6 +408,8 @@
   "folder.veg.title": "የእኔ እፅዋት",
   "folder.veg.hint": "የዕፅዋት ምስል ይምረጡ (.png ግልጽነት ያለው)። ረጅም ምስል (ቁመቱ ከስፋቱ ቢያንስ 1.5 እጥፍ የሚበልጥ፣ ለምሳሌ 16×32) የ2 ብሎክ ቁመት ያለው እፅዋት ይሆናል",
   "folder.veg.error": "የምስል ፋይል ይምረጡ",
+  "folder.tint": "ቀለም (ነጭ — ያለ ጥላ)",
+  "folder.weight": "ክብደት (የሚወድቅበት ድግግმოሽ)",
 
   "ui.hide": "በይነገጽ ደብቅ (H)",
   "ui.show": "በይነገጽ አሳይ (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "እፅዋትን ማብራት",
   "veg.dice": "መቀላቀል",
-  "veg.set": "የዕፅዋት ስብስብ",
   "veg.density": "ጥግግት",
   "veg.layers": "እፅዋት የሚበቅሉበት ቦታ",
   "veg.layer1": "የላይኛው መድረክ",
   "veg.layer2": "መካከለኛ መድረክ",
   "veg.layer3": "የታችኛው መድረክ",
-  "veg.empty": "እስካሁን እፅዋት የሉም — ቴክስቸሮችን በ vegetation/ ማህደር ውስጥ ያስቀምጡ ወይም የራስዎን ያክሉ"
+  "veg.empty": "እስካሁን እፅዋት የሉም — ቴክስቸሮችን በ vegetation/ ማህደር ውስጥ ያስቀምጡ ወይም የራስዎን ያክሉ",
+  "veg.plants": "እፅዋት",
+  "veg.tint": "የእፅዋት ቀለም",
+  "veg.name.grass": "ሣር",
+  "veg.name.tall_grass": "ረጅም ሣር",
+  "veg.name.pale_moss_carpet_side_small": "ፈዛዛ אזוב (ዝቅተኛ)",
+  "veg.name.pale_moss_carpet_side_tall": "ፈዛዛ אזוב (ረጅም)",
+  "veg.name.sweet_berry_bush_stage0": "ጣፋጭ ቤሪዎች (ደረጃ 1)",
+  "veg.name.sweet_berry_bush_stage1": "ጣፋጭ ቤሪዎች (ደረጃ 2)",
+  "veg.name.sweet_berry_bush_stage2": "ጣፋጭ ቤሪዎች (ደረጃ 3)",
+  "veg.name.sweet_berry_bush_stage3": "ጣፋጭ ቤሪዎች (ደረጃ 4)",
+  "veg.name.sugar_cane": "የገነ ሰብል",
+  "veg.name.seagrass_32x": "የባሕር ሣር",
+
+  "credit.title": "ደራሲ፡ %s"
 }

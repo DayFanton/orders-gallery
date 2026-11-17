@@ -374,6 +374,7 @@
   "block.netherrack": "Ihiga rĩa Nether",
   "block.end_stone": "Ihiga rĩa End",
   "block.plain": "Gũtirĩ mũkingo",
+  "block.tint": "Rangi ya kĩrũngi",
 
   "bgimg.name.day": "Mũthenya",
   "bgimg.name.end": "Mũthia",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Miti yakwa",
   "folder.veg.hint": "Thurania mũhianano wa miti (.png ĩrĩ na ũtheri). Mũhianano mũire (ũire mũiganjo wa 1.5 kana makiria ya ũtheri, ta 16×32) ũgakorwo ũrĩ mti wa mabatiri meerĩ",
   "folder.veg.error": "Thurania faili ya mĩhianano",
+  "folder.tint": "Rangi (njeru — hatari rangi ingĩ)",
+  "folder.weight": "Ũritu (rĩu rĩkonania)",
 
   "ui.hide": "Thweka kĩhumo (H)",
   "ui.show": "Cionia kĩhumo (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Guakia miti",
   "veg.dice": "Kūrira",
-  "veg.set": "Kĩũngo kĩa miti",
   "veg.density": "Ũritũ",
   "veg.layers": "Harĩa miti ĩkũra",
   "veg.layer1": "Gĩtĩ kĩa igũrũ",
   "veg.layer2": "Gĩtĩ kĩa gatagatĩ",
   "veg.layer3": "Gĩtĩ kĩa thĩ",
-  "veg.empty": "Gũtirĩ miti o na ĩmwe — ikia mĩhianano folda-ini ya vegetation/ kana wongere yaku"
+  "veg.empty": "Gũtirĩ miti o na ĩmwe — ikia mĩhianano folda-ini ya vegetation/ kana wongere yaku",
+  "veg.plants": "Mimea",
+  "veg.tint": "Rangi ya mimea",
+  "veg.name.grass": "Rũkînyo",
+  "veg.name.tall_grass": "Rũkînyo rũire",
+  "veg.name.pale_moss_carpet_side_small": "Moss ya gĩthigiriri (njamba)",
+  "veg.name.pale_moss_carpet_side_tall": "Moss ya gĩthigiriri (rũire)",
+  "veg.name.sweet_berry_bush_stage0": "Matunda marĩ cama (ikinya rĩa 1)",
+  "veg.name.sweet_berry_bush_stage1": "Matunda marĩ cama (ikinya rĩa 2)",
+  "veg.name.sweet_berry_bush_stage2": "Matunda marĩ cama (ikinya rĩa 3)",
+  "veg.name.sweet_berry_bush_stage3": "Matunda marĩ cama (ikinya rĩa 4)",
+  "veg.name.sugar_cane": "Gakaraku",
+  "veg.name.seagrass_32x": "Rũkînyo rwa iria",
+
+  "credit.title": "Mwandĩki: %s"
 }

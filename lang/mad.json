@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Batu End",
   "block.plain": "Èbâ ta' kapanggih tekstur",
+  "block.tint": "Loko bloky",
 
   "bgimg.name.day": "Sèyang",
   "bgimg.name.end": "End",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Tanaman ka",
   "folder.veg.hint": "Pilih gambar tanaman (.png kalawan transparan). Gambar dhuwur (dhuwur minimal 1,5 kalè lebbi rajâ èbandingaghi lebbar, contona 16×32) bakal dhaddi tanaman 2 blok",
   "folder.veg.error": "Pilih berkas gambar",
+  "folder.tint": "Loko (fotsy — tsy misy loko)",
+  "folder.weight": "Bobot (kalandefan fivoahana)",
 
   "ui.hide": "Sembunyikan antarmuka (H)",
   "ui.show": "Tampilkan antarmuka (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Aktifake vegetasi",
   "veg.dice": "Acak",
-  "veg.set": "Set vegetasi",
   "veg.density": "Kapadhetan",
   "veg.layers": "Kenneng tuwuh vegetasi",
   "veg.layer1": "Platform attas",
   "veg.layer2": "Platform tengnga",
   "veg.layer3": "Platform baba",
-  "veg.empty": "Belum ada tanaman — pasang tekstur e dalam folder vegetation/ o tambaha tang"
+  "veg.empty": "Belum ada tanaman — pasang tekstur e dalam folder vegetation/ o tambaha tang",
+  "veg.plants": "Tanaman",
+  "veg.tint": "Loko tany",
+  "veg.name.grass": "Jukut",
+  "veg.name.tall_grass": "Jukut dhuwur",
+  "veg.name.pale_moss_carpet_side_small": "Lumut bapa (cendek)",
+  "veg.name.pale_moss_carpet_side_tall": "Lumut bapa (dhuwur)",
+  "veg.name.sweet_berry_bush_stage0": "Buah beri manes (tahap 1)",
+  "veg.name.sweet_berry_bush_stage1": "Buah beri manes (tahap 2)",
+  "veg.name.sweet_berry_bush_stage2": "Buah beri manes (tahap 3)",
+  "veg.name.sweet_berry_bush_stage3": "Buah beri manes (tahap 4)",
+  "veg.name.sugar_cane": "Tebu",
+  "veg.name.seagrass_32x": "Jukut ranomena",
+
+  "credit.title": "Panulis: %s"
 }

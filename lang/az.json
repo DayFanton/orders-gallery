@@ -374,6 +374,7 @@
   "block.netherrack": "Neterrak",
   "block.end_stone": "End daşı",
   "block.plain": "Tekstura yoxdur",
+  "block.tint": "Blok rəngi",
 
   "bgimg.name.day": "Gündüz",
   "bgimg.name.end": "Son",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Mənim bitkilərim",
   "folder.veg.hint": "Bitki şəkli seçin (.png şəffaflıqla). Hündür şəkil (hündürlüyü enindən ən azı 1,5 dəfə çox olan, məsələn 16×32) 2 blok hündürlüyündə bitki olacaq",
   "folder.veg.error": "Şəkil faylını seçin",
+  "folder.tint": "Rəng (ağ — çalarsız)",
+  "folder.weight": "Çəki (düşmə tezliyi)",
 
   "ui.hide": "İnterfeysi gizlət (H)",
   "ui.show": "İnterfeysi göstər (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Bitki örtüyünü aktivləşdir",
   "veg.dice": "Qarışdır",
-  "veg.set": "Bitki örtüsü dəsti",
   "veg.density": "Sıxlıq",
   "veg.layers": "Bitki örtüyünün böyüdüyü yer",
   "veg.layer1": "Yuxarı platforma",
   "veg.layer2": "Orta platforma",
   "veg.layer3": "Aşağı platforma",
-  "veg.empty": "Hələ bitki yoxdur — teksturaları vegetation/ qovluğuna qoyun və ya özünüz əlavə edin"
+  "veg.empty": "Hələ bitki yoxdur — teksturaları vegetation/ qovluğuna qoyun və ya özünüz əlavə edin",
+  "veg.plants": "Bitkilər",
+  "veg.tint": "Bitki rəngi",
+  "veg.name.grass": "Ot",
+  "veg.name.tall_grass": "Hündür ot",
+  "veg.name.pale_moss_carpet_side_small": "Solğun yosun (alçaq)",
+  "veg.name.pale_moss_carpet_side_tall": "Solğun yosun (hündür)",
+  "veg.name.sweet_berry_bush_stage0": "Şirin giləmeyvələr (mərhələ 1)",
+  "veg.name.sweet_berry_bush_stage1": "Şirin giləmeyvələr (mərhələ 2)",
+  "veg.name.sweet_berry_bush_stage2": "Şirin giləmeyvələr (mərhələ 3)",
+  "veg.name.sweet_berry_bush_stage3": "Şirin giləmeyvələr (mərhələ 4)",
+  "veg.name.sugar_cane": "Şəkər qamışı",
+  "veg.name.seagrass_32x": "Dəniz otu",
+
+  "credit.title": "Müəllif: %s"
 }

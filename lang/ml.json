@@ -374,6 +374,7 @@
   "block.netherrack": "നെതർറാക്ക്",
   "block.end_stone": "എൻഡ് കല്ല്",
   "block.plain": "ടെക്സ്ചറില്ല",
+  "block.tint": "ബ്ലോക്ക് നിറം",
 
   "bgimg.name.day": "പകൽ",
   "bgimg.name.end": "എൻഡ്",
@@ -407,6 +408,8 @@
   "folder.veg.title": "എന്റെ സസ്യങ്ങൾ",
   "folder.veg.hint": "ഒരു സസ്യ ചിത്രം തിരഞ്ഞെടുക്കുക (.png സുതാര്യതയോടെ). ഉയർന്ന ചിത്രം (വീതിയേക്കാൾ കുറഞ്ഞത് 1.5 മടങ്ങ് ഉയരം, ഉദാഹരണത്തിന് 16×32) 2 ബ്ലോക്ക് ഉയരമുള്ള സസ്യമായി മാറും",
   "folder.veg.error": "ഇമേജ് ഫയൽ തിരഞ്ഞെടുക്കുക",
+  "folder.tint": "നിറം (വെള്ള — നിറവില്ലാതെ)",
+  "folder.weight": "ഭാരം (വീഴുന്ന ആവൃത്തി)",
 
   "ui.hide": "ഇന്റർഫേസ് മറയ്ക്കുക (H)",
   "ui.show": "ഇന്റർഫേസ് കാണിക്കുക (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "സസ്യങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുക",
   "veg.dice": "കലർത്തുക",
-  "veg.set": "സസ്യ സെറ്റ്",
   "veg.density": "സാന്ദ്രത",
   "veg.layers": "സസ്യങ്ങൾ വളരുന്ന സ്ഥലം",
   "veg.layer1": "മുകളിലെ പ്ലാറ്റ്‌ഫോം",
   "veg.layer2": "ഇടmiddle പ്ലാറ്റ്‌ഫോം",
   "veg.layer3": "താഴത്തെ പ്ലാറ്റ്‌ഫോം",
-  "veg.empty": "ഇതുവരെ സസ്യങ്ങളൊന്നുമില്ല — ടെക്സ്ചറുകൾ vegetation/ ഫോൾഡറിൽ ഇടുകയോ നിങ്ങളുടേത് ചേർക്കുകയോ ചെയ്യുക"
+  "veg.empty": "ഇതുവരെ സസ്യങ്ങളൊന്നുമില്ല — ടെക്സ്ചറുകൾ vegetation/ ഫോൾഡറിൽ ഇടുകയോ നിങ്ങളുടേത് ചേർക്കുകയോ ചെയ്യുക",
+  "veg.plants": "സസ്യങ്ങൾ",
+  "veg.tint": "സസ്യത്തിന്റെ നിറം",
+  "veg.name.grass": "പുല്ല്",
+  "veg.name.tall_grass": "നീളമുള്ള പുല്ല്",
+  "veg.name.pale_moss_carpet_side_small": "ഇളം പായൽ (ചെറിയത്)",
+  "veg.name.pale_moss_carpet_side_tall": "ഇളം പായൽ (ഉയർന്നത്)",
+  "veg.name.sweet_berry_bush_stage0": "മധുരമുള്ള സരസഫലങ്ങൾ (ഘട്ടം 1)",
+  "veg.name.sweet_berry_bush_stage1": "മധുരമുള്ള സരസഫലങ്ങൾ (ഘട്ടം 2)",
+  "veg.name.sweet_berry_bush_stage2": "മധുരമുള്ള സരസഫലങ്ങൾ (ഘട്ടം 3)",
+  "veg.name.sweet_berry_bush_stage3": "മധുരമുള്ള സരസഫലങ്ങൾ (ഘട്ടം 4)",
+  "veg.name.sugar_cane": "കരിമ്പ്",
+  "veg.name.seagrass_32x": "കടൽപ്പുല്ല്",
+
+  "credit.title": "രചയിതാവ്: %s"
 }

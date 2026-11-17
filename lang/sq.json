@@ -374,6 +374,7 @@
   "block.netherrack": "Netherrack",
   "block.end_stone": "Gur i End-it",
   "block.plain": "Pa teksturë",
+  "block.tint": "Ngjyra e bllokut",
 
   "bgimg.name.day": "Ditë",
   "bgimg.name.end": "Fundi",
@@ -407,6 +408,8 @@
   "folder.veg.title": "Bimët e mia",
   "folder.veg.hint": "Zgjidhni një imazh bime (.png me transparencë). Një imazh i lartë (lartësia të paktën 1.5 herë më e madhe se gjerësia, p.sh. 16×32) do të bëhet një bimë me 2 blloqe",
   "folder.veg.error": "Zgjidhni skedarin e imazhit",
+  "folder.tint": "Ngjyra (e bardhë — pa nuancë)",
+  "folder.weight": "Pesha (shpeshtësia e rënies)",
 
   "ui.hide": "Fshih ndërfaqen (H)",
   "ui.show": "Shfaq ndërfaqen (H)",
@@ -416,11 +419,24 @@
 
   "veg.enable": "Aktivizo bimësinë",
   "veg.dice": "Përziej",
-  "veg.set": "Komplekti i bimësisë",
   "veg.density": "Dendësia",
   "veg.layers": "Ku rritet bimësia",
   "veg.layer1": "Platforma e sipërme",
   "veg.layer2": "Platforma e mesme",
   "veg.layer3": "Platforma e poshtme",
-  "veg.empty": "Nuk ka ende bimë — vendosni teksturat në dosjen vegetation/ ose shtoni tuajat"
+  "veg.empty": "Nuk ka ende bimë — vendosni teksturat në dosjen vegetation/ ose shtoni tuajat",
+  "veg.plants": "Bimët",
+  "veg.tint": "Ngjyra e bimës",
+  "veg.name.grass": "Bari",
+  "veg.name.tall_grass": "Bari i lartë",
+  "veg.name.pale_moss_carpet_side_small": "Myshk i zbehtë (i ulët)",
+  "veg.name.pale_moss_carpet_side_tall": "Myshk i zbehtë (i lartë)",
+  "veg.name.sweet_berry_bush_stage0": "Manaferra të ëmbla (faza 1)",
+  "veg.name.sweet_berry_bush_stage1": "Manaferra të ëmbla (faza 2)",
+  "veg.name.sweet_berry_bush_stage2": "Manaferra të ëmbla (faza 3)",
+  "veg.name.sweet_berry_bush_stage3": "Manaferra të ëmbla (faza 4)",
+  "veg.name.sugar_cane": "Kallam sheqeri",
+  "veg.name.seagrass_32x": "Bari i detit",
+
+  "credit.title": "Autori: %s"
 }
