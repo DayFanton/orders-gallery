@@ -44,8 +44,15 @@
   },
   {
     "file": "sugar_cane.png",
-    "height": 2,
-    "weight": 4
+    "height": 1,
+    "weight": 4,
+    "size": {
+      "min": 1,
+      "max": 3,
+      "minWeight": 6,
+      "maxWeight": 1,
+      "step": 1
+    }
   },
   {
     "file": "seagrass_32x.png",
