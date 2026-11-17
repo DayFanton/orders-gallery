@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Umoba",
   "veg.name.seagrass_32x": "Utshani baselwandle",
   "veg.weight": "Ubunzima (ukuthi kuvela kangaki)",
+  "veg.reset": "Buyisa",
+  "veg.reset.title": "Buyisa ukulungiselelwa kwezitshalo kokuzenzakalelayo (izitshalo zakho kazisulwa, kodwa amabhokisi okuhlola ayasuswa)",
+  "veg.tpl.save": "Gcina isifanekiso",
+  "veg.tpl.title": "Gcina ukulungiselelwa kwezitshalo zonke ku-\"Zitshalo Zami\" njengesifanekiso",
+  "veg.tpl.prompt": "Igama lesifanekiso:",
+  "veg.tpl.default": "Isifanekiso %s",
+  "veg.tpl.saved": "Kugciniwe",
+  "veg.tpl.card": "Isifanekiso sezitshalo — cofa ukuze usebenzise",
 
   "credit.title": "Umbhali: %s",
 

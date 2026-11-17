@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cukrová třtina",
   "veg.name.seagrass_32x": "Mořská tráva",
   "veg.weight": "Váha (frekvence padání)",
+  "veg.reset": "Obnovit",
+  "veg.reset.title": "Obnovit výchozí nastavení vegetace (vlastní rostliny se neodstraní, ale zruší se u nich zaškrtnutí)",
+  "veg.tpl.save": "Uložit šablonu",
+  "veg.tpl.title": "Uložit všechna nastavení vegetace do „Moje rostliny“ jako šablonu",
+  "veg.tpl.prompt": "Název šablony:",
+  "veg.tpl.default": "Šablona %s",
+  "veg.tpl.saved": "Uloženo",
+  "veg.tpl.card": "Šablona vegetace — kliknutím použijete",
 
   "credit.title": "Autor: %s",
 

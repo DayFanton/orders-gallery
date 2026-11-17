@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Rake",
   "veg.name.seagrass_32x": "Ciyawar teku",
   "veg.weight": "Nauyi (yawan sauka)",
+  "veg.reset": "Sake saiti",
+  "veg.reset.title": "Sake saiti saitunan tsirrai zuwa tsohuwa (ba a share tsirrai na musamman ba, amma an cire alamomin duba su)",
+  "veg.tpl.save": "Ajiye samfuri",
+  "veg.tpl.title": "Ajiye duk saitunan tsirrai zuwa \"Tsirrai Na\" azaman samfuri",
+  "veg.tpl.prompt": "Sunan samfuri:",
+  "veg.tpl.default": "Samfuri %s",
+  "veg.tpl.saved": "An adana",
+  "veg.tpl.card": "Samfuri na tsirrai — danna don amfani",
 
   "credit.title": "Marubuci: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Şeker gamyşy",
   "veg.name.seagrass_32x": "Deňiz oty",
   "veg.weight": "Agramy (düşme ýygylygy)",
+  "veg.reset": "Deslap",
+  "veg.reset.title": "Ösümlik sazlamalaryny deslapky ýagdaýyna getirmek (ýörite ösümlikler pozulmaýar, ýöne olaryň bellikleri aýrylýar)",
+  "veg.tpl.save": "Şablony saklamak",
+  "veg.tpl.title": "Ähli ösümlik sazlamalaryny \"Meniň ösümliklerim\" ýerine şablon hökmünde saklamak",
+  "veg.tpl.prompt": "Şablonyň ady:",
+  "veg.tpl.default": "Şablon %s",
+  "veg.tpl.saved": "Saklandy",
+  "veg.tpl.card": "Ösümlik şablony — ulanmak üçin basyň",
 
   "credit.title": "Awtor: %s",
 

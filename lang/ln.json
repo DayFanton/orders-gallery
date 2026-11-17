@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Mobange",
   "veg.name.seagrass_32x": "BWA ya mbu",
   "veg.weight": "Bopekwani (mpasi ya kokweyá)",
+  "veg.reset": "Kozongisa",
+  "veg.reset.title": "Kozongisa bosembo ya bilanga na malako (bilanga ya yo moko ebomamaka te, kasi elembo na bango ekomi pamba)",
+  "veg.tpl.save": "Kobombisa molongo",
+  "veg.tpl.title": "Kobongisa bosembo nyonso ya bilanga na \"Bilanga Na Ngai\" lokola molongo",
+  "veg.tpl.prompt": "Kombo ya molongo:",
+  "veg.tpl.default": "Molongo %s",
+  "veg.tpl.saved": "Ebombisami",
+  "veg.tpl.card": "Molongo ya bilanga — finá mpo na kosalela",
 
   "credit.title": "Mokomi: %s",
 

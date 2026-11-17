@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Taku",
   "veg.name.seagrass_32x": "Doko soso",
   "veg.weight": "Muri (doko arora)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Vegetation settings do default ro ki (custom plants ta daia ro, to karia checkmarks ta tano ro)",
+  "veg.tpl.save": "Template save ro",
+  "veg.tpl.title": "Vegetation settings goso \"Miya Plants\" ro template ki ro",
+  "veg.tpl.prompt": "Template ro nem:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Save ro",
+  "veg.tpl.card": "Vegetation template — apply ro karia click ro",
 
   "credit.title": "Olom: %s",
 

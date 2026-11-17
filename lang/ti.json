@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "ሻንኮራ",
   "veg.name.seagrass_32x": "ባሕሪ ሳዕሪ",
   "veg.weight": "ክብደት (ብዝሒ ግዜ ምንቍዕ)",
+  "veg.reset": "ዳግም ጀምር",
+  "veg.reset.title": "ቅንብራት ተክላት ናብ ነባሪ ምለስ (ብጁ ተክላት ኣይጸረሱን፣ ግን ምልክቶቻቸው ይጠፍኡ)",
+  "veg.tpl.save": "ናሙና ኣቐምጥ",
+  "veg.tpl.title": "ኩሉ ቅንብራት ተክላት ናብ \"ናተይ ተክላት\" ከም ናሙና ኣቐምጥ",
+  "veg.tpl.prompt": "ስም ናሙና፡",
+  "veg.tpl.default": "ናሙና %s",
+  "veg.tpl.saved": "ተቐሚጡ ኣሎ",
+  "veg.tpl.card": "ናሙና ተክላት — ንምክ'ና ጸቕጢ",
 
   "credit.title": "מחבר: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Luvhanda lwa tswikiri",
   "veg.name.seagrass_32x": "Vhusiku ha lwanani",
   "veg.weight": "Tshilemo (tshikhula tsha u wa)",
+  "veg.reset": "Vha vhuya",
+  "veg.reset.title": "Vha vhuya na zwiorori zwa zwimela kha zwa vhupo (zwimela zwa vhane a zwi fholwi, kʌni fhedzi zwiga zwazwo zwi bva)",
+  "veg.tpl.save": "Vhulungani tsumbo",
+  "veg.tpl.title": "Vhulungani zwiorori zwoṱhe zwa zwimela kha \"Zwimela Zvanga\" zwi tsumbo",
+  "veg.tpl.prompt": "Dzina la tsumbo:",
+  "veg.tpl.default": "Tsumbo %s",
+  "veg.tpl.saved": "Yo vhulungwa",
+  "veg.tpl.card": "Tsumbo ya zwimela — krovhani u shumisa",
 
   "credit.title": "Murendami: %s",
 

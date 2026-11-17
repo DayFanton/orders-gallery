@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Lamun",
   "veg.weight": "Bobot (frekuensi kemunculan)",
+  "veg.reset": "Atur ulang",
+  "veg.reset.title": "Atur ulang pengaturan vegetasi ke default (tanaman kustom tidak dihapus, tetapi centangnya dilepas)",
+  "veg.tpl.save": "Simpan templat",
+  "veg.tpl.title": "Simpan semua pengaturan vegetasi ke \"Tanaman Saya\" sebagai templat",
+  "veg.tpl.prompt": "Nama templat:",
+  "veg.tpl.default": "Templat %s",
+  "veg.tpl.saved": "Disimpan",
+  "veg.tpl.card": "Templat vegetasi — klik untuk menerapkan",
 
   "credit.title": "Penulis: %s",
 

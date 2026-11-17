@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Sladkorni trst",
   "veg.name.seagrass_32x": "Morska trava",
   "veg.weight": "Teža (pogostnost padanja)",
+  "veg.reset": "Ponastavi",
+  "veg.reset.title": "Ponastavi nastavitve vegetacije na privzete (rastline po meri se ne izbrišejo, vendar se jim odstranijo kljukice)",
+  "veg.tpl.save": "Shrani predlogo",
+  "veg.tpl.title": "Shrani vse nastavitve vegetacije v »Moje rastline« kot predlogo",
+  "veg.tpl.prompt": "Ime predloge:",
+  "veg.tpl.default": "Predloga %s",
+  "veg.tpl.saved": "Shranjeno",
+  "veg.tpl.card": "Predloga vegetacije — kliknite za uporabo",
 
   "credit.title": "Avtor: %s",
 

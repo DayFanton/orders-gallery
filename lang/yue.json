@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "甘蔗",
   "veg.name.seagrass_32x": "海草",
   "veg.weight": "權重（掉落頻率）",
+  "veg.reset": "重設",
+  "veg.reset.title": "將植被設置恢復為預設（自定義植物唔會被刪除，但會取消勾選）",
+  "veg.tpl.save": "保存範本",
+  "veg.tpl.title": "將所有植被設置保存為範本到「我的植物」",
+  "veg.tpl.prompt": "範本名稱：",
+  "veg.tpl.default": "範本 %s",
+  "veg.tpl.saved": "已保存",
+  "veg.tpl.card": "植被範本 — 點擊應用",
 
   "credit.title": "作者：%s",
 

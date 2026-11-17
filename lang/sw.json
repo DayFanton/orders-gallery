@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Miwa",
   "veg.name.seagrass_32x": "Nyasi ya bahari",
   "veg.weight": "Uzito (marudio ya kuanguka)",
+  "veg.reset": "Weka upya",
+  "veg.reset.title": "Weka upya mipangilio ya mimea iwe ya kawaida (mimea maalum haifutiki, lakini tiki zake zinaondolewa)",
+  "veg.tpl.save": "Hifadhi kielelezo",
+  "veg.tpl.title": "Hifadhi mipangilio yote ya mimea katika \"Mimea Yangu\" kama kielelezo",
+  "veg.tpl.prompt": "Jina la kielelezo:",
+  "veg.tpl.default": "Kielelezo %s",
+  "veg.tpl.saved": "Imehifadhiwa",
+  "veg.tpl.card": "Kielelezo cha mimea — bofya ili utumie",
 
   "credit.title": "Mwandishi: %s",
 

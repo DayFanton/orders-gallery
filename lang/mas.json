@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Osukari",
   "veg.name.seagrass_32x": "Oloishuro lokile",
   "veg.weight": "Enkai (eunyet)",
+  "veg.reset": "Eris",
+  "veg.reset.title": "Eris enkishui e nkuj CJ (nkuj natii iji naatiai, aishoo te nchurura aing'oru)",
+  "veg.tpl.save": "Eris enkishui",
+  "veg.tpl.title": "Eris enkishui e nkuj kulo e \"Nkuj Yaye\" enkishui",
+  "veg.tpl.prompt": "Enkai e nkuj:",
+  "veg.tpl.default": "Enkui e nkuj %s",
+  "veg.tpl.saved": "Eris",
+  "veg.tpl.card": "Enkui e nkuj — kiki te nchurura",
 
   "credit.title": "Enkai yaisho: %s",
 

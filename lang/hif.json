@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Ganna",
   "veg.name.seagrass_32x": "Samudri ghaas",
   "veg.weight": "Wajan (kitni baar drop hota hai)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Vegetation settings ke default par reset karo (custom plants delete nahi hote, lekin unke checkmarks hata diye jaate hain)",
+  "veg.tpl.save": "Template save karo",
+  "veg.tpl.title": "Sab vegetation settings ko \"Mere Paudhe\" me template ke tarah save karo",
+  "veg.tpl.prompt": "Template ka naam:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Save kar dewa gais",
+  "veg.tpl.card": "Vegetation template — use karne ke liye click karo",
 
   "credit.title": "Author: %s",
 

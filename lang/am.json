@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "የገነ ሰብል",
   "veg.name.seagrass_32x": "የባሕር ሣር",
   "veg.weight": "ክብደት (የሚወድቅበት ድግግმოሽ)",
+  "veg.reset": "ຣີເຊັດ",
+  "veg.reset.title": "የእፅዋትን ቅንብሮች ወደ ነባሪ ዳግም አስጀምር (ብጁ እፅዋቶች አይሰረዙም፣ ግን ምልክቶቻቸው ይጠፋሉ)",
+  "veg.tpl.save": "គំរოს አስቀምጥ",
+  "veg.tpl.title": "ሁሉንም የእፅዋት ቅንብሮች “የእኔ እፅዋት” ውስጥ እንደ គំሮ አስቀምጥ",
+  "veg.tpl.prompt": "የគំሎ ስም፡",
+  "veg.tpl.default": "គំሎ %s",
+  "veg.tpl.saved": "ተቀምጧል",
+  "veg.tpl.card": "የእፅዋት គំሎ — ለመተግበር ጠቅ ያድርጉ",
 
   "credit.title": "ደራሲ፡ %s",
 

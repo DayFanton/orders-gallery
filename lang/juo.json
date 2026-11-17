@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Mborog",
   "veg.name.seagrass_32x": "Lango ni thim",
   "veg.weight": "Rem (namba ma pe ni kondo)",
+  "veg.reset": "Mawun luru luru",
+  "veg.reset.title": "Mawun luru luru kendo pe ki yudo nying kendo lando pe kendo matiny",
+  "veg.tpl.save": "Mawun diki bindi",
+  "veg.tpl.title": "Mawun diki bindi doto ma \"Mawun Ma\" kaka ranyisi",
+  "veg.tpl.prompt": "Mawun diki bindi nying",
+  "veg.tpl.default": "Mawun diki bindi %s",
+  "veg.tpl.saved": "Oket",
+  "veg.tpl.card": "Mawun diki bindi — dho pwodho miyo",
 
   "credit.title": "Mwandishi: %s",
 

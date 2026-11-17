@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Umqoba",
   "veg.name.seagrass_32x": "Utshani basolwandle",
   "veg.weight": "Isisindo (ukuba khona kokuwa)",
+  "veg.reset": "Setha kabusha",
+  "veg.reset.title": "Setha kabusha izilungの設定 zokuhluma zibe ezakhona (izitshalo ezingokwezifiso azisulwa, kodwa amasheke azo ayasuswa)",
+  "veg.tpl.save": "Gcina isifanekiso",
+  "veg.tpl.title": "Gcina zonke izilungelo zokuhluma ku-\"Izitshalo Zami\" njengesifanekiso",
+  "veg.tpl.prompt": "Igama lesifanekiso:",
+  "veg.tpl.default": "Isifanekiso %s",
+  "veg.tpl.saved": "Kugciniwe",
+  "veg.tpl.card": "Isifanekiso sokuhluma — chofoza ukuze usebenzise",
 
   "credit.title": "Umbhali: %s",
 

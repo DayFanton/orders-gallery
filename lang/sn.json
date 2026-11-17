@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Shuga",
   "veg.name.seagrass_32x": "Uswa hwegungwa",
   "veg.weight": "Kurema (kakawanda kwarova)",
+  "veg.reset": "Reseta",
+  "veg.reset.title": "Reseta zvigadziriso zvezvirimwa kuita zvenguva dzose (zvirimwa zvako hazvibviswe, asi matiki adzo anobviswa)",
+  "veg.tpl.save": "Chengetedza mufananidzo",
+  "veg.tpl.title": "Chengetedza zvigadziriso zvese zvezvirimwa mu \"Zvirimwa Zvangu\" semufananidzo",
+  "veg.tpl.prompt": "Zita remufananidzo:",
+  "veg.tpl.default": "Mufananidzo %s",
+  "veg.tpl.saved": "Zvachengetedzwa",
+  "veg.tpl.card": "Mufananidzo wezvirimwa - tinya kuti ushandise",
 
   "credit.title": "Munyori: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Qab zib",
   "veg.name.seagrass_32x": "Cov nyom hiav txwv",
   "veg.weight": "Qhov hnyav (tsaus zaus tso tawm)",
+  "veg.reset": "Pib dua",
+  "veg.reset.title": "Pib dua cov ntoo chaw rau qhov qub (cov ntoo uas koj xaiv tsis raug rho tawm, tab sis cov Cim tsis muaj lawm)",
+  "veg.tpl.save": "Khaws qauv",
+  "veg.tpl.title": "Khaws tag nrho cov ntoo chaw rau \"Kuv Cov Ntoo\" ua qauv",
+  "veg.tpl.prompt": "Qauv lub npe:",
+  "veg.tpl.default": "Qauv %s",
+  "veg.tpl.saved": "Khaws cia",
+  "veg.tpl.card": "Ntoo qauv — nyem rau qhov siv",
 
   "credit.title": "Tus sau: %s",
 

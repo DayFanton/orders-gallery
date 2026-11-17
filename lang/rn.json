@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Isigwa",
   "veg.name.seagrass_32x": "Ubwatsi bw'ikiyaga",
   "veg.weight": "Uburemere (uko bigwa)",
+  "veg.reset": "Subiza mu ntango",
+  "veg.reset.title": "Subiza mu ntango ivyegeranyo vy'ibimera (ibimera vyo ubwiwe ntibihanagurwa, ariko udukarato twabo turakurwa)",
+  "veg.tpl.save": "Ubike icitegererezo",
+  "veg.tpl.title": "Subiza ivyegeranyo vyose vy'ibimera mu \"Bimera Vyanje\" nk'icitegererezo",
+  "veg.tpl.prompt": "Izina ry'icitegererezo:",
+  "veg.tpl.default": "Icitegererezo %s",
+  "veg.tpl.saved": "Vyabitswe",
+  "veg.tpl.card": "Icitegererezo c'ibimera — kanda kugira ngo ukoreshe",
 
   "credit.title": "Umwanditsi: %s",
 

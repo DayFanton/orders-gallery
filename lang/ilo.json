@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Raborabot ti baybay",
   "veg.weight": "Timbang (dalas ti pannakahulogna)",
+  "veg.reset": "I-reset",
+  "veg.reset.title": "I-reset dagiti setting ti mula iti default (dagiti custom a mula ket saan a maikkat, ngem maikkat ti markada)",
+  "veg.tpl.save": "I-saved ti template",
+  "veg.tpl.title": "I-save amin a setting ti mula idiay \"Dagiti Mulak\" kas ti template",
+  "veg.tpl.prompt": "Nagan ti template:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Na-save",
+  "veg.tpl.card": "Template ti mula — i-click tapno i-apply",
 
   "credit.title": "Mannurat: %s",
 

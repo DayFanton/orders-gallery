@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Sokeriruoko",
   "veg.name.seagrass_32x": "Meriheinä",
   "veg.weight": "Paino (pudotustaajuus)",
+  "veg.reset": "Palauta",
+  "veg.reset.title": "Palauta kasvillisuusasetukset oletuksiksi (mukautettuja kasveja ei poisteta, mutta niiden valinnat poistetaan)",
+  "veg.tpl.save": "Tallenna malli",
+  "veg.tpl.title": "Tallenna kaikki kasvillisuusasetukset \"Omat kasvit\" -osioon mallina",
+  "veg.tpl.prompt": "Mallin nimi:",
+  "veg.tpl.default": "Malli %s",
+  "veg.tpl.saved": "Tallennettu",
+  "veg.tpl.card": "Kasvillisuusmalli — napsauta käyttääksesi",
 
   "credit.title": "Tekijä: %s",
 

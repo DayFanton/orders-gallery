@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Canna da zùcar",
   "veg.name.seagrass_32x": "Erba marina",
   "veg.weight": "Pes (quand spess el ven fòra)",
+  "veg.reset": "Riprèstina",
+  "veg.reset.title": "Riprèstina i impostazion de la vegetazzion a i predefinid (i piant personalizaa i en minga scancellad, ma i so casell i en desbadaa)",
+  "veg.tpl.save": "Salvà el modell",
+  "veg.tpl.title": "Salvà tüt i impostazion de la vegetazzion in \"I me piant\" come modell",
+  "veg.tpl.prompt": "Nom del modell:",
+  "veg.tpl.default": "Modell %s",
+  "veg.tpl.saved": "Salvad",
+  "veg.tpl.card": "Modell de vegetazzion — ciap a per doperal",
 
   "credit.title": "Autor: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Imbiza yeswekile",
   "veg.name.seagrass_32x": "Utshani baselwandle",
   "veg.weight": "Ubunzima (ukuvela kwayo)",
+  "veg.reset": "Buyisa",
+  "veg.reset.title": "Buyisa amalungiselelo wetjalo kusezingeni elijayelekile (imitjalo yakho ayisulwa, kodwa amabhokisi ayayo ayasuswa)",
+  "veg.tpl.save": "Gcina isifanekiso",
+  "veg.tpl.title": "Gcina woke amalungiselelo wetjalo ku-\"Mitjalo Yami\" njengesifanekiso",
+  "veg.tpl.prompt": "Igama lesifanekiso:",
+  "veg.tpl.default": "Isifanekiso %s",
+  "veg.tpl.saved": "Igciniwe",
+  "veg.tpl.card": "Isifanekiso wetjalo — cofa ukuze usebenzise",
 
   "credit.title": "Umbhali: %s",
 

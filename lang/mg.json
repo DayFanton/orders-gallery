@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Fary",
   "veg.name.seagrass_32x": "Ahitra an-dranomasina",
   "veg.weight": "Lanja (faharetan'ny fivoahana)",
+  "veg.reset": "Avereno",
+  "veg.reset.title": "Avereno amin'ny voalohany ny firafitry ny zavamaniry (tsy fafana ny zavamaniry nataonao, fa esorina ny marika)",
+  "veg.tpl.save": "Tehirizo ny maodely",
+  "veg.tpl.title": "Tehirizo ao amin'ny \"Zavamaniry Ahy\" ho maodely ny firafitry ny zavamaniry rehetra",
+  "veg.tpl.prompt": "Anaran'ny maodely:",
+  "veg.tpl.default": "Maodely %s",
+  "veg.tpl.saved": "Voatahiry",
+  "veg.tpl.card": "Maodely zavamaniry — tsindrio raha hampiasa azy",
 
   "credit.title": "Mpanoratra: %s",
 

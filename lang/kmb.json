@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Usukali",
   "veg.name.seagrass_32x": "Wiji wamungwa",
   "veg.weight": "Kulema (kuvota kw'etshiki)",
+  "veg.reset": "Seta",
+  "veg.reset.title": "Seta oikoleselu ya vimela kuta kuya ia kiza (vimela zia mudi kaza kuene ku bwa, ihi zihanduka)",
+  "veg.tpl.save": "Xika kisola",
+  "veg.tpl.title": "Xika oikoleselu yoso ya vimela mu \"Vimela Vyami\" kiala kisola",
+  "veg.tpl.prompt": "Dijina dya kisola:",
+  "veg.tpl.default": "Kisola %s",
+  "veg.tpl.saved": "Xikiwa",
+  "veg.tpl.card": "Kisola kya vimela — nyika phala kusadila",
 
   "credit.title": "Mukwa-ene: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Is sugarcane",
   "veg.name.seagrass_32x": "Ubwatsi bw'inyanja",
   "veg.weight": "Uburemere (uko bigwa)",
+  "veg.reset": "Ongera shyiraho",
+  "veg.reset.title": "Ongera usubizeho igenamiterere y'ibimera ku by'ibanze (ibimera byihariye ntibiba byasibwe, ariko ibimenyetso byabyo byakuweho)",
+  "veg.tpl.save": "Ubike icyitegererezo",
+  "veg.tpl.title": "Ubike igenamiterere yose y'ibimera muri \"Ibimera Byanjye\" nk'icyitegererezo",
+  "veg.tpl.prompt": "Izina ry'icyitegererezo:",
+  "veg.tpl.default": "Icyitegererezo %s",
+  "veg.tpl.saved": "Byabitswe",
+  "veg.tpl.card": "Icyitegererezo cy'ibimera — kanda kugira ngo ukoreshe",
 
   "credit.title": "Umwanditsi: %s",
 

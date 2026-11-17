@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Oparun",
   "veg.name.seagrass_32x": "Koriko okun",
   "veg.weight": "Ìwọ̀n (igbohunsafẹfẹ ìṣubu)",
+  "veg.reset": "Tunṣe",
+  "veg.reset.title": "Tun awọn eto ohun ọgbin pada si aiyipada (a ko pa awọn ohun ọgbin aṣa rẹ, ṣugọn a yọ awọn ami ayẹwo wọn kuro)",
+  "veg.tpl.save": "Fipamọ awoṣe",
+  "veg.tpl.title": "Fipamọ gbogbo awọn eto ohun ọgbin si \"Awọn ohun ọgbin mi\" gẹgẹbi awoṣe",
+  "veg.tpl.prompt": "Orukọ awoṣe:",
+  "veg.tpl.default": "Awoṣe %s",
+  "veg.tpl.saved": "Ti fipamọ",
+  "veg.tpl.card": "Awoṣe ohun ọgbin — tẹ lati lo",
 
   "credit.title": "Olùkọ̀wé: %s",
 

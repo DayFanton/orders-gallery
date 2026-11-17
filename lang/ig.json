@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Okpete",
   "veg.name.seagrass_32x": "Ahịhịa osimiri",
   "veg.weight": "Ibu (ugboro ole ka o na-ada)",
+  "veg.reset": "Tọgharia",
+  "veg.reset.title": "Tọgharia nhazi osisi gaa na ndabara (anaghị ehichapụ osisi ndị omenala, mana ewepụrụ akara nlele ha)",
+  "veg.tpl.save": "Chekwaa ndيبetu",
+  "veg.tpl.title": "Chekwaa nhazi osisi niile na \"Osisi M\" dị ka ndيبetu",
+  "veg.tpl.prompt": "Aha ndيبetu:",
+  "veg.tpl.default": "Ndيبetu %s",
+  "veg.tpl.saved": "Echekwabara",
+  "veg.tpl.card": "Ndيبetu osisi — pịa ka itinye",
 
   "credit.title": "Odee: %s",
 

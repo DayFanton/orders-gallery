@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Caws sonkor",
   "veg.name.seagrass_32x": "Caws badda",
   "veg.weight": "Miisaanka (intuu soo dhacayo)",
+  "veg.reset": "Dib u deji",
+  "veg.reset.title": "Dib ugu deji dejinta dhirta sidii hore (dhirta gaarka ah lama tirtiro, laakiin calaamadaha waa laga saarayaa)",
+  "veg.tpl.save": "Keydi qaabka",
+  "veg.tpl.title": "Dib ugu kaydi dhammaan dejinta dhirta \"Dhirta Weyn\" ama \"Dhirta Keydka\" oo ah qaab ahaan",
+  "veg.tpl.prompt": "Magaca qaabka:",
+  "veg.tpl.default": "Qaabka %s",
+  "veg.tpl.saved": "La kaydiy",
+  "veg.tpl.card": "Qaabka dhirta — guji si aad u codsatid",
 
   "credit.title": "Qoraaga: %s",
 

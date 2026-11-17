@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Xaasa",
   "veg.name.seagrass_32x": "Xaasa badda",
   "veg.weight": "Qaxar (baaximah)",
+  "veg.reset": "Gaba",
+  "veg.reset.title": "Gaba abni hayi rakayta caddiyya (giraabih addat ma gacakton, ammaa dacris adda marrakaayta)",
+  "veg.tpl.save": "Gaba abni",
+  "veg.tpl.title": "Gaba abni hayi rakayta caddiyya \"Moo Biqiltu\" addat abni",
+  "veg.tpl.prompt": "Akal abni:",
+  "veg.tpl.default": "Abni %s",
+  "veg.tpl.saved": "Gabi",
+  "veg.tpl.card": "Abni biqiltu — guji si aad u codsatid",
 
   "credit.title": "Xaasa: %s",
 

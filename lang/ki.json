@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Gakaraku",
   "veg.name.seagrass_32x": "Rũkînyo rwa iria",
   "veg.weight": "Ũritu (rĩu rĩkonania)",
+  "veg.reset": "Thire",
+  "veg.reset.title": "Thire mĩkarire ya mĩmera ĩtuĩke ya mbele (mĩmera ya gĩkundi tũtiheanwo, no tũtwanio twayo nĩ tũkuatwo)",
+  "veg.tpl.save": "Thĩini icoka",
+  "veg.tpl.title": "Thire mĩkarire yothe ya mĩmera thĩini wa \"Mĩmera Yakwa\" ta icoka",
+  "veg.tpl.prompt": "Rĩtwa rwa icoka:",
+  "veg.tpl.default": "Icoka %s",
+  "veg.tpl.saved": "Gĩikio",
+  "veg.tpl.card": "Icoka ya mĩmera — thondeka niguo ũtumĩre",
 
   "credit.title": "Mwandĩki: %s",
 

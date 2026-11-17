@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Sukartseti",
   "veg.name.seagrass_32x": "Tetede ƒe ŋudede",
   "veg.weight": "Kpekpeme (ale si wòdzena zi gbɔ zi gbɔ)",
+  "veg.reset": "Trɔ ɖo ŋgɔ",
+  "veg.reset.title": "Trɔ zedzesiwo ɖo ŋgɔ na ŋutigbawo (womeɖe ŋutigba wòwo ɖa o, gake wotsɔ ŋɔŋlɔwo ɖe eme)",
+  "veg.tpl.save": "Dzra kpɔɖeŋu la ɖo",
+  "veg.tpl.title": "Dzra ŋutigba sesɛwo katã ɖo \"ŋutigba Nye\" me abe kpɔɖeŋu ene",
+  "veg.tpl.prompt": "KPɔɖeŋu la ƒe ŋkɔ:",
+  "veg.tpl.default": "KPɔɖeŋu %s",
+  "veg.tpl.saved": "Wodzra ɖo",
+  "veg.tpl.card": "KPɔɖeŋu ŋutigba — tsi ƒe eye wò zazã",
 
   "credit.title": "Ŋlɔla: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cukrová trstina",
   "veg.name.seagrass_32x": "Morská tráva",
   "veg.weight": "Váha (frekvencia padania)",
+  "veg.reset": "Obnoviť",
+  "veg.reset.title": "Obnoviť predvolené nastavenia vegetácie (vlastné rastliny sa neodstránia, ale zruší sa ich zaškrtnutie)",
+  "veg.tpl.save": "Uložiť šablonu",
+  "veg.tpl.title": "Uložiť všetky nastavenia vegetácie do „Moje rastliny“ ako šablónu",
+  "veg.tpl.prompt": "Názў šablóny:",
+  "veg.tpl.default": "Šablóna %s",
+  "veg.tpl.saved": "Uložené",
+  "veg.tpl.card": "Šablóna vegetácie — kliknutím použijete",
 
   "credit.title": "Autor: %s",
 

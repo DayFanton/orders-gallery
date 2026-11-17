@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Lehlaka la tsoekere",
   "veg.name.seagrass_32x": "Morafo oa lewatle",
   "veg.weight": "Boima (maqhubu a ho oela)",
+  "veg.reset": "Khutlisetsa",
+  "veg.reset.title": "Khutlisetsa li-setting tsa limela ho tsa kamehla (limela tsa tloaelo ha li hlakoloe, empa li-checkbox tsa tsona lia tlosoa)",
+  "veg.tpl.save": "Boloka mohlala",
+  "veg.tpl.title": "Boloka li-setting tsohle tsa limela ho \"Limela Taka\" e le mohlala",
+  "veg.tpl.prompt": "Lebitso la mohlala:",
+  "veg.tpl.default": "Mohlala %s",
+  "veg.tpl.saved": "Bolokiloe",
+  "veg.tpl.card": "Mohlala wa limela — tobetsa ho kenya tshebetsong",
 
   "credit.title": "Mongoli: %s",
 

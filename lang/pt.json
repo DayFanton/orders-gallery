@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cana-de-açúcar",
   "veg.name.seagrass_32x": "Erva-marinha",
   "veg.weight": "Peso (frequência de queda)",
+  "veg.reset": "Redefinir",
+  "veg.reset.title": "Redefinir as configurações de vegetação para o padrão (as plantas personalizadas não são excluídas, mas suas caixas de seleção são desmarcadas)",
+  "veg.tpl.save": "Salvar modelo",
+  "veg.tpl.title": "Salvar todas as configurações de vegetação em \"Minhas Plantas\" como modelo",
+  "veg.tpl.prompt": "Nome do modelo:",
+  "veg.tpl.default": "Modelo %s",
+  "veg.tpl.saved": "Salvo",
+  "veg.tpl.card": "Modelo de vegetação — clique para aplicar",
 
   "credit.title": "Autor: %s",
 

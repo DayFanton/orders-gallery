@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Shaqarkaraa",
   "veg.name.seagrass_32x": "Caffee galaana",
   "veg.weight": "Ulfaatina (haala bu'insa)",
+  "veg.reset": "Haaraa",
+  "veg.reset.title": "Qindaa'ina biqiltuu gara duratti deebisi (biqiltuun dhuunfaa hin haqaman, garuu mallattoon isaanii ni fuudhama)",
+  "veg.tpl.save": "Fakkiyii qabadsiisi",
+  "veg.tpl.title": "Qindaa'ina biqiltuu hundaa \"Biqiltuu Koo\" keessatti akka fakkiitti qabadsiisi",
+  "veg.tpl.prompt": "Maqaa fakkiichaa:",
+  "veg.tpl.default": "Fakkiifaa %s",
+  "veg.tpl.saved": "Qabate",
+  "veg.tpl.card": "Fakkiifaa biqiltuu — hojiirra oolchuuf cuqaasi",
 
   "credit.title": "Barreessaa: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Şəkər qamışı",
   "veg.name.seagrass_32x": "Dəniz otu",
   "veg.weight": "Çəki (düşmə tezliyi)",
+  "veg.reset": "Sıfırla",
+  "veg.reset.title": "Bitki örtüyü parametrlərini suşmaya qaytarın (ẍüsusi bitkilər silinmir, lakin onların işarələri ləğv edilir)",
+  "veg.tpl.save": "Şablonu saxla",
+  "veg.tpl.title": "Bütün bitki örtüyü parametrlərini \"Mənim bitkilərim\" bölməsinə şablon kimi saxla",
+  "veg.tpl.prompt": "Şablon adı:",
+  "veg.tpl.default": "Şablon %s",
+  "veg.tpl.saved": "Saxlanıldı",
+  "veg.tpl.card": "Bitki örtüyü şablonu — tətbiq etmək üçün klikləyin",
 
   "credit.title": "Müəllif: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Trestie de zahăr",
   "veg.name.seagrass_32x": "Iarbă de mare",
   "veg.weight": "Pondere (cât de des pică)",
+  "veg.reset": "Reseta",
+  "veg.reset.title": "Reveniți la setările implicite pentru vegetație (plantele personalizate nu sunt șterse, dar casetelor de selectare li se anulează bifarea)",
+  "veg.tpl.save": "Salvați șablonul",
+  "veg.tpl.title": "Salvați toate setările de vegetație în „Plantele mele” ca șablon",
+  "veg.tpl.prompt": "Numele șablonului:",
+  "veg.tpl.default": "Șablonul %s",
+  "veg.tpl.saved": "Salvat",
+  "veg.tpl.card": "Șablon de vegetație — faceți clic pentru a aplica",
 
   "credit.title": "Autor: %s",
 

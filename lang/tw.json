@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Akyene",
   "veg.name.seagrass_32x": "Poano ahaban",
   "veg.weight": "Sɛbe (bere a ɛto)",
+  "veg.reset": "San yɛ",
+  "veg.reset.title": "San yɛ nnua nhyehyɛɛ no sɛnea ɛte wɔ mfitiase no (wɔnyi wo ankasa nnua no fi hɔ, nanso wosiw so nkrataa no fi hɔ)",
+  "veg.tpl.save": "Fa nhwɛso no sie",
+  "veg.tpl.title": "Fa nnua nhyehyɛɛ nyinaa sie \"Me Nnua\" mu sɛ nhwɛso",
+  "veg.tpl.prompt": "Nhwɛso no din:",
+  "veg.tpl.default": "Nhwɛso %s",
+  "veg.tpl.saved": "Wɔsie",
+  "veg.tpl.card": "Nnua nhwɛso — kɔ so na fa di dwuma",
 
   "credit.title": "Kyerɛwfo: %s",
 

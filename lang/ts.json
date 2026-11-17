@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Nsinya wo tsokombela",
   "veg.name.seagrass_32x": "Byanyi bya lwandle",
   "veg.weight": "Vuleki (ku fika ka nkarhi)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Reset swipimo swa swimila swa le hansi (swimila swa wena a swi hleriwi, kambe swibokisi swa swona swi ntshiwa)",
+  "veg.tpl.save": "Hlayisa xikombiso",
+  "veg.tpl.title": "Hlayisa swipimo hinkwaswo swa swimila eka \"Swimila Swa Mina\" tanihi xikombiso",
+  "veg.tpl.prompt": "Vito ra xikombiso:",
+  "veg.tpl.default": "Xikombiso %s",
+  "veg.tpl.saved": "Ku hlayisiwile",
+  "veg.tpl.card": "Xikombiso xa swimila — tinya ku tirhisa",
 
   "credit.title": "Mutsari: %s",
 

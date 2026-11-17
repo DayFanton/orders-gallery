@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Xam-xam",
   "veg.name.seagrass_32x": "Xaj bu bëj",
   "veg.weight": "Dole (ni mu koy am)",
+  "veg.reset": "Dellusi",
+  "veg.reset.title": "Dellusi sàntas yi ci fi mu nekkoon (doom yi doonu ñakk, waaye dërët yi dinañu leen di sañ)",
+  "veg.tpl.save": "Dugalal nataal bi",
+  "veg.tpl.title": "Dugalal sàntas yi ci biir \"Doom Yi Ma\" ngir mu nekk nataal",
+  "veg.tpl.prompt": "Turu nataal bi:",
+  "veg.tpl.default": "Nataal bi %s",
+  "veg.tpl.saved": "Dugalal na",
+  "veg.tpl.card": "Nataal bi ci doom yi — bëtsal ngir jëfandikoo ko",
 
   "credit.title": "Bindkat: %s",
 

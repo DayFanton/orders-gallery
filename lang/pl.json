@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Trzcina cukrowa",
   "veg.name.seagrass_32x": "Trawa morska",
   "veg.weight": "Waga (częstotliwość wypadania)",
+  "veg.reset": "Resetuj",
+  "veg.reset.title": "Przywróć domyślne ustawienia roślinności (własne rośliny nie są usuwane, ale ich zaznaczenia są odznaczane)",
+  "veg.tpl.save": "Zapisz szablon",
+  "veg.tpl.title": "Zapisz wszystkie ustawienia roślinności w „Moje rośliny” jako szablon",
+  "veg.tpl.prompt": "Nazwa szablonu:",
+  "veg.tpl.default": "Szablon %s",
+  "veg.tpl.saved": "Zapisano",
+  "veg.tpl.card": "Szablon roślinności — kliknij, aby zastosować",
 
   "credit.title": "Autor: %s",
 

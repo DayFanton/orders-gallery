@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Shokoriga",
   "veg.name.seagrass_32x": "Abba qora",
   "veg.weight": "Ullo (shiiqqiyo wode)",
+  "veg.reset": "Simma",
+  "veg.reset.title": "Simma biqilate pirshshuwa kumanchcha qoppa (nena biqilati xubettokku, shin ayiimetu qollettidinos)",
+  "veg.tpl.save": "Maayuwa wodi",
+  "veg.tpl.title": "Ubba biqilate pirshshuwa \"Ta Biqilati\" giddo maayuwa wodi",
+  "veg.tpl.prompt": "Maayuwa sunttaa:",
+  "veg.tpl.default": "Maayuwa %s",
+  "veg.tpl.saved": "Maayettisabeekko",
+  "veg.tpl.card": "Maayuwa biqilate — shisha gakkana",
 
   "credit.title": "Ayissiya: %s",
 

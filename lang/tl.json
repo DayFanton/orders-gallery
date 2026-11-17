@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Damo sa dagat",
   "veg.weight": "Timbang (dalas ng pagpatak)",
+  "veg.reset": "I-reset",
+  "veg.reset.title": "I-reset ang mga setting ng halaman sa default (ang mga custom na halaman ay hindi tinatanggal, ngunit inaalis ang tsek sa mga ito)",
+  "veg.tpl.save": "I-save ang template",
+  "veg.tpl.title": "I-save ang lahat ng setting ng halaman sa \"Aking Mga Halaman\" bilang template",
+  "veg.tpl.prompt": "Pangalan ng template:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Na-save na",
+  "veg.tpl.card": "Template ng halaman — mag-click upang ilapat",
 
   "credit.title": "May-akda: %s",
 

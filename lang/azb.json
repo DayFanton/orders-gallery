@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "شکر قامییشی",
   "veg.name.seagrass_32x": "دنیز اوتی",
   "veg.weight": "چاکی (دوشمه سıklığı)",
+  "veg.reset": "Sıfırlama",
+  "veg.reset.title": "Bitki tənzimləmələrini əvvəlki halına qaytarın (şəxsi bitkilər silinmir, lakin onların işarələri ləğv edilir)",
+  "veg.tpl.save": "Şablonu saxla",
+  "veg.tpl.title": "Bütün bitki tənzimləmələrini \"Mənim bitkilərim\"ə şablon kimi saxla",
+  "veg.tpl.prompt": "Şablon adı:",
+  "veg.tpl.default": "Şablon %s",
+  "veg.tpl.saved": "Saxlanıldı",
+  "veg.tpl.card": "Bitki şablonu — tətbiq etmək üçün klikləyin",
 
   "credit.title": "یازیچی: %s",
 

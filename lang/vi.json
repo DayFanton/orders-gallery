@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cây mía",
   "veg.name.seagrass_32x": "Cỏ biển",
   "veg.weight": "Trọng số (tần suất xuất hiện)",
+  "veg.reset": "Đặt lại",
+  "veg.reset.title": "Đặt lại cài đặt thực vật về mặc định (cây trồng tùy chỉnh không bị xóa, nhưng dấu tích của chúng bị bỏ chọn)",
+  "veg.tpl.save": "Lưu mẫu",
+  "veg.tpl.title": "Lưu tất cả cài đặt thực vật vào \"Cây trồng của tôi\" dưới dạng mẫu",
+  "veg.tpl.prompt": "Tên mẫu:",
+  "veg.tpl.default": "Mẫu %s",
+  "veg.tpl.saved": "Đã lưu",
+  "veg.tpl.card": "Mẫu thực vật — nhấp để áp dụng",
 
   "credit.title": "Tác giả: %s",
 

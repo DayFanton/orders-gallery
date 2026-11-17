@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Suhkruroog",
   "veg.name.seagrass_32x": "Mererohi",
   "veg.weight": "Kaal (kukkumissagedus)",
+  "veg.reset": "Lähtesta",
+  "veg.reset.title": "Lähtesta taimestiku sätted vaikeväärtustele (kohandatud taimi ei kustutata, kuid nende linnukesed eemaldatakse)",
+  "veg.tpl.save": "Salvesta mall",
+  "veg.tpl.title": "Salvesta kõik taimestiku seaded mallina jaotisesse \"Minu taimed",
+  "veg.tpl.prompt": "Malli nimi:",
+  "veg.tpl.default": "Mall %s",
+  "veg.tpl.saved": "Salvestatud",
+  "veg.tpl.card": "Taimestiku mall – klõpsake rakendamiseks",
 
   "credit.title": "Autor: %s",
 

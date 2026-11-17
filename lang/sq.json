@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Kallam sheqeri",
   "veg.name.seagrass_32x": "Bari i detit",
   "veg.weight": "Pesha (shpeshtësia e rënies)",
+  "veg.reset": "Rivendos",
+  "veg.reset.title": "Rivendos cilësimet e bimësisë në parazgjedhje (bimët e personalizuara nuk fshihen, por u hiqen kutitë e zgjedhjes)",
+  "veg.tpl.save": "Ruaj modelin",
+  "veg.tpl.title": "Ruaj të gjitha cilësimet e bimësisë te \"Bimët e mia\" si model",
+  "veg.tpl.prompt": "Emri i modelit:",
+  "veg.tpl.default": "Model %s",
+  "veg.tpl.saved": "Ruajtur",
+  "veg.tpl.card": "Model i bimësisë — kliko për të aplikuar",
 
   "credit.title": "Autori: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Suket segara",
   "veg.weight": "Bobot (frekuensi metu)",
+  "veg.reset": "Setel ulang",
+  "veg.reset.title": "Reset setelan vegetasi menyang standar (tanduran kustom ora dibusak, nanging centange dibusak)",
+  "veg.tpl.save": "Simpen cithakan",
+  "veg.tpl.title": "Simpen kabeh setelan vegetasi menyang \"Tanaman Kula\" minangka cithakan",
+  "veg.tpl.prompt": "Jeneng cithakan:",
+  "veg.tpl.default": "Cithakan %s",
+  "veg.tpl.saved": "Disimpen",
+  "veg.tpl.card": "Cithakan vegetasi — klik kanggo ngetrapake",
 
   "credit.title": "Penulis: %s",
 

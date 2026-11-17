@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "사탕수수",
   "veg.name.seagrass_32x": "해초",
   "veg.weight": "가중치 (드랍 빈도)",
+  "veg.reset": "재설정",
+  "veg.reset.title": "초목 설정을 기본값으로 복원 (커스텀 식물은 삭제되지 않지만 체크표시는 해제됨)",
+  "veg.tpl.save": "템플릿 저장",
+  "veg.tpl.title": "모든 초목 설정을 '내 식물'에 템플릿으로 저장",
+  "veg.tpl.prompt": "템플릿 이름:",
+  "veg.tpl.default": "템플릿 %s",
+  "veg.tpl.saved": "저장됨",
+  "veg.tpl.card": "초목 템플릿 — 적용하려면 클릭하세요",
 
   "credit.title": "저자: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Balili sa dagat",
   "veg.weight": "Timbang (kadaghan sa pagkahulog)",
+  "veg.reset": "I-reset",
+  "veg.reset.title": "I-reset ang mga setting sa tanom ngadto sa default (ang mga custom nga tanom dili mapapas, pero ang ilang mga check box tangtangon)",
+  "veg.tpl.save": "I-save ang template",
+  "veg.tpl.title": "I-save ang tanang setting sa tanom ngadto sa \"Akong mga Tanom\" isip template",
+  "veg.tpl.prompt": "Ngalan sa template:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Na-save na",
+  "veg.tpl.card": "Template sa tanom — i-klik aron magamit",
 
   "credit.title": "Awtor: %s",
 

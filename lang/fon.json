@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Kɔlɔ",
   "veg.name.seagrass_32x": "Gbɔ̌ tɔ̀ ji tɔn",
   "veg.weight": "Wuzuzu (le é ɖò tite gbɔn)",
+  "veg.reset": "Sɔ́ do tɛn",
+  "veg.reset.title": "Sɔ́ nǔ e kò wà ɖò nǔ e nɔ nɔ tɛn tɛn mɛ lɛ e dó tɛn yetɔn mɛ (nǔ e aɖé lɛ e nɔ sɔ́ ɛ ǎ, amɔ́ xɛ lɛ nɔ sɔ́ ɛ sín tɛn mɛ)",
+  "veg.tpl.save": "Xò nǔɖe ɖò tɛn mɛ",
+  "veg.tpl.title": "Sɔ́ nǔ e kò wà ɖò nǔ e nɔ nɔ tɛn tɛn mɛ lɛ bǐ ɖò \"Nǔ e nɔ nɔ tɛn tɛn ce lɛ\" mɛ bo dó nǔɖe ɖò tɛn mɛ",
+  "veg.tpl.prompt": "Nyikɔ nǔɖe tɔn:",
+  "veg.tpl.default": "Nǔɖe %s",
+  "veg.tpl.saved": "E xò nǔɖe",
+  "veg.tpl.card": "Nǔɖe ɖò tɛn mɛ — kponyɔ bo zã",
 
   "credit.title": "Wemaŋlótọ: %s",
 

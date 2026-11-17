@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cansen siwgr",
   "veg.name.seagrass_32x": "Glaswellt môr",
   "veg.weight": "Pwysau (amlder gollwng)",
+  "veg.reset": "Ailosod",
+  "veg.reset.title": "Ailosod gosodiadau llystyfiant i'r rhagosodiad (nid yw planhigion arferol yn cael eu dileu, ond mae eu marciau siec yn cael eu tynnu)",
+  "veg.tpl.save": "Cadw'r templed",
+  "veg.tpl.title": "Cadw'r holl osodau llystyfiant yn \"Fy Mlanhigion\" fel templed",
+  "veg.tpl.prompt": "Enw'r templed:",
+  "veg.tpl.default": "Templed %s",
+  "veg.tpl.saved": "Wedi'i gadw",
+  "veg.tpl.card": "Templed llystyfiant — cliciwch i'w ddefnyddio",
 
   "credit.title": "Awdur: %s",
 

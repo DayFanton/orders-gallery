@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "甘蔗",
   "veg.name.seagrass_32x": "海草",
   "veg.weight": "权重（掉落频率）",
+  "veg.reset": "重置",
+  "veg.reset.title": "将植被设置恢复为默认值（自定义植物不会被删除，但其复選框会被取消勾选）",
+  "veg.tpl.save": "保存模板",
+  "veg.tpl.title": "将所有植被设置保存为模板到“我的植物",
+  "veg.tpl.prompt": "模板名称：",
+  "veg.tpl.default": "模板 %s",
+  "veg.tpl.saved": "已保存",
+  "veg.tpl.card": "植被模板 — 点击以应用",
 
   "credit.title": "作者：%s",
 

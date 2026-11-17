@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Canna da zucchero",
   "veg.name.seagrass_32x": "Erba marina",
   "veg.weight": "Peso (frequenza di drop)",
+  "veg.reset": "Ripristina",
+  "veg.reset.title": "Ripristina le impostazioni della vegetazione predefinite (le piante personalizzate non vengono eliminate ma i segni di spunta vengono rimossi)",
+  "veg.tpl.save": "Salva modello",
+  "veg.tpl.title": "Salva tutte le impostazioni della vegetazione in \"Le mie piante\" come modello",
+  "veg.tpl.prompt": "Nome del modello:",
+  "veg.tpl.default": "Modello %s",
+  "veg.tpl.saved": "Salvato",
+  "veg.tpl.card": "Modello di vegetazione — clicca per applicare",
 
   "credit.title": "Autore: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Rumput laut",
   "veg.weight": "Berat (kekerapan jatuh)",
+  "veg.reset": "Tetapkan semula",
+  "veg.reset.title": "Tetapkan semula tetapan vegetasi kepada lalai (tumbuhan tersuai tidak dipadamkan, tetapi tanda semaknya dinyahpilih)",
+  "veg.tpl.save": "Simpan templat",
+  "veg.tpl.title": "Simpan semua tetapan vegetasi ke \"Tumbuhan Saya\" sebagai templat",
+  "veg.tpl.prompt": "Nama templat:",
+  "veg.tpl.default": "Templat %s",
+  "veg.tpl.saved": "Disimpan",
+  "veg.tpl.card": "Templat vegetasi — klik untuk guna",
 
   "credit.title": "Penulis: %s",
 

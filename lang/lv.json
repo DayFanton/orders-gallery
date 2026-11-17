@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Cukurniedre",
   "veg.name.seagrass_32x": "Jūras zāle",
   "veg.weight": "Svars (krišanas biežums)",
+  "veg.reset": "Atiestatīt",
+  "veg.reset.title": "Atiestatīt veģetācijas iestatījumus uz noklusējumu (pielāgotie augi netiek dzēsti, bet tiem tiek noņemtas atzīmes)",
+  "veg.tpl.save": "Saglabāt veidni",
+  "veg.tpl.title": "Saglabāt visus veģetācijas iestatījumus sadaļā \"Manas augu\" kā veidni",
+  "veg.tpl.prompt": "Veidnes nosaukums:",
+  "veg.tpl.default": "Veidne %s",
+  "veg.tpl.saved": "Saglabāts",
+  "veg.tpl.card": "Veģetācijas veidne — noklikšķiniet, lai lietotu",
 
   "credit.title": "Autors: %s",
 

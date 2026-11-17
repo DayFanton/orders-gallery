@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Cána siúcra",
   "veg.name.seagrass_32x": "Féar mara",
   "veg.weight": "Meáchan (minicíocht titim)",
+  "veg.reset": "Athshocraigh",
+  "veg.reset.title": "Athshocraigh socraírásí fásra go dtí an réamhshocrú (ní scriostar plandaí saincheaptha, ach baintear a seicmharcanna)",
+  "veg.tpl.save": "Sábháil teimpléad",
+  "veg.tpl.title": "Sábháil gach socrú fásra i \"Mo Plandaí\" mar theimpléad",
+  "veg.tpl.prompt": "Ainm an teimpléid:",
+  "veg.tpl.default": "Teimpléad %s",
+  "veg.tpl.saved": "Sábháilte",
+  "veg.tpl.card": "Teimpléad fásra — cliceáil chun cur i bhfeidhm",
 
   "credit.title": "Údar: %s",
 

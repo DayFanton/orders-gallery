@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Şeker kamışı",
   "veg.name.seagrass_32x": "Deniz yosunu",
   "veg.weight": "Ağırlık (düşme sıklığı)",
+  "veg.reset": "Sıfırla",
+  "veg.reset.title": "Bitki örtüsü ayarlarını varsayılana sıfırla (özel bitkiler silinmez, ancak tikleri kaldırılır)",
+  "veg.tpl.save": "Şablonu kaydet",
+  "veg.tpl.title": "Tüm bitki örtüsü ayarlarını \"Bitkilerim\" altına şablon olarak kaydet",
+  "veg.tpl.prompt": "Şablon adı:",
+  "veg.tpl.default": "Şablon %s",
+  "veg.tpl.saved": "Kaydedildi",
+  "veg.tpl.card": "Bitki örtüsü şablonu — uygulamak için tıklayın",
 
   "credit.title": "Yazar: %s",
 

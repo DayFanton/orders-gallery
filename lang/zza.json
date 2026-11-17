@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Qamışê şekirî",
   "veg.name.seagrass_32x": "Çayiro deryayî",
   "veg.weight": "Giran (çend marê vecîno)",
+  "veg.reset": "Sefke",
+  "veg.reset.title": "Ayarê nebatî bin deyne halê xo yo verên (nebatê xwu nê kemiyenê, hema nişanê înan yenê wedarıtene)",
+  "veg.tpl.save": "Şablonî bigêre",
+  "veg.tpl.title": "Pêro ayarê nebatî deyne \"Nebatê Mi\" sey şablonî",
+  "veg.tpl.prompt": "Name şablonî:",
+  "veg.tpl.default": "Şablon %s",
+  "veg.tpl.saved": "Biya bi",
+  "veg.tpl.card": "Şablonê nebatî — bın ser de ke ke bıkarbiyero",
 
   "credit.title": "Nusxekar: %s",
 

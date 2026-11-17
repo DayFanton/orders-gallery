@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Midhanyi",
   "veg.name.seagrass_32x": "Lum mar nam",
   "veg.weight": "Pimo (nyalgo mar podho)",
+  "veg.reset": "Ket gi maber",
+  "veg.reset.title": "Ket chenro mag yien motelo e kaka ne nitie mokwongo (yien moko magi ok okwan kendo ok giwe, to kido magi gichopo)",
+  "veg.tpl.save": "Ket ranyisi",
+  "veg.tpl.title": "Ket chenro mag yien duto e \"Yien Mara\" kaka ranyisi",
+  "veg.tpl.prompt": "Nyinj ranyisi:",
+  "veg.tpl.default": "Ranyisi %s",
+  "veg.tpl.saved": "Oket",
+  "veg.tpl.card": "Ranyisi mag yien — dhi miyo mondo itigo",
 
   "credit.title": "Jawinjoga: %s",
 

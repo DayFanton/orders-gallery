@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Caña de azúcar",
   "veg.name.seagrass_32x": "Hierba marina",
   "veg.weight": "Peso (frecuencia de aparición)",
+  "veg.reset": "Restablecer",
+  "veg.reset.title": "Restablecer la configuración predeterminada de la vegetación (las plantas personalizadas no se eliminan, pero se desmarcan sus casillas)",
+  "veg.tpl.save": "Guardar plantilla",
+  "veg.tpl.title": "Guardar toda la configuración de vegetación en \"Mis plantas\" como plantilla",
+  "veg.tpl.prompt": "Nombre de la plantilla:",
+  "veg.tpl.default": "Plantilla %s",
+  "veg.tpl.saved": "Guardado",
+  "veg.tpl.card": "Plantilla de vegetación — haz clic para aplicar",
 
   "credit.title": "Autor: %s",
 

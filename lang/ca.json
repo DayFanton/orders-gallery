@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Canya de sucre",
   "veg.name.seagrass_32x": "Herba marina",
   "veg.weight": "Pes (freqüència de caiguda)",
+  "veg.reset": "Restablir",
+  "veg.reset.title": "Restablir la configuració de la vegetació per defecte (les plantes personalitzades no s'eliminen, però es desmarquen les seves caselles)",
+  "veg.tpl.save": "Desar la plantilla",
+  "veg.tpl.title": "Desar tota la configuració de la vegetació a \"Les meves plantes\" com a plantilla",
+  "veg.tpl.prompt": "Nom de la plantilla:",
+  "veg.tpl.default": "Plantilla %s",
+  "veg.tpl.saved": "Desa",
+  "veg.tpl.card": "Plantilla de vegetació — fes clic per aplicar-la",
 
   "credit.title": "Autor: %s",
 

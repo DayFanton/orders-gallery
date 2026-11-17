@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Nsi ya sukali",
   "veg.name.seagrass_32x": "Bubu ya mbu",
   "veg.weight": "Mfunu (mpova ya kubwila)",
+  "veg.reset": "Vutula",
+  "veg.reset.title": "Vutula minsiku ya nti na mutindu ya ntete (nti ya nge mosi ke kufwa ve, kansi bidilu na yau ke katula)",
+  "veg.tpl.save": "Bumba kibula",
+  "veg.tpl.title": "Vutula minsiku yonso ya nti na \"Nti Na Mono\" bonso kibula",
+  "veg.tpl.prompt": "Kombo ya kibula:",
+  "veg.tpl.default": "Kibula %s",
+  "veg.tpl.saved": "Kubumbama",
+  "veg.tpl.card": "Kibula ya nti — fina sambu na kusadila",
 
   "credit.title": "Msoniki: %s",
 

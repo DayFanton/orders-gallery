@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Ocilonga cosukali",
   "veg.name.seagrass_32x": "Ocipuka cocelamo",
   "veg.weight": "Ocilemo (okuvela kweciwa)",
+  "veg.reset": "Kuja",
+  "veg.reset.title": "Kuja ovilongiso viokuti vyovimela kovina viokufa (ovimela viove ka vi seswa, pole ovilongiso viavo vi tupwa)",
+  "veg.tpl.save": "Kuva ocindiko",
+  "veg.tpl.title": "Kuja ovilongiso viosi viovimela \"Ovimela Viange\" ndocindiko",
+  "veg.tpl.prompt": "Ocivelo cocindiko:",
+  "veg.tpl.default": "Ocindiko %s",
+  "veg.tpl.saved": "Yakikiwa",
+  "veg.tpl.card": "Ocindiko covimela — fyama oco ulongise",
 
   "credit.title": "Umoneki: %s",
 

@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Utshani basolwandle",
   "veg.weight": "Ulemu (ndakai sya kugwa)",
+  "veg.reset": "Zoux nyei taux",
+  "veg.reset.title": "Zoux nyei taux fingx nyei mber (maiv zoux-zingx nyei bua, mv baac maiv mber)",
+  "veg.tpl.save": "Hiuv daaih-bua",
+  "veg.tpl.title": "Hiuv daaih-bua nyei fingx daaih \"Yie Nyei Bua\" zoux daaih-bua",
+  "veg.tpl.prompt": "Bua nyei mbuox:",
+  "veg.tpl.default": "Bua nyei %s",
+  "veg.tpl.saved": "Hiuv daaih",
+  "veg.tpl.card": "Bua nyei fingx — hnyangv zoux",
 
   "credit.title": "Mwandiki: %s",
 

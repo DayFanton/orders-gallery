@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Šećerna trska",
   "veg.name.seagrass_32x": "Morska trava",
   "veg.weight": "Težina (učestalost ispadanja)",
+  "veg.reset": "Resetiraj",
+  "veg.reset.title": "Vrati postavke vegetacije na zadano (prilagođene biljke se ne brišu, ali im se poništavaju kvačice)",
+  "veg.tpl.save": "Spremi predložak",
+  "veg.tpl.title": "Spremi sve postavke vegetacije u \"Moje biljke\" kao predložak",
+  "veg.tpl.prompt": "Naziv predloška:",
+  "veg.tpl.default": "Predložak %s",
+  "veg.tpl.saved": "Spremljeno",
+  "veg.tpl.card": "Predložak vegetacije — kliknite za primjenu",
 
   "credit.title": "Autor: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Suikerriet",
   "veg.name.seagrass_32x": "Zeegras",
   "veg.weight": "Gewicht (drop frequentie)",
+  "veg.reset": "Resetten",
+  "veg.reset.title": "Vegetatie-instellingen terugzetten naar standaard (aangepaste planten worden niet verwijderd, maar vinkjes worden uitgeschakeld)",
+  "veg.tpl.save": "Sjabloon opslaan",
+  "veg.tpl.title": "Sla alle vegetatie-instellingen op in \"Mijn planten\" als sjabloon",
+  "veg.tpl.prompt": "Sjablonennaam:",
+  "veg.tpl.default": "Sjabloon %s",
+  "veg.tpl.saved": "Opgeslagen",
+  "veg.tpl.card": "Vegetatiesjabloon — klik om toe te passen",
 
   "credit.title": "Auteur: %s",
 

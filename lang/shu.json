@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "قصب السكر",
   "veg.name.seagrass_32x": "عشب البحر",
   "veg.weight": "الوزن (معدل السقوط)",
+  "veg.reset": "I’ada zabt",
+  "veg.reset.title": "Raddi tartīb al-nabatat ila al-asli (al-nabatat al-khassa ma btitmahs, bas al-alamat btitshil)",
+  "veg.tpl.save": "Hifz an-namuzaj",
+  "veg.tpl.title": "Hifz kull tartibat al-nabatat fi \"Nabatati\" ka namuzaj",
+  "veg.tpl.prompt": "Ism an-namuzaj:",
+  "veg.tpl.default": "An-namuzaj %s",
+  "veg.tpl.saved": "Tam hifzu",
+  "veg.tpl.card": "An-namuzaj al-nabati — unqur litatbiq",
 
   "credit.title": "المؤلف: %s",
 

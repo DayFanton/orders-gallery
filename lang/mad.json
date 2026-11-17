@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Tebu",
   "veg.name.seagrass_32x": "Jukut ranomena",
   "veg.weight": "Bobot (kalandefan fivoahana)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Reset pangaturan vegetasi ka standar (taneman kustom ta' èpobhas, tapè centangnga èbuwang)",
+  "veg.tpl.save": "Simpen cètakan",
+  "veg.tpl.title": "Simpen kabèh pangaturan vegetasi ka \"Taneman Kaul\" mènangka cithakan",
+  "veg.tpl.prompt": "Nyama cètakan:",
+  "veg.tpl.default": "Cètakan %s",
+  "veg.tpl.saved": "Èsimpen",
+  "veg.tpl.card": "Cètakan vegetasi — klik ka'angghuy mèncaraghi",
 
   "credit.title": "Panulis: %s",
 

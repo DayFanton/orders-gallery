@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Kĩkandi",
   "veg.name.seagrass_32x": "Nyasi ya ikuni",
   "veg.weight": "Ũito (kĩla kĩvaka)",
+  "veg.reset": "Syoka",
+  "veg.reset.title": "Syoka mĩkalĩlo ya mĩmera ĩtuĩke ya mbele (mĩmera ya kĩtumi tũtiheanwo, no tũtwanio twayo nĩ tũkuatwo)",
+  "veg.tpl.save": "Ika nzia",
+  "veg.tpl.title": "Syoka mĩkalĩlo yothe ya mĩmera thĩini wa \"Mĩmera Yakwa\" ta nzia",
+  "veg.tpl.prompt": "Ĩtwa ya nzia:",
+  "veg.tpl.default": "Nzia %s",
+  "veg.tpl.saved": "Syombwa",
+  "veg.tpl.card": "Nzia ya mĩmera — thondeka niguo ũtumĩre",
 
   "credit.title": "Mwandĩki: %s",
 

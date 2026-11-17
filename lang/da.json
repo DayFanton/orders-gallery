@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Sukkerør",
   "veg.name.seagrass_32x": "Sjøgræs",
   "veg.weight": "Vægt (drop hyppighed)",
+  "veg.reset": "Nulstil",
+  "veg.reset.title": "Nulstil vegetationsindstillinger til standard (tilpassede planter slettes ikke, men deres markeringer fjernes)",
+  "veg.tpl.save": "Gem skabelon",
+  "veg.tpl.title": "Gem alle vegetationsindstillinger i \"Mine planter\" som en skabelon",
+  "veg.tpl.prompt": "Skabelonnavn:",
+  "veg.tpl.default": "Skabelon %s",
+  "veg.tpl.saved": "Gemt",
+  "veg.tpl.card": "Vegetationsskabelon — klik for at anvende",
 
   "credit.title": "Forfatter: %s",
 

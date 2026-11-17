@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Nzimbe",
   "veg.name.seagrass_32x": "Lusilu lwa mnyanja",
   "veg.weight": "Ulemu (ndakai sya kugwa)",
+  "veg.reset": "Weche",
+  "veg.reset.title": "Weche ukatite wa miti pa kalakala (miti jino jao jikusigwa tayika, nambo matiki gakwe gakusigwa)",
+  "veg.tpl.save": "Sungani chisanjo",
+  "veg.tpl.title": "Sungani ukatite wosope wa miti pa \"Miti Jangu\" mpaka chisanjo",
+  "veg.tpl.prompt": "Ndamo ja chisanjo:",
+  "veg.tpl.default": "Chisanjo %s",
+  "veg.tpl.saved": "Chisanjo chikusigwa",
+  "veg.tpl.card": "Chisanjo cha miti — dinani kuti muwonesye",
 
   "credit.title": "Mlembi: %s",
 

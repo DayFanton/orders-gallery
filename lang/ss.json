@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Likhoba leswekati",
   "veg.name.seagrass_32x": "Tjani laselwandle",
   "veg.weight": "Kusebenta (kuvela kwalesento)",
+  "veg.reset": "Citsa",
+  "veg.reset.title": "Buyisela tilungiselelo tetitjalo kutimeleliso (titjalo tetinhlobo letikhethekile atisulwa, kodwa tibhokisi tato tiyasiswa)",
+  "veg.tpl.save": "Gcina siphetfo",
+  "veg.tpl.title": "Gcina tonkhe tilungiselelo tetitjalo ku-\"Titjalo Tami\" njengesiphetfo",
+  "veg.tpl.prompt": "Igama lesiphetfo:",
+  "veg.tpl.default": "Siphetfo %s",
+  "veg.tpl.saved": "Igciniwe",
+  "veg.tpl.card": "Siphetfo setitjalo — cofa kusebentisa",
 
   "credit.title": "Umbhali: %s",
 

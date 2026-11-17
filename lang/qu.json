@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Q'achu waylla",
   "veg.name.seagrass_32x": "Qucha q'achu",
   "veg.weight": "K'uskiynin (mayk'aqchus chayamun)",
+  "veg.reset": "Kutichiy",
+  "veg.reset.title": "Sach'a-sach'a churaykunata qallariyman kutichiy (kikinpa sach'akunanqa manam chinkanchu, ichaqa akllanankunam pichakun)",
+  "veg.tpl.save": "Plantillata waqaychay",
+  "veg.tpl.title": "Tukuy sach'a-sach'a churaykunata \"Sapallay Sach'akuna\"man plantillashiq hina waqaychay",
+  "veg.tpl.prompt": "Plantillap sutin:",
+  "veg.tpl.default": "Plantilla %s",
+  "veg.tpl.saved": "Waqaychasqa",
+  "veg.tpl.card": "Sach'a-sach'a plantilla — ñit'iy churaykunapaq",
 
   "credit.title": "Qillqaq: %s",
 

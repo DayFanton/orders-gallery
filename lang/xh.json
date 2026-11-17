@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Imbiza yeswekile",
   "veg.name.seagrass_32x": "Utshani baselwandle",
   "veg.weight": "Ubunzima (ukuhla rhoo)",
+  "veg.reset": "Seta kabusha",
+  "veg.reset.title": "Seta ngokutsha iisetingi zezityalo zibe zezisemgangathweni (izityalo ezingqamanayo azicinywa, kodwa iibhokisi zokukhangela ziyasuswa)",
+  "veg.tpl.save": "Gcina isicatshulwa",
+  "veg.tpl.title": "Gcina zonke iisetingi zezityalo ku-\"Izityalo Zam\" njengesicatshulwa",
+  "veg.tpl.prompt": "Igama lesicatshulwa:",
+  "veg.tpl.default": "Isicatshulwa %s",
+  "veg.tpl.saved": "Igciniwe",
+  "veg.tpl.card": "Isicatshulwa sezityalo — cofa ukuze ufake",
 
   "credit.title": "Umbhali: %s",
 

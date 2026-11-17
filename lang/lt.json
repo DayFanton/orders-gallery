@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Cukranendrė",
   "veg.name.seagrass_32x": "Jūros žolė",
   "veg.weight": "Svoris (kritimo dažnis)",
+  "veg.reset": "Atstatīt",
+  "veg.reset.title": "Atstatyti augmenijos nustatymus į numatytuosius (pasirinktiniai augalai neištrinami, bet nuimami jų varnelės)",
+  "veg.tpl.save": "Išsaugoti šabloną",
+  "veg.tpl.title": "Išsaugoti visus augmenijos nustatymus „Mano augalai“ kaip šabloną",
+  "veg.tpl.prompt": "Šablono pavadinimas:",
+  "veg.tpl.default": "Šablonas %s",
+  "veg.tpl.saved": "Išsaugota",
+  "veg.tpl.card": "Augmenijos šablonas — spustelėkite, kad taikytumėte",
 
   "credit.title": "Autorius: %s",
 

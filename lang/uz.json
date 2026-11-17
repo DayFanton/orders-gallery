@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Shakarqamish",
   "veg.name.seagrass_32x": "Dengiz oʻti",
   "veg.weight": "Ogʻirlik (tushish chastotasi)",
+  "veg.reset": "Qayta o'rnatish",
+  "veg.reset.title": "O'simlik sozlamalarini standart holatga qaytarish (maxsus o'simliklar o'chirib yuborilmaydi, lekin ularning belgicha olib tashlanadi)",
+  "veg.tpl.save": "Shablonni saqlash",
+  "veg.tpl.title": "Barcha o'simlik sozlamalarini \"Mening o'simliklarim\"ga shablon sifatida saqlash",
+  "veg.tpl.prompt": "Shablon nomi:",
+  "veg.tpl.default": "Shablon: %s",
+  "veg.tpl.saved": "Saqlandi",
+  "veg.tpl.card": "O'simlik shabloni — qo'llash uchun bosing",
 
   "credit.title": "Muallif: %s",
 

@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Cukornád",
   "veg.name.seagrass_32x": "Tengeri fű",
   "veg.weight": "Súly (ejtési gyakoriság)",
+  "veg.reset": "Alaphelyzetbe állítás",
+  "veg.reset.title": "Alaphelyzetbe állítja a növényzet beállításait (az egyéni növények nem törlődnek, de a jelölőnégyzeteik ki lesznek kapcsolva)",
+  "veg.tpl.save": "Sablon mentése",
+  "veg.tpl.title": "Az összes növényzet-beállítás mentése sablonként a „Saját növények” közé",
+  "veg.tpl.prompt": "Sablon neve:",
+  "veg.tpl.default": "Sablon: %s",
+  "veg.tpl.saved": "Mentve",
+  "veg.tpl.card": "Növényzet sablon — kattintson a alkalmazáshoz",
 
   "credit.title": "Szerző: %s",
 

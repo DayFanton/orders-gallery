@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Zuckerrohr",
   "veg.name.seagrass_32x": "Seegras",
   "veg.weight": "Gewicht (Drop-Häufigkeit)",
+  "veg.reset": "Zurücksetzen",
+  "veg.reset.title": "Vegetationseinstellungen auf Standard zurücksetzen (benutzerdefinierte Pflanzen werden nicht gelöscht, aber ihre Häkchen werden entfernt)",
+  "veg.tpl.save": "Vorlage speichern",
+  "veg.tpl.title": "Alle Vegetationseinstellungen als Vorlage unter „Meine Pflanzen“ speichern",
+  "veg.tpl.prompt": "Vorlagenname:",
+  "veg.tpl.default": "Vorlage %s",
+  "veg.tpl.saved": "Gespeichert",
+  "veg.tpl.card": "Vegetationsthema — zum Anwenden klicken",
 
   "credit.title": "Autor: %s",
 

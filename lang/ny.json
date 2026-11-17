@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Nzimbe",
   "veg.name.seagrass_32x": "Udzu wam'nyanja",
   "veg.weight": "Kulemera (kuti zimatuluka kangati)",
+  "veg.reset": "Bwezeretsani",
+  "veg.reset.title": "Bwezeretsani zokonzera za zomera ku zoyambirira (zomera zanu sizichotsedwa, koma mabokosi awo amachotsedwa)",
+  "veg.tpl.save": "Sungani chitsanzo",
+  "veg.tpl.title": "Sungani zokonzera zonse za zomera mu \"Zomera Zanga\" ngati chitsanzo",
+  "veg.tpl.prompt": "Dzina la chitsanzo:",
+  "veg.tpl.default": "Chitsanzo %s",
+  "veg.tpl.saved": "Zosungidwa",
+  "veg.tpl.card": "Chitsanzo cha zomera — dinani kuti mugwiritse ntchito",
 
   "credit.title": "Wolemba: %s",
 

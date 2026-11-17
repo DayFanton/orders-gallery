@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "קנה סוכר",
   "veg.name.seagrass_32x": "עשב ים",
   "veg.weight": "משקל (תדירות נפילה)",
+  "veg.reset": "איפוס",
+  "veg.reset.title": "איפוס הגדרות הצמחייה לברירת המחדל (צמחים מותאמים אישית אינם נמחקים, אך הסימונים שלהם מוסרים)",
+  "veg.tpl.save": "שמור תבנית",
+  "veg.tpl.title": "שמור את כל הגדרות הצמחייה ב\"הצמחים שלי\" כתבנית",
+  "veg.tpl.prompt": "שם התבנית:",
+  "veg.tpl.default": "תבנית %s",
+  "veg.tpl.saved": "נשמר",
+  "veg.tpl.card": "תבנית צמחייה — לחץ להחלה",
 
   "credit.title": "מחבר: %s",
 

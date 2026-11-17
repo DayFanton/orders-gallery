@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Sugar cane",
   "veg.name.seagrass_32x": "Seagrass",
   "veg.weight": "Weight (drop frequency)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Reset vegetation settings to default (custom plants are not deleted, but their checkboxes are unchecked)",
+  "veg.tpl.save": "Save template",
+  "veg.tpl.title": "Save all vegetation settings to \"My Plants\" as a template",
+  "veg.tpl.prompt": "Template name:",
+  "veg.tpl.default": "Template %s",
+  "veg.tpl.saved": "Saved",
+  "veg.tpl.card": "Vegetation template — click to apply",
 
   "credit.title": "Author: %s",
 

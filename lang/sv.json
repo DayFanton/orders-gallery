@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Sockerrör",
   "veg.name.seagrass_32x": "Sjögräs",
   "veg.weight": "Vikt (droppfrekvens)",
+  "veg.reset": "Återställ",
+  "veg.reset.title": "Återställ vegetationsinställningarna till standard (anpassade växter raderas inte, men deras kryssrutor avmarkeras)",
+  "veg.tpl.save": "Spara mall",
+  "veg.tpl.title": "Spara alla vegetationsinställningar till \"Mina växter\" som en mall",
+  "veg.tpl.prompt": "Mallnamn:",
+  "veg.tpl.default": "Mall %s",
+  "veg.tpl.saved": "Sparat",
+  "veg.tpl.card": "Vegetationsmall — klicka för att tillämpa",
 
   "credit.title": "Författare: %s",
 

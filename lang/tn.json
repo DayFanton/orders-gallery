@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Letlhaka la tswekiri",
   "veg.name.seagrass_32x": "Bojang jwa lewatle",
   "veg.weight": "Boima (kgwedi ya gowa)",
+  "veg.reset": "Busetsa",
+  "veg.reset.title": "Busetsa dipeakanyo tsa dimela kwa go tse di tlwaelegileng (dimela tse di kgethegileng ga di phimolwe, mme matshwao a tsone a ntshiwa)",
+  "veg.tpl.save": "Boloka sekao",
+  "veg.tpl.title": "Busetsa dipeakanyo tsotlhe tsa dimela mo \"Dimela Tse Di Dirisiwang\" jaaka sekao",
+  "veg.tpl.prompt": "Leina la sekao:",
+  "veg.tpl.default": "Sekao %s",
+  "veg.tpl.saved": "E bolokilwe",
+  "veg.tpl.card": "Sekao sa dimela — tobetsa go dirisa",
 
   "credit.title": "Mokwadi: %s",
 

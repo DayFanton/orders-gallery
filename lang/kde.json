@@ -436,6 +436,14 @@
   "veg.name.sugar_cane": "Nzimbe",
   "veg.name.seagrass_32x": "Lusilu lwa mnyanja",
   "veg.weight": "Ulemu (ndakai sya kugwa)",
+  "veg.reset": "Uyika",
+  "veg.reset.title": "Uyika matengenezo ga miti kuya ya pasi (miti yenu ya mwene aikuwibwa, nambo utika wake ukusigwa)",
+  "veg.tpl.save": "Kusunga chisanjo",
+  "veg.tpl.title": "Kusunga matengenezo gose ga miti mu \"Miti Yangu\" kuti ube chisanjo",
+  "veg.tpl.prompt": "Dina ja chisanjo:",
+  "veg.tpl.default": "Chisanjo %s",
+  "veg.tpl.saved": "Kusungwa",
+  "veg.tpl.card": "Chisanjo ja miti — dinani kuti muwonesye",
 
   "credit.title": "Mlembi: %s",
 

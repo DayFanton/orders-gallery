@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Suga ken",
   "veg.name.seagrass_32x": "Si gras",
   "veg.weight": "Wét (hō frikwɛnsi e de drop)",
+  "veg.reset": "Reset",
+  "veg.reset.title": "Reset di vegeteshon setting go default (custom plantas no dey delete, but di checkboxes go dey unchecked)",
+  "veg.tpl.save": "Seif templet",
+  "veg.tpl.title": "Seif all di vegeteshon setting inside \"My Plant\" as a templet",
+  "veg.tpl.prompt": "Templet nem:",
+  "veg.tpl.default": "Templet %s",
+  "veg.tpl.saved": "Don seif am",
+  "veg.tpl.card": "Vegeteshon templet — klik to aplai",
 
   "credit.title": "Author: %s",
 

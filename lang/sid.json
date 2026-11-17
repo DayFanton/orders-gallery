@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Shokoriga",
   "veg.name.seagrass_32x": "Ba'ra bushshira",
   "veg.weight": "Gafi (ha'neemmo wole)",
+  "veg.reset": "Hanni",
+  "veg.reset.title": "Hanni biqilate xagge wodi-wodincho gashshite (atene biqilo dihopphuro, ikkollanna ayiimira xiggini)",
+  "veg.tpl.save": "Shishi daafira",
+  "veg.tpl.title": "Iillishsha biqilate xagge baalate \"Minni Biqili\" giddo shishi daafira",
+  "veg.tpl.prompt": "Daafirate su'ma:",
+  "veg.tpl.default": "Daafira %s",
+  "veg.tpl.saved": "Shishidanno",
+  "veg.tpl.card": "Daafirate biqilate — shiishshite woyite hanni",
 
   "credit.title": "Boressanchicha: %s",
 

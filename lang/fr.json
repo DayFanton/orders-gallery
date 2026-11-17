@@ -438,6 +438,14 @@
   "veg.name.sugar_cane": "Canne à sucre",
   "veg.name.seagrass_32x": "Herbe marine",
   "veg.weight": "Poids (fréquence d'obtention)",
+  "veg.reset": "Réinitialiser",
+  "veg.reset.title": "Rétablir les paramètres de végétation par défaut (les plantes personnalisées ne sont pas supprimées, mais leurs cases sont décochées)",
+  "veg.tpl.save": "Enregistrer le modèle",
+  "veg.tpl.title": "Enregistrer tous les paramètres de végétation dans « Mes plantes » en tant que modèle",
+  "veg.tpl.prompt": "Nom du modèle :",
+  "veg.tpl.default": "Modèle %s",
+  "veg.tpl.saved": "Enregistré",
+  "veg.tpl.card": "Modèle de végétation — cliquez pour appliquer",
 
   "credit.title": "Auteur : %s",
 
