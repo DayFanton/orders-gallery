@@ -559,12 +559,13 @@
         }
 
         .site-version {
+            float: right;
+            float: inline-end;
+            margin-inline-start: 12px;
             font-size: 0.7rem;
+            line-height: 1.05rem;
             color: var(--text-muted);
             opacity: 0.4;
-            padding: 0 24px 4px 24px;
-            background: rgba(0, 0, 0, 0.2);
-            margin-top: -2px;
         }
 
         #viewer_zone {
@@ -1315,12 +1316,14 @@
             #controls_panel .bg-selector-group { flex-shrink: 0; }
         }
 
-        /* ================= Версия 1.8.8 ================= */
-        /* Дисклеймер под версией, внизу левой панели. Тот же шрифт и цвет, что у версии, но крупнее (0.75rem) и заметнее (прозрачность 0.7 вместо 0.4).
-           Прозрачность стоит на тексте, а не на блоке, чтобы фон не светлел: фон версии 0.2 × её прозрачность 0.4 = 0.08, такой же у дисклеймера - без «ступеньки».
-           В узкой панели текст переносится на 2 строки. */
-        .site-disclaimer { flex-shrink: 0; padding: 0 24px 16px 24px; background: rgba(0, 0, 0, 0.08); }
-        .site-disclaimer > span { display: block; font-size: 0.75rem; line-height: 1.4; color: var(--text-muted); opacity: 0.7; overflow-wrap: anywhere; }
+        /* ================= Версия 1.8.8 / 1.8.9 ================= */
+        /* Дисклеймер внизу левой панели. Шрифт и цвет те же, что у версии, но крупнее (0.75rem) и заметнее (прозрачность 0.7 вместо 0.4).
+           Прозрачность стоит на тексте, а не на блоке, чтобы фон не светлел. В узкой панели текст переносится на 2 строки.
+           1.8.9: версия сидит в правом нижнем углу этого блока. Она идёт в разметке ПОСЛЕ текста и «плавает» вправо, поэтому встаёт на последнюю строку,
+           а если там не хватает места - сама переходит на строку ниже. line-height версии равна строке текста (0.75rem x 1.4 = 1.05rem), чтобы стояли на одной линии.
+           text-wrap: balance выравнивает длину строк, чтобы справа на последней строке оставалось место под версию. */
+        .site-disclaimer { display: flow-root; flex-shrink: 0; margin-top: -2px; padding: 0 24px 16px 24px; background: rgba(0, 0, 0, 0.08); font-size: 0.75rem; line-height: 1.4; text-wrap: balance; }
+        #siteDisclaimer { color: var(--text-muted); opacity: 0.7; overflow-wrap: anywhere; }
 
         /* ================= Версия 1.8.7 ================= */
         /* Телефон: во вкладке «Галерея» блок «Заказчик / Художник / Дата заказа» и версия больше не прибиты к низу панели,
@@ -1328,7 +1331,7 @@
         @media (max-width: 900px) {
             #sidebar .sidebar-scroll-container { display: flex !important; flex-direction: column !important; overflow-x: hidden !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
             #sidebar .sidebar-scroll-container .skin-list { flex: 1 0 auto !important; overflow: visible !important; }
-            #sidebar .sidebar-scroll-container .meta-info, #sidebar .sidebar-scroll-container .site-version { flex-shrink: 0; }
+            #sidebar .sidebar-scroll-container .meta-info, #sidebar .sidebar-scroll-container .site-disclaimer { flex-shrink: 0; }
         }
             </style>
 </head>
@@ -1391,8 +1394,7 @@
                 </div>
             </div>
             
-            <div class="site-version">v1.8.8</div>
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft. Не одобрен Mojang и Microsoft и не связан с ними.</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.8.9</span></div>
         </div>
     </div>
 
