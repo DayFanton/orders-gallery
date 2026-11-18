@@ -1316,6 +1316,49 @@
             #controls_panel .bg-selector-group { flex-shrink: 0; }
         }
 
+        /* ================= Версия 1.9.1 ================= */
+        /* Экспорт и импорт библиотек: два ряда кнопок внизу окна папки (эта библиотека / все сразу) */
+        .emote-msg.ok { color: #4ade80; }
+        .lib-io { flex-shrink: 0; padding-top: 8px; border-top: 1px solid var(--border); }
+        .lib-io > summary { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 0.8rem; font-weight: 600; color: var(--text-main); cursor: pointer; list-style: none; }
+        .lib-io > summary::-webkit-details-marker { display: none; }
+        .lib-io > summary::before { content: '\25B8'; flex: none; color: var(--accent); transition: transform 0.15s ease; }
+        .lib-io[open] > summary::before { transform: rotate(90deg); }
+        .lib-io-body { display: flex; flex-direction: column; gap: 6px; padding-top: 6px; }
+        .lib-io-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .lib-io-lbl { flex: 1 1 80px; min-width: 0; font-size: 0.78rem; color: var(--text-muted); }
+        .lib-io-btn { flex: 0 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; font-size: 0.78rem; font-weight: 600; line-height: 1.2;
+            cursor: pointer; color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; touch-action: manipulation; }
+        .lib-io-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--bg-hover); }
+        .lib-io-btn:disabled { opacity: 0.5; cursor: progress; }
+        .lib-io-btn svg { flex: none; width: 14px; height: 14px; }
+        /* Телефон и невысокие экраны: окно папки занимает почти весь экран и тратит меньше места на поля - иначе на списке остаётся полоска */
+        @media (max-width: 900px), (max-height: 700px) {
+            #folderModal .emote-panel { padding: 14px; gap: 8px; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); }
+            .lib-io-btn { padding: 6px 9px; }
+        }
+
+        /* ================= Версия 1.9.0 ================= */
+        /* Превью шаблона растительности: эмодзи на карточке и окно выбора превью */
+        .folder-card .folder-thumb-empty.folder-thumb-emoji { font-size: 3.2rem; }
+        .tpl-prev-panel { max-width: 460px; }
+        .tpl-prev-now { display: flex; align-items: center; gap: 14px; }
+        .tpl-prev-pic { flex: 0 0 auto; width: 104px; height: 104px; display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 3.4rem;
+            background: linear-gradient(135deg, #2a2a33, #17171c); border: 1px solid var(--border); border-radius: 8px; }
+        .tpl-prev-pic img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+        .tpl-prev-info { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+        .tpl-prev-name { font-weight: 700; color: var(--text-main); overflow-wrap: anywhere; }
+        .tpl-prev-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tpl-prev-actions .veg-act-btn { flex: 1 1 150px; }
+        .veg-act-btn.active { border-color: var(--accent); color: var(--accent); }
+        .tpl-emoji-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px; max-height: 28vh; overflow-y: auto; padding-inline-end: 4px; }
+        .tpl-emoji { height: 40px; padding: 0; font-size: 1.4rem; line-height: 1; cursor: pointer; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.12s; }
+        .tpl-emoji:hover { border-color: var(--accent); transform: translateY(-1px); }
+        .tpl-emoji.active { border-color: var(--accent); background: rgba(255, 240, 1, 0.12); }
+        .tpl-emoji-custom { display: flex; gap: 8px; align-items: stretch; }
+        .tpl-emoji-custom .emote-search { flex: 1 1 auto; width: auto; min-width: 0; }
+        .tpl-emoji-custom .veg-act-btn { flex: 0 0 auto; padding-inline: 14px; }
+
         /* ================= Версия 1.8.8 / 1.8.9 ================= */
         /* Дисклеймер внизу левой панели. Шрифт и цвет те же, что у версии, но крупнее (0.75rem) и заметнее (прозрачность 0.7 вместо 0.4).
            Прозрачность стоит на тексте, а не на блоке, чтобы фон не светлел. В узкой панели текст переносится на 2 строки.
@@ -1394,7 +1437,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.8.9</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.1</span></div>
         </div>
     </div>
 
@@ -1654,8 +1697,49 @@
             <div id="folderEmpty" class="emote-hint" style="display:none;">Здесь пока пусто — нажмите «+», чтобы добавить первый файл.</div>
             <div id="folderMsg" class="emote-msg"></div>
             <div id="folderNote" class="emote-hint">Файлы хранятся только в этом браузере.</div>
+            <details id="libIo" class="lib-io" open>
+                <summary id="libIoTitle">Экспорт и импорт</summary>
+                <div class="lib-io-body">
+                <div class="lib-io-row">
+                    <span class="lib-io-lbl" id="libThisLbl">Эта библиотека</span>
+                    <button id="libExport" type="button" class="lib-io-btn" title="Сохранить копию этой библиотеки в файл"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg><span class="lib-btn-lbl">Экспорт</span></button>
+                    <button id="libImport" type="button" class="lib-io-btn" title="Добавить в эту библиотеку записи из файла"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V9"/><path d="M7 14l5-5 5 5"/><path d="M5 3h14"/></svg><span class="lib-btn-lbl">Импорт</span></button>
+                </div>
+                <div class="lib-io-row">
+                    <span class="lib-io-lbl" id="libAllLbl">Все библиотеки</span>
+                    <button id="libExportAll" type="button" class="lib-io-btn" title="Сохранить копию всех библиотек (блоки, эмоции, растения, фоны) в один файл"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg><span class="lib-btn-lbl">Экспорт</span></button>
+                    <button id="libImportAll" type="button" class="lib-io-btn" title="Добавить записи из файла во все библиотеки сразу"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V9"/><path d="M7 14l5-5 5 5"/><path d="M5 3h14"/></svg><span class="lib-btn-lbl">Импорт</span></button>
+                </div>
+                </div>
+            </details>
+            <input type="file" id="libImportFile" accept=".json,application/json" style="display:none">
             <input type="file" id="folderFile" style="display:none">
             <input type="file" id="folderIconFile" accept="image/*" style="display:none">
+        </div>
+    </div>
+
+    <div id="tplPrevModal" class="emote-overlay">
+        <div class="emote-panel tpl-prev-panel">
+            <div class="emote-head">
+                <h3 id="tplPrevTitle">Превью шаблона</h3>
+                <button id="tplPrevClose" class="emote-close" type="button" title="Закрыть">&times;</button>
+            </div>
+            <div class="tpl-prev-now">
+                <div id="tplPrevPic" class="tpl-prev-pic"></div>
+                <div class="tpl-prev-info"><div id="tplPrevName" class="tpl-prev-name"></div><div id="tplPrevMode" class="emote-hint"></div></div>
+            </div>
+            <div class="tpl-prev-actions">
+                <button id="tplPrevAuto" type="button" class="veg-act-btn"><span class="veg-act-ico">🌿</span><span class="veg-act-lbl">Собрать из растений</span></button>
+                <button id="tplPrevImage" type="button" class="veg-act-btn"><span class="veg-act-ico">🖼</span><span class="veg-act-lbl">Своя картинка…</span></button>
+            </div>
+            <div class="mc-chips-label" id="tplPrevEmojiLbl">Эмодзи</div>
+            <div id="tplPrevEmojis" class="tpl-emoji-grid"></div>
+            <div class="tpl-emoji-custom">
+                <input id="tplPrevEmojiInput" class="emote-search" type="text" maxlength="16" autocomplete="off" spellcheck="false" placeholder="Свой эмодзи">
+                <button id="tplPrevEmojiOk" type="button" class="veg-act-btn">Выбрать</button>
+            </div>
+            <div id="tplPrevMsg" class="emote-msg"></div>
+            <input type="file" id="tplPrevFile" accept="image/*" style="display:none">
         </div>
     </div>
 
@@ -2020,7 +2104,49 @@
             "rename.style.k": "Obfuscated",
             "rename.style.r": "Reset",
 
-            "site.disclaimer": "Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft."
+            "site.disclaimer": "Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.",
+
+            "tplprev.btn": "Change the preview",
+            "tplprev.title": "Template preview",
+            "tplprev.auto": "Build from plants",
+            "tplprev.image": "Your own picture…",
+            "tplprev.emoji": "Emoji",
+            "tplprev.emoji_custom": "Your own emoji",
+            "tplprev.emoji_ok": "Use",
+            "tplprev.emoji_bad": "That doesn't look like an emoji",
+            "tplprev.image_bad": "Could not use this file as a picture",
+            "tplprev.mode.auto": "Now: a scene built from the plants of the template",
+            "tplprev.mode.image": "Now: your own picture",
+            "tplprev.mode.emoji": "Now: an emoji",
+
+            "lib.title": "Export and import",
+            "lib.this": "This library",
+            "lib.all": "All libraries",
+            "lib.export": "Export",
+            "lib.import": "Import",
+            "lib.export.title": "Save a copy of this library to a file",
+            "lib.import.title": "Add the items from a file to this library",
+            "lib.export_all.title": "Save a copy of all libraries (blocks, emotes, plants, backgrounds) to one file",
+            "lib.import_all.title": "Add the items from a file to all libraries at once",
+            "lib.kind.bg": "Backgrounds",
+            "lib.kind.block": "Blocks",
+            "lib.kind.emote": "Emotes",
+            "lib.kind.plant": "Plants",
+            "lib.exporting": "Preparing the file…",
+            "lib.exported": "File saved - %s",
+            "lib.empty": "Nothing to export - the library is empty",
+            "lib.export_error": "Could not prepare the file",
+            "lib.importing": "Reading the file…",
+            "lib.importing_n": "Importing: %s",
+            "lib.imported": "Imported - %s.",
+            "lib.nothing_new": "Nothing new to import.",
+            "lib.skipped": "Already in the library: %s.",
+            "lib.failed": "Skipped as damaged: %s.",
+            "lib.import_bad": "This is not a library file from this site",
+            "lib.import_newer": "The file was made by a newer version of the site - update the page and try again",
+            "lib.import_none": "The file has nothing for this library",
+            "lib.import_error": "Could not import the file",
+            "lib.too_big": "The file is too large"
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2185,6 +2311,23 @@
             ['#folderEmpty', 'folder.empty'],
             ['#folderNote', 'folder.local_note'],
             ['#siteDisclaimer', 'site.disclaimer'],
+            ['#libIoTitle', 'lib.title'],
+            ['#libThisLbl', 'lib.this'],
+            ['#libAllLbl', 'lib.all'],
+            ['#libExport .lib-btn-lbl', 'lib.export'],
+            ['#libImport .lib-btn-lbl', 'lib.import'],
+            ['#libExportAll .lib-btn-lbl', 'lib.export'],
+            ['#libImportAll .lib-btn-lbl', 'lib.import'],
+            ['#libExport', 'lib.export.title', 'title'],
+            ['#libImport', 'lib.import.title', 'title'],
+            ['#libExportAll', 'lib.export_all.title', 'title'],
+            ['#libImportAll', 'lib.import_all.title', 'title'],
+            ['#tplPrevTitle', 'tplprev.title'],
+            ['#tplPrevAuto .veg-act-lbl', 'tplprev.auto'],
+            ['#tplPrevImage .veg-act-lbl', 'tplprev.image'],
+            ['#tplPrevEmojiLbl', 'tplprev.emoji'],
+            ['#tplPrevEmojiInput', 'tplprev.emoji_custom', 'placeholder'],
+            ['#tplPrevEmojiOk', 'tplprev.emoji_ok'],
             ['#mcGuideTitle', 'rename.guide.title'],
             ['#mcGuideHow', 'rename.guide.how'],
             ['#mcGuideCodes', 'rename.guide.codes'],
@@ -3639,6 +3782,242 @@
             return { list, get, add, put, remove, reorder, takeLegacyBg, isPersistent: () => persistent };
         })();
 
+        /* ---------- Экспорт и импорт личных библиотек (1.9.1) ----------
+           Один файл .json: { format, version, exported, site, libraries: { bg | block | emote | plant: [запись, ...] } }. Картинки лежат внутри как
+           { $blob: base64, type }. Экспортировать можно одну библиотеку или все сразу; импорт читает тот же файл и берёт нужные разделы.
+           Импорт только ДОБАВЛЯЕТ: ничего не заменяет и не удаляет. Файлу не доверяем: из каждой записи собирается новая по белому списку полей,
+           картинки проверяет браузер, эмоции - разбор EmoteCore. Запись, которая уже есть (то же название и то же содержимое), пропускается -
+           повторный импорт не плодит копии. Шаблоны растительности ссылаются на свои растения по id (u-N): при импорте id меняются, поэтому
+           ссылки в шаблонах пересчитываются (в том числе на уже имевшиеся растения). */
+        const LibIO = (() => {
+            const FORMAT = 'tsyplyash-gallery-library', VERSION = 1, KINDS = ['bg', 'block', 'emote', 'plant'];
+            const FILE_NAMES = { bg: 'backgrounds', block: 'blocks', emote: 'emotes', plant: 'plants' };
+            const MAX_FILE = 300 * 1024 * 1024, MAX_RECORDS = 5000;
+            const HEX = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i, ID_OK = /^[A-Za-z0-9_\-]{1,60}$/, BAD_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+            const EMOJI_RE = /\p{Regional_Indicator}{2}|\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?)*/u;
+            const isBlob = (v) => typeof Blob !== 'undefined' && v instanceof Blob;
+            const fin = (v) => typeof v === 'number' && isFinite(v);
+            const str = (v, max) => (typeof v === 'string' ? v.slice(0, max) : '');
+            const common = (r) => {                                  // название, которое человек правил руками (1.8.4)
+                if (r.renamed !== true) return {};
+                const o = { renamed: true }, orig = str(r.origName, 120);
+                if (orig) o.origName = orig;
+                return o;
+            };
+
+            /* ----- экспорт ----- */
+            function toBase64(blob) {
+                return new Promise((resolve, reject) => {
+                    const fr = new FileReader();
+                    fr.onload = () => { const u = String(fr.result); resolve(u.slice(u.indexOf(',') + 1)); };
+                    fr.onerror = () => reject(fr.error);
+                    fr.readAsDataURL(blob);
+                });
+            }
+            async function encode(v) {                               // запись целиком: Blob/File -> { $blob, type }, остальное как есть
+                if (isBlob(v)) return { $blob: await toBase64(v), type: v.type || '' };
+                if (Array.isArray(v)) { const out = []; for (const x of v) out.push(await encode(x)); return out; }
+                if (v && typeof v === 'object') { const out = {}; for (const k of Object.keys(v)) out[k] = await encode(v[k]); return out; }
+                return v;
+            }
+            function download(blob, name) {
+                const url = URL.createObjectURL(blob), a = document.createElement('a');
+                a.href = url;
+                a.download = name;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(() => URL.revokeObjectURL(url), 15000);
+            }
+            // -> { counts: { kind: n }, size } или null, если во всех выбранных библиотеках пусто
+            async function exportKinds(kinds) {
+                const libraries = {}, counts = {};
+                for (const k of kinds) {
+                    const items = await UserLib.list(k);
+                    if (!items.length) continue;
+                    const out = [];
+                    for (const rec of items) out.push(await encode(rec));
+                    libraries[k] = out;
+                    counts[k] = items.length;
+                }
+                if (!Object.keys(counts).length) return null;
+                const ver = document.querySelector('.site-version');
+                const text = JSON.stringify({ format: FORMAT, version: VERSION, exported: new Date().toISOString(), site: ver ? ver.textContent.trim() : '', libraries });
+                const blob = new Blob([text], { type: 'application/json' });
+                const d = new Date(), z = (n) => String(n).padStart(2, '0');
+                download(blob, 'tsyplyash-' + (kinds.length === 1 ? FILE_NAMES[kinds[0]] : 'library') + '-' + d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate()) + '.json');
+                return { counts, size: blob.size };
+            }
+
+            /* ----- импорт: проверка и сборка чистых записей ----- */
+            function fromBase64(b64) {
+                const bin = atob(b64), out = new Uint8Array(bin.length);
+                for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+                return out;
+            }
+            async function blobOf(v) {                               // { $blob, type } -> Blob, если это действительно картинка; иначе null
+                if (!v || typeof v !== 'object' || typeof v.$blob !== 'string') return null;
+                const type = typeof v.type === 'string' ? v.type.toLowerCase() : '';
+                if (!/^image\/[a-z0-9.+-]+$/.test(type)) return null;
+                const blob = new Blob([fromBase64(v.$blob)], { type });
+                await probeImage(blob);
+                return blob;
+            }
+            const optBlob = async (v) => { try { return await blobOf(v); } catch (e) { return null; } };
+            function cleanSize(sz) {
+                if (!sz || typeof sz !== 'object') return null;
+                const o = {};
+                ['min', 'max', 'step', 'minWeight', 'maxWeight'].forEach(k => { if (fin(sz[k])) o[k] = Math.min(1000, Math.max(0, sz[k])); });
+                if (typeof sz.tile === 'boolean') o.tile = sz.tile;
+                return Object.keys(o).length ? o : null;
+            }
+            function cleanAnim(a) {
+                if (!a || typeof a !== 'object') return null;
+                const o = {};
+                if (fin(a.frametime)) o.frametime = Math.max(1, Math.min(10000, a.frametime));
+                if (fin(a.height)) o.height = Math.max(0, Math.min(8192, a.height));
+                if (typeof a.interpolate === 'boolean') o.interpolate = a.interpolate;
+                if (Array.isArray(a.frames)) {
+                    o.frames = a.frames.slice(0, 4096).map(f => (fin(f) ? f : (f && fin(f.index) ? (fin(f.time) ? { index: f.index, time: f.time } : { index: f.index }) : null))).filter(f => f !== null);
+                }
+                return Object.keys(o).length ? o : null;
+            }
+            function cleanTplData(d, idMap) {
+                d = d && typeof d === 'object' ? d : {};
+                const mapId = (id) => {                              // u-N: свои растения получили новые номера
+                    if (typeof id !== 'string') return null;
+                    const m = /^u-(\d+)$/.exec(id);
+                    if (m) { const n = idMap.get(Number(m[1])); return n ? 'u-' + n : null; }
+                    return ID_OK.test(id) && !BAD_KEYS.has(id) ? id : null;
+                };
+                const pairs = (o) => (o && typeof o === 'object' && !Array.isArray(o) ? Object.keys(o).map(k => [mapId(k), o[k]]).filter(([k]) => k) : []);
+                return {
+                    sel: (Array.isArray(d.sel) ? d.sel : []).slice(0, 1000).map(mapId).filter(Boolean),
+                    tint: Object.fromEntries(pairs(d.tint).filter(([, v]) => HEX.test(v || ''))),
+                    weight: Object.fromEntries(pairs(d.weight).filter(([, v]) => fin(+v) && +v > 0).map(([k, v]) => [k, Math.min(100, Math.round(+v))])),
+                    size: Object.fromEntries(pairs(d.size).map(([k, v]) => [k, cleanSize(v)]).filter(([, v]) => v)),
+                    density: fin(d.density) ? Math.min(100, Math.max(0, d.density)) : 60,
+                    layers: Array.isArray(d.layers) && d.layers.length === 3 ? d.layers.map(Boolean) : [true, true, true]
+                };
+            }
+            const SAN = {
+                async bg(r) {
+                    const blob = await blobOf(r.blob);
+                    return blob ? Object.assign({ name: str(r.name, 60) || 'image', blob }, common(r)) : null;
+                },
+                async block(r) {
+                    if (!r.faces || typeof r.faces !== 'object') return null;
+                    const faces = {};
+                    for (const k of ['all', 'top', 'side', 'bottom']) {
+                        if (!r.faces[k]) continue;
+                        const b = await blobOf(r.faces[k]);
+                        if (!b) return null;
+                        faces[k] = b;
+                    }
+                    if (!Object.keys(faces).length) return null;
+                    const rec = Object.assign({ name: str(r.name, 60) || 'block', faces }, common(r));
+                    if (HEX.test(r.tint || '')) rec.tint = r.tint;
+                    return rec;
+                },
+                async emote(r) {
+                    if (typeof r.json !== 'string' || r.json.length > 8e6) return null;
+                    try { EmoteCore.parseEmote(JSON.parse(r.json)); } catch (e) { return null; }
+                    const file = str(r.file, 120);
+                    return Object.assign({ name: str(r.name, 120) || file || 'emote', file, json: r.json, icon: r.icon ? await optBlob(r.icon) : null }, common(r));
+                },
+                async plant(r, idMap) {
+                    if (r.template) {                                 // шаблон растительности
+                        if (!r.data || typeof r.data !== 'object' || Array.isArray(r.data)) return null;      // без данных шаблон - пустышка
+                        const rec = Object.assign({ template: true, name: str(r.name, 60) || 'template', data: cleanTplData(r.data, idMap) }, common(r));
+                        const icon = r.icon ? await optBlob(r.icon) : null;
+                        if (icon) rec.icon = icon;
+                        const em = EMOJI_RE.exec(typeof r.emoji === 'string' ? r.emoji.slice(0, 16) : '');
+                        if (em) rec.emoji = em[0];
+                        return rec;
+                    }
+                    const rec = Object.assign({ name: str(r.name, 60) || 'plant', tint: HEX.test(r.tint || '') ? r.tint : null, weight: fin(r.weight) ? Math.min(100, Math.max(1, r.weight)) : 1 }, common(r));
+                    if (r.bottom && r.top) {
+                        rec.bottom = await blobOf(r.bottom);
+                        rec.top = await blobOf(r.top);
+                        if (!rec.bottom || !rec.top) return null;
+                    } else if (r.image) {
+                        rec.image = await blobOf(r.image);
+                        if (!rec.image) return null;
+                    } else return null;
+                    const size = cleanSize(r.size), anim = cleanAnim(r.anim);
+                    if (size) rec.size = size;
+                    if (anim) rec.anim = anim;
+                    return rec;
+                }
+            };
+
+            // «Личность» записи для поиска дубликатов: раздел, название и содержимое (размеры и типы картинок, текст эмоции, данные шаблона)
+            const canon = (v) => (Array.isArray(v) ? v.map(canon) : (v && typeof v === 'object' && !isBlob(v) ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canon(v[k])])) : v));
+            function identity(kind, r) {
+                const bl = (b) => (isBlob(b) ? b.size + ':' + b.type : '');
+                let blobs;
+                if (kind === 'bg') blobs = [r.blob];
+                else if (kind === 'block') blobs = ['all', 'top', 'side', 'bottom'].map(k => r.faces && r.faces[k]);
+                else if (kind === 'emote') blobs = [r.icon];
+                else blobs = r.template ? [r.icon] : [r.image, r.bottom, r.top];
+                return JSON.stringify([kind, !!r.template, r.name, blobs.map(bl), kind === 'emote' ? r.json : '', r.template ? canon(r.data) : null, r.template ? (r.emoji || '') : '']);
+            }
+
+            // -> { added: { kind: n }, skipped, failed }. kinds - какие библиотеки брать из файла
+            async function importFile(file, kinds, onProgress) {
+                if (file.size > MAX_FILE) throw new FolderError('lib.too_big');
+                let data;
+                try { data = JSON.parse(await file.text()); } catch (e) { throw new FolderError('lib.import_bad'); }
+                if (!data || data.format !== FORMAT || !data.libraries || typeof data.libraries !== 'object') throw new FolderError('lib.import_bad');
+                if (+data.version > VERSION) throw new FolderError('lib.import_newer');
+                const present = kinds.filter(k => Array.isArray(data.libraries[k]) && data.libraries[k].length);
+                if (!present.length) throw new FolderError('lib.import_none');
+                const report = { added: {}, skipped: 0, failed: 0 };
+                for (const k of present) {
+                    const raw = data.libraries[k].slice(0, MAX_RECORDS);
+                    const existing = await UserLib.list(k), known = new Map();
+                    existing.forEach(r => known.set(identity(k, r), r.id));
+                    const isTpl = (r) => !!(r && typeof r === 'object' && r.template);
+                    const idx = raw.map((_, i) => i);
+                    // растения - до шаблонов: шаблону нужны новые номера растений; порядок карточек потом восстанавливаем
+                    const queue = k === 'plant' ? [...idx.filter(i => !isTpl(raw[i])), ...idx.filter(i => isTpl(raw[i]))] : idx;
+                    const idMap = new Map(), addedAt = new Map();
+                    let done = 0;
+                    for (const i of queue) {
+                        const r = raw[i];
+                        try {
+                            const clean = r && typeof r === 'object' ? await SAN[k](r, idMap) : null;
+                            if (!clean) report.failed++;
+                            else {
+                                const key = identity(k, clean);
+                                if (known.has(key)) {
+                                    report.skipped++;
+                                    if (k === 'plant' && !clean.template) idMap.set(Number(r.id), known.get(key));
+                                } else {
+                                    const rec = await UserLib.add(k, clean);
+                                    known.set(key, rec.id);
+                                    addedAt.set(i, rec.id);
+                                    report.added[k] = (report.added[k] || 0) + 1;
+                                    if (k === 'plant' && !clean.template) idMap.set(Number(r.id), rec.id);
+                                }
+                            }
+                        } catch (e) {
+                            console.error('[lib]', e);
+                            report.failed++;
+                        }
+                        if (onProgress) onProgress(k, ++done, queue.length);
+                    }
+                    if (k === 'plant' && addedAt.size) {
+                        const ordered = idx.map(i => addedAt.get(i)).filter(Boolean);
+                        await UserLib.reorder('plant', [...existing.map(r => r.id), ...ordered]);
+                    }
+                }
+                return report;
+            }
+            const summary = (counts) => KINDS.filter(k => counts[k]).map(k => t('lib.kind.' + k) + ': ' + counts[k]).join(' · ');
+            return { KINDS, exportKinds, importFile, summary };
+        })();
+
         /* ---------- Окно «моя папка» (одно на все разделы) ----------
            Раздел регистрирует себя через Folder.register(kind, {...}):
              title, hint   - ключи перевода заголовка и подсказки
@@ -3648,14 +4027,18 @@
              thumb(rec, track) - адрес картинки-превью (track создаёт object URL, который сам уберётся) или null
              thumbClass, placeholder - вид превью
              isActive(rec), pick(rec), onRemove(rec), decorate(el, rec, rerender)
-             onRename(rec) - название изменили (1.8.4); autoName(rec) - исходное название, если оно не лежит в rec.name (у эмоций оно считается из самого файла) */
+             onRename(rec) - название изменили (1.8.4); autoName(rec) - исходное название, если оно не лежит в rec.name (у эмоций оно считается из самого файла)
+             onImported() - в раздел добавили записи импортом (1.9.1): обновить то, что показывает их вне окна папки
+             thumbClassOf(rec) - класс превью для конкретной записи (вместо thumbClass); preview(rec) - Promise с адресом картинки (data:), если thumb ничего не дал:
+             на карточке сперва значок-заглушка, потом картинка (1.9.0) */
         const Folder = (() => {
             const $ = (id) => document.getElementById(id);
             const CFG = {};
             let kind = null, urls = [], token = 0;
             let editing = null, pendingClose = false;     // 1.8.4: правка названия
+            let topLayer = null;                          // 1.9.0: окно поверх папки (превью шаблона): функция, которая закрывает его и возвращает true
 
-            const message = (text) => { $('folderMsg').textContent = text || ''; };
+            const message = (text, ok) => { const m = $('folderMsg'); m.textContent = text || ''; m.className = 'emote-msg' + (ok ? ' ok' : ''); };      // ok - зелёное сообщение об успехе
             const revokeAll = () => { urls.forEach(u => URL.revokeObjectURL(u)); urls = []; };
             const track = (blob) => { const u = URL.createObjectURL(blob); urls.push(u); return u; };
             const register = (k, cfg) => { CFG[k] = cfg; };
@@ -3837,6 +4220,46 @@
                 MC.render($('mcGuideSampleView'), sample);
             }
 
+
+            /* ---------- Экспорт / импорт (1.9.1): кнопки внизу окна - для этой библиотеки и для всех сразу ---------- */
+            let importScope = [], ioBusy = false;
+            function setIoBusy(b) {
+                ioBusy = b;
+                ['libExport', 'libImport', 'libExportAll', 'libImportAll'].forEach(id => { $(id).disabled = b; });
+            }
+            async function doExport(kinds) {
+                if (ioBusy) return;
+                setIoBusy(true);
+                try {
+                    if (editing) await commitEdit();                 // название, которое правили, попадёт в файл уже новым
+                    message(t('lib.exporting'), true);
+                    const res = await LibIO.exportKinds(kinds);
+                    message(res ? t('lib.exported', LibIO.summary(res.counts)) : t('lib.empty'), !!res);
+                } catch (err) {
+                    console.error('[lib]', err);
+                    message(t('lib.export_error'));
+                } finally { setIoBusy(false); }
+            }
+            async function doImport(file, kinds) {
+                if (ioBusy) return;
+                setIoBusy(true);
+                try {
+                    if (editing) await commitEdit();
+                    message(t('lib.importing'), true);
+                    const rep = await LibIO.importFile(file, kinds, (k, done, total) => message(t('lib.importing_n', t('lib.kind.' + k) + ' ' + done + '/' + total), true));
+                    const added = Object.keys(rep.added);
+                    for (const k of added) { try { if (CFG[k] && CFG[k].onImported) await CFG[k].onImported(); } catch (e) { console.error('[lib]', e); } }
+                    await render();
+                    const parts = [added.length ? t('lib.imported', LibIO.summary(rep.added)) : t('lib.nothing_new')];
+                    if (rep.skipped) parts.push(t('lib.skipped', rep.skipped));
+                    if (rep.failed) parts.push(t('lib.failed', rep.failed));
+                    message(parts.join(' '), added.length > 0 || !rep.failed);
+                } catch (err) {
+                    console.error('[lib]', err);
+                    message(t(err && err.i18n ? err.i18n : 'lib.import_error'));
+                } finally { setIoBusy(false); }
+            }
+
             /* ---------- Перестановка карточек ----------
                Мышь: тянуть можно за любое место карточки. Сенсор и перо: за ручку сверху (иначе список нельзя прокрутить пальцем).
                Клавиатура: стрелки ← / → на ручке. Во время перетаскивания карточки не переносятся в DOM, а меняют CSS order -
@@ -3981,17 +4404,29 @@
                 const el = document.createElement('div');
                 el.className = 'emote-card folder-card' + (c.isActive && c.isActive(rec) ? ' active' : '');
                 const src = c.thumb ? c.thumb(rec, track) : null;
+                const thumbCls = c.thumbClassOf ? c.thumbClassOf(rec) : c.thumbClass;
                 let pic;
                 if (src) {
                     pic = document.createElement('img');
                     pic.src = src;
                     pic.alt = '';
                     pic.loading = 'lazy';
-                    if (c.thumbClass) pic.className = c.thumbClass;
+                    if (thumbCls) pic.className = thumbCls;
                 } else {
                     pic = document.createElement('div');
-                    pic.className = 'folder-thumb-empty ' + (c.thumbClass || '');
+                    pic.className = 'folder-thumb-empty ' + (thumbCls || '');
                     pic.textContent = c.placeholder || '📄';
+                    if (c.preview) {                                   // картинку делаем «на лету»; пока она готовится, виден значок
+                        const mine = token, ph = pic;
+                        Promise.resolve(c.preview(rec)).then((url) => {
+                            if (!url || mine !== token || !ph.isConnected) return;
+                            const im = document.createElement('img');
+                            im.src = url;
+                            im.alt = '';
+                            if (thumbCls) im.className = thumbCls;
+                            ph.replaceWith(im);
+                        }).catch((err) => { console.error('[folder]', err); });
+                    }
                 }
                 const label = labelOf(c, rec);                              // название может содержать цветовые коды (§)
                 const name = document.createElement('span');
@@ -4084,9 +4519,16 @@
                 }, true);
                 $('folderModal').onclick = (e) => { if (e.target === $('folderModal')) tryClose(); };
                 $('folderFile').onchange = (e) => { const files = [...e.target.files]; e.target.value = ''; onFiles(files); };
+                $('libIo').open = !window.matchMedia || window.matchMedia('(min-width: 901px) and (min-height: 700px)').matches;      // на телефоне свёрнут: список важнее
+                $('libExport').onclick = () => doExport([kind]);
+                $('libExportAll').onclick = () => doExport(LibIO.KINDS.slice());
+                $('libImport').onclick = () => { message(''); importScope = [kind]; $('libImportFile').click(); };
+                $('libImportAll').onclick = () => { message(''); importScope = LibIO.KINDS.slice(); $('libImportFile').click(); };
+                $('libImportFile').onchange = (e) => { const f = e.target.files && e.target.files[0]; e.target.value = ''; if (f) doImport(f, importScope); };
                 // Escape закрывает только верхнее окно (папку), а не всё сразу; во время перетаскивания отменяет только его
                 window.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape' && isOpen()) {
+                        if (topLayer && topLayer()) { e.stopImmediatePropagation(); return; }
                         if (confirmShown()) keepEditing();
                         else if (editing) { if (isDirty()) askSave(false); else cancelEdit(); }      // Esc во время правки: выходит из правки, а не закрывает окно
                         else if (drag && drag.started) finishDrag(true);
@@ -4117,7 +4559,7 @@
                 buildGuide();
             }
             init();
-            return { register, open, close, refresh, isOpen };
+            return { register, open, close, refresh, isOpen, setTopLayer: (fn) => { topLayer = fn; } };
         })();
 
         /* ---------- Фон: цвета, картинки из папки backgrounds/ и свои картинки (личная папка) ----------
@@ -5189,6 +5631,219 @@
                 } catch (err) { console.error('[veg]', err); }
             }
 
+
+            /* ---------- Превью шаблона (1.9.0) ----------
+               По умолчанию превью - «сценка»: растения шаблона стоят на полоске земли в один или два ряда (высокие - сзади, в два блока они действительно вдвое выше),
+               с цветами из шаблона. Если растений больше 8, в картинку попадают самые «весомые», а про остальные говорит плашка «+N».
+               Картинка не хранится: она рисуется из текущих данных шаблона (поэтому удалённое растение исчезает и с неё), готовый кадр запоминается по содержимому.
+               Заменить её можно своей картинкой (rec.icon) или эмодзи (rec.emoji) - см. TplPreview. */
+            const TPL_MAX = 8, TPL_SIZE = 256;
+            const tplPrevCache = new Map();
+            let entriesMemo = null, entriesAt = 0;
+            function freshEntries() {            // список растений читается один раз на пачку карточек, а не на каждую
+                if (!entriesMemo || Date.now() - entriesAt > 2000) {
+                    entriesAt = Date.now();
+                    entriesMemo = Veg.entries().catch((e) => { entriesMemo = null; throw e; });
+                }
+                return entriesMemo;
+            }
+            function shadeHex(hex, k) {           // k > 0 - светлее, k < 0 - темнее
+                const n = parseInt(hex.slice(1), 16);
+                return 'rgb(' + [n >> 16, (n >> 8) & 255, n & 255].map(v => Math.max(0, Math.min(255, Math.round(k >= 0 ? v + (255 - v) * k : v * (1 + k))))).join(',') + ')';
+            }
+            async function tplCollage(rec) {
+                const d = rec.data && typeof rec.data === 'object' ? rec.data : {};
+                const entries = await freshEntries();
+                const byId = new Map(entries.map(e => [e.id, e]));
+                const sel = (Array.isArray(d.sel) ? d.sel : []).filter(id => byId.has(id));
+                if (!sel.length) return null;
+                const ovOf = (id) => (d.tint && typeof d.tint === 'object' && HEX.test(d.tint[id] || '') ? d.tint[id] : null);
+                const wOf = (id) => { const w = d.weight && typeof d.weight === 'object' ? +d.weight[id] : 0; return w > 0 ? w : byId.get(id).weight; };
+                const ranked = sel.map((id, r) => ({ id, r, w: wOf(id) })).sort((a, b) => b.w - a.w || a.r - b.r);
+                const chosen = ranked.slice(0, TPL_MAX), more = ranked.length - chosen.length;
+                const sig = JSON.stringify([chosen.map(c => [c.id, ovOf(c.id) || byId.get(c.id).tint || '']), more]);
+                if (tplPrevCache.has(sig)) return tplPrevCache.get(sig);
+
+                const items = [];
+                for (const c of chosen) {
+                    try {
+                        const cv = (await Veg.textures(byId.get(c.id), ovOf(c.id))).frames[0];
+                        if (cv && cv.width && cv.height) items.push({ r: c.r, cv, ratio: cv.height / cv.width });
+                    } catch (e) { /* картинки этого растения нет - пропускаем */ }
+                }
+                if (!items.length) return null;
+
+                const S = TPL_SIZE, out = document.createElement('canvas');
+                out.width = out.height = S;
+                const g = out.getContext('2d');
+                // небо и земля из клеток 16 px: верхний ряд - трава, ниже - земля, к низу темнее
+                const sky = g.createLinearGradient(0, 0, 0, S);
+                sky.addColorStop(0, '#3a4f78');
+                sky.addColorStop(1, '#1d2744');
+                g.fillStyle = sky;
+                g.fillRect(0, 0, S, S);
+                const GY = Math.round(S * 0.7), BS = 16, gr = rngOf(1337);
+                for (let y = GY; y < S; y += BS) for (let x = 0; x < S; x += BS) {
+                    g.fillStyle = shadeHex(y === GY ? '#5a9a3c' : '#80593a', (gr() - 0.5) * 0.18);
+                    g.fillRect(x, y, BS, BS);
+                }
+                const fade = g.createLinearGradient(0, GY, 0, S);
+                fade.addColorStop(0, 'rgba(0,0,0,0)');
+                fade.addColorStop(1, 'rgba(0,0,0,0.38)');
+                g.fillStyle = fade;
+                g.fillRect(0, GY, S, S - GY);
+
+                // раскладка: до 3 растений - один ряд; больше - два (высокие сзади, они чуть меньше и бледнее)
+                const jr = rngOf(Array.from(sig).reduce((h, ch) => Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0, 2166136261));
+                const n = items.length, byR = (a, b) => a.r - b.r;
+                const tall = items.slice().sort((a, b) => b.ratio - a.ratio || a.r - b.r);
+                const back = n > 3 ? tall.slice(0, n >> 1).sort(byR) : [];
+                const front = (n > 3 ? tall.slice(n >> 1) : tall).sort(byR);
+                const pad = S * 0.07, cap = S * (n === 1 ? 0.55 : 0.4);
+                const drawRow = (row, baseY, maxH, wFrac, alpha) => {
+                    if (!row.length) return;
+                    const slot = (S - 2 * pad) / row.length;
+                    const bp = Math.min(slot * wFrac, maxH / Math.max(...row.map(it => it.ratio)), cap);      // ширина одного блока в пикселях
+                    row.forEach((it, i) => {
+                        const sc = bp / it.cv.width;                   // масштаб без округления: на карточке картинка вдвое меньше, неровность пикселей не видна
+                        const w = it.cv.width * sc, h = it.cv.height * sc, cx = pad + slot * (i + 0.5) + (jr() - 0.5) * slot * 0.1;
+                        g.globalAlpha = 0.28 * alpha;
+                        g.fillStyle = '#000';
+                        g.beginPath();
+                        g.ellipse(cx, baseY, w * 0.38, Math.max(2, bp * 0.09), 0, 0, Math.PI * 2);
+                        g.fill();
+                        g.globalAlpha = alpha;
+                        g.imageSmoothingEnabled = sc < 1;
+                        g.imageSmoothingQuality = 'high';
+                        g.drawImage(it.cv, Math.round(cx - w / 2), Math.round(baseY - h), Math.round(w), Math.round(h));
+                    });
+                    g.globalAlpha = 1;
+                };
+                drawRow(back, GY + S * 0.045, S * 0.46, 0.82, 0.9);
+                drawRow(front, GY + S * 0.17, n > 3 ? S * 0.44 : S * 0.62, n > 3 ? 0.96 : 0.9, 1);
+
+                if (more > 0) {                                       // «+N» - сколько растений не поместилось
+                    const txt = '+' + more;
+                    g.font = '700 18px system-ui, sans-serif';
+                    const bw = g.measureText(txt).width + 18, bh = 28, bx = S - bw - 10, by = 10;
+                    g.fillStyle = 'rgba(0,0,0,0.6)';
+                    g.beginPath();
+                    if (g.roundRect) g.roundRect(bx, by, bw, bh, 14); else g.rect(bx, by, bw, bh);
+                    g.fill();
+                    g.fillStyle = '#fff';
+                    g.textAlign = 'center';
+                    g.textBaseline = 'middle';
+                    g.fillText(txt, bx + bw / 2, by + bh / 2 + 1);
+                }
+                const url = out.toDataURL('image/png');
+                if (tplPrevCache.size > 80) tplPrevCache.delete(tplPrevCache.keys().next().value);
+                tplPrevCache.set(sig, url);
+                return url;
+            }
+
+            /* Окно «Превью шаблона»: авто-сценка, своя картинка или эмодзи из набора (или любой свой). Выбор хранится в записи шаблона:
+               rec.icon - картинка (Blob), rec.emoji - строка; ни того ни другого = автопревью. */
+            const TPL_EMOJIS = ['🌿', '🌱', '🌲', '🌳', '🌴', '🌵', '🌾', '🍀', '🍁', '🍂', '🍃', '🪴', '🌸', '🌼', '🌻', '🌺', '🌷', '🌹', '🥀', '🍄', '🎋', '🏝️', '🏞️', '🏜️', '⛰️', '🏕️', '🌋', '🌊', '🌈', '☀️', '🌙', '⭐', '❄️', '🔥', '💧', '🦋', '🐝', '🐞', '🏡', '🎨', '📋', '❤️', '✨', '💎', '🌍', '🪨'];
+            const EMOJI_RE = /\p{Regional_Indicator}{2}|\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?)*/u;
+            const TplPreview = (() => {
+                let target = null, picUrl = '';
+                const modal = $('tplPrevModal');
+                const msg = (text) => { $('tplPrevMsg').textContent = text || ''; };
+                const firstEmoji = (raw) => { const m = EMOJI_RE.exec(String(raw || '')); return m ? m[0] : ''; };
+                // Большие фото ужимаем: превью хранится в браузере и попадает в экспорт, 4000 px ему не нужны
+                async function shrink(file, max = 512) {
+                    const im = await probeImage(file);
+                    const w = im.naturalWidth, h = im.naturalHeight;
+                    if (Math.max(w, h) <= max) return file;
+                    const k = max / Math.max(w, h), cv = document.createElement('canvas');
+                    cv.width = Math.max(1, Math.round(w * k));
+                    cv.height = Math.max(1, Math.round(h * k));
+                    cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height);
+                    const type = /jpe?g/i.test(file.type) ? 'image/jpeg' : 'image/png';
+                    const blob = await new Promise(res => cv.toBlob(res, type, 0.9));
+                    return blob || file;
+                }
+                async function paint() {
+                    if (!target) return;
+                    const { rec } = target, box = $('tplPrevPic'), mode = rec.icon ? 'image' : (rec.emoji ? 'emoji' : 'auto');
+                    if (picUrl) { URL.revokeObjectURL(picUrl); picUrl = ''; }
+                    box.textContent = '';
+                    MC.render($('tplPrevName'), rec.name || '');
+                    $('tplPrevMode').textContent = t('tplprev.mode.' + mode);
+                    $('tplPrevAuto').classList.toggle('active', mode === 'auto');
+                    $('tplPrevImage').classList.toggle('active', mode === 'image');
+                    $('tplPrevEmojis').querySelectorAll('.tpl-emoji').forEach(b => b.classList.toggle('active', mode === 'emoji' && b.textContent === rec.emoji));
+                    const show = (src) => { const im = document.createElement('img'); im.src = src; im.alt = ''; box.textContent = ''; box.appendChild(im); };
+                    if (mode === 'image') { picUrl = URL.createObjectURL(rec.icon); show(picUrl); }
+                    else if (mode === 'emoji') box.textContent = rec.emoji;
+                    else {
+                        box.textContent = '📋';
+                        const url = await tplCollage(rec).catch(() => null);
+                        if (url && target && target.rec === rec && !rec.icon && !rec.emoji) show(url);
+                    }
+                }
+                async function save(patch) {
+                    if (!target) return;
+                    const { rec, rerender } = target, before = { icon: rec.icon, emoji: rec.emoji };
+                    Object.assign(rec, patch);
+                    if (!rec.icon) delete rec.icon;
+                    if (!rec.emoji) delete rec.emoji;
+                    try { await UserLib.put('plant', rec); }
+                    catch (err) {
+                        console.error('[veg]', err);
+                        ['icon', 'emoji'].forEach(k => { if (before[k] === undefined) delete rec[k]; else rec[k] = before[k]; });
+                        msg(t('folder.error'));
+                        return;
+                    }
+                    close();
+                    rerender();
+                }
+                function open(rec, rerender) {
+                    target = { rec, rerender };
+                    msg('');
+                    $('tplPrevEmojiInput').value = '';
+                    modal.classList.add('show');
+                    paint();
+                }
+                function close() {
+                    modal.classList.remove('show');
+                    target = null;
+                    if (picUrl) { URL.revokeObjectURL(picUrl); picUrl = ''; }
+                }
+                function pickCustomEmoji() {
+                    const raw = $('tplPrevEmojiInput').value, ch = firstEmoji(raw);
+                    if (!ch) { if (raw.trim()) msg(t('tplprev.emoji_bad')); return; }
+                    save({ emoji: ch, icon: null });
+                }
+                function init() {
+                    const grid = $('tplPrevEmojis');
+                    TPL_EMOJIS.forEach(ch => {
+                        const b = document.createElement('button');
+                        b.type = 'button';
+                        b.className = 'tpl-emoji';
+                        b.textContent = ch;
+                        b.onclick = () => save({ emoji: ch, icon: null });
+                        grid.appendChild(b);
+                    });
+                    $('tplPrevClose').onclick = close;
+                    modal.onclick = (e) => { if (e.target === modal) close(); };
+                    $('tplPrevAuto').onclick = () => save({ icon: null, emoji: null });
+                    $('tplPrevImage').onclick = () => { msg(''); $('tplPrevFile').click(); };
+                    $('tplPrevFile').onchange = async (e) => {
+                        const f = e.target.files && e.target.files[0];
+                        e.target.value = '';
+                        if (!f || !target) return;
+                        try { await save({ icon: await shrink(f), emoji: null }); }
+                        catch (err) { console.error('[veg]', err); msg(t('tplprev.image_bad')); }
+                    };
+                    $('tplPrevEmojiOk').onclick = pickCustomEmoji;
+                    $('tplPrevEmojiInput').addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); pickCustomEmoji(); } e.stopPropagation(); });
+                    Folder.setTopLayer(() => { if (!modal.classList.contains('show')) return false; close(); return true; });
+                }
+                init();
+                return { open, close };
+            })();
+
             // Весь список растений галочками: из vegetation.json + свои из папки
             async function buildVegList() {
                 vegEntries = await Veg.entries();
@@ -5569,7 +6224,9 @@
                         if (meta) { try { const j = JSON.parse(await meta.text()); if (j && typeof j.animation === 'object') rec.anim = j.animation; } catch (e) { /* без анимации */ } }
                         return rec;
                     },
-                    thumb: (rec, track) => { if (rec.template) return null; const f = rec.image || rec.bottom || rec.top; return f ? track(f) : null; },
+                    thumb: (rec, track) => { if (rec.template) return rec.icon ? track(rec.icon) : null; const f = rec.image || rec.bottom || rec.top; return f ? track(f) : null; },
+                    thumbClassOf: (rec) => (rec.template && rec.icon ? '' : 'folder-thumb-pixel'),           // своя картинка шаблона - не пиксель-арт
+                    preview: (rec) => (rec.template && !rec.icon && !rec.emoji ? tplCollage(rec) : null),     // автопревью шаблона - сценка из его растений
                     isActive: (rec) => (rec.template ? veg.on && tplKey(rec.data) === tplKey(vegSnapshot()) : vegIsOn({ id: 'u-' + rec.id, on: true })),
                     pick: async (rec) => {
                         if (rec.template) { await vegApplyTemplate(rec); return; }
@@ -5577,6 +6234,7 @@
                         if (!vegIsOn({ id: 'u-' + rec.id, on: true })) vegToggle('u-' + rec.id, true); else vegChanged(false);
                     },
                     onRename: (rec) => { if (!rec.template) buildVegList(); },
+                    onImported: () => buildVegList(),
                     onRemove: (rec) => {
                         if (rec.template) return;
                         const pid = 'u-' + rec.id;
@@ -5587,12 +6245,19 @@
                         purgeFromTemplates(pid);
                         buildVegList().then(() => { if (veg.sel) veg.sel = normSel(veg.sel); vegChanged(false); });
                     },
-                    decorate: (el, rec) => {
-                        if (rec.template) {         // шаблон: вместо картинки значок, без цвета / веса / размера
+                    decorate: (el, rec, rerender) => {
+                        if (rec.template) {         // шаблон: без цвета / веса / размера; превью - сценка из растений, своя картинка или эмодзи
                             const ph = el.querySelector('.folder-thumb-empty');
-                            if (ph) ph.textContent = '📋';
+                            if (ph) { ph.textContent = rec.emoji || '📋'; if (rec.emoji) ph.classList.add('folder-thumb-emoji'); }
                             el.classList.add('folder-tpl');
                             el.title = t('veg.tpl.card');
+                            const b = document.createElement('button');
+                            b.type = 'button';
+                            b.className = 'folder-icon-btn';
+                            b.textContent = '🖼';
+                            b.title = t('tplprev.btn');
+                            b.onclick = (ev) => { ev.stopPropagation(); TplPreview.open(rec, rerender); };
+                            el.appendChild(b);
                             return;
                         }
                         el.append(folderTools('plant', rec, true, () => { delete veg.weight['u-' + rec.id]; buildVegList().then(() => vegChanged(false)); }));
