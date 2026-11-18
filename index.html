@@ -1460,7 +1460,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.2</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.3</span></div>
         </div>
     </div>
 
@@ -5374,7 +5374,10 @@
                  enabled: false - галочка по умолчанию снята. Свои растения игрока (вид 'plant') показываются в том же списке (id u-N). */
             const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {}, weight: {}, size: {} };   // sel: Set включённых id или null (= как в json)
             let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [], natH = {};
-            const vegTitle = (id) => MC.strip(nameFor('veg.name.' + id, prettify(id)));
+            // 1.9.3: название растения из lang/*.json может содержать цветовые коды (§a, §q...) - в списке оно выводится через MC.render, а не вырезается.
+            // Если после удаления кодов текста не остаётся (одни коды) - показываем имя из файла, иначе название было бы невидимым.
+            const vegName = (id) => { const n = nameFor('veg.name.' + id, prettify(id)); return MC.strip(n).trim() ? n : prettify(id); };
+            const vegTitle = (id) => MC.strip(vegName(id));
             const randSeed = () => 1 + Math.floor(Math.random() * 999999);
             const tintOfEntry = (e) => e.tint || (e.parts.find(p => p.tint) || {}).tint || null;
 
@@ -5950,7 +5953,7 @@
                     cb.onchange = () => vegToggle(e.id, cb.checked);
                     cv.width = cv.height = 24;
                     nm.className = 'veg-name';
-                    if (e.user) MC.render(nm, e.name); else nm.textContent = vegTitle(e.id);
+                    MC.render(nm, e.user ? e.name : vegName(e.id));
                     lab.append(cb, cv, nm);
                     row.appendChild(lab);
                     const icon = () => Veg.textures(e, veg.tint[e.id]).then(tx => {
