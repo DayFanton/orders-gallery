@@ -1376,6 +1376,29 @@
             #sidebar .sidebar-scroll-container .skin-list { flex: 1 0 auto !important; overflow: visible !important; }
             #sidebar .sidebar-scroll-container .meta-info, #sidebar .sidebar-scroll-container .site-disclaimer { flex-shrink: 0; }
         }
+
+        /* ================= Версия 1.9.2 ================= */
+        /* Положение персонажа: манипулятор (стрелки / кольца / кубики) рисуется на холсте поверх 3D-вида, плюс блок в панели настроек */
+        #pose_gizmo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; display: none; }
+        body.pose-editing #pose_gizmo { display: block; }
+        body.ui-hidden #pose_gizmo { display: none; }
+        .pose-row { display: flex; gap: 8px; }
+        .pose-row .pose-edit-btn { flex: 1; width: auto; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .pose-row .pose-reset-btn { flex: none; width: 44px; padding: 10px 0; font-size: 1.05rem; line-height: 1; }
+        .pose-ico { font-size: 1rem; line-height: 1; }
+        .pose-edit-btn.active { background: rgba(184, 134, 11, 0.15); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+        #poseOptions { margin-top: 12px; }
+        #poseOptions .platform-label:first-of-type { margin-top: 14px; }
+        .radio-grid.pose-modes { grid-template-columns: repeat(3, 1fr); }
+        .pose-modes .radio-btn span { padding: 8px 4px; }
+        .pose-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .pose-trio.pose-single { grid-template-columns: 1fr; }
+        .pose-num { display: flex; align-items: center; gap: 5px; min-width: 0; padding: 0 8px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: border-color 0.15s; }
+        .pose-num:focus-within { border-color: var(--accent); }
+        .pose-num i { font-style: normal; font-weight: 700; font-size: 0.74rem; color: var(--text-muted); }
+        .pose-num input { width: 100%; min-width: 0; padding: 7px 0; font-size: 0.82rem; color: var(--text-main); background: transparent; border: 0; outline: 0;
+            -moz-appearance: textfield; appearance: textfield; user-select: text; -webkit-user-select: text; }
+        .pose-num input::-webkit-outer-spin-button, .pose-num input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
             </style>
 </head>
 <body class="i18n-pending">
@@ -1437,7 +1460,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.1</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.2</span></div>
         </div>
     </div>
 
@@ -1461,6 +1484,7 @@
             </button>
         </div>
         <canvas id="skin_container"></canvas>
+        <canvas id="pose_gizmo"></canvas>
     </div>
 
     <div id="controls_panel">
@@ -1544,6 +1568,38 @@
                     <input type="checkbox" id="elytra_toggle">
                     <span>Отображать элитры</span>
                 </label>
+            </div>
+
+            <div class="control-group" id="poseGroup">
+                <h3>Положение персонажа</h3>
+                <div class="pose-row">
+                    <button class="btn pose-edit-btn" id="pose_edit" type="button" aria-pressed="false" title="Двигать, вращать и увеличивать персонажа относительно платформы"><span class="pose-ico">✥</span><span id="lbl_pose_edit">Изменить положение</span></button>
+                    <button class="btn pose-reset-btn" id="pose_reset" type="button" title="Вернуть персонажа на место">↺</button>
+                </div>
+                <div id="poseOptions" style="display:none;">
+                    <div class="radio-grid pose-modes">
+                        <label class="radio-btn"><input type="radio" name="posemode" value="move" checked><span id="lbl_pm_move">Двигать</span></label>
+                        <label class="radio-btn"><input type="radio" name="posemode" value="rotate"><span id="lbl_pm_rotate">Вращать</span></label>
+                        <label class="radio-btn"><input type="radio" name="posemode" value="scale"><span id="lbl_pm_scale">Размер</span></label>
+                    </div>
+                    <div class="platform-label" id="lbl_pose_pos">Позиция (в блоках)</div>
+                    <div class="pose-trio">
+                        <label class="pose-num"><i style="color:#ff3b5c">X</i><input type="number" id="pose_px" step="0.25" value="0" inputmode="decimal"></label>
+                        <label class="pose-num"><i style="color:#3df05c">Y</i><input type="number" id="pose_py" step="0.25" value="0" inputmode="decimal"></label>
+                        <label class="pose-num"><i style="color:#3b82ff">Z</i><input type="number" id="pose_pz" step="0.25" value="0" inputmode="decimal"></label>
+                    </div>
+                    <div class="platform-label" id="lbl_pose_rot">Поворот (в градусах)</div>
+                    <div class="pose-trio">
+                        <label class="pose-num"><i style="color:#ff3b5c">X</i><input type="number" id="pose_rx" step="15" value="0" inputmode="decimal"></label>
+                        <label class="pose-num"><i style="color:#3df05c">Y</i><input type="number" id="pose_ry" step="15" value="0" inputmode="decimal"></label>
+                        <label class="pose-num"><i style="color:#3b82ff">Z</i><input type="number" id="pose_rz" step="15" value="0" inputmode="decimal"></label>
+                    </div>
+                    <div class="platform-label" id="lbl_pose_size">Размер (во сколько раз)</div>
+                    <div class="pose-trio pose-single">
+                        <label class="pose-num"><i>×</i><input type="number" id="pose_s" step="0.05" min="0.1" max="8" value="1" inputmode="decimal"></label>
+                    </div>
+                    <div class="emote-hint" id="poseHint" style="margin-top:10px;">Тяните стрелки, кольца и кубики в окне просмотра. Shift — шаг по сетке. Клавиши W, E, R — режимы, Esc — выйти.</div>
+                </div>
             </div>
 
             <div class="control-group" id="platformGroup">
@@ -2146,7 +2202,19 @@
             "lib.import_newer": "The file was made by a newer version of the site - update the page and try again",
             "lib.import_none": "The file has nothing for this library",
             "lib.import_error": "Could not import the file",
-            "lib.too_big": "The file is too large"
+            "lib.too_big": "The file is too large",
+
+            "pose.title": "Character position",
+            "pose.edit": "Edit position",
+            "pose.edit.title": "Move, rotate and scale the character relative to the platform",
+            "pose.reset": "Put the character back",
+            "pose.mode.move": "Move",
+            "pose.mode.rotate": "Rotate",
+            "pose.mode.scale": "Scale",
+            "pose.pos": "Position (in blocks)",
+            "pose.rot": "Rotation (in degrees)",
+            "pose.size": "Size (times)",
+            "pose.hint": "Drag the arrows, rings and cubes in the viewer. Shift - snap to steps. Keys W, E, R - modes, Esc - exit."
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2367,6 +2435,17 @@
             ['#lbl_vl0', 'veg.layer1'],
             ['#lbl_vl1', 'veg.layer2'],
             ['#lbl_vl2', 'veg.layer3'],
+            ['#poseGroup > h3', 'pose.title'],
+            ['#lbl_pose_edit', 'pose.edit'],
+            ['#pose_edit', 'pose.edit.title', 'title'],
+            ['#pose_reset', 'pose.reset', 'title'],
+            ['#lbl_pm_move', 'pose.mode.move'],
+            ['#lbl_pm_rotate', 'pose.mode.rotate'],
+            ['#lbl_pm_scale', 'pose.mode.scale'],
+            ['#lbl_pose_pos', 'pose.pos'],
+            ['#lbl_pose_rot', 'pose.rot'],
+            ['#lbl_pose_size', 'pose.size'],
+            ['#poseHint', 'pose.hint'],
             ['#agreementModal h3', 'modal.title'],
             ['#agreementModal p', 'modal.text'],
             ['#agreementModal .checkbox-label span', 'modal.agree'],
@@ -2998,7 +3077,10 @@
                 bg: p.get('bg'),
                 elytra: p.get('elytra') === '1',
                 plat: p.get('plat'),
-                time: p.get('time')
+                time: p.get('time'),
+                pp: p.get('pp'),
+                pr: p.get('pr'),
+                ps: p.get('ps')
             };
         }
 
@@ -3014,6 +3096,10 @@
             if (langExplicit) p.set('lang', langExplicit);
             if (currentBgKey && currentBgKey !== 'dark') p.set('bg', currentBgKey);
             if (elytraEnabled) p.set('elytra', '1');
+            const po = PoseEditor.state();
+            if (po.pp) p.set('pp', po.pp);
+            if (po.pr) p.set('pr', po.pr);
+            if (po.ps) p.set('ps', po.ps);
             const pl = Scene3D.state();
             if (pl.light !== null) p.set('lt', pl.light ? '1' : '0');
             if (pl.lit && Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
@@ -3100,6 +3186,7 @@
                 document.getElementById('elytra_toggle').checked = elytraEnabled;
                 updateBackEquipment();
             }
+            PoseEditor.applyState(st.pp, st.pr, st.ps);
             Scene3D.applyState(st.plat, st.time);
 
             const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
@@ -5025,7 +5112,7 @@
                     const g = m.geometry;
                     if (!g.boundingBox) g.computeBoundingBox();
                     let y = g.boundingBox.min.y;
-                    for (let o = m; o; o = o.parent) y = y * o.scale.y + o.position.y;
+                    for (let o = m; o && o.name !== 'gallery-pose'; o = o.parent) y = y * o.scale.y + o.position.y;   // 1.9.2: выше группы положения персонажа не поднимаемся - платформа стоит на месте
                     if (isFinite(y) && y < 0 && y > -64) return y;
                 } catch (e) { /* возьмём значение по умолчанию */ }
                 return -16;
@@ -6305,6 +6392,545 @@
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
             };
+        })();
+
+        /* ---------- Положение персонажа относительно платформы (1.9.2) ----------
+           Кнопка «Изменить положение» включает редактор: поверх 3D-вида рисуется манипулятор в стиле Blockbench -
+           стрелки (двигать), кольца (вращать) и кубики (размер). Тянется только персонаж целиком, его части телом не трогаются
+           (конечностями занимаются анимации и эмоции), платформа и камера остаются на месте.
+           Как устроено: между сценой и обёрткой игрока (skinViewer.playerWrapper) вставляется своя группа 'gallery-pose',
+           её положение / поворот / масштаб и меняются. Анимации, эмоции и автовращение работают внутри неё и друг другу не мешают.
+           Манипулятор нарисован на отдельном 2D-холсте (#pose_gizmo) по матрице камеры - от версии three.js он не зависит.
+           В ссылке (пишется, только если отличается от значений по умолчанию):
+             pp=x_y_z   смещение в блоках (1 блок = 16 единиц модели, у платформы такая же сетка)
+             pr=x_y_z   поворот в градусах (порядок XYZ)
+             ps=1.25    размер (во сколько раз; один на все оси, чтобы пропорции персонажа не ломались)
+           С зажатым Shift - шаг: двигать 1/4 блока, вращать 15°, размер 0.25. Клавиши W / E / R - режимы, Esc - выйти из редактора. */
+        const PoseEditor = (() => {
+            'use strict';
+            const $ = (id) => document.getElementById(id);
+            const DEG = Math.PI / 180, BLOCK = 16;
+            const LIM = { pos: 12 * BLOCK, smin: 0.1, smax: 8 };
+            const SNAP = { move: BLOCK / 4, rot: 15, scale: 0.25 };
+            const AXIS = [[1, 0, 0], [0, 1, 0], [0, 0, 1]];
+            const COL = ['#ff3b5c', '#3df05c', '#3b82ff'], HOT = '#fff001';
+            const RING_N = 72;
+
+            const st = { pos: [0, 0, 0], rot: [0, 0, 0], scale: 1 };      // pos - единицы модели, rot - градусы
+            let group = null, editing = false, mode = 'move', hover = null, drag = null, raf = 0, ov = null, ctx = null;
+
+            /* ---------- Векторы ---------- */
+            const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
+            const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+            const mul = (a, k) => [a[0] * k, a[1] * k, a[2] * k];
+            const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+            const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+            const norm = (a) => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+            const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+            const qmul = (a, b) => [
+                a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1],
+                a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0],
+                a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3],
+                a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]
+            ];
+
+            /* ---------- Группа-обёртка ---------- */
+            function ensureGroup() {
+                if (group) return group;
+                const v = typeof skinViewer !== 'undefined' ? skinViewer : null;
+                if (!v || !v.playerObject) return null;
+                const wrap = v.playerWrapper || v.playerObject.parent;
+                if (!wrap || !wrap.parent) return null;
+                const parent = wrap.parent;
+                const g = new wrap.constructor();             // Group - тот же класс three.js, что у skinview3d
+                g.name = 'gallery-pose';
+                parent.add(g);
+                g.add(wrap);
+                group = g;
+                return g;
+            }
+
+            const isDefault = () => st.scale === 1 && st.pos.every(v => v === 0) && st.rot.every(v => v === 0);
+            function apply() {
+                if (!group && isDefault()) return;           // пока положение не менялось, сцену не трогаем
+                const g = ensureGroup();
+                if (!g) return;
+                g.position.set(st.pos[0], st.pos[1], st.pos[2]);
+                g.rotation.set(st.rot[0] * DEG, st.rot[1] * DEG, st.rot[2] * DEG);
+                g.scale.set(st.scale, st.scale, st.scale);
+            }
+
+            /* ---------- Камера: проекция и луч без матриц three.js ---------- */
+            function frame() {
+                const v = typeof skinViewer !== 'undefined' ? skinViewer : null;
+                if (!v || !v.canvas || !v.camera) return null;
+                const r = v.canvas.getBoundingClientRect(), W = r.width, H = r.height;
+                if (!W || !H) return null;
+                const cm = v.camera;
+                cm.updateMatrixWorld();
+                const e = cm.matrixWorld.elements;
+                const C = {
+                    o: [e[12], e[13], e[14]], r: [e[0], e[1], e[2]], u: [e[4], e[5], e[6]], f: [-e[8], -e[9], -e[10]],
+                    t: Math.tan(cm.fov * DEG / 2) / (cm.zoom || 1), W, H, a: W / H, left: r.left, top: r.top
+                };
+                const P = st.pos.slice();
+                const d0 = Math.max(1, dot(sub(P, C.o), C.f));
+                const px = Math.min(120, Math.max(72, Math.min(W, H) * 0.22));      // размер манипулятора на экране не зависит от приближения
+                return { C, P, L: px * d0 * C.t / (H / 2), ppu: (H / 2) / (C.t * d0), sp: proj(P, C) };
+            }
+            function proj(p, C) {
+                const d = sub(p, C.o), vz = Math.max(0.05, dot(d, C.f));
+                return { x: C.W / 2 + dot(d, C.r) / vz / (C.t * C.a) * (C.W / 2), y: C.H / 2 - dot(d, C.u) / vz / C.t * (C.H / 2) };
+            }
+            function rayAt(mx, my, C) {
+                const nx = (mx - C.W / 2) / (C.W / 2) * C.t * C.a, ny = -(my - C.H / 2) / (C.H / 2) * C.t;
+                return { o: C.o, d: norm(add(add(C.f, mul(C.r, nx)), mul(C.u, ny))) };
+            }
+            // Параметр точки оси (P + A*s), ближайшей к лучу
+            function axisParam(P, A, ray) {
+                const w = sub(P, ray.o), b = dot(A, ray.d), d = dot(A, w), e = dot(ray.d, w), den = 1 - b * b;
+                return den < 1e-4 ? null : (b * e - d) / den;
+            }
+            function planeHit(P, N, ray) {
+                const den = dot(ray.d, N);
+                if (Math.abs(den) < 1e-4) return null;
+                const t = dot(sub(P, ray.o), N) / den;
+                return t < 0 ? null : add(ray.o, mul(ray.d, t));
+            }
+
+            /* ---------- Форма манипулятора для текущего режима ---------- */
+            function geometry(F) {
+                const { C, P, L, sp } = F, hs = [];
+                if (mode === 'move') {
+                    for (let n = 0; n < 3; n++) {
+                        const i = (n + 1) % 3, j = (n + 2) % 3;     // плоскость, перпендикулярная оси n
+                        hs.push({ t: 'plane', n, pts: [[0.3, 0.3], [0.62, 0.3], [0.62, 0.62], [0.3, 0.62]].map(([a, b]) => proj(add(P, add(mul(AXIS[i], L * a), mul(AXIS[j], L * b))), C)) });
+                    }
+                    for (let i = 0; i < 3; i++) hs.push({ t: 'axis', i, a: sp, b: proj(add(P, mul(AXIS[i], L)), C) });
+                } else if (mode === 'rotate') {
+                    const R = L * 0.9;
+                    for (let i = 0; i < 3; i++) {
+                        const u = AXIS[(i + 1) % 3], v = AXIS[(i + 2) % 3], pts = [];
+                        for (let k = 0; k <= RING_N; k++) {
+                            const a = k / RING_N * Math.PI * 2, off = add(mul(u, Math.cos(a) * R), mul(v, Math.sin(a) * R));
+                            const s = proj(add(P, off), C);
+                            s.front = dot(off, sub(C.o, P)) > 0;      // точка кольца со стороны камеры
+                            pts.push(s);
+                        }
+                        hs.push({ t: 'ring', i, pts, R });
+                    }
+                } else {
+                    for (let i = 0; i < 3; i++) for (const s of [1, -1]) hs.push({ t: 'sbox', i, s, a: sp, b: proj(add(P, mul(AXIS[i], L * 0.85 * s)), C) });
+                    hs.push({ t: 'scenter', b: sp });
+                }
+                return hs;
+            }
+
+            const same = (a, b) => !!a && !!b && a.t === b.t && a.i === b.i && a.s === b.s && a.n === b.n;
+            function segDist(px, py, a, b) {
+                const dx = b.x - a.x, dy = b.y - a.y, l2 = dx * dx + dy * dy;
+                const t = l2 ? clamp(((px - a.x) * dx + (py - a.y) * dy) / l2, 0, 1) : 0;
+                return Math.hypot(px - (a.x + t * dx), py - (a.y + t * dy));
+            }
+            function inPoly(px, py, pts) {
+                let c = false;
+                for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+                    if ((pts[i].y > py) !== (pts[j].y > py) && px < (pts[j].x - pts[i].x) * (py - pts[i].y) / (pts[j].y - pts[i].y) + pts[i].x) c = !c;
+                }
+                return c;
+            }
+
+            function pick(mx, my, F, hs, touch) {
+                const tol = touch ? 20 : 9;
+                let best = null, bd = Infinity;
+                const take = (h, d, extra) => { if (d < bd) { bd = d; best = extra ? Object.assign({}, h, extra) : h; } };
+                for (const h of hs) {
+                    if (h.t === 'scenter') { if (Math.hypot(mx - h.b.x, my - h.b.y) <= tol + 5) return h; }
+                }
+                for (const h of hs) {
+                    if (h.t === 'axis') {
+                        const d = segDist(mx, my, h.a, h.b);
+                        if (d <= tol) take(h, d);
+                    } else if (h.t === 'sbox') {
+                        const dx = h.b.x - h.a.x, dy = h.b.y - h.a.y, l = Math.hypot(dx, dy) || 1;
+                        const from = { x: h.a.x + dx / l * 16, y: h.a.y + dy / l * 16 };      // у самого центра ось не хватается - там центральный кубик
+                        const d = Math.min(Math.hypot(mx - h.b.x, my - h.b.y) - 4, segDist(mx, my, from, h.b));
+                        if (d <= tol) take(h, d);
+                    } else if (h.t === 'ring') {
+                        let md = Infinity, mk = 0;
+                        for (let k = 0; k < RING_N; k++) {
+                            const d = segDist(mx, my, h.pts[k], h.pts[k + 1]) + (h.pts[k].front ? 0 : 6);
+                            if (d < md) { md = d; mk = k; }
+                        }
+                        if (md <= tol) take(h, md, { k: mk });
+                    }
+                }
+                if (best) return best;
+                for (const h of hs) if (h.t === 'plane' && inPoly(mx, my, h.pts)) return h;
+                return null;
+            }
+
+            /* ---------- Отрисовка ---------- */
+            function ensureOverlay() {
+                if (!ov) { ov = $('pose_gizmo'); ctx = ov ? ov.getContext('2d') : null; }
+                return !!ctx;
+            }
+            const isHot = (h) => same(h, hover) || (drag && same(h, drag.h));
+
+            function arrowHead(c, a, b, color, size) {
+                const dx = b.x - a.x, dy = b.y - a.y, l = Math.hypot(dx, dy) || 1, ux = dx / l, uy = dy / l;
+                c.fillStyle = color;
+                c.beginPath();
+                c.moveTo(b.x + ux * size * 0.6, b.y + uy * size * 0.6);
+                c.lineTo(b.x - ux * size * 0.7 - uy * size * 0.45, b.y - uy * size * 0.7 + ux * size * 0.45);
+                c.lineTo(b.x - ux * size * 0.7 + uy * size * 0.45, b.y - uy * size * 0.7 - ux * size * 0.45);
+                c.closePath();
+                c.fill();
+            }
+
+            function draw() {
+                if (!ensureOverlay() || document.body.classList.contains('ui-hidden')) return;
+                const F = frame();
+                if (!F) return;
+                const dpr = window.devicePixelRatio || 1, w = Math.round(F.C.W * dpr), h = Math.round(F.C.H * dpr);
+                if (ov.width !== w || ov.height !== h) { ov.width = w; ov.height = h; }
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                ctx.clearRect(0, 0, F.C.W, F.C.H);
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                const hs = geometry(F), sp = F.sp;
+
+                if (mode === 'move') {
+                    for (const hd of hs) {
+                        if (hd.t !== 'plane') continue;
+                        const col = isHot(hd) ? HOT : COL[hd.n];
+                        ctx.beginPath();
+                        hd.pts.forEach((p, k) => (k ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)));
+                        ctx.closePath();
+                        ctx.globalAlpha = isHot(hd) ? 0.55 : 0.3;
+                        ctx.fillStyle = col;
+                        ctx.fill();
+                        ctx.globalAlpha = 0.9;
+                        ctx.strokeStyle = col;
+                        ctx.lineWidth = 1.5;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                    for (const hd of hs) {
+                        if (hd.t !== 'axis') continue;
+                        const col = isHot(hd) ? HOT : COL[hd.i], dx = hd.b.x - sp.x, dy = hd.b.y - sp.y, l = Math.hypot(dx, dy) || 1;
+                        ctx.strokeStyle = col;
+                        ctx.lineWidth = isHot(hd) ? 4 : 3;
+                        ctx.beginPath();
+                        ctx.moveTo(sp.x, sp.y);
+                        ctx.lineTo(hd.b.x - dx / l * 8, hd.b.y - dy / l * 8);
+                        ctx.stroke();
+                        arrowHead(ctx, sp, hd.b, col, 16);
+                    }
+                } else if (mode === 'rotate') {
+                    const R = hs[0].R * F.ppu;
+                    ctx.strokeStyle = 'rgba(120, 150, 255, 0.35)';       // «шар» вокруг персонажа
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.arc(sp.x, sp.y, R * 1.08, 0, Math.PI * 2);
+                    ctx.stroke();
+                    for (const pass of [false, true]) {                  // сначала дальняя половина колец (бледнее), потом ближняя
+                        for (const hd of hs) {
+                            const hot = isHot(hd);
+                            ctx.strokeStyle = hot ? HOT : COL[hd.i];
+                            ctx.lineWidth = hot ? 4 : 2.5;
+                            ctx.globalAlpha = pass ? 1 : 0.3;
+                            ctx.beginPath();
+                            for (let k = 0; k < RING_N; k++) {
+                                if (hd.pts[k].front !== pass) continue;
+                                ctx.moveTo(hd.pts[k].x, hd.pts[k].y);
+                                ctx.lineTo(hd.pts[k + 1].x, hd.pts[k + 1].y);
+                            }
+                            ctx.stroke();
+                        }
+                    }
+                    ctx.globalAlpha = 1;
+                } else {
+                    for (const hd of hs) {
+                        if (hd.t !== 'sbox') continue;
+                        const col = isHot(hd) ? HOT : COL[hd.i];
+                        ctx.strokeStyle = col;
+                        ctx.lineWidth = 2;
+                        ctx.globalAlpha = hd.s > 0 ? 1 : 0.6;
+                        ctx.beginPath();
+                        ctx.moveTo(sp.x, sp.y);
+                        ctx.lineTo(hd.b.x, hd.b.y);
+                        ctx.stroke();
+                        ctx.fillStyle = col;
+                        ctx.fillRect(hd.b.x - 6, hd.b.y - 6, 12, 12);
+                        ctx.strokeStyle = 'rgba(0, 0, 0, 0.55)';
+                        ctx.lineWidth = 1;
+                        ctx.strokeRect(hd.b.x - 6, hd.b.y - 6, 12, 12);
+                        ctx.globalAlpha = 1;
+                    }
+                    const c = hs.find(x => x.t === 'scenter');
+                    ctx.fillStyle = isHot(c) ? HOT : '#e4e4e7';
+                    ctx.fillRect(sp.x - 8, sp.y - 8, 16, 16);
+                    ctx.strokeStyle = 'rgba(0, 0, 0, 0.6)';
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(sp.x - 8, sp.y - 8, 16, 16);
+                }
+                ctx.fillStyle = '#fff';                                  // точка вращения - центр модели
+                ctx.beginPath();
+                ctx.arc(sp.x, sp.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            function loop() { raf = requestAnimationFrame(loop); draw(); }
+            function startLoop() { if (!raf) raf = requestAnimationFrame(loop); }
+            function stopLoop() {
+                if (raf) cancelAnimationFrame(raf);
+                raf = 0;
+                if (ensureOverlay()) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, ov.width, ov.height); }
+            }
+
+            /* ---------- Поля ввода ---------- */
+            const AX = ['x', 'y', 'z'];
+            const rnd = (v, d) => String(+v.toFixed(d));
+            function setField(id, v) { const el = $(id); if (el && document.activeElement !== el) el.value = v; }
+            function updateFields() {
+                AX.forEach((a, i) => { setField('pose_p' + a, rnd(st.pos[i] / BLOCK, 3)); setField('pose_r' + a, rnd(st.rot[i], 1)); });
+                setField('pose_s', rnd(st.scale, 3));
+            }
+            function changed(soon) {
+                apply();
+                if (soon) syncUrlStateSoon(); else syncUrlState();
+            }
+
+            /* ---------- Мышь и касания ---------- */
+            const local = (e, C) => ({ x: e.clientX - C.left, y: e.clientY - C.top });
+            const cvs = () => (typeof skinViewer !== 'undefined' && skinViewer ? skinViewer.canvas : null);
+
+            function hitAt(e) {
+                if (!editing || document.body.classList.contains('ui-hidden')) return null;
+                const F = frame();
+                if (!F) return null;
+                const m = local(e, F.C);
+                const h = pick(m.x, m.y, F, geometry(F), e.pointerType === 'touch' || e.type === 'touchstart');
+                return h ? { h, F, m } : null;
+            }
+
+            function begin(hit, e) {
+                const { h, F, m } = hit, g = ensureGroup(), q = g.quaternion;
+                const rr = rayAt(m.x, m.y, F.C);
+                drag = { h, id: e.pointerId, m0: m, pos0: st.pos.slice(), q0: [q.x, q.y, q.z, q.w], s0: st.scale };
+                if (h.t === 'axis') drag.p0 = axisParam(F.P, AXIS[h.i], rr);
+                else if (h.t === 'plane') drag.hit0 = planeHit(F.P, AXIS[h.n], rr);
+                else if (h.t === 'sbox') {
+                    const dx = h.b.x - F.sp.x, dy = h.b.y - F.sp.y, l = Math.hypot(dx, dy);
+                    drag.dir2 = l > 1 ? [dx / l, dy / l] : [1, 0];
+                    drag.lpx = Math.max(40, l);
+                } else if (h.t === 'ring') {
+                    const A = AXIS[h.i], hitP = planeHit(F.P, A, rr);
+                    if (hitP && Math.abs(dot(rr.d, A)) > 0.25) {             // кольцо смотрит на камеру: угол считаем по точке на его плоскости
+                        drag.method = 'plane';
+                        drag.v0 = sub(hitP, F.P);
+                        drag.prev = 0;
+                        drag.total = 0;
+                    } else {                                                  // кольцо видно ребром: двигаем мышью вдоль касательной
+                        const u = AXIS[(h.i + 1) % 3], v = AXIS[(h.i + 2) % 3], a = h.k / RING_N * Math.PI * 2;
+                        const Q = add(F.P, add(mul(u, Math.cos(a) * h.R), mul(v, Math.sin(a) * h.R)));
+                        const T = add(mul(u, -Math.sin(a)), mul(v, Math.cos(a)));
+                        const s0 = proj(Q, F.C), s1 = proj(add(Q, mul(T, F.L * 0.1)), F.C);
+                        const dx = s1.x - s0.x, dy = s1.y - s0.y, l = Math.hypot(dx, dy) || 1;
+                        drag.method = 'tangent';
+                        drag.t2 = [dx / l, dy / l];
+                        drag.ringPx = Math.max(40, h.R * F.ppu);
+                    }
+                }
+                const c = cvs();
+                if (c) { c.style.cursor = 'grabbing'; try { c.setPointerCapture(e.pointerId); } catch (err) { /* не критично */ } }
+            }
+
+            function update(e) {
+                const F = frame();
+                if (!F || !drag) return;
+                const m = local(e, F.C), h = drag.h, shift = e.shiftKey, rr = rayAt(m.x, m.y, F.C);
+                const snapPos = (v) => (shift ? Math.round(v / SNAP.move) * SNAP.move : v);
+                if (h.t === 'axis') {
+                    const s1 = axisParam(drag.pos0, AXIS[h.i], rr);
+                    if (s1 === null || drag.p0 === null) return;
+                    st.pos = drag.pos0.slice();
+                    st.pos[h.i] = clamp(snapPos(drag.pos0[h.i] + (s1 - drag.p0)), -LIM.pos, LIM.pos);
+                } else if (h.t === 'plane') {
+                    const hit = planeHit(drag.pos0, AXIS[h.n], rr);
+                    if (!hit || !drag.hit0) return;
+                    const d = sub(hit, drag.hit0);
+                    st.pos = drag.pos0.map((v, i) => clamp(i === h.n ? v : snapPos(v + d[i]), -LIM.pos, LIM.pos));
+                } else if (h.t === 'ring') {
+                    const A = AXIS[h.i];
+                    let ang;
+                    if (drag.method === 'plane') {
+                        const hit = planeHit(drag.pos0, A, rr);
+                        if (!hit) return;
+                        const v1 = sub(hit, drag.pos0), a = Math.atan2(dot(A, cross(drag.v0, v1)), dot(drag.v0, v1));
+                        let dd = a - drag.prev;
+                        if (dd > Math.PI) dd -= Math.PI * 2; else if (dd < -Math.PI) dd += Math.PI * 2;
+                        drag.total += dd;
+                        drag.prev = a;
+                        ang = drag.total;
+                    } else {
+                        ang = ((m.x - drag.m0.x) * drag.t2[0] + (m.y - drag.m0.y) * drag.t2[1]) / drag.ringPx;
+                    }
+                    if (shift) ang = Math.round(ang / (SNAP.rot * DEG)) * SNAP.rot * DEG;
+                    const s = Math.sin(ang / 2), q = qmul([A[0] * s, A[1] * s, A[2] * s, Math.cos(ang / 2)], drag.q0), g = ensureGroup();
+                    g.quaternion.set(q[0], q[1], q[2], q[3]);               // вместе с ним обновляется и g.rotation (Euler)
+                    st.rot = [g.rotation.x / DEG, g.rotation.y / DEG, g.rotation.z / DEG];
+                } else if (h.t === 'sbox' || h.t === 'scenter') {
+                    const f = h.t === 'sbox'
+                        ? 1 + ((m.x - drag.m0.x) * drag.dir2[0] + (m.y - drag.m0.y) * drag.dir2[1]) / drag.lpx
+                        : Math.exp((drag.m0.y - m.y) / 160);
+                    let ns = drag.s0 * Math.max(0.02, f);
+                    if (shift) ns = Math.round(ns / SNAP.scale) * SNAP.scale;
+                    st.scale = clamp(ns, LIM.smin, LIM.smax);
+                }
+                apply();
+                updateFields();
+                syncUrlStateSoon();
+            }
+
+            function endDrag(e) {
+                if (!drag || (e && e.pointerId !== drag.id)) return;
+                const c = cvs();
+                if (c) { c.style.cursor = hover ? 'pointer' : ''; try { c.releasePointerCapture(drag.id); } catch (err) { /* уже отпущен */ } }
+                drag = null;
+                syncUrlState();
+            }
+
+            function setHover(h) {
+                hover = h;
+                const c = cvs();
+                if (c && !drag) c.style.cursor = h ? 'pointer' : '';
+            }
+
+            function onDown(e) {
+                if (drag || e.button > 0 || e.isPrimary === false || e.target !== cvs()) return;
+                const hit = hitAt(e);
+                if (!hit) return;
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();       // камера (OrbitControls) эту нажатую кнопку не увидит
+                begin(hit, e);
+            }
+            function swallow(e) {                  // старые события мыши / касаний: если нажали на ручку - камеру не трогаем
+                if (e.target !== cvs() || !editing) return;
+                const p = e.touches && e.touches[0] ? e.touches[0] : e;
+                const hit = hitAt({ clientX: p.clientX, clientY: p.clientY, pointerType: e.touches ? 'touch' : 'mouse', type: e.type });
+                if (hit || drag) { e.stopPropagation(); if (e.cancelable) e.preventDefault(); }
+            }
+            function onMove(e) {
+                if (!editing) return;
+                if (drag) {
+                    if (e.pointerId !== drag.id) return;
+                    e.preventDefault();
+                    update(e);
+                    return;
+                }
+                if (e.pointerType === 'touch' || e.target !== cvs()) { if (hover) setHover(null); return; }
+                const hit = hitAt(e);
+                if (!same(hit && hit.h, hover)) setHover(hit ? hit.h : null);
+            }
+
+            /* ---------- Режимы и включение ---------- */
+            function setMode(m) {
+                mode = m === 'rotate' || m === 'scale' ? m : 'move';
+                hover = null;
+                document.querySelectorAll('input[name="posemode"]').forEach(r => { r.checked = r.value === mode; });
+            }
+
+            function setEditing(on) {
+                editing = !!on;
+                document.body.classList.toggle('pose-editing', editing);
+                const b = $('pose_edit');
+                b.classList.toggle('active', editing);
+                b.setAttribute('aria-pressed', editing ? 'true' : 'false');
+                $('poseOptions').style.display = editing ? '' : 'none';
+                if (editing) {
+                    ensureOverlay();
+                    ensureGroup();
+                    updateFields();
+                    startLoop();
+                } else {
+                    endDrag();
+                    hover = null;
+                    stopLoop();
+                    const c = cvs();
+                    if (c) c.style.cursor = '';
+                }
+            }
+
+            function reset(sync = true) {
+                st.pos = [0, 0, 0];
+                st.rot = [0, 0, 0];
+                st.scale = 1;
+                apply();
+                updateFields();
+                if (sync) syncUrlState();
+            }
+
+            /* ---------- Ссылка ---------- */
+            function parseVec(s) {
+                if (!s) return null;
+                const a = String(s).split(/[_,;\s]+/).filter(Boolean).map(Number);
+                return a.length === 3 && a.every(isFinite) ? a : null;
+            }
+            function applyState(pp, pr, ps) {
+                const P = parseVec(pp), R = parseVec(pr), S = parseFloat(ps);
+                st.pos = P ? P.map(v => clamp(v * BLOCK, -LIM.pos, LIM.pos)) : [0, 0, 0];
+                st.rot = R ? R.map(v => clamp(v, -360, 360)) : [0, 0, 0];
+                st.scale = isFinite(S) ? clamp(S, LIM.smin, LIM.smax) : 1;
+                apply();
+                updateFields();
+            }
+            function state() {
+                return {
+                    pp: st.pos.every(v => Math.abs(v / BLOCK) < 0.0005) ? null : st.pos.map(v => rnd(v / BLOCK, 3)).join('_'),
+                    pr: st.rot.every(v => Math.abs(v) < 0.05) ? null : st.rot.map(v => rnd(v, 1)).join('_'),
+                    ps: Math.abs(st.scale - 1) < 0.0005 ? null : rnd(st.scale, 3)
+                };
+            }
+
+            function init() {
+                const zone = $('viewer_zone');
+                zone.addEventListener('pointerdown', onDown, true);
+                ['mousedown', 'touchstart'].forEach(n => zone.addEventListener(n, swallow, { capture: true, passive: false }));
+                window.addEventListener('pointermove', onMove, { passive: false });
+                window.addEventListener('pointerup', endDrag);
+                window.addEventListener('pointercancel', endDrag);
+
+                $('pose_edit').onclick = () => setEditing(!editing);
+                $('pose_reset').onclick = () => reset();
+                document.querySelectorAll('input[name="posemode"]').forEach(r => { r.onchange = () => setMode(r.value); });
+                AX.forEach((a, i) => {
+                    const p = $('pose_p' + a), r = $('pose_r' + a);
+                    p.oninput = () => { const v = parseFloat(p.value); if (!isFinite(v)) return; st.pos[i] = clamp(v * BLOCK, -LIM.pos, LIM.pos); changed(true); };
+                    r.oninput = () => { const v = parseFloat(r.value); if (!isFinite(v)) return; st.rot[i] = clamp(v, -360, 360); changed(true); };
+                    p.onblur = r.onblur = updateFields;
+                });
+                const s = $('pose_s');
+                s.oninput = () => { const v = parseFloat(s.value); if (!isFinite(v)) return; st.scale = clamp(v, LIM.smin, LIM.smax); changed(true); };
+                s.onblur = updateFields;
+
+                document.addEventListener('keydown', (e) => {
+                    if (!editing || e.ctrlKey || e.metaKey || e.altKey) return;
+                    const tag = (e.target && e.target.tagName) || '';
+                    if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag) || (e.target && e.target.isContentEditable)) return;
+                    if (document.querySelector('.emote-overlay.show, .modal-overlay.show')) return;
+                    if (e.code === 'KeyW') setMode('move');
+                    else if (e.code === 'KeyE') setMode('rotate');
+                    else if (e.code === 'KeyR') setMode('scale');
+                    else if (e.key === 'Escape' && !document.body.classList.contains('ui-hidden')) setEditing(false);
+                });
+                updateFields();
+            }
+            init();
+
+            return { applyState, state, reset, setEditing, isEditing: () => editing };
         })();
 
         /* ---------- Кнопки над вьюером: скрыть интерфейс и сохранить скриншот ----------
@@ -7693,12 +8319,16 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 renderCurrentList();
                 syncUrlState();
                 
+                PoseEditor.setEditing(false);
+                PoseEditor.reset(false);
+                
                 skinViewer.controls.reset();
                 skinViewer.controls.alpha = 0; 
                 skinViewer.controls.beta = 0;
                 skinViewer.controls.target.set(0, -2, 0); 
                 skinViewer.camera.position.set(0, 0, 60);
                 Scene3D.resetCamera();
+                syncUrlState();
 
                 if (currentActiveSkinFilename) {
                     selectSkin(currentActiveSkinFilename, false);
@@ -7919,6 +8549,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 elytraEnabled = urlState.elytra;
 
                 initViewer();
+                PoseEditor.applyState(urlState.pp, urlState.pr, urlState.ps);        // положение персонажа из ссылки
                 document.getElementById('elytra_toggle').checked = elytraEnabled;
                 Backdrop.apply(urlState.bg, false);
                 if (currentCapeFilename || elytraEnabled) updateBackEquipment();
