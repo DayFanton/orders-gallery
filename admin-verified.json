@@ -1,13 +1,22 @@
 {
  "hy": {
   "language.name": "Հայերեն",
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ua": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "kk": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ro": {
   "cape.name.db": "dB",
@@ -17,8 +26,15 @@
   "bgimg.name.nether": "Nether",
   "block.netherrack": "Netherrack",
   "tplprev.emoji": "Emoji",
-  "lib.importing_n": "Import: %s",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "es": {
   "cape.name.db": "dB",
@@ -31,7 +47,15 @@
   "emote.button": "Emotes",
   "variation.original": "Original",
   "tab.skins": "Skins",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "pt": {
   "cape.name.db": "dB",
@@ -44,7 +68,15 @@
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "block.netherrack": "Netherrack",
-  "bgimg.name.end": "End"
+  "bgimg.name.end": "End",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "de": {
   "cape.name.db": "dB",
@@ -59,10 +91,25 @@
   "bgimg.name.nether": "Nether",
   "tplprev.emoji": "Emoji",
   "lib.kind.emote": "Emotes",
-  "lib.importing_n": "Import: %s"
+  "lib.importing_n": "Import: %s",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "zh": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "fr": {
   "cape.name.db": "dB",
@@ -79,16 +126,30 @@
   "variation.original": "Original",
   "tab.skins": "Skins",
   "tab.capes": "Capes",
-  "language.auto": "Auto"
- },
- "zh-Hans": {
-  "cape.name.db": "dB"
+  "language.auto": "Auto",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "ja": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ko": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "id": {
   "cape.name.db": "dB",
@@ -96,17 +157,41 @@
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "platform.title": "Platform",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "tr": {
   "cape.name.db": "dB",
   "platform.title": "Platform",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "th": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "pl": {
   "cape.name.db": "dB",
@@ -115,20 +200,41 @@
   "bgimg.name.nether": "Nether",
   "rename.style.r": "Reset",
   "tplprev.emoji": "Emoji",
-  "lib.importing_n": "Import: %s"
+  "lib.importing_n": "Import: %s",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "it": {
   "cape.name.db": "dB",
   "tplprev.emoji": "Emoji",
   "bgimg.name.end": "End",
   "block.netherrack": "Netherrack",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ml": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "ta": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "am": {
   "cape.name.db": "ዲቢ"
@@ -136,22 +242,41 @@
  "sw": {
   "cape.name.db": "dB",
   "tplprev.emoji": "Emoji",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ha": {
   "cape.name.db": "dB",
   "tplprev.emoji": "Emoji",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "yo": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "pcm": {
   "cape.name.db": "dB",
   "rename.style.l": "Bold",
   "block.sand": "Sand",
   "view.grid": "Grid",
-  "view.list": "List"
+  "view.list": "List",
+  "cape.name.mojang": "Mojang"
  },
  "te": {
   "cape.name.db": "dB"
@@ -163,7 +288,14 @@
   "cape.name.db": "dB"
  },
  "yue": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "ajp": {
   "cape.name.db": "dB"
@@ -177,7 +309,15 @@
   "lib.importing_n": "Import: %s",
   "block.netherrack": "Netherrack",
   "bgimg.name.end": "End",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "su": {
   "cape.name.db": "dB",
@@ -187,10 +327,15 @@
   "platform.title": "Platform",
   "controls.reset": "Reset",
   "size.reset": "Reset",
-  "veg.reset": "Reset"
- },
- "mr": {
-  "cape.name.db": "dB"
+  "veg.reset": "Reset",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang": "Mojang"
  },
  "nl": {
   "cape.name.db": "dB",
@@ -204,10 +349,26 @@
   "emote.button": "Emotes",
   "skin.type": "Type: %s",
   "tab.capes": "Capes",
-  "tab.skins": "Skins"
+  "tab.skins": "Skins",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "vi": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "ms": {
   "cape.name.db": "dB",
@@ -218,14 +379,30 @@
   "tplprev.emoji": "Emoji",
   "lib.import": "Import",
   "view.grid": "Grid",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "cs": {
   "cape.name.db": "dB",
   "block.netherrack": "Netherrack",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
-  "lib.importing_n": "Import: %s"
+  "lib.importing_n": "Import: %s",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "sv": {
   "cape.name.db": "dB",
@@ -240,14 +417,30 @@
   "emote.button": "Emotes",
   "variation.original": "Original",
   "rotate.title": "Rotation",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "hu": {
   "cape.name.db": "dB",
   "tplprev.emoji": "Emoji",
   "bgimg.name.end": "End",
   "block.netherrack": "Netherrack",
-  "platform.title": "Platform"
+  "platform.title": "Platform",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "da": {
   "lib.kind.emote": "Emotes",
@@ -265,7 +458,15 @@
   "variation.original": "Original",
   "skin.type": "Type: %s",
   "tab.skins": "Skins",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "no": {
   "tplprev.emoji": "Emoji",
@@ -276,48 +477,122 @@
   "skin.type": "Type: %s",
   "anim.pause": "Pause",
   "variation.original": "Original",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "fi": {
   "tplprev.emoji": "Emoji",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "el": {
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang": "Mojang"
  },
  "sk": {
   "language.auto": "Auto",
   "bgimg.name.nether": "Nether",
   "bgimg.name.end": "End",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "hr": {
   "block.netherrack": "Netherrack",
   "bgimg.name.nether": "Nether",
   "bgimg.name.end": "End",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "et": {
   "lib.importing_n": "Import: %s",
   "bgimg.name.nether": "Nether",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "sl": {
   "bgimg.name.nether": "Nether",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "lt": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "sq": {
   "language.auto": "Auto",
   "block.netherrack": "Netherrack",
   "bgimg.name.nether": "Nether",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "az": {
   "tplprev.emoji": "Emoji",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "tl": {
   "tplprev.emoji": "Emoji",
@@ -325,7 +600,15 @@
   "bgimg.name.end": "End",
   "block.netherrack": "Netherrack",
   "bgimg.name.nether": "Nether",
-  "veg.tpl.default": "Template %s"
+  "veg.tpl.default": "Template %s",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ca": {
   "tplprev.emoji": "Emoji",
@@ -334,31 +617,70 @@
   "bgimg.name.nether": "Nether",
   "rename.guide.colors": "Colors",
   "variation.original": "Original",
-  "tab.capes": "Capes"
+  "tab.capes": "Capes",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "cy": {
   "tplprev.emoji": "Emoji",
   "block.netherrack": "Netherrack",
-  "view.grid": "Grid"
+  "view.grid": "Grid",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "uzn": {
   "lib.importing_n": "Import: %s",
   "tplprev.emoji": "Emoji",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "tk": {
   "lib.importing_n": "Import: %s",
   "tplprev.emoji": "Emoji",
   "bgimg.name.nether": "Nether",
-  "bgimg.name.end": "End"
+  "bgimg.name.end": "End",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "jv": {
   "tplprev.emoji": "Emoji",
   "block.netherrack": "Netherrack",
   "bgimg.name.end": "End",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "ceb": {
   "bgimg.name.end": "End",
@@ -368,7 +690,15 @@
   "view.grid": "Grid",
   "view.list": "Lista",
   "sort.default": "Default",
-  "veg.tpl.default": "Template %s"
+  "veg.tpl.default": "Template %s",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "hil": {
   "tplprev.emoji": "Emoji",
@@ -377,19 +707,43 @@
   "block.netherrack": "Netherrack",
   "view.grid": "Grid",
   "sort.default": "Default",
-  "veg.tpl.default": "Template %s"
+  "veg.tpl.default": "Template %s",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ilo": {
   "tplprev.emoji": "Emoji",
   "bgimg.name.nether": "Nether",
   "bgimg.name.end": "End",
   "block.netherrack": "Netherrack",
-  "veg.tpl.default": "Template %s"
+  "veg.tpl.default": "Template %s",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "mad": {
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ig": {
   "block.netherrack": "Netherrack",
@@ -397,119 +751,346 @@
   "bgimg.name.nether": "Nether",
   "emote.button": "Emotes",
   "emote.title": "Emotes",
-  "tab.skins": "Skins"
+  "tab.skins": "Skins",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "so": {
   "bgimg.name.nether": "Nether",
   "block.netherrack": "Netherrack",
-  "bgimg.name.end": "End"
+  "bgimg.name.end": "End",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "st": {
   "bgimg.name.nether": "Nether",
   "bgimg.name.end": "End",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ts": {
   "block.netherrack": "Netherrack",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "tn": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ts-MZ": {
   "bgimg.name.end": "End",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ve": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "sn": {
   "tplprev.emoji": "Emoji",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "rw": {
   "block.netherrack": "Netherrack",
   "bgimg.name.end": "End",
-  "bgimg.name.nether": "Nether"
+  "bgimg.name.nether": "Nether",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "kam": {
   "bgimg.name.nether": "Nether",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "luo": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "kg": {
   "language.auto": "Auto",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "mg": {
   "block.netherrack": "Netherrack",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  },
  "ny": {
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
  },
  "umb": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "ln": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "wo": {
   "tplprev.emoji": "Emoji",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.cobalt": "Cobalt",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "fon": {
   "block.netherrack": "Netherrack",
-  "tplprev.emoji": "Emoji"
+  "tplprev.emoji": "Emoji",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.cobalt": "Cobalt"
  },
  "ee": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "tw": {
   "block.netherrack": "Netherrack",
   "tplprev.emoji": "Emoji",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.cobalt": "Cobalt",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "aa": {
   "block.netherrack": "Netherrack",
   "mobile.gallery": "📁 Gallery",
-  "gallery.title": "Gallery"
+  "gallery.title": "Gallery",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "yao": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "ium": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.cobalt": "Cobalt"
  },
  "zza": {
   "platform.title": "Platform",
   "block.netherrack": "Netherrack",
-  "controls.reset": "Reset"
+  "controls.reset": "Reset",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
  },
  "gn": {
   "tplprev.emoji": "Emoji",
   "block.netherrack": "Netherrack",
   "platform.block": "Block",
-  "veg.tpl.default": "Template %s"
+  "veg.tpl.default": "Template %s",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "qu": {
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
  },
  "ho": {
   "plat.layers": "Platform layers",
   "tplprev.emoji": "Emoji",
   "block.netherrack": "Netherrack",
   "veg.tpl.default": "Template %s",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011"
  },
  "lmo": {
   "tplprev.emoji": "Emoji",
   "rename.style.r": "Reset",
   "lib.importing_n": "Import: %s",
   "variation.original": "Original",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios"
  },
  "hif": {
   "block.netherrack": "Netherrack",
@@ -525,6 +1106,386 @@
   "view.list": "List",
   "sort.default": "Default",
   "gallery.title": "Gallery",
-  "language.auto": "Auto"
+  "language.auto": "Auto",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojira_moderator": "Mojira Moderator",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "juo": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "shu": {
+  "cape.name.mojang": "Mojang"
+ },
+ "ba": {
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "yi": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
+ },
+ "mag": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "skr": {
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "azb": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "bal": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "ug": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang"
+ },
+ "hmn": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.cobalt": "Cobalt",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015"
+ },
+ "kde": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "wal": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "sid": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojira_moderator": "Mojira Moderator"
+ },
+ "kmb": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "mas": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "rn": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "ki": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
+ },
+ "nd": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "nr": {
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ss": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang"
+ },
+ "xh": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "zu": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ti": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "om": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "gan": {
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "lo": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "km": {
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ne": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "as": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "pnb": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "gu": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "mn": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang": "Mojang"
+ },
+ "tg": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ky": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ga": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "hi": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "fa": {
+  "cape.name.mojang": "Mojang"
+ },
+ "ar-SD": {
+  "cape.name.mojang": "Mojang"
+ },
+ "ar-EG": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ar-SA": {
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang": "Mojang"
+ },
+ "he": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.mojang_classic": "Mojang Classic"
+ },
+ "ka": {
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2016": "MINECON 2016"
+ },
+ "mk": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios"
+ },
+ "be": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
+ },
+ "sr": {
+  "cape.name.mojang_classic": "Mojang Classic",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang": "Mojang"
+ },
+ "bg": {
+  "cape.name.minecon_2016": "MINECON 2016",
+  "cape.name.minecon_2015": "MINECON 2015",
+  "cape.name.minecon_2013": "MINECON 2013",
+  "cape.name.minecon_2012": "MINECON 2012",
+  "cape.name.minecon_2011": "MINECON 2011",
+  "cape.name.mojang": "Mojang",
+  "cape.name.mojang_studios": "Mojang Studios",
+  "cape.name.mojang_classic": "Mojang Classic"
  }
 }
