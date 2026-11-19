@@ -1399,6 +1399,15 @@
         .pose-num input { width: 100%; min-width: 0; padding: 7px 0; font-size: 0.82rem; color: var(--text-main); background: transparent; border: 0; outline: 0;
             -moz-appearance: textfield; appearance: textfield; user-select: text; -webkit-user-select: text; }
         .pose-num input::-webkit-outer-spin-button, .pose-num input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+        /* ================= Версия 1.9.5 ================= */
+        /* Цвет света (палитра под «Освещение и тени») и слои платформы */
+        .light-palette { grid-template-columns: repeat(6, 1fr); margin-top: 6px; }
+        .light-palette .bg-dot { height: 28px; }
+        .light-palette button.bg-dot { padding: 0; width: 100%; font: inherit; }
+        .light-palette .light-auto { background: linear-gradient(135deg, #ff9a4d 0%, #fff6e6 50%, #9bb0ff 100%); }
+        .light-palette .bg-dot.active { border-color: #fff; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55); }
+        #platLayers .checkbox-label input:disabled + span, .veg-layers .veg-layer:disabled + span { opacity: 0.45; }
             </style>
 </head>
 <body class="i18n-pending">
@@ -1460,7 +1469,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.3</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.5</span></div>
         </div>
     </div>
 
@@ -1620,6 +1629,21 @@
                         </div>
                         <input type="range" id="time_slider" class="time-slider" min="0" max="24" step="0.25" value="12">
                     </div>
+                    <div class="platform-label" id="lbl_lightcolor">Цвет света</div>
+                    <div class="bg-grid light-palette" id="lightPalette">
+                        <button type="button" class="bg-dot light-auto" id="lc_auto" data-color="" title="Естественный (по времени суток)" aria-label="Естественный"></button>
+                        <button type="button" class="bg-dot" data-color="#ffc880" style="background:#ffc880" aria-label="#ffc880"></button>
+                        <button type="button" class="bg-dot" data-color="#ff8a3d" style="background:#ff8a3d" aria-label="#ff8a3d"></button>
+                        <button type="button" class="bg-dot" data-color="#ff4d4d" style="background:#ff4d4d" aria-label="#ff4d4d"></button>
+                        <button type="button" class="bg-dot" data-color="#ff5fc8" style="background:#ff5fc8" aria-label="#ff5fc8"></button>
+                        <button type="button" class="bg-dot" data-color="#b06bff" style="background:#b06bff" aria-label="#b06bff"></button>
+                        <button type="button" class="bg-dot" data-color="#5b7bff" style="background:#5b7bff" aria-label="#5b7bff"></button>
+                        <button type="button" class="bg-dot" data-color="#4de3ff" style="background:#4de3ff" aria-label="#4de3ff"></button>
+                        <button type="button" class="bg-dot" data-color="#4dff9a" style="background:#4dff9a" aria-label="#4dff9a"></button>
+                        <button type="button" class="bg-dot" data-color="#fff35c" style="background:#fff35c" aria-label="#fff35c"></button>
+                        <button type="button" class="bg-dot" data-color="#ffffff" style="background:#ffffff" aria-label="#ffffff"></button>
+                        <div class="bg-dot custom-color-btn" id="lc_custom_btn" title="Свой цвет"><input type="color" id="light_color_custom" value="#ffffff"></div>
+                    </div>
                 </div>
                 <div id="platformOptions" style="display:none;">
                     <div class="platform-label" id="lbl_block">Блок</div>
@@ -1627,6 +1651,13 @@
                     <div class="emote-hint" id="blockGridHint" style="display:none; margin-top:6px;">Блоков пока нет — положите текстуры в папку blocks/ или добавьте свои.</div>
                     <div class="veg-row" id="blockTintRow" style="display:none;"><span id="lbl_blocktint">Цвет блока</span><input type="color" id="block_tint" class="tint"></div>
                     <button id="btnBlockFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои блоки</span></button>
+                    <div class="platform-label" id="lbl_platlayers">Слои платформы</div>
+                    <div class="veg-layers" id="platLayers">
+                        <label class="checkbox-label"><input type="checkbox" class="plat-layer" data-layer="0" checked><span id="lbl_pl0">Верхняя платформа</span></label>
+                        <label class="checkbox-label"><input type="checkbox" class="plat-layer" data-layer="1" checked><span id="lbl_pl1">Средняя платформа</span></label>
+                        <label class="checkbox-label"><input type="checkbox" class="plat-layer" data-layer="2" checked><span id="lbl_pl2">Нижняя платформа</span></label>
+                    </div>
+                    <div class="emote-hint" id="platLayersHint" style="margin-top:4px;">Убрали верхний слой — персонаж встанет на тот, что ниже, а растения пересадятся. Один слой остаётся всегда.</div>
                     <div class="veg-head">
                         <label class="checkbox-label"><input type="checkbox" id="veg_toggle"><span id="lbl_veg">Включить растительность</span></label>
                         <button id="btnVegDice" class="veg-dice" type="button" title="Перемешать">🎲</button>
@@ -2214,7 +2245,13 @@
             "pose.pos": "Position (in blocks)",
             "pose.rot": "Rotation (in degrees)",
             "pose.size": "Size (times)",
-            "pose.hint": "Drag the arrows, rings and cubes in the viewer. Shift - snap to steps. Keys W, E, R - modes, Esc - exit."
+            "pose.hint": "Drag the arrows, rings and cubes in the viewer. Shift - snap to steps. Keys W, E, R - modes, Esc - exit.",
+
+            "light.color": "Light color",
+            "light.color.auto": "Natural (by time of day)",
+            "light.color.custom": "Custom color",
+            "plat.layers": "Platform layers",
+            "plat.layers.hint": "Remove the top layer and the character steps down to the next one, and the plants are re-planted. One layer always stays."
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2424,6 +2461,14 @@
             ['#lbl_vegset', 'veg.plants'],
             ['#lbl_blocktint', 'block.tint'],
             ['#lbl_light', 'light.enable'],
+            ['#lbl_lightcolor', 'light.color'],
+            ['#lc_auto', 'light.color.auto', 'title'],
+            ['#lc_custom_btn', 'light.color.custom', 'title'],
+            ['#lbl_platlayers', 'plat.layers'],
+            ['#lbl_pl0', 'veg.layer1'],
+            ['#lbl_pl1', 'veg.layer2'],
+            ['#lbl_pl2', 'veg.layer3'],
+            ['#platLayersHint', 'plat.layers.hint'],
             ['#btnVegFolder .folder-lbl', 'folder.veg.open'],
             ['#vegGridHint', 'veg.empty'],
             ['#btnVegReset .veg-act-lbl', 'veg.reset'],
@@ -3063,6 +3108,7 @@
 
         /* ---------- Состояние интерфейса в адресной строке ---------- */
         const SORT_FIELDS = ['default', 'author', 'name', 'date'];
+        const MOTION_TYPES = ['walk', 'run', 'fly'];      // 1.9.4: анимация движения в ссылке - anim=walk|run|fly, эмоция - emote=<id> (u-N - из личной папки)
 
         function readStateFromUrl() {
             const p = new URLSearchParams(window.location.search);
@@ -3080,7 +3126,9 @@
                 time: p.get('time'),
                 pp: p.get('pp'),
                 pr: p.get('pr'),
-                ps: p.get('ps')
+                ps: p.get('ps'),
+                anim: MOTION_TYPES.includes(p.get('anim')) ? p.get('anim') : 'none',
+                emote: /^[^\u0000-\u001f]{1,120}$/.test(p.get('emote') || '') ? p.get('emote') : null      // id сверяется со списком эмоций при запуске, поэтому тут только отсев мусора
             };
         }
 
@@ -3096,6 +3144,9 @@
             if (langExplicit) p.set('lang', langExplicit);
             if (currentBgKey && currentBgKey !== 'dark') p.set('bg', currentBgKey);
             if (elytraEnabled) p.set('elytra', '1');
+            if (MOTION_TYPES.includes(currentAnimationType)) p.set('anim', currentAnimationType);
+            const emoteKey = playingEmoteKey();
+            if (emoteKey) p.set('emote', emoteKey);
             const po = PoseEditor.state();
             if (po.pp) p.set('pp', po.pp);
             if (po.pr) p.set('pr', po.pr);
@@ -3103,9 +3154,11 @@
             const pl = Scene3D.state();
             if (pl.light !== null) p.set('lt', pl.light ? '1' : '0');
             if (pl.lit && Math.abs(pl.hour - 12) > 0.001) p.set('time', String(+pl.hour.toFixed(2)));
+            if (pl.lit && pl.lcolor) p.set('lc', pl.lcolor.slice(1));                    // 1.9.5: цвет света
             if (pl.on) {
                 p.set('plat', pl.block);
                 if (pl.tint) p.set('bt', pl.tint.slice(1));
+                if (pl.layers !== 7) p.set('pl', String(pl.layers));                         // 1.9.5: какие слои платформы стоят (маска 1-7)
                 if (pl.veg.on) {
                     p.set('veg', String(pl.veg.seed));
                     if (pl.veg.sel !== null) p.set('vp', pl.veg.sel);
@@ -3118,6 +3171,11 @@
             }
             const q = p.toString();
             return window.location.pathname + (q ? '?' + q : '');
+        }
+
+        // Какая эмоция играет сейчас (для ссылки). EmoteUI создаётся ниже по файлу - до его создания просто «ничего не играет»
+        function playingEmoteKey() {
+            try { return EmoteUI.currentKey(); } catch (e) { return null; }
         }
 
         function syncUrlState() {
@@ -3166,6 +3224,21 @@
             if (sync) syncUrlState();
         }
 
+        function setAnimationRadio(value) {
+            const r = document.querySelector('input[name="animation"][value="' + value + '"]');
+            if (r) r.checked = true;
+        }
+
+        // Анимация движения и эмоция из ссылки. Эмоцию запускаем, когда платформа уже собрана: запуск перезаписывает адрес, и раньше времени он бы потерял часть настроек
+        function applyMotionState(st, ready) {
+            if (st.anim !== currentAnimationType) {
+                currentAnimationType = st.anim;
+                setAnimationRadio(st.anim);
+                if (skinViewer && !EmoteRuntime.isActive()) applyAnimation();
+            }
+            Promise.resolve(ready).catch(() => { }).then(() => EmoteUI.restore(st.emote));
+        }
+
         function handlePopState() {
             const st = readStateFromUrl();
             currentSortField = st.sort;
@@ -3187,7 +3260,8 @@
                 updateBackEquipment();
             }
             PoseEditor.applyState(st.pp, st.pr, st.ps);
-            Scene3D.applyState(st.plat, st.time);
+            const sceneReady = Scene3D.applyState(st.plat, st.time);
+            applyMotionState(st, sceneReady);
 
             const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
             if (wantedCape !== currentCapeFilename) {
@@ -4888,8 +4962,14 @@
                 (x, z) => Math.abs(x) <= 3 && Math.abs(z) <= 3 && Math.abs(x) + Math.abs(z) <= 4                                 // 7×7 «круглый»
             ];
 
+            // 1.9.5: слои платформы можно убирать. Слой (0 - верхний), выше которого ничего нет, - «верхний из оставшихся»: на нём стоит персонаж.
+            const layerMask = () => (state.layers[0] ? 1 : 0) | (state.layers[1] ? 2 : 0) | (state.layers[2] ? 4 : 0);
+            const topLayer = () => { const i = state.layers.findIndex(Boolean); return i < 0 ? 0 : i; };
+            // клетка (x, z) слоя l закрыта слоем выше, если там стоит блок (слои вложены друг в друга, поэтому с тремя слоями это то же, что раньше)
+            const coveredAbove = (l, x, z) => { for (let k = 0; k < l; k++) if (state.layers[k] && LAYERS[k](x, z)) return true; return false; };
+
             const PLAIN = 'plain';          // «блок без текстуры» - только пока в blocks/ ничего нет
-            const state = { on: false, block: '', hour: CFG.defaultHour, tint: null, light: null };    // light: null - как платформа (вкл. с ней), true / false - выбор пользователя
+            const state = { on: false, block: '', hour: CFG.defaultHour, tint: null, light: null, lightColor: null, layers: [true, true, true] };    // light: null - как платформа (вкл. с ней), true / false - выбор пользователя; lightColor: null - естественный свет, иначе '#rrggbb' (1.9.5); layers - какие слои платформы стоят (1.9.5, хотя бы один)
             let mesh = null, sun = null, savedAmbient = null, savedView = null, tweenId = 0, kit = null, reqId = 0, lit = false;
 
             /* ---------- Блоки: текстуры из папки blocks/ (blocks.json) и свои из личной папки ----------
@@ -5121,7 +5201,7 @@
             /* ---------- Геометрия холмика: одна сетка, видимые грани, 3 группы материалов (верх / бок / низ) ---------- */
             function hillArrays(feetY) {
                 const S = CFG.block, cells = new Set(), key = (l, x, z) => l + ',' + x + ',' + z;
-                LAYERS.forEach((allow, l) => { for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) if (allow(x, z)) cells.add(key(l, x, z)); });
+                LAYERS.forEach((allow, l) => { if (!state.layers[l]) return; for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) if (allow(x, z)) cells.add(key(l, x, z)); });
                 const has = (l, x, z) => cells.has(key(l, x, z));
                 const buckets = [[], [], []];             // 0 - верх, 1 - бок, 2 - низ; в каждом: [позиции четырёх углов..., нормаль]
                 for (const k of cells) {
@@ -5245,18 +5325,30 @@
                 skinViewer.scene.add(sun);
             }
 
+            const rgbOf = (hex) => { const h6 = hex6(hex).slice(1); return [parseInt(h6.slice(0, 2), 16), parseInt(h6.slice(2, 4), 16), parseInt(h6.slice(4, 6), 16)]; };
+
             function applyLighting() {
                 if (!skinViewer || !lit) return;
                 const L = lightingAt(state.hour), K = lightScale(), a = skinViewer.globalLight;
+                // 1.9.5: выбранный цвет заменяет цвет солнца / луны, подкрашивает рассеянный свет и свет от камеры (иначе белый свет «смывает» оттенок)
+                let lc = L.lightCol, amb = L.amb, camCol = [255, 255, 255];
+                if (state.lightColor) {
+                    const c = rgbOf(state.lightColor);
+                    lc = c;
+                    amb = mix3(L.amb, c, 0.45);
+                    camCol = mix3([255, 255, 255], c, 0.7);
+                }
                 if (sun) {
                     sun.position.set(L.dir[0] * CFG.sunDistance, L.dir[1] * CFG.sunDistance, L.dir[2] * CFG.sunDistance);
-                    sun.color.setRGB(L.lightCol[0] / 255, L.lightCol[1] / 255, L.lightCol[2] / 255);
+                    sun.color.setRGB(lc[0] / 255, lc[1] / 255, lc[2] / 255);
                     sun.intensity = L.lightI * K;
                 }
                 if (a) {
-                    a.color.setRGB(L.amb[0] / 255, L.amb[1] / 255, L.amb[2] / 255);
+                    a.color.setRGB(amb[0] / 255, amb[1] / 255, amb[2] / 255);
                     a.intensity = L.ambI * K;
                 }
+                const cl = skinViewer.cameraLight;
+                if (cl && cl.color) cl.color.setRGB(camCol[0] / 255, camCol[1] / 255, camCol[2] / 255);
             }
 
             // Персонаж отбрасывает тень (в том числе меши эмоций, которые создаются позже - их вызывает EmoteRuntime)
@@ -5299,6 +5391,13 @@
             }
 
             /* ---------- Включение / выключение ---------- */
+            // 1.9.5: персонаж стоит на верхнем из оставшихся слоёв. Убрали верхний - он опускается на следующий (на блок ниже), убрали два - на два.
+            // Платформа не двигается, смещается сам персонаж (группа положения из PoseEditor), поэтому его ручное положение отсчитывается от этой поверхности.
+            function characterBase(animate) {
+                const dy = state.on ? -CFG.block * topLayer() : 0;
+                try { PoseEditor.setBase(dy, animate); } catch (e) { /* редактор положения ещё не создан */ }
+            }
+
             function teardown() {
                 disposeMesh();
                 disposeVeg();
@@ -5320,6 +5419,8 @@
                     a.intensity = savedAmbient.intensity;
                 }
                 savedAmbient = null;
+                const cl = skinViewer && skinViewer.cameraLight;
+                if (cl && cl.color) cl.color.setRGB(1, 1, 1);          // 1.9.5: свет от камеры снова белый
                 if (skinViewer && skinViewer.playerObject) {
                     skinViewer.playerObject.traverse(o => { if (o.isMesh) o.castShadow = false; });
                 }
@@ -5510,7 +5611,7 @@
                 const quads = plants.map(() => []);
                 for (let l = 0; l < LAYERS.length; l++) for (let x = -4; x <= 4; x++) for (let z = -4; z <= 4; z++) {
                     const r = [rnd(), rnd(), rnd(), rnd(), rnd()];     // на каждую клетку всегда одинаковое число бросков: плотность и ярусы не перемешивают остальное
-                    if (!veg.layers[l] || !LAYERS[l](x, z) || (l > 0 && LAYERS[l - 1](x, z)) || (x === 0 && z === 0) || r[0] >= dens) continue;
+                    if (!veg.layers[l] || !state.layers[l] || !LAYERS[l](x, z) || coveredAbove(l, x, z) || (x === 0 && z === 0) || r[0] >= dens) continue;     // 1.9.5: клетки убранных слоёв пустые, а открывшиеся клетки нижнего слоя - свободны (в центре стоит персонаж)
                     let w = r[1] * total, pi = 0;
                     while (pi < plants.length - 1 && w >= plants[pi].weight) { w -= plants[pi].weight; pi++; }
                     const P = plants[pi];
@@ -5610,7 +5711,7 @@
                 $('veg_dens').value = veg.density;
                 $('veg_dens_val').textContent = veg.density + '%';
                 $('veg_dens').style.setProperty('--p', 'calc(5px + (100% - 10px) * ' + veg.density / 100 + ')');
-                document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; });
+                document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; c.disabled = !state.layers[+c.dataset.layer]; });
                 document.querySelectorAll('#vegList input[data-vid]').forEach(c => { c.checked = vegIsOn({ id: c.dataset.vid, on: c.dataset.def === '1' }); });
             }
 
@@ -6128,6 +6229,7 @@
                         const first = !state.on;
                         buildMesh(faces);
                         state.on = true;
+                        if (first) characterBase(false);
                         syncLight();
                         buildVeg();
                         if (first) {
@@ -6136,6 +6238,7 @@
                         }
                     } else if (state.on) {
                         state.on = false;
+                        characterBase(false);
                         teardown();
                         syncLight();
                         moveCamera(savedView || CFG.homeView, animate);
@@ -6144,14 +6247,59 @@
                 } catch (e) {
                     console.error('[platform]', e);
                     state.on = false;
-                    try { teardown(); syncLight(); } catch (e2) { /* ничего */ }
+                    try { characterBase(false); teardown(); syncLight(); } catch (e2) { /* ничего */ }
                 }
                 if (my !== reqId) return;
                 setUi(state.on);
                 lightUi();
                 tintUi();
+                platLayersUi();
                 syncGridActive();
                 if (sync) syncUrlState();
+            }
+
+            /* ---------- Слои платформы и цвет света (1.9.5) ---------- */
+            function platLayersUi() {
+                const n = state.layers.filter(Boolean).length;
+                document.querySelectorAll('.plat-layer').forEach(c => {
+                    const l = +c.dataset.layer;
+                    c.checked = !!state.layers[l];
+                    c.disabled = c.checked && n === 1;                     // последний слой не убрать
+                });
+                document.querySelectorAll('.veg-layer').forEach(c => { c.disabled = !state.layers[+c.dataset.layer]; });     // на убранном слое растений нет
+            }
+
+            function setPlatLayer(l, on) {
+                if (!on && state.layers[l] && state.layers.filter(Boolean).length <= 1) { platLayersUi(); return; }
+                state.layers[l] = !!on;
+                platLayersUi();
+                if (state.on) {
+                    characterBase(true);                                    // персонаж плавно опускается / поднимается
+                    setEnabled(true, { animate: false });                   // перестроить холмик и растения, потом записать в ссылку
+                } else {
+                    syncUrlState();
+                }
+            }
+
+            function lightColorUi() {
+                const cur = state.lightColor ? hex6(state.lightColor) : '';
+                let hit = false;
+                document.querySelectorAll('#lightPalette .bg-dot[data-color]').forEach(d => {
+                    const on = (d.dataset.color || '') === cur;
+                    d.classList.toggle('active', on);
+                    if (on) hit = true;
+                });
+                const cb = $('lc_custom_btn'), ci = $('light_color_custom');
+                cb.classList.toggle('active', !!cur && !hit);
+                cb.style.background = (cur && !hit) ? cur : '';
+                if (cur) ci.value = cur;
+            }
+
+            function setLightColor(hex, soon) {
+                state.lightColor = hex ? hex6(hex) : null;
+                lightColorUi();
+                applyLighting();
+                if (soon) syncUrlStateSoon(); else syncUrlState();
             }
 
             async function setBlock(id, sync = true) {
@@ -6209,7 +6357,14 @@
                 vegUi();
                 const lt = q.get('lt');
                 state.light = lt === '1' ? true : (lt === '0' ? false : null);
+                const lc = q.get('lc'), pm = q.get('pl') === null ? 7 : (parseInt(q.get('pl'), 10) & 7);
+                state.lightColor = /^[0-9a-f]{6}$/i.test(lc || '') ? '#' + lc.toLowerCase() : null;
+                lightColorUi();
+                const mk = pm || 7;                                         // пусто (0) быть не может - хотя бы один слой остаётся
+                state.layers = [!!(mk & 1), !!(mk & 2), !!(mk & 4)];
+                platLayersUi();
                 await setEnabled(!!id, { sync: false, animate: opts.animate !== false });
+                characterBase(false);
                 syncLight();
             }
 
@@ -6276,6 +6431,11 @@
                 $('time_slider').oninput = (e) => setTime(parseFloat(e.target.value), true, true);
                 $('btnBlockFolder').onclick = () => Folder.open('block');
                 $('light_toggle').onchange = (e) => { state.light = e.target.checked === state.on ? null : e.target.checked; syncLight(); syncUrlState(); };
+                document.querySelectorAll('#lightPalette button.bg-dot').forEach(d => { d.onclick = () => setLightColor(d.dataset.color || null, false); });
+                $('light_color_custom').oninput = (e) => setLightColor(e.target.value, true);
+                document.querySelectorAll('.plat-layer').forEach(c => { c.onchange = () => setPlatLayer(+c.dataset.layer, c.checked); });
+                lightColorUi();
+                platLayersUi();
                 let tintTimer = 0;
                 $('block_tint').oninput = (e) => {
                     state.tint = e.target.value;
@@ -6390,7 +6550,7 @@
 
             return {
                 applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
-                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), sizes: Object.entries(veg.size).map(([k, s]) => k + ':' + [s.min, s.max, s.step, s.minWeight, s.maxWeight, s.tile ? 1 : 0].join('~')).join(','), density: veg.density, mask: vegMask() } }),
+                state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, lcolor: state.lightColor, layers: layerMask(), veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), sizes: Object.entries(veg.size).map(([k, s]) => k + ':' + [s.min, s.max, s.step, s.minWeight, s.maxWeight, s.tile ? 1 : 0].join('~')).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
                 _debug: { lightingAt, hillArrays, CFG, Blocks }
@@ -6421,6 +6581,7 @@
 
             const st = { pos: [0, 0, 0], rot: [0, 0, 0], scale: 1 };      // pos - единицы модели, rot - градусы
             let group = null, editing = false, mode = 'move', hover = null, drag = null, raf = 0, ov = null, ctx = null;
+            let baseY = 0, baseRaf = 0;       // 1.9.5: на сколько платформа «опустила» персонажа (убранные верхние слои); положение st.pos отсчитывается от этой поверхности
 
             /* ---------- Векторы ---------- */
             const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
@@ -6453,12 +6614,12 @@
                 return g;
             }
 
-            const isDefault = () => st.scale === 1 && st.pos.every(v => v === 0) && st.rot.every(v => v === 0);
+            const isDefault = () => baseY === 0 && st.scale === 1 && st.pos.every(v => v === 0) && st.rot.every(v => v === 0);
             function apply() {
                 if (!group && isDefault()) return;           // пока положение не менялось, сцену не трогаем
                 const g = ensureGroup();
                 if (!g) return;
-                g.position.set(st.pos[0], st.pos[1], st.pos[2]);
+                g.position.set(st.pos[0], st.pos[1] + baseY, st.pos[2]);
                 g.rotation.set(st.rot[0] * DEG, st.rot[1] * DEG, st.rot[2] * DEG);
                 g.scale.set(st.scale, st.scale, st.scale);
             }
@@ -6476,7 +6637,7 @@
                     o: [e[12], e[13], e[14]], r: [e[0], e[1], e[2]], u: [e[4], e[5], e[6]], f: [-e[8], -e[9], -e[10]],
                     t: Math.tan(cm.fov * DEG / 2) / (cm.zoom || 1), W, H, a: W / H, left: r.left, top: r.top
                 };
-                const P = st.pos.slice();
+                const P = [st.pos[0], st.pos[1] + baseY, st.pos[2]];
                 const d0 = Math.max(1, dot(sub(P, C.o), C.f));
                 const px = Math.min(120, Math.max(72, Math.min(W, H) * 0.22));      // размер манипулятора на экране не зависит от приближения
                 return { C, P, L: px * d0 * C.t / (H / 2), ppu: (H / 2) / (C.t * d0), sp: proj(P, C) };
@@ -6721,7 +6882,7 @@
             function begin(hit, e) {
                 const { h, F, m } = hit, g = ensureGroup(), q = g.quaternion;
                 const rr = rayAt(m.x, m.y, F.C);
-                drag = { h, id: e.pointerId, m0: m, pos0: st.pos.slice(), q0: [q.x, q.y, q.z, q.w], s0: st.scale };
+                drag = { h, id: e.pointerId, m0: m, pos0: st.pos.slice(), pw: F.P.slice(), q0: [q.x, q.y, q.z, q.w], s0: st.scale };
                 if (h.t === 'axis') drag.p0 = axisParam(F.P, AXIS[h.i], rr);
                 else if (h.t === 'plane') drag.hit0 = planeHit(F.P, AXIS[h.n], rr);
                 else if (h.t === 'sbox') {
@@ -6756,12 +6917,12 @@
                 const m = local(e, F.C), h = drag.h, shift = e.shiftKey, rr = rayAt(m.x, m.y, F.C);
                 const snapPos = (v) => (shift ? Math.round(v / SNAP.move) * SNAP.move : v);
                 if (h.t === 'axis') {
-                    const s1 = axisParam(drag.pos0, AXIS[h.i], rr);
+                    const s1 = axisParam(drag.pw, AXIS[h.i], rr);
                     if (s1 === null || drag.p0 === null) return;
                     st.pos = drag.pos0.slice();
                     st.pos[h.i] = clamp(snapPos(drag.pos0[h.i] + (s1 - drag.p0)), -LIM.pos, LIM.pos);
                 } else if (h.t === 'plane') {
-                    const hit = planeHit(drag.pos0, AXIS[h.n], rr);
+                    const hit = planeHit(drag.pw, AXIS[h.n], rr);
                     if (!hit || !drag.hit0) return;
                     const d = sub(hit, drag.hit0);
                     st.pos = drag.pos0.map((v, i) => clamp(i === h.n ? v : snapPos(v + d[i]), -LIM.pos, LIM.pos));
@@ -6769,9 +6930,9 @@
                     const A = AXIS[h.i];
                     let ang;
                     if (drag.method === 'plane') {
-                        const hit = planeHit(drag.pos0, A, rr);
+                        const hit = planeHit(drag.pw, A, rr);
                         if (!hit) return;
-                        const v1 = sub(hit, drag.pos0), a = Math.atan2(dot(A, cross(drag.v0, v1)), dot(drag.v0, v1));
+                        const v1 = sub(hit, drag.pw), a = Math.atan2(dot(A, cross(drag.v0, v1)), dot(drag.v0, v1));
                         let dd = a - drag.prev;
                         if (dd > Math.PI) dd -= Math.PI * 2; else if (dd < -Math.PI) dd += Math.PI * 2;
                         drag.total += dd;
@@ -6933,7 +7094,23 @@
             }
             init();
 
-            return { applyState, state, reset, setEditing, isEditing: () => editing };
+            // 1.9.5: платформа опускает / поднимает персонажа (dy в единицах модели, 0 - стоит на верхнем слое)
+            function setBase(dy, animate) {
+                cancelAnimationFrame(baseRaf);
+                const to = Number.isFinite(dy) ? dy : 0, from = baseY;
+                if (!animate || Math.abs(to - from) < 0.01) { baseY = to; apply(); return; }
+                const t0 = performance.now(), D = to < from ? 380 : 320;
+                const step = (now) => {
+                    const k = Math.min(1, (now - t0) / D);
+                    const e = to < from ? k * k : 1 - Math.pow(1 - k, 3);      // вниз - как падение (разгон), вверх - плавно
+                    baseY = from + (to - from) * e;
+                    apply();
+                    if (k < 1) baseRaf = requestAnimationFrame(step);
+                };
+                baseRaf = requestAnimationFrame(step);
+            }
+
+            return { applyState, state, reset, setEditing, setBase, isEditing: () => editing };
         })();
 
         /* ---------- Кнопки над вьюером: скрыть интерфейс и сохранить скриншот ----------
@@ -7725,6 +7902,7 @@ const EmoteCore = (() => {
         if (wasActive && typeof skinViewer !== 'undefined' && skinViewer) skinViewer.animation = null;
         if (wasActive) appliedAnimationType = 'none';
         if (wasActive && restoreMovement) applyAnimation();
+        if (wasActive) syncUrlState();                      // 1.9.4: эмоция закончилась или прервана - в ссылке её больше нет
         if (typeof EmoteUI !== 'undefined') EmoteUI.refresh();
     }
 
@@ -7742,7 +7920,7 @@ const EmoteCore = (() => {
    Под эмоцией показывается автор (имя - ссылка на authorUrl). Имя автора переводится так же, как у скинов: person.<Имя>.
    Названия для перевода: emote.name.<id>. Поиск по эмоциям смотрит в названия на ВСЕХ языках из lang/ (+ id и автора). */
 const EmoteUI = (() => {
-    let manifest = null, index = null, nowTitleFn = () => '', query = '', iconTarget = null, nowUserId = null;
+    let manifest = null, index = null, nowTitleFn = () => '', query = '', iconTarget = null, nowUserId = null, nowKey = null, restoreReq = 0;
     const $ = (id) => document.getElementById(id);
     const prettify = (b) => b.replace(/_/g, ' ').trim();
     const titleFor = (base, fallback) => nameFor('emote.name.' + base, fallback || prettify(base));
@@ -7853,6 +8031,7 @@ const EmoteUI = (() => {
         try {
             EmoteRuntime.start(EmoteCore.parseEmote(json));
             nowTitleFn = titleFn;
+            syncUrlState();                 // 1.9.4: играющая эмоция попадает в ссылку (emote=...)
             close();
             refresh();
         } catch (e) {
@@ -7866,6 +8045,7 @@ const EmoteUI = (() => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             const json = await r.json();
             nowUserId = null;
+            nowKey = base;
             begin(json, () => titleFor(base, jsonTitle(json, base)));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
@@ -7901,6 +8081,7 @@ const EmoteUI = (() => {
         try {
             const json = JSON.parse(rec.json);
             nowUserId = rec.id;
+            nowKey = 'u-' + rec.id;
             begin(json, () => userTitle(rec));
         } catch (e) { console.error('[emote]', e); message(t('emote.error')); }
     }
@@ -7984,7 +8165,26 @@ const EmoteUI = (() => {
         });
     }
     init();
-    return { open, close, refresh, entries: loadManifest, titleFor };
+    // Ключ играющей эмоции для ссылки: id из emotes/emotes.json или u-N (своя из личной папки - она есть только в этом браузере)
+    const currentKey = () => (EmoteRuntime.isActive() ? nowKey : null);
+
+    // Запустить эмоцию из ссылки (или остановить, если в ссылке её нет). Несуществующая эмоция просто игнорируется
+    async function restore(key) {
+        const my = ++restoreReq;
+        try {
+            if (!key) { if (EmoteRuntime.isActive()) EmoteRuntime.stop(true); return; }
+            if (EmoteRuntime.isActive() && nowKey === key) return;
+            const um = /^u-(\d+)$/.exec(key);
+            if (um) {
+                const rec = (await UserLib.list('emote')).find(r => String(r.id) === um[1]);
+                if (my === restoreReq && rec) playUser(rec);
+            } else {
+                await loadManifest();
+                if (my === restoreReq && manifest.some(e => e.id === key)) await playBase(key);
+            }
+        } catch (e) { console.warn('[emote] не удалось восстановить эмоцию из ссылки', e); }
+    }
+    return { open, close, refresh, entries: loadManifest, titleFor, currentKey, restore };
 })();
 function refreshEmoteUi() { EmoteUI.refresh(); }
 
@@ -8359,6 +8559,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     currentAnimationType = e.target.value;
                     EmoteRuntime.stop(false);   // выбор анимации движения прерывает эмоцию
                     applyAnimation();
+                    syncUrlState();
                 };
             });
 
@@ -8551,7 +8752,9 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 currentCapeFilename = (urlState.cape && globalCapes.some(c => c.filename === urlState.cape)) ? urlState.cape : null;
                 elytraEnabled = urlState.elytra;
 
+                currentAnimationType = urlState.anim;                                  // selectSkin ниже сам включит эту анимацию
                 initViewer();
+                setAnimationRadio(currentAnimationType);
                 PoseEditor.applyState(urlState.pp, urlState.pr, urlState.ps);        // положение персонажа из ссылки
                 document.getElementById('elytra_toggle').checked = elytraEnabled;
                 Backdrop.apply(urlState.bg, false);
@@ -8570,6 +8773,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     await selectSkin(currentActiveSkinFilename, false);
                 }
                 await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
+                EmoteUI.restore(urlState.emote);                                             // эмоции - загруженная модель и готовая платформа
                 warmAvatars();                                                               // остальные миниатюры - в фоне, когда всё главное уже показано
 
             } catch (err) {
