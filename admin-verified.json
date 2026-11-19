@@ -21,19 +21,65 @@
   "language.auto": "Auto"
  },
  "es": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "lib.kind.emote": "Emotes",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "emote.title": "Emotes",
+  "emote.button": "Emotes",
+  "variation.original": "Original",
+  "tab.skins": "Skins",
+  "language.auto": "Auto"
  },
  "pt": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "lib.kind.emote": "Emotes",
+  "bgimg.name.nether": "Nether",
+  "language.auto": "Auto",
+  "tab.skins": "Skins",
+  "variation.original": "Original",
+  "emote.button": "Emotes",
+  "emote.title": "Emotes",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End"
  },
  "de": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "language.auto": "Auto",
+  "tab.skins": "Skins",
+  "variation.original": "Original",
+  "emote.button": "Emotes",
+  "emote.title": "Emotes",
+  "platform.block": "Block",
+  "block.sand": "Sand",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether",
+  "tplprev.emoji": "Emoji",
+  "lib.kind.emote": "Emotes",
+  "lib.importing_n": "Import: %s"
  },
  "zh": {
   "cape.name.db": "dB"
  },
  "fr": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "lib.kind.emote": "Emotes",
+  "rename.guide.styles": "Styles",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "emote.title": "Emotes",
+  "anim.pause": "Pause",
+  "emote.button": "Emotes",
+  "rotate.title": "Rotation",
+  "variation.original": "Original",
+  "tab.skins": "Skins",
+  "tab.capes": "Capes",
+  "language.auto": "Auto"
  },
  "zh-Hans": {
   "cape.name.db": "dB"
@@ -45,19 +91,38 @@
   "cape.name.db": "dB"
  },
  "id": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "platform.title": "Platform",
+  "block.netherrack": "Netherrack"
  },
  "tr": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "platform.title": "Platform",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "tplprev.emoji": "Emoji"
  },
  "th": {
   "cape.name.db": "dB"
  },
  "pl": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "language.auto": "Auto",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether",
+  "rename.style.r": "Reset",
+  "tplprev.emoji": "Emoji",
+  "lib.importing_n": "Import: %s"
  },
  "it": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether"
  },
  "ml": {
   "cape.name.db": "dB"
@@ -69,16 +134,24 @@
   "cape.name.db": "ዲቢ"
  },
  "sw": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack"
  },
  "ha": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack"
  },
  "yo": {
   "cape.name.db": "dB"
  },
  "pcm": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "rename.style.l": "Bold",
+  "block.sand": "Sand",
+  "view.grid": "Grid",
+  "view.list": "List"
  },
  "te": {
   "cape.name.db": "dB"
@@ -99,30 +172,358 @@
   "cape.name.db": "dB"
  },
  "uz": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "lib.importing_n": "Import: %s",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether"
  },
  "su": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "platform.title": "Platform",
+  "controls.reset": "Reset",
+  "size.reset": "Reset",
+  "veg.reset": "Reset"
  },
  "mr": {
   "cape.name.db": "dB"
  },
  "nl": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "lib.kind.emote": "Emotes",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "platform.title": "Platform",
+  "emote.title": "Emotes",
+  "emote.button": "Emotes",
+  "skin.type": "Type: %s",
+  "tab.capes": "Capes",
+  "tab.skins": "Skins"
  },
  "vi": {
   "cape.name.db": "dB"
  },
  "ms": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "platform.title": "Platform",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "tplprev.emoji": "Emoji",
+  "lib.import": "Import",
+  "view.grid": "Grid",
+  "language.auto": "Auto"
  },
  "cs": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "lib.importing_n": "Import: %s"
  },
  "sv": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "lib.kind.emote": "Emotes",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "block.sand": "Sand",
+  "platform.block": "Block",
+  "emote.title": "Emotes",
+  "emote.button": "Emotes",
+  "variation.original": "Original",
+  "rotate.title": "Rotation",
+  "language.auto": "Auto"
  },
  "hu": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "platform.title": "Platform"
+ },
+ "da": {
+  "lib.kind.emote": "Emotes",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.sand": "Sand",
+  "block.netherrack": "Netherrack",
+  "platform.title": "Platform",
+  "emote.stop": "Stop emote",
+  "emote.title": "Emotes",
+  "anim.pause": "Pause",
+  "rotate.title": "Rotation",
+  "emote.button": "Emotes",
+  "variation.original": "Original",
+  "skin.type": "Type: %s",
+  "tab.skins": "Skins",
+  "language.auto": "Auto"
+ },
+ "no": {
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "block.sand": "Sand",
+  "skin.type": "Type: %s",
+  "anim.pause": "Pause",
+  "variation.original": "Original",
+  "language.auto": "Auto"
+ },
+ "fi": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack"
+ },
+ "el": {
+  "tplprev.emoji": "Emoji"
+ },
+ "sk": {
+  "language.auto": "Auto",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack"
+ },
+ "hr": {
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "tplprev.emoji": "Emoji"
+ },
+ "et": {
+  "lib.importing_n": "Import: %s",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack"
+ },
+ "sl": {
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack"
+ },
+ "lt": {
+  "block.netherrack": "Netherrack"
+ },
+ "sq": {
+  "language.auto": "Auto",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether",
+  "tplprev.emoji": "Emoji"
+ },
+ "az": {
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether"
+ },
+ "tl": {
+  "tplprev.emoji": "Emoji",
+  "block.end_stone": "End stone",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether",
+  "veg.tpl.default": "Template %s"
+ },
+ "ca": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "rename.guide.colors": "Colors",
+  "variation.original": "Original",
+  "tab.capes": "Capes"
+ },
+ "cy": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack",
+  "view.grid": "Grid"
+ },
+ "uzn": {
+  "lib.importing_n": "Import: %s",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack"
+ },
+ "tk": {
+  "lib.importing_n": "Import: %s",
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End"
+ },
+ "jv": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether"
+ },
+ "ceb": {
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "tplprev.emoji": "Emoji",
+  "view.grid": "Grid",
+  "view.list": "Lista",
+  "sort.default": "Default",
+  "veg.tpl.default": "Template %s"
+ },
+ "hil": {
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "view.grid": "Grid",
+  "sort.default": "Default",
+  "veg.tpl.default": "Template %s"
+ },
+ "ilo": {
+  "tplprev.emoji": "Emoji",
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack",
+  "veg.tpl.default": "Template %s"
+ },
+ "mad": {
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack"
+ },
+ "ig": {
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "emote.button": "Emotes",
+  "emote.title": "Emotes",
+  "tab.skins": "Skins"
+ },
+ "so": {
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End"
+ },
+ "st": {
+  "bgimg.name.nether": "Nether",
+  "bgimg.name.end": "End",
+  "block.netherrack": "Netherrack"
+ },
+ "ts": {
+  "block.netherrack": "Netherrack",
+  "bgimg.name.nether": "Nether"
+ },
+ "tn": {
+  "block.netherrack": "Netherrack"
+ },
+ "ts-MZ": {
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether"
+ },
+ "ve": {
+  "block.netherrack": "Netherrack"
+ },
+ "sn": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack"
+ },
+ "rw": {
+  "block.netherrack": "Netherrack",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether"
+ },
+ "kam": {
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack"
+ },
+ "luo": {
+  "block.netherrack": "Netherrack"
+ },
+ "kg": {
+  "language.auto": "Auto",
+  "tplprev.emoji": "Emoji"
+ },
+ "mg": {
+  "block.netherrack": "Netherrack",
+  "tplprev.emoji": "Emoji"
+ },
+ "ny": {
+  "tplprev.emoji": "Emoji"
+ },
+ "umb": {
+  "block.netherrack": "Netherrack"
+ },
+ "ln": {
+  "block.netherrack": "Netherrack"
+ },
+ "wo": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack"
+ },
+ "fon": {
+  "block.netherrack": "Netherrack",
+  "tplprev.emoji": "Emoji"
+ },
+ "ee": {
+  "block.netherrack": "Netherrack"
+ },
+ "tw": {
+  "block.netherrack": "Netherrack",
+  "tplprev.emoji": "Emoji",
+  "language.auto": "Auto"
+ },
+ "aa": {
+  "block.netherrack": "Netherrack",
+  "mobile.gallery": "📁 Gallery",
+  "gallery.title": "Gallery"
+ },
+ "yao": {
+  "block.netherrack": "Netherrack"
+ },
+ "ium": {
+  "block.netherrack": "Netherrack"
+ },
+ "zza": {
+  "platform.title": "Platform",
+  "block.netherrack": "Netherrack"
+ },
+ "gn": {
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack",
+  "platform.block": "Block",
+  "veg.tpl.default": "Template %s"
+ },
+ "qu": {
+  "block.netherrack": "Netherrack"
+ },
+ "ho": {
+  "plat.layers": "Platform layers",
+  "tplprev.emoji": "Emoji",
+  "block.netherrack": "Netherrack",
+  "veg.tpl.default": "Template %s",
+  "language.auto": "Auto"
+ },
+ "lmo": {
+  "tplprev.emoji": "Emoji",
+  "rename.style.r": "Reset",
+  "lib.importing_n": "Import: %s",
+  "variation.original": "Original",
+  "language.auto": "Auto"
+ },
+ "hif": {
+  "block.netherrack": "Netherrack",
+  "mobile.settings": "⚙️ Settings",
+  "mobile.gallery": "📁 Gallery",
+  "emote.title": "Emotes",
+  "emote.button": "Emotes",
+  "controls.reset": "Reset",
+  "meta.customer": "Customer",
+  "tab.capes": "Capes",
+  "view.grid": "Grid",
+  "tab.skins": "Skins",
+  "view.list": "List",
+  "sort.default": "Default",
+  "gallery.title": "Gallery",
+  "language.auto": "Auto"
  }
 }
