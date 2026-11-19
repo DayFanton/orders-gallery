@@ -485,7 +485,8 @@
  },
  "zza": {
   "platform.title": "Platform",
-  "block.netherrack": "Netherrack"
+  "block.netherrack": "Netherrack",
+  "controls.reset": "Reset"
  },
  "gn": {
   "tplprev.emoji": "Emoji",
