@@ -63,8 +63,8 @@
   "anim.fly": "Daaih-feix",
   "anim.speed": "Zoux-nduov nyei kwaaix",
   "layers.title": "Bua taux cengc",
-  "layers.head": "Moux / Mbeih",
-  "layers.body": "Lui-houv / Gaapv",
+  "layers.head": "Moux",
+  "layers.body": "Lui-houv",
   "acc.title": "Ndaauv-gaav",
   "acc.elytra": "Bua taux Elytra",
 
@@ -100,7 +100,7 @@
   "mobile.settings": "⚙️ Zoux-Dingc",
 
   "modal.title": "Hnyouv-Hnyouv",
-  "modal.text": "Nyei mienh-zoux! Naaiv zingh nyei skin diuc longc maaih gorn nyei gong. Site nyei mienh-zoux zoux nyei skin maaih copyright faat-liuz: maaih zeiv nyei, mv baac daaih, caau aeqv, aengx caux zaangc zuqc maaih sienx-dingc. Gorn-mienh (cape, block texture, hnyouv-zaangc texture, aengx caux yietc zungv) se yiem yie mienh-zoux nyei, yiem caption dauh nyei mienh-mingh, aengx caux zoux gong yiem yie mienh nyei license. M̀hngv nyei tengx! Naaiv se Minecraft nyei mbuo-buei service. Mojang aengx caux Microsoft maiv zuqc cingv-daanx, aengx caux maiv maaih dauh nyei. Site nyei gong-zienv se site nyei mienh-zoux, maiv se Mojang aengx caux Microsoft.",
+  "modal.text": "Nyei mienh-zoux! Naaiv zingh nyei dopv-hnyouv diuc longc maaih gorn nyei gong. Site nyei mienh-zoux zoux nyei dopv-hnyouv maaih faat-liuz baav-huv: maaih zeiv nyei, mv baac daaih, caau aeqv, aengx caux zaangc zuqc maaih sienx-dingc. Gorn-mienh (liuh-pauv, guaix yingx-gaav, hnyouv-zaangc yingx-gaav, aengx caux yietc zungv) se yiem yie mienh-zoux nyei, yiem mbuox-zoux dauh nyei mienh-mingh, aengx caux zoux gong yiem yie mienh nyei faat-lingh. M̀hngv nyei tengx! Naaiv se Minecraft nyei mbuo-buei zoux-fuv. Mojang aengx caux Microsoft maiv zuqc cingv-daanx, aengx caux maiv maaih dauh nyei. Site nyei gong-zienv se site nyei mienh-zoux, maiv se Mojang aengx caux Microsoft.",
   "modal.agree": "Yie doqc zingh aeqv tongh-yie",
   "modal.continue": "Zoux taux",
 
@@ -390,8 +390,8 @@
   "folder.delete": "Toiv-baang",
   "folder.delete_confirm": "Toiv-baang \"%s\" yiem daanv-hnyouv fai?",
   "folder.empty": "Hnaang maiv maaih waengh — nqaangv \"+\" aeqv bangv waengh-daanv",
-  "folder.local_note": "Waengh-daanv hiuv yiem naaiv browser daaih",
-  "folder.memory_only": "Browser hiuv-gaav maiv haiz longc — guenh yiepc nor waengh-daanv ziu zingh-baang",
+  "folder.local_note": "Waengh-daanv hiuv yiem naaiv liem-laangh daaih",
+  "folder.memory_only": "Liem-laangh hiuv-gaav maiv haiz longc — guenh yiepc nor waengh-daanv ziu zingh-baang",
   "folder.error": "Maiv haiz bangv naaiv waengh-daanv",
   "folder.bg.open": "Yie nyei yingx",
   "folder.bg.title": "Yie nyei hnyouv-dauv yingx",
@@ -472,11 +472,11 @@
   "rename.confirm_save": "Hiuv mbuox",
   "rename.confirm_discard": "Mien hiuv",
   "rename.confirm_back": "Hlang taux hnyangv",
-  "rename.guide.title": "Hnyangv mbuox nyei seix-kodi (§ codes §)",
+  "rename.guide.title": "Hnyangv mbuox nyei seix-kodi (§ kodi §)",
   "rename.guide.how": "Oix hnyangv mbuox, nqaangv yiem baaiv-taux, hnoqv mbuox siang aengx caux nqaangv yiem ga'ndiev ziu hiuv. Nqaangv ga'ncuonh hlang taux mbuox-hingh. Hnoqv-zang hlang taux taux-hingh mbuox",
   "rename.guide.codes": "Minecraft mbuox nyei seix-kodi: § bongc seix aengx caux yangh. Seix: §0–§9 aengx caux §a–§f. Yangh: §l — mbuox nqong, §o — mbuox zang, §n — mbuox long-ndiep, §m — mbuox long-ndaaix, §k — \"nyien\", §r — hlang taux-hingh. Seix-kodi hnyangv mbuox-yangh, kung yangh-kodi maiv hnyangv seix",
   "rename.guide.example": "Yangh-siiv:",
-  "rename.guide.sample": "§6§lBlock §r§a gold",
+  "rename.guide.sample": "§6§lGuaix §r§a jiem",
   "rename.guide.type": "Hnoqv §: Windows — nqaangv Alt aengx caux 0167; Mac — Option + 6 (Inglaix waaz); tefon, nqaangv kodi yiem ga'ndiep aeqv caau",
   "rename.guide.colors": "Seix",
   "rename.guide.bedrock": "Bedrock Seix",
@@ -541,7 +541,7 @@
   "pose.pos": "Dorn-yiem (guaix)",
   "pose.rot": "Zunh (digri)",
   "pose.size": "Haic (guaix)",
-  "pose.hint": "Daux zunh-gauv aeqv haaix, zunh, hnyangv haic. Shift — gaengx-dingc. W, E, R — modes, Esc — guenh",
+  "pose.hint": "Daux zunh-gauv aeqv haaix, zunh, hnyangv haic. Shift — gaengx-dingc. W, E, R — yangh-zongh, Esc — guenh",
 
   "plat.layers": "Dauh-baangv nyei cengc",
   "plat.layers.hint": "Zienv cengc — dauh-baangv ga'ndiev, ga'ndaaix, aeqv ga'ndiep. Cengc gouv-taux gaav-baang cengc laangh"
