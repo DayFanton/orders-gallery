@@ -10,7 +10,15 @@
   "cape.name.db": "dB"
  },
  "ro": {
-  "cape.name.db": "dB"
+  "cape.name.db": "dB",
+  "meta.artist": "Artist",
+  "variation.original": "Original",
+  "bgimg.name.end": "End",
+  "bgimg.name.nether": "Nether",
+  "block.netherrack": "Netherrack",
+  "tplprev.emoji": "Emoji",
+  "lib.importing_n": "Import: %s",
+  "language.auto": "Auto"
  },
  "es": {
   "cape.name.db": "dB"
