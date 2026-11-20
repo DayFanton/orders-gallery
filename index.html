@@ -1469,7 +1469,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.6</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.7</span></div>
         </div>
     </div>
 
@@ -3120,6 +3120,18 @@
             urlPending = false;
             if (pend && flush) syncUrlState();
         }
+        // 1.9.7: в ссылку попадает всё, что настроено на странице: автовращение (ar, rs), пауза (pa) и скорость (as) анимации, слои головы и тела (lh, lb),
+        // камера (cp - где она, ct - куда смотрит), поиск (q - текст, tg - теги, по одному на каждый). Пишется только то, что отличается от значений по умолчанию.
+        const TAG_TYPES = ['customer', 'has', 'type'];
+        const parseNums = (s, n) => {
+            if (!s) return null;
+            const a = String(s).split(/[_,;\s]+/).filter(Boolean).map(Number);
+            return a.length === n && a.every(Number.isFinite) ? a : null;
+        };
+        const clampNum = (s, lo, hi, def) => { const v = parseFloat(s); return Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : def; };
+        const fmtNum = (v, d) => String(+Number(v).toFixed(d));
+        const RESET_VIEW = { pos: [0, 0, 60], target: [0, -2, 0] };      // куда возвращает кнопка «Сброс» (платформа выключена)
+        let defaultViewerCam = null;                                      // камера, с которой сайт открылся (запоминается в initViewer)
         const MOTION_TYPES = ['walk', 'run', 'fly'];      // 1.9.4: анимация движения в ссылке - anim=walk|run|fly, эмоция - emote=<id> (u-N - из личной папки)
 
         function readStateFromUrl() {
@@ -3140,8 +3152,109 @@
                 pr: p.get('pr'),
                 ps: p.get('ps'),
                 anim: MOTION_TYPES.includes(p.get('anim')) ? p.get('anim') : 'none',
-                emote: /^[^\u0000-\u001f]{1,120}$/.test(p.get('emote') || '') ? p.get('emote') : null      // id сверяется со списком эмоций при запуске, поэтому тут только отсев мусора
+                emote: /^[^\u0000-\u001f]{1,120}$/.test(p.get('emote') || '') ? p.get('emote') : null,     // id сверяется со списком эмоций при запуске, поэтому тут только отсев мусора
+                ar: p.get('ar') === '1',
+                rs: Math.round(clampNum(p.get('rs'), 0.1, 10, 1) * 10) / 10,
+                pa: p.get('pa') === '1',
+                as: Math.round(clampNum(p.get('as'), 0.1, 10, 1) * 10) / 10,
+                lh: p.get('lh') !== '0',
+                lb: p.get('lb') !== '0',
+                cp: parseNums(p.get('cp'), 3),
+                ct: parseNums(p.get('ct'), 3),
+                q: String(p.get('q') || '').slice(0, 200),
+                tg: p.getAll('tg').map(s => { const k = s.indexOf(':'); return k > 0 ? { type: s.slice(0, k), value: s.slice(k + 1).trim().slice(0, 120) } : null; })
+                    .filter(x => x && TAG_TYPES.includes(x.type) && x.value).slice(0, 12)
             };
+        }
+
+        /* ---------- Камера, вращение, пауза, слои, поиск (1.9.7) ---------- */
+        function camNow() {
+            if (!skinViewer || !skinViewer.camera || !skinViewer.controls) return null;
+            const c = skinViewer.camera.position, t = skinViewer.controls.target;
+            return { pos: [c.x, c.y, c.z], target: [t.x, t.y, t.z] };
+        }
+        // Камеры, которые считаются «по умолчанию» в текущем режиме: с платформой - её вид, без неё - тот, с которого открылся сайт, или после «Сброса»
+        function defaultCams() {
+            let pv = null;
+            try { pv = Scene3D.defaultView(); } catch (e) { /* платформа ещё не создана */ }
+            return pv ? [pv] : [defaultViewerCam, RESET_VIEW].filter(Boolean);
+        }
+        function cameraForUrl() {
+            const v = camNow();
+            if (!v) return null;
+            const near = (a, b) => a.every((x, i) => Math.abs(x - b[i]) < 0.05);
+            return defaultCams().some(d => near(v.pos, d.pos) && near(v.target, d.target)) ? null : v;
+        }
+        function writeViewSettings(p) {
+            const el = (id) => document.getElementById(id);
+            if (el('auto_rotate') && el('auto_rotate').checked) p.set('ar', '1');
+            if (Math.abs(currentRotationSpeed - 1) > 0.001) p.set('rs', fmtNum(currentRotationSpeed, 1));
+            if (el('pause_animation') && el('pause_animation').checked) p.set('pa', '1');
+            if (Math.abs(currentAnimationSpeed - 1) > 0.001) p.set('as', fmtNum(currentAnimationSpeed, 1));
+            if (el('layer_head') && !el('layer_head').checked) p.set('lh', '0');
+            if (el('layer_body') && !el('layer_body').checked) p.set('lb', '0');
+            const cv = cameraForUrl();
+            if (cv) {
+                p.set('cp', cv.pos.map(v => fmtNum(v, 2)).join('_'));
+                p.set('ct', cv.target.map(v => fmtNum(v, 2)).join('_'));
+            }
+            const q = searchQuery.trim();
+            if (q) p.set('q', q.slice(0, 200));
+            searchTags.forEach(t => p.append('tg', t.type + ':' + t.value));
+        }
+
+        // Выставить вращение, паузу, скорости и слои из ссылки (поле st - то, что вернул readStateFromUrl)
+        function applyViewSettings(st) {
+            const el = (id) => document.getElementById(id);
+            el('auto_rotate').checked = st.ar;
+            currentRotationSpeed = st.rs;
+            el('rotate_speed').value = st.rs;
+            el('rotate_speed_val').textContent = st.rs.toFixed(1);
+            el('pause_animation').checked = st.pa;
+            currentAnimationSpeed = st.as;
+            el('anim_speed').value = st.as;
+            el('anim_speed_val').textContent = st.as.toFixed(1);
+            el('layer_head').checked = st.lh;
+            el('layer_body').checked = st.lb;
+            if (!skinViewer) return;
+            skinViewer.autoRotate = st.ar;
+            skinViewer.autoRotateSpeed = st.rs;
+            if (skinViewer.animation) { skinViewer.animation.speed = st.as; skinViewer.animation.paused = st.pa; }
+            if (window.refreshLayers) window.refreshLayers();
+        }
+
+        // Камера из ссылки. Без неё (resetIfMissing - переход назад / вперёд) возвращаем камеру «по умолчанию» для текущего режима
+        function applyCameraState(cp, ct, resetIfMissing) {
+            if (!skinViewer || !skinViewer.camera || !skinViewer.controls) return;
+            const ctl = skinViewer.controls;
+            if (cp || ct) {
+                if (ct) ctl.target.set(ct[0], ct[1], ct[2]);
+                if (cp) skinViewer.camera.position.set(cp[0], cp[1], cp[2]);
+            } else if (resetIfMissing) {
+                const d = defaultCams()[0];
+                if (!d) return;
+                ctl.target.set(d.target[0], d.target[1], d.target[2]);
+                skinViewer.camera.position.set(d.pos[0], d.pos[1], d.pos[2]);
+            } else {
+                return;
+            }
+            if (ctl.update) ctl.update();
+        }
+
+        // Камера двигается мышью, колесом, касаниями и анимацией платформы - после любого движения (чуть погодя) обновляем адрес
+        function watchCamera() {
+            const c = skinViewer && skinViewer.controls;
+            if (c && typeof c.addEventListener === 'function') {
+                c.addEventListener('end', syncUrlStateSoon);
+                c.addEventListener('change', syncUrlStateSoon);
+                return;
+            }
+            let last = '';           // запасной вариант: у этой версии элементов управления нет событий
+            setInterval(() => {
+                const v = camNow();
+                const s = v ? v.pos.concat(v.target).map(x => x.toFixed(2)).join() : '';
+                if (s !== last) { last = s; if (v) syncUrlStateSoon(); }
+            }, 500);
         }
 
         // В ссылку попадает только то, что отличается от значений по умолчанию
@@ -3159,6 +3272,7 @@
             if (MOTION_TYPES.includes(currentAnimationType)) p.set('anim', currentAnimationType);
             const emoteKey = playingEmoteKey();
             if (emoteKey) p.set('emote', emoteKey);
+            writeViewSettings(p);
             const po = PoseEditor.state();
             if (po.pp) p.set('pp', po.pp);
             if (po.pr) p.set('pr', po.pr);
@@ -3250,7 +3364,10 @@
                 setAnimationRadio(st.anim);
                 if (skinViewer && !EmoteRuntime.isActive()) applyAnimation();
             }
-            return Promise.resolve(ready).catch(() => { }).then(() => EmoteUI.restore(st.emote));
+            return Promise.resolve(ready).catch(() => { }).then(() => {
+                applyCameraState(st.cp, st.ct, true);
+                return EmoteUI.restore(st.emote);
+            });
         }
 
         function handlePopState() {
@@ -3281,7 +3398,12 @@
                 updateBackEquipment();
             }
             PoseEditor.applyState(st.pp, st.pr, st.ps);
-            const sceneReady = Scene3D.applyState(st.plat, st.time);
+            applyViewSettings(st);
+            searchTags = st.tg;
+            searchQuery = st.q;
+            document.getElementById('searchInput').value = searchQuery;
+            renderTagsDOM();
+            const sceneReady = Scene3D.applyState(st.plat, st.time, { animate: false });      // без анимации камеры: её ставим из ссылки сами
             const motionDone = applyMotionState(st, sceneReady);
 
             const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
@@ -3294,6 +3416,8 @@
             if (target && target !== currentActiveSkinFilename) {
                 selectSkin(target, false);
             }
+            renderCurrentList();
+            refreshMetaInfo();
             return motionDone;
         }
 
@@ -3309,6 +3433,8 @@
                 skinViewer.controls.enableRotate = true;
                 skinViewer.controls.enableZoom = true;
                 skinViewer.controls.enablePan = true; 
+                defaultViewerCam = camNow();
+                watchCamera();
                 
                 skinViewer.globalLight.intensity = 3.0; 
                 skinViewer.cameraLight.intensity = 0.6;
@@ -3499,6 +3625,7 @@
             renderTagsDOM();
             refreshMetaInfo();
             renderCurrentList();
+            syncUrlStateSoon();
         }
 
         function renderTagsDOM() {
@@ -3526,6 +3653,7 @@
                         searchTags.splice(index, 1);
                         renderTagsDOM();
                         renderCurrentList();
+                        syncUrlStateSoon();
                         input.focus();
                     };
                     
@@ -6573,7 +6701,7 @@
             init();
 
             return {
-                applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on,
+                applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on, defaultView: () => (state.on ? CFG.view : null),
                 state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, lcolor: state.lightColor, layers: layerMask(), veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), sizes: Object.entries(veg.size).map(([k, s]) => k + ':' + [s.min, s.max, s.step, s.minWeight, s.maxWeight, s.tile ? 1 : 0].join('~')).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
@@ -8450,6 +8578,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
             searchInput.oninput = (e) => {
                 searchQuery = e.target.value;
                 renderCurrentList();
+                syncUrlStateSoon();
             };
 
             searchInput.addEventListener('keydown', (e) => {
@@ -8481,6 +8610,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     searchTags.pop();
                     renderTagsDOM();
                     renderCurrentList();
+                    syncUrlStateSoon();
                     searchInput.focus();
                 }
             });
@@ -8562,12 +8692,13 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 }
             };
 
-            document.getElementById('auto_rotate').onchange = (e) => skinViewer.autoRotate = e.target.checked;
+            document.getElementById('auto_rotate').onchange = (e) => { skinViewer.autoRotate = e.target.checked; syncUrlState(); };
 
             document.getElementById('pause_animation').onchange = (e) => {
                 if (skinViewer && skinViewer.animation) {
                     skinViewer.animation.paused = e.target.checked;
                 }
+                syncUrlState();
             };
 
             const rotateSpeedInput = document.getElementById('rotate_speed');
@@ -8576,6 +8707,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 currentRotationSpeed = parseFloat(e.target.value);
                 rotateSpeedVal.textContent = currentRotationSpeed.toFixed(1);
                 if (skinViewer) skinViewer.autoRotateSpeed = currentRotationSpeed;
+                syncUrlStateSoon();
             };
 
             document.querySelectorAll('input[name="animation"]').forEach(radio => {
@@ -8595,6 +8727,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 if (skinViewer && skinViewer.animation) {
                     skinViewer.animation.speed = currentAnimationSpeed;
                 }
+                syncUrlStateSoon();
             };
 
             const updateLayers = () => {
@@ -8609,8 +8742,8 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 skinViewer.playerObject.skin.rightLeg.outerLayer.visible = bodyVisible;
             };
 
-            document.getElementById('layer_head').onchange = updateLayers;
-            document.getElementById('layer_body').onchange = updateLayers;
+            document.getElementById('layer_head').onchange = () => { updateLayers(); syncUrlState(); };
+            document.getElementById('layer_body').onchange = () => { updateLayers(); syncUrlState(); };
             window.refreshLayers = updateLayers;
 
             document.getElementById('btnListView').onclick = () => setViewMode('list');
@@ -8777,8 +8910,14 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 elytraEnabled = urlState.elytra;
 
                 currentAnimationType = urlState.anim;                                  // selectSkin ниже сам включит эту анимацию
+                currentRotationSpeed = urlState.rs;
+                currentAnimationSpeed = urlState.as;
+                searchTags = urlState.tg;                                              // поиск из ссылки: тег(и) и текст - до первой отрисовки списка
+                searchQuery = urlState.q;
+                document.getElementById('searchInput').value = searchQuery;
                 initViewer();
                 setAnimationRadio(currentAnimationType);
+                applyViewSettings(urlState);                                           // вращение, пауза, скорости, слои головы и тела
                 PoseEditor.applyState(urlState.pp, urlState.pr, urlState.ps);        // положение персонажа из ссылки
                 document.getElementById('elytra_toggle').checked = elytraEnabled;
                 Backdrop.apply(urlState.bg, false);
@@ -8797,6 +8936,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     await selectSkin(currentActiveSkinFilename, false);
                 }
                 await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
+                applyCameraState(urlState.cp, urlState.ct, false);                           // камера - после платформы: та при включении ставит свой вид
                 await Promise.race([EmoteUI.restore(urlState.emote), new Promise(r => setTimeout(r, 4000))]);    // эмоции - загруженная модель и готовая платформа
                 unlockUrl();                                                                 // всё восстановлено - адрес снова можно обновлять
                 warmAvatars();                                                               // остальные миниатюры - в фоне, когда всё главное уже показано
