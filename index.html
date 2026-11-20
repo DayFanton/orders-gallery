@@ -1469,7 +1469,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.5</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.6</span></div>
         </div>
     </div>
 
@@ -3108,6 +3108,18 @@
 
         /* ---------- Состояние интерфейса в адресной строке ---------- */
         const SORT_FIELDS = ['default', 'author', 'name', 'date'];
+        // 1.9.6: пока страница восстанавливает состояние из ссылки (загрузка, переход назад / вперёд), адресная строка не перезаписывается:
+        // фон из личной папки, эмоция и прочее заканчивают загрузку в разное время, и любая запись «на полпути» стирала бы то,
+        // что платформа ещё не успела прочитать (цвет света, слои, растения). Запросы на запись за это время не теряются - выполнятся один раз после.
+        let urlLock = 1, urlPending = false;       // 1 - страница только открылась, ссылку читаем
+        const lockUrl = () => { urlLock++; };
+        function unlockUrl(flush = true) {
+            urlLock = Math.max(0, urlLock - 1);
+            if (urlLock) return;
+            const pend = urlPending;
+            urlPending = false;
+            if (pend && flush) syncUrlState();
+        }
         const MOTION_TYPES = ['walk', 'run', 'fly'];      // 1.9.4: анимация движения в ссылке - anim=walk|run|fly, эмоция - emote=<id> (u-N - из личной папки)
 
         function readStateFromUrl() {
@@ -3179,6 +3191,7 @@
         }
 
         function syncUrlState() {
+            if (urlLock) { urlPending = true; return; }
             const url = buildStateUrl(currentActiveSkinFilename);
             if (url !== window.location.pathname + window.location.search) {
                 window.history.replaceState({}, '', url);
@@ -3193,6 +3206,7 @@
         }
 
         function pushStateUrl(skinFilename) {
+            if (urlLock) { urlPending = true; return; }
             const url = buildStateUrl(skinFilename);
             if (url !== window.location.pathname + window.location.search) {
                 window.history.pushState({}, '', url);
@@ -3236,10 +3250,17 @@
                 setAnimationRadio(st.anim);
                 if (skinViewer && !EmoteRuntime.isActive()) applyAnimation();
             }
-            Promise.resolve(ready).catch(() => { }).then(() => EmoteUI.restore(st.emote));
+            return Promise.resolve(ready).catch(() => { }).then(() => EmoteUI.restore(st.emote));
         }
 
         function handlePopState() {
+            lockUrl();                                         // пока всё не восстановится, адрес не трогаем
+            let done = null;
+            try { done = restoreFromUrl(); } catch (e) { console.warn('[url] не удалось восстановить состояние', e); }
+            Promise.resolve(done).catch(() => { }).then(() => unlockUrl());
+        }
+
+        function restoreFromUrl() {
             const st = readStateFromUrl();
             currentSortField = st.sort;
             currentSortOrder = st.order;
@@ -3261,7 +3282,7 @@
             }
             PoseEditor.applyState(st.pp, st.pr, st.ps);
             const sceneReady = Scene3D.applyState(st.plat, st.time);
-            applyMotionState(st, sceneReady);
+            const motionDone = applyMotionState(st, sceneReady);
 
             const wantedCape = (st.cape && globalCapes.some(c => c.filename === st.cape)) ? st.cape : null;
             if (wantedCape !== currentCapeFilename) {
@@ -3273,6 +3294,7 @@
             if (target && target !== currentActiveSkinFilename) {
                 selectSkin(target, false);
             }
+            return motionDone;
         }
 
         function initViewer() {
@@ -4812,7 +4834,8 @@
                 const key = normalizeKey(raw);
                 if (key === 'upload') { resolveLegacy().then(k => apply(k, true)); return; }
                 if (key.startsWith('u-') && !userUrls.has(userId(key))) {
-                    loadUser(userId(key)).then(ok => apply(ok ? key : 'dark', true));
+                    currentBgKey = key;                // 1.9.6: пока картинка грузится, фон уже числится выбранным - иначе любая запись ссылки в это время его теряла
+                    loadUser(userId(key)).then(ok => apply(ok ? key : 'dark', ok ? sync : true));       // sync=false (чтение из ссылки) сохраняем: адрес не трогаем
                     return;
                 }
                 const el = $('viewer_zone');
@@ -6328,6 +6351,7 @@
 
             // Из ссылки / popstate. plat - id блока или пусто (платформы нет)
             async function applyState(plat, time, opts = {}) {
+                const q = new URLSearchParams(window.location.search);      // 1.9.6: читаем сразу - пока ждём список блоков, адрес мог бы смениться
                 await Blocks.load();
                 const id = (plat && await Blocks.exists(plat)) ? plat : null;
                 if (id) state.block = id;
@@ -6335,7 +6359,7 @@
                 state.hour = isFinite(parsed) ? Math.min(24, Math.max(0, parsed)) : CFG.defaultHour;
                 $('time_slider').value = state.hour;
                 $('time_val').textContent = timeText(state.hour);
-                const q = new URLSearchParams(window.location.search), seed = parseInt(q.get('veg'), 10), dn = parseInt(q.get('vd'), 10);
+                const seed = parseInt(q.get('veg'), 10), dn = parseInt(q.get('vd'), 10);
                 const mask = q.get('vl') === null ? 7 : (parseInt(q.get('vl'), 10) & 7);
                 veg.on = !!id && isFinite(seed) && seed > 0;
                 if (veg.on) veg.seed = seed;
@@ -8773,10 +8797,12 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                     await selectSkin(currentActiveSkinFilename, false);
                 }
                 await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
-                EmoteUI.restore(urlState.emote);                                             // эмоции - загруженная модель и готовая платформа
+                await Promise.race([EmoteUI.restore(urlState.emote), new Promise(r => setTimeout(r, 4000))]);    // эмоции - загруженная модель и готовая платформа
+                unlockUrl();                                                                 // всё восстановлено - адрес снова можно обновлять
                 warmAvatars();                                                               // остальные миниатюры - в фоне, когда всё главное уже показано
 
             } catch (err) {
+                unlockUrl(false);                                                            // сбой при загрузке: частично восстановленным состоянием ссылку не затираем
                 document.getElementById('loading').textContent = t('error.json');
             }
         }
