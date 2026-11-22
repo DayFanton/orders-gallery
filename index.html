@@ -1469,7 +1469,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.8</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.9</span></div>
         </div>
     </div>
 
@@ -8652,9 +8652,10 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 await updateBackEquipment();
             };
 
-            // 1.9.8: «Сброс» возвращает сайт к виду «зашёл в первый раз»: скин (первый, оригинал), вкладка «Скины», поиск и сортировка, фон, плащ и элитры,
+            // 1.9.8: «Сброс» возвращает сайт к виду «зашёл в первый раз»: вкладка «Скины», поиск и сортировка, фон, плащ и элитры,
             // анимация и эмоция, вращение, пауза, скорости, слои головы и тела, положение персонажа, камера, платформа с блоками, светом и растениями.
-            // Остаются язык и режим «сетка / список». Ничего не удаляется: свои скины, фоны, блоки, растения и эмоции из личных папок на месте.
+            // Остаются язык, режим «сетка / список» и выбранный скин (1.9.9: пользователю важнее видеть тот скин, который он выбрал; сбрасывается только его вариация - снова оригинал).
+            // Ничего не удаляется: свои скины, фоны, блоки, растения и эмоции из личных папок на месте.
             document.getElementById('reset_all').onclick = async () => {
                 if (!skinViewer) return;
                 lockUrl();                                          // пока идёт сброс, адрес не трогаем - запишем его один раз в конце
@@ -8691,13 +8692,13 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
 
                     Backdrop.apply('dark', false);
 
-                    const first = globalSkins.length > 0 ? globalSkins[0].filename : null;      // так же, как при открытии сайта без ссылки
-                    currentActiveSkinFilename = first;
+                    const keep = globalSkins.some(s => s.filename === currentActiveSkinFilename) ? currentActiveSkinFilename : (globalSkins.length > 0 ? globalSkins[0].filename : null);
+                    currentActiveSkinFilename = keep;                                           // выбранный скин остаётся (если его вдруг нет в списке - первый, как при открытии сайта)
                     switchTab('skins', false);                                                  // заодно перерисует список
 
                     await Scene3D.resetAll();
                     applyCameraState(null, null, true);                                         // камера - после платформы, она сама двигает камеру
-                    if (first) await selectSkin(first, false, null);
+                    if (keep) await selectSkin(keep, false, null);                              // вариация сбрасывается: снова оригинал
                 } catch (e) {
                     console.warn('[reset]', e);
                 } finally {
