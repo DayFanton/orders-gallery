@@ -199,5 +199,23 @@
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "jungle_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "lily_of_the_valley.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "mangrove_propagule.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
   }
 ]
