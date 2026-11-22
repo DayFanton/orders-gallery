@@ -89,7 +89,9 @@
     "id": "lilac",
     "bottom": "lilac_bottom.png",
     "top": "lilac_top.png",
-    "weight": 5
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
   },
   {
     "id": "large_fern",
@@ -140,6 +142,54 @@
   },
   {
     "file": "cherry_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "closed_eyeblossom.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "cornflower.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "crimson_fungus.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "crimson_roots.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "dandelion.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "dark_oak_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "dead_bush.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "firefly_bush.png",
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
