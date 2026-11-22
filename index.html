@@ -1469,7 +1469,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.7</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.8</span></div>
         </div>
     </div>
 
@@ -3138,6 +3138,7 @@
             const p = new URLSearchParams(window.location.search);
             return {
                 skin: p.get('skin'),
+                variation: p.get('var'),            // 1.9.8: выбранная вариация скина (имя файла вариации)
                 tab: p.get('tab') === 'capes' ? 'capes' : 'skins',
                 view: p.get('view') === 'grid' ? 'grid' : 'list',
                 sort: SORT_FIELDS.includes(p.get('sort')) ? p.get('sort') : 'default',
@@ -3261,6 +3262,7 @@
         function buildStateUrl(skinFilename) {
             const p = new URLSearchParams();
             if (skinFilename) p.set('skin', skinFilename);
+            if (skinFilename && skinFilename === currentActiveSkinFilename && currentLoadedTextureFilename && currentLoadedTextureFilename !== skinFilename) p.set('var', currentLoadedTextureFilename);
             if (currentCapeFilename) p.set('cape', currentCapeFilename);
             if (currentTab !== 'skins') p.set('tab', currentTab);
             if (currentViewMode !== 'list') p.set('view', currentViewMode);
@@ -3352,6 +3354,13 @@
             if (sync) syncUrlState();
         }
 
+        // Вариация из ссылки подходит, только если такая есть у этого скина (иначе - оригинал)
+        function validVariation(skinFilename, file) {
+            if (!file) return null;
+            const sk = globalSkins.find(s => s.filename === skinFilename);
+            return sk && Array.isArray(sk.variations) && sk.variations.some(v => v && v.filename === file) ? file : null;
+        }
+
         function setAnimationRadio(value) {
             const r = document.querySelector('input[name="animation"][value="' + value + '"]');
             if (r) r.checked = true;
@@ -3413,8 +3422,9 @@
             }
 
             switchTab(st.tab, false);
-            if (target && target !== currentActiveSkinFilename) {
-                selectSkin(target, false);
+            const wantedVar = validVariation(target, st.variation);
+            if (target && (target !== currentActiveSkinFilename || (wantedVar || target) !== currentLoadedTextureFilename)) {
+                selectSkin(target, false, wantedVar);
             }
             renderCurrentList();
             refreshMetaInfo();
@@ -3858,6 +3868,7 @@
                     }
                     origBtn.onclick = () => {
                         selectSkin(filename, false, filename);
+                        syncUrlState();                         // 1.9.8: вариация попадает в ссылку (выбранная текстура запоминается сразу, до загрузки)
                     };
                     varContainer.appendChild(origBtn);
 
@@ -3872,6 +3883,7 @@
                         }
                         btn.onclick = () => {
                             selectSkin(filename, false, v.filename);
+                            syncUrlState();
                         };
                         varContainer.appendChild(btn);
                     });
@@ -6479,7 +6491,7 @@
 
             // Из ссылки / popstate. plat - id блока или пусто (платформы нет)
             async function applyState(plat, time, opts = {}) {
-                const q = new URLSearchParams(window.location.search);      // 1.9.6: читаем сразу - пока ждём список блоков, адрес мог бы смениться
+                const q = opts.params || new URLSearchParams(window.location.search);      // 1.9.6: читаем сразу - пока ждём список блоков, адрес мог бы смениться (1.9.8: opts.params - свои параметры, например пустые для сброса)
                 await Blocks.load();
                 const id = (plat && await Blocks.exists(plat)) ? plat : null;
                 if (id) state.block = id;
@@ -6518,6 +6530,14 @@
                 await setEnabled(!!id, { sync: false, animate: opts.animate !== false });
                 characterBase(false);
                 syncLight();
+            }
+
+            // 1.9.8: «Сброс» - платформа выключена, блок, оттенок, слои, свет (включение, цвет, время) и растительность как при первом заходе.
+            // Сами блоки и растения из личных папок не трогаются, меняются только настройки.
+            async function resetAll() {
+                state.block = '';
+                veg.seed = 0;                                   // следующее включение растительности снова выберет случайную раскладку
+                await applyState(null, null, { animate: false, params: new URLSearchParams() });
             }
 
             function syncGridActive() {
@@ -6701,7 +6721,7 @@
             init();
 
             return {
-                applyState, refreshCasters, refreshUi, resetCamera, isOn: () => state.on, defaultView: () => (state.on ? CFG.view : null),
+                applyState, resetAll, refreshCasters, refreshUi, resetCamera, isOn: () => state.on, defaultView: () => (state.on ? CFG.view : null),
                 state: () => ({ on: state.on, block: state.block, hour: state.hour, tint: state.tint, light: state.light, lit, lcolor: state.lightColor, layers: layerMask(), veg: { on: veg.on, seed: veg.seed, sel: veg.sel ? [...veg.sel].join(',') : null, tints: Object.entries(veg.tint).map(([k, v]) => k + ':' + v.slice(1)).join(','), weights: Object.entries(veg.weight).map(([k, v]) => k + ':' + v).join(','), sizes: Object.entries(veg.size).map(([k, s]) => k + ':' + [s.min, s.max, s.step, s.minWeight, s.maxWeight, s.tile ? 1 : 0].join('~')).join(','), density: veg.density, mask: vegMask() } }),
                 blockIds: async () => (await Blocks.load()).map(b => b.id),
                 // для проверок из консоли
@@ -8632,64 +8652,58 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 await updateBackEquipment();
             };
 
-            document.getElementById('reset_all').onclick = () => {
+            // 1.9.8: «Сброс» возвращает сайт к виду «зашёл в первый раз»: скин (первый, оригинал), вкладка «Скины», поиск и сортировка, фон, плащ и элитры,
+            // анимация и эмоция, вращение, пауза, скорости, слои головы и тела, положение персонажа, камера, платформа с блоками, светом и растениями.
+            // Остаются язык и режим «сетка / список». Ничего не удаляется: свои скины, фоны, блоки, растения и эмоции из личных папок на месте.
+            document.getElementById('reset_all').onclick = async () => {
                 if (!skinViewer) return;
-                EmoteRuntime.stop(true);
-                
-                skinViewer.autoRotate = false;
-                document.getElementById('auto_rotate').checked = false;
-                document.getElementById('pause_animation').checked = false;
-                
-                currentRotationSpeed = 1.0;
-                skinViewer.autoRotateSpeed = currentRotationSpeed;
-                document.getElementById('rotate_speed').value = 1.0;
-                document.getElementById('rotate_speed_val').textContent = '1.0';
-                
-                currentAnimationSpeed = 1.0;
-                if (skinViewer.animation) {
-                    skinViewer.animation.speed = currentAnimationSpeed;
-                    skinViewer.animation.paused = false;
-                    skinViewer.animation.progress = 0;
-                }
-                document.getElementById('anim_speed').value = 1.0;
-                document.getElementById('anim_speed_val').textContent = '1.0';
-                
-                if (skinViewer.playerObject) {
-                    skinViewer.playerObject.rotation.x = 0;
-                    skinViewer.playerObject.rotation.y = 0;
-                    skinViewer.playerObject.rotation.z = 0;
-                }
+                lockUrl();                                          // пока идёт сброс, адрес не трогаем - запишем его один раз в конце
+                try {
+                    currentAnimationType = 'none';
+                    setAnimationRadio('none');
+                    EmoteRuntime.stop(true);
+                    applyAnimation();                                                           // тип «нет» - без анимации (если эмоция играла, это уже сделано)
 
-                currentCapeFilename = null;
-                elytraEnabled = false;
-                document.getElementById('elytra_toggle').checked = false;
-                skinViewer.loadCape(null);
-                
-                searchTags = [];
-                searchQuery = '';
-                searchInput.value = '';
-                renderTagsDOM();
-                
-                currentSortField = 'default';
-                currentSortOrder = 'desc';
-                updateSortMenuVisuals();
-                renderCurrentList();
-                syncUrlState();
-                
-                PoseEditor.setEditing(false);
-                PoseEditor.reset(false);
-                
-                skinViewer.controls.reset();
-                skinViewer.controls.alpha = 0; 
-                skinViewer.controls.beta = 0;
-                skinViewer.controls.target.set(0, -2, 0); 
-                skinViewer.camera.position.set(0, 0, 60);
-                Scene3D.resetCamera();
-                syncUrlState();
+                    PoseEditor.setEditing(false);
+                    PoseEditor.reset(false);
 
-                if (currentActiveSkinFilename) {
-                    selectSkin(currentActiveSkinFilename, false);
+                    applyViewSettings({ ar: false, rs: 1, pa: false, as: 1, lh: true, lb: true });        // вращение, пауза, скорости, слои головы и тела
+                    if (skinViewer.animation) skinViewer.animation.progress = 0;
+                    if (skinViewer.playerWrapper && skinViewer.playerWrapper.rotation) skinViewer.playerWrapper.rotation.set(0, 0, 0);     // автовращение мог повернуть персонажа
+                    if (skinViewer.playerObject) {
+                        skinViewer.playerObject.rotation.x = 0;
+                        skinViewer.playerObject.rotation.y = 0;
+                        skinViewer.playerObject.rotation.z = 0;
+                    }
+
+                    currentCapeFilename = null;
+                    elytraEnabled = false;
+                    document.getElementById('elytra_toggle').checked = false;
+                    skinViewer.loadCape(null);
+
+                    searchTags = [];
+                    searchQuery = '';
+                    searchInput.value = '';
+                    renderTagsDOM();
+                    currentSortField = 'default';
+                    currentSortOrder = 'desc';
+                    updateSortMenuVisuals();
+
+                    Backdrop.apply('dark', false);
+
+                    const first = globalSkins.length > 0 ? globalSkins[0].filename : null;      // так же, как при открытии сайта без ссылки
+                    currentActiveSkinFilename = first;
+                    switchTab('skins', false);                                                  // заодно перерисует список
+
+                    await Scene3D.resetAll();
+                    applyCameraState(null, null, true);                                         // камера - после платформы, она сама двигает камеру
+                    if (first) await selectSkin(first, false, null);
+                } catch (e) {
+                    console.warn('[reset]', e);
+                } finally {
+                    unlockUrl(false);
                 }
+                syncUrlState();
             };
 
             document.getElementById('auto_rotate').onchange = (e) => { skinViewer.autoRotate = e.target.checked; syncUrlState(); };
@@ -8933,7 +8947,7 @@ function refreshEmoteUi() { EmoteUI.refresh(); }
                 window.addEventListener('popstate', handlePopState);
 
                 if (currentActiveSkinFilename) {
-                    await selectSkin(currentActiveSkinFilename, false);
+                    await selectSkin(currentActiveSkinFilename, false, validVariation(currentActiveSkinFilename, urlState.variation));
                 }
                 await Scene3D.applyState(urlState.plat, urlState.time, { animate: false });   // платформе нужна загруженная модель
                 applyCameraState(urlState.cp, urlState.ct, false);                           // камера - после платформы: та при включении ставит свой вид
