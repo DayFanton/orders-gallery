@@ -443,6 +443,8 @@
   "veg.name.azure_bluet": "茜草花",
   "veg.name.bamboo_stage0": "竹子",
   "veg.name.birch_sapling": "白樺樹苗",
+  "veg.name.brown_mushroom": "棕色蘑菇",
+  "veg.name.cherry_sapling": "櫻花樹苗",
   "veg.weight": "權重",
   "veg.reset": "還原",
   "veg.reset.title": "將植被設置還原為默認，自定植物毋會刪吥，但勾選會取消",

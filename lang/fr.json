@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Houstonie bleue",
   "veg.name.bamboo_stage0": "Bambou",
   "veg.name.birch_sapling": "Jeune pousse de bouleau",
+  "veg.name.brown_mushroom": "Champignon brun",
+  "veg.name.cherry_sapling": "Jeune pousse de cerisier",
   "veg.weight": "Fréquence",
   "veg.reset": "Réinitialiser",
   "veg.reset.title": "Réinitialiser la végétation par défaut (les plantes personnalisées restent conservées mais décochées)",

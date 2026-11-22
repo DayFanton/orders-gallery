@@ -443,6 +443,8 @@
   "veg.name.azure_bluet": "Kék houstonia",
   "veg.name.bamboo_stage0": "Bambusz",
   "veg.name.birch_sapling": "Nyírfacsemete",
+  "veg.name.brown_mushroom": "Barna gomba",
+  "veg.name.cherry_sapling": "Cseresznyefacsemete",
   "veg.weight": "Súly (gyakoriság)",
   "veg.reset": "Alaphelyzet",
   "veg.reset.title": "Növényzet visszaállítása alaphelyzetre (a saját növények megmaradnak, de kikapcsolódnak)",

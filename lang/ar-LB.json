@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "هيوستونيا زرقاء",
   "veg.name.bamboo_stage0": "خيزران",
   "veg.name.birch_sapling": "شتلة بتولا",
+  "veg.name.brown_mushroom": "فطر بني",
+  "veg.name.cherry_sapling": "شتلة كرز",
   "veg.weight": "الوزن (معدّل الظهور)",
   "veg.reset": "إعادة ضبط",
   "veg.reset.title": "إعادة ضبط إعدادات النباتات للوضع الافتراضي (النباتات المخصّصة ما رح تنحذف، بس رح ينشال التحديد عنها)",

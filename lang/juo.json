@@ -443,6 +443,8 @@
   "veg.name.azure_bluet": "茜草花",
   "veg.name.bamboo_stage0": "竹子",
   "veg.name.birch_sapling": "白桦树苗",
+  "veg.name.brown_mushroom": "棕色蘑菇",
+  "veg.name.cherry_sapling": "樱花树苗",
   "veg.weight": "出现比重（整数）",
   "veg.reset": "恢复默认",
   "veg.reset.title": "把全部花草的颜色、权重和大小都调回原来的样子",

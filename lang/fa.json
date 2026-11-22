@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "هوستونیای آبی",
   "veg.name.bamboo_stage0": "بامبو",
   "veg.name.birch_sapling": "نهال توسکا",
+  "veg.name.brown_mushroom": "قارچ قهوه‌ای",
+  "veg.name.cherry_sapling": "نهال گیلاس",
   "veg.weight": "وزن (فراوانی ظاهر شدن)",
   "veg.reset": "بازنشانی",
   "veg.reset.title": "بازگرداندن تنظیمات پوشش گیاهی به حالت پیش‌فرض (گیاهان سفارشی حذف نمی‌شوند اما تیک آن‌ها برداشته می‌شود)",

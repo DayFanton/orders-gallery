@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Biru Azure Bluet",
   "veg.name.bamboo_stage0": "Bambu",
   "veg.name.birch_sapling": "Bibit Pohon Betula",
+  "veg.name.brown_mushroom": "Jamur Cokelat",
+  "veg.name.cherry_sapling": "Bibit Pohon Ceri",
   "veg.weight": "Bobot (frekuensi kemunculan)",
   "veg.reset": "Atur ulang",
   "veg.reset.title": "Atur ulang pengaturan vegetasi ke bawaan (tanaman kustom tidak dihapus, tetapi centangnya dilepas)",

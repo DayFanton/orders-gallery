@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Azure Bluet",
   "veg.name.bamboo_stage0": "Bambú",
   "veg.name.birch_sapling": "Brote de abedul",
+  "veg.name.brown_mushroom": "Champiñón marrón",
+  "veg.name.cherry_sapling": "Brote de cerezo",
   "veg.weight": "Peso (frecuencia)",
   "veg.reset": "Restablecer",
   "veg.reset.title": "Restablecer vegetación (las plantas propias no se borran, pero se desmarcan)",

@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Плава хаустонија",
   "veg.name.bamboo_stage0": "Бамбус",
   "veg.name.birch_sapling": "Младица брезе",
+  "veg.name.brown_mushroom": "Браон печурка",
+  "veg.name.cherry_sapling": "Младица трешње",
   "veg.weight": "Тежина (учесталост испадања)",
   "veg.reset": "Ресетуј",
   "veg.reset.title": "Врати подешавања вегетације на подразумевана (прилагођене биљке се не бришу, али се квачице уклањају)",

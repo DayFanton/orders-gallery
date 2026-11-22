@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Блакитна хаустонія",
   "veg.name.bamboo_stage0": "Бамбук",
   "veg.name.birch_sapling": "Саджанець берези",
+  "veg.name.brown_mushroom": "Коричневий гриб",
+  "veg.name.cherry_sapling": "Саджанець вишні",
   "veg.weight": "Вага (частота випадіння)",
   "veg.reset": "Скинути",
   "veg.reset.title": "Скинути налаштування рослинності до типових (власні рослини залишаться, але позначки знімуться)",

@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Blå houstonia",
   "veg.name.bamboo_stage0": "Bambus",
   "veg.name.birch_sapling": "Birkeskud",
+  "veg.name.brown_mushroom": "Brun svamp",
+  "veg.name.cherry_sapling": "Kirsebærskud",
   "veg.weight": "Vægt (hyppighed)",
   "veg.reset": "Nulstil",
   "veg.reset.title": "Nulstil vegetationsindstillinger til standard (tilpassede planter slettes ikke, men markeringer fjernes)",

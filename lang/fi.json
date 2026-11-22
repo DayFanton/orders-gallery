@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Sinihoustonia",
   "veg.name.bamboo_stage0": "Bambu",
   "veg.name.birch_sapling": "Koivuntaimi",
+  "veg.name.brown_mushroom": "Ruskea sieni",
+  "veg.name.cherry_sapling": "Kirsikantaimi",
   "veg.weight": "Paino (pudotustaajuus)",
   "veg.reset": "Palauta",
   "veg.reset.title": "Palauta kasvillisuusasetukset oletuksiksi (mukautettuja kasveja ei poisteta, mutta niiden valinnat poistetaan)",

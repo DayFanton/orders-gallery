@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Plava houstonija",
   "veg.name.bamboo_stage0": "Bambus",
   "veg.name.birch_sapling": "Mladica breze",
+  "veg.name.brown_mushroom": "Smeđa gljiva",
+  "veg.name.cherry_sapling": "Mladica trešnje",
   "veg.weight": "Težina (učestalost pojavljivanja)",
   "veg.reset": "Vrati zadano",
   "veg.reset.title": "Vrati postavke vegetacije na zadano (prilagođene biljke se ne brišu, ali se odznačuju)",

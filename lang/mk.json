@@ -445,6 +445,8 @@
   "veg.name.azure_bluet": "Сина хаустонија",
   "veg.name.bamboo_stage0": "Бамбус",
   "veg.name.birch_sapling": "Садница од бреза",
+  "veg.name.brown_mushroom": "Кафеава печурка",
+  "veg.name.cherry_sapling": "Садница од цреша",
   "veg.weight": "Тежина (колку често паѓа)",
   "veg.reset": "Ресетирај",
   "veg.reset.title": "Врати ги поставките за вегетација на стандардни (прилагодените растенија не се бришат, но се отстрануваат ознаките)",
