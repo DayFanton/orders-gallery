@@ -119,5 +119,17 @@
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "bamboo_stage0.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "birch_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
   }
 ]

@@ -443,6 +443,8 @@
   "veg.name.fern": "Ferigă",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Houstonia albastră",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Puiet de mesteacăn",
   "veg.weight": "Pondere (frecvența de apariție)",
   "veg.reset": "Resetează",
   "veg.reset.title": "Resetează setările vegetației (plantele tale rămân, dar bifările se scot)",

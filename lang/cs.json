@@ -443,6 +443,8 @@
   "veg.name.fern": "Kapradí",
   "veg.name.allium": "Česnek",
   "veg.name.azure_bluet": "Modrá houstonie",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Sazenice břízy",
   "veg.weight": "Váha (četnost výskytu)",
   "veg.reset": "Resetovat",
   "veg.reset.title": "Resetovat výchozí nastavení vegetace (vlastní rostliny se neodstraní, ale zruší se u nich zaškrtnutí)",

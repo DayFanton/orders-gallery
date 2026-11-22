@@ -441,6 +441,8 @@
   "veg.name.fern": "Fern",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Azure Bluet",
+  "veg.name.bamboo_stage0": "Bamboo",
+  "veg.name.birch_sapling": "Birch Sapling",
   "veg.weight": "Weight (drop frequency)",
   "veg.reset": "Reset",
   "veg.reset.title": "Reset vegetation settings to default (custom plants are not deleted, but their checkboxes are unchecked)",

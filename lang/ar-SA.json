@@ -443,6 +443,8 @@
   "veg.name.fern": "سرخس",
   "veg.name.allium": "ثوم",
   "veg.name.azure_bluet": "هيوستونيا زرقاء",
+  "veg.name.bamboo_stage0": "خيزران",
+  "veg.name.birch_sapling": "شتلة بتولا",
   "veg.weight": "الوزن (معدل الظهور)",
   "veg.reset": "إعادة ضبط",
   "veg.reset.title": "إعادة تعيين إعدادات الغطاء النباتي إلى الوضع الافتراضي (لا يتم حذف النباتات المخصصة، ولكن تُزال علامات التحديد عنها)",

@@ -441,6 +441,8 @@
   "veg.name.fern": "Папараць",
   "veg.name.allium": "Цыбуля",
   "veg.name.azure_bluet": "Блакітная хаўстонія",
+  "veg.name.bamboo_stage0": "Бамбук",
+  "veg.name.birch_sapling": "Саджанец бярозы",
   "veg.weight": "Вага (як часта выпадае)",
   "veg.reset": "Скінуць",
   "veg.reset.title": "Вярнуць налады расліннасці па змаўчанні (уласныя расліны не выдаляюцца, але галачкі з іх знімаюцца)",

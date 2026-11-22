@@ -441,6 +441,8 @@
   "veg.name.fern": "Pako",
   "veg.name.allium": "Sibuyas",
   "veg.name.azure_bluet": "Asul nga Bluet",
+  "veg.name.bamboo_stage0": "Kawayan",
+  "veg.name.birch_sapling": "Punla sa Birch",
   "veg.weight": "Timbang (kadaghan sa pagkahulog)",
   "veg.reset": "I-reset",
   "veg.reset.title": "I-reset ang mga setting sa tanom ngadto sa default (ang mga custom nga tanom dili mapapas, pero ang ilang mga checkbox tangtangon)",

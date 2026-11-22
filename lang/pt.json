@@ -443,6 +443,8 @@
   "veg.name.fern": "Samambaia",
   "veg.name.allium": "Alho-silvestre",
   "veg.name.azure_bluet": "Azul-Azul",
+  "veg.name.bamboo_stage0": "Bambu",
+  "veg.name.birch_sapling": "Muda de Bétula",
   "veg.weight": "Peso (frequência de queda)",
   "veg.reset": "Redefinir",
   "veg.reset.title": "Redefinir as configurações de vegetação para o padrão (as plantas personalizadas não são excluídas, mas suas caixas de seleção são desmarcadas)",

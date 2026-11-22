@@ -443,6 +443,8 @@
   "veg.name.fern": "Ormbunke",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Blå houstonia",
+  "veg.name.bamboo_stage0": "Bambu",
+  "veg.name.birch_sapling": "Björkskott",
   "veg.weight": "Vikt (frekvens)",
   "veg.reset": "Återställ",
   "veg.reset.title": "Återställ växtinställningar till standard (egna växter tas inte bort men avmarkeras)",

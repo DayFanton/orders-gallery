@@ -443,6 +443,8 @@
   "veg.name.fern": "Farn",
   "veg.name.allium": "Lauch",
   "veg.name.azure_bluet": "Blaue Houstonie",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Birkensetzling",
   "veg.weight": "Gewicht (Drop-Häufigkeit)",
   "veg.reset": "Zurücksetzen",
   "veg.reset.title": "Vegetationseinstellungen auf Standard zurücksetzen (benutzerdefinierte Pflanzen werden nicht gelöscht, aber ihre Häkchen werden entfernt)",

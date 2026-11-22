@@ -443,6 +443,8 @@
   "veg.name.fern": "Bregne",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Blå houstonia",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Bjørkeskudd",
   "veg.weight": "Vekt (hyppighet)",
   "veg.reset": "Tilbakestill",
   "veg.reset.title": "Tilbakestill vegetasjonsinnstillingene til standard (egne planter slettes ikke, men avmerkingene fjernes)",

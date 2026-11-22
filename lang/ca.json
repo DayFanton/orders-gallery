@@ -443,6 +443,8 @@
   "veg.name.fern": "Falguera",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Houstonia blava",
+  "veg.name.bamboo_stage0": "Bambú",
+  "veg.name.birch_sapling": "Plançó de bedoll",
   "veg.weight": "Pes (freqüència de caiguda)",
   "veg.reset": "Restablir",
   "veg.reset.title": "Restablir la configuració de la vegetació per defecte (les plantes personalitzades no s'eliminen, però es desmarquen les seves caselles)",

@@ -443,6 +443,8 @@
   "veg.name.fern": "고사리",
   "veg.name.allium": "알리움",
   "veg.name.azure_bluet": "선명한 파란 수레국화",
+  "veg.name.bamboo_stage0": "대나무",
+  "veg.name.birch_sapling": "자작나무 묘목",
   "veg.weight": "가중치 (드랍 빈도)",
   "veg.reset": "재설정",
   "veg.reset.title": "식물 설정을 기본값으로 복원 (커스텀 식물은 삭제되지 않지만 체크표시는 해제됨)",

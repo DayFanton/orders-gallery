@@ -441,6 +441,8 @@
   "veg.name.fern": "Páfrány",
   "veg.name.allium": "Hagyma",
   "veg.name.azure_bluet": "Kék houstonia",
+  "veg.name.bamboo_stage0": "Bambusz",
+  "veg.name.birch_sapling": "Nyírfacsemete",
   "veg.weight": "Súly (gyakoriság)",
   "veg.reset": "Alaphelyzet",
   "veg.reset.title": "Növényzet visszaállítása alaphelyzetre (a saját növények megmaradnak, de kikapcsolódnak)",

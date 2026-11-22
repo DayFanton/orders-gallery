@@ -441,6 +441,8 @@
   "veg.name.fern": "Sõnajalg",
   "veg.name.allium": "Lauk",
   "veg.name.azure_bluet": "Sinine hūstonia",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Kaseistik",
   "veg.weight": "Kaal",
   "veg.reset": "Lähtesta",
   "veg.reset.title": "Lähtesta taimestiku sätted vaikeväärtustele (kohandatud taimi ei kustutata, kuid nende valikud eemaldatakse)",

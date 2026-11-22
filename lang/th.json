@@ -443,6 +443,8 @@
   "veg.name.fern": "เฟิร์น",
   "veg.name.allium": "อัลเลียม",
   "veg.name.azure_bluet": "ฮูสตอเนียสีฟ้า",
+  "veg.name.bamboo_stage0": "ไผ่",
+  "veg.name.birch_sapling": "ต้นกล้าเบิร์ช",
   "veg.weight": "น้ำหนัก (ความถี่ในการดรอป)",
   "veg.reset": "รีเซ็ต",
   "veg.reset.title": "รีเซ็ตการตั้งค่าพืชพรรณเป็นค่าเริ่มต้น (พืชที่กำหนดเองจะไม่ถูกลบ แต่จะถูกยกเลิกการเลือก)",

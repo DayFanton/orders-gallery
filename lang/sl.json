@@ -441,6 +441,8 @@
   "veg.name.fern": "Praprot",
   "veg.name.allium": "Česen",
   "veg.name.azure_bluet": "Modra houstónija",
+  "veg.name.bamboo_stage0": "Bambus",
+  "veg.name.birch_sapling": "Sadika breze",
   "veg.weight": "Teža pogostnosti pojavljanja",
   "veg.reset": "Ponastavi",
   "veg.reset.title": "Ponastavi nastavitve vegetacije na privzete — rastline po meri se ne izbrišejo, ampak se jim odstranijo oznake",

@@ -443,6 +443,8 @@
   "veg.name.fern": "Saniainen",
   "veg.name.allium": "Laukka",
   "veg.name.azure_bluet": "Sinihoustonia",
+  "veg.name.bamboo_stage0": "Bambu",
+  "veg.name.birch_sapling": "Koivuntaimi",
   "veg.weight": "Paino (pudotustaajuus)",
   "veg.reset": "Palauta",
   "veg.reset.title": "Palauta kasvillisuusasetukset oletuksiksi (mukautettuja kasveja ei poisteta, mutta niiden valinnat poistetaan)",

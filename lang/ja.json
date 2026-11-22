@@ -443,6 +443,8 @@
   "veg.name.fern": "シダ",
   "veg.name.allium": "アリウム",
   "veg.name.azure_bluet": "ヒナギクソウ",
+  "veg.name.bamboo_stage0": "竹",
+  "veg.name.birch_sapling": "シラカバの苗木",
   "veg.weight": "重み",
   "veg.reset": "初期化",
   "veg.reset.title": "初期設定に戻します",

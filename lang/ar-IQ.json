@@ -443,6 +443,8 @@
   "veg.name.fern": "سرخس",
   "veg.name.allium": "ثوم",
   "veg.name.azure_bluet": "هيوستونيا زرقاء",
+  "veg.name.bamboo_stage0": "خيزران",
+  "veg.name.birch_sapling": "شتلة بتولا",
   "veg.weight": "الوزن (نسبة الظهور)",
   "veg.tpl.title": "احفظ كل إعدادات النباتات الموجودة بـ \"نباتاتي\" كقالب",
   "veg.tpl.prompt": "اسم القالب:",

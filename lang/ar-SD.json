@@ -443,6 +443,8 @@
   "veg.name.fern": "سرخس",
   "veg.name.allium": "ثوم",
   "veg.name.azure_bluet": "هيوستونيا زرقاء",
+  "veg.name.bamboo_stage0": "خيزران",
+  "veg.name.birch_sapling": "شتلة بتولا",
   "veg.weight": "الوزن (معدّل الظهور)",
   "veg.reset": "رجّع",
   "veg.reset.title": "رجّع إعدادات النباتات للوضع الافتراضي (النباتات الخاصة ما بنمسحها، بس بنشيل منها الصح)",

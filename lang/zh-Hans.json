@@ -443,6 +443,8 @@
   "veg.name.fern": "蕨类",
   "veg.name.allium": "蒜",
   "veg.name.azure_bluet": "茜草花",
+  "veg.name.bamboo_stage0": "竹子",
+  "veg.name.birch_sapling": "白桦树苗",
   "veg.weight": "权重",
   "veg.reset": "重置",
   "veg.reset.title": "恢复默认设置",

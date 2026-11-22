@@ -443,6 +443,8 @@
   "veg.name.fern": "Eğrelti Otu",
   "veg.name.allium": "Soğan",
   "veg.name.azure_bluet": "Mavi Houstonia",
+  "veg.name.bamboo_stage0": "Bambu",
+  "veg.name.birch_sapling": "Huş Fidanı",
   "veg.weight": "Ağırlık (görünme sıklığı)",
   "veg.reset": "Sıfırla",
   "veg.reset.title": "Bitki örtüsü ayarlarını varsayılana sıfırla (özel bitkiler silinmez, ancak seçimleri kaldırılır)",

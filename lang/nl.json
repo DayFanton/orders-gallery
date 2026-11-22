@@ -441,6 +441,8 @@
   "veg.name.fern": "Varen",
   "veg.name.allium": "Allium",
   "veg.name.azure_bluet": "Blauwe houstonia",
+  "veg.name.bamboo_stage0": "Bamboe",
+  "veg.name.birch_sapling": "Berkenstek",
   "veg.weight": "Gewicht (verschijningsfrequentie)",
   "veg.reset": "Resetten",
   "veg.reset.title": "Vegetatie-instellingen terugzetten naar standaard (aangepaste planten worden niet verwijderd, maar wel uitgevinkt)",

@@ -441,6 +441,8 @@
   "veg.name.fern": "Paparde",
   "veg.name.allium": "Sīpols",
   "veg.name.azure_bluet": "Zilā hūstonija",
+  "veg.name.bamboo_stage0": "Bambuss",
+  "veg.name.birch_sapling": "Bērza stāds",
   "veg.weight": "Svars",
   "veg.reset": "Atiestatīt",
   "veg.reset.title": "Atiestatīt veģetācijas iestatījumus uz noklusējumu",
