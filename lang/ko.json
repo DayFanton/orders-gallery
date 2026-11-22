@@ -455,6 +455,7 @@
   "veg.name.dark_oak_sapling": "짙은 참나무 묘목",
   "veg.name.dead_bush": "마른 덤불",
   "veg.name.firefly_bush": "반딧불이 덤불",
+  "veg.name.golden_dandelion": "황금 민들레",
   "veg.weight": "가중치 (드랍 빈도)",
   "veg.reset": "재설정",
   "veg.reset.title": "식물 설정을 기본값으로 복원 (커스텀 식물은 삭제되지 않지만 체크표시는 해제됨)",

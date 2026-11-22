@@ -193,5 +193,11 @@
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "golden_dandelion.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
   }
 ]
