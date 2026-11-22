@@ -475,6 +475,7 @@
   "veg.name.nether_wart_stage0": "Nether Wart (Stage 0)",
   "veg.name.nether_wart_stage1": "Nether Wart (Stage 1)",
   "veg.name.nether_wart_stage2": "Nether Wart (Stage 2)",
+  "veg.name.twisting_vines_plant": "Twisting Vines",
   "veg.weight": "Weight (drop frequency)",
   "veg.reset": "Reset",
   "veg.reset.title": "Reset vegetation settings to default (custom plants are not deleted, but their checkboxes are unchecked)",

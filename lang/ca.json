@@ -477,6 +477,7 @@
   "veg.name.nether_wart_stage0": "Berruga del Nether (Fase 0)",
   "veg.name.nether_wart_stage1": "Berruga del Nether (Fase 1)",
   "veg.name.nether_wart_stage2": "Berruga del Nether (Fase 2)",
+  "veg.name.twisting_vines_plant": "Liana retorçada",
   "veg.weight": "Pes (freqüència de caiguda)",
   "veg.reset": "Restablir",
   "veg.reset.title": "Restablir la configuració de la vegetació per defecte (les plantes personalitzades no s'eliminen, però es desmarquen les seves caselles)",

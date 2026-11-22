@@ -477,6 +477,7 @@
   "veg.name.nether_wart_stage0": "下界疣 (階段 0)",
   "veg.name.nether_wart_stage1": "下界疣 (階段 1)",
   "veg.name.nether_wart_stage2": "下界疣 (階段 2)",
+  "veg.name.twisting_vines_plant": "纏繞藤",
   "veg.weight": "權重",
   "veg.reset": "重設",
   "veg.reset.title": "將植物設定還原為預設（自訂植物唔會剷走，但會取消勾選）",

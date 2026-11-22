@@ -477,6 +477,7 @@
   "veg.name.nether_wart_stage0": "네더 사마귀 (0단계)",
   "veg.name.nether_wart_stage1": "네더 사마귀 (1단계)",
   "veg.name.nether_wart_stage2": "네더 사마귀 (2단계)",
+  "veg.name.twisting_vines_plant": "뒤틀린 덩굴",
   "veg.weight": "가중치 (드랍 빈도)",
   "veg.reset": "재설정",
   "veg.reset.title": "식물 설정을 기본값으로 복원 (커스텀 식물은 삭제되지 않지만 체크표시는 해제됨)",

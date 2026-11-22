@@ -475,6 +475,7 @@
   "veg.name.nether_wart_stage0": "下界疣 (阶段 0)",
   "veg.name.nether_wart_stage1": "下界疣 (阶段 1)",
   "veg.name.nether_wart_stage2": "下界疣 (阶段 2)",
+  "veg.name.twisting_vines_plant": "扭藤",
   "veg.weight": "出现比重（整数）",
   "veg.reset": "恢复默认",
   "veg.reset.title": "把全部花草的颜色、权重和大小都调回原来的样子",

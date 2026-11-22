@@ -477,6 +477,7 @@
   "veg.name.nether_wart_stage0": "Nether bradavica (Faza 0)",
   "veg.name.nether_wart_stage1": "Nether bradavica (Faza 1)",
   "veg.name.nether_wart_stage2": "Nether bradavica (Faza 2)",
+  "veg.name.twisting_vines_plant": "Uvrnuta loza",
   "veg.weight": "Težina (učestalost pojavljivanja)",
   "veg.reset": "Vrati zadano",
   "veg.reset.title": "Vrati postavke vegetacije na zadano (prilagođene biljke se ne brišu, ali se odznačuju)",

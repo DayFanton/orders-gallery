@@ -477,6 +477,7 @@
   "veg.name.nether_wart_stage0": "Hornanmarja (Vaihe 0)",
   "veg.name.nether_wart_stage1": "Hornanmarja (Vaihe 1)",
   "veg.name.nether_wart_stage2": "Hornanmarja (Vaihe 2)",
+  "veg.name.twisting_vines_plant": "Kierteiset köynnökset",
   "veg.weight": "Paino (pudotustaajuus)",
   "veg.reset": "Palauta",
   "veg.reset.title": "Palauta kasvillisuusasetukset oletuksiksi (mukautettuja kasveja ei poisteta, mutta niiden valinnat poistetaan)",

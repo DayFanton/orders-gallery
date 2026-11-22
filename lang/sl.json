@@ -475,6 +475,7 @@
   "veg.name.nether_wart_stage0": "Netherjeva bradavica (Faza 0)",
   "veg.name.nether_wart_stage1": "Netherjeva bradavica (Faza 1)",
   "veg.name.nether_wart_stage2": "Netherjeva bradavica (Faza 2)",
+  "veg.name.twisting_vines_plant": "Zvite vzpenjavke",
   "veg.weight": "Teža pogostnosti pojavljanja",
   "veg.reset": "Ponastavi",
   "veg.reset.title": "Ponastavi nastavitve vegetacije na privzete — rastline po meri se ne izbrišejo, ampak se jim odstranijo oznake",
