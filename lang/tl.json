@@ -18,10 +18,12 @@
   "language.confirm_text": "Sigurado ka bang gusto mong itago ang lahat ng hindi naka-tsek na wika?",
   "language.confirm_yes": "Oo, itago",
   "language.show_in_list": "Ipakita ang wika sa pangkalahatang listahan",
+
   "site.title": "Galeriya ni Tsyplyash",
   "site.disclaimer": "Hindi ito opisyal na serbisyo ng Minecraft. Hindi ito inaprubahan ng Mojang at Microsoft at wala itong kaugnayan sa kanila. Ang pananagutan sa site ay nasa mga may-ari nito, hindi sa Mojang at Microsoft.",
   "gallery.title": "Galeriya",
   "loading.text": "Nilo-load ang mga modyul ng biswalisasyon",
+
   "sort.title": "Pagbukud-bukurin",
   "sort.default": "Pamantayan",
   "sort.author": "Ayon sa may-akda",
@@ -34,6 +36,7 @@
   "tab.skins": "Mga balat",
   "tab.capes": "Mga kapa",
   "search.placeholder": "Maghanap ayon sa pangalan, kliyente, may-akda",
+
   "meta.customer": "Kliyente",
   "meta.artist": "Dibuhista",
   "meta.date": "Petsa ng order",
@@ -41,11 +44,13 @@
   "meta.date_unset": "Walang petsa",
   "meta.show_orders": "Ipakita ang lahat ng order mula kay %s",
   "meta.open_author": "Buksan ang pahina ng may-akda (%s)",
+
   "skin.untitled": "Walang pamagat",
   "skin.type": "Uri: %s",
   "skin.has_variations": "May mga baryasyon",
   "variation.original": "Orihinal",
   "cape.remove": "Alisin ang kapa",
+
   "controls.reset": "Ibalik sa dati",
   "rotate.title": "Pag-ikot",
   "rotate.enable": "Paikutin ang modelo",
@@ -62,6 +67,7 @@
   "layers.body": "Baluti",
   "acc.title": "Mga aksesorya",
   "acc.elytra": "Ipakita ang elytra",
+
   "emote.button": "Mga emote",
   "emote.title": "Listahan ng mga emote",
   "emote.hint": "Pumili ng emote o buksan ang Mga emote ko para magdagdag ng sarili mong emote",
@@ -71,6 +77,7 @@
   "emote.error": "Hindi mabasa ang file ng emote",
   "emote.playing": "Pinapatugtog: %s",
   "emote.close": "Isara",
+
   "bg.title": "Kulay ng likuran",
   "bg.dark": "Madilim",
   "bg.light": "Maliwanag",
@@ -88,14 +95,18 @@
   "bg.image.empty": "Walang nakitang mga larawan sa folder na backgrounds/",
   "bg.image.error": "Hindi mabuksan ang larawang ito",
   "bg.image.close": "Isara ang window",
+
   "mobile.gallery": "📁 Galeriya",
   "mobile.settings": "⚙️ Mga setting",
+
   "modal.title": "Paunawa",
   "modal.text": "Mga minamahal na bisita! Bawat balat sa galeryang ito ay bunga ng maraming oras ng paggawa. Ang mga balat na nilikha ng may-akda ng website ay protektado ng karapatang-ari: pinapayagan ang pagtingin, ngunit kailangan muna ng kasunduan bago mag-download, kumopya, o gumamit nito sa paraang pangkomersiyo. Ang iba pang materyal tulad ng mga kapa, tekstura ng mga bloke at halaman ay pag-aari ng kani-kanilang lumikha na nakasaad sa mga kapsyon, at ginagamit alinsunod sa mga tuntunin ng kanilang lisensya. Salamat sa inyong pag-unawa at katapatan. Tandaan na hindi opisyal na serbisyo ng Minecraft ito. Hindi ito inaprubahan ng Mojang o Microsoft at wala itong kaugnayan sa kanila. Ang mga may-ari ng website, hindi ang Mojang o Microsoft, ang responsable rito.",
   "modal.agree": "Nabasa ko na ang lahat at sumasang-ayon ako",
   "modal.continue": "Magpatuloy",
+
   "error.viewer": "Error sa pagsisimula ng mga 3D komponente.",
   "error.json": "Nabigong basahin ang mga JSON configuration file.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Naka-maskara",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -203,6 +214,7 @@
   "skin.name.ger_summer": "Ger Tag-init",
   "skin.name.ger_maid_skeleton": "Ger Kasambahay na Kalansay",
   "skin.name.stars": "Mga Bituin",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Kawali",
   "cape.name.15th_anniversary": "Ika-15 Anibersaryo",
@@ -249,6 +261,7 @@
   "cape.name.millionth_customer": "Ika-isang Milyong Kliyente",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Matakot",
   "emote.name.SPE_Ankha_Dance": "Sayaw ni Ankha sa Animal Crossing",
   "emote.name.SPE_Evelynn_Stand": "Tindig ni Evelynn sa League of Legends",
@@ -326,9 +339,11 @@
   "emote.name.SPE_Witch_Pose": "Pose ng bruha",
   "emote.name.SPE_Yandere_Pose": "Pose ng yandere",
   "emote.name.SPE_Zoro_Pose": "Pose ni Zoro sa One Piece",
+
   "emote.by": "mula kay %s",
   "emote.search_placeholder": "Maghanap ng emote",
   "emote.no_results": "Walang nakitang emote",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -343,7 +358,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "BAGO",
+
   "platform.title": "Plataporma",
   "platform.enable": "Maglagay ng plataporma sa ilalim ng karakter",
   "platform.block": "Bloke",
@@ -359,13 +376,16 @@
   "block.end_stone": "End stone",
   "block.plain": "Walang tekstura",
   "block.tint": "Kulay ng bloke",
+
   "bgimg.name.day": "Araw",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Gabi",
   "bgimg.name.snow": "Niyebe",
   "bgimg.name.sunset": "Takipsilim",
+
   "blocks.empty": "Wala pang mga bloke sa folder na blocks/",
+
   "folder.add": "Idagdag",
   "folder.delete": "Tanggalin",
   "folder.delete_confirm": "Tanggalin ang %s sa iyong folder?",
@@ -391,10 +411,13 @@
   "folder.veg.error": "Piliin ang file ng imahe",
   "folder.tint": "Kulay",
   "folder.weight": "Timbang",
+
   "ui.hide": "Itago ang interface (H)",
   "ui.show": "Ipakita ang interface (H)",
+
   "shot.title": "Kopyahin ang screenshot sa clipboard",
   "shot.error": "Hindi matagumpay ang pagkuha ng screenshot",
+
   "veg.enable": "I-on ang mga halaman",
   "veg.dice": "I-shuffle",
   "veg.density": "Kapal",
@@ -415,6 +438,11 @@
   "veg.name.sweet_berry_bush_stage3": "Matatamis na berry yugto 4",
   "veg.name.sugar_cane": "Tubo",
   "veg.name.seagrass_32x": "Damo sa dagat",
+  "veg.name.lilac": "Lilac",
+  "veg.name.large_fern": "Malaking Pako",
+  "veg.name.fern": "Pako",
+  "veg.name.allium": "Sibuyas",
+  "veg.name.azure_bluet": "Asul na Bluet",
   "veg.weight": "Timbang",
   "veg.reset": "I-reset",
   "veg.reset.title": "I-reset ang mga setting ng halaman sa default",
@@ -424,11 +452,14 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Na-save na",
   "veg.tpl.card": "Template ng halaman",
+
   "credit.title": "May-akda: %s",
+
   "light.enable": "Liwanag at mga anino",
   "light.color": "Kulay ng ilaw",
   "light.color.auto": "Natural",
   "light.color.custom": "Sariling kulay",
+
   "size.title": "Sukat ng halaman",
   "size.min": "Pinakamaliit na sukat",
   "size.max": "Pinakamalaking sukat",
@@ -437,6 +468,7 @@
   "size.wmax": "Timbang ng pinakamalaking sukat",
   "size.tile": "Ulitin ang tekstura",
   "size.reset": "I-reset ang sukat",
+
   "rename.title": "I-click para palitan ang pangalan",
   "rename.cancel": "Ibalik sa dating pangalan",
   "rename.placeholder": "Pangalan",
@@ -461,6 +493,7 @@
   "rename.style.m": "May guhit sa gitna",
   "rename.style.k": "Kriptado",
   "rename.style.r": "I-reset ang estilo",
+
   "tplprev.btn": "Palitan ang thumbnail",
   "tplprev.title": "Thumbnail ng template",
   "tplprev.auto": "Gumawa mula sa mga halaman",
@@ -473,6 +506,7 @@
   "tplprev.mode.auto": "Eksena ng halaman ng template",
   "tplprev.mode.image": "Sariling larawan",
   "tplprev.mode.emoji": "Emoji",
+
   "lib.title": "I-export at i-import",
   "lib.this": "Ang library na ito",
   "lib.all": "Lahat ng library",
@@ -501,6 +535,7 @@
   "lib.import_none": "Walang data para sa library na ito sa file",
   "lib.import_error": "Nabigong i-import ang file",
   "lib.too_big": "Masyadong malaki ang file",
+
   "pose.title": "Posisyon ng karakter",
   "pose.edit": "Baguhin ang posisyon",
   "pose.edit.title": "Ilipat, paikutin, at baguhin ang laki ng karakter kaugnay ng plataporma",
@@ -512,6 +547,7 @@
   "pose.rot": "Pag-ikot sa mga degree",
   "pose.size": "Laki",
   "pose.hint": "I-drag ang mga arrow, ring, at cube sa viewport",
+
   "plat.layers": "Mga layer ng plataporma",
   "plat.layers.hint": "Kapag inalis ang itaas na layer ay tatayo ang karakter sa ibaba at muling itatanim ang mga halaman"
 }

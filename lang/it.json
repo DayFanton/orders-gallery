@@ -18,10 +18,12 @@
   "language.confirm_text": "Nascondere tutte le lingue non selezionate?",
   "language.confirm_yes": "Nascondi",
   "language.show_in_list": "Mostra nell'elenco generale",
+
   "site.title": "Galleria di Tsyplyash",
   "site.disclaimer": "Servizio Minecraft non ufficiale, non approvato da Mojang o Microsoft. La responsabilità del sito è dei suoi proprietari.",
   "gallery.title": "Galleria",
   "loading.text": "Caricamento moduli...",
+
   "sort.title": "Ordina",
   "sort.default": "Predefinito",
   "sort.author": "Autore",
@@ -34,6 +36,7 @@
   "tab.skins": "Skin",
   "tab.capes": "Mantelli",
   "search.placeholder": "Cerca per nome, cliente o autore...",
+
   "meta.customer": "Cliente",
   "meta.artist": "Artista",
   "meta.date": "Data",
@@ -41,11 +44,13 @@
   "meta.date_unset": "Non impostata",
   "meta.show_orders": "Mostra ordini di %s",
   "meta.open_author": "Apri pagina di %s",
+
   "skin.untitled": "Senza nome",
   "skin.type": "Tipo: %s",
   "skin.has_variations": "Ha varianti",
   "variation.original": "Originale",
   "cape.remove": "Rimuovi mantello",
+
   "controls.reset": "Reimposta",
   "rotate.title": "Rotazione",
   "rotate.enable": "Ruota modello",
@@ -62,6 +67,7 @@
   "layers.body": "Abbigliamento",
   "acc.title": "Accessori",
   "acc.elytra": "Mostra elitre",
+
   "emote.button": "Emote",
   "emote.title": "Emote",
   "emote.hint": "Scegli un'emote o apri Le mie emote per aggiungerne una",
@@ -71,6 +77,7 @@
   "emote.error": "Errore di lettura del file emote",
   "emote.playing": "In riproduzione: %s",
   "emote.close": "Chiudi",
+
   "bg.title": "Sfondo",
   "bg.dark": "Scuro",
   "bg.light": "Chiaro",
@@ -88,14 +95,18 @@
   "bg.image.empty": "Nessuna immagine trovata nella cartella backgrounds/",
   "bg.image.error": "Errore di apertura dell'immagine",
   "bg.image.close": "Chiudi",
+
   "mobile.gallery": "📁 Galleria",
   "mobile.settings": "⚙️ Impostazioni",
+
   "modal.title": "Avviso",
   "modal.text": "Ogni skin di questa galleria richiede molte ore di lavoro. Le skin dell'autore del sito sono protette da copyright: la visione è libera, mentre download, copia e uso commerciale richiedono un accordo preventivo. Gli altri materiali appartengono ai rispettivi autori indicati nelle didascalie e seguono le loro licenze. Questo è un servizio Minecraft non ufficiale, non approvato da Mojang o Microsoft.",
   "modal.agree": "Accetto",
   "modal.continue": "Continua",
+
   "error.viewer": "Errore di inizializzazione del visualizzatore 3D.",
   "error.json": "Errore di lettura dei file JSON.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Con maschera",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -203,6 +214,7 @@
   "skin.name.ger_summer": "Ger Estate",
   "skin.name.ger_maid_skeleton": "Ger Cameriera Scheletro",
   "skin.name.stars": "Stelle",
+
   "cape.name.migrator": "Migratore",
   "cape.name.pan": "Pancake",
   "cape.name.15th_anniversary": "15° Anniversario",
@@ -249,6 +261,7 @@
   "cape.name.millionth_customer": "Milionesimo cliente",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarine",
+
   "emote.name.SPE_Get_scared": "Spavento",
   "emote.name.SPE_Ankha_Dance": "Danza di Ankha (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Posa di Evelynn (League of Legends)",
@@ -326,9 +339,11 @@
   "emote.name.SPE_Witch_Pose": "Posa della Strega (Incubi)",
   "emote.name.SPE_Yandere_Pose": "Posa di Yandere (Incubi)",
   "emote.name.SPE_Zoro_Pose": "Posa di Zoro (Multiverso) (One Piece)",
+
   "emote.by": "di %s",
   "emote.search_placeholder": "Cerca emote...",
   "emote.no_results": "Nessuna emote trovata",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -343,7 +358,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NUOVO",
+
   "platform.title": "Piattaforma",
   "platform.enable": "Piattaforma sotto il personaggio",
   "platform.block": "Blocco",
@@ -359,13 +376,16 @@
   "block.end_stone": "Pietra dell'End",
   "block.plain": "Senza texture",
   "block.tint": "Tinta blocco",
+
   "bgimg.name.day": "Giorno",
   "bgimg.name.end": "End",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Notte",
   "bgimg.name.snow": "Neve",
   "bgimg.name.sunset": "Tramonto",
+
   "blocks.empty": "Nessun blocco nella cartella blocks/",
+
   "folder.add": "Aggiungi",
   "folder.delete": "Elimina",
   "folder.delete_confirm": "Eliminare \"%s\"?",
@@ -391,10 +411,13 @@
   "folder.veg.error": "Seleziona file immagine",
   "folder.tint": "Tinta (bianco = nessuna)",
   "folder.weight": "Peso",
+
   "ui.hide": "Nascondi interfaccia (H)",
   "ui.show": "Mostra interfaccia (H)",
+
   "shot.title": "Copia screenshot negli appunti (Ctrl per scaricare, Shift per sfondo trasparente)",
   "shot.error": "Errore di acquisizione schermata",
+
   "veg.enable": "Attiva vegetazione",
   "veg.dice": "Casuale",
   "veg.density": "Densità",
@@ -415,6 +438,11 @@
   "veg.name.sweet_berry_bush_stage3": "Bacche dolci fase 4",
   "veg.name.sugar_cane": "Canna da zucchero",
   "veg.name.seagrass_32x": "Erba marina",
+  "veg.name.lilac": "Lillà",
+  "veg.name.large_fern": "Grande felce",
+  "veg.name.fern": "Felce",
+  "veg.name.allium": "Allium",
+  "veg.name.azure_bluet": "Houstonia azzurra",
   "veg.weight": "Peso",
   "veg.reset": "Reimposta",
   "veg.reset.title": "Reimposta la vegetazione predefinita mantenendo le piante personalizzate",
@@ -424,11 +452,14 @@
   "veg.tpl.default": "Modello %s",
   "veg.tpl.saved": "Salvato",
   "veg.tpl.card": "Modello di vegetazione",
+
   "credit.title": "Autore: %s",
+
   "light.enable": "Luci e ombre",
   "light.color": "Colore luce",
   "light.color.auto": "Automatico",
   "light.color.custom": "Personalizzato",
+
   "size.title": "Dimensione pianta",
   "size.min": "Altezza minima",
   "size.max": "Altezza massima",
@@ -437,6 +468,7 @@
   "size.wmax": "Peso altezza massima",
   "size.tile": "Ripeti texture",
   "size.reset": "Reimposta",
+
   "rename.title": "Rinomina",
   "rename.cancel": "Annulla modifica",
   "rename.placeholder": "Nome originale",
@@ -461,6 +493,7 @@
   "rename.style.m": "Barrato",
   "rename.style.k": "Offuscato",
   "rename.style.r": "Ripristina",
+
   "tplprev.btn": "Cambia anteprima",
   "tplprev.title": "Anteprima modello",
   "tplprev.auto": "Genera dalle piante",
@@ -473,6 +506,7 @@
   "tplprev.mode.auto": "Anteprima automatica",
   "tplprev.mode.image": "Immagine personalizzata",
   "tplprev.mode.emoji": "Emoji",
+
   "lib.title": "Esporta e importa",
   "lib.this": "Libreria corrente",
   "lib.all": "Tutte le librerie",
@@ -501,6 +535,7 @@
   "lib.import_none": "Nessun dato compatibile nel file",
   "lib.import_error": "Errore di importazione",
   "lib.too_big": "File troppo grande",
+
   "pose.title": "Posa personaggio",
   "pose.edit": "Modifica posa",
   "pose.edit.title": "Sposta, ruota o ridimensiona il personaggio",
@@ -512,6 +547,7 @@
   "pose.rot": "Rotazione",
   "pose.size": "Scala",
   "pose.hint": "Trascina i controlli nella vista; Shift per la griglia; W, E, R per cambiare modalità; Esc per uscire",
+
   "plat.layers": "Livelli piattaforma",
   "plat.layers.hint": "Livello rimosso; il personaggio scende al livello inferiore e le piante vengono riposizionate"
 }

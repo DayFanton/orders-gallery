@@ -11,8 +11,8 @@
   { "id": "stone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
   { "id": "cobblestone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
   { "id": "sand", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
-  { "id": "snow", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
+  { "id": "snow", "author": "Mojang", "url": "https://www.minecraft.net" },
   { "id": "planks", "all": "oak_planks.png", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
   { "id": "netherrack", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" },
-  { "id": "end_stone", "author": "Braytonks", "url": "https://modrinth.com/user/Braytonks" }
+  { "id": "end_stone", "author": "Mojang", "url": "https://www.minecraft.net" }
 ]

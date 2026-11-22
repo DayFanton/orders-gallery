@@ -18,10 +18,12 @@
   "language.confirm_text": "آیا شما راست گلاچ ات که تمام ناملوکیں زباناں چیر دیگ لوٹ ات؟",
   "language.confirm_yes": "بللی، چیر دیگ",
   "language.show_in_list": "عمومی لسٹ ءَ زبان پیش کنگی",
+
   "site.title": "سیپلیاش ءِ گیلری",
   "site.disclaimer": "نیشتگی Minecraft سِرویس. Mojang ءُ Microsoft ءِ نیمگا تپت نکتگ یا مروچی نیست. سائٹ ءِ زموار وتی واجہ اَنت، نه Mojang ءُ Microsoft.",
   "gallery.title": "گیلری",
   "loading.text": "ویژولائزیشن ماڈیولانی لوڈ بوگ...",
+
   "sort.title": "درجه بندی",
   "sort.default": "پہ پیش فرض",
   "sort.author": "پہ جوڑ کنوک",
@@ -34,6 +36,7 @@
   "tab.skins": "اسکن",
   "tab.capes": "چادر",
   "search.placeholder": "پہ نام، گراهک، جوڑ کنوک ءَ شوهاز بہ کن ات...",
+
   "meta.customer": "گراهک",
   "meta.artist": "آرٹسٹ",
   "meta.date": "آرڈر ءِ تاریخ",
@@ -41,11 +44,13 @@
   "meta.date_unset": "نشان نہ بوتگ",
   "meta.show_orders": "چہ %s ءَ درستیں آرڈر پیش دار",
   "meta.open_author": "جوڑ کنوک ءِ تاک ءَ پچ کن (%s)",
+
   "skin.untitled": "بے نام",
   "skin.type": "وڑ: %s",
   "skin.has_variations": "دگہ وڑ ھست اَنت",
   "variation.original": "بُندری",
   "cape.remove": "چادر ءَ دور کن",
+
   "controls.reset": "پدا نوک کن",
   "rotate.title": "چرخگ",
   "rotate.enable": "ماڈل ءَ بچرخین",
@@ -62,6 +67,7 @@
   "layers.body": "زره",
   "acc.title": "لوازمات",
   "acc.elytra": "ایلائٹرا پیش دار",
+
   "emote.button": "ایموٹ",
   "emote.title": "ایموٹ",
   "emote.hint": "یک ایموت اِنتخاب کن یا وتی ایموت اِضافه کنگا \"مِنی ایموتان\" باز کن",
@@ -71,6 +77,7 @@
   "emote.error": "اے ایموٹ فائل وانگ نہ بوت",
   "emote.playing": "چلگ ءَ اِنت: %s",
   "emote.close": "بند کن",
+
   "bg.title": "پشت ءِ رنگ",
   "bg.dark": "تھار",
   "bg.light": "روشن",
@@ -88,14 +95,18 @@
   "bg.image.empty": "هچ اکس در نہ کپت (backgrounds/ فولڈر)",
   "bg.image.error": "اے اکس پچ کنگ نہ بوت",
   "bg.image.close": "بند کن",
+
   "mobile.gallery": "📁 گیلری",
   "mobile.settings": "⚙️ سیٹنگز",
+
   "modal.title": "جار",
   "modal.text": "واجبیں مہمان! اے گیلری ءَ ہر ہک سکن بازیں گھنٹیاں ءِ محنت ءِ نتیجہ اِنت۔ سائٹ ءِ مالک ءَ جوڑ کُرتگیں سکن کاپی رائٹ ءَ محفوظ اَنت: چارگ ءِ اجازت ھست، بلے ڈاؤنلوڈ، نقل ءُ کاروباری استعمال پیشگی راضی نامگ ءَ بغیر روا نہ اَنت۔ دگر مواد (کپڑے، بلاک ءُ گیاہانی ٹیکسچر، ءُ دگر) ایں ءِ جوڑ کنوکانی ملک اَنت، ءُ ایں ءِ نام توضیحات ءَ درج اَنت، ءُ ایں ءَ ایں ءِ لائسنسانی شرطانی مطابق کارمرز کننت۔ شمئے سمجھ ءُ ایمانداری ءِ منتوار! یاد دار ات، اے Minecraft ءِ غیر رسمی خدمت اِنت۔ Mojang ءُ Microsoft ءَ ایں ءَ منظور نہ کُرتگ ءُ ایں ءَ گوں وابستہ نہ اَنت۔ سائٹ ءِ ذمہ واری ایں ءِ مالکان ءَ سرا اِنت، نہ Mojang ءُ Microsoft ءَ سرا۔",
   "modal.agree": "من درست ونتگ اَنت ءُ راضی آں",
   "modal.continue": "برجاہ دار",
+
   "error.viewer": "3D پرزہانی شروع کنگ ءَ ردی۔",
   "error.json": "JSON کنفیگریشن فائلانی وانگ ءَ بے سوب بوت۔",
+
   "skin.name.vova_halloween26": "وووا هیلووین 2026",
   "variation.name.vova_in_mask_halloween26": "ماسک ءَ گوں",
   "skin.name.day_halloween26": "ڈے هیلووین 2026",
@@ -203,6 +214,7 @@
   "skin.name.ger_summer": "گیر گرماگ",
   "skin.name.ger_maid_skeleton": "گیر کنیز-هڈ",
   "skin.name.stars": "سٹارز",
+
   "cape.name.migrator": "لڈوک",
   "cape.name.pan": "تاپگ",
   "cape.name.15th_anniversary": "پانزدهمی سالروچ",
@@ -249,6 +261,7 @@
   "cape.name.millionth_customer": "دہ لکمی گراهک",
   "cape.name.db": "dB",
   "cape.name.prismarine": "پریسمارین",
+
   "emote.name.SPE_Get_scared": "تُرسگ",
   "emote.name.SPE_Ankha_Dance": "انکھا ءِ ناچ",
   "emote.name.SPE_Evelynn_Stand": "ایولین ءِ اوشتگ",
@@ -326,9 +339,11 @@
   "emote.name.SPE_Witch_Pose": "جادوگرنی ءِ پوز",
   "emote.name.SPE_Yandere_Pose": "یاندیرے ءِ پوز",
   "emote.name.SPE_Zoro_Pose": "زورو ءِ پوز",
+
   "emote.by": "%s a",
   "emote.search_placeholder": "ایموٹ شوهاز...",
   "emote.no_results": "هچ ایموٹ در نه کپت",
+
   "person.Артур": "آرتھر",
   "person.Вайкату": "وایکاتو",
   "person.Виакор": "ویاکور",
@@ -343,7 +358,9 @@
   "person.Цыпляш": "سیپلیاش",
   "person.Эппоп": "ایپاپ",
   "person.Яна": "یانا",
+
   "badge.new": "نوک",
+
   "platform.title": "پلیٹ فارم",
   "platform.enable": "کارست ءِ چیر ءَ پلیٹ فارمے ایر کن",
   "platform.block": "بلاک",
@@ -359,13 +376,16 @@
   "block.end_stone": "اینڈ سنگ",
   "block.plain": "هیچ تیکستور نیست",
   "block.tint": "بلوک رنگ",
+
   "bgimg.name.day": "روچ",
   "bgimg.name.end": "آهری",
   "bgimg.name.nether": "دوزخ",
   "bgimg.name.night": "شپ",
   "bgimg.name.snow": "برپ",
   "bgimg.name.sunset": "روچ ایرشت",
+
   "blocks.empty": "هچ بلوک نیست - تیکستوراں په blocks/ فولڈر ءَ بیار یا وتی وا شه اضافه کن",
+
   "folder.add": "اضافه کن",
   "folder.delete": "پاک کن",
   "folder.delete_confirm": "آیا شما لوٹ ات کہ \"%s\" ءَ چہ وتی فولڈر ءَ در کن ات؟",
@@ -391,10 +411,13 @@
   "folder.veg.error": "عکس فایلی گچین بہ کن ات",
   "folder.tint": "رنگ (اسپیت — بے رنگ)",
   "folder.weight": "وزن (چون باز شوتگ)",
+
   "ui.hide": "انٹرفیس چیر دیگ (H)",
   "ui.show": "انٹرفیس پیش دارگ (H)",
+
   "shot.title": "اسکرین شاٹ کلپ بورڈ ءَ کاپی کن ات (ڈاؤن لوڈ ءَ را Ctrl بہ دار ات، شفاف پس منظر ءَ را Shift)",
   "shot.error": "اسکرین شاٹ گرگت نہ بوتگ",
+
   "veg.enable": "روپان روشن کن",
   "veg.dice": "درهم برهم",
   "veg.density": "گنجان",
@@ -415,6 +438,11 @@
   "veg.name.sweet_berry_bush_stage3": "وشیں میوہ (پاد 4)",
   "veg.name.sugar_cane": "نیشکر",
   "veg.name.seagrass_32x": "سمندری کاه",
+  "veg.name.lilac": "لیلک",
+  "veg.name.large_fern": "مزنیں فرن",
+  "veg.name.fern": "فرن",
+  "veg.name.allium": "گندل",
+  "veg.name.azure_bluet": "سبزیں بلیوئٹ",
   "veg.weight": "وزن (چون باز شوتگ)",
   "veg.reset": "ری سیٽ",
   "veg.reset.title": "سبزیءِ سیٹنگاں برگردین اِت په اصلی حالت (شما ءِ سبزی گار نب انت، بلکې آئیءِ نشان هیر بنت)",
@@ -424,11 +452,14 @@
   "veg.tpl.default": "ٹیمپلیٹ %s",
   "veg.tpl.saved": "محفوظ بوتگ",
   "veg.tpl.card": "سبزیءِ ٹیمپلیٹ — کارمرز کنگ ءَ را کلک کن",
+
   "credit.title": "نویسندہ: %s",
+
   "light.enable": "روشنی ءِ سایگ",
   "light.color": "روشنائیءِ رنگ",
   "light.color.auto": "قدرتی (روچءِ وھدءِ ھسابءَ)",
   "light.color.custom": "وتی رنگ",
+
   "size.title": "گیاهی اندازہ",
   "size.min": "کمترین اندازہ (بلوک)",
   "size.max": "گیشترین اندازہ (بلوک)",
@@ -437,6 +468,7 @@
   "size.wmax": "گیشترین وزن",
   "size.tile": "بافت تکرار کنگ",
   "size.reset": "بازنشانی کنگ",
+
   "rename.title": "نام ءِ بدلگ ءَ را کلک کن",
   "rename.cancel": "پیشیں نام ءَ برگشت",
   "rename.placeholder": "نام (پروشوک — اصل)",
@@ -461,6 +493,7 @@
   "rename.style.m": "میان ءِ خط",
   "rename.style.k": "رمز",
   "rename.style.r": "ری سیٹ",
+
   "tplprev.btn": "کسانیں عکس بدل کن",
   "tplprev.title": "ٹیمپلیٹ کسانیں عکس",
   "tplprev.auto": "داراں چہ جوڑ کن",
@@ -473,6 +506,7 @@
   "tplprev.mode.auto": "نوں: ٹیمپلیٹ دارانی منظر",
   "tplprev.mode.image": "نوں: خاصیں عکس",
   "tplprev.mode.emoji": "نوں: ایموجی",
+
   "lib.title": "برآمد و درآمد",
   "lib.this": "اے کتابخانہ",
   "lib.all": "کل کتابخانہ",
@@ -501,6 +535,7 @@
   "lib.import_none": "فایل ءِ تہا اے کتابجاہ ءِ واستا داتا نیست",
   "lib.import_error": "فایل درآرگ ناکام بوت",
   "lib.too_big": "فایل سک مزن انت",
+
   "pose.title": "کردار ءِ جاہ",
   "pose.edit": "جاہ ءَ بدل کن",
   "pose.edit.title": "پلیٹ فارم ءِ گوما کارڈار ءَ بشکن، بگردین ءُ اندازہ ءَ بدل کن",
@@ -512,6 +547,7 @@
   "pose.rot": "بگردگ (ڈگری ءَ تہا)",
   "pose.size": "اندازہ (پیمانہ ءِ فیکٹر)",
   "pose.hint": "ویوپورٹا تیر، ہلکا ءُ کیوب جکس کن۔ Shift — گرڈ گام۔ W, E, R کی — موڈ، Esc — در آ",
+
   "plat.layers": "پلیٹ فارم ءِ تہہ",
   "plat.layers.hint": "برز تہہ در کنگ بوت — کارڈار ءَ جہل ءِ تہا اوشتیت، ءُ درخت پدا کشگ بنت۔ یک تہہ ہمیش ءَ مانیت"
 }

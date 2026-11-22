@@ -2,8 +2,10 @@
   {
     "file": "grass.png",
     "weight": 6,
-    "author": "Braytonks",
-    "url": "https://modrinth.com/user/Braytonks"
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "tint": "#91bd59",
+    "enabled": false
   },
   {
     "id": "tall_grass",
@@ -82,5 +84,40 @@
     "author": "Braytonks",
     "url": "https://modrinth.com/user/Braytonks",
     "enabled": false
+  },
+  {
+    "id": "lilac",
+    "bottom": "lilac_bottom.png",
+    "top": "lilac_top.png",
+    "weight": 5
+  },
+  {
+    "id": "large_fern",
+    "bottom": "large_fern_bottom.png",
+    "top": "large_fern_top.png",
+    "weight": 5,
+    "tint": "#91bd59",
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "fern.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "tint": "#91bd59"
+  },
+  {
+    "file": "allium.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "file": "azure_bluet.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
   }
 ]

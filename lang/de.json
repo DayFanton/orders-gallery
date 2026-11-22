@@ -18,10 +18,12 @@
   "language.confirm_text": "Möchten Sie wirklich alle nicht markierten Sprachen ausblenden?",
   "language.confirm_yes": "Ja, ausblenden",
   "language.show_in_list": "Sprache in der Gesamtliste anzeigen",
+
   "site.title": "Tsyplyashs Galerie",
   "site.disclaimer": "Inoffizieller Minecraft-Dienst. Nicht von Mojang oder Microsoft genehmigt oder mit ihnen verbunden. Die Verantwortung für die Website liegt bei ihren Eigentümern, nicht bei Mojang und Microsoft.",
   "gallery.title": "Galerie",
   "loading.text": "Lade Visualisierungsmodule...",
+
   "sort.title": "Sortierung",
   "sort.default": "Standard",
   "sort.author": "Nach Autor",
@@ -34,6 +36,7 @@
   "tab.skins": "Skins",
   "tab.capes": "Umhänge",
   "search.placeholder": "Suche nach Name, Kunde, Autor...",
+
   "meta.customer": "Kunde",
   "meta.artist": "Künstler",
   "meta.date": "Bestelldatum",
@@ -41,11 +44,13 @@
   "meta.date_unset": "Nicht angegeben",
   "meta.show_orders": "Alle Bestellungen von %s anzeigen",
   "meta.open_author": "Autorenseite öffnen (%s)",
+
   "skin.untitled": "Unbenannt",
   "skin.type": "Typ: %s",
   "skin.has_variations": "Hat Varianten",
   "variation.original": "Original",
   "cape.remove": "Umhang abnehmen",
+
   "controls.reset": "Zurücksetzen",
   "rotate.title": "Drehung",
   "rotate.enable": "Modell drehen",
@@ -62,6 +67,7 @@
   "layers.body": "Oberbekleidung / Rüstung",
   "acc.title": "Zubehör",
   "acc.elytra": "Elytren anzeigen",
+
   "emote.button": "Emotes",
   "emote.title": "Emotes",
   "emote.hint": "Wählen Sie ein Emote aus oder öffnen Sie „Meine Emotes“, um Ihr eigenes hinzuzufügen",
@@ -71,6 +77,7 @@
   "emote.error": "Emote-Datei konnte nicht gelesen werden",
   "emote.playing": "Wird abgespielt: %s",
   "emote.close": "Schließen",
+
   "bg.title": "Hintergrundfarbe",
   "bg.dark": "Dunkel",
   "bg.light": "Hell",
@@ -88,14 +95,18 @@
   "bg.image.empty": "Keine Bilder gefunden (Ordner backgrounds/)",
   "bg.image.error": "Dieses Bild konnte nicht geöffnet werden",
   "bg.image.close": "Schließen",
+
   "mobile.gallery": "📁 Galerie",
   "mobile.settings": "⚙️ Einstellungen",
+
   "modal.title": "Hinweis",
   "modal.text": "Liebe Besucher! Jeder Skin in dieser Galerie ist das Ergebnis vieler Stunden Arbeit. Die vom Website-Autor erstellten Skins sind urheberrechtlich geschützt: Das Betrachten ist erlaubt; das Herunterladen, Kopieren und die kommerzielle Nutzung erfordern jedoch eine vorherige Vereinbarung. Alle anderen Materialien (Umhänge, Block- und Pflanzentexturen usw.) gehören den jeweiligen, in den Bildunterschriften genannten Urhebern und werden gemäß deren Lizenzen verwendet. Vielen Dank für Ihr Verständnis und Ihre Ehrlichkeit! Denken Sie daran: Dies ist ein inoffizieller Minecraft-Dienst. Er wird weder von Mojang und Microsoft unterstützt noch ist er mit ihnen verbunden. Für die Website sind ihre Betreiber verantwortlich, nicht Mojang oder Microsoft.",
   "modal.agree": "Ich habe alles gelesen und stimme zu",
   "modal.continue": "Weiter",
+
   "error.viewer": "Fehler beim Initialisieren der 3D-Komponenten.",
   "error.json": "Fehler beim Lesen der JSON-Konfigurationsdateien.",
+
   "skin.name.vova_halloween26": "Vova Halloween 2026",
   "variation.name.vova_in_mask_halloween26": "Mit Maske",
   "skin.name.day_halloween26": "Day Halloween 2026",
@@ -203,6 +214,7 @@
   "skin.name.ger_summer": "Ger Sommer",
   "skin.name.ger_maid_skeleton": "Ger Dienstmädchen-Skelett",
   "skin.name.stars": "Stars",
+
   "cape.name.migrator": "Migrator",
   "cape.name.pan": "Pfannkuchen",
   "cape.name.15th_anniversary": "15. Jubiläum",
@@ -249,6 +261,7 @@
   "cape.name.millionth_customer": "Millionster Kunde",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Prismarin",
+
   "emote.name.SPE_Get_scared": "Erschrecken",
   "emote.name.SPE_Ankha_Dance": "Ankha-Tanz (Animal Crossing)",
   "emote.name.SPE_Evelynn_Stand": "Evelynn-Pose (League of Legends)",
@@ -326,9 +339,11 @@
   "emote.name.SPE_Witch_Pose": "Hexen-Pose (Albträume)",
   "emote.name.SPE_Yandere_Pose": "Yandere-Pose (Albträume)",
   "emote.name.SPE_Zoro_Pose": "Zoro-Pose (One Piece)",
+
   "emote.by": "von %s",
   "emote.search_placeholder": "Emotes suchen...",
   "emote.no_results": "Keine Emotes gefunden",
+
   "person.Артур": "Arthur",
   "person.Вайкату": "Waikatu",
   "person.Виакор": "Viacore",
@@ -343,7 +358,9 @@
   "person.Цыпляш": "Tsyplyash",
   "person.Эппоп": "Eppop",
   "person.Яна": "Yana",
+
   "badge.new": "NEU",
+
   "platform.title": "Plattform",
   "platform.enable": "Plattform unter dem Charakter platzieren",
   "platform.block": "Block",
@@ -359,13 +376,16 @@
   "block.end_stone": "Endstein",
   "block.plain": "Keine Textur",
   "block.tint": "Blockfarbe",
+
   "bgimg.name.day": "Tag",
   "bgimg.name.end": "Ende",
   "bgimg.name.nether": "Nether",
   "bgimg.name.night": "Nacht",
   "bgimg.name.snow": "Schnee",
   "bgimg.name.sunset": "Sonnenuntergang",
+
   "blocks.empty": "Noch keine Blöcke – legen Sie Texturen in den Ordner blocks/ oder fügen Sie eigene hinzu",
+
   "folder.add": "Hinzufügen",
   "folder.delete": "Löschen",
   "folder.delete_confirm": "„%s“ aus Ihrem Ordner löschen?",
@@ -391,10 +411,13 @@
   "folder.veg.error": "Bilddatei auswählen",
   "folder.tint": "Farbe (Weiß – ohne Farbton)",
   "folder.weight": "Gewicht (Drop-Häufigkeit)",
+
   "ui.hide": "Oberfläche ausblenden (H)",
   "ui.show": "Oberfläche anzeigen (H)",
+
   "shot.title": "Screenshot in die Zwischenablage kopieren (Strg gedrückt halten, um ihn auch herunterzuladen, Shift für transparenten Hintergrund)",
   "shot.error": "Screenshot konnte nicht aufgenommen werden",
+
   "veg.enable": "Vegetation aktivieren",
   "veg.dice": "Mischen",
   "veg.density": "Dichte",
@@ -415,6 +438,11 @@
   "veg.name.sweet_berry_bush_stage3": "Süßbeeren (Stufe 4)",
   "veg.name.sugar_cane": "Zuckerrohr",
   "veg.name.seagrass_32x": "Seegras",
+  "veg.name.lilac": "Flieder",
+  "veg.name.large_fern": "Großer Farn",
+  "veg.name.fern": "Farn",
+  "veg.name.allium": "Lauch",
+  "veg.name.azure_bluet": "Blaue Houstonie",
   "veg.weight": "Gewicht (Drop-Häufigkeit)",
   "veg.reset": "Zurücksetzen",
   "veg.reset.title": "Vegetationseinstellungen auf Standard zurücksetzen (benutzerdefinierte Pflanzen werden nicht gelöscht, aber ihre Häkchen werden entfernt)",
@@ -424,11 +452,14 @@
   "veg.tpl.default": "Vorlage %s",
   "veg.tpl.saved": "Gespeichert",
   "veg.tpl.card": "Vegetationsthema – zum Anwenden klicken",
+
   "credit.title": "Autor: %s",
+
   "light.enable": "Beleuchtung und Schatten",
   "light.color": "Lichtfarbe",
   "light.color.auto": "Natürlich (nach Tageszeit)",
   "light.color.custom": "Benutzerdefinierte Farbe",
+
   "size.title": "Pflanzengröße",
   "size.min": "Mindestgröße (Blöcke)",
   "size.max": "Maximalgröße (Blöcke)",
@@ -437,6 +468,7 @@
   "size.wmax": "Gewicht der Maximalgröße",
   "size.tile": "Textur wiederholen",
   "size.reset": "Zurücksetzen",
+
   "rename.title": "Zum Umbenennen klicken",
   "rename.cancel": "Zum vorherigen Namen zurückkehren (nicht speichern)",
   "rename.placeholder": "Name (leer – original)",
@@ -461,6 +493,7 @@
   "rename.style.m": "Durchgestrichen",
   "rename.style.k": "Chiffre",
   "rename.style.r": "Zurücksetzen",
+
   "tplprev.btn": "Miniaturbild ändern",
   "tplprev.title": "Vorlagen-Miniaturbild",
   "tplprev.auto": "Aus Pflanzen erstellen",
@@ -473,6 +506,7 @@
   "tplprev.mode.auto": "Jetzt: Vorlagen-Pflanzenszene",
   "tplprev.mode.image": "Jetzt: eigenes Bild",
   "tplprev.mode.emoji": "Jetzt: Emoji",
+
   "lib.title": "Export und Import",
   "lib.this": "Diese Bibliothek",
   "lib.all": "Alle Bibliotheken",
@@ -501,6 +535,7 @@
   "lib.import_none": "Die Datei enthält keine Daten für diese Bibliothek",
   "lib.import_error": "Datei konnte nicht importiert werden",
   "lib.too_big": "Die Datei ist zu groß",
+
   "pose.title": "Charakterposition",
   "pose.edit": "Position ändern",
   "pose.edit.title": "Charakter relativ zur Plattform bewegen, drehen und skalieren",
@@ -512,6 +547,7 @@
   "pose.rot": "Drehung (in Grad)",
   "pose.size": "Größe (Skalierungsfaktor)",
   "pose.hint": "Ziehen Sie die Pfeile, Ringe und Würfel im Ansichtsfenster. Shift — Rasterschritt. Tasten W, E, R — Modi, Esc — Beenden",
+
   "plat.layers": "Plattformebenen",
   "plat.layers.hint": "Oberste Schicht entfernt – der Charakter steht auf der darunterliegenden und Pflanzen werden neu gepflanzt. Eine Schicht bleibt immer erhalten"
 }

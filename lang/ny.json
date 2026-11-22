@@ -339,6 +339,7 @@
   "emote.name.SPE_Witch_Pose": "Kaimidwe ka Mfiti (Maloto Oipa)",
   "emote.name.SPE_Yandere_Pose": "Kaimidwe ka Yandere (Maloto Oipa)",
   "emote.name.SPE_Zoro_Pose": "Kaimidwe ka Zoro (Zilengedwe Zambiri) (One Piece)",
+
   "emote.by": "cha %s",
   "emote.search_placeholder": "Fufuzani zochita...",
   "emote.no_results": "Palibe zochita zomwe zapezeka",
@@ -364,7 +365,6 @@
   "platform.enable": "Ikani pulatifomu pansi pa munthu",
   "platform.block": "Buloko",
   "platform.time": "Nthawi ya tsiku",
-
   "block.grass": "Buloko la udzu",
   "block.dirt": "Dothi",
   "block.stone": "Mwala",
@@ -438,6 +438,11 @@
   "veg.name.sweet_berry_bush_stage3": "Zipatso zotsekemera (gawo 4)",
   "veg.name.sugar_cane": "Nzimbe",
   "veg.name.seagrass_32x": "Udzu wam'nyanja",
+  "veg.name.lilac": "Lilaki",
+  "veg.name.large_fern": "Kasu Wamkulu",
+  "veg.name.fern": "Kasu",
+  "veg.name.allium": "Anyezi",
+  "veg.name.azure_bluet": "Bluet ya Buluu",
   "veg.weight": "Kulemera (kuti zimatuluka kangati)",
   "veg.reset": "Bwezeretsani",
   "veg.reset.title": "Bwezeretsani zokonzera za zomera ku zoyambirira (zomera zanu sizichotsedwa, koma mabuloko awo amachotsedwa)",
