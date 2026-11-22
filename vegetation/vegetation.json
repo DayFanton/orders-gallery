@@ -147,12 +147,6 @@
     "url": "https://www.minecraft.net"
   },
   {
-    "file": "closed_eyeblossom.png",
-    "weight": 5,
-    "author": "Mojang",
-    "url": "https://www.minecraft.net"
-  },
-  {
     "file": "cornflower.png",
     "weight": 5,
     "author": "Mojang",
@@ -160,6 +154,18 @@
   },
   {
     "file": "crimson_fungus.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "closed_eyeblossom.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "open_eyeblossom.png",
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
@@ -214,6 +220,110 @@
   },
   {
     "file": "mangrove_propagule.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "id": "peony",
+    "bottom": "peony_bottom.png",
+    "top": "peony_top.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "poppy.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "white_tulip.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "pink_tulip.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "red_tulip.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "orange_tulip.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "oxeye_daisy.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "oak_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "pale_oak_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "spruce_sapling.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "short_dry_grass.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "tall_dry_grass.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "nether_sprouts.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "warped_roots.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "nether_wart_stage0.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "nether_wart_stage1.png",
+    "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "nether_wart_stage2.png",
     "weight": 5,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
