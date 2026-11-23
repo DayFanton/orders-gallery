@@ -5,7 +5,7 @@
     "author": "Mojang",
     "url": "https://www.minecraft.net",
     "tint": "#91bd59",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "tall_grass",
