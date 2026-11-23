@@ -418,5 +418,53 @@
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
     "date": "26.08.2026"
+  },
+  {
+    "filename": "slice_slayer",
+    "capeName": "Рассекатель ломтей",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "26.10.2026"
+  },
+  {
+    "filename": "special",
+    "capeName": "Особый",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "29.09.2026"
+  },
+  {
+    "filename": "bacon",
+    "capeName": "Бекон",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "12.01.2011"
+  },
+  {
+    "filename": "christmas_2010",
+    "capeName": "Рождество 2010",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "24.12.2010"
+  },
+  {
+    "filename": "new_year_2010",
+    "capeName": "Новый год 2011",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "31.12.2010"
+  },
+  {
+    "filename": "xbox_360",
+    "capeName": "Xbox 360",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "09.05.2013"
   }
 ]
