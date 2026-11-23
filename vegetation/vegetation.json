@@ -173,6 +173,15 @@
     "enabled": false
   },
   {
+    "id": "rose_bush",
+    "bottom": "rose_bush_bottom.png",
+    "top": "rose_bush_top.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
     "id": "lilac",
     "bottom": "lilac_bottom.png",
     "top": "lilac_top.png",
@@ -244,6 +253,13 @@
   },
   {
     "file": "dark_oak_sapling.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "file": "acacia_sapling.png",
     "weight": 2,
     "author": "Mojang",
     "url": "https://www.minecraft.net",
@@ -353,6 +369,13 @@
   },
   {
     "file": "nether_wart_stage2.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "file": "wither_rose.png",
     "weight": 2,
     "author": "Mojang",
     "url": "https://www.minecraft.net",
