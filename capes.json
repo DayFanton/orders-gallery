@@ -72,12 +72,13 @@
     "date": "18.03.2025"
   },
   {
-    "filename": "home",
-    "capeName": "Дом",
+    "filename": "aurora",
+    "capeName": "Аврора",
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "18.03.2025"
+    "date": "29.09.2026",
+    "new": true
   },
   {
     "filename": "copper",
@@ -86,6 +87,14 @@
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
     "date": "13.10.2025"
+  },
+  {
+    "filename": "home",
+    "capeName": "Дом",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "18.03.2025"
   },
   {
     "filename": "mojang_office",
@@ -102,6 +111,14 @@
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
     "date": "18.03.2025"
+  },
+  {
+    "filename": "builder",
+    "capeName": "Строитель",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "17.05.2024"
   },
   {
     "filename": "founder",
@@ -128,12 +145,22 @@
     "date": "22.07.2024"
   },
   {
-    "filename": "builder",
-    "capeName": "Строитель",
+    "filename": "hero",
+    "capeName": "Герой",
     "customer": "Игроки",
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
-    "date": "17.05.2024"
+    "date": "29.09.2026",
+    "new": true
+  },
+  {
+    "filename": "twisted",
+    "capeName": "Искажённый",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "29.09.2026",
+    "new": true
   },
   {
     "filename": "minecraft_experience",
@@ -366,5 +393,30 @@
     "author": "Mojang",
     "authorUrl": "https://www.minecraft.net",
     "date": "08.01.2015"
+  },
+  {
+    "filename": "snow_golem",
+    "capeName": "Снежный голем",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "01.12.2026",
+    "new": true
+  },
+  {
+    "filename": "pride",
+    "capeName": "Прайд",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "01.08.2023"
+  },
+  {
+    "filename": "corrupted",
+    "capeName": "Порченый",
+    "customer": "Игроки",
+    "author": "Mojang",
+    "authorUrl": "https://www.minecraft.net",
+    "date": "26.08.2026"
   }
 ]

@@ -357,6 +357,12 @@
   "cape.name.millionth_customer": "Миллионный покупатель",
   "cape.name.db": "dB",
   "cape.name.prismarine": "Призмарин",
+  "cape.name.aurora": "Аврора",
+  "cape.name.hero": "Герой",
+  "cape.name.twisted": "Искажённый",
+  "cape.name.snow_golem": "Снежный голем",
+  "cape.name.pride": "Прайд",
+  "cape.name.corrupted": "Порченый",
 
   "emote.name.SPE_Get_scared": "Испугаться",
   "emote.name.SPE_Ankha_Dance": "Танец Анкхи (Animal Crossing)",
@@ -454,6 +460,7 @@
   "person.Цыпляш": "Цыпляш",
   "person.Эппоп": "Эппоп",
   "person.Яна": "Яна",
+  "person.Mojang": "Mojang",
 
   "badge.new": "НОВОЕ",
 
