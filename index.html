@@ -1408,6 +1408,19 @@
         .light-palette .light-auto { background: linear-gradient(135deg, #ff9a4d 0%, #fff6e6 50%, #9bb0ff 100%); }
         .light-palette .bg-dot.active { border-color: #fff; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55); }
         #platLayers .checkbox-label input:disabled + span, .veg-layers .veg-layer:disabled + span { opacity: 0.45; }
+
+        /* ================= Версия 1.10.0 ================= */
+        /* В списке растений показаны только включённые; выключенные лежат в сворачиваемом списке «Отключённые растения» */
+        .veg-off-btn { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 8px; padding: 8px 10px; font-size: 0.8rem; font-weight: 600; cursor: pointer; text-align: start;
+            color: var(--text-main); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: 0.15s; }
+        .veg-off-btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
+        .veg-off-btn.open { border-color: var(--accent); }
+        .veg-off-arrow { display: inline-block; width: 12px; flex: none; font-size: 0.7rem; color: var(--text-muted); transition: transform 0.15s; }
+        .veg-off-btn.open .veg-off-arrow { transform: rotate(90deg); }
+        .veg-off-lbl { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+        .veg-off-count { flex: none; min-width: 22px; padding: 1px 7px; text-align: center; font-size: 0.72rem; border-radius: 10px; background: var(--bg-hover); color: var(--text-muted); }
+        .veg-off-list .veg-row > :not(.checkbox-label), .veg-off-list .size-ed, .veg-off-list .credit { display: none; }      /* у отключённых - только галочка, значок и название */
+        .veg-off-list .veg-item { opacity: 0.85; }
             </style>
 </head>
 <body class="i18n-pending">
@@ -1469,7 +1482,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.9.9</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.10.0</span></div>
         </div>
     </div>
 
@@ -1665,6 +1678,9 @@
                     <div id="vegOptions" style="display:none;">
                         <div class="platform-label" id="lbl_vegset">Растения</div>
                         <div class="veg-list" id="vegList"></div>
+                        <div class="emote-hint" id="vegNoneHint" style="display:none; margin-top:6px;">Все растения отключены. Откройте «Отключённые растения» ниже и включите нужные.</div>
+                        <button id="btnVegOff" class="veg-off-btn" type="button" aria-expanded="false" style="display:none;"><span class="veg-off-arrow">▸</span><span class="veg-off-lbl" id="lbl_vegoff">Отключённые растения</span><span class="veg-off-count" id="vegOffCount">0</span></button>
+                        <div class="veg-list veg-off-list" id="vegOffList" style="display:none;"></div>
                         <div class="emote-hint" id="vegGridHint" style="display:none; margin-top:6px;">Растений пока нет — положите текстуры в папку vegetation/ или добавьте свои.</div>
                         <button id="btnVegFolder" class="bg-image-btn" type="button"><span class="folder-ico">📁</span><span class="folder-lbl">Мои растения</span></button>
                         <div class="slider-container">
@@ -2251,7 +2267,10 @@
             "light.color.auto": "Natural (by time of day)",
             "light.color.custom": "Custom color",
             "plat.layers": "Platform layers",
-            "plat.layers.hint": "Remove the top layer and the character steps down to the next one, and the plants are re-planted. One layer always stays."
+            "plat.layers.hint": "Remove the top layer and the character steps down to the next one, and the plants are re-planted. One layer always stays.",
+
+            "veg.off": "Disabled plants",
+            "veg.none": "All plants are disabled. Open “Disabled plants” below and enable the ones you need."
         };
         const LANG_UIS = [['langTrigger', 'langMenu'], ['mobileBtnLang', 'langMenuMobile'], ['modalLangTrigger', 'modalLangMenu']];
 
@@ -2459,6 +2478,8 @@
             ['#lbl_veg', 'veg.enable'],
             ['#btnVegDice', 'veg.dice', 'title'],
             ['#lbl_vegset', 'veg.plants'],
+            ['#lbl_vegoff', 'veg.off'],
+            ['#vegNoneHint', 'veg.none'],
             ['#lbl_blocktint', 'block.tint'],
             ['#lbl_light', 'light.enable'],
             ['#lbl_lightcolor', 'light.color'],
@@ -5637,7 +5658,7 @@
                    У своих растений размер хранится в записи папки (rec.size) и правится на карточке в «Мои растения».
                  enabled: false - галочка по умолчанию снята. Свои растения игрока (вид 'plant') показываются в том же списке (id u-N). */
             const veg = { on: false, seed: 0, sel: null, density: 60, layers: [true, true, true], tint: {}, weight: {}, size: {} };   // sel: Set включённых id или null (= как в json)
-            let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [], natH = {};
+            let vegMesh = null, vegReq = 0, vegTimer = 0, vegAnim = 0, vegEntries = [], natH = {}, vegItems = new Map(), vegOffOpen = false;
             // 1.9.3: название растения из lang/*.json может содержать цветовые коды (§a, §q...) - в списке оно выводится через MC.render, а не вырезается.
             // Если после удаления кодов текста не остаётся (одни коды) - показываем имя из файла, иначе название было бы невидимым.
             const vegName = (id) => { const n = nameFor('veg.name.' + id, prettify(id)); return MC.strip(n).trim() ? n : prettify(id); };
@@ -5875,7 +5896,35 @@
                 $('veg_dens_val').textContent = veg.density + '%';
                 $('veg_dens').style.setProperty('--p', 'calc(5px + (100% - 10px) * ' + veg.density / 100 + ')');
                 document.querySelectorAll('.veg-layer').forEach(c => { c.checked = !!veg.layers[+c.dataset.layer]; c.disabled = !state.layers[+c.dataset.layer]; });
-                document.querySelectorAll('#vegList input[data-vid]').forEach(c => { c.checked = vegIsOn({ id: c.dataset.vid, on: c.dataset.def === '1' }); });
+                document.querySelectorAll('#vegOptions input[data-vid]').forEach(c => { c.checked = vegIsOn({ id: c.dataset.vid, on: c.dataset.def === '1' }); });
+                placeVegItems();
+            }
+
+            // 1.10.0: включённые растения - в основном списке, отключённые - в сворачиваемом «Отключённые растения». Включили - растение уходит наверх,
+            // к остальным включённым (на своё место по порядку каталога), отключили - в список отключённых. Переносятся только те карточки, что сменили список:
+            // остальные не трогаем, чтобы не сбить фокус (например, когда вводится вес).
+            function placeVegItems() {
+                const on = $('vegList'), off = $('vegOffList');
+                let nOff = 0;
+                vegEntries.forEach((e, idx) => {
+                    const it = vegItems.get(e.id);
+                    if (!it) return;
+                    const isOn = vegIsOn(e), target = isOn ? on : off;
+                    if (!isOn) nOff++;
+                    if (it.parentNode !== target) {
+                        let ref = null;
+                        for (const ch of target.children) { if (+ch.dataset.idx > idx) { ref = ch; break; } }
+                        target.insertBefore(it, ref);
+                    }
+                });
+                if (!nOff) vegOffOpen = false;
+                const btn = $('btnVegOff');
+                btn.style.display = nOff ? '' : 'none';
+                btn.classList.toggle('open', vegOffOpen);
+                btn.setAttribute('aria-expanded', vegOffOpen ? 'true' : 'false');
+                $('vegOffCount').textContent = String(nOff);
+                off.style.display = vegOffOpen ? '' : 'none';
+                $('vegNoneHint').style.display = vegEntries.length && nOff === vegEntries.length ? '' : 'none';
             }
 
             function vegChanged(soon) {
@@ -6203,10 +6252,13 @@
                 vegEntries = await Veg.entries();
                 const box = $('vegList');
                 box.innerHTML = '';
+                $('vegOffList').innerHTML = '';
+                vegItems = new Map();
                 $('vegGridHint').style.display = vegEntries.length ? 'none' : 'block';
-                vegEntries.forEach(e => {
+                vegEntries.forEach((e, idx) => {
                     const item = document.createElement('div'), row = document.createElement('div'), lab = document.createElement('label');
                     item.className = 'veg-item';
+                    item.dataset.idx = String(idx);
                     row.className = 'veg-row';
                     lab.className = 'checkbox-label';
                     lab.style.cssText = 'flex:1;min-width:0;margin-bottom:0';
@@ -6275,7 +6327,7 @@
                     item.appendChild(row);
                     const cr = credit(e.author, e.url);
                     if (cr) item.appendChild(cr);
-                    box.appendChild(item);
+                    vegItems.set(e.id, item);                     // в нужный список (включённые / отключённые) карточку кладёт vegUi -> placeVegItems
                 });
                 vegUi();
             }
@@ -6623,6 +6675,7 @@
                 $('veg_dens').oninput = (e) => { veg.density = +e.target.value; vegChanged(true); };
                 document.querySelectorAll('.veg-layer').forEach(c => { c.onchange = () => { veg.layers[+c.dataset.layer] = c.checked; vegChanged(false); }; });
                 $('btnVegFolder').onclick = () => Folder.open('plant');
+                $('btnVegOff').onclick = () => { vegOffOpen = !vegOffOpen; placeVegItems(); };
                 // Своё растение: одна картинка или две (..._bottom и ..._top для растения в 2 блока) + по желанию .mcmeta с анимацией
                 Folder.register('plant', {
                     title: 'folder.veg.title', hint: 'folder.veg.hint', accept: 'image/*,.mcmeta', multiple: true, thumbClass: 'folder-thumb-pixel', placeholder: '🌿',
