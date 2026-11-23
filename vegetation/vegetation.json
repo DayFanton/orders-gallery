@@ -35,6 +35,13 @@
     "enabled": false
   },
   {
+    "file": "bush.png",
+    "weight": 5,
+    "tint": "#91bd59",
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
     "file": "pale_moss_carpet_side_small.png",
     "height": 1,
     "weight": 7,
@@ -103,6 +110,24 @@
     "enabled": false
   },
   {
+    "id": "kelp",
+    "bottom": "kelp_plant.png",
+    "top": "kelp.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "id": "tall_seagrass",
+    "bottom": "tall_seagrass_bottom.png",
+    "top": "tall_seagrass_top.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
     "file": "seagrass_32x.png",
     "height": 1,
     "weight": 4,
@@ -121,6 +146,31 @@
     "weight": 2,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "torchflower.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "id": "pitcher_plant",
+    "bottom": "pitcher_crop_bottom_stage_4.png",
+    "top": "pitcher_crop_top_stage_4.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "id": "immature_pitcher_plant",
+    "bottom": "pitcher_crop_bottom_stage_3.png",
+    "top": "pitcher_crop_top_stage_3.png",
+    "weight": 2,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
   },
   {
     "file": "poppy.png",
@@ -143,6 +193,12 @@
   {
     "file": "lily_of_the_valley.png",
     "weight": 5,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
+    "file": "blue_orchid.png",
+    "weight": 4,
     "author": "Mojang",
     "url": "https://www.minecraft.net"
   },
@@ -300,6 +356,12 @@
     "url": "https://www.minecraft.net"
   },
   {
+    "file": "red_mushroom.png",
+    "weight": 3,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net"
+  },
+  {
     "file": "short_dry_grass.png",
     "weight": 5,
     "author": "Mojang",
@@ -319,8 +381,15 @@
     "url": "https://www.minecraft.net"
   },
   {
-    "file": "crimson_roots.png",
-    "weight": 4,
+    "file": "nether_sprouts.png",
+    "weight": 3,
+    "author": "Mojang",
+    "url": "https://www.minecraft.net",
+    "enabled": false
+  },
+  {
+    "file": "twisting_vines_plant.png",
+    "weight": 2,
     "author": "Mojang",
     "url": "https://www.minecraft.net",
     "enabled": false
@@ -333,8 +402,8 @@
     "enabled": false
   },
   {
-    "file": "nether_sprouts.png",
-    "weight": 3,
+    "file": "warped_fungus.png",
+    "weight": 2,
     "author": "Mojang",
     "url": "https://www.minecraft.net",
     "enabled": false
@@ -347,8 +416,8 @@
     "enabled": false
   },
   {
-    "file": "twisting_vines_plant.png",
-    "weight": 2,
+    "file": "crimson_roots.png",
+    "weight": 4,
     "author": "Mojang",
     "url": "https://www.minecraft.net",
     "enabled": false
