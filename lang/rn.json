@@ -487,6 +487,8 @@
   "veg.tpl.default": "Icitegererezo %s",
   "veg.tpl.saved": "Vyabitswe",
   "veg.tpl.card": "Icitegererezo",
+  "veg.off": "Ibimera vyahagaritswe",
+  "veg.none": "Ibimera vyose vyahagaritswe. Ugurura \"Ibimera vyahagaritswe\" hasi maze ugurure ivyo ukeneye",
 
   "credit.title": "Umwanditsi: %s",
 

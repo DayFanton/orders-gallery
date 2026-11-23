@@ -485,6 +485,8 @@
   "veg.tpl.default": "模板 %s",
   "veg.tpl.saved": "存好哩",
   "veg.tpl.card": "植被模板",
+  "veg.off": "關忒个植物",
+  "veg.none": "全部植物都關忒哩。打開下首个「關忒个植物」，再打開你需要个",
 
   "credit.title": "作者：%s",
 

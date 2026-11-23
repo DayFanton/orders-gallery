@@ -487,6 +487,8 @@
   "veg.tpl.default": "Skabelon %s",
   "veg.tpl.saved": "Gemt",
   "veg.tpl.card": "Vegetationsskabelon — klik for at anvende",
+  "veg.off": "Deaktiverede planter",
+  "veg.none": "Alle planter er deaktiverede. Åbn \"Deaktiverede planter\" nedenfor, og aktiver dem, du har brug for",
 
   "credit.title": "Forfatter: %s",
 

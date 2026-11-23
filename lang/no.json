@@ -487,6 +487,8 @@
   "veg.tpl.default": "Mal %s",
   "veg.tpl.saved": "Lagret",
   "veg.tpl.card": "Vegetasjonsmal",
+  "veg.off": "Deaktiverte planter",
+  "veg.none": "Alle planter er deaktivert. Åpne «Deaktiverte planter» nedenfor og aktiver de du trenger",
 
   "credit.title": "Forfatter: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Modello %s",
   "veg.tpl.saved": "Salvato",
   "veg.tpl.card": "Modello di vegetazione",
+  "veg.off": "Piante disabilitate",
+  "veg.none": "Tutte le piante sono disabilitate. Apri \"Piante disabilitate\" qui sotto e attiva quelle che ti servono",
 
   "credit.title": "Autore: %s",
 

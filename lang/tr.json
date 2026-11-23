@@ -487,6 +487,8 @@
   "veg.tpl.default": "Şablon %s",
   "veg.tpl.saved": "Kaydedildi",
   "veg.tpl.card": "Bitki örtüsü şablonu — uygulamak için tıklayın",
+  "veg.off": "Devre dışı bırakılmış bitkiler",
+  "veg.none": "Tüm bitkiler devre dışı bırakıldı. Aşağıdaki \"Devre dışı bırakılmış bitkiler\" bölümünü açın ve ihtiyacınız olanları etkinleştirin",
 
   "credit.title": "Yazar: %s",
 

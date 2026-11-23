@@ -487,6 +487,8 @@
   "veg.tpl.default": "Șablon %s",
   "veg.tpl.saved": "Salvat",
   "veg.tpl.card": "Șablon de vegetație — clic pentru aplicare",
+  "veg.off": "Plante dezactivate",
+  "veg.none": "Toate plantele sunt dezactivate. Deschideți „Plante dezactivate” mai jos și activați-le pe cele dorite",
 
   "credit.title": "Autor: %s",
 

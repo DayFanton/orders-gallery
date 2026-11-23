@@ -487,6 +487,8 @@
   "veg.tpl.default": "Kiolezo %s",
   "veg.tpl.saved": "Imehifadhiwa",
   "veg.tpl.card": "Kiolezo cha mimea — bofya ili utumie",
+  "veg.off": "Mimea iliyozimwa",
+  "veg.none": "Mimea yote imezimwa. Fungua \"Mimea iliyozimwa\" hapa chini na uwashe unayohitaji",
 
   "credit.title": "Mwandishi: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Àdàkọ %s",
   "veg.tpl.saved": "A ti fi pamọ́",
   "veg.tpl.card": "Àdàkọ ewéko — tẹ̀ ẹ́ láti lò ó",
+  "veg.off": "Àwọn ewékó tí a pa",
+  "veg.none": "A ti pa gbogbo ewékó. Ṣí \"Àwọn ewékó tí a pa\" ní ìsàlẹ̀ kí o sì tan àwọn tí o nílò",
 
   "credit.title": "Òǹkọ̀wé: %s",
 

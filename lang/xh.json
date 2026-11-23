@@ -485,6 +485,8 @@
   "veg.tpl.default": "Itemplate %s",
   "veg.tpl.saved": "Igciniwe",
   "veg.tpl.card": "Itemplate yezityalo — cofa ukuze ufake",
+  "veg.off": "Izityalo ezicinyiweyo",
+  "veg.none": "Zonke izityalo zicinyiwe. Vula \"Izityalo ezicinyiweyo\" ngezantsi uze uvule ezo uzifunayo",
 
   "credit.title": "Umbhali: %s",
 

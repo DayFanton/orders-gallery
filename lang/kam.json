@@ -487,6 +487,8 @@
   "veg.tpl.default": "Nzia %s",
   "veg.tpl.saved": "Nĩyavikwa",
   "veg.tpl.card": "Nzia ya mĩmea",
+  "veg.off": "Mĩtĩ ĩla ĩvĩtĩtwe",
+  "veg.none": "Mĩtĩ yonthe nĩ ĩvĩtĩtwe. Vingũa \"Mĩtĩ ĩla ĩvĩtĩtwe\" vaa ĩtheo na ũivingũa ĩla ũkwenda",
 
   "credit.title": "Mwandĩki: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Şablon %s",
   "veg.tpl.saved": "Saklandy",
   "veg.tpl.card": "Ösümlik şablony — ulanmak üçin basyň",
+  "veg.off": "Öçürilen ösümlikler",
+  "veg.none": "Ähli ösümlikler öçürildi. Aşakdaky \"Öçürilen ösümlikler\" bölümini açyň we gereklilerini açyň",
 
   "credit.title": "Awtor: %s",
 

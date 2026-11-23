@@ -487,6 +487,8 @@
   "veg.tpl.default": "Model %s",
   "veg.tpl.saved": "Ruajtur",
   "veg.tpl.card": "Model i bimësisë — kliko për të aplikuar",
+  "veg.off": "Bimë të çaktivizuara",
+  "veg.none": "Të gjitha bimët janë të çaktivizuara. Hapni \"Bimë të çaktivizuara\" më poshtë dhe aktivizoni ato që ju nevojiten",
 
   "credit.title": "Autori: %s",
 

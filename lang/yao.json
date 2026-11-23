@@ -487,6 +487,8 @@
   "veg.tpl.default": "Chisanjo %s",
   "veg.tpl.saved": "Chisanjo chikusigwa",
   "veg.tpl.card": "Chisanjo cha yimera — tinani kuti muwonesye",
+  "veg.off": "Yipopile yakutundula",
+  "veg.none": "Yipopile yosope yikutundulidwa. Wugulani \"Yipopile yakutundula\" pasi apa ni mkoleje yamkusaka",
 
   "credit.title": "Mlembi: %s",
 

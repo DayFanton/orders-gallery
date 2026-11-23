@@ -487,6 +487,8 @@
   "veg.tpl.default": "Šablonas %s",
   "veg.tpl.saved": "Išsaugota",
   "veg.tpl.card": "Augmenijos šablonas — spustelėkite, kad taikytumėte",
+  "veg.off": "Išjungti augalai",
+  "veg.none": "Visi augalai išjungti. Atidarykite „Išjungti augalai“ žemiau ir įjunkite reikiamus",
 
   "credit.title": "Autorius: %s",
 

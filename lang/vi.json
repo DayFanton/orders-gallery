@@ -487,6 +487,8 @@
   "veg.tpl.default": "Mẫu %s",
   "veg.tpl.saved": "Đã lưu",
   "veg.tpl.card": "Mẫu thực vật — nhấp để áp dụng",
+  "veg.off": "Thực vật đã tắt",
+  "veg.none": "Tất cả thực vật đã bị tắt. Hãy mở mục \"Thực vật đã tắt\" bên dưới và bật những cây bạn cần",
 
   "credit.title": "Tác giả: %s",
 

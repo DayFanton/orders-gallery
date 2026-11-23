@@ -485,6 +485,8 @@
   "veg.tpl.default": "Templat %s",
   "veg.tpl.saved": "Tersimpan",
   "veg.tpl.card": "Templat vegetasi — klik untuk guna",
+  "veg.off": "Tumbuhan dinyahdayakan",
+  "veg.none": "Semua tumbuhan dinyahdayakan. Buka \"Tumbuhan dinyahdayakan\" di bawah dan dayakan yang anda perlukan",
 
   "credit.title": "Penulis: %s",
 

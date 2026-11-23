@@ -487,6 +487,8 @@
   "veg.tpl.default": "Modelo %s",
   "veg.tpl.saved": "Salvo",
   "veg.tpl.card": "Modelo de vegetação — clique para aplicar",
+  "veg.off": "Plantas desativadas",
+  "veg.none": "Todas as plantas estão desativadas. Abra \"Plantas desativadas\" abaixo e ative as que precisa",
 
   "credit.title": "Autor: %s",
 

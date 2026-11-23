@@ -487,6 +487,8 @@
   "veg.tpl.default": "Templed %s",
   "veg.tpl.saved": "Wedi'i gadw",
   "veg.tpl.card": "Templed llystyfiant — cliciwch i'w ddefnyddio",
+  "veg.off": "Planhigion analluogedig",
+  "veg.none": "Mae pob planhigyn wedi'i analluogi. Agorwch \"Planhigion analluogedig\" isod a galluogwch y rhai sydd eu hangen arnoch",
 
   "credit.title": "Awdur: %s",
 

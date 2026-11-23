@@ -487,6 +487,8 @@
   "veg.tpl.default": "Thempleiti %s",
   "veg.tpl.saved": "E bolokilwe",
   "veg.tpl.card": "Thempleiti ya dimela — tobetsa go dirisa",
+  "veg.off": "Dimela tse di tswetsweng",
+  "veg.none": "Dimela tsotlhe di tswetswe. Bula \"Dimela tse di tswetsweng\" fa tlase mme o tshube tse o di tlhokang",
 
   "credit.title": "Mokwadi: %s",
 

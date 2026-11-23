@@ -487,6 +487,8 @@
   "veg.tpl.default": "Szablon %s",
   "veg.tpl.saved": "Zapisano",
   "veg.tpl.card": "Szablon roślinności – kliknij, aby zastosować",
+  "veg.off": "Wyłączone rośliny",
+  "veg.none": "Wszystkie rośliny są wyłączone. Otwórz sekcję „Wyłączone rośliny” poniżej i włącz potrzebne",
 
   "credit.title": "Autor: %s",
 

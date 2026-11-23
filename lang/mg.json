@@ -485,6 +485,8 @@
   "veg.tpl.default": "Maodely %s",
   "veg.tpl.saved": "Voatahiry",
   "veg.tpl.card": "Maodely zavamaniry — tsindrio raha hampiasa",
+  "veg.off": "Zavamaniry voasakana",
+  "veg.none": "Voasakana daholo ny zavamaniry rehetra. Sokafy ny \"Zavamaniry voasakana\" eto ambany ary velomy izay ilainao",
 
   "credit.title": "Mpanoratra: %s",
 

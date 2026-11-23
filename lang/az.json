@@ -487,6 +487,8 @@
   "veg.tpl.default": "Şablon %s",
   "veg.tpl.saved": "Saxlanıldı",
   "veg.tpl.card": "Bitki örtüyü şablonu — tətbiq etmək üçün klikləyin",
+  "veg.off": "Deaktiv edilmiş bitkilər",
+  "veg.none": "Bütün bitkilər deaktiv edilib. Aşağıdakı \"Deaktiv edilmiş bitkilər\" bölməsini açın və lazımi olanları aktivləşdirin",
 
   "credit.title": "Müəllif: %s",
 

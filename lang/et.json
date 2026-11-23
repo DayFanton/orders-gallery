@@ -485,6 +485,8 @@
   "veg.tpl.default": "Mall %s",
   "veg.tpl.saved": "Salvestatud",
   "veg.tpl.card": "Taimestiku mall — klõpsa rakendamiseks",
+  "veg.off": "Keelatud taimed",
+  "veg.none": "Kõik taimed on keelatud. Avage allpool „Keelatud taimed“ ja lubage vajalikud",
 
   "credit.title": "Autor: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Predložak %s",
   "veg.tpl.saved": "Spremljeno",
   "veg.tpl.card": "Predložak vegetacije — kliknite za primjenu",
+  "veg.off": "Onemogućene biljke",
+  "veg.none": "Sve su biljke onemogućene. Otvorite „Onemogućene biljke“ u nastavku i uključite one koje trebate",
 
   "credit.title": "Autor: %s",
 

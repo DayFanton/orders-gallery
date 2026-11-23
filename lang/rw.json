@@ -485,6 +485,8 @@
   "veg.tpl.default": "Icyitegererezo %s",
   "veg.tpl.saved": "Byabitswe",
   "veg.tpl.card": "Icyitegererezo",
+  "veg.off": "Ibimera byahagaritswe",
+  "veg.none": "Ibimera byose byahagaritswe. Fungura \"Ibimera byahagaritswe\" hasi maze ufungure ibyo ukeneye",
 
   "credit.title": "Umwanditsi: %s",
 

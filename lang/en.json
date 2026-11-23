@@ -485,6 +485,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Saved",
   "veg.tpl.card": "Vegetation template — click to apply",
+  "veg.off": "Disabled plants",
+  "veg.none": "All plants are disabled. Open \"Disabled plants\" below and enable the ones you need",
 
   "credit.title": "Author: %s",
 

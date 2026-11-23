@@ -485,6 +485,8 @@
   "veg.tpl.default": "Molongo %s",
   "veg.tpl.saved": "Ebombisami",
   "veg.tpl.card": "Molongo ya bilanga — finá mpo na kosalela",
+  "veg.off": "Banzete oyo ekangami",
+  "veg.none": "Banzete nyonso ekangami. Fungola \"Banzete oyo ekangami\" na nse mpe fungola oyo ozali na yango mposa",
 
   "credit.title": "Mokomi: %s",
 

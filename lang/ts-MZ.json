@@ -487,6 +487,8 @@
   "veg.tpl.default": "Xikombiso %s",
   "veg.tpl.saved": "Swi hlayisiwile",
   "veg.tpl.card": "Xikombiso xa swimilani — tshikelela ku tirhisa",
+  "veg.off": "Swimila leswi timiweke",
+  "veg.none": "Swimila hinkwaswo swi timiwile. Pfula \"Swimila leswi timiweke\" laha hansi kutani u lumeka leswi u swi lavaka",
 
   "credit.title": "Mutsari: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Mall %s",
   "veg.tpl.saved": "Sparat",
   "veg.tpl.card": "Växtmall — klicka för att använda",
+  "veg.off": "Inaktiverade växter",
+  "veg.none": "Alla växter är inaktiverade. Öppna \"Inaktiverade växter\" nedan och aktivera de du behöver",
 
   "credit.title": "Författare: %s",
 

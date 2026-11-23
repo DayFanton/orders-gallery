@@ -485,6 +485,8 @@
   "veg.tpl.default": "Isifanekiso %s",
   "veg.tpl.saved": "Kugciniwe",
   "veg.tpl.card": "Isifanekiso sokuhluma — chofoza ukuze usebenzise",
+  "veg.off": "Izitshalo ezikhubazekile",
+  "veg.none": "Zonke izitshalo zikhubazekile. Vula \"Izitshalo ezikhubazekile\" ngezansi bese uvula lezo ozidingayo",
 
   "credit.title": "Umbhali: %s",
 

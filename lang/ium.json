@@ -487,6 +487,8 @@
   "veg.tpl.default": "Bua nyei %s",
   "veg.tpl.saved": "Hiuv daaih",
   "veg.tpl.card": "Bua nyei fingx — hnyangv zoux",
+  "veg.off": "Nzang naa waav",
+  "veg.none": "Nzang naa waav zungv. Hoi zov \"Nzang naa waav\" yiem dauh haiz hoi nzaangc meih zoux nyei",
 
   "credit.title": "Mienh-zoux: %s",
 

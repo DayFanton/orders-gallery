@@ -485,6 +485,8 @@
   "veg.tpl.default": "Veidne",
   "veg.tpl.saved": "Saglabāts",
   "veg.tpl.card": "Veģetācijas veidne",
+  "veg.off": "Atspējoti augi",
+  "veg.none": "Visi augi ir atspējoti. Zemāk atveriet sadaļu “Atspējoti augi” un iespējojiet nepieciešamos",
 
   "credit.title": "Autors: %s",
 

@@ -487,6 +487,8 @@
   "veg.tpl.default": "Fakkiifaa %s",
   "veg.tpl.saved": "Qabameera",
   "veg.tpl.card": "Fakkiifaa biqiltuu",
+  "veg.off": "Biqiltoota cufaman",
+  "veg.none": "Biqiltoonni hundi cufamaniiru. \"Biqiltoota cufaman\" armaan gadii baniitii kan barbaaddu bani",
 
   "credit.title": "Barreessaa %s",
 

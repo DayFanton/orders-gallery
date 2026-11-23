@@ -485,6 +485,8 @@
   "veg.tpl.default": "Ocindiko %s",
   "veg.tpl.saved": "Yakikiwa",
   "veg.tpl.card": "Ocindiko covimela — fyama oco ulongise",
+  "veg.off": "Oviti viapindiwa",
+  "veg.none": "Oviti viosi viapindiwa. Yikula \"Oviti viapindiwa\" vemehi kuenda yikula vina o sukila",
 
   "credit.title": "Umoneki: %s",
 

@@ -485,6 +485,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Naidulin",
   "veg.tpl.card": "Template ti mula — talmegem tapno maaramat",
+  "veg.off": "Dagiti naiddep a mula",
+  "veg.none": "Naiddep amin a mula. Luktam ti \"Dagiti naiddep a mula\" iti baba ket pagandarem dagiti kasapulam",
 
   "credit.title": "Nangaramid: %s",
 

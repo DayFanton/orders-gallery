@@ -487,6 +487,8 @@
   "veg.tpl.default": "模板 %s",
   "veg.tpl.saved": "已保存",
   "veg.tpl.card": "植物模板",
+  "veg.off": "已停用植物",
+  "veg.none": "所有植物均已停用。請打開下方的「已停用植物」並啟用所需植物",
 
   "credit.title": "作者：%s",
 

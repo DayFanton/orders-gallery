@@ -485,6 +485,8 @@
   "veg.tpl.default": "Ithempuleti %s",
   "veg.tpl.saved": "Kugcinwe",
   "veg.tpl.card": "Ithempuleti yetitjalo – chofoza kusebentisa",
+  "veg.off": "Titjalo leticishiwe",
+  "veg.none": "Tonkhe titjalo ticishiwe. Vula \"Titjalo leticishiwe\" ngentasi bese uvula leti lotidzingako",
 
   "credit.title": "Umbhali: %s",
 

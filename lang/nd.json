@@ -485,6 +485,8 @@
   "veg.tpl.default": "Ithempulethi %s",
   "veg.tpl.saved": "Kugciniwe",
   "veg.tpl.card": "Ithempulethi yezitshalo — cofa ukuze usebenzise",
+  "veg.off": "Izitshalo ezivaliweyo",
+  "veg.none": "Zonke izitshalo zivaliwe. Vula \"Izitshalo ezivaliweyo\" ngaphansi ubusuvula lezo ozidingayo",
 
   "credit.title": "Umbhali: %s",
 

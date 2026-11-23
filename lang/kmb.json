@@ -487,6 +487,8 @@
   "veg.tpl.default": "Kifwa %s",
   "veg.tpl.saved": "Kyatena kulunga",
   "veg.tpl.card": "Kifwa kya miti",
+  "veg.off": "Ixi iakafikila",
+  "veg.none": "Ixi ioso iakafikila. Jikula \"Ixi iakafikila\" bhoxi ni u jikule i ua mesena",
 
   "credit.title": "Mukwa-ene: %s",
 

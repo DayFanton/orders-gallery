@@ -487,6 +487,8 @@
   "veg.tpl.default": "Plantilla %s",
   "veg.tpl.saved": "Desat",
   "veg.tpl.card": "Plantilla de vegetació — fes clic per aplicar-la",
+  "veg.off": "Plantes desactivades",
+  "veg.none": "Totes les plantes estan desactivades. Obre «Plantes desactivades» més avall i activa les que necessitis",
 
   "credit.title": "Autor: %s",
 

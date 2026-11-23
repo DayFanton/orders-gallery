@@ -487,6 +487,8 @@
   "veg.tpl.default": "Préréglage %s",
   "veg.tpl.saved": "Enregistré",
   "veg.tpl.card": "Préréglage de végétation — cliquer pour appliquer",
+  "veg.off": "Plantes désactivées",
+  "veg.none": "Toutes les plantes sont désactivées. Ouvrez « Plantes désactivées » ci-dessous et activez celles dont vous avez besoin",
 
   "credit.title": "Auteur : %s",
 

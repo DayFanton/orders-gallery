@@ -485,6 +485,8 @@
   "veg.tpl.default": "Plantilla %s",
   "veg.tpl.saved": "Waqaychasqa",
   "veg.tpl.card": "Sach'a-sach'a plantilla — ñit'iy churaykunapaq",
+  "veg.off": "Wichqasqa yurakuna",
+  "veg.none": "Llapa yurakunaqa wichqasqam kachkan. Urapi kaq \"Wichqasqa yurakuna\" kichay hinaspa munasqaykikunata kichariy",
 
   "credit.title": "Qillqaq: %s",
 

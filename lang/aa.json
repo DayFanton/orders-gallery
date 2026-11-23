@@ -485,6 +485,8 @@
   "veg.tpl.default": "Abni %s",
   "veg.tpl.saved": "Daccarsime",
   "veg.tpl.card": "Xaasa abni",
+  "veg.off": "Baaxooxoh xukkoysimeh",
+  "veg.none": "Baaxooxoh inkih xukkoysimeh. Gubaal \"Baaxooxoh xukkoysimeh\" fakay faxxam ufkuy",
 
   "credit.title": "Xaasa: %s",
 

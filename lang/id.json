@@ -487,6 +487,8 @@
   "veg.tpl.default": "Templat %s",
   "veg.tpl.saved": "Tersimpan",
   "veg.tpl.card": "Templat vegetasi — klik untuk menerapkan",
+  "veg.off": "Tanaman dinonaktifkan",
+  "veg.none": "Semua tanaman dinonaktifkan. Buka \"Tanaman dinonaktifkan\" di bawah dan aktifkan yang Anda perlukan",
 
   "credit.title": "Kreator: %s",
 

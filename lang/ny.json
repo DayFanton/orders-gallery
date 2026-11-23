@@ -487,6 +487,8 @@
   "veg.tpl.default": "Chitsanzo %s",
   "veg.tpl.saved": "Zosungidwa",
   "veg.tpl.card": "Chitsanzo cha zomera — dinani kuti mugwiritse ntchito",
+  "veg.off": "Zomera zozimitsidwa",
+  "veg.none": "Zomera zonse zazimitsidwa. Tsegulani \"Zomera zozimitsidwa\" pansipa ndipo yatsani zomwe mukufuna",
 
   "credit.title": "Wolemba: %s",
 

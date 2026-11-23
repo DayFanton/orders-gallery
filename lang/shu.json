@@ -485,6 +485,8 @@
   "veg.tpl.default": "Gālib %s",
   "veg.tpl.saved": "Dammamnā",
   "veg.tpl.card": "Gālib šajar — dugga kan tatbā'ah",
+  "veg.off": "النباتات المطفأة",
+  "veg.none": "كل النباتات مطفأة. افتح \"النباتات المطفأة\" تحت وشغّل المحتاجها",
 
   "credit.title": "Kātib: %s",
 

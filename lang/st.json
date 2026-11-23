@@ -485,6 +485,8 @@
   "veg.tpl.default": "Thempoleite %s",
   "veg.tpl.saved": "E bolokilwe",
   "veg.tpl.card": "Thempoleite ya dimela tobetsa ho sebedisa",
+  "veg.off": "Limela tse koetsoeng",
+  "veg.none": "Limela tsohle li koetsoe. Bula \"Limela tse koetsoeng\" ka tlase 'me u bule tseo u li hlokang",
 
   "credit.title": "Mongodi: %s",
 

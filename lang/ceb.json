@@ -485,6 +485,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Na-save na",
   "veg.tpl.card": "Template sa tanom — i-klik aron magamit",
+  "veg.off": "Mga tanom nga gipalong",
+  "veg.none": "Gipalong ang tanang tanom. Ablihi ang \"Mga tanom nga gipalong\" sa ubos ug i-on ang imong gikinahanglan",
 
   "credit.title": "Awtor: %s",
 

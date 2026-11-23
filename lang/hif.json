@@ -487,6 +487,8 @@
   "veg.tpl.default": "Namuna %s",
   "veg.tpl.saved": "Bacha dewa gais",
   "veg.tpl.card": "Banaspati namuna — istemal kare khatir click karo",
+  "veg.off": "Band kare gae per",
+  "veg.none": "Sab per band kar dewa gais hai. Niche \"Band kare gae per\" kholo aur jaruri per chalu karo",
 
   "credit.title": "Banaye wala: %s",
 

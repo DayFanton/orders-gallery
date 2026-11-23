@@ -487,6 +487,8 @@
   "veg.tpl.default": "Shablon: %s",
   "veg.tpl.saved": "Saqlandi",
   "veg.tpl.card": "O'simlik shabloni — qo'llash uchun bosing",
+  "veg.off": "Oʻchirilgan oʻsimliklar",
+  "veg.none": "Barcha oʻsimliklar oʻchirilgan. Quyidagi \"Oʻchirilgan oʻsimliklar\" boʻlimini oching va keraklilarini yoqing",
 
   "credit.title": "Muallif: %s",
 

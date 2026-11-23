@@ -487,6 +487,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Natipig na",
   "veg.tpl.card": "Template sang tanom — pinduta agud i-apply",
+  "veg.off": "Mga tanom nga ginpatay",
+  "veg.none": "Ginpatay ang tanan nga tanom. Buksi ang \"Mga tanom nga ginpatay\" sa idalom kag paandara ang imo kinahanglan",
 
   "credit.title": "Manunulat: %s",
 

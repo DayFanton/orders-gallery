@@ -487,6 +487,8 @@
   "veg.tpl.default": "Plantilla %s",
   "veg.tpl.saved": "Guardado",
   "veg.tpl.card": "Plantilla de vegetación — clic para aplicar",
+  "veg.off": "Plantas desactivadas",
+  "veg.none": "Todas las plantas están desactivadas. Abre «Plantas desactivadas» más abajo y activa las que necesites",
 
   "credit.title": "Autor: %s",
 

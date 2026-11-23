@@ -485,6 +485,8 @@
   "veg.tpl.default": "Sjabloon %s",
   "veg.tpl.saved": "Opgeslagen",
   "veg.tpl.card": "Vegetatiesjabloon — klik om toe te passen",
+  "veg.off": "Uitgeschakelde planten",
+  "veg.none": "Alle planten zijn uitgeschakeld. Open hieronder 'Uitgeschakelde planten' en schakel de gewenste planten in",
 
   "credit.title": "Auteur: %s",
 

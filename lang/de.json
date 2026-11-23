@@ -487,6 +487,8 @@
   "veg.tpl.default": "Vorlage %s",
   "veg.tpl.saved": "Gespeichert",
   "veg.tpl.card": "Vegetationsthema – zum Anwenden klicken",
+  "veg.off": "Deaktivierte Pflanzen",
+  "veg.none": "Alle Pflanzen sind deaktiviert. Öffnen Sie unten „Deaktivierte Pflanzen“ und aktivieren Sie die gewünschten",
 
   "credit.title": "Autor: %s",
 

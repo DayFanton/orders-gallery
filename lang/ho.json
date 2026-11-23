@@ -487,6 +487,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Gwauraia ore",
   "veg.tpl.card": "Rei template — gaukaraia totona koua",
+  "veg.off": "Au a bohea",
+  "veg.none": "Au ibounai be a bohea. Henunai \"Au a bohea\" kahaia bona oi ura gaudia karaia",
 
   "credit.title": "Durua: %s",
 

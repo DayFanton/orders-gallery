@@ -485,6 +485,8 @@
   "veg.tpl.default": "Temupureti %s",
   "veg.tpl.saved": "Zvachengetedzwa",
   "veg.tpl.card": "Temupureti yezvirimwa - tinya kuti ushandise",
+  "veg.off": "Zvirimwa zvakadzimwa",
+  "veg.none": "Zvirimwa zvese zvakadzimwa. Vhura \"Zvirimwa zvakadzimwa\" pazasi uye batidza zvaunoda",
 
   "credit.title": "Munyori: %s",
 

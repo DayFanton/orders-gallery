@@ -487,6 +487,8 @@
   "veg.tpl.default": "Šablona %s",
   "veg.tpl.saved": "Uloženo",
   "veg.tpl.card": "Šablona vegetace — kliknutím použijete",
+  "veg.off": "Vypnuté rostliny",
+  "veg.none": "Všechny rostliny jsou vypnuté. Otevřete níže „Vypnuté rostliny“ a zapněte ty, které potřebujete",
 
   "credit.title": "Autor: %s",
 

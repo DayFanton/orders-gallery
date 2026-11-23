@@ -485,6 +485,8 @@
   "veg.tpl.default": "Chisanjo %s",
   "veg.tpl.saved": "Kusungwa",
   "veg.tpl.card": "Chisanjo ja miti",
+  "veg.off": "Mipela yakatibwa",
+  "veg.none": "Mipela yosope ikatibwa. Fungula \"Mipela yakatibwa\" pahi apa na uwashe yaulonda",
 
   "credit.title": "Mlembi: %s",
 

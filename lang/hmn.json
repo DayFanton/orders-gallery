@@ -485,6 +485,8 @@
   "veg.tpl.default": "Qauv %s",
   "veg.tpl.saved": "Khaws cia",
   "veg.tpl.card": "Nroj tsuag qauv",
+  "veg.off": "Nroj uas raug kaw",
+  "veg.none": "Tag nrho cov nroj raug kaw lawm. Qhib \"Nroj uas raug kaw\" hauv qab no thiab qhib cov uas koj xav tau",
 
   "credit.title": "Tus sau: %s",
 

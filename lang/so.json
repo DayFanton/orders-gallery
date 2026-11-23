@@ -487,6 +487,8 @@
   "veg.tpl.default": "Qaabka %s",
   "veg.tpl.saved": "Waa la keydiyay",
   "veg.tpl.card": "Qaabka dhirta — guji si aad u codsatid",
+  "veg.off": "Dhirta la demiyay",
+  "veg.none": "Dhammaan dhirta waa la demiyay. Fur \"Dhirta la demiyay\" hoose oo daar kuwa aad u baahan tahay",
 
   "credit.title": "Qoraaga: %s",
 

@@ -485,6 +485,8 @@
   "veg.tpl.default": "Predloga %s",
   "veg.tpl.saved": "Shranjeno",
   "veg.tpl.card": "Predloga vegetacije — kliknite za uporabo",
+  "veg.off": "Onemogočene rastline",
+  "veg.none": "Vse rastline so onemogočene. Spodaj odprite »Onemogočene rastline« in omogočite želene",
 
   "credit.title": "Avtor: %s",
 

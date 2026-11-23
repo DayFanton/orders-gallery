@@ -487,6 +487,8 @@
   "veg.tpl.default": "範本 %s",
   "veg.tpl.saved": "已儲存",
   "veg.tpl.card": "植物範本 — 撳一下套用",
+  "veg.off": "已停用植物",
+  "veg.none": "所有植物都已經停用。打開下面嘅「已停用植物」並啟用你需要嘅植物",
 
   "credit.title": "作者：%s",
 

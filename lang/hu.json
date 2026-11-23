@@ -485,6 +485,8 @@
   "veg.tpl.default": "Sablon: %s",
   "veg.tpl.saved": "Mentve",
   "veg.tpl.card": "Sablon — kattints az alkalmazáshoz",
+  "veg.off": "Kikapcsolt növények",
+  "veg.none": "Minden növény ki van kapcsolva. Nyissa meg alább a „Kikapcsolt növények” részt, és kapcsolja be a szükségeseket",
 
   "credit.title": "Készítette: %s",
 

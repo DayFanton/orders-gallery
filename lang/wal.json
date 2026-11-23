@@ -487,6 +487,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Naagettida",
   "veg.tpl.card": "Template",
+  "veg.off": "Mittata gordettida",
+  "veg.none": "Mittay ubbay gordettiis. Garssan de'iya \"Mittata gordettida\" giyaagaa dooyada neessi koshshiyaageeta dooya",
 
   "credit.title": "Ayissiya: %s",
 

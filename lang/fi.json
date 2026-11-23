@@ -487,6 +487,8 @@
   "veg.tpl.default": "Malli %s",
   "veg.tpl.saved": "Tallennettu",
   "veg.tpl.card": "Kasvillisuusmalli — napsauta käyttääksesi",
+  "veg.off": "Poistetut kasvit",
+  "veg.none": "Kaikki kasvit on poistettu käytöstä. Avaa alta ”Poistetut kasvit” ja ota tarvittavat käyttöön",
 
   "credit.title": "Tekijä: %s",
 

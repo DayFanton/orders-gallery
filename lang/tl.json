@@ -487,6 +487,8 @@
   "veg.tpl.default": "Template %s",
   "veg.tpl.saved": "Na-save na",
   "veg.tpl.card": "Template ng halaman",
+  "veg.off": "Mga pinatay na halaman",
+  "veg.none": "Nakapatay ang lahat ng halaman. Buksan ang \"Mga pinatay na halaman\" sa ibaba at i-on ang mga kailangan mo",
 
   "credit.title": "May-akda: %s",
 

@@ -485,6 +485,8 @@
   "veg.tpl.default": "Model %s",
   "veg.tpl.saved": "Salvad",
   "veg.tpl.card": "Model de vegetazzion - tocca per doperàl",
+  "veg.off": "Piant disabilitaa",
+  "veg.none": "Tutt i piant hinn disabilitaa. Derva \"Piant disabilitaa\" chì de sott e abilita quij che te serven",
 
   "credit.title": "Autor: %s",
 
