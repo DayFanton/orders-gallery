@@ -1482,7 +1482,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.10.1</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.10.2</span></div>
         </div>
     </div>
 
@@ -5801,30 +5801,76 @@
                     }
                     return cv;
                 }
-                // -> { frames: [канвас], times: [мс] }. Две текстуры (bottom + top) склеиваются в одну высотой в 2 блока; лента анимации режется на кадры
-                async function textures(e, ov) {
-                    const ims = await Promise.all(e.parts.map(imgOf));
-                    const tn = (i) => (ov && tintOfEntry(e) ? ov : null) || e.parts[i].tint || e.tint || null;
-                    if (ims.length === 2) {
-                        const [b, tp] = ims, cv = document.createElement('canvas');
-                        cv.width = Math.max(b.naturalWidth, tp.naturalWidth);
-                        cv.height = b.naturalHeight + tp.naturalHeight;
-                        const c = cv.getContext('2d');
-                        c.imageSmoothingEnabled = false;
-                        c.drawImage(paint(tp, 0, tp.naturalWidth, tp.naturalHeight, tn(1)), 0, 0);
-                        c.drawImage(paint(b, 0, b.naturalWidth, b.naturalHeight, tn(0)), 0, tp.naturalHeight);
-                        return { frames: [cv], times: [0] };
-                    }
-                    const im = ims[0], w = im.naturalWidth, h = im.naturalHeight;
+                /* -> { frames: [канвас], times: [мс] }. Растение из двух текстур (bottom + top) склеивается в одну высотой в 2 блока.
+                   1.10.2: у каждой части своя анимация (лента кадров + её .mcmeta, например у ламинарии), раньше обе ленты склеивались целиком и растение выглядело полосками.
+                   Каждая часть режется на кадры отдельно и идёт по своим часам, как в Minecraft. Для растения из двух частей кадры склеиваются в моменты,
+                   когда меняется кадр у любой из частей (если ленты одинаковые - это просто кадр к кадру). */
+                const MAX_MERGED = 600;                                  // защита: не больше стольких склеенных кадров (разные периоды у частей могут дать их слишком много)
+                const gcd = (a, b) => (b ? gcd(b, a % b) : a);
+
+                // Кадры одной части: { frames: [канвас], times: [мс] }. Нет анимации (или картинка не лента) - один кадр
+                async function partFrames(e, part, im, tint) {
+                    const w = im.naturalWidth, h = im.naturalHeight;
                     let a = e.anim;
-                    if (!a && e.parts[0].src && h > w && h % w === 0) a = await mcmeta(e.parts[0].src);    // высокая картинка: растение в 2 блока или лента анимации
-                    if (!a || h < w) return { frames: [paint(im, 0, w, h, tn(0))], times: [0] };
+                    if (!a && part.src && h > w && h % w === 0) a = await mcmeta(part.src);        // высокая картинка: растение в 2 блока или лента анимации
+                    if (!a || h < w) return { frames: [paint(im, 0, w, h, tint)], times: [0] };
                     const fh = a.height > 0 ? a.height : w, n = Math.max(1, Math.floor(h / fh)), ft = a.frametime > 0 ? a.frametime : 1;
                     const seq = (Array.isArray(a.frames) && a.frames.length ? a.frames.map(f => (typeof f === 'number' ? { i: f, t: ft } : { i: f.index, t: f.time || ft })) : [...Array(n).keys()].map(i => ({ i, t: ft })))
                         .filter(o => o.i >= 0 && o.i < n);
                     if (!seq.length) seq.push({ i: 0, t: ft });
                     const memo = new Map();
-                    return { frames: seq.map(o => { if (!memo.has(o.i)) memo.set(o.i, paint(im, o.i * fh, w, fh, tn(0))); return memo.get(o.i); }), times: seq.map(o => o.t * 50) };
+                    return { frames: seq.map(o => { if (!memo.has(o.i)) memo.set(o.i, paint(im, o.i * fh, w, fh, tint)); return memo.get(o.i); }), times: seq.map(o => o.t * 50) };
+                }
+
+                // Какой кадр части показывается в момент t (мс от начала); у статичной части всегда нулевой
+                function frameAt(p, total, t) {
+                    if (!total) return 0;
+                    let m = t % total;
+                    for (let i = 0; i < p.times.length; i++) { if (m < p.times[i]) return i; m -= p.times[i]; }
+                    return p.times.length - 1;
+                }
+
+                // Склеить верх и низ в один холст высотой в 2 блока, с учётом анимации каждой из частей
+                function mergeParts(bot, top) {
+                    const tb = bot.times.reduce((s, x) => s + x, 0), tt = top.times.reduce((s, x) => s + x, 0);
+                    const glue = (fb, ft) => {
+                        const cv = document.createElement('canvas');
+                        cv.width = Math.max(fb.width, ft.width);
+                        cv.height = ft.height + fb.height;
+                        const c = cv.getContext('2d');
+                        c.imageSmoothingEnabled = false;
+                        c.drawImage(ft, 0, 0);
+                        c.drawImage(fb, 0, ft.height);
+                        return cv;
+                    };
+                    if (!tb && !tt) return { frames: [glue(bot.frames[0], top.frames[0])], times: [0] };          // обе части без анимации - как раньше
+                    // период общей анимации - наименьшее общее кратное (или длиннейший из периодов, если он получается слишком большим)
+                    let period = tb && tt ? tb / gcd(tb, tt) * tt : (tb || tt);
+                    if (period > 600000) period = Math.max(tb, tt);
+                    const marks = new Set([0]);
+                    [[bot, tb], [top, tt]].forEach(([p, total]) => {
+                        if (!total) return;
+                        for (let base = 0; base < period && marks.size < MAX_MERGED; base += total) {
+                            let t = base;
+                            for (let i = 0; i < p.times.length && marks.size < MAX_MERGED; i++) { if (t < period) marks.add(t); t += p.times[i]; }
+                        }
+                    });
+                    const at = [...marks].sort((x, y) => x - y), memo = new Map(), frames = [], times = [];
+                    at.forEach((t, k) => {
+                        const ib = frameAt(bot, tb, t), it = frameAt(top, tt, t), key = ib + ':' + it;
+                        if (!memo.has(key)) memo.set(key, glue(bot.frames[ib], top.frames[it]));
+                        frames.push(memo.get(key));
+                        times.push((k + 1 < at.length ? at[k + 1] : period) - t);
+                    });
+                    return { frames, times };
+                }
+
+                async function textures(e, ov) {
+                    const ims = await Promise.all(e.parts.map(imgOf));
+                    const tn = (i) => (ov && tintOfEntry(e) ? ov : null) || e.parts[i].tint || e.tint || null;
+                    const parts = await Promise.all(ims.map((im, i) => partFrames(e, e.parts[i], im, tn(i))));
+                    if (parts.length === 2) return mergeParts(parts[0], parts[1]);          // parts[0] - низ (bottom), parts[1] - верх (top)
+                    return parts[0];
                 }
                 return { load, entries, textures, specOf, sizesOf };
             })();
