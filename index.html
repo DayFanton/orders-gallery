@@ -1482,7 +1482,7 @@
                 </div>
             </div>
             
-            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.10.0</span></div>
+            <div class="site-disclaimer"><span id="siteDisclaimer">Неофициальный сервис Minecraft! Не одобрен Mojang и Microsoft и не связан с ними.</span><span class="site-version">v1.10.1</span></div>
         </div>
     </div>
 
@@ -1983,6 +1983,7 @@
         const ELYTRA_TEXTURE_SOURCES = ['elytra.png', DEFAULT_ELYTRA_URL];
         let elytraTextureDataUrl = null;
         let backEquipmentRequestId = 0;
+        const capeElytraMemo = new Map();      // 1.10.1: имя файла плаща -> Promise<true, если в его текстуре нет элитр> (проверяем один раз на плащ)
 
         let currentViewMode = 'list';
         let currentBgKey = 'dark';      // фон: см. Backdrop (в ссылке - параметр bg)
@@ -3623,6 +3624,45 @@
             return elytraTextureDataUrl;
         }
 
+        /* ---------- Элитры из текстуры плаща (1.10.1) ----------
+           Элитры берут рисунок из той же текстуры, что и плащ: крыло лежит в области x 22..46, y 0..22 (формат 64x32; у HD-версий всё умножается на масштаб).
+           У очень старых плащей и у плащей из Dungeons, Xbox и т.п. этой области нет совсем - с включёнными элитрами персонаж остаётся пустым.
+           Поэтому, если область целиком прозрачна (ни одного пикселя с альфой выше ELYTRA_EMPTY_ALPHA), берём обычную текстуру элитр.
+           Прозрачные места внутри рисунка не в счёт - важна только полная пустота. Проверка читает только эту область, делает это один раз на плащ и выходит на первом же видимом пикселе. */
+        const ELYTRA_EMPTY_ALPHA = 0;
+
+        async function measureElytraEmpty(dataUrl) {
+            const img = new Image();
+            img.src = dataUrl;
+            await img.decode();
+            const w = img.naturalWidth, h = img.naturalHeight;
+            let k;                                             // во сколько раз текстура больше базового формата
+            if (w === 2 * h) k = w / 64;                       // 64x32 и его HD-версии (128x64, 256x128...)
+            else if (w * 11 === h * 23) k = w / 46;            // 46x22 (формат OptiFine)
+            else if (w * 17 === h * 22) return true;           // 22x17: в файле только плащ, элитр нет
+            else return false;                                 // нестандартный размер - не гадаем, показываем как раньше
+            const sx = Math.round(22 * k), sw = Math.round(24 * k), sh = Math.round(22 * k);
+            if (sx + sw > w || sh > h) return false;
+            const c = document.createElement('canvas');
+            c.width = sw;
+            c.height = sh;
+            const ctx = c.getContext('2d', { willReadFrequently: true });
+            ctx.drawImage(img, sx, 0, sw, sh, 0, 0, sw, sh);
+            const px = ctx.getImageData(0, 0, sw, sh).data;
+            c.width = c.height = 0;                            // освобождаем память
+            for (let i = 3; i < px.length; i += 4) if (px[i] > ELYTRA_EMPTY_ALPHA) return false;
+            return true;
+        }
+
+        function capeElytraIsEmpty(key, dataUrl) {
+            if (!capeElytraMemo.has(key)) {
+                const p = measureElytraEmpty(dataUrl);
+                capeElytraMemo.set(key, p);
+                p.catch(() => { if (capeElytraMemo.get(key) === p) capeElytraMemo.delete(key); });      // сбой не запоминаем - можно попробовать ещё раз
+            }
+            return capeElytraMemo.get(key).catch(() => false);                                       // не удалось проверить - ведём себя как раньше
+        }
+
         async function updateBackEquipment() {
             if (!skinViewer) return;
             const requestId = ++backEquipmentRequestId;
@@ -3633,9 +3673,15 @@
                     return;
                 }
 
-                const textureUrl = currentCapeFilename
-                    ? await applyMeshTextureTransform('capes', currentCapeFilename)
-                    : await getElytraTexture();
+                let textureUrl;
+                if (currentCapeFilename) {
+                    const capeFile = currentCapeFilename;
+                    textureUrl = await applyMeshTextureTransform('capes', capeFile);
+                    // с элитрами и без них в текстуре плаща - вместо пустоты обычные элитры (проверка только когда элитры включены)
+                    if (elytraEnabled && await capeElytraIsEmpty(capeFile, textureUrl)) textureUrl = await getElytraTexture();
+                } else {
+                    textureUrl = await getElytraTexture();
+                }
 
                 if (requestId !== backEquipmentRequestId) return;
 
